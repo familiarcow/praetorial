@@ -1,0 +1,62 @@
+[
+ {
+  "file": "nfl_20221204.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20221204",
+  "fetched_at": "2026-11-08T15:19:07Z",
+  "http_status": 200,
+  "sha256": "6a6fe5b0ec21099325b060fc6a848870be7c21c9bf4dbc93a98638ccc06fdbc7",
+  "kind": "real",
+  "bytes": 114144,
+  "note": "ESPN NFL scoreboard 2022-12-04 (real; contains the WAS 20 - NYG 20 tie, event 401437880)"
+ },
+ {
+  "file": "nba_20261106.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261106",
+  "fetched_at": "2026-11-08T15:19:07Z",
+  "http_status": 200,
+  "sha256": "2d0f2145205d5f484139c038d97b8f411c73c4aa36037a8de7a2226fbce9fe9b",
+  "kind": "real",
+  "bytes": 215658,
+  "note": "ESPN NBA scoreboard 2026-11-06 (real; POR 118 @ LAL 124, event 401909294, decisive)"
+ },
+ {
+  "file": "mlb_20260405.json",
+  "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-04-05",
+  "fetched_at": "2026-11-08T15:19:08Z",
+  "http_status": 200,
+  "sha256": "42229481fa6f2c8e2d1b941f69a7b6f5fed9dfb212717b28ba6f7abe27fc192a",
+  "kind": "real",
+  "bytes": 21124,
+  "note": "MLB Stats API schedule 2026-04-05 (real; Cubs at Guardians doubleheader, gamePk 824459 and 824460)"
+ },
+ {
+  "file": "espn_mlb_20260405.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260405",
+  "fetched_at": "2026-11-08T15:19:08Z",
+  "http_status": 200,
+  "sha256": "f87d6bf1262450db3a30080e355541d54f6aea0e996f735ad2cd88b1d4b1667c",
+  "kind": "real",
+  "bytes": 304993,
+  "note": "ESPN MLB scoreboard 2026-04-05 (real; doubleheader = ESPN events 401814813 and 401867431)"
+ },
+ {
+  "file": "synth_espn_mlb_20260405_flipped.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260405",
+  "fetched_at": "2026-11-08T15:20:43Z",
+  "http_status": 200,
+  "sha256": "dd8c2d96a6e45cdc623cd054ecf591f1617f89d228027b040a56db72c20da770",
+  "kind": "synthetic",
+  "bytes": 305057,
+  "note": "SYNTHETIC: real ESPN MLB 2026-04-05 payload with event 401814813 score flipped (home 1, away 0) so ESPN names the opposite winner to the real MLB Stats API (Cubs 1-0)"
+ },
+ {
+  "file": "synth_espn_nba_20261106_suspended.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20261106",
+  "fetched_at": "2026-11-08T15:20:43Z",
+  "http_status": 200,
+  "sha256": "65706457a99333405ac7786e349bae0b48aecdecff401021ddcd148924315925",
+  "kind": "synthetic",
+  "bytes": 215718,
+  "note": "SYNTHETIC: real ESPN NBA 2026-11-06 payload with event 401909294 status edited to STATUS_SUSPENDED (no real suspended game was available)"
+ }
+]

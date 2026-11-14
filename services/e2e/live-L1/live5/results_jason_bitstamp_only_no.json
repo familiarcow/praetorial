@@ -1,0 +1,190 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "4gZsnzngVKeE76c34CC9hneFuLoyxUqab9PB9PyXKVY1",
+      "url": "https://testnet.nearblocks.io/txns/4gZsnzngVKeE76c34CC9hneFuLoyxUqab9PB9PyXKVY1",
+      "spec_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "checked_at": "1794101763311521792",
+      "attest_pubkey": "1ef96f5f220355140ba95536dc5c969b9d5b97e5364692cb9ed27f7aa3191ce8",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "9mjj4EATieRxmtsrCUptJ6M2BgozXKf3q7uVF1VYftha",
+      "url": "https://testnet.nearblocks.io/txns/9mjj4EATieRxmtsrCUptJ6M2BgozXKf3q7uVF1VYftha",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "HZ2NWZXGJTgiTBNeXYYtaX3gytkCLxneuGHiWBXSZW8B",
+      "url": "https://testnet.nearblocks.io/txns/HZ2NWZXGJTgiTBNeXYYtaX3gytkCLxneuGHiWBXSZW8B",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "DfLEvcMWLLWckaCX3ocPSrqriSkD7KC64x3Wzzgd2L2Q",
+      "url": "https://testnet.nearblocks.io/txns/DfLEvcMWLLWckaCX3ocPSrqriSkD7KC64x3Wzzgd2L2Q"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "2uFLw11E1Cp24Lmm4u7zTz9w1fi2vtA3zhaRiK78tdTq",
+      "url": "https://testnet.nearblocks.io/txns/2uFLw11E1Cp24Lmm4u7zTz9w1fi2vtA3zhaRiK78tdTq"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "GmjvD4Sa1jcrhPwhVX6kWqwmj7ZJnrg33fqLJyYT8Wgn",
+      "url": "https://testnet.nearblocks.io/txns/GmjvD4Sa1jcrhPwhVX6kWqwmj7ZJnrg33fqLJyYT8Wgn",
+      "status": "Success",
+      "keeper_credit_before": "150000000000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "9o8gktL2Beu5N3CbHAcQPqRmfoubo3uz8USeK1bdHLNE",
+      "url": "https://testnet.nearblocks.io/txns/9o8gktL2Beu5N3CbHAcQPqRmfoubo3uz8USeK1bdHLNE",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 1,
+        "checked_until": "0",
+        "element_results_hash": "961f2a30ab6fac55511d009cc188671dc4abbfb47d8566e95d7e16188365273f",
+        "outcome": "NO",
+        "run_no": 1,
+        "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284"
+      }
+    },
+    {
+      "step": "finalize",
+      "hash": "8DgRHSiAAyx5nWzkFmHjQpnwsBaXsGBb7gTGCxkExif2",
+      "url": "https://testnet.nearblocks.io/txns/8DgRHSiAAyx5nWzkFmHjQpnwsBaXsGBb7gTGCxkExif2",
+      "status": "Success"
+    }
+  ],
+  "terms_sha256": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "models_snapshot_hash": "itemL1b-jason_bitstamp_only_no",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794101923792000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796693773792000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794101775971429600,
+    "taken_at": 1794101779643550700,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 1,
+    "last_resolution_raw": "{\"contract\":\"praetorial-l1b20-11080132.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[],\"elements\":[{\"id\":\"e1\",\"verdict\":\"not_met\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":false,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"run_diagnostics\":[{\"content\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_len\":17,\"content_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":1050,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"response_bytes\":5838,\"signature_proof\":{\"request_sha256\":\"cfe62e3d0678c5472acbc044800962d3fb0f7d20d25b5eba18e45b2d9e4edf63\",\"response_sha256\":\"78b3768c73706244176a156d67e1aa86578e28b84ea3a22ef75b0ae63b7f32b9\",\"signature\":\"bbd2399cb89cea3db5f76f35a485bc448d030e90766b663d4bbbda73ebf7ec144701741e783e38951bb78d7d9f855d090efe4dbfcb2a483d4e39ea85c3a09f0d\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"cfe62e3d0678c5472acbc044800962d3fb0f7d20d25b5eba18e45b2d9e4edf63:78b3768c73706244176a156d67e1aa86578e28b84ea3a22ef75b0ae63b7f32b9\"},\"signature_verified\":true,\"total_ms\":1857,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":\"not verified\",\"verify_result\":\"invalid\"}],\"runs\":1,\"sources\":[]},\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 60s over 2026-11-07T04:00:00Z to 2026-11-07T06:00:00Z: no candles returned inside the window\",\"D-JUDGETIME1 (B): the price gate decided NO from complete venue coverage; the model audits it (short prompt) instead of judging\",\"17c5 audit agrees with the code outcome NO\",\"D-BUDGET1: calls_ms=[] rerun=false\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"961f2a30ab6fac55511d009cc188671dc4abbfb47d8566e95d7e16188365273f\",\"outcome\":\"NO\",\"run_no\":1,\"terms_hash\":\"1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284\"},\"signing\":{\"pubkey_hex\":\"f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39\",\"signature_hex\":\"0482b99661aef401013d276e62b88e9435917046cae99af76718a10748640c47a68e2b3db7d39ad47eb4cbf0b34f20c4fb2d54cc49a7d32367d83db3920bc207\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": 1
+  },
+  "keeper_credit_after": "129937500000000000000000",
+  "last_resolution_raw": "{\"contract\":\"praetorial-l1b20-11080132.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[],\"elements\":[{\"id\":\"e1\",\"verdict\":\"not_met\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":false,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"run_diagnostics\":[{\"content\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_len\":17,\"content_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":1050,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"response_bytes\":5838,\"signature_proof\":{\"request_sha256\":\"cfe62e3d0678c5472acbc044800962d3fb0f7d20d25b5eba18e45b2d9e4edf63\",\"response_sha256\":\"78b3768c73706244176a156d67e1aa86578e28b84ea3a22ef75b0ae63b7f32b9\",\"signature\":\"bbd2399cb89cea3db5f76f35a485bc448d030e90766b663d4bbbda73ebf7ec144701741e783e38951bb78d7d9f855d090efe4dbfcb2a483d4e39ea85c3a09f0d\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"cfe62e3d0678c5472acbc044800962d3fb0f7d20d25b5eba18e45b2d9e4edf63:78b3768c73706244176a156d67e1aa86578e28b84ea3a22ef75b0ae63b7f32b9\"},\"signature_verified\":true,\"total_ms\":1857,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":\"not verified\",\"verify_result\":\"invalid\"}],\"runs\":1,\"sources\":[]},\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 60s over 2026-11-07T04:00:00Z to 2026-11-07T06:00:00Z: no candles returned inside the window\",\"D-JUDGETIME1 (B): the price gate decided NO from complete venue coverage; the model audits it (short prompt) instead of judging\",\"17c5 audit agrees with the code outcome NO\",\"D-BUDGET1: calls_ms=[] rerun=false\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"961f2a30ab6fac55511d009cc188671dc4abbfb47d8566e95d7e16188365273f\",\"outcome\":\"NO\",\"run_no\":1,\"terms_hash\":\"1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284\"},\"signing\":{\"pubkey_hex\":\"f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39\",\"signature_hex\":\"0482b99661aef401013d276e62b88e9435917046cae99af76718a10748640c47a68e2b3db7d39ad47eb4cbf0b34f20c4fb2d54cc49a7d32367d83db3920bc207\"}}",
+  "bet_status_at_submit": "Resolving",
+  "after_submit": {
+    "status": "Proposed",
+    "outcome": "NO",
+    "settle_ready_ns": null
+  },
+  "before": {
+    "maker1": "3892748000",
+    "taker1": "3712327000",
+    "fee": "2864000",
+    "praetorial-l1b20-11080132": "2016000"
+  },
+  "final_status": "Settled",
+  "outcome": "NO",
+  "after": {
+    "maker1": "3892748000",
+    "taker1": "3714307000",
+    "fee": "2900000",
+    "praetorial-l1b20-11080132": "0"
+  },
+  "payouts": [
+    {
+      "receiver": "taker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "990000",
+      "reason": "payout_winner",
+      "done": true
+    },
+    {
+      "receiver": "taker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "990000",
+      "reason": "payout_winner",
+      "done": true
+    },
+    {
+      "receiver": "fee.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "18000",
+      "reason": "fee_and_storage",
+      "done": true
+    },
+    {
+      "receiver": "fee.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "18000",
+      "reason": "fee_and_storage",
+      "done": true
+    }
+  ]
+}

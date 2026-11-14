@@ -1,0 +1,6 @@
+# R3f: near-sdk-env only calls the real `panic_utf8` host function when `cfg(near)` is set
+# (cargo-near sets it; a plain `cargo build --target wasm32-unknown-unknown` did NOT, so every
+# env::panic_str compiled to eprintln!+panic!() = a bare `unreachable` trap and the contract's
+# error text was lost on-chain and in the sandbox). Set it for every wasm32 build here.
+[target.wasm32-unknown-unknown]
+rustflags = ["--cfg", "near"]

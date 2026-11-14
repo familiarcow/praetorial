@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "b371d89c30fa9580f0d68209b6e75550c43a0c2b",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; the default colima VM was not used for builds",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. First attempt succeeded (no wit-bindgen QEMU flake this time). Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-32ecf6cc.json (07a0b087...). Item 16h (D-RESOLVE7 page/header hardening + D-RESOLVE6b coarse-evidence gate) changes resolver code, so the wasm hash and the bind:wasm outcome/attest pubkeys change: the D-KEY2 report-pubkey bootstrap must be redone against THIS hash. Built from b371d89 (the last code commit; later commits are docs/record only). Routes: docker-run-1, docker-run-2 and fresh-container, all byte-identical (cmp). Not uploaded."
+  }
+}

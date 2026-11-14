@@ -1,0 +1,52 @@
+[
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /offers",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 55,
+  "ts": 1794193896706,
+  "exceptions": 0,
+  "logs": []
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 3,
+  "wallMs": 19,
+  "ts": 1794193896904,
+  "exceptions": 0,
+  "logs": []
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 11,
+  "wallMs": 732,
+  "ts": 1794193900468,
+  "exceptions": 0,
+  "logs": []
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /offers",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 10,
+  "ts": 1794193901413,
+  "exceptions": 0,
+  "logs": []
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 11,
+  "wallMs": 811,
+  "ts": 1794193982911,
+  "exceptions": 0,
+  "logs": []
+ }
+]

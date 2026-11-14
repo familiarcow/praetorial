@@ -1,0 +1,45 @@
+PASS throwaway escrow is not the FRZ1b rehearsal escrow  drill1-2611091903.praetorial-dev-1101.testnet
+PASS escrow has code deployed
+PASS deployed wasm sha256 recorded = freeze-candidate-2 caf134a4
+PASS guardian (view_state; no `guardian` view method exists) == G2  drill1-g2-2611091903.praetorial-dev-1101.testnet
+PASS is_shutdown == true
+PASS new offers paused (implied by shutdown)
+PASS no pending guardian
+PASS bet A (Open) -> Voided by emergency_refund  Voided
+PASS bet B (conceded) terminal Finalized/Settled  Settled
+PASS bet C (Taken) -> Voided by emergency_refund  Voided
+FAIL bet A: every payout line done  0 lines
+PASS bet A: is_fully_paid
+FAIL bet B: every payout line done  0 lines
+PASS bet B: is_fully_paid
+FAIL bet C: every payout line done  0 lines
+PASS bet C: is_fully_paid
+PASS refusal: non-guardian (G3) pause_new_offers refused  expected "only guardian"
+SKIP emergency_refund before shutdown refused  (invalid evidence, superseded: NOT DRILLED LIVE (irreversible shutdown already happened); covered by contract unit tests only)
+PASS refusal: open_bet while paused refused (silent full refund)  tx succeeded; mt_on_transfer returned the full amount. bet_count 3->3; maker balance 20275234->20275234; escrow balance 50688085->50688085
+PASS refusal: take of Open bet A while paused refused (silent full refund)  A status Open, taker null; taker balance 20275234->20275234
+PASS refusal: B concede while paused: payout lands exactly  maker +19000000 (exp 19000000), fee +1275234 (exp 1275234), taker 0
+PASS refusal: unpause: is_new_offers_paused false  re-established from tx logs (view read raced finality): EVENT_JSON:{"standard":"praetorial-escrow","version":"1.0.0","event":"offers_unpaused","data":[{"guardian":"drill1-g1-2611091903.praetorial-dev-1101.testnet","at_ns":"1794251275743907802"}]}
+PASS refusal: pause again: is_new_offers_paused true
+PASS refusal: non-guardian (G3) set_guardian refused  expected "only guardian"
+PASS refusal: set_guardian(G2) proposes only (guardian still G1, pending G2)
+PASS refusal: G3 accept_guardian refused (not the proposed)  expected "only the proposed guardian may accept"
+PASS refusal: cancel_guardian clears pending
+PASS refusal: after accept: guardian view == G2  re-established from tx logs: EVENT_JSON:{"standard":"praetorial-escrow","version":"1.0.0","event":"guardian_rotated","data":[{"old_guardian":"drill1-g1-2611091903.praetorial-dev-1101.testnet","guardian":"drill1-g2-2611091903.praetorial-dev-1101.testnet","at_ns":"1794251297880083678"}]}
+PASS refusal: old guardian G1 pause_new_offers refused after rotation  expected "only guardian"
+PASS refusal: non-guardian (G1, old) emergency_shutdown refused  expected "only guardian"
+PASS refusal: is_shutdown true
+PASS refusal: G2 unpause_new_offers refused after shutdown  expected "contract is shut down; unpause is impossible after shutdown"
+PASS refusal: second emergency_shutdown refused  expected "already shut down"
+SKIP void_after_deadline refused after shutdown  (invalid evidence, superseded: script attached 1 yocto to a non-payable method; failure text is NEAR's deposit guard, not the contract guard)
+SKIP concede on C refused after shutdown  (invalid evidence, superseded: script attached 1 yocto to a non-payable method; failure text is NEAR's deposit guard, not the contract guard)
+PASS refusal: void_after_deadline refused after shutdown (0 deposit)  expected "contract is shut down"
+PASS refusal: concede on C by maker refused after shutdown (0 deposit)  expected "contract is shut down"
+PASS all drill refusals/state checks recorded  18 valid
+FAIL balance delta maker1.praetorial-dev-1101.testnet  before=4106069855 now=4145345089 delta=39275234 expected=8862383
+FAIL balance delta taker1.praetorial-dev-1101.testnet  before=3714307000 now=3724444617 delta=10137617 expected=-10137617
+PASS balance delta fee.praetorial-dev-1101.testnet  before=2900000 now=4175234 delta=1275234 expected=1275234
+PASS balance delta drill1-g3-2611091903.praetorial-dev-1101.testnet  before=20275234 now=20275234 delta=0 expected=0
+PASS escrow intents (usdc) balance == pre-drill balance (residue 0)  before=0 now=0
+
+5 FAILED

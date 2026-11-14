@@ -1,0 +1,266 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "93yiP8SuconQy9PxLqmudHsPbkgLVW5tb6ZNchnUYm2X",
+      "url": "https://testnet.nearblocks.io/txns/93yiP8SuconQy9PxLqmudHsPbkgLVW5tb6ZNchnUYm2X"
+    },
+    {
+      "step": "fund_dev_from_keeper_0.6_NEAR",
+      "hash": "CoNtGuHYuDkWb9nh3vNGAnkKqMEoDHoXaE7Zp8qMwheC",
+      "url": "https://testnet.nearblocks.io/txns/CoNtGuHYuDkWb9nh3vNGAnkKqMEoDHoXaE7Zp8qMwheC"
+    },
+    {
+      "step": "create_guardian",
+      "hash": "Dd7RukvcZPfmunEr2LtzezgRVZfZNsz953bdRX5cuPWr",
+      "url": "https://testnet.nearblocks.io/txns/Dd7RukvcZPfmunEr2LtzezgRVZfZNsz953bdRX5cuPWr"
+    },
+    {
+      "step": "create_m2",
+      "hash": "7cbXsG4dLYgp8ypdxoXuMe1M8FEMBrNNPktd1cJ18hZu",
+      "url": "https://testnet.nearblocks.io/txns/7cbXsG4dLYgp8ypdxoXuMe1M8FEMBrNNPktd1cJ18hZu"
+    },
+    {
+      "step": "create_t2",
+      "hash": "2oEoKVstpWUUN4avyUWafoNHT5wrRcuWJ9fdFLP7WBX1",
+      "url": "https://testnet.nearblocks.io/txns/2oEoKVstpWUUN4avyUWafoNHT5wrRcuWJ9fdFLP7WBX1"
+    },
+    {
+      "step": "create_m3",
+      "hash": "HudHMJ2g3SHoKCxZAEPJdX6MbYTA3pZYp94881XZYHWy",
+      "url": "https://testnet.nearblocks.io/txns/HudHMJ2g3SHoKCxZAEPJdX6MbYTA3pZYp94881XZYHWy"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "Fw9ow5y3E6fvAsaTMF9EaVihuw5WA5gS4ZWnHsA4EajC",
+      "url": "https://testnet.nearblocks.io/txns/Fw9ow5y3E6fvAsaTMF9EaVihuw5WA5gS4ZWnHsA4EajC",
+      "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "Ci58KbPpt68pgd1mVHQyvPVhaaeWY7jw31my8E4jNn8m",
+      "url": "https://testnet.nearblocks.io/txns/Ci58KbPpt68pgd1mVHQyvPVhaaeWY7jw31my8E4jNn8m"
+    },
+    {
+      "step": "topup_guardian_0.1_NEAR_from_keeper",
+      "hash": "3ZN5D1piv45XcMLfj9CT89Dau3bddS3mmS6aAt1M48DN",
+      "url": "https://testnet.nearblocks.io/txns/3ZN5D1piv45XcMLfj9CT89Dau3bddS3mmS6aAt1M48DN"
+    }
+  ],
+  "escrow": "praetorial-drill9-2611102218.praetorial-dev-1101.testnet",
+  "accounts": {
+    "guardian": "d9-guardian-2611102218.praetorial-dev-1101.testnet",
+    "m2": "d9-m2-2611102218.praetorial-dev-1101.testnet",
+    "t2": "d9-t2-2611102218.praetorial-dev-1101.testnet",
+    "m3": "d9-m3-2611102218.praetorial-dev-1101.testnet"
+  },
+  "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "mock_wasm_sha256": "01892bc11defe8d6a2e52c3413e2d7d8aadab132e32402624ab2c1fc276d8a3d",
+  "new_args": {
+    "intents": "intents-mock.praetorial-dev-1101.testnet",
+    "usdc_token_id": "nep141:usdc.testnet",
+    "outlayer": "outlayer.testnet",
+    "operator": "praetorial-dev-1101.testnet",
+    "guardian": "d9-guardian-2611102218.praetorial-dev-1101.testnet",
+    "registry": "praetorial-dev-1101.testnet",
+    "fee_account": "fee.praetorial-dev-1101.testnet",
+    "keeper": "keeper.praetorial-dev-1101.testnet",
+    "limits": {
+      "max_stake": "10000000000000000000000000000000000",
+      "max_offer_ttl_secs": 5184000,
+      "max_stake_per_side_near": "10000000000000000000000000000000000",
+      "max_rounds": 2
+    },
+    "beta_sunset_ns": null,
+    "asset_limits": [
+      [
+        "nep141:usdc.testnet",
+        {
+          "min_per_side": "10000000",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "500000",
+          "min_fee_cap_per_side": "2500000",
+          "run_price": "5000",
+          "min_bond": "5000000",
+          "min_objection": "1000000",
+          "storage_per_kib": "37684"
+        }
+      ],
+      [
+        "nep141:btc.mock.testnet",
+        {
+          "min_per_side": "13189",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "659",
+          "min_fee_cap_per_side": "3297",
+          "run_price": "7",
+          "min_bond": "6595",
+          "min_objection": "1319",
+          "storage_per_kib": "50"
+        }
+      ],
+      [
+        "nep141:wrap.testnet",
+        {
+          "min_per_side": "2717391304347826086956522",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "135869565217391304347826",
+          "min_fee_cap_per_side": "679347826086956521739130",
+          "run_price": "1358695652173913043479",
+          "min_bond": "1358695652173913043478261",
+          "min_objection": "271739130434782608695653",
+          "storage_per_kib": "10240000000000000000000"
+        }
+      ]
+    ],
+    "outcome_pubkey": "4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23",
+    "attest_pubkey": "a3fa8914a3c6eccd792660167d1e7e67fc06f4294521eadcc2b7a8f6c097f6ae",
+    "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "outlayer_config": {
+      "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+      "secrets_profile": "praetorial-resolver",
+      "secrets_account_id": "praetorial-dev-1101.testnet"
+    },
+    "judge_chain": [
+      {
+        "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "model_b": "z-ai/glm-5.3-flash"
+      },
+      {
+        "model_a": "Qwen/Qwen3.8-27B",
+        "model_b": "moonshotai/kimi-k3"
+      },
+      {
+        "model_a": "google/gemini-3.5-flash",
+        "model_b": "openai/gpt-5.4-mini"
+      },
+      {
+        "model_a": "x-ai/grok-4.7",
+        "model_b": "anthropic/claude-haiku-5-5"
+      }
+    ]
+  },
+  "args_diff_vs_frz3": {
+    "guardian": "arbiter1.praetorial-dev-1101.testnet -> d9-guardian-2611102218.praetorial-dev-1101.testnet"
+  },
+  "bets": {
+    "B": 1,
+    "C": 2
+  },
+  "status_before": {
+    "B": "Taken",
+    "C": "Open"
+  },
+  "snapshot_before": {
+    "m2": "0",
+    "t2": "0",
+    "m3": "0",
+    "fee": "14491350",
+    "esc": "30217716"
+  },
+  "shutdown_view": true,
+  "refunds": {
+    "expected_per_party": {
+      "B_maker": "10072572",
+      "B_taker": "10072572",
+      "C_maker": "10072572"
+    },
+    "observed_balance_after": {
+      "m2": "10072572",
+      "t2": "10072572",
+      "m3": "10072572"
+    },
+    "escrow_intents_balance_after": "0",
+    "fee_account_delta_during_drill": "0",
+    "mismatches": []
+  },
+  "status_after": {
+    "B": "Voided",
+    "C": "Voided"
+  },
+  "refusals": [
+    {
+      "step": "non_guardian_shutdown_refused",
+      "ok": true,
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only guardian\"}}}}"
+    },
+    {
+      "step": "emergency_refund_before_shutdown_refused",
+      "ok": true,
+      "text": "dex\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: emergency_refund is only callable after emergency_shutdown\"}}}}"
+    },
+    {
+      "step": "unpause_after_shutdown_refused",
+      "ok": true,
+      "text": "ex\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: contract is shut down; unpause is impossible after shutdown\"}}}}"
+    },
+    {
+      "step": "second_shutdown_refused",
+      "ok": true,
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: already shut down\"}}}}"
+    }
+  ],
+  "verdict": "FAIL",
+  "drill3": {
+    "pending_before": {
+      "B": [
+        {
+          "id": 1,
+          "receiver": "d9-m2-2611102218.praetorial-dev-1101.testnet",
+          "amount": "10072572",
+          "attempts": 0,
+          "done": false,
+          "in_flight": false
+        },
+        {
+          "id": 2,
+          "receiver": "d9-t2-2611102218.praetorial-dev-1101.testnet",
+          "amount": "10072572",
+          "attempts": 0,
+          "done": false,
+          "in_flight": false
+        }
+      ],
+      "C": [
+        {
+          "id": 3,
+          "receiver": "d9-m3-2611102218.praetorial-dev-1101.testnet",
+          "amount": "10072572",
+          "attempts": 0,
+          "done": false,
+          "in_flight": false
+        }
+      ]
+    },
+    "txs": [
+      "6pcNsR5sQgKdqzgqeRR2eBk4BnTQGBkq7yBgT8DNR7YY",
+      "BDMLYRCUA6LUmuQy37ZicqEWp3ESGMs6GLHDffC7wgor",
+      "AZSshobHCZ3kCHYYyZh4TQRxW9vLnMSCiykbjDrF6tUj"
+    ],
+    "retry_failure": null,
+    "pending_after": {
+      "B": 0,
+      "C": 0
+    },
+    "fully_paid": {
+      "B": true,
+      "C": true
+    },
+    "verdict": {
+      "verdict": "PASS"
+    }
+  },
+  "status_final": {
+    "B": "Voided",
+    "C": "Voided"
+  },
+  "verdict_drill4": "PASS",
+  "reclaim": {
+    "keys_before": 11,
+    "bytes": 4325,
+    "state_wipe_wasm_sha256": "d0747f951d792dbe86cbff895cb049ea6b3761d4f88195e40d91b8c1c7cb46ca",
+    "keys_after": 0,
+    "dev_balance_delta_yocto": "6490194435579278499999997",
+    "escrow_exists_after": false
+  }
+}

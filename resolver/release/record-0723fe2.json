@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "0723fe2f32ef738cbe1d654e518ab0c14e261dd8",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50"},
+    {"route": "docker-run-2", "sha256": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50"},
+    {"route": "fresh-container", "sha256": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50"}
+  ],
+  "notes": {
+    "item": "L1b19 (D-JUDGETIME1b, D-RESOLVE8): gate decides when every PRIMARY venue is complete and only the fallback venue (Kraken) is excluded; built from commit 0723fe2; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; docker-run-1 and docker-run-2 each needed one retry after a transient rosetta build-script crash (identical hash on the retry); fresh-container first time"
+  }
+}

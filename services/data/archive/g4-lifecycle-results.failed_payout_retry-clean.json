@@ -1,0 +1,66 @@
+[
+  {
+    "path": "failed_payout_retry",
+    "betId": 26,
+    "startedAt": "2026-11-03T00:26:51.408Z",
+    "status": "pass",
+    "steps": [
+      {
+        "action": "take",
+        "tx_hash": "86VdGeRCVXFmQZVDUJCueRXf5MCKghWX85MwAhrrhv73",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "request_resolution",
+        "tx_hash": "8PUoXJKfZKsMoUkEqM6oNmqhd1LjNDFQFAPjMNRoAyiZ",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "submit_outcome",
+        "tx_hash": "6inLTKx4BecgJy7N64szQBDiFhgwTjnenFxXprHRiKAm",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "finalize",
+        "tx_hash": "EtRT4oR9QcAaDvt44dULidadqtKT8VYfFuPFamFQoGXj",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "retry_payout",
+        "tx_hash": "BYuNoQLSwRj2DWzjEVpKRKRaLG7ycgTgzLrnsgx2zQak",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "retry_payout",
+        "tx_hash": "FUtH1AuanXUYd7CuBtUfTAja4X7VyjCWKkirYUtnnp1V",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "retry_payout",
+        "tx_hash": "AwKo1JoBSJh3Q1z9SPACUoiagvgU2bcPhBwVxAQn8bAK",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "retry_payout",
+        "tx_hash": "CTuu3dm1ai3Q6ifFHDxNTgSmeFAVTeRzSC1C3r6Rtb3U",
+        "monitor_ok": true,
+        "violations": []
+      },
+      {
+        "action": "retry_payout",
+        "tx_hash": "8bVy7oZyz3vs1tAhKXfjWsxQY41oSQrZHSykX7ShVFmD",
+        "monitor_ok": true,
+        "violations": []
+      }
+    ],
+    "finalBetStatus": "Settled",
+    "finishedAt": "2026-11-03T00:29:23.946Z"
+  }
+]

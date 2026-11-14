@@ -1,0 +1,9 @@
+deployed-stack check: network=testnet release=release/freeze-candidate-2.json expected escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet
+PASS indexer     praetorial-indexer-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c tick_age=18s
+PASS keeper      praetorial-keeper-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c tick_age=23s
+PASS monitor     praetorial-monitor-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c tick_age=22s
+PASS notifier    praetorial-notifier-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c
+PASS relayer     praetorial-relayer-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c
+PASS registry    praetorial-registry-testnet  network=testnet registry_id=registry.praetorial.testnet git_sha=a331d539545c
+PASS sourcecheck praetorial-sourcecheck-testnet  network=testnet escrow=praetorial-frz2-2611091914.praetorial-dev-1101.testnet git_sha=a331d539545c
+deployed stack OK (7/7 PASS)

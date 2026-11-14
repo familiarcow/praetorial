@@ -1,0 +1,74 @@
+{
+  "_comment": "Prototype: bet on how a Polymarket market FINALLY resolves. Polymarket's (UMA's) final resolution is the oracle, even if it disagrees with reality. Real, already-resolved market used so the test fixtures are recorded truth.",
+  "claim": "The Polymarket market with conditionId 0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e (slug pharos-fdv-above-800m-one-day-after-launch) finally resolves to the outcome 'Yes' on or before 2026-05-01T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show that the pinned Polymarket market is finally resolved (UMA status resolved, closed, on-chain payout set) with the outcome 'Yes' as its sole winner?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "FINAL_SCORE_V1",
+    "TIE_V1",
+    "CONTESTED_PRIMARY_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "The oracle is Polymarket's own final resolution, not the real-world truth: if Polymarket resolves 'Yes' in a way a reader thinks is wrong, the bet is still YES.",
+    "'Finally resolved' means ALL of: Gamma umaResolutionStatus is 'resolved', the market is closed, and the on-chain ConditionalTokens payoutDenominator is greater than zero. A proposed, disputed or still-trading market is not resolved and is never treated as NO.",
+    "The market is pinned by conditionId and by the SHA-256 of its description text (market_pin); a market with another conditionId is a different market, and if the description no longer matches the pin the bet is VOID because its resolution rules changed after signing.",
+    "The winning outcome is read from the on-chain payoutNumerators (index 0 = first listed outcome 'Yes'); Gamma outcomePrices and CLOB token winner flags must agree with it. A disagreement between these sources is a source conflict and resolves VOID, never YES by majority.",
+    "A 50-50 or equal split payout is a tie and resolves VOID (TIE_V1), never YES or NO.",
+    "Early resolution: YES may be declared as soon as the market is finally resolved; if the market is not finally resolved by the evidence cutoff the bet is VOID, not NO.",
+    "Fallback: Gamma and CLOB are interchangeable off-chain views; on-chain finality is mandatory and at least one of Gamma/CLOB must agree. If a source is blocked or rate-limited it is COULDNT_CHECK and the recovery ladder applies.",
+    "Burden of proof is on YES: if the winner cannot be shown, the element is not proven.",
+    "Post-resolution reversal: a later re-resolution by Polymarket after the evidence cutoff does not change the answer."
+  ],
+  "time": {
+    "window_start": "2026-04-01T00:00:00Z",
+    "window_end": "2026-05-01T00:00:00Z",
+    "evidence_cutoff": "2026-05-08T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S_GAMMA",
+      "publisher": "Polymarket Gamma API"
+    },
+    {
+      "id": "S_CLOB",
+      "publisher": "Polymarket CLOB API"
+    },
+    {
+      "id": "S_CTF",
+      "publisher": "Polygon CTF contract (payoutNumerators)"
+    }
+  ],
+  "source_classes": {
+    "Polymarket Gamma API": "primary",
+    "Polymarket CLOB API": "primary",
+    "Polygon CTF contract (payoutNumerators)": "primary"
+  },
+  "window_close": "2026-05-15T00:00:00Z",
+  "sources": true,
+  "unresolved_at_cutoff": "VOID",
+  "market_pin": {
+    "condition_id": "0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e",
+    "slug": "pharos-fdv-above-800m-one-day-after-launch",
+    "description_sha256": "ea4855581568f070b98367f7bf60fd6a71c25d4ad43720c06f18f828a7375348",
+    "outcomes": [
+      "Yes",
+      "No"
+    ]
+  },
+  "bettype": {
+    "type": "polymarket_resolution",
+    "outcome": "Yes",
+    "fetch": [
+      "GET https://gamma-api.polymarket.com/markets/<id>",
+      "GET https://clob.polymarket.com/markets/<conditionId>",
+      "POST https://polygon-bor-rpc.publicnode.com eth_call to 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045 payoutDenominator(bytes32)=0xdd34de67, payoutNumerators(bytes32,uint256)=0x0504c814"
+    ]
+  }
+}

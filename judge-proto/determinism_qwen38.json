@@ -1,0 +1,23 @@
+[
+ {
+  "run": 0,
+  "raw": "{\"answer\":\"met\",\"quote\":\"iPhone Fold is available today at Apple Store locations and apple.com in the United States, with prices starting at $1,999.\",\"source_id\":\"S1\",\"reason\":\"Apple's newsroom states the iPhone Fold was available for purchase in the United States on 2027-09-21, within the specified window.\"}",
+  "answer": "met",
+  "extra": "S1",
+  "chat_id": "e40c577b4e214a7080317eae7d747748"
+ },
+ {
+  "run": 1,
+  "raw": "{\"answer\":\"met\",\"quote\":\"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\",\"source_id\":\"S2\",\"reason\":\"Reuters reports that Apple's first foldable phone, the iPhone Fold, went on sale in the United States on 2027-09-21, showing public availability within the 2027 window.\"}",
+  "answer": "met",
+  "extra": "S2",
+  "chat_id": "64850016af94411aaf10ffba96c2dfe2"
+ },
+ {
+  "run": 2,
+  "raw": "{\"answer\":\"met\",\"quote\":\"the iPhone Fold, the company's first foldable phone, went on sale in the United States.\",\"source_id\":\"S2\",\"reason\":\"The source states Apple's first foldable phone went on sale in the United States on 2027-09-21, within the required window.\"}",
+  "answer": "met",
+  "extra": "S2",
+  "chat_id": "181e7672d074488fa759ad2fe21ebb1e"
+ }
+]

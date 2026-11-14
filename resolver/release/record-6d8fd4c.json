@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "6d8fd4cf1aed82cc6d37ea607c580d8256e93f9b",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "b471d7e34ecbd56d0e1d3d0238dae488e1e268832ab30c132cdd42ad1bb800b2",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "b471d7e34ecbd56d0e1d3d0238dae488e1e268832ab30c132cdd42ad1bb800b2"},
+    {"route": "docker-run-2", "sha256": "b471d7e34ecbd56d0e1d3d0238dae488e1e268832ab30c132cdd42ad1bb800b2"},
+    {"route": "fresh-container", "sha256": "b471d7e34ecbd56d0e1d3d0238dae488e1e268832ab30c132cdd42ad1bb800b2"}
+  ],
+  "notes": {
+    "item": "L1b16 (D-JUDGETIME1b, D-JUDGETIME1 part B): gate-decided custom price sheets get the short audit prompt; built from commit 6d8fd4c (merge-of-main + GREEN f38b901 + test rewrites); NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; three routes built concurrently; all three completed first time"
+  }
+}

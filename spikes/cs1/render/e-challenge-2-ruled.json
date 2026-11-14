@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-11T22:57:37.571Z",
+  "betId": 49,
+  "names": {
+    "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d": "carol_demo",
+    "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488": "dan_demo"
+  },
+  "pending": [],
+  "bet": {
+    "envelope": {
+      "bet_id": 49,
+      "version": 1,
+      "maker": "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d",
+      "taker_allow": "Any",
+      "terms_hash": "55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "20000000",
+      "stake_taker": "20000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"op\":\">=\",\"open_utc\":\"2026-11-11T19:04:00Z\",\"t_utc\":\"2026-11-11T20:30:00Z\",\"x_usd\":74400},\"template\":{\"id\":\"btc_close_at_t\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794429000000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1795033800000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "500000",
+    "fee_min_taker": "500000",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "62783",
+    "storage_taker": "62783",
+    "status": "Proposed",
+    "taker": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+    "created_at": 1794423865849395500,
+    "taken_at": 1794423874366488300,
+    "proposed_at": 1794437683275384300,
+    "outcome": "YES",
+    "used_run_nos": [
+      9
+    ],
+    "runs_used": 1,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 21,
+    "last_resolution_raw": "{\"contract\":\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[],\"elements\":[{\"id\":\"e1\",\"verdict\":\"met\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_chain\":[{\"model_a\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"model_b\":\"z-ai/glm-5.3-flash\"},{\"model_a\":\"Qwen/Qwen3.8-27B\",\"model_b\":\"moonshotai/kimi-k3\"},{\"model_a\":\"google/gemini-3.5-flash\",\"model_b\":\"openai/gpt-5.4-mini\"},{\"model_a\":\"x-ai/grok-4.7\",\"model_b\":\"anthropic/claude-haiku-5-5\"}],\"judge_pair_index\":0,\"judge_ran\":false,\"model_not_found_observations\":[],\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\"],\"no_live_judge\":false,\"run_diagnostics\":[{\"content\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"audit\\\":\\\"agree\\\"}\",\"content_len\":17,\"content_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":736,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\",\"response_bytes\":5075,\"signature_proof\":{\"request_sha256\":\"f266eba445f70a7445d84da955487d3e3b6a67d9ff4c2364cfdbd976b808e2d9\",\"response_sha256\":\"3af4dbdaa69b4d8e50624e96a9b01acdff9a81382d3190b8c68c9125a0471cd2\",\"signature\":\"2149857be9a974b13866d0718b7a7d81c23f565dfd2db14770a4e03e16f740835956f3d9a492f3bcbf2ac1422651e0fa61d0d8b9503e75c2b2f45ce04ea0e20f\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"f266eba445f70a7445d84da955487d3e3b6a67d9ff4c2364cfdbd976b808e2d9:3af4dbdaa69b4d8e50624e96a9b01acdff9a81382d3190b8c68c9125a0471cd2\"},\"signature_verified\":true,\"total_ms\":1526,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":\"not verified\",\"verify_result\":\"invalid\"}],\"runs\":1,\"sources\":[]},\"notes\":[\"1a: Coinbase close of the minute ending T = 74448.2\",\"1a: Bitstamp close of the minute ending T = 74453.48\",\"1a: Kraken close of the minute ending T = 74454.2\",\"decision: YES (code-decided 1a: median close of 3 venues = 74453.48 >= 74400 true)\",\"17c5 audit agrees with the code outcome YES\",\"D-BUDGET1: calls_ms=[] rerun=false\"],\"result\":{\"bet_id\":49,\"checked_until\":0,\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"judge_pair_index\":0,\"outcome\":\"YES\",\"run_no\":9,\"terms_hash\":\"55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4\"},\"signing\":{\"pubkey_hex\":\"4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23\",\"signature_hex\":\"d836c03ae2de04ac96512403c745f68369dde7a30f43cc2fc34dd0f34c182e11a03d33a43c35b5b4b779bb17016953c8a87d3c50397d1db82ffbc4a5aa30990a\"}}",
+    "pruned": false,
+    "next_expected_run_no": 10,
+    "all_results": [
+      {
+        "run_no": 9,
+        "outcome": "YES",
+        "element_results_hash": "09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7",
+        "checked_until": "0"
+      }
+    ],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": 0,
+    "next_run_no": 10,
+    "pending_run_no": null
+  }
+}

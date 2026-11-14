@@ -1,0 +1,53 @@
+{
+  "_comment": "Prototype: X/Twitter restricted form. Only 'this NAMED tweet URL exists with this text on this day' via X's official public oEmbed endpoint. Open-ended 'did @acct post anything' and any NO-by-absence are NOT resolvable in v1 (see vault note).",
+  "claim": "The tweet at https://x.com/jack/status/20 exists, is authored by @jack, contains the text 'just setting up my twttr', and carries a posting day between 2006-03-21 and 2006-03-22 (exclusive).",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Does the X oEmbed response for the named tweet URL show author @jack, the text 'just setting up my twttr', and a displayed posting date on 2006-03-21?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "RETRACTION_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "Deadline and window bounds are UTC instants pinned in the time block; 'UTC_V1' applies and no local time zone is ever read.",
+    "Early resolution: YES may be declared at the first qualifying post; NO may be declared only at/after the deadline and only with the coverage proof below.",
+    "Burden of proof is on YES: a post that is not shown in an admitted exhibit, or an ambiguous one, resolves NO, never YES by default.",
+    "Fallback: if the live fetch is unavailable or blocked, a keeper snapshot taken inside the window may be used; if neither is available the resolver reports COULDNT_CHECK and retries on the recovery ladder before VOID; a blocked or rate-limited page is never evidence of absence.",
+    "oEmbed exposes only a calendar date (no time of day), so window bounds are day-aligned UTC midnights and the displayed date is read as that UTC day.",
+    "The tweet is identified by its numeric status id; the handle in the URL is cosmetic. A 404/410 from oEmbed cannot distinguish deleted, private, suspended or never-existed, so it is COULDNT_CHECK and never NO.",
+    "Only the named tweet qualifies; the bet cannot be YES because some other tweet matches, and it cannot be NO because no other tweet was found."
+  ],
+  "time": {
+    "window_start": "2006-03-21T00:00:00Z",
+    "window_end": "2006-03-22T00:00:00Z",
+    "evidence_cutoff": "2006-03-25T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S_OEMBED",
+      "publisher": "X oEmbed (publish.twitter.com)"
+    },
+    {
+      "id": "S_WAYBACK",
+      "publisher": "Internet Archive Wayback Machine"
+    }
+  ],
+  "source_classes": {
+    "X oEmbed (publish.twitter.com)": "primary",
+    "Internet Archive Wayback Machine": "data"
+  },
+  "window_close": "2006-03-30T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "social_post",
+    "platform": "x",
+    "tweet_url": "https://x.com/jack/status/20",
+    "phrase": "just setting up my twttr",
+    "fetch": "GET https://publish.twitter.com/oembed?url=<tweet_url>&omit_script=1"
+  }
+}

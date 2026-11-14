@@ -1,0 +1,66 @@
+{
+ "results": [
+  {
+   "station": "KMIA",
+   "valid": "2026-11-06",
+   "state": "FL",
+   "wfo": "MFL",
+   "link": "/api/1/nwstext/202611070922-KMFL-CDUS42-CLIMIA",
+   "product": "202611070922-KMFL-CDUS42-CLIMIA",
+   "name": "MIAMI INTL AIRPORT",
+   "high": 86,
+   "high_record": 91,
+   "high_record_years": [
+    2002
+   ],
+   "high_normal": 83,
+   "high_depart": 3,
+   "high_time": "229 PM",
+   "low": 73,
+   "low_record": 48,
+   "low_record_years": [
+    1950
+   ],
+   "low_normal": 70,
+   "low_depart": 3,
+   "low_time": "244 AM",
+   "precip": 0.0,
+   "precip_normal": 0.14,
+   "precip_month": 5.9,
+   "precip_month_normal": 0.87,
+   "precip_jan1": 46.87,
+   "precip_jan1_normal": 62.31,
+   "precip_jun1": "M",
+   "precip_jun1_normal": "M",
+   "precip_jul1": "M",
+   "precip_dec1": "M",
+   "precip_dec1_normal": "M",
+   "precip_record": 1.5,
+   "precip_record_years": [
+    1895
+   ],
+   "snow": 0.0,
+   "snowdepth": 0.0,
+   "snow_normal": "M",
+   "snow_month": 0.0,
+   "snow_jun1": "M",
+   "snow_jul1": 0.0,
+   "snow_dec1": "M",
+   "snow_record": "M",
+   "snow_record_years": [],
+   "snow_jul1_normal": "M",
+   "snow_jul1_depart": "M",
+   "snow_dec1_normal": "M",
+   "snow_month_normal": "M",
+   "average_sky_cover": 0.3,
+   "resultant_wind_speed": "M",
+   "resultant_wind_direction": "M",
+   "highest_wind_speed": 13,
+   "highest_wind_direction": 90,
+   "highest_gust_speed": 21,
+   "highest_gust_direction": 70,
+   "average_wind_speed": 4.6
+  }
+ ],
+ "generated_at": "2026-11-08T22:12:26Z"
+}

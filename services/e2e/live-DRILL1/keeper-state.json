@@ -1,0 +1,12 @@
+{
+  "maxBetIds": {
+    "drill1-2611091903.praetorial-dev-1101.testnet": 3
+  },
+  "lastAttempt": {
+    "drill1-2611091903.praetorial-dev-1101.testnet:emergency_refund:1": "2026-11-09T19:10:01.076Z",
+    "drill1-2611091903.praetorial-dev-1101.testnet:emergency_refund:3": "2026-11-09T19:11:25.713Z",
+    "drill1-2611091903.praetorial-dev-1101.testnet:drain_payouts:1": "2026-11-09T19:10:17.145Z",
+    "drill1-2611091903.praetorial-dev-1101.testnet:drain_payouts:3": "2026-11-09T19:11:41.827Z"
+  },
+  "lastArchive": {}
+}

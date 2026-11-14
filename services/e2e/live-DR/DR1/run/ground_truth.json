@@ -1,0 +1,38 @@
+{
+  "written_at": "2026-11-10T13:47:39.776Z",
+  "bet_id": 18,
+  "claim": "BTC at_or_above 75200 USD (1-minute wick) between 2026-11-10T04:49:00.000Z and 2026-11-10T10:48:00.000Z",
+  "source": "public Kraken OHLC, Coinbase Exchange candles, Bitstamp OHLC, fetched by the harness from raw candles only; judge not consulted",
+  "outcome": "NO",
+  "confirming": [],
+  "perVenue": [
+    {
+      "venue": "Coinbase",
+      "candles": 360,
+      "touched": false,
+      "extreme": 74902.89,
+      "firstTouchT": null
+    },
+    {
+      "venue": "Kraken",
+      "candles": 359,
+      "touched": false,
+      "extreme": 74888.8,
+      "firstTouchT": null
+    },
+    {
+      "venue": "Bitstamp",
+      "candles": 359,
+      "touched": false,
+      "extreme": 74904.03,
+      "firstTouchT": null
+    }
+  ],
+  "rule": "wick (1-minute high for at_or_above / low for at_or_below) crossing the level on >= 2 of Coinbase, Bitstamp, Kraken within [open_utc, deadline_utc)",
+  "outcome_read_before_this": true,
+  "outcome_read_note": "HONEST: the signed NO resolver output was already on chain (bet.last_resolution_raw, tx 8Xh3N5ds...) before this file was written; truth below is computed from raw candles only, not from the judge result",
+  "bet_status_at_write": "Resolving",
+  "bet_outcome_at_write": null,
+  "request_resolution_sent_before_this": true,
+  "request_resolution_sent_by": "keeper (not the harness)"
+}

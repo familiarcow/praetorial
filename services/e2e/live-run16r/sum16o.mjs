@@ -1,0 +1,18 @@
+import fs from "node:fs";
+import { account, mk, balance } from "./lib.mjs";
+import * as C from "./config.mjs";
+const { load, save } = mk("./results.json");
+const a = await account(C.OPERATOR);
+const b = await a.viewFunction({ contractId: C.ESCROW, methodName: "get_bet", args: { bet_id: 1 } });
+const r = load();
+r.item = "16o";
+r.resolver_wasm_sha256 = C.RESOLVER_WASM_SHA;
+r.pinned_pubkeys = { outcome: "dc76efb22c269b0290d52ab3c6eae9e6f55889d28254675a695dd995cea5742d", attest1: "a87c58384d618f3488f060d39e1ee8ff3754271a4a8b96af6d5a7ec299d38fcf" };
+r.resolver_output = JSON.parse(fs.readFileSync("raw_resolution.json", "utf8"));
+r.final_bet = { status: b.status, outcome: b.outcome, proposed_at_ns: b.proposed_at };
+r.finalize_not_before = { utc: new Date(Number(BigInt(b.proposed_at) / 1000000n) + 3600000).toISOString(), est: "2026-11-06 11:33:13 EST (UTC-5)" };
+r.balances_end = { dev: await balance(C.OPERATOR), escrow: await balance(C.ESCROW), keeper: await balance(C.KEEPER), attest1: await balance("attest1.praetorial-dev-1101.testnet") };
+r.success_criteria = { judge_ran: false, model_echoed: "Qwen/Qwen3.8-27B", coinbase: "COMPLETE_WITH_GAPS", bitstamp: "COMPLETE", signed_outcome: "VOID (element e1 unresolved -> ESCALATE; NOT a D-RESOLVE6b judge VOID)", applied_on_chain: true, met: false };
+r.root_cause = "Model call reached Qwen3.8-27B (echoed) but returned content that verify() (resolver/core/src/lib.rs:527) classed empty/invalid (no parseable {answer in ANSWERS}); judge_block ran=false (wasm-bin main.rs:2076). Raw model content is not in output so exact cause unproven; leading hypothesis: max_tokens=400 (main.rs:806) exhausted by Qwen3.8 reasoning -> empty/truncated content (main.rs content unwrap_or(\"\")). Fix = new queue item (raise max_tokens/disable thinking + record raw content/verify reason in judge block). Not a transient error, no retry (NEAR AI calls: 1).";
+save(r);
+console.log(JSON.stringify({ bal: r.balances_end, nb: r.finalize_not_before }));

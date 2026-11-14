@@ -1,0 +1,99 @@
+# CF1a keeper Worker (D-HOST3). NO secrets in this file: the keeper signing key and the
+# Telegram bot token are Worker secrets (`wrangler secret put ...`, see README.md).
+name = "praetorial-keeper-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# Deliberately no node compat flag: the bundle must run on bare workerd + WebCrypto.
+
+# The ONE cron trigger. The account allows 5 in total, so every scheduled job (keeper now;
+# relayer / monitor+notifier / indexer in CF1b-d) shares this single per-minute dispatcher
+# (workers/common/src/dispatcher.ts). Do not add a second [triggers] cron here.
+[triggers]
+crons = ["* * * * *"]
+
+[[durable_objects.bindings]]
+name = "KEEPER"
+class_name = "KeeperDO"
+
+# CF1b: the relayer Worker (workers/relayer) is a separate Worker; the dispatcher's relayer-heartbeat job
+# reaches it over this service binding (no extra cron trigger).
+[[services]]
+binding = "RELAYER_SERVICE"
+service = "praetorial-relayer-testnet"
+
+# CF1c: the monitor Worker (workers/monitor); the dispatcher's monitor-tick job reaches it over this binding.
+[[services]]
+binding = "MONITOR_SERVICE"
+service = "praetorial-monitor-testnet"
+
+# CF1c2: the notifier Worker (workers/notifier); the dispatcher's notifier-tick job reaches it over this binding.
+[[services]]
+binding = "NOTIFIER_SERVICE"
+service = "praetorial-notifier-testnet"
+
+# CF1d: the indexer Worker (workers/indexer, D1 storage); the dispatcher's indexer-tick / indexer-governance jobs reach it over this binding.
+[[services]]
+binding = "INDEXER_SERVICE"
+service = "praetorial-indexer-testnet"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["KeeperDO"]
+
+# Non-secret configuration (testnet). Contract ids are public.
+[vars]
+NEAR_NETWORK_ID = "testnet"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+# NOKEY1b (D-UPGRADE1): frz3 (primary, resolver 8791413f) + frz2 (in-flight bets: DR1, DR7, 19-26). Same frozen escrow source, both v1.
+ESCROW_CONTRACTS = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet@v1,praetorial-frz2-2611091914.praetorial-dev-1101.testnet@v1"
+INTENTS_CONTRACT_ID = "intents-mock.praetorial-dev-1101.testnet"
+KEEPER_ACCOUNT_ID = "keeper.praetorial-dev-1101.testnet"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-keeper-mainnet"
+# DOM1: public host keeper.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "keeper.praetorial.com", custom_domain = true }]
+workers_dev = true
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+
+[env.mainnet.triggers]
+crons = ["* * * * *"]
+
+[[env.mainnet.durable_objects.bindings]]
+name = "KEEPER"
+class_name = "KeeperDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["KeeperDO"]
+
+[[env.mainnet.services]]
+binding = "RELAYER_SERVICE"
+service = "praetorial-relayer-mainnet"
+
+[[env.mainnet.services]]
+binding = "MONITOR_SERVICE"
+service = "praetorial-monitor-mainnet"
+
+[[env.mainnet.services]]
+binding = "NOTIFIER_SERVICE"
+service = "praetorial-notifier-mainnet"
+
+[[env.mainnet.services]]
+binding = "INDEXER_SERVICE"
+service = "praetorial-indexer-mainnet"
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+KEEPER_ACCOUNT_ID = "keeper.praetorial.near"
+# MAINPREP1 (D-DSY1): independent second RPC (Intear) + NEAR Foundation RPC; both answered mainnet views 2026-11-10.
+NEAR_RPC_FALLBACKS = "https://rpc.intea.rs,https://rpc.mainnet.near.org"

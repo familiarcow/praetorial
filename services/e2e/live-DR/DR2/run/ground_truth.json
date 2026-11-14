@@ -1,0 +1,21 @@
+{
+  "bet_id": 35,
+  "fetched_at": "2026-11-11T15:21:30.091Z",
+  "source": "ESPN public scoreboard (independent of the judge)",
+  "raw_sha256": "7b16160dac7735218e1fde9fa0d296a703d99829396744e91fc1a076e6d0fa7d",
+  "home": {
+    "team": "NY",
+    "score": 117
+  },
+  "away": {
+    "team": "MIL",
+    "score": 85
+  },
+  "final": true,
+  "winner": "NY",
+  "pick_team_abbr": "NY",
+  "outcome": "YES",
+  "reason": "final score",
+  "outcome_read_before_this": true,
+  "ordering_note": "The bet was already Settled on chain (outcome YES, proposed_at 1794372092553553200) before the harness fetched this ESPN truth; the keeper path ran request_resolution/submit_outcome/finalize without the harness. ESPN is independent of the judge, so the comparison is still valid, but the truth was NOT written ahead of the chain outcome."
+}

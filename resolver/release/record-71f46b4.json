@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "71f46b4f76cf3852fa77807f38fe1f6d7b7df32f",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088"
+    }
+  ],
+  "notes": {
+    "item": "RR4 release record after L1b4 71f46b4 (open-time close-at-T sourcecheck probes last closed candle, D-SRCCHK2); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical. One docker-run attempt hit a linker SIGSEGV (rosetta, wit-bindgen-rt build script) and was re-run once; the re-run matched"
+  }
+}

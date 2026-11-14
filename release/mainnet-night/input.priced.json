@@ -1,0 +1,93 @@
+{
+  "network": "mainnet",
+  "intents": "intents.near",
+  "usdc_token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+  "outlayer": "outlayer.near",
+  "operator": "operator.praetorial.near",
+  "guardian": "praetorial.near",
+  "registry": "registry.praetorial.near",
+  "fee_account": "praetorial.near",
+  "keeper": "keeper.praetorial.near",
+  "mainnet_escrow": {
+    "account": "bets.praetorial.near",
+    "deploy_tx": "9gFoypqaFzHEnUmkecG6NarvzoH8fdg8Bn2TPfy34NpX",
+    "delete_key_tx": "ACkj5srVv2nav4iUuszyefkEGtonjQJVfusbRAS36UT3",
+    "source": "HK1 FU1 (read-only): ESCROW_CONTRACT_ID in services/workers/*/wrangler.toml [env.mainnet]; txs from tx.main.fastnear.com /v0/account bets.praetorial.near (DeployContract+new; DeleteKey)"
+  },
+  "accounts_notes": {
+    "escrow": "bets.praetorial.near (contract account; not a new() arg)",
+    "attest_signer": "attest.praetorial.near (D-ATTEST2 signer, bot-held key; not a new() arg; its pubkey is attest_pubkey, deploy-day)",
+    "relayer": "relayer.praetorial.near (relayer, bot-held key; not a new() arg)"
+  },
+  "max_offer_ttl_secs": 5184000,
+  "near_price": {
+    "price_usd": "3.66115",
+    "price_ts_ms": 1794362132000,
+    "second_price_usd": "3.66090",
+    "second_price_ts_ms": 1794362132000
+  },
+  "outcome_pubkey": "f67c1f8f0a7824810874ffd469c2034bf1e7723170ba61c0f3f265f3d3dfe440",
+  "attest_pubkey": "27070cba98ca952f06b41305d34e0ee907bb3da8cc9b6c9de275c93e8c670712",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "outlayer_config": {
+    "wasm_base_url": "https://main.fastfs.io/ops.praetorial.near/outlayer.near",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "aikey.praetorial.near"
+  },
+  "assets": [
+    {
+      "token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:usdt.tether-token.near",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:btc.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "73579.215",
+      "price_ts_ms": 1794362132000,
+      "price_source": "coinbase BTC-USD",
+      "second_price_usd": "73582.90000",
+      "second_price_ts_ms": 1794362132000,
+      "second_price_source": "kraken XBTUSD"
+    },
+    {
+      "token_id": "nep141:wrap.near",
+      "decimals": 24,
+      "kind": "volatile",
+      "price_usd": "3.66115",
+      "price_ts_ms": 1794362132000,
+      "price_source": "coinbase NEAR-USD",
+      "second_price_usd": "3.66090",
+      "second_price_ts_ms": 1794362132000,
+      "second_price_source": "kraken NEARUSD"
+    },
+    {
+      "token_id": "nep141:eth.omft.near",
+      "decimals": 18,
+      "kind": "volatile",
+      "price_usd": "2052.615",
+      "price_ts_ms": 1794362132000,
+      "price_source": "coinbase ETH-USD",
+      "second_price_usd": "2052.96000",
+      "second_price_ts_ms": 1794362132000,
+      "second_price_source": "kraken ETHUSD"
+    },
+    {
+      "token_id": "nep141:zec.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "1019.53",
+      "price_ts_ms": 1794362132000,
+      "price_source": "coinbase ZEC-USD",
+      "second_price_usd": "1020.32000",
+      "second_price_ts_ms": 1794362133000,
+      "second_price_source": "kraken ZECUSD"
+    }
+  ]
+}

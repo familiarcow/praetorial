@@ -1,0 +1,417 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "CrpD4cAKtUFCYQBj2kaUcosdwWRf9umb7BEWr5iwiedm",
+      "url": "https://testnet.nearblocks.io/txns/CrpD4cAKtUFCYQBj2kaUcosdwWRf9umb7BEWr5iwiedm",
+      "account": "praetorial-r3c-11061912.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "upload_chunk1",
+      "hash": "CLaedbc6YfCfj9nTyuiE8xwsDMvAgatZDxYF4ZUvFQSY",
+      "url": "https://testnet.nearblocks.io/txns/CLaedbc6YfCfj9nTyuiE8xwsDMvAgatZDxYF4ZUvFQSY",
+      "status": "Success",
+      "resolver_wasm_sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    },
+    {
+      "step": "upload_chunk2",
+      "hash": "DydCzo5D79FfB1bPBhkRghN646jVHDF2esFY8DbaL6oA",
+      "url": "https://testnet.nearblocks.io/txns/DydCzo5D79FfB1bPBhkRghN646jVHDF2esFY8DbaL6oA",
+      "status": "Success",
+      "resolver_wasm_sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    },
+    {
+      "step": "upload_chunk3",
+      "hash": "2f83vo5iq6s1tLYsuT35ByJzqhfmoq3sAj7wYdkYT2JN",
+      "url": "https://testnet.nearblocks.io/txns/2f83vo5iq6s1tLYsuT35ByJzqhfmoq3sAj7wYdkYT2JN",
+      "status": "Success",
+      "resolver_wasm_sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    },
+    {
+      "step": "report_pubkey_outcome",
+      "hash": "CuFSR8g2uG2sktQxrzxv2yjNYTLYGzKgPUCMWtgHyqiv",
+      "url": "https://testnet.nearblocks.io/txns/CuFSR8g2uG2sktQxrzxv2yjNYTLYGzKgPUCMWtgHyqiv",
+      "status": "Success",
+      "outcome_pubkey": "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c"
+    },
+    {
+      "step": "report_pubkey_attest1",
+      "hash": "65E5M6A3J79zbWpzTk4nDkkmVxXQYfAemFCK3v5quiQE",
+      "url": "https://testnet.nearblocks.io/txns/65E5M6A3J79zbWpzTk4nDkkmVxXQYfAemFCK3v5quiQE",
+      "status": "Success",
+      "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "3WcznLqBsCJvHUj6JPY4prgEurXfqr5P5kZmAe6c84K6",
+      "url": "https://testnet.nearblocks.io/txns/3WcznLqBsCJvHUj6JPY4prgEurXfqr5P5kZmAe6c84K6",
+      "wasm_sha256": "6a79388af5f927e1b0719e9511827017dd302ef011f448f4501bc2ab8c3455d2",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "Bw7tZUSCDm8JDFJVc1KPdbhP17vnG4siDGitjLzvVTh9",
+      "url": "https://testnet.nearblocks.io/txns/Bw7tZUSCDm8JDFJVc1KPdbhP17vnG4siDGitjLzvVTh9",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "5ZDRzncXXkJFvQnETHdQ9tPpRriGD5q9D3A8Wgf4AtBm",
+      "url": "https://testnet.nearblocks.io/txns/5ZDRzncXXkJFvQnETHdQ9tPpRriGD5q9D3A8Wgf4AtBm",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "H2NmqzNJqgDgVoau5mZPT1vbwte3qxvQacZ5gssY8kjR",
+      "url": "https://testnet.nearblocks.io/txns/H2NmqzNJqgDgVoau5mZPT1vbwte3qxvQacZ5gssY8kjR",
+      "spec_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+      "checked_at": "1794010456219316224",
+      "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "G3exuqKwRHsUbXDg16QPzeoni6tBcKM7pUgVZmbxK1V4",
+      "url": "https://testnet.nearblocks.io/txns/G3exuqKwRHsUbXDg16QPzeoni6tBcKM7pUgVZmbxK1V4",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "6VdqsScCBKVKQz5f7yt8L1kbUtLEr2UYxjbmXzkvUKpg",
+      "url": "https://testnet.nearblocks.io/txns/6VdqsScCBKVKQz5f7yt8L1kbUtLEr2UYxjbmXzkvUKpg",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "7rRBaqCXGUeWVxw5mLNk7Q4oNBq2Vv7Yf9gQFFfQTH1k",
+      "url": "https://testnet.nearblocks.io/txns/7rRBaqCXGUeWVxw5mLNk7Q4oNBq2Vv7Yf9gQFFfQTH1k"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "96svmDTQPd2CFFRZ8w56ejh8ji7YLrSBiGe5kyjG2DE9",
+      "url": "https://testnet.nearblocks.io/txns/96svmDTQPd2CFFRZ8w56ejh8ji7YLrSBiGe5kyjG2DE9"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "EmsrceCtbyjxBd2iE4BgGX5MD9VHFgQta1zbAWny3Gpd",
+      "url": "https://testnet.nearblocks.io/txns/EmsrceCtbyjxBd2iE4BgGX5MD9VHFgQta1zbAWny3Gpd",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "150000000000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "7Xj7Gpn1Gd7FiV8YdZHE2nNrvfo13SxQMmNwrMNy9ppL",
+      "url": "https://testnet.nearblocks.io/txns/7Xj7Gpn1Gd7FiV8YdZHE2nNrvfo13SxQMmNwrMNy9ppL",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 1,
+        "checked_until": "0",
+        "element_results_hash": "fe6bf5549475cef2d05d11e72bdc1854addaaca34510010fd94e482b5253b242",
+        "outcome": "VOID",
+        "run_no": 1,
+        "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8"
+      }
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "4XpJSeYdZWakKTFM3qbp27KX8JqwSmJpid624c2pMrf3",
+      "url": "https://testnet.nearblocks.io/txns/4XpJSeYdZWakKTFM3qbp27KX8JqwSmJpid624c2pMrf3",
+      "spec_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+      "checked_at": "1794011388240179200",
+      "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "2ebQFvvkxG48RrBC6MhddN9PY1AxVc63Ebx9Nf6atzLL",
+      "url": "https://testnet.nearblocks.io/txns/2ebQFvvkxG48RrBC6MhddN9PY1AxVc63Ebx9Nf6atzLL",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "FDegfSoHpwkHV4bQpKnrAnq4o93V8pLoNYbEckHpNCr8",
+      "url": "https://testnet.nearblocks.io/txns/FDegfSoHpwkHV4bQpKnrAnq4o93V8pLoNYbEckHpNCr8",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "9jxQe421uLrq8SoRfjF35XiYy81HFBJWCHPMddT4VMuN",
+      "url": "https://testnet.nearblocks.io/txns/9jxQe421uLrq8SoRfjF35XiYy81HFBJWCHPMddT4VMuN"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "HCrpYsAo8cqNm9hbB3s5tQmhejNKEmeYR4GTXhMpfFjZ",
+      "url": "https://testnet.nearblocks.io/txns/HCrpYsAo8cqNm9hbB3s5tQmhejNKEmeYR4GTXhMpfFjZ"
+    },
+    {
+      "step": "request_resolution_bet2",
+      "hash": "RxsgsWYCacvQoEBFKHJLehRTS4HAg8hpb59w3pKtXir",
+      "url": "https://testnet.nearblocks.io/txns/RxsgsWYCacvQoEBFKHJLehRTS4HAg8hpb59w3pKtXir",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "129937500000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "3Fk45PYFXqjLNk1PkxZxwtz7ZMmBQ1d2ww3WzLg1sRRd",
+      "url": "https://testnet.nearblocks.io/txns/3Fk45PYFXqjLNk1PkxZxwtz7ZMmBQ1d2ww3WzLg1sRRd",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 2,
+        "checked_until": "0",
+        "element_results_hash": "4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f",
+        "outcome": "VOID",
+        "run_no": 1,
+        "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8"
+      }
+    }
+  ],
+  "balances": {
+    "dev_before": "9525227601991586299999949",
+    "dev_after_create": "3518112612454086299999949",
+    "escrow_after_deploy": "6143733376339374400000000"
+  },
+  "recreated": {
+    "wasm_sha256": "6a79388af5f927e1b0719e9511827017dd302ef011f448f4501bc2ab8c3455d2",
+    "wasm_bytes": 524514,
+    "outcome_pubkey": "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c",
+    "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+    "resolver_wasm_hash": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c",
+      "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+      "resolver_wasm_hash": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c",
+        "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+        "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  },
+  "terms_sha256": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+  "bet_id": 2,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_attempt0": {
+    "error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+    "tx": "BmqYRWBEnj3Ud6XFLKJeDwfRQLWwHcXZowdDRcRMDM5v",
+    "note": "attempt 0 failed (too early: funding_deadline = open+150s not yet elapsed); no run consumed, no NEAR AI call; retried"
+  },
+  "request_resolution_attempt0b": {
+    "error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+    "tx": "4PsCiEk8uwCD8pCmufu2CAoCrLYPVky22NbdrvbKtGm4"
+  },
+  "request_resolution_attempt0c": {
+    "error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+    "tx": "BdRURUskEcx9pNFfygaGSbG2DjZh7Qz49Bt5rK3FGyDZ"
+  },
+  "poll": {
+    "i": 24,
+    "status": "Proposed",
+    "runs_used": 1
+  },
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 2,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+      "models_snapshot_hash": "itemR3c-knyc",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\n \"_comment\": \"R3c: KNYC 2026-11-05 daily high >= 70F (known answer 72F -> YES). Term sheet for the D-JUDGE4 live run.\",\n \"claim\": \"The NWS Climatological Report (Daily) for Central Park NY (KNYC) for 2026-11-05 shows a maximum temperature of at least 70 degrees Fahrenheit.\",\n \"elements\": [\n  {\n   \"id\": \"e1\",\n   \"q\": \"Does the NWS Climatological Report (Daily) for Central Park NY (KNYC) show a maximum temperature of 70 F or higher for 2026-11-05?\"\n  }\n ],\n \"rule\": \"ALL\",\n \"clauses\": [\n  \"UTC_V1\",\n  \"NUMERIC_EXACT_V1\",\n  \"NO_DATA_FALLBACK_V1\",\n  \"CORRECTED_V1\"\n ],\n \"custom_definitions\": [\n  \"The deciding figure is the MAXIMUM temperature (F) for the calendar day 2026-11-05 in the final CLI report for KNYC, the report issued on 2026-11-06 at 145 AM EST where 2026-11-05 is YESTERDAY. A preliminary same-day report (TODAY, valid as of an afternoon time) is not final.\",\n  \"The two sources are two independent copies of the NWS CLI product CLINYC: the NWS forecast office page (weather.gov) and the Iowa Environmental Mesonet archive of the same product. If they disagree on the maximum the sources conflict.\",\n  \"Early resolution: YES may be declared as soon as the final report is published; NO only from the final report.\",\n  \"Fallback: if one named source is unreachable, the other named source alone may decide; if neither can be read the outcome is VOID with full refunds.\",\n  \"Burden of proof is on YES: a figure that is not shown in the final report resolves NO.\"\n ],\n \"time\": {\n  \"window_start\": \"2026-11-05T05:00:00Z\",\n  \"window_end\": \"2026-11-06T04:59:59Z\",\n  \"evidence_cutoff\": \"2026-11-06T12:00:00Z\"\n },\n \"sources_allowed\": [\n  {\n   \"id\": \"S_NWS\",\n   \"publisher\": \"NWS weather.gov CLI KNYC\",\n   \"url\": \"https://forecast.weather.gov/product.php?site=OKX&product=CLI&issuedby=NYC&version=2&glossary=0\"\n  },\n  {\n   \"id\": \"S_IEM\",\n   \"publisher\": \"IEM nwstext CLI KNYC\",\n   \"url\": \"https://mesonet.agron.iastate.edu/api/1/nwstext/202611060645-KOKX-CDUS41-CLINYC\"\n  }\n ],\n \"source_classes\": {\n  \"NWS weather.gov CLI KNYC\": \"primary\",\n  \"IEM nwstext CLI KNYC\": \"primary\"\n },\n \"window_close\": \"2026-11-06T12:00:00Z\",\n \"sources\": true\n}",
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794011546949000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796603396949000000,
+      "consent_party_controlled": false
+    },
+    "status": "Proposed",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794011398810427400,
+    "taken_at": 1794011402518493400,
+    "proposed_at": 1794011822121000000,
+    "outcome": "VOID",
+    "used_run_nos": [
+      1
+    ],
+    "runs_used": 1,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 2,
+    "last_resolution_raw": "{\"contract\":\"praetorial-r3c-11061912.praetorial-dev-1101.testnet\",\"judge\":{\"elements\":[{\"id\":\"e1\",\"verdict\":\"unresolved\"}],\"judge_ran\":true,\"models_echoed\":[\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"run_diagnostics\":[{\"content_head\":\"\",\"content_len\":0,\"content_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"error_body_head\":null,\"finish_reason\":null,\"http_status\":400,\"model\":\"DeepSeek-V4.1-Flash-1017\",\"response_bytes\":null,\"transport_error\":\"http 400\",\"verify_reason\":\"no response (transport failure)\",\"verify_result\":\"empty\"},{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report issued 145 AM EST FRI NOV 06 2026 shows YESTERDAY MAXIMUM of 72 F for November 5 2026, which is 70 F or higher, and both sources agree.\\\"}\",\"content_len\":282,\"content_sha256\":\"8832cef6997440a1ae0f9ce110eb7c568757eab295149a3a69a76879c3c5cc4e\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"http_status\":200,\"model\":\"z-ai/glm-5.3-flash\",\"response_bytes\":20915,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content_head\":\"\",\"content_len\":0,\"content_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"error_body_head\":null,\"finish_reason\":null,\"http_status\":400,\"model\":\"DeepSeek-V4.1-Flash-1017\",\"response_bytes\":null,\"transport_error\":\"http 400\",\"verify_reason\":\"no response (transport failure)\",\"verify_result\":\"empty\"},{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report for November 5 2026 (issued 145 AM EST FRI NOV 06 2026) shows YESTERDAY MAXIMUM of 72 F, which is 70 F or higher, and both sources agree.\\\"}\",\"content_len\":267,\"content_sha256\":\"abb70f22c6d725693a6dcd1b994fac24f40a8db616c9d5f78d7c8c7dfb879501\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"http_status\":200,\"model\":\"z-ai/glm-5.3-flash\",\"response_bytes\":18913,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1},\"notes\":[\"source fetched: S_NWS (https://forecast.weather.gov/product.php?site=OKX&product=CLI&issuedby=NYC&version=2&glossary=0)\",\"source fetched: S_IEM (https://mesonet.agron.iastate.edu/api/1/nwstext/202611060645-KOKX-CDUS41-CLINYC)\",\"decision: runs/models disagree or an answer failed verification\"],\"result\":{\"bet_id\":2,\"checked_until\":0,\"element_results_hash\":\"4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8\"},\"signing\":{\"pubkey_hex\":\"4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c\",\"signature_hex\":\"39f1044ce5a2a2c693af70ea7d46bea2a3ae2d6abf4acceeb18e9ad826a34c131b00cfc35f462e08935d1ffd8db087cb9cef6100eac48a60b80e421f8725cd03\"}}",
+    "pruned": false,
+    "next_expected_run_no": 2,
+    "all_results": [
+      {
+        "run_no": 1,
+        "outcome": "VOID",
+        "element_results_hash": "4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f",
+        "checked_until": "0"
+      }
+    ],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": null
+  },
+  "keeper_credit_after": "109875000000000000000000",
+  "bet_status_at_submit": "Resolving",
+  "after_submit": {
+    "status": "Proposed",
+    "outcome": "VOID",
+    "settle_ready_ns": null
+  },
+  "request_resolution_bet2_attempt0": {
+    "error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+    "tx": "DraufXodqGsXXJPpPVv3C3Qt3eqPraFuN8oZknQ2oCkm",
+    "note": "too early (funding_deadline not elapsed)"
+  },
+  "summary": {
+    "branch": "feat/r3c-live-knyc",
+    "main_base": "95887be",
+    "wasm_sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338",
+    "escrow": "praetorial-r3c-11061912.praetorial-dev-1101.testnet",
+    "outcome_pubkey": "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c",
+    "attest_pubkey": "4338312f945867b7734f46cf8f6e8d6a50ecd8a524e1b3ef4f55d4c4d153a063",
+    "fixture": "KNYC 2026-11-05 daily high >= 70F, known answer 72F (expected YES); sources: forecast.weather.gov product.php version=2 + IEM nwstext 202611060645-KOKX-CDUS41-CLINYC",
+    "bet1": {
+      "bet_id": 1,
+      "what": "WASTED RUN: NEAR_AI_API_KEY secret was bound under the ESCROW account home (olhome-r3c) instead of the dev owner (secrets_account_id=praetorial-dev-1101); wasm fell back to OfflineMock (diagnostics: \"offline mock: no model was called\"), judge verdict insufficient -> signed VOID, submitted (Proposed VOID). 0 NEAR AI calls.",
+      "request_resolution_tx": "EmsrceCtbyjxBd2iE4BgGX5MD9VHFgQta1zbAWny3Gpd",
+      "submit_outcome_tx": "7Xj7Gpn1Gd7FiV8YdZHE2nNrvfo13SxQMmNwrMNy9ppL",
+      "raw": "raw_resolution_bet1_mock.txt"
+    },
+    "bet2": {
+      "bet_id": 2,
+      "secret_rebound_under": "praetorial-dev-1101 (bind_secret_dev.log)",
+      "outcome": "VOID",
+      "why": "primary DeepSeek-V4.1-Flash-1017 -> HTTP 400 on both calls (initial + re-run); second z-ai/glm-5.3-flash -> met (quote MAXIMUM 72) on both calls; 1 model unusable -> disagree/no-answer -> VOID (never NO). Likely cause of the 400: model id lacks the \"deepseek-ai/\" prefix that the NEAR AI model list uses (spikes/j1-judge/fixtures/model_list.json) -- unverified by probe (budget).",
+      "models_requested": [
+        "DeepSeek-V4.1-Flash-1017",
+        "z-ai/glm-5.3-flash"
+      ],
+      "models_echoed": [
+        "z-ai/glm-5.3-flash"
+      ],
+      "verdicts": {
+        "DeepSeek-V4.1-Flash-1017": "http 400 x2 (error_body_head null: body not captured)",
+        "z-ai/glm-5.3-flash": "met x2, quote \"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM\", finish stop, http 200, response_bytes 20915/18913"
+      },
+      "stream_timings": "NOT PRESENT in run_diagnostics (no idle/total timing fields emitted)",
+      "signature_verify": "NOT PRESENT in output (no sig_verified field; no verified-signature result for either model)",
+      "nearai_calls": 4,
+      "request_resolution_tx": "RxsgsWYCacvQoEBFKHJLehRTS4HAg8hpb59w3pKtXir",
+      "submit_outcome_tx": "3Fk45PYFXqjLNk1PkxZxwtz7ZMmBQ1d2ww3WzLg1sRRd",
+      "raw": "raw_resolution_bet2.txt",
+      "signed_result": {
+        "bet_id": 2,
+        "checked_until": 0,
+        "element_results_hash": "4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f",
+        "outcome": "VOID",
+        "run_no": 1,
+        "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8"
+      },
+      "signing_pubkey": "4a32e605ca20d6aff23c7a3a278bb6727ebad0f4f58fb91a116fd6e89926b85c",
+      "status_after_submit": "Proposed VOID",
+      "finalize_not_before_utc": "2026-11-07T01:37:02Z"
+    },
+    "credits_exhausted": false,
+    "http_402_seen": false
+  }
+}

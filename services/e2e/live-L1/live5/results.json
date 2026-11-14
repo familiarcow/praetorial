@@ -1,0 +1,114 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "65vRFY227RbgVeT3W2TgC2o9r2GtTDHTTHEUjiYSvPTW",
+      "url": "https://testnet.nearblocks.io/txns/65vRFY227RbgVeT3W2TgC2o9r2GtTDHTTHEUjiYSvPTW",
+      "account": "praetorial-l1b20-11080132.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "CgYxvFZfT49Mswwzg5gxEA7cfjtTtex3EAWF4d6LZmEk",
+      "url": "https://testnet.nearblocks.io/txns/CgYxvFZfT49Mswwzg5gxEA7cfjtTtex3EAWF4d6LZmEk",
+      "wasm_sha256": "ba96b2ae35796c1f28b309e25b8a9961d9f20a10aa5f1b98ca14531e79c6e148",
+      "wasm_bytes": 518839,
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "v4MZpV2PZDJFZrjFdKSZaqpoeMqwD2evY7hJX5Mx4PR",
+      "url": "https://testnet.nearblocks.io/txns/v4MZpV2PZDJFZrjFdKSZaqpoeMqwD2evY7hJX5Mx4PR",
+      "wasm_sha256": "ba96b2ae35796c1f28b309e25b8a9961d9f20a10aa5f1b98ca14531e79c6e148",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "FL54WGKUDB2RWQC9jQuhQc9wUCD2aRL6VdzvkZnYUZkc",
+      "url": "https://testnet.nearblocks.io/txns/FL54WGKUDB2RWQC9jQuhQc9wUCD2aRL6VdzvkZnYUZkc",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "HyshS6mfHCcDryudVDsUnJzQyn7ZGyxShwnfevMa5aQ1",
+      "url": "https://testnet.nearblocks.io/txns/HyshS6mfHCcDryudVDsUnJzQyn7ZGyxShwnfevMa5aQ1",
+      "near": "0.15",
+      "status": "Success"
+    }
+  ],
+  "balances": {
+    "dev_before": "13706539359651913799999943",
+    "dev_after_create": "7682335763337416299999943",
+    "escrow_after_deploy": "6139912985236592900000000"
+  },
+  "escrow_wasm_sha256": "ba96b2ae35796c1f28b309e25b8a9961d9f20a10aa5f1b98ca14531e79c6e148",
+  "source_commit": "79c4bd4 (escrow code unchanged; hash a240f363 identical)",
+  "recreated": {
+    "wasm_sha256": "ba96b2ae35796c1f28b309e25b8a9961d9f20a10aa5f1b98ca14531e79c6e148",
+    "wasm_bytes": 518839,
+    "outcome_pubkey": "f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39",
+    "attest_pubkey": "1ef96f5f220355140ba95536dc5c969b9d5b97e5364692cb9ed27f7aa3191ce8",
+    "resolver_wasm_hash": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39",
+      "attest_pubkey": "1ef96f5f220355140ba95536dc5c969b9d5b97e5364692cb9ed27f7aa3191ce8",
+      "resolver_wasm_hash": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39",
+        "1ef96f5f220355140ba95536dc5c969b9d5b97e5364692cb9ed27f7aa3191ce8",
+        "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  }
+}

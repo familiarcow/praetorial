@@ -1,0 +1,6 @@
+{
+  "written_at": "2026-11-10T22:02:18.056Z",
+  "bet_id": 42,
+  "status": "PENDING: fetched by the harness after T+2min, BEFORE any outcome is read",
+  "outcome_read_before_this": false
+}

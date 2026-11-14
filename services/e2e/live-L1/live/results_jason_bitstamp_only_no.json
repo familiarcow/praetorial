@@ -1,0 +1,120 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "G3RhRHSWKHvc3HgMEtrdd2zyQjzREJWAwa1WBom2oXZ7",
+      "url": "https://testnet.nearblocks.io/txns/G3RhRHSWKHvc3HgMEtrdd2zyQjzREJWAwa1WBom2oXZ7",
+      "spec_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "checked_at": "1794065563359797248",
+      "attest_pubkey": "69ad737f119cc4961d024fe75a2bcd71b6409bc34314b6a3ad639e9ed6ebbb5c",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "8ck3SZmecseJ7juU2f6wTCgJFbNr2YZsN23J8Bp6km6c",
+      "url": "https://testnet.nearblocks.io/txns/8ck3SZmecseJ7juU2f6wTCgJFbNr2YZsN23J8Bp6km6c",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "pNY7sXbGJNEJCLWnmevt4QwWQxrftVTW9gFANS8TEb6",
+      "url": "https://testnet.nearblocks.io/txns/pNY7sXbGJNEJCLWnmevt4QwWQxrftVTW9gFANS8TEb6",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "9b7sZaZNaiu7MNRL8DctzMdojz37A4RgrLaEpooKsjfE",
+      "url": "https://testnet.nearblocks.io/txns/9b7sZaZNaiu7MNRL8DctzMdojz37A4RgrLaEpooKsjfE"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "GX7bHgHzDcvPsMV1q5vHXTEBgDEuY8d2iVz7kjqi5vfc",
+      "url": "https://testnet.nearblocks.io/txns/GX7bHgHzDcvPsMV1q5vHXTEBgDEuY8d2iVz7kjqi5vfc"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "EytzRWs4wxqtva2whPzT67xwj9v4okfz1HCiwLLT68dT",
+      "url": "https://testnet.nearblocks.io/txns/EytzRWs4wxqtva2whPzT67xwj9v4okfz1HCiwLLT68dT",
+      "status": "Success",
+      "keeper_credit_before": "129937500000000000000000"
+    }
+  ],
+  "terms_sha256": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+  "bet_id": 2,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "failed_attempt_insufficient_keeper_gas_balance": "Sender keeper.praetorial-dev-1101.testnet does not have enough balance 0.0834357342648004 for operation costing 0.280919075579165",
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 2,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "models_snapshot_hash": "itemL1b-jason_bitstamp_only_no",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794065722898000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796657572898000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794065575139598300,
+    "taken_at": 1794065578722984400,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 2,
+    "last_resolution_raw": "null",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": 1
+  },
+  "keeper_credit_after": "89812500000000000000000"
+}

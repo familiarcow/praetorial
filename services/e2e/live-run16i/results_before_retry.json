@@ -1,0 +1,297 @@
+{
+  "item": "16i",
+  "txs": [
+    {
+      "step": "upload_chunk1",
+      "hash": "AvFsfo4aL6APV1xaFUuJwQZBDuwakm1xBQ76geuuerNu",
+      "url": "https://testnet.nearblocks.io/txns/AvFsfo4aL6APV1xaFUuJwQZBDuwakm1xBQ76geuuerNu",
+      "status": "Success"
+    },
+    {
+      "step": "upload_chunk2",
+      "hash": "GdfsayBeoC9SnnBMx4x1Db9EWvmPcdcM7wmsLpjzc3QR",
+      "url": "https://testnet.nearblocks.io/txns/GdfsayBeoC9SnnBMx4x1Db9EWvmPcdcM7wmsLpjzc3QR",
+      "status": "Success"
+    },
+    {
+      "step": "upload_chunk3",
+      "hash": "A2n1Htismxba3qSsRBmpwvY23V86Z3Fwdc8HtmWYpm5M",
+      "url": "https://testnet.nearblocks.io/txns/A2n1Htismxba3qSsRBmpwvY23V86Z3Fwdc8HtmWYpm5M",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_deploy",
+      "hash": "EJGipNRGhMDaiQfNGH3DxW7SL2Ke15ctdSCReXbbdwFX",
+      "url": "https://testnet.nearblocks.io/txns/EJGipNRGhMDaiQfNGH3DxW7SL2Ke15ctdSCReXbbdwFX",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_call",
+      "hash": "EEuxngtX33RtgXuJpyJjYSYiCfrun9tJscDNDULP7dk1",
+      "url": "https://testnet.nearblocks.io/txns/EEuxngtX33RtgXuJpyJjYSYiCfrun9tJscDNDULP7dk1",
+      "status": "Success",
+      "removed": "11"
+    },
+    {
+      "step": "delete_escrow_account",
+      "hash": "C8hAAkoS6AJBhAktN3Xr6ojQr6H4bcHs52W91TaHVxzf",
+      "url": "https://testnet.nearblocks.io/txns/C8hAAkoS6AJBhAktN3Xr6ojQr6H4bcHs52W91TaHVxzf",
+      "beneficiary": "praetorial-dev-1101.testnet",
+      "status": "Success"
+    },
+    {
+      "step": "recreate_escrow_account",
+      "hash": "Dg8xwnwvf64ocEoek3vGSwD49pwBQVhpz1hLiivba4Dv",
+      "url": "https://testnet.nearblocks.io/txns/Dg8xwnwvf64ocEoek3vGSwD49pwBQVhpz1hLiivba4Dv",
+      "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "report_pubkey_outcome",
+      "hash": "9K6JVtgRSUikZJXBeyUcC1ytwNBcv59TxKvALa2GGuc9",
+      "url": "https://testnet.nearblocks.io/txns/9K6JVtgRSUikZJXBeyUcC1ytwNBcv59TxKvALa2GGuc9",
+      "status": "Success"
+    },
+    {
+      "step": "report_pubkey_attest1",
+      "hash": "6tkj6Pz7HsTkGBupXyBTwJPe2Q1izZjen1ntXiSQ6tj",
+      "url": "https://testnet.nearblocks.io/txns/6tkj6Pz7HsTkGBupXyBTwJPe2Q1izZjen1ntXiSQ6tj",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "2a7spzv2ndeFkUUAdyNrW4sYn6HHZUTPNX5wb8tNoRT7",
+      "url": "https://testnet.nearblocks.io/txns/2a7spzv2ndeFkUUAdyNrW4sYn6HHZUTPNX5wb8tNoRT7",
+      "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "85iBtQcg5hLrpVMMmguUmtw2rYRyNavdBpbebi9xP8Q8",
+      "url": "https://testnet.nearblocks.io/txns/85iBtQcg5hLrpVMMmguUmtw2rYRyNavdBpbebi9xP8Q8",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "BMhUaSE4rzRpJTNhAqAK3sQeyoL5yLfAHh6hrBN3ZyNc",
+      "url": "https://testnet.nearblocks.io/txns/BMhUaSE4rzRpJTNhAqAK3sQeyoL5yLfAHh6hrBN3ZyNc",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "DHKPQVKMYK8rPn9RazsFmacKPHZs7E1UDQEAkMc6V2Bp",
+      "url": "https://testnet.nearblocks.io/txns/DHKPQVKMYK8rPn9RazsFmacKPHZs7E1UDQEAkMc6V2Bp",
+      "spec_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "checked_at": "1793969219169554432",
+      "attest_pubkey": "9c9d2c8ebf4d3b634156a0202a6102f6314b7c561ec9869b42e425d4ad3a5498",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "7fLzvLLdDD91sgEwMwJSNEHiciJRhftN5LF83P87yDXG",
+      "url": "https://testnet.nearblocks.io/txns/7fLzvLLdDD91sgEwMwJSNEHiciJRhftN5LF83P87yDXG",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "ACxAdR6TnWcfi4dknaCGnQaBvwN8dkuT7kg9r4VkFvtp",
+      "url": "https://testnet.nearblocks.io/txns/ACxAdR6TnWcfi4dknaCGnQaBvwN8dkuT7kg9r4VkFvtp",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "G9jgEPuFDDPsfXMx2jXNWSPVPZjPYPJWU1TL5X7q3XrN",
+      "url": "https://testnet.nearblocks.io/txns/G9jgEPuFDDPsfXMx2jXNWSPVPZjPYPJWU1TL5X7q3XrN"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "61TpCq4Dve8RukcyhiNvyLVHs8HMkRRqNw3uacK8x66g",
+      "url": "https://testnet.nearblocks.io/txns/61TpCq4Dve8RukcyhiNvyLVHs8HMkRRqNw3uacK8x66g"
+    }
+  ],
+  "resolver_wasm": {
+    "sha256": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8",
+    "release_record": "resolver/release/record-b371d89c.json",
+    "artifact": "~/.cache/16h/run1/module.wasm (sha256 verified)",
+    "fastfs_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8.wasm",
+    "served_sha_verified": true
+  },
+  "balances_start": {
+    "dev": "1066260161919376399999961 (pre-upload)",
+    "keeper": "524439588597487100000000",
+    "attest1": "431367393973838600000000",
+    "escrow": "~6.138 (16f)"
+  },
+  "state_key_snapshot": {
+    "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+    "ts": "2026-11-06T12:44:04.209Z",
+    "block_height": 276488362,
+    "key_count": 11,
+    "total_value_bytes": 7567,
+    "code_hash_hex": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+    "keys": [
+      {
+        "key_b64": "QRMAAABuZXAxNDE6dXNkYy50ZXN0bmV0",
+        "key_utf8": "A????nep141:usdc.testnet",
+        "value_bytes": 80,
+        "value_sha256": "c62f831bde22b9d1b562d7bdc388a5376e1a5f08c5cb98544ce1eff5762ec689"
+      },
+      {
+        "key_b64": "QRcAAABuZXAxNDE6YnRjLm1vY2sudGVzdG5ldA==",
+        "key_utf8": "A????nep141:btc.mock.testnet",
+        "value_bytes": 80,
+        "value_sha256": "7c6f50fafe9cfbdb7213a46392180186cae2f79e8c45c2153affb9dd526fea3f"
+      },
+      {
+        "key_b64": "QgEAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 6214,
+        "value_sha256": "67242c4266c287b46b5b3fec57344b4b2465c3da0e39f30040e7a18bd49f35e1"
+      },
+      {
+        "key_b64": "UAEAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "57feeb2d162dfe5fd3fbc32df82e5a57b37d38bcc4df01431f5fe921a54ad648"
+      },
+      {
+        "key_b64": "UAIAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "46373f114910f597edf54fc50c3d26fec0ca7a2d1cfd8348bead15d22482f132"
+      },
+      {
+        "key_b64": "UAMAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 123,
+        "value_sha256": "80e77da30df67e7b9763df6f88fd07a90b7e2e104942a7b2c52eccbb1dc2ea46"
+      },
+      {
+        "key_b64": "UQEAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 28,
+        "value_sha256": "bfc6df2900e8590a474e7d4c16216f15471366020667e8900b3f0ef7a5e1c8fc"
+      },
+      {
+        "key_b64": "UgEAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      },
+      {
+        "key_b64": "U1RBVEU=",
+        "key_utf8": "STATE",
+        "value_bytes": 729,
+        "value_sha256": "bd17ba9a281653f69c23fde60fd35f8f7c627bfe142345e493a33a39bc0b845e"
+      },
+      {
+        "key_b64": "WQEAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "a21ff071eb89bab4d94fb50f64b8232fd418d5eba54c4a8457efdc0d9e55f041"
+      },
+      {
+        "key_b64": "WgEAAAAAAAAA",
+        "key_utf8": "Z????????",
+        "value_bytes": 1,
+        "value_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      }
+    ]
+  },
+  "balances": {
+    "dev_before_wipe": "1052301965840551099999961",
+    "escrow_before_wipe": "6138330573755760699999997",
+    "dev_after_delete": "7188962675500244399999958",
+    "escrow_after_create": "6000000000000000000000000",
+    "dev_after_create": "1181847685962744399999958",
+    "escrow_after_deploy": "6141590785219498800000000"
+  },
+  "view_state_keys_after_wipe": 0,
+  "recreated": {
+    "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+    "wasm_bytes": 523816,
+    "outcome_pubkey": "58f38f7a00eaeb8540a26609490698d8647490646d0370edeeb48d6e7d607a3d",
+    "attest_pubkey": "9c9d2c8ebf4d3b634156a0202a6102f6314b7c561ec9869b42e425d4ad3a5498",
+    "resolver_wasm_hash": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "58f38f7a00eaeb8540a26609490698d8647490646d0370edeeb48d6e7d607a3d",
+      "attest_pubkey": "9c9d2c8ebf4d3b634156a0202a6102f6314b7c561ec9869b42e425d4ad3a5498",
+      "resolver_wasm_hash": "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "58f38f7a00eaeb8540a26609490698d8647490646d0370edeeb48d6e7d607a3d",
+        "9c9d2c8ebf4d3b634156a0202a6102f6314b7c561ec9869b42e425d4ad3a5498",
+        "eeacf0d9ae77a5c3f929a2f7f92d73a58016106960f57e8d495dbf74a89dbff8"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  },
+  "terms_diff": {
+    "replaced": [
+      "2028-10-28 -> 2025-10-28 (deadline, window_end)",
+      "October 28, 2028 -> October 28, 2025",
+      "evidence_cutoff 2028-11-04T19:00:00Z -> 2025-11-04T19:00:00Z",
+      "window_close 2028-11-06T19:00:00Z -> 2025-11-06T19:00:00Z",
+      "window_start 2026-11-04T00:00:00Z -> 2025-10-01T00:00:00Z (keeps window_start < window_end)"
+    ],
+    "occurrences": 8,
+    "remaining_2028": 0,
+    "orig_sha256": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "new_sha256": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837"
+  },
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+  "request_resolution_error_tx": "7iWKe1udHPRBzUPcwU3sYv8tft3QURkznbYiGnsyfv9B"
+}

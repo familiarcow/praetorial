@@ -1,0 +1,57 @@
+[package]
+name = "praetorial-resolver"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "praetorial-resolver"
+path = "src/main.rs"
+
+[dependencies]
+praetorial-core = { path = "../core" }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+hex = { version = "0.4", optional = true }
+sha2 = { version = "0.10", optional = true }
+
+# Real OpenAI-compatible HTTP client for wasip2, behind a feature flag.
+wasi-http-client = { version = "0.2", optional = true }
+
+# Same wasi:http/wasi:io bindings wasi-http-client 0.2 itself builds on
+# (confirmed pinned to 0.13 in its own Cargo.toml), used directly by our
+# own `chunked_post` module to bypass that crate's one buggy call site
+# (a single blocking_write_and_flush over the whole body, which traps
+# above 4096 bytes -- see MAX_WASI_HTTP_WRITE_CHUNK_BYTES's doc comment).
+wasi = { version = "0.13", optional = true }
+
+# OutLayer signing-keys host API (outlayer:signing-keys), behind a feature
+# flag. Only a wasm32-wasip2 build with this feature embeds the
+# outlayer.manifest custom section and calls the host; the native/test build
+# and the pinned default wasm (sha256 61d4d881...) never link it, so that
+# artifact's hash is unaffected by this addition.
+outlayer = { version = "0.2", features = ["signing-keys"], optional = true }
+
+# Local test-only signer: since OutLayer signing-keys isn't reachable from a
+# plain `wasmtime run`, this feature signs the exact same borsh message with
+# an ed25519 key read from env/file (test key only, never a production key).
+ed25519-dalek = { version = "2", optional = true }
+
+# Item 17d: test-only signing of recorded archive snapshots (not part of any shipped build).
+[dev-dependencies]
+ed25519-dalek = "2"
+hex = "0.4"
+
+[features]
+default = []
+real-http = ["wasi-http-client", "wasi", "hex", "sha2", "ed25519-dalek"]
+outlayer-sign = ["outlayer", "hex"]
+local-signer = ["ed25519-dalek", "hex", "sha2"]
+
+# Item 17a: probe-only build (fetch + report, signs nothing). Mutually exclusive with outlayer-sign (compile_error).
+probe-sources = ["real-http"]
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1

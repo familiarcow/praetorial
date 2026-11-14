@@ -1,0 +1,183 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "Eszp27fPK7HpoJe4ZZtg97HcS8dvqvUQS5EqbVvVcuqV",
+      "url": "https://testnet.nearblocks.io/txns/Eszp27fPK7HpoJe4ZZtg97HcS8dvqvUQS5EqbVvVcuqV",
+      "spec_hash": "ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9",
+      "checked_at": "1794072693348614144",
+      "attest_pubkey": "09336ce08bdbb7e33168e27ea0c6985140732765aa5f1fc66c881581097797dd",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "BswZFtSdFedSGLJppCbK15uYRvHiW9qVtEL1XgqiEu84",
+      "url": "https://testnet.nearblocks.io/txns/BswZFtSdFedSGLJppCbK15uYRvHiW9qVtEL1XgqiEu84",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "DKeGnBxHPKKRNJAb2qwsZzME6UfFXeJM4gU3fYrvZRp5",
+      "url": "https://testnet.nearblocks.io/txns/DKeGnBxHPKKRNJAb2qwsZzME6UfFXeJM4gU3fYrvZRp5",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "A5sXF2f8bdosiUmLFwQhyg8cZi6XrcfhHTfaRBjuRhyB",
+      "url": "https://testnet.nearblocks.io/txns/A5sXF2f8bdosiUmLFwQhyg8cZi6XrcfhHTfaRBjuRhyB"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "EnHybVBfHmKqzzTAdXZGunZxjZSJbY1yXNgaSGcNDozb",
+      "url": "https://testnet.nearblocks.io/txns/EnHybVBfHmKqzzTAdXZGunZxjZSJbY1yXNgaSGcNDozb"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "9jAeCBxWQey6qH7v7DepCK6QnprDxKv4p2JXDG2jdU4D",
+      "url": "https://testnet.nearblocks.io/txns/9jAeCBxWQey6qH7v7DepCK6QnprDxKv4p2JXDG2jdU4D",
+      "status": "Success",
+      "keeper_credit_before": "69750000000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "6HZKRKjmRFum1nnnKPnDDqR1tJZybXfvgUKqas15Tr5X",
+      "url": "https://testnet.nearblocks.io/txns/6HZKRKjmRFum1nnnKPnDDqR1tJZybXfvgUKqas15Tr5X",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 1,
+        "checked_until": "0",
+        "element_results_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "outcome": "VOID",
+        "run_no": 1,
+        "terms_hash": "ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9"
+      }
+    },
+    {
+      "step": "finalize",
+      "hash": "CRtqenLXb5xxANvj2KHPBtAgwLqgCCg2htt6Ar8FTzBV",
+      "url": "https://testnet.nearblocks.io/txns/CRtqenLXb5xxANvj2KHPBtAgwLqgCCg2htt6Ar8FTzBV",
+      "status": "Success"
+    }
+  ],
+  "terms_sha256": "ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9",
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9",
+      "models_snapshot_hash": "itemL1b-close_above_future",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794072885343000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796664735343000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794072737636751000,
+    "taken_at": 1794072741891520300,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 5,
+    "last_resolution_raw": "{\"contract\":\"praetorial-l1b5-11071226.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[],\"elements\":[],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":false,\"models_echoed\":[],\"models_requested\":[],\"run_diagnostics\":[],\"runs\":0,\"sources\":[]},\"notes\":[\"settle request refused (17c1 window check): REQ_BEFORE_T_PLUS_5MIN: the settle request must come at T + 5 minutes or later\",\"COULDNT_CHECK (D-TPL1): REQ_BEFORE_T_PLUS_5MIN: the settle request must come at T + 5 minutes or later\",\"D-BUDGET1: calls_ms=[] rerun=false\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9\"},\"signing\":{\"pubkey_hex\":\"cda07c41a95ecf0f42a7ee6a20c73ac7f911645c5ce8bc6665c78ad461f05e56\",\"signature_hex\":\"8ae4ee045e8e9c3b4eca48057f6dc5bec3ae44d8c3a448a1943f6c204b7121556ef4327f0a39c30f4714237c696d6737f38f2b09ced7d6ff423ecafd5455250c\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": 1
+  },
+  "keeper_credit_after": "49687500000000000000000",
+  "last_resolution_raw": "{\"contract\":\"praetorial-l1b5-11071226.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[],\"elements\":[],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":false,\"models_echoed\":[],\"models_requested\":[],\"run_diagnostics\":[],\"runs\":0,\"sources\":[]},\"notes\":[\"settle request refused (17c1 window check): REQ_BEFORE_T_PLUS_5MIN: the settle request must come at T + 5 minutes or later\",\"COULDNT_CHECK (D-TPL1): REQ_BEFORE_T_PLUS_5MIN: the settle request must come at T + 5 minutes or later\",\"D-BUDGET1: calls_ms=[] rerun=false\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9\"},\"signing\":{\"pubkey_hex\":\"cda07c41a95ecf0f42a7ee6a20c73ac7f911645c5ce8bc6665c78ad461f05e56\",\"signature_hex\":\"8ae4ee045e8e9c3b4eca48057f6dc5bec3ae44d8c3a448a1943f6c204b7121556ef4327f0a39c30f4714237c696d6737f38f2b09ced7d6ff423ecafd5455250c\"}}",
+  "bet_status_at_submit": "Resolving",
+  "after_submit": {
+    "status": "Proposed",
+    "outcome": "VOID",
+    "settle_ready_ns": null
+  },
+  "before": {
+    "maker1": "3887788000",
+    "taker1": "3709347000",
+    "fee": "2740000",
+    "praetorial-l1b5-11071226": "4032000"
+  },
+  "final_status": "Settled",
+  "outcome": "VOID",
+  "after": {
+    "maker1": "3888788000",
+    "taker1": "3710347000",
+    "fee": "2756000",
+    "praetorial-l1b5-11071226": "2016000"
+  },
+  "payouts": [
+    {
+      "receiver": "maker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "1000000",
+      "reason": "void_refund_maker",
+      "done": true
+    },
+    {
+      "receiver": "taker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "1000000",
+      "reason": "void_refund_taker",
+      "done": true
+    },
+    {
+      "receiver": "fee.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "16000",
+      "reason": "void_storage_keep_terms",
+      "done": true
+    }
+  ]
+}

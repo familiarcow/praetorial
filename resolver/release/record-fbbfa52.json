@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "fbbfa524fa1c119ca6ffb35250e358fed8d9c245",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "691cd1a2e7ced17185188e75adea79b1ea50d26cac094260ac11ed778d02b764",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "691cd1a2e7ced17185188e75adea79b1ea50d26cac094260ac11ed778d02b764"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "691cd1a2e7ced17185188e75adea79b1ea50d26cac094260ac11ed778d02b764"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "691cd1a2e7ced17185188e75adea79b1ea50d26cac094260ac11ed778d02b764"
+    }
+  ],
+  "notes": {
+    "item": "L1b15 (D-JUDGETIME1 A): model-deadline-cut judge -> no signed outcome (clean no-output, retryable failed run); built from GREEN commit fbbfa52; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes built concurrently; the fresh-container (cp) build hit the known transient build-script failure under emulation (zerofrom-derive) and was re-run alone"
+  }
+}

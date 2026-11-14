@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "f9c61ecb1407aa372796ed0834220cef9e5d5108",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473"},
+    {"route": "docker-run-2", "sha256": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473"},
+    {"route": "fresh-container", "sha256": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473"}
+  ],
+  "notes": {
+    "item": "NOKEY1b (D-NOKEY1b): NOKEY1 resolver (real-http with no NEAR_AI_API_KEY emits an unsigned no_live_judge_key error instead of signing YES/NO/VOID). Rebuilt in NOKEY1b from f9c61ecb with build_reproducible.sh routes run, run, cp; all equal the NOKEY1 hash recorded in NOKEY1-built-not-released.md. Uploaded to FastFS testnet and pinned by the frz3 escrow in NOKEY1b.",
+    "emulation": "colima rosetta profile; build_reproducible.sh routes run, run, cp (fresh container)."
+  }
+}

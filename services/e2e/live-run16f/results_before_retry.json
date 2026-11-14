@@ -1,0 +1,432 @@
+{
+  "txs": [
+    {
+      "step": "wipe_deploy",
+      "hash": "Eimixgs769T4FqiS4uwMBmJqWVnaRidYyXMZF3dHpbn3",
+      "url": "https://testnet.nearblocks.io/txns/Eimixgs769T4FqiS4uwMBmJqWVnaRidYyXMZF3dHpbn3",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_call",
+      "hash": "4Gsiq6Rcr9mMp5M3VnMgNFnK2pcT2WQ6RB2mcjtrcqpE",
+      "url": "https://testnet.nearblocks.io/txns/4Gsiq6Rcr9mMp5M3VnMgNFnK2pcT2WQ6RB2mcjtrcqpE",
+      "status": "Success",
+      "removed": "25"
+    },
+    {
+      "step": "delete_escrow_account",
+      "hash": "8cgzCdePYmXYcrNrtsSTh7kupz12jb8ayNX59FvwLUFB",
+      "url": "https://testnet.nearblocks.io/txns/8cgzCdePYmXYcrNrtsSTh7kupz12jb8ayNX59FvwLUFB",
+      "beneficiary": "praetorial-dev-1101.testnet",
+      "status": "Success"
+    },
+    {
+      "step": "recreate_escrow_account",
+      "hash": "C4by7qYBjg9XweAdEYGvvGyLMtVYhLsq4jFbTW3MT7Zh",
+      "url": "https://testnet.nearblocks.io/txns/C4by7qYBjg9XweAdEYGvvGyLMtVYhLsq4jFbTW3MT7Zh",
+      "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "Fir2hGdPajBRpCUzHbLMLKjbPd7cd7SrVHZ9E5iqQB4a",
+      "url": "https://testnet.nearblocks.io/txns/Fir2hGdPajBRpCUzHbLMLKjbPd7cd7SrVHZ9E5iqQB4a",
+      "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "H42NXgHtmH4aHMoT6NeskQPWJzAhuicB8a9y25Afx7P1",
+      "url": "https://testnet.nearblocks.io/txns/H42NXgHtmH4aHMoT6NeskQPWJzAhuicB8a9y25Afx7P1",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "AErfsQfS3q8jABxbN4PRQ4WyFg2Y4N9pQTZTreDsJSme",
+      "url": "https://testnet.nearblocks.io/txns/AErfsQfS3q8jABxbN4PRQ4WyFg2Y4N9pQTZTreDsJSme",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "HkVq25PV1bBtcc1ZZ5odjL68HhYxDpnoCM9YwU8nK2Mt",
+      "url": "https://testnet.nearblocks.io/txns/HkVq25PV1bBtcc1ZZ5odjL68HhYxDpnoCM9YwU8nK2Mt",
+      "spec_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "checked_at": "1793963456305565696",
+      "attest_pubkey": "11071d68315e6ce461ce730dee99d2da258cca409232607104970da5f6a474b6",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "CCVF1CHxqbdwFWv1s4ueYDjJT6afGGedWeM2P4fnSeV9",
+      "url": "https://testnet.nearblocks.io/txns/CCVF1CHxqbdwFWv1s4ueYDjJT6afGGedWeM2P4fnSeV9",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "BoKrPZR1eQUYTn15ZXMMHMahEFnN5ruUMxWM4y5VwRGL",
+      "url": "https://testnet.nearblocks.io/txns/BoKrPZR1eQUYTn15ZXMMHMahEFnN5ruUMxWM4y5VwRGL",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "CBL4HKLYWJmf6rF4NNZMrdd1m1TLFq8tj9x11RvUbqGY",
+      "url": "https://testnet.nearblocks.io/txns/CBL4HKLYWJmf6rF4NNZMrdd1m1TLFq8tj9x11RvUbqGY"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "D8qENQU7LoeuVsqiMwJqzFaLHTbskHS4zC7QCmZyULTU",
+      "url": "https://testnet.nearblocks.io/txns/D8qENQU7LoeuVsqiMwJqzFaLHTbskHS4zC7QCmZyULTU"
+    },
+    {
+      "step": "fund_keeper_0.3_near",
+      "hash": "E7ifJ78LuhokEyfe4PLzqVdCBuW4nYVc8SWrKERREaZd",
+      "url": "https://testnet.nearblocks.io/txns/E7ifJ78LuhokEyfe4PLzqVdCBuW4nYVc8SWrKERREaZd",
+      "status": "Success"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "H2QUZSvFme65vYekU3UMKP7cs1NiVRLfYqiRfzaREnMK",
+      "url": "https://testnet.nearblocks.io/txns/H2QUZSvFme65vYekU3UMKP7cs1NiVRLfYqiRfzaREnMK",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "150000000000000000000000"
+    }
+  ],
+  "state_key_snapshot": {
+    "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+    "ts": "2026-11-06T11:07:23.899Z",
+    "block_height": 276479048,
+    "key_count": 25,
+    "total_value_bytes": 13018,
+    "code_hash_hex": "842803476484fc5618f82f0bc99d0892804b56b652ebb00a4de616f4ca302b9f",
+    "keys": [
+      {
+        "key_b64": "QRMAAABuZXAxNDE6dXNkYy50ZXN0bmV0",
+        "key_utf8": "A????nep141:usdc.testnet",
+        "value_bytes": 80,
+        "value_sha256": "c62f831bde22b9d1b562d7bdc388a5376e1a5f08c5cb98544ce1eff5762ec689"
+      },
+      {
+        "key_b64": "QRcAAABuZXAxNDE6YnRjLm1vY2sudGVzdG5ldA==",
+        "key_utf8": "A????nep141:btc.mock.testnet",
+        "value_bytes": 80,
+        "value_sha256": "7c6f50fafe9cfbdb7213a46392180186cae2f79e8c45c2153affb9dd526fea3f"
+      },
+      {
+        "key_b64": "QgEAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 4746,
+        "value_sha256": "0506baa0b8c75366fbabf81c2924fd66a6d259dc83602d14be4ba67a7891c398"
+      },
+      {
+        "key_b64": "QgIAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 5408,
+        "value_sha256": "c48a01f4152ed6f0113a9dc3433fcdc967207f282a45466891571145ee2a6451"
+      },
+      {
+        "key_b64": "UAEAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "8de8333562bce5086dc0a3251e6ebfca6b2c5e17a32e2a2cd43375b6d2678c85"
+      },
+      {
+        "key_b64": "UAIAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "0a68fc20e4731d906fa1ac51e7fbe1ed282fc763918abfbc7001fa9594a00667"
+      },
+      {
+        "key_b64": "UAMAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "edf2dbc1b5097ca22b84df0bd88d7a4d5cf2512beebe417435d20e7754650308"
+      },
+      {
+        "key_b64": "UAQAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "e9a8c8de13ba9f5c84f86d5f8826c17f3902c5891280b89f4c76d8c5affeeffe"
+      },
+      {
+        "key_b64": "UAUAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "8292438a269d2da6138546952e3da6e0a8ff3afae67331dd86fc582ad3608bb1"
+      },
+      {
+        "key_b64": "UAYAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "2e02745144af51ebbf990c0e5c8b5356498c64d72e4cd46e9caaf8f7c66b8598"
+      },
+      {
+        "key_b64": "UAcAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 132,
+        "value_sha256": "67b5cf570aa5678a690d14ae82024e491d77aef4b4d94130ca34b75cfaf94d7e"
+      },
+      {
+        "key_b64": "UAgAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "3df793e40db60531c51e4e7f88e80573989fde78f65cb594b269ff16b0e7d55b"
+      },
+      {
+        "key_b64": "UAkAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "b8fd435bbf676aa4fbf27920bbd6d4ea941dc7b84d5e7bab2418a9d44bda0081"
+      },
+      {
+        "key_b64": "UAoAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "ca3e0dadb5c8d24371023fb88a60d264015025756330aecac66fb0f65f580386"
+      },
+      {
+        "key_b64": "UAsAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "2f214967a8364ef182b58d100f4336007782cb3dca2239ce07c304f99b923df6"
+      },
+      {
+        "key_b64": "UAwAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "3f71b55947181dd8bde81d770bedf7585274a47eac2754e5dcc85d849b73471d"
+      },
+      {
+        "key_b64": "UA0AAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "a01de706ff3114c7631e6f256d4bd956db4a50f94d85a3ca0628e75d30bb2bbe"
+      },
+      {
+        "key_b64": "UA4AAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 132,
+        "value_sha256": "6de0e87a88c53ede972a595e8fe262d070c8277a2280637c1a664547a6163e14"
+      },
+      {
+        "key_b64": "UQEAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 60,
+        "value_sha256": "09b8c7c689647213d17f6839963eb6f1edb6dd892f4650b5150f7c21fc1e31c5"
+      },
+      {
+        "key_b64": "UQIAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 60,
+        "value_sha256": "08133c074b017d6ea573138d6cad03d023e08f54cbba4811dff28fe2da7829ff"
+      },
+      {
+        "key_b64": "UgEAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      },
+      {
+        "key_b64": "UgIAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4"
+      },
+      {
+        "key_b64": "U1RBVEU=",
+        "key_utf8": "STATE",
+        "value_bytes": 732,
+        "value_sha256": "11c158dadc4e8e1f40736f6000b5a6caeaad02e06b22e2b5489d80df2eaf744e"
+      },
+      {
+        "key_b64": "WQEAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "1b4467131b56f18600f79a15fe1036219d68ed3804722842af9cf81eccb3149e"
+      },
+      {
+        "key_b64": "WQIAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "42f7c95680172e7d5aa86250f64290685d8fe7a879078f6b341d92b12c2d67d5"
+      }
+    ]
+  },
+  "balances": {
+    "dev_before_wipe": "1219102393472985899999967",
+    "escrow_before_wipe": "6164529873941906199999994",
+    "dev_after_delete": "7381808510504520699999961",
+    "escrow_after_create": "6000000000000000000000000",
+    "dev_after_create": "1374693520967020699999961",
+    "escrow_after_deploy": "6139695685255760700000000"
+  },
+  "view_state_keys_after_wipe": 0,
+  "recreated": {
+    "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+    "wasm_bytes": 523816,
+    "outcome_pubkey": "035ea6c4d7d5e8a33ce2ebc98a729ae0f47b6d610174bd6217df3d085fdfad35",
+    "attest_pubkey": "11071d68315e6ce461ce730dee99d2da258cca409232607104970da5f6a474b6",
+    "resolver_wasm_hash": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "035ea6c4d7d5e8a33ce2ebc98a729ae0f47b6d610174bd6217df3d085fdfad35",
+      "attest_pubkey": "11071d68315e6ce461ce730dee99d2da258cca409232607104970da5f6a474b6",
+      "resolver_wasm_hash": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "035ea6c4d7d5e8a33ce2ebc98a729ae0f47b6d610174bd6217df3d085fdfad35",
+        "11071d68315e6ce461ce730dee99d2da258cca409232607104970da5f6a474b6",
+        "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  },
+  "terms_diff": {
+    "replaced": [
+      "2028-10-28 -> 2025-10-28 (deadline, window_end)",
+      "October 28, 2028 -> October 28, 2025",
+      "evidence_cutoff 2028-11-04T19:00:00Z -> 2025-11-04T19:00:00Z",
+      "window_close 2028-11-06T19:00:00Z -> 2025-11-06T19:00:00Z",
+      "window_start 2026-11-04T00:00:00Z -> 2025-10-01T00:00:00Z (keeps window_start < window_end)"
+    ],
+    "occurrences": 8,
+    "remaining_2028": 0,
+    "orig_sha256": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "new_sha256": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837"
+  },
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error": "Sender keeper.praetorial-dev-1101.testnet does not have enough balance 0.2269107541749528 for operation costing 0.300919075579165",
+  "request_resolution_error_tx": "2vsNTX5tuCKtuWPJMUEXMtZ6tkiT9vMbE3UgHkg3YWqt",
+  "poll": {
+    "i": 59,
+    "status": "Resolving",
+    "runs_used": 0
+  },
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "models_snapshot_hash": "item16c-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2025-10-01T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2025-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2025-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793963618398000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796555468398000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793963474010113000,
+    "taken_at": 1793963478707708400,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 1,
+    "last_resolution_raw": "{\"contract\":\"praetorial-e2e-2611052236.praetorial-dev-1101.testnet\",\"notes\":[\"price evidence INCOMPLETE for S_CB (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): page failed (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-01T00:00:00Z&end=2025-10-13T11:00:00Z): COULDNT_CHECK (spec §11 FETCH_FAIL, queue item 7f): HTTP 400 (non-2xx)\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=3600&limit=1000&start=1759276800&end=1761674400) window-scoped, granularity 3600s, 667 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 3600s over 2025-10-01T00:00:00Z to 2025-10-28T19:00:00Z: no candles returned inside the window\",\"COULDNT_CHECK (D-RESOLVE6): only 1 of 3 price venues have complete coverage of the term window (need 2); VOID, never a verdict on partial data\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837\"},\"signing\":{\"pubkey_hex\":\"035ea6c4d7d5e8a33ce2ebc98a729ae0f47b6d610174bd6217df3d085fdfad35\",\"signature_hex\":\"23ddf7cc199b67ba2518159317e513fec081e3bb127db8714d3055a9c888ec7b0ea17874821b21d5c2bdeac0372c138a713b5764edcd851a78e632aeaf97e20f\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  },
+  "keeper_credit_after": "129937500000000000000000"
+}

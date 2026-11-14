@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "1733f9707c54df8f3db6cceff11e1f3fcc6e6559",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"
+    }
+  ],
+  "notes": {
+    "item": "RR6: resolver rebuilt after PT3F, LNT1/LNT1b, RTE1/RTE1b (strike_exhibit_statements + FIXED_SYSTEM) and PT4 fixtures; built from commit 1733f97 (resolver/ tree identical to main 91b3419); NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; docker-run-1, docker-run-2 and fresh-container identical. One earlier attempt of docker-run-1 failed with a cc linker SIGSEGV under emulation (no hash produced) and was re-run unchanged."
+  }
+}

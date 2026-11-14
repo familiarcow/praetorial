@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "7683e0fa6d17df2d98ec3f0c07191b4fd041124a",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773"},
+    {"route": "docker-run-2", "sha256": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773"},
+    {"route": "fresh-container", "sha256": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773"}
+  ],
+  "notes": {
+    "item": "L1b8 open-time PRICE_READING_UNDEFINED check (D-L1MESSY2); built from the merge commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (one docker-run attempt hit a transient serde build-script failure under emulation and was re-run)"
+  }
+}

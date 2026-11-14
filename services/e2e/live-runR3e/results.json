@@ -1,0 +1,344 @@
+{
+ "txs": [
+  {
+   "step": "deploy_escrow",
+   "hash": "4puXHyGGDcSp52PxtmxYXMszvfS9po4ETYoHM6bze1eZ",
+   "url": "https://testnet.nearblocks.io/txns/4puXHyGGDcSp52PxtmxYXMszvfS9po4ETYoHM6bze1eZ",
+   "wasm_sha256": "f50742358b404ccc7b9a80f9da86e5cd7591e32ccf7371f9e970fbe94ad0b9ed",
+   "status": "Success"
+  },
+  {
+   "step": "escrow_new",
+   "hash": "G7pdXjKBhiJwVZvwT2nsyrg7SYGtEgQLfEZBgGDrJpTB",
+   "url": "https://testnet.nearblocks.io/txns/G7pdXjKBhiJwVZvwT2nsyrg7SYGtEgQLfEZBgGDrJpTB",
+   "status": "Success"
+  },
+  {
+   "step": "topup_keeper_credit",
+   "hash": "EbxD8mBzWCVt5nyTspKssXREc4tcrs5NnuwBe9z74UuG",
+   "url": "https://testnet.nearblocks.io/txns/EbxD8mBzWCVt5nyTspKssXREc4tcrs5NnuwBe9z74UuG",
+   "near": "0.15",
+   "status": "Success"
+  },
+  {
+   "step": "fund_keeper_0.6_near",
+   "hash": "6jdVfeS4zmXdgoMLkHyMcGEnMXT9F3WrgSCbKdtpMe3",
+   "url": "https://testnet.nearblocks.io/txns/6jdVfeS4zmXdgoMLkHyMcGEnMXT9F3WrgSCbKdtpMe3",
+   "status": "Success"
+  },
+  {
+   "step": "sourcecheck_attest1",
+   "hash": "9y4XD27M2s8gAKNczioJWaHpLEcwWnuUX7ZDxRFbpjUn",
+   "url": "https://testnet.nearblocks.io/txns/9y4XD27M2s8gAKNczioJWaHpLEcwWnuUX7ZDxRFbpjUn",
+   "spec_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+   "checked_at": "1794014161191825408",
+   "attest_pubkey": "d2a38c17bbb662fbcb0355de36cb674a1bc56af3c102e2346a6e186e1ea209a7",
+   "status": "Success"
+  },
+  {
+   "step": "mint_usdc_maker1",
+   "hash": "26PdfwTvxk8JCjvsxwPvPmnp72iLVJPbxe5rwKBzVPfq",
+   "url": "https://testnet.nearblocks.io/txns/26PdfwTvxk8JCjvsxwPvPmnp72iLVJPbxe5rwKBzVPfq",
+   "status": "Success"
+  },
+  {
+   "step": "mint_usdc_taker1",
+   "hash": "gSAYsER1Gzh6YhQHThhBfwEv7SoPPj1iQ6ZLgD4PYFc",
+   "url": "https://testnet.nearblocks.io/txns/gSAYsER1Gzh6YhQHThhBfwEv7SoPPj1iQ6ZLgD4PYFc",
+   "status": "Success"
+  },
+  {
+   "step": "open_usdc",
+   "hash": "1YzMF88PbhF6d9bL8z77qsLCcwjYrTqUZ2SSfNtGuM6",
+   "url": "https://testnet.nearblocks.io/txns/1YzMF88PbhF6d9bL8z77qsLCcwjYrTqUZ2SSfNtGuM6"
+  },
+  {
+   "step": "take_usdc",
+   "hash": "GZx661W5vrxAAC72bwDQ56d2W16RkVHNzaLFBhwKXkfj",
+   "url": "https://testnet.nearblocks.io/txns/GZx661W5vrxAAC72bwDQ56d2W16RkVHNzaLFBhwKXkfj"
+  },
+  {
+   "step": "request_resolution",
+   "hash": "Cc9de2MwGHthBaMoBpSRN1yNoty5WfQJhRvRa6Ao5Quq",
+   "url": "https://testnet.nearblocks.io/txns/Cc9de2MwGHthBaMoBpSRN1yNoty5WfQJhRvRa6Ao5Quq",
+   "status": "Success",
+   "raw": "{\"SuccessValue\":\"\"}",
+   "keeper_credit_before": "150000000000000000000000"
+  },
+  {
+   "step": "submit_outcome",
+   "hash": "6MDRMMho5N18xGHFAH1nVrzzjUXe7SWEHL343mbPv3r4",
+   "url": "https://testnet.nearblocks.io/txns/6MDRMMho5N18xGHFAH1nVrzzjUXe7SWEHL343mbPv3r4",
+   "status": "Success",
+   "signed_result": {
+    "bet_id": 1,
+    "checked_until": "0",
+    "element_results_hash": "09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7",
+    "outcome": "YES",
+    "run_no": 1,
+    "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8"
+   }
+  }
+ ],
+ "recreated": {
+  "wasm_sha256": "f50742358b404ccc7b9a80f9da86e5cd7591e32ccf7371f9e970fbe94ad0b9ed",
+  "wasm_bytes": 516299,
+  "outcome_pubkey": "697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5",
+  "attest_pubkey": "d2a38c17bbb662fbcb0355de36cb674a1bc56af3c102e2346a6e186e1ea209a7",
+  "resolver_wasm_hash": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74",
+  "new_args": {
+   "intents": "intents-mock.praetorial-dev-1101.testnet",
+   "usdc_token_id": "nep141:usdc.testnet",
+   "outlayer": "outlayer.testnet",
+   "operator": "praetorial-dev-1101.testnet",
+   "guardian": "arbiter1.praetorial-dev-1101.testnet",
+   "registry": "praetorial-dev-1101.testnet",
+   "fee_account": "fee.praetorial-dev-1101.testnet",
+   "keeper": "keeper.praetorial-dev-1101.testnet",
+   "limits": {
+    "max_stake": "1000000000000",
+    "max_offer_ttl_secs": 31536000,
+    "max_stake_per_side_near": "100000000000000000000000000",
+    "max_rounds": 2
+   },
+   "beta_sunset_ns": null,
+   "asset_limits": [
+    [
+     "nep141:usdc.testnet",
+     {
+      "min_per_side": "1",
+      "max_per_side": "250000000",
+      "run_price": "5000",
+      "min_bond": "5000000",
+      "min_objection": "1000000"
+     }
+    ],
+    [
+     "nep141:btc.mock.testnet",
+     {
+      "min_per_side": "6501",
+      "max_per_side": "325059",
+      "run_price": "1",
+      "min_bond": "6501",
+      "min_objection": "1300"
+     }
+    ]
+   ],
+   "outcome_pubkey": "697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5",
+   "attest_pubkey": "d2a38c17bbb662fbcb0355de36cb674a1bc56af3c102e2346a6e186e1ea209a7",
+   "resolver_wasm_hash": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74",
+   "outlayer_config": {
+    "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "praetorial-dev-1101.testnet"
+   }
+  },
+  "views": {
+   "outlayer_config": {
+    "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "praetorial-dev-1101.testnet"
+   },
+   "resolver_keys": [
+    "697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5",
+    "d2a38c17bbb662fbcb0355de36cb674a1bc56af3c102e2346a6e186e1ea209a7",
+    "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74"
+   ],
+   "keeper_credit_balance": "150000000000000000000000"
+  }
+ },
+ "balances": {
+  "dev_after_create": "6489863288846922099999949",
+  "escrow_after_deploy": "6139703929312388100000000"
+ },
+ "terms_sha256": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+ "bet_id": 1,
+ "envelope_settlement_period_s": 3600,
+ "status_after_take": "Taken",
+ "request_resolution_error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+ "request_resolution_error_tx": "23khKvNVWRQ7Q2zFakEXfAPftqbrSrooWZkg2f6pHrNq",
+ "poll": {
+  "i": 10,
+  "status": "Resolving",
+  "runs_used": 0
+ },
+ "bet_after_request": {
+  "envelope": {
+   "bet_id": 1,
+   "version": 1,
+   "maker": "maker1.praetorial-dev-1101.testnet",
+   "taker_allow": "Any",
+   "terms_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+   "models_snapshot_hash": "itemR3e-knyc",
+   "outcomes": [
+    "YES",
+    "NO"
+   ],
+   "maker_side": "YES",
+   "maker_asset": "nep141:usdc.testnet",
+   "taker_asset": "nep141:usdc.testnet",
+   "stake_maker": "1000000",
+   "stake_taker": "1000000",
+   "taker_options": [],
+   "fee_bps": 100,
+   "storage_charge_per_side": "8000",
+   "keep_terms": true,
+   "max_paid_runs": 2,
+   "tier": 1,
+   "referee": null,
+   "funding_deadline": 1794014322442000000,
+   "early_settle_outcome": null,
+   "finality_delay": 0,
+   "settlement_period": 3600000000000,
+   "resolve_deadline": 1796606172442000000,
+   "consent_party_controlled": false
+  },
+  "status": "Resolving",
+  "taker": "taker1.praetorial-dev-1101.testnet",
+  "created_at": 1794014173858023700,
+  "taken_at": 1794014179104351500,
+  "proposed_at": null,
+  "outcome": null,
+  "used_run_nos": [],
+  "runs_used": 0,
+  "bonds": [],
+  "pre_challenge_outcome": null,
+  "challenged_by": null,
+  "exhibits": [],
+  "rebuttals": [],
+  "objection_deposits": [],
+  "final_round_started_at": null,
+  "amend_count": 0,
+  "referee_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "amend_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "prune_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "pending_resolution_request": 1,
+  "last_resolution_raw": "{\"contract\":\"praetorial-r3e-11062012.praetorial-dev-1101.testnet\",\"judge\":{\"elements\":[{\"id\":\"e1\",\"verdict\":\"met\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":true,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"run_diagnostics\":[{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report for KNYC issued 2026-11-06 at 145 AM EST lists yesterday's (2026-11-05) maximum temperature as 72 F, which is at or above 70 F, and the IEM copy shows the identical figure\",\"content_len\":303,\"content_sha256\":\"4e3a00856cdb2855b46a7f07e49e65c3e60ac44be34b1da278b9288400d266eb\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":0,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"response_bytes\":9250,\"signature_verified\":true,\"total_ms\":1838,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report issued 145 AM EST FRI NOV 06 2026 for November 5 2026 shows YESTERDAY MAXIMUM of 72 F, which is 70 F or higher, and both sources agree.\\\"}\",\"content_len\":265,\"content_sha256\":\"ad952104dfdb2a1c089018de5a4a2d1b5d4f60770355568091950e4f7f6fa02b\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":0,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"z-ai/glm-5.3-flash\",\"response_bytes\":16107,\"signature_verified\":true,\"total_ms\":6489,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1},\"notes\":[\"source fetched: S_NWS (https://forecast.weather.gov/product.php?site=OKX&product=CLI&issuedby=NYC&version=2&glossary=0)\",\"source fetched: S_IEM (https://mesonet.agron.iastate.edu/api/1/nwstext/202611060645-KOKX-CDUS41-CLINYC)\",\"decision: all elements met\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"outcome\":\"YES\",\"run_no\":1,\"terms_hash\":\"239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8\"},\"signing\":{\"pubkey_hex\":\"697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5\",\"signature_hex\":\"b009bb5b050a1c29598b0dd2c5a3a46403d5ec1b16d9b4b6799bb3024f12642bec11b1e268c7393e075d3239a778b81162657e5f25dcdbfcbcd7d70d8945830c\"}}",
+  "pruned": false,
+  "next_expected_run_no": 1,
+  "all_results": [],
+  "window_extended": false,
+  "window_extension_ns": 0,
+  "first_unavailable_ns": null,
+  "retry_count": 0,
+  "next_check_ns": null,
+  "next_run_no": 2,
+  "pending_run_no": 1
+ },
+ "keeper_credit_after": "129937500000000000000000",
+ "last_resolution_raw": "{\"contract\":\"praetorial-r3e-11062012.praetorial-dev-1101.testnet\",\"judge\":{\"elements\":[{\"id\":\"e1\",\"verdict\":\"met\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":true,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"run_diagnostics\":[{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report for KNYC issued 2026-11-06 at 145 AM EST lists yesterday's (2026-11-05) maximum temperature as 72 F, which is at or above 70 F, and the IEM copy shows the identical figure\",\"content_len\":303,\"content_sha256\":\"4e3a00856cdb2855b46a7f07e49e65c3e60ac44be34b1da278b9288400d266eb\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":0,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"response_bytes\":9250,\"signature_verified\":true,\"total_ms\":1838,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content_head\":\"{\\\"answer\\\": \\\"met\\\", \\\"quote\\\": \\\"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM\\\", \\\"source_id\\\": \\\"S_NWS\\\", \\\"reason\\\": \\\"The final CLI report issued 145 AM EST FRI NOV 06 2026 for November 5 2026 shows YESTERDAY MAXIMUM of 72 F, which is 70 F or higher, and both sources agree.\\\"}\",\"content_len\":265,\"content_sha256\":\"ad952104dfdb2a1c089018de5a4a2d1b5d4f60770355568091950e4f7f6fa02b\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":0,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"z-ai/glm-5.3-flash\",\"response_bytes\":16107,\"signature_verified\":true,\"total_ms\":6489,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1},\"notes\":[\"source fetched: S_NWS (https://forecast.weather.gov/product.php?site=OKX&product=CLI&issuedby=NYC&version=2&glossary=0)\",\"source fetched: S_IEM (https://mesonet.agron.iastate.edu/api/1/nwstext/202611060645-KOKX-CDUS41-CLINYC)\",\"decision: all elements met\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"outcome\":\"YES\",\"run_no\":1,\"terms_hash\":\"239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8\"},\"signing\":{\"pubkey_hex\":\"697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5\",\"signature_hex\":\"b009bb5b050a1c29598b0dd2c5a3a46403d5ec1b16d9b4b6799bb3024f12642bec11b1e268c7393e075d3239a778b81162657e5f25dcdbfcbcd7d70d8945830c\"}}",
+ "bet_status_at_submit": "Resolving",
+ "after_submit": {
+  "status": "Proposed",
+  "outcome": "YES",
+  "settle_ready_ns": null
+ },
+ "judge": {
+  "_historical": "STALE: this block describes the earlier R3c mock-model attempt (model 'mock', Jason sheet, signed VOID) and does NOT describe the R3e run recorded in this file. The R3e judge result is in summary.* and raw_resolution.txt (YES, near-ai, 2 models, signature_verified x2). Marked historical by V1 (D-VERIFY1); original content kept below.",
+  "original": {
+   "judge_ran": "stage reached, no valid model verdict (see notes)",
+   "term_has_models_field": false,
+   "model_requested_by_resolver": "mock (fallback; Jason sheet has no models[] -> resolver.rs:1754)",
+   "venue": {
+    "S_CB": "COMPLETE_WITH_GAPS, 5 missing hourly candles (662 in-window)",
+    "S_BS": "COMPLETE, 667 candles",
+    "S_KR": "EXCLUDED COULDNT_CHECK (no candles returned inside the window), D-RESOLVE6"
+   },
+   "decision_note": "decision: runs/models disagree or an answer failed verification (element verdict unresolved -> ESCALATE -> VOID)",
+   "signed_outcome": "VOID",
+   "nearai_calls": "1 attempted (model id mock); no valid verdict"
+  }
+ },
+ "bet_after_submit": {
+  "status": "Proposed",
+  "outcome": "YES",
+  "proposed_at_ns": 1794014960372344000
+ },
+ "finalize_not_before": {
+  "utc": "2026-11-07T02:29:20.372Z",
+  "et": "11/6/2026, 9:29:20 PM ET",
+  "epoch_ms": 1794018560372
+ },
+ "balances_end": {
+  "dev": "5883667136503591199999949",
+  "escrow": "6137352119612388100000000",
+  "keeper": "501433946769267100000000",
+  "attest1": "979199837030259200000000"
+ },
+ "summary": {
+  "escrow": "praetorial-r3e-11062012.praetorial-dev-1101.testnet",
+  "escrow_wasm_deployed_sha256_stripped": "f50742358b404ccc7b9a80f9da86e5cd7591e32ccf7371f9e970fbe94ad0b9ed",
+  "escrow_wasm_plain_sha256": "d8d2a87016b37fec7f4ac2fcc63a6990da37eb2e686feeccb24e88e05183717b",
+  "escrow_wasm_note": "deployed the CARGO_PROFILE_RELEASE_STRIP=symbols build (516 KB) of the same source to fit storage; plain build (889 KB) reproduces d8d2a870",
+  "resolver_wasm_sha256": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74",
+  "upload_txs": [
+   "F75dxRb8mVB5mBHPw7zCrrPc1JvhH5Ur9p349YkksdQH",
+   "DqpJuwUX2JGXmYs9CJrRPWyrYim63r8naYs3zasV5zCc",
+   "HnLioncxLvb9FX4LB3RjRZoGGyebt8Qa4nrWb1pAoqd3"
+  ],
+  "report_pubkey_outcome_tx": "74Z5pDnVZznxCetjzS3PBWTTjoU1RazT7eo2rQMprvac (attempts 1-2 timed out client-side)",
+  "report_pubkey_attest_tx": "AeMBKrM9P4vuL12AWQbn6pMCKbZWRs9LrTq6HWLtDvpC",
+  "bet_id": 1,
+  "request_resolution_tx": "Cc9de2MwGHthBaMoBpSRN1yNoty5WfQJhRvRa6Ao5Quq",
+  "request_resolution_first_attempt": "tx 23khKvNVWRQ7Q2zFakEXfAPftqbrSrooWZkg2f6pHrNq trapped (unreachable) because called before funding_deadline (open+150s); contract require-failure surfaces as wasm trap in this build; no OutLayer job created, no credit spent",
+  "outlayer_request_id": 11333,
+  "outlayer_jobs": 1,
+  "near_ai_calls": 2,
+  "outcome": "YES",
+  "judge_backend": "near-ai",
+  "elements": [
+   {
+    "id": "e1",
+    "verdict": "met"
+   }
+  ],
+  "models": [
+   {
+    "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "http_status": 200,
+    "error_body_head": null,
+    "first_byte_ms": 0,
+    "total_ms": 1838,
+    "idle_timeout_hit": false,
+    "total_timeout_hit": false,
+    "signature_verified": true,
+    "finish_reason": "stop",
+    "verify_result": "answer",
+    "response_bytes": 9250,
+    "content_head": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_NWS\", \"reason\": \"The final CLI report for KNYC issued 2026-11-06 at 145 AM EST lists yesterday's (2026-11-05) maximum temperature as 72 F, which is at or above 70 F, and the IEM copy shows the identical figure"
+   },
+   {
+    "model": "z-ai/glm-5.3-flash",
+    "http_status": 200,
+    "error_body_head": null,
+    "first_byte_ms": 0,
+    "total_ms": 6489,
+    "idle_timeout_hit": false,
+    "total_timeout_hit": false,
+    "signature_verified": true,
+    "finish_reason": "stop",
+    "verify_result": "answer",
+    "response_bytes": 16107,
+    "content_head": "{\"answer\": \"met\", \"quote\": \"TEMPERATURE (F) YESTERDAY MAXIMUM 72 615 PM\", \"source_id\": \"S_NWS\", \"reason\": \"The final CLI report issued 145 AM EST FRI NOV 06 2026 for November 5 2026 shows YESTERDAY MAXIMUM of 72 F, which is 70 F or higher, and both sources agree.\"}"
+   }
+  ],
+  "submit_outcome_tx": "6MDRMMho5N18xGHFAH1nVrzzjUXe7SWEHL343mbPv3r4",
+  "status_after_submit": "Proposed YES",
+  "finalize_not_before_utc": "2026-11-07T02:29:20Z (21:29:20 ET)",
+  "signing_pubkey": "697798aba1379400a41618894088cbbf7a55a3d5038ae79086e2a3b7baa125c5",
+  "notes": [
+   "source fetched: S_NWS (https://forecast.weather.gov/product.php?site=OKX&product=CLI&issuedby=NYC&version=2&glossary=0)",
+   "source fetched: S_IEM (https://mesonet.agron.iastate.edu/api/1/nwstext/202611060645-KOKX-CDUS41-CLINYC)",
+   "decision: all elements met"
+  ]
+ }
+}

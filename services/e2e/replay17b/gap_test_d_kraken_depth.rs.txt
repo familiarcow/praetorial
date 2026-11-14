@@ -1,0 +1,10 @@
+// Designed-behaviour test (MVP Bet Design, Type 1 'Rules': 1b 'venues missing data count as not touched; VOID only if <2 venues are reachable').
+// FAILS on the current core: outcome is VOID, not NO. Uses the harness in resolver/wasm-bin/src/item17b_tests.rs. For 17c to turn into a RED test.
+#[test]
+fn t1b_event_d_kraken_depth_exceeded_still_resolves_on_two_venues() {
+    // Kraken 1m for a window ~20h old returns the latest 721 candles (since ignored) -> Kraken excluded as INCOMPLETE,
+    // Coinbase+Bitstamp complete (D-RESOLVE6 needs 2) -> NO (maxima 75688.43/75685.94 < 75700).
+    let (o, n, _c) = run(touch_terms("D", 75700), insufficient);
+    assert!(has(&n, "price evidence INCOMPLETE for S_KR"), "{:?}", n);
+    assert_eq!(o, "NO", "{:?}", n);
+}

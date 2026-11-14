@@ -1,0 +1,14 @@
+{
+  "_comment": "DOCS1: public NEAR documentation and API addresses the Docs pages quote (each in spikes/docs1/CLAIMS.md), and the only external origins the Docs may link to (tests/docs1.unit.test.ts, tests/docs1.spec.ts). Data, not config: none is an account or a service of ours.",
+  "nearAiAttestationReport": "https://cloud-api.near.ai/v1/attestation/report",
+  "nearAiVerificationGuide": "https://docs.near.ai/cloud/verification/",
+  "nearIntentsDocs": "https://docs.near-intents.org",
+  "mainnetArchivalRpc": "https://archival-rpc.mainnet.fastnear.com",
+  "externalOrigins": [
+    "https://nearblocks.io",
+    "https://testnet.nearblocks.io",
+    "https://nearhackathon.com",
+    "https://docs.near.ai",
+    "https://docs.near-intents.org"
+  ]
+}

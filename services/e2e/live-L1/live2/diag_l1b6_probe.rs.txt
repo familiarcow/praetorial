@@ -1,0 +1,36 @@
+//! TEMP diagnostic (not committed as a test): real curl fetches + canned judge + per-stage timing on stderr.
+use super::*;
+use std::time::Instant;
+struct CurlFetcher(Instant);
+impl HttpFetcher for CurlFetcher {
+    fn fetch(&self, url: &str) -> Result<RawFetchResponse, String> {
+        let t = Instant::now();
+        eprintln!("[T+{:>6}ms] FETCH start {}", self.0.elapsed().as_millis(), url);
+        let out = std::process::Command::new("curl").args(["-s", "-m", "60", "-A", "praetorial-resolver/0.1", "-w", "\n%{http_code} %{content_type}", url]).output().map_err(|e| e.to_string())?;
+        let s = out.stdout; let i = s.iter().rposition(|b| *b == b'\n').unwrap();
+        let tail = String::from_utf8_lossy(&s[i + 1..]).to_string(); let mut p = tail.splitn(2, ' ');
+        let code: u16 = p.next().unwrap().parse().unwrap_or(0); let ct = p.next().unwrap_or("").to_string();
+        eprintln!("[T+{:>6}ms] FETCH done  {}ms status={} bytes={}", self.0.elapsed().as_millis(), t.elapsed().as_millis(), code, i);
+        Ok(RawFetchResponse { final_url: url.into(), redirect_chain: vec![], content_type: ct, body: s[..i].to_vec(), status_code: code })
+    }
+}
+struct Judge(Instant);
+impl ModelCaller for Judge {
+    fn call(&self, m: &str, _msgs: &[(String, String)]) -> (String, Option<String>, Option<String>) {
+        eprintln!("[T+{:>6}ms] MODEL call {} (canned)", self.0.elapsed().as_millis(), m);
+        (json!({"answer":"not_met","quote":"x","source_id":"S_CB","reason":"canned"}).to_string(), None, None)
+    }
+}
+#[test]
+fn zz_probe() {
+    let path = std::env::var("L1B6_TERMS").unwrap();
+    let raw = String::from_utf8(std::fs::read(path).unwrap()).unwrap();
+    let sheet: Value = serde_json::from_str(&raw).unwrap();
+    let raw = sheet.to_string();
+    let job = json!({"contract":"e.testnet","bet_id":17,"run_no":1,"checked_until":0,"round":0,"envelope":{"terms_hash": praetorial_core::sha_hex(&raw)},"terms": raw});
+    let now = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).unwrap().as_secs() as i64;
+    let t0 = Instant::now();
+    let (r, notes, _) = build_submission_judged_at(&job, &Judge(t0), &CurlFetcher(t0), false, now);
+    eprintln!("[T+{:>6}ms] DONE outcome={}", t0.elapsed().as_millis(), r.outcome);
+    for n in notes { eprintln!("note: {}", &n[..n.len().min(300)]); }
+}

@@ -1,0 +1,191 @@
+[
+  {
+    "id": "jason_same_bucket_yes",
+    "actual": "YES",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: all elements met"
+  },
+  {
+    "id": "jason_bitstamp_only_no",
+    "actual": "NO",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: an element is not proven (burden on YES); other elements irrelevant"
+  },
+  {
+    "id": "jason_coinbase_only_no",
+    "actual": "NO",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: an element is not proven (burden on YES); other elements irrelevant"
+  },
+  {
+    "id": "jason_both_venues_different_buckets_no",
+    "actual": "NO",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: an element is not proven (burden on YES); other elements irrelevant"
+  },
+  {
+    "id": "jason_coinbase_gap_kraken_fallback_yes",
+    "actual": "YES",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: all elements met"
+  },
+  {
+    "id": "jason_coinbase_small_gap_yes",
+    "actual": "YES",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: all elements met"
+  },
+  {
+    "id": "close_above_yes",
+    "actual": "YES",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: YES (code-decided 1a: median close of 3 venues = 75838.15 > 75828 true)"
+  },
+  {
+    "id": "close_above_no",
+    "actual": "NO",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: NO (code-decided 1a: median close of 3 venues = 75838.15 > 75848 false)"
+  },
+  {
+    "id": "close_below_yes",
+    "actual": "YES",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: YES (code-decided 1a: median close of 3 venues = 75838.15 < 75848 true)"
+  },
+  {
+    "id": "close_below_no",
+    "actual": "NO",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: NO (code-decided 1a: median close of 3 venues = 75838.15 < 75828 false)"
+  },
+  {
+    "id": "touch_above_yes",
+    "actual": "YES",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: YES (code-decided 1b: 2 of 3 venues crossed X (need 2))"
+  },
+  {
+    "id": "touch_above_no",
+    "actual": "NO",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: NO (code-decided 1b: 3 reachable venues have complete coverage and none crossed X)"
+  },
+  {
+    "id": "touch_above_one_venue_void",
+    "actual": "VOID",
+    "path": "code",
+    "pass": true,
+    "decision_note": "COULDNT_CHECK (D-TPL1): venues disagree on touch: exactly 1 venue crossed X and 2 reachable venue(s) complete without a crossing"
+  },
+  {
+    "id": "touch_below_yes",
+    "actual": "YES",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: YES (code-decided 1b: 2 of 3 venues crossed X (need 2))"
+  },
+  {
+    "id": "touch_below_no",
+    "actual": "NO",
+    "path": "code",
+    "pass": true,
+    "decision_note": "decision: NO (code-decided 1b: 3 reachable venues have complete coverage and none crossed X)"
+  },
+  {
+    "id": "pct_move_day_builder",
+    "actual": "REJECT:TPL_UNKNOWN_ID",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_UNKNOWN_ID: template.id \"btc_pct_move\" is not one of [\"btc_close_at_t\", \"btc_touch\", \"game_winner\", \"nws_daily_high\", \"custom\"]"
+  },
+  {
+    "id": "eth_close_builder",
+    "actual": "REJECT:TPL_UNKNOWN_FIELD",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_UNKNOWN_FIELD: `asset` is not a field of btc_close_at_t v1"
+  },
+  {
+    "id": "sol_touch_builder",
+    "actual": "REJECT:TPL_UNKNOWN_FIELD",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_UNKNOWN_FIELD: `asset` is not a field of btc_touch v1"
+  },
+  {
+    "id": "eth_and_sol_builder",
+    "actual": "REJECT:TPL_UNKNOWN_FIELD",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_UNKNOWN_FIELD: `assets` is not a field of btc_close_at_t v1"
+  },
+  {
+    "id": "no_timezone_builder",
+    "actual": "REJECT:TPL_T_UTC_NOT_MINUTE",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_T_UTC_NOT_MINUTE: btc_close_at_t.t_utc must be an explicit UTC minute boundary YYYY-MM-DDTHH:MM:00Z, got \"2026-11-08T17:00:00\""
+  },
+  {
+    "id": "amount_100k_builder",
+    "actual": "REJECT:TPL_X_USD_NOT_WHOLE",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "TPL_X_USD_NOT_WHOLE: btc_close_at_t.x_usd must be a positive whole number of dollars (JSON integer), got \"100k\""
+  },
+  {
+    "id": "friday_custom",
+    "actual": "REJECT:CUSTOM_RELATIVE_DATE",
+    "path": "builder-reject",
+    "pass": true,
+    "decision_note": "CUSTOM_RELATIVE_DATE: the claim uses the relative date \"Friday\" with no explicit calendar date (e.g. 2026-11-06); state the date"
+  },
+  {
+    "id": "flips_100k_messy",
+    "actual": "VOID",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: evidence missing / not final / unreadable on an undecided element; never NO (recovery, then VOID)"
+  },
+  {
+    "id": "range_all_session_stays_within_void",
+    "actual": "VOID",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: evidence missing / not final / unreadable on an undecided element; never NO (recovery, then VOID)"
+  },
+  {
+    "id": "range_breakout_no",
+    "actual": "NO",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: an element is not proven (burden on YES); other elements irrelevant"
+  },
+  {
+    "id": "pct_up_day_custom_void",
+    "actual": "VOID",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "decision: evidence missing / not final / unreadable on an undecided element; never NO (recovery, then VOID)"
+  },
+  {
+    "id": "probe_adversarial_judge_met_one_venue",
+    "actual": "VOID",
+    "path": "AI",
+    "pass": true,
+    "decision_note": "COULDNT_CHECK (D-L1GATE1): the judge's verdict is met but the code-computed condition (high >= 75951 on every one of S_CB+S_BS within one 300s bucket) is NOT met; judge and code disagree; VOID, never YES"
+  }
+]

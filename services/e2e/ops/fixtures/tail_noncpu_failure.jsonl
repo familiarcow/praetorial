@@ -1,0 +1,2 @@
+{"outcome":"ok","scriptName":"praetorial-relayer-testnet","exceptions":[],"logs":[],"eventTimestamp":1762700000000,"event":{}}
+{"outcome":"exception","scriptName":"praetorial-relayer-testnet","exceptions":[{"name":"Error","message":"boom"}],"logs":[],"eventTimestamp":1762700060000,"event":{}}

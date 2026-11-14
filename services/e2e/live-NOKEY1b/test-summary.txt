@@ -1,0 +1,1 @@
+NOKEY1b: frz3 escrow praetorial-frz3-2611100414 (same frozen escrow wasm caf134a4 / 6e33faa; code hash EfCgMFhe... == frz2); resolver 8791413f (record-f9c61ec); verify-escrow E1-E4 PASS live; key bound; check_key_bound OK. Full totals in the merge commit.

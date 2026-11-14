@@ -1,0 +1,10 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 9e33b5ded0276f8dc49180509d2c265463d6b8adccaa805e4a2b6bfbcd9f279b # shrinks to ops = [SubmitYes, FinalizeLate]
+cc 6601a6e079344fb69493c977fd41d2e640ee9ba8964c7e4b7a49b24a93caf7ef # shrinks to rounds = [RoundPlan { challenger_is_maker: false, challenger_wins: false }], stake_maker = 42864101, stake_taker = 1000000
+cc cb3dc81856847bb97d6d4d025b399695fd95cdb9449cec934ebff2be4b81cbe1 # shrinks to rounds = [RoundPlan { challenger_is_maker: false, challenger_wins: false }], stake_maker = 1000001, ratio = 10, taker_is_larger = false
+cc 42d0abdaf0da85f8606f84ededffef2c071e5163a7623a456a233da1514dc903 # shrinks to ops = [VoidDeadlineLate]

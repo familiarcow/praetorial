@@ -1,0 +1,22 @@
+Uploading to FastFS...
+  File: $PRAETORIAL_CACHE_DIR/scratch/nk1b/up/praetorial-resolver-8791413f.wasm
+  Size: 3404255 bytes
+  SHA256: 8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473
+  Sender: praetorial-dev-1101.testnet
+  Receiver: outlayer.testnet
+  Chunks: 4 x 1024KB max
+
+  Uploading chunk 1/4... tx: CmAqfhcWDEMKQeh6inxukWQL7vju41UDE5kfuoiEQt7Q
+  Uploading chunk 2/4... tx: GBv5fEMXgBWAL7J8UisndQbmNVhjmTLMDp2pn7FV9VcC
+  Uploading chunk 3/4... tx: GvNm8aW3TKZcVyiMQcbPt6Atd7zUUe66bvSp6LEbDzUR
+  Uploading chunk 4/4... tx: AauT8CToVLNMepuofMebHLeuk93BsdFLJt96qXR3ccx1
+
+Upload complete!
+
+FastFS URL: https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm
+
+Run directly:
+  outlayer run --wasm https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm '{}' 
+
+Or deploy as project version:
+  outlayer deploy <name> --wasm-url https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm

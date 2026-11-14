@@ -1,0 +1,17 @@
+PUB1 dry run: publish-snapshot on main (daf8be9), out = $PRAETORIAL_CACHE_DIR/scratch/publish-dryrun (outside the repo).
+NOTE: git history is NOT scanned; only the exported snapshot tree.
+Secrets env files: 5 (4x $PRAETORIAL_SECRETS_DIR/*.env + praetorial-bot profile env), 18 values >=16 chars; env-value hits: 0.
+
+Run 1 (no allowlist): exit 1, 4 hits, all verified test fixtures (placeholder sk-live/sk-test constants, ghp_abc redaction fixture):
+  resolver/wasm-bin/src/item16u_tests.rs:4   rule=sk-key
+  resolver/wasm-bin/src/item16u_tests.rs:73  rule=ghp-token
+  resolver/wasm-bin/src/item_j1_ping_tests.rs:6   rule=sk-key
+  resolver/wasm-bin/src/item_r1_stream_tests.rs:6 rule=sk-key
+
+Run 2 (--allowlist services/release/publish-allowlist.json, 4 entries each with a reason): exit 0, scan clean.
+Result: main is CLEAN of real secrets for the rules + env-value matching above (no real hits). Excluded node_modules: 0 (none tracked).
+
+--- PUBLISH-MANIFEST.json (run 2, no values) ---
+{ "ref": "main", "commit": "daf8be958e3a19052df8837e605f76ee5f4fa4cc", "tree": "264095a9f0f3c8507d5ca03ec124cd5c204a4be6",
+  "file_count": 2044, "excluded_count": 0,
+  "scan": { "status": "clean", "hits": [], "allowlisted": 4, "history_scanned": false, "secrets_env_files": 5, "secrets_env_values": 18 } }

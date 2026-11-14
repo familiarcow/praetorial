@@ -1,0 +1,11 @@
+{
+  "written_at": "2026-11-10T04:14:40.324Z",
+  "bet_id": 12,
+  "mode": "Human",
+  "claim": "BTC at_or_above 1000000 USD before the deadline (referee decides, not a source)",
+  "expected_by_scenario": "referee rules YES; maker_side=YES so the maker wins; maker paid at once; tip only because the maker ticked it",
+  "market_note": "the real-world answer would be NO; the referee's ruling is by definition authoritative in Human mode (that is what the scenario exercises)",
+  "outcome_read_before_this": false,
+  "bet_status_at_write": "Taken",
+  "bet_outcome_at_write": null
+}

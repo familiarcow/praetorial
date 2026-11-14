@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.praetorial.keeper</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/srv/out/praetorial-run.sh</string>
+    <string>/etc/praetorial/svc.env</string>
+    <string>/opt/homebrew/bin/node</string>
+    <string>--import</string>
+    <string>tsx</string>
+    <string>/srv/praetorial/services/keeper/src/runner.ts</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/srv/praetorial/services</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>/var/log/praetorial/keeper.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/var/log/praetorial/keeper.err.log</string>
+</dict>
+</plist>

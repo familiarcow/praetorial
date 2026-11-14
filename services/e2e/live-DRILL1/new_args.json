@@ -1,0 +1,71 @@
+{
+  "intents": "intents-mock.praetorial-dev-1101.testnet",
+  "usdc_token_id": "nep141:usdc.testnet",
+  "outlayer": "outlayer.testnet",
+  "operator": "praetorial-dev-1101.testnet",
+  "guardian": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+  "registry": "praetorial-dev-1101.testnet",
+  "fee_account": "fee.praetorial-dev-1101.testnet",
+  "keeper": "keeper.praetorial-dev-1101.testnet",
+  "limits": {
+    "max_stake": "10000000000000000000000000000000000",
+    "max_offer_ttl_secs": 5184000,
+    "max_stake_per_side_near": "10000000000000000000000000000000000",
+    "max_rounds": 2
+  },
+  "beta_sunset_ns": null,
+  "asset_limits": [
+    [
+      "nep141:usdc.testnet",
+      {
+        "min_per_side": "10000000",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "500000",
+        "min_fee_cap_per_side": "2500000",
+        "run_price": "5000",
+        "min_bond": "5000000",
+        "min_objection": "1000000",
+        "storage_per_kib": "37684"
+      }
+    ],
+    [
+      "nep141:btc.mock.testnet",
+      {
+        "min_per_side": "13189",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "659",
+        "min_fee_cap_per_side": "3297",
+        "run_price": "7",
+        "min_bond": "6595",
+        "min_objection": "1319",
+        "storage_per_kib": "50"
+      }
+    ]
+  ],
+  "outcome_pubkey": "69a1de06348f3671b7685a6d07c8c1297cfae6404ae8822c610d30ee14bda594",
+  "attest_pubkey": "b0bd538e5a1cc4a31216a8020f992b3f9dcde612bc9889c7a828dc697abf8e9f",
+  "resolver_wasm_hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+  "outlayer_config": {
+    "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "praetorial-dev-1101.testnet"
+  },
+  "judge_chain": [
+    {
+      "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "model_b": "z-ai/glm-5.3-flash"
+    },
+    {
+      "model_a": "Qwen/Qwen3.8-27B",
+      "model_b": "moonshotai/kimi-k3"
+    },
+    {
+      "model_a": "google/gemini-3.5-flash",
+      "model_b": "openai/gpt-5.4-mini"
+    },
+    {
+      "model_a": "x-ai/grok-4.7",
+      "model_b": "anthropic/claude-haiku-5-5"
+    }
+  ]
+}

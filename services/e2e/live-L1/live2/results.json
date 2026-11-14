@@ -1,0 +1,107 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "HtiMcVXkBoqNmwHUBTY762QcByh4UoQYbjbjje1Fnm25",
+      "url": "https://testnet.nearblocks.io/txns/HtiMcVXkBoqNmwHUBTY762QcByh4UoQYbjbjje1Fnm25",
+      "account": "praetorial-l1b5-11071226.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "5AmPex9QH9DUJT9Ypjv7uU14JaxTMwKwBCXpDkxjBUCo",
+      "url": "https://testnet.nearblocks.io/txns/5AmPex9QH9DUJT9Ypjv7uU14JaxTMwKwBCXpDkxjBUCo",
+      "wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+      "wasm_bytes": 514005,
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "3x6S9c7cjEZZ6rDCGi8ex5Bme5Sjfuy8yjqybnk9L3H5",
+      "url": "https://testnet.nearblocks.io/txns/3x6S9c7cjEZZ6rDCGi8ex5Bme5Sjfuy8yjqybnk9L3H5",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "F3LbgWBrVPySfgP5557GSgx4k5GHj6q7FBrengtoN6dE",
+      "url": "https://testnet.nearblocks.io/txns/F3LbgWBrVPySfgP5557GSgx4k5GHj6q7FBrengtoN6dE",
+      "near": "0.15",
+      "status": "Success"
+    }
+  ],
+  "balances": {
+    "dev_before": "13532695103108176599999943",
+    "dev_after_create": "7502806150529225699999943",
+    "escrow_after_deploy": "6137309912751859900000000"
+  },
+  "escrow_wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+  "source_commit": "a7c9f23",
+  "recreated": {
+    "wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+    "wasm_bytes": 514005,
+    "outcome_pubkey": "cda07c41a95ecf0f42a7ee6a20c73ac7f911645c5ce8bc6665c78ad461f05e56",
+    "attest_pubkey": "09336ce08bdbb7e33168e27ea0c6985140732765aa5f1fc66c881581097797dd",
+    "resolver_wasm_hash": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "cda07c41a95ecf0f42a7ee6a20c73ac7f911645c5ce8bc6665c78ad461f05e56",
+      "attest_pubkey": "09336ce08bdbb7e33168e27ea0c6985140732765aa5f1fc66c881581097797dd",
+      "resolver_wasm_hash": "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "cda07c41a95ecf0f42a7ee6a20c73ac7f911645c5ce8bc6665c78ad461f05e56",
+        "09336ce08bdbb7e33168e27ea0c6985140732765aa5f1fc66c881581097797dd",
+        "142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  }
+}

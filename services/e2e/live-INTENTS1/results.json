@@ -1,0 +1,82 @@
+{
+  "started": "2026-11-10T14:47:54.985Z",
+  "account": "intents-mock.praetorial-dev-1101.testnet",
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "before": {
+    "praetorial-frz3-2611100414.praetorial-dev-1101.testnet|nep141:wrap.testnet": "5539710000000000000000000",
+    "praetorial-frz3-2611100414.praetorial-dev-1101.testnet|nep141:usdc.testnet": "20144702",
+    "praetorial-frz2-2611091914.praetorial-dev-1101.testnet|nep141:wrap.testnet": "29191340000000000000000000",
+    "maker1.praetorial-dev-1101.testnet|nep141:usdc.testnet": "4164345089"
+  },
+  "deploy": {
+    "wasmBytes": 207662,
+    "tx": "AuJUcw3Qj7vnoCS4Bbss3AiEAeSfd71txz7xwU5cMYWA"
+  },
+  "after": {
+    "praetorial-frz3-2611100414.praetorial-dev-1101.testnet|nep141:wrap.testnet": "5539710000000000000000000",
+    "praetorial-frz3-2611100414.praetorial-dev-1101.testnet|nep141:usdc.testnet": "20144702",
+    "praetorial-frz2-2611091914.praetorial-dev-1101.testnet|nep141:wrap.testnet": "29191340000000000000000000",
+    "maker1.praetorial-dev-1101.testnet|nep141:usdc.testnet": "4164345089"
+  },
+  "stateUnchanged": true,
+  "zeroYocto": {
+    "ok": true,
+    "observed": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: Requires attached deposit of exactly 1 yoctoNEAR\"}}}}"
+  },
+  "refusedStake": {
+    "ok": true,
+    "mintTx": "GAvy1TADxYoZnBeZQRsUWshDvw38nbE2Gtfvw2jYuppm",
+    "tx": "48RmjH29tMDTZJnF5dZUuq5XFsR9JYsFQhV7YALo2kTj",
+    "user": [
+      "4164346089",
+      "4164346089"
+    ],
+    "escrow": [
+      "20144702",
+      "20144702"
+    ],
+    "receipts": [
+      {
+        "executor": "intents-mock.praetorial-dev-1101.testnet",
+        "tgas": 2.656839738477,
+        "status": "SuccessReceiptId",
+        "logs": []
+      },
+      {
+        "executor": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+        "tgas": 2.030879059798,
+        "status": "SuccessValue",
+        "logs": [
+          "open_rejected bet=unassigned reason=msg parse failure: unknown variant `Nope`, expected one of `Open`, `Take`, `Bond`, `Objection` at line 1 column 14"
+        ]
+      },
+      {
+        "executor": "maker1.praetorial-dev-1101.testnet",
+        "tgas": 0.2231825625,
+        "status": "SuccessValue",
+        "logs": []
+      },
+      {
+        "executor": "intents-mock.praetorial-dev-1101.testnet",
+        "tgas": 1.871276925006,
+        "status": "SuccessValue",
+        "logs": []
+      },
+      {
+        "executor": "maker1.praetorial-dev-1101.testnet",
+        "tgas": 0.2231825625,
+        "status": "SuccessValue",
+        "logs": []
+      }
+    ]
+  },
+  "batch": {
+    "ok": true,
+    "value": [
+      "0",
+      "4164346089"
+    ]
+  },
+  "finished": "2026-11-10T14:48:08.319Z",
+  "ok": true
+}

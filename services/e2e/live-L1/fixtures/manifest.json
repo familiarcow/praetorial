@@ -1,0 +1,144 @@
+{
+ "fetched_at_unix": 1794063420,
+ "fetched_at_utc": "2026-11-07T14:57:00Z",
+ "files": [
+  {
+   "file": "cb_BTC_1m_p0.json",
+   "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T03:57:00Z&end=2026-11-07T07:36:59Z",
+   "fetched_utc": "2026-11-07T14:57:56Z",
+   "sha256": "520b1c911372a41baffc8a04096b87c03303d7c5cffc54307c44d1b3a6ffc887",
+   "bytes": 13008
+  },
+  {
+   "file": "cb_BTC_1m_p1.json",
+   "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T07:37:00Z&end=2026-11-07T11:16:59Z",
+   "fetched_utc": "2026-11-07T14:57:57Z",
+   "sha256": "a8962830aa851ebdd483472b6db311ebf0f643b65a056af740b4cab07258aeeb",
+   "bytes": 13034
+  },
+  {
+   "file": "cb_BTC_1m_p2.json",
+   "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T11:17:00Z&end=2026-11-07T14:56:59Z",
+   "fetched_utc": "2026-11-07T14:57:57Z",
+   "sha256": "45e02c8e7fb22e1ef1d05ae3baac3e3144e497ff9712ff4058479e3316160a25",
+   "bytes": 13007
+  },
+  {
+   "file": "bs_BTC_1m.json",
+   "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=720",
+   "fetched_utc": "2026-11-07T14:57:59Z",
+   "sha256": "cf01f275fbccd32662d22823e87d386e7aacf2d3ad5482e70217e66b54c55d30",
+   "bytes": 95800
+  },
+  {
+   "file": "kr_BTC_1m.json",
+   "url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1",
+   "fetched_utc": "2026-11-07T14:57:59Z",
+   "sha256": "da6375c5e6a5d4b7095a31a5937890b66030609fb734e0676aff6a9535298557",
+   "bytes": 57010
+  },
+  {
+   "file": "cb_ETH_1m_p0.json",
+   "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=60&start=2026-11-07T03:57:00Z&end=2026-11-07T07:36:59Z",
+   "fetched_utc": "2026-11-07T14:58:00Z",
+   "sha256": "f23a60bdc5e7970b1e885123b5dc4cf17ad16c6061d9ff7b8ee3127134e8851e",
+   "bytes": 12246
+  },
+  {
+   "file": "cb_ETH_1m_p1.json",
+   "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=60&start=2026-11-07T07:37:00Z&end=2026-11-07T11:16:59Z",
+   "fetched_utc": "2026-11-07T14:58:01Z",
+   "sha256": "25934a64cebba434b9df22694aac9dd3119264e3d41ab6b4b02a10c8cc5c9c7c",
+   "bytes": 12213
+  },
+  {
+   "file": "cb_ETH_1m_p2.json",
+   "url": "https://api.exchange.coinbase.com/products/ETH-USD/candles?granularity=60&start=2026-11-07T11:17:00Z&end=2026-11-07T14:56:59Z",
+   "fetched_utc": "2026-11-07T14:58:02Z",
+   "sha256": "05a448c9adb66359d775ee44b880508a7631467e688f76d8d4afa26418031084",
+   "bytes": 12224
+  },
+  {
+   "file": "bs_ETH_1m.json",
+   "url": "https://www.bitstamp.net/api/v2/ohlc/ethusd/?step=60&limit=720",
+   "fetched_utc": "2026-11-07T14:58:03Z",
+   "sha256": "27a815252c110ecd5cadc6df7a30401276431f77f5ca73575375ff7f8e210699",
+   "bytes": 91487
+  },
+  {
+   "file": "kr_ETH_1m.json",
+   "url": "https://api.kraken.com/0/public/OHLC?pair=ETHUSD&interval=1",
+   "fetched_utc": "2026-11-07T14:58:04Z",
+   "sha256": "8c5e0262615ec77da5907d7ea4844938e9120bd74be8a94cf05167d7fb3e9d10",
+   "bytes": 56727
+  },
+  {
+   "file": "cb_SOL_1m_p0.json",
+   "url": "https://api.exchange.coinbase.com/products/SOL-USD/candles?granularity=60&start=2026-11-07T03:57:00Z&end=2026-11-07T07:36:59Z",
+   "fetched_utc": "2026-11-07T14:58:04Z",
+   "sha256": "4f4a983b0fedc6b27d82fb480470c065f8f24513c5d303b8a426baf87a8c413f",
+   "bytes": 10672
+  },
+  {
+   "file": "cb_SOL_1m_p1.json",
+   "url": "https://api.exchange.coinbase.com/products/SOL-USD/candles?granularity=60&start=2026-11-07T07:37:00Z&end=2026-11-07T11:16:59Z",
+   "fetched_utc": "2026-11-07T14:58:05Z",
+   "sha256": "91cef6e8661f3d80482172a5ae595d431cbe2ab6d247e2fcbf28627efbb84da8",
+   "bytes": 10667
+  },
+  {
+   "file": "cb_SOL_1m_p2.json",
+   "url": "https://api.exchange.coinbase.com/products/SOL-USD/candles?granularity=60&start=2026-11-07T11:17:00Z&end=2026-11-07T14:56:59Z",
+   "fetched_utc": "2026-11-07T14:58:06Z",
+   "sha256": "30e37d32cbb190e1b71de9f46b0d42878c1d613c7bc35667f0ac9197091852db",
+   "bytes": 10705
+  },
+  {
+   "file": "bs_SOL_1m.json",
+   "url": "https://www.bitstamp.net/api/v2/ohlc/solusd/?step=60&limit=720",
+   "fetched_utc": "2026-11-07T14:58:07Z",
+   "sha256": "ae3eccee21fd49435a38d304dbe5c9f84d56a803066e7e1c3d56f24df9219159",
+   "bytes": 88030
+  },
+  {
+   "file": "kr_SOL_1m.json",
+   "url": "https://api.kraken.com/0/public/OHLC?pair=SOLUSD&interval=1",
+   "fetched_utc": "2026-11-07T14:58:08Z",
+   "sha256": "aae96c476dc2ba79a93193893c79920b955af5ab61c9982466fdc48602646c45",
+   "bytes": 50244
+  },
+  {
+   "file": "cb_BTC_1h.json",
+   "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2026-10-26T12:57:00Z&end=2026-11-07T14:57:00Z",
+   "fetched_utc": "2026-11-07T14:58:09Z",
+   "sha256": "b70f2ff8e3f5a1c6e53ffc76ba3297a6547f80b7786538d1495c214a0bf89257",
+   "bytes": 17535
+  },
+  {
+   "file": "bs_BTC_1h.json",
+   "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=3600&limit=300",
+   "fetched_utc": "2026-11-07T14:58:10Z",
+   "sha256": "8ed91673c57cdd6057268c80b66313cff7f1522ce10a37fe3196f22d4de2610b",
+   "bytes": 40290
+  },
+  {
+   "file": "kr_BTC_1h.json",
+   "url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=60",
+   "fetched_utc": "2026-11-07T14:58:11Z",
+   "sha256": "a65c1a7e90e244ac9311f95c0b8101d5c2dff7d522badd30f6869470cfafdc31",
+   "bytes": 59443
+  },
+  {
+   "file": "SYNTHETIC_cb_BTC_1m_gap12.json",
+   "synthetic": true,
+   "derived_from": "cb_BTC_1m_p0..p2.json minus deleted minutes",
+   "sha256": "a25e70bb296bb7d7ace7799da85a1b659910d8842c95bce6a0d6c2fab1298d9b"
+  },
+  {
+   "file": "SYNTHETIC_cb_BTC_1m_gap2.json",
+   "synthetic": true,
+   "derived_from": "cb_BTC_1m_p0..p2.json minus deleted minutes",
+   "sha256": "56272e06add591780b581263f89729f1b01702368353c0df16697da84263e4cf"
+  }
+ ]
+}

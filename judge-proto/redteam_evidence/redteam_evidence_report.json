@@ -1,0 +1,278 @@
+{
+ "admit_cases": [
+  {
+   "name": "mk_typosquat_lookalike_publisher",
+   "side": "maker",
+   "family": "planted_fakes",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "Y1",
+     "no",
+     "publisher not in an agreed source class"
+    ]
+   ],
+   "oq": null,
+   "note": null
+  },
+  {
+   "name": "tk_sockpuppet_blog_dressed_as_news",
+   "side": "taker",
+   "family": "planted_fakes",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "Y1",
+     "yes",
+     "controlled by a party"
+    ]
+   ],
+   "oq": null,
+   "note": null
+  },
+  {
+   "name": "mk_homoglyph_publisher_name",
+   "side": "maker",
+   "family": "planted_fakes",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "N1",
+     "no",
+     "publisher not in an agreed source class"
+    ]
+   ],
+   "oq": null,
+   "note": null
+  },
+  {
+   "name": "tk_backdated_capture_grace_still_rejected",
+   "side": "taker",
+   "family": "backdating",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "Y1",
+     "yes",
+     "submitted after the evidence window"
+    ]
+   ],
+   "oq": null,
+   "note": null
+  },
+  {
+   "name": "mk_window_close_backdate_via_self_reported_submitted",
+   "side": "maker",
+   "family": "backdating",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "N1",
+     "no",
+     "submitted after the evidence window"
+    ]
+   ],
+   "oq": "OQ-T9",
+   "note": null
+  },
+  {
+   "name": "tk_over_cap_flood_rejected",
+   "side": "taker",
+   "family": "flooding",
+   "ok": true,
+   "admitted_ids": [
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N5"
+   ],
+   "rejected": [
+    [
+     "N6",
+     "no",
+     "over the 5-exhibit limit"
+    ],
+    [
+     "N7",
+     "no",
+     "over the 5-exhibit limit"
+    ]
+   ],
+   "oq": null,
+   "note": null
+  },
+  {
+   "name": "mk_unbounded_exhibit_length_admitted",
+   "side": "maker",
+   "family": "flooding",
+   "ok": true,
+   "admitted_ids": [],
+   "rejected": [
+    [
+     "N1",
+     "no",
+     "excerpt exceeds the 4,000-char cap (7353 chars)"
+    ]
+   ],
+   "oq": null,
+   "note": "admit() now rejects excerpts over the 4,000-char cap (D-DISPUTE1)"
+  }
+ ],
+ "judge_cases": [
+  {
+   "name": "mk_confident_outlet_vs_primary_tiering_holds",
+   "side": "maker",
+   "family": "planted_fakes",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "tk_near_duplicate_flood_burial",
+   "side": "taker",
+   "family": "flooding",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "baseline_same_tier_conflict_voids",
+   "side": "both",
+   "family": "honest_conflict",
+   "expect": "VOID|ESCALATE",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "mk_tk_rhetoric_cannot_break_same_tier_conflict",
+   "side": "both",
+   "family": "honest_conflict",
+   "expect": "VOID|ESCALATE",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "mk_base64_encoded_instruction",
+   "side": "maker",
+   "family": "injection",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "tk_html_comment_hidden_instruction",
+   "side": "taker",
+   "family": "injection",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "mk_fake_prior_turn_anchor",
+   "side": "maker",
+   "family": "injection",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  },
+  {
+   "name": "tk_rtl_override_hidden_text",
+   "side": "taker",
+   "family": "injection",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "rejected": []
+  }
+ ],
+ "lint_cases": [
+  {
+   "name": "mk_vague_threshold_passes_lint",
+   "side": "maker",
+   "family": "ambiguous_terms",
+   "ok": true,
+   "blocked": true,
+   "problems": [
+    "missing field: sources",
+    "need >= 2 independent, non-party-controlled publishers",
+    "no fallback-source rule specified for when a named source is unavailable",
+    "no early-settlement rule specified (does YES fire before the deadline, or only at it?)"
+   ],
+   "note": "lint() has no semantic-ambiguity gate (OQ-B6) -- undefined quantifiers like 'significant'/'substantial' pass the compiler gate unflagged"
+  },
+  {
+   "name": "mk_undefined_authoritative_source_passes_lint",
+   "side": "maker",
+   "family": "ambiguous_terms",
+   "ok": true,
+   "blocked": true,
+   "problems": [
+    "missing field: sources",
+    "need >= 2 independent, non-party-controlled publishers",
+    "no fallback-source rule specified for when a named source is unavailable",
+    "no early-settlement rule specified (does YES fire before the deadline, or only at it?)",
+    "fork/ticker not pinned per venue (D-RESOLVE1): no ticker_pins entry for 'any source' -- every named source must pin its canonical ticker before a price/candle term sheet can be written"
+   ],
+   "note": "lint() never checks that a numeric/price element names which admitted source or class is authoritative when sources could legitimately disagree"
+  },
+  {
+   "name": "mk_timezone_ambiguous_element_passes_lint",
+   "side": "maker",
+   "family": "ambiguous_terms",
+   "ok": true,
+   "blocked": true,
+   "problems": [
+    "missing field: sources",
+    "need >= 2 independent, non-party-controlled publishers",
+    "no fallback-source rule specified for when a named source is unavailable",
+    "no early-settlement rule specified (does YES fire before the deadline, or only at it?)"
+   ],
+   "note": "lint() checks that time.* FIELDS are UTC ISO8601, but never checks that an element's own date wording ('by the end of 2027') is backed by a timezone-defining clause (e.g. UTC_V1)"
+  }
+ ],
+ "verify_cases": [
+  {
+   "name": "mk_zero_width_splits_negation_out_of_quote",
+   "ok": true,
+   "answer": "met",
+   "note": "quote matches verbatim either way; this is a judge-prompt-level risk (answer=met + a not_met-supporting quote), not a verify() bug -- flagged, not a verify() defect"
+  }
+ ],
+ "relitigation": {
+  "name": "tk_relitigation_new_unrelated_exhibit_in_challenge_round",
+  "side": "taker",
+  "family": "relitigation",
+  "round0_admitted_ids": [
+   "N1"
+  ],
+  "round1_admitted_ids": [
+   "N1"
+  ],
+  "new_exhibit_admitted": false,
+  "expect": "new round-1 exhibits should be rejected unless the round is explicitly re-opened for new evidence by policy (evidence-freeze), or restricted to OBJECTIONS against round-0 exhibits (design doc \u00a710) -- enforced via admit()'s round_no/frozen_exhibit_ids (D-DISPUTE1, queue item 7/dispute-3)",
+  "actual": "admit() is now round-aware: Y2 (free-standing, no objects_to/refetch_of pointer) is rejected as a frozen-record violation; N1 (round-0-admitted) still carries forward.",
+  "weakness": false
+ },
+ "seconds": 31
+}

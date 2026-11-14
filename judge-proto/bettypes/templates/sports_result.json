@@ -1,0 +1,53 @@
+{
+  "superseded_by": {"template": {"id": "game_winner", "version": 1}, "decision": "D-TPL1", "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)"},
+  "_comment": "TEMPLATE (not a prototype): sports result (ESPN scoreboard + league site)",
+  "claim": "The Buffalo Bills win their NFL game against the Baltimore Ravens scheduled 2026-11-01T18:00:00Z, final score including overtime.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show the Bills' game against the Ravens (event id 401873026) with status STATUS_FINAL and the Bills' final score higher than the Ravens' final score?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "FINAL_SCORE_V1",
+    "POSTPONED_V1",
+    "ABANDONED_EVENT_V1",
+    "TIE_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "FINAL_SCORE_V1 applies; the winner is the competitor with winner=true on a STATUS_FINAL event.",
+    "Postponed, suspended or cancelled games are not final: the element stays insufficient and the bet follows POSTPONED_V1/ABANDONED_EVENT_V1 caps, never NO.",
+    "The event is pinned by the ESPN event id and the scheduled kickoff; a rescheduled game keeps its id.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-01T00:00:00Z",
+    "window_end": "2026-11-08T00:00:00Z",
+    "evidence_cutoff": "2026-11-15T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "ESPN public scoreboard API"
+    },
+    {
+      "id": "S1",
+      "publisher": "NFL.com official game page"
+    }
+  ],
+  "source_classes": {
+    "ESPN public scoreboard API": "data",
+    "NFL.com official game page": "primary"
+  },
+  "window_close": "2026-11-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "sports_result",
+    "fetch": "GET https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=YYYYMMDD"
+  }
+}

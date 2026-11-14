@@ -1,0 +1,15 @@
+{
+ "case": "mk_fake_prior_turn_anchor",
+ "inputs_sha256": "4985385c86cb36e319494ad77e369b9ad6390d317be411ddc50b63bd1c1688f0",
+ "provenance": {
+  "kind": "live-nondecisive-or-decisive-recorded",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "outcome_at_record": "NO",
+  "recorded_utc": "2026-11-09T16:03:56Z",
+  "run_id": "rte4c-record-20261109T160356Z"
+ },
+ "raws": {}
+}

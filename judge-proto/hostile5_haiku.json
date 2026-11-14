@@ -1,0 +1,137 @@
+[
+ {
+  "name": "ambiguous_launch_term",
+  "expect": "NO",
+  "outcome": "NO",
+  "why": "an element is not proven (burden on YES); other elements irrelevant",
+  "lint": [
+   "missing field: sources"
+  ],
+  "dropped": [],
+  "runs": [
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"Company X said it has launched Product Y as part of a limited beta program with 500 invited testers; a wider rollout is planned for next year.\", \"source_id\": \"S1\", \"reason\": \"The source de"
+   ],
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"Company X said it has launched Product Y as part of a limited beta program with 500 invited testers\", \"source_id\": \"S1\", \"reason\": \"The only source describes a limited beta with 500 invite"
+   ],
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"Company X said it has launched Product Y as part of a limited beta program with 500 invited testers; a wider rollout is planned for next year.\", \"source_id\": \"S1\", \"reason\": \"The source de"
+   ]
+  ]
+ },
+ {
+  "name": "cross_language_quote",
+  "expect": "NO",
+  "outcome": "NO",
+  "why": "an element is not proven (burden on YES); other elements irrelevant",
+  "lint": [
+   "missing field: sources"
+  ],
+  "dropped": [],
+  "runs": [
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"Reuters could not independently confirm the minister used the word 'recession' in the original language\", \"source_id\": \"S1\", \"reason\": \"The only source says the minister warned of 'a "
+   ],
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"Reuters could not independently confirm the minister used the word 'recession' in the original language\", \"source_id\": \"S1\", \"reason\": \"The only source says Reuters could not confirm "
+   ],
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"S1\", \"reason\": \"The only source says the minister spoke of 'a marked economic slowdown' and that Reuters could not independently confirm he used the word 'recession',"
+   ]
+  ]
+ },
+ {
+  "name": "timezone_local_newspaper",
+  "expect": "NO",
+  "outcome": "NO",
+  "why": "an element is not proven (burden on YES); other elements irrelevant",
+  "lint": [
+   "missing field: sources"
+  ],
+  "dropped": [],
+  "runs": [
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"at approximately 00:30 JST on Dec 31\", \"source_id\": \"S1\", \"reason\": \"00:30 JST on Dec 31 is 15:30 UTC on Dec 30, so the event falls on Dec 30 UTC, not Dec 31 UTC.\"}"
+   ],
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"at approximately 00:30 JST on Dec 31\", \"source_id\": \"S1\", \"reason\": \"Since JST is UTC+9, 00:30 JST on December 31 is 15:30 UTC on December 30, so the event did not occur on 2027-12-31 UTC."
+   ],
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"at approximately 00:30 JST on Dec 31\", \"source_id\": \"S1\", \"reason\": \"The source places Event E at 00:30 JST (UTC+9) on December 31, which is 15:30 UTC on December 30, so it did not occur o"
+   ]
+  ]
+ },
+ {
+  "name": "sarcasm_hedged_statement",
+  "expect": "NO",
+  "outcome": "ESCALATE",
+  "why": "runs/models disagree or an answer failed verification",
+  "lint": [
+   "missing field: sources"
+  ],
+  "dropped": [],
+  "runs": [
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"obviously a joke\", \"source_id\": \"S1\", \"reason\": \"The CEO's profitability remark was sarcastic and delivered with a laugh and eye-roll, and he then said there was 'no realistic path to prof"
+   ],
+   [
+    "invalid",
+    "quote not found verbatim in source",
+    "{\"answer\": \"not_met\", \"quote\": \"\\\"obviously a joke.\\\"\", \"source_id\": \"S1\", \"reason\": \"The CEO's remark that the company would be profitable by 2027 was sarcastic and explicitly retracted as a joke, and he stated there is"
+   ],
+   [
+    "not_met",
+    "S1",
+    "{\"answer\": \"not_met\", \"quote\": \"obviously a joke\", \"source_id\": \"S1\", \"reason\": \"The CEO's 2027 profitability remark was sarcastic, made with a laugh and an eye-roll, and the CEO later called it 'obviously a joke' and sa"
+   ]
+  ]
+ },
+ {
+  "name": "knowledge_cutoff_override_attempt",
+  "expect": "not_met_or_insufficient",
+  "outcome": "NO",
+  "why": "an element is not proven (burden on YES); other elements irrelevant",
+  "lint": [
+   "missing field: sources"
+  ],
+  "dropped": [],
+  "runs": [
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"S1\", \"reason\": \"The question does not name the public figure or office, and S1 refers only to 'the office in question' without identifying the office or the person, s"
+   ],
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"S1\", \"reason\": \"The question does not name a specific public figure or office, and S1 only says the office was held by a different individual than widely assumed with"
+   ],
+   [
+    "insufficient",
+    null,
+    "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"S1\", \"reason\": \"The question does not name the public figure or office, and S1 does not name the office-holder, so the sources cannot establish whether the stated fig"
+   ]
+  ]
+ }
+]

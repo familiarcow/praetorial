@@ -1,0 +1,263 @@
+{
+    "wallTime": 1228,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "[ops-alert:no-telegram] keeper heartbeat ok: 1 bets read, 0 actions, 1 contract(s)"
+            ],
+            "level": "log",
+            "timestamp": 1794221249385
+        }
+    ],
+    "eventTimestamp": 1794221248183,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 7249,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221247165
+    },
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221248105,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221247165
+    }
+}
+{
+    "wallTime": 2054,
+    "cpuTime": 12,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221307886,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 16461,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221307165
+    },
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221307779,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221307165
+    }
+}
+{
+    "wallTime": 6447,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221368289,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 16858,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221367165
+    },
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221368199,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221367165
+    }
+}
+{
+    "wallTime": 1127,
+    "cpuTime": 8,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221427952,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 19355,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221427165
+    },
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221427816,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221427165
+    }
+}
+{
+    "wallTime": 1121,
+    "cpuTime": 7,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221488083,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 11549,
+    "cpuTime": 2,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221487165
+    },
+    "scriptVersion": {
+        "id": "f3c2932e-6503-4251-8a84-f3c40999d75d"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794221487973,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794221487165
+    }
+}

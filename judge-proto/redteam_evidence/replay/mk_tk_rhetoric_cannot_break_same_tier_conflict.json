@@ -1,0 +1,22 @@
+{
+ "case": "mk_tk_rhetoric_cannot_break_same_tier_conflict",
+ "inputs_sha256": "32f13b677c11dd2e7b76b25d50b231ebed548806d067abdc4b550ba6e0fc6673",
+ "provenance": {
+  "kind": "live-nondecisive-or-decisive-recorded",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "outcome_at_record": "VOID",
+  "recorded_utc": "2026-11-09T16:03:56Z",
+  "run_id": "rte4c-record-20261109T160356Z"
+ },
+ "raws": {
+  "e1": {
+   "3": [
+    "{\"answer\": \"conflict\", \"quote\": \"iPhone Fold went on sale in the United States on December 20, 2027.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"iPhone Fold is not yet on sale in the United States; Apple says US availability begins in February 2028.\"}], \"reason\": \"Two sources directly contradict each other on whether the iPhone Fold was on sale in the US during 2027, and the rules provide no tiebreaker.\"}",
+    "{\"answer\": \"conflict\", \"quote\": \"iPhone Fold went on sale in the United States on December 20, 2027.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"iPhone Fold is not yet on sale in the United States; Apple says US availability begins in February 2028.\"}], \"reason\": \"Reuters (Y1) states the iPhone Fold went on sale in the US on 2027-12-20 while AP (N1) states it was not yet on sale and would only become available in February 2028, a direct contradiction the rules provide no tiebreaker to resolve.\"}"
+   ]
+  }
+ }
+}

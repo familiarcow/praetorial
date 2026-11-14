@@ -1,0 +1,54 @@
+{
+  "txs": [
+    {
+      "step": "setup: fund fresh user 0.2 NEAR",
+      "hash": "6wcdBi9Ap4E5dUE1BicwNyP4L8SJwN7gMBhNkzQFH28F",
+      "url": "https://testnet.nearblocks.io/txns/6wcdBi9Ap4E5dUE1BicwNyP4L8SJwN7gMBhNkzQFH28F"
+    },
+    {
+      "step": "1 relayed near_deposit 0.1 NEAR on wrap.testnet",
+      "hash": "DMY873Uear9G7hNa1Hb4id4T9JEAYHRRG6Fpg5knEJXa",
+      "url": "https://testnet.nearblocks.io/txns/DMY873Uear9G7hNa1Hb4id4T9JEAYHRRG6Fpg5knEJXa"
+    },
+    {
+      "step": "2 relayed ft_transfer_call wrap.testnet -> intents (msg json)",
+      "hash": "FsvNcX2o7WVtZtCYcDLH8QzXgiR7wbyFn3zocCmy2Qyt",
+      "url": "https://testnet.nearblocks.io/txns/FsvNcX2o7WVtZtCYcDLH8QzXgiR7wbyFn3zocCmy2Qyt"
+    }
+  ],
+  "user": "625ab5297c3b775b59e1aed68dac105580bd9b60c85f3169eaf76b5221014a7d",
+  "msgFormat": "json",
+  "network": "testnet",
+  "intentsStorageOnWnearBefore": {
+    "total": "1250000000000000000000",
+    "available": "0"
+  },
+  "userStorageOnWnearBefore": null,
+  "mtBalanceBefore": "0",
+  "nearDepositOutcome": {
+    "failures": [],
+    "logs": [
+      "Deposit 98750000000000000000000 NEAR to 625ab5297c3b775b59e1aed68dac105580bd9b60c85f3169eaf76b5221014a7d"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterWrap": "98750000000000000000000",
+  "moveOutcome": {
+    "failures": [
+      {
+        "ActionError": {
+          "index": 0,
+          "kind": {
+            "FunctionCallError": {
+              "ExecutionError": "Smart contract panicked: The account doesn't have enough balance"
+            }
+          }
+        }
+      }
+    ],
+    "logs": [],
+    "successValue": ""
+  },
+  "wnearBalanceAfterMove": "98750000000000000000000",
+  "mtBalanceAfter": "0"
+}

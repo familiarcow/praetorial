@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-13T05:51:12+00:00",
+  "rpc": "https://test.rpc.fastnear.com",
+  "block_height": 277469624,
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "bet_id": 35,
+  "status": "Settled",
+  "outcome": "YES",
+  "proposed_at": "2026-11-11T04:41:32.553553+00:00",
+  "runs_used": 2,
+  "all_results": [
+    {
+      "run_no": 2,
+      "outcome": "YES"
+    }
+  ],
+  "bonds": 0,
+  "challenged_by": null,
+  "judge_backend": "near-ai",
+  "resolution_notes": [
+    "source fetched: S_ESPN",
+    "final: MIL 85 - NY 117; winner NY (single source: ESPN)",
+    "17c5 audit agrees with the code outcome YES",
+    "D-BUDGET1: calls_ms=[] rerun=false"
+  ]
+}

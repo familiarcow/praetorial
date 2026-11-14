@@ -1,0 +1,77 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "44do9N4NLaiZNQxowzaUhXvpn7uAV1y1HEXXnFrnz1Gn",
+      "url": "https://testnet.nearblocks.io/txns/44do9N4NLaiZNQxowzaUhXvpn7uAV1y1HEXXnFrnz1Gn",
+      "spec_hash": "b30d480a7378a9155ce7c13354fb1fb0d0b7f4f64d198db594e3fe578c4f58bd",
+      "checked_at": "1794193788084183040",
+      "status": "Success"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "624KTT8A1k6K1aUKoYu7xqEdT67FFcATrUgACjeTsNeC",
+      "url": "https://testnet.nearblocks.io/txns/624KTT8A1k6K1aUKoYu7xqEdT67FFcATrUgACjeTsNeC",
+      "spec_hash": "b30d480a7378a9155ce7c13354fb1fb0d0b7f4f64d198db594e3fe578c4f58bd",
+      "checked_at": "1794193808655687680",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker",
+      "hash": "9BN3tBM294dT5Dng5CtGugWUF7nd2HKafgKUJH5uw1ur",
+      "url": "https://testnet.nearblocks.io/txns/9BN3tBM294dT5Dng5CtGugWUF7nd2HKafgKUJH5uw1ur",
+      "amount": "10062783",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "9wwTXGnFSAhDXGAvcXEk12xeWUXbxncjAqqvgtLZcKK1",
+      "url": "https://testnet.nearblocks.io/txns/9wwTXGnFSAhDXGAvcXEk12xeWUXbxncjAqqvgtLZcKK1",
+      "amount": "10062783"
+    },
+    {
+      "step": "cancel",
+      "hash": "BJUfctqp6sQjDsTA787PTHdvEAUHEQzHhRVK77kN9xmL",
+      "url": "https://testnet.nearblocks.io/txns/BJUfctqp6sQjDsTA787PTHdvEAUHEQzHhRVK77kN9xmL"
+    }
+  ],
+  "form": {
+    "t_utc": "2026-11-09T04:15",
+    "op": ">=",
+    "x_usd": "75900"
+  },
+  "sheet": {
+    "template": {
+      "id": "btc_close_at_t",
+      "version": 1
+    },
+    "fields": {
+      "t_utc": "2026-11-09T04:15:00Z",
+      "op": ">=",
+      "x_usd": 75900,
+      "open_utc": "2026-11-09T03:09:00Z"
+    }
+  },
+  "release": {
+    "network": "testnet",
+    "resolver_wasm_hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+    "models": [
+      "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "z-ai/glm-5.3-flash"
+    ],
+    "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2"
+  },
+  "resolver_keys": [
+    "eab0e7b74f13fac3a2ad1e0c4c4ad6f776aa1904bb6f0fafd0ba035a23daaa4d",
+    "b0bd538e5a1cc4a31216a8020f992b3f9dcde612bc9889c7a828dc697abf8e9f",
+    "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"
+  ],
+  "checkOpenPins": null,
+  "bet_id": 1,
+  "bet_status": "Open",
+  "escrow": "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet",
+  "funding_deadline_iso": "2026-11-09T04:15:00.000Z",
+  "usdc_before_cancel": "3894751412",
+  "usdc_after_cancel": "3894751412",
+  "bet_status_after_cancel": "Cancelled"
+}

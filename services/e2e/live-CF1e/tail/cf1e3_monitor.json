@@ -1,0 +1,97 @@
+[
+ {
+  "worker": "praetorial-monitor-testnet",
+  "entrypoint": "MonitorDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 6,
+  "wallMs": 2203,
+  "ts": 1794199948749,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 2212,
+  "ts": 1794199948724,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "entrypoint": "MonitorDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 7,
+  "wallMs": 2209,
+  "ts": 1794200008759,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 2216,
+  "ts": 1794200008735,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "entrypoint": "MonitorDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 6,
+  "wallMs": 2175,
+  "ts": 1794200068934,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 2262,
+  "ts": 1794200068870,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "entrypoint": "MonitorDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 6,
+  "wallMs": 2185,
+  "ts": 1794200129150,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 2285,
+  "ts": 1794200129072,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "entrypoint": "MonitorDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 6,
+  "wallMs": 2177,
+  "ts": 1794200189113,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-monitor-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 2279,
+  "ts": 1794200189032,
+  "exceptions": 0
+ }
+]

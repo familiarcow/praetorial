@@ -1,0 +1,204 @@
+{
+  "item": 16,
+  "status": "BLOCKED-ON-PM: OutLayer request_execution rejects escrow args",
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "7yKHMWvvgBJnkRq5PRjapXw6gTG8XXNRfNTtTFgH5RWq",
+      "url": "https://testnet.nearblocks.io/txns/7yKHMWvvgBJnkRq5PRjapXw6gTG8XXNRfNTtTFgH5RWq",
+      "spec_hash": "ea14703b576aa366ffb94ff462959d51365ba40f8d2226851dd1458b4ef7d6fe",
+      "checked_at": "1793955974860443648",
+      "attest_pubkey": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "61X6bHdAzKbD9fLjvSLGJvidJNbPcwzaC84tYtXe2BhA",
+      "url": "https://testnet.nearblocks.io/txns/61X6bHdAzKbD9fLjvSLGJvidJNbPcwzaC84tYtXe2BhA",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "CG1sSKvAVD4mN6sBcJ8EMPEDo6F2jT6fzV9z64ieC2ef",
+      "url": "https://testnet.nearblocks.io/txns/CG1sSKvAVD4mN6sBcJ8EMPEDo6F2jT6fzV9z64ieC2ef",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "3G3H4zqpTN6o8zUSEmCBZj5H9hcCNRwMUvNZDqMKyeAY",
+      "url": "https://testnet.nearblocks.io/txns/3G3H4zqpTN6o8zUSEmCBZj5H9hcCNRwMUvNZDqMKyeAY"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "2Gnjx9q22uAgET7vt1ByGj2Wjz2nGtd11mwotKXnipfP",
+      "url": "https://testnet.nearblocks.io/txns/2Gnjx9q22uAgET7vt1ByGj2Wjz2nGtd11mwotKXnipfP",
+      "spec_hash": "ea14703b576aa366ffb94ff462959d51365ba40f8d2226851dd1458b4ef7d6fe",
+      "checked_at": "1793956055365574656",
+      "attest_pubkey": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "HL6Zg1sin5FTwGSRsuwqh4SruZxT5DLzXuL7XLxo8ES7",
+      "url": "https://testnet.nearblocks.io/txns/HL6Zg1sin5FTwGSRsuwqh4SruZxT5DLzXuL7XLxo8ES7",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "5F8kDrxcQtawYP5LYsjBr4TAfALJxMWBfm382WLvBeeB",
+      "url": "https://testnet.nearblocks.io/txns/5F8kDrxcQtawYP5LYsjBr4TAfALJxMWBfm382WLvBeeB",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "8miLQLZVJA49tKKfEHVq38cw7nPPuixsk1agG69hBgpn",
+      "url": "https://testnet.nearblocks.io/txns/8miLQLZVJA49tKKfEHVq38cw7nPPuixsk1agG69hBgpn"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "BzKNgPYHRJbYAUkrRoNuTmfQVQiVLtzkv9VNbVVyxvYz",
+      "url": "https://testnet.nearblocks.io/txns/BzKNgPYHRJbYAUkrRoNuTmfQVQiVLtzkv9VNbVVyxvYz"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "6U8HN1hWiESqhfVgZFna3MMCHcVMYB438EoLu9jCnKEJ",
+      "url": "https://testnet.nearblocks.io/txns/6U8HN1hWiESqhfVgZFna3MMCHcVMYB438EoLu9jCnKEJ",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "150000000000000000000000"
+    }
+  ],
+  "finding": {
+    "request_resolution_tx": "6U8HN1hWiESqhfVgZFna3MMCHcVMYB438EoLu9jCnKEJ (escrow-side Success; cross-contract call to outlayer.testnet FAILED)",
+    "outlayer_error": "Smart contract panicked: Failed to deserialize input from JSON. Error: `missing field `source` at line 1 column 12229`",
+    "consequence": "on_resolution recorded {\"error\":\"outlayer_call_failed\"}; compute deposit returned to keeper_credit (150000000000000000000000 yocto intact); bet 1 stays Resolving until resolve deadline / void path; no AI judge run, no outcome, no payout. GATE-04 NOT closed.",
+    "cause_hypothesis": "live outlayer.testnet request_execution now requires a `source` field in its args; escrow's request_execution payload (contracts/escrow/src/lib.rs, written against the older OutLayer API / mock-outlayer) omits it. Not verified against OutLayer docs/ABI in this run.",
+    "options": [
+      "A (rec): escrow-code change on a new feat/ branch: add `source` per current OutLayer ABI (inspect outlayer.testnet ABI/docs first), update mock-outlayer + tests, then redeploy via the same wipe/delete path (needs another ~6 tNEAR cycle: escrow holds ~6.1 tNEAR) ",
+      "B: try an existing contract-side knob if OutlayerConfig already exposes the source shape (it does not: only wasm_base_url/secrets_profile/secrets_account_id)",
+      "C: have keeper call outlayer directly (off-contract) -- breaks the on_resolution trust path; not recommended"
+    ],
+    "not_changed": "no escrow contract code changed (scope rule)"
+  },
+  "state_checked": {
+    "resolver_keys": [
+      "outcome 1457b75b...e0d7",
+      "attest 861e05fe...8e05",
+      "wasm cd853f8f...19d7"
+    ],
+    "keeper_credit_balance": "0 (would also need topup_keeper_credit)",
+    "balances_near": {
+      "praetorial-dev-1101": 0.9414,
+      "attest1": 0.4476,
+      "keeper": 0.4047,
+      "maker1": 0.3703,
+      "taker1": 0.3246
+    }
+  },
+  "spent_near": 0,
+  "near_ai_calls": 0,
+  "next": "Follow-up item: redeploy escrow from current main (item 11+, OutlayerConfig with secrets_profile/account matching a Predecessor-whitelisted secret as in 11b), re-run live-run8 open-bet code, then item 16 as specified.",
+  "terms_diff": {
+    "replaced": [
+      "2028-10-28 -> 2025-10-28",
+      "October 28, 2028 -> October 28, 2025"
+    ],
+    "occurrences": 8,
+    "remaining_2028": 2,
+    "orig_sha256": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "new_sha256": "ea14703b576aa366ffb94ff462959d51365ba40f8d2226851dd1458b4ef7d6fe"
+  },
+  "first_attempt_note": "open #1 (tx 3G3H4zqp...) rejected by intents-mock log: settlement_period must be between 1h and 90d (I had set 120s); retried with 3600s",
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+  "request_resolution_error_tx": "9EHXMfCAT6NbYv7ZpxmJKrfzGKxTwTgJk1P819QNaSCw",
+  "poll": {
+    "i": 59,
+    "status": "Resolving",
+    "runs_used": 0
+  },
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "ea14703b576aa366ffb94ff462959d51365ba40f8d2226851dd1458b4ef7d6fe",
+      "models_snapshot_hash": "item16-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2026-11-04T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2028-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2028-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793956967294000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796548067294000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793956069008164400,
+    "taken_at": 1793956072679517400,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 1,
+    "last_resolution_raw": "{\"error\":\"outlayer_call_failed\"}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  },
+  "keeper_credit_after": "150000000000000000000000",
+  "balances_after": {
+    "dev": "1402272399717867299999970",
+    "escrow": "6139543136112459200000000",
+    "keeper": "252158817238539600000000",
+    "attest1": "440564505224130500000000"
+  }
+}

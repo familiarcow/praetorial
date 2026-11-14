@@ -1,0 +1,6 @@
+# live testnet escrow drill1-2611091903.praetorial-dev-1101.testnet (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f; governance replay: guardian drill1-g2-2611091903.praetorial-dev-1101.testnet, 4 judge pair(s), 2 asset(s)
+FAIL E2  contract is_shutdown() is true
+PASS E3  resolver wasm (3401349 bytes) hashes to the pinned resolver_wasm_hash c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5
+PASS E4  live report-pubkey of the pinned wasm reproduces the bound outcome pubkey (predecessor drill1-2611091903.praetorial-dev-1101.testnet) and attest pubkey (predecessor attest1.praetorial-dev-1101.testnet)
+# 3 PASS, 1 FAIL, 0 SKIP

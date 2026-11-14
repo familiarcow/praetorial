@@ -1,0 +1,1422 @@
+{
+ "lint_cases": [
+  {
+   "name": "social_post_ok",
+   "problems": [],
+   "ts": {
+    "_comment": "Prototype: 'did account X post <phrase> in a window' on Bluesky (AT Protocol public AppView, no key, no login). Same shape as judge-proto/jason/term_sheet.json.",
+    "bettype": {
+     "actor_did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+     "fetch": "GET https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=<did>&filter=posts_no_replies&limit=50 (paginate by cursor)",
+     "phrase": "mainnet launch",
+     "platform": "bluesky",
+     "type": "social_post"
+    },
+    "claim": "The Bluesky account did:plc:z72i7hdynmk6r22z27h6tvur (bsky.app) publishes a top-level post whose text contains the phrase 'mainnet launch' with a server-indexed time between 2026-11-02T00:00:00Z and 2026-11-06T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1",
+     "SAYS_DIRECT_V1"
+    ],
+    "custom_definitions": [
+     "Deadline and window bounds are UTC instants pinned in the time block; 'UTC_V1' applies and no local time zone is ever read.",
+     "Early resolution: YES may be declared at the first qualifying post; NO may be declared only at/after the deadline and only with the coverage proof below.",
+     "Burden of proof is on YES: a post that is not shown in an admitted exhibit, or an ambiguous one, resolves NO, never YES by default.",
+     "Fallback: if the live fetch is unavailable or blocked, a keeper snapshot taken inside the window may be used; if neither is available the resolver reports COULDNT_CHECK and retries on the recovery ladder before VOID; a blocked or rate-limited page is never evidence of absence.",
+     "The account is identified by its DID (did:plc:z72i7hdynmk6r22z27h6tvur), never by handle; a handle change does not change which account is checked.",
+     "The time of a post is the AppView's indexedAt value. The author-set record createdAt is client-controlled and is never used to place a post inside or outside the window.",
+     "Only top-level posts count (feed filter posts_no_replies); replies, reposts and quote-posts of other accounts do not.",
+     "A post later deleted still counts as published if a keeper snapshot or archive exhibit captured it inside the window (RETRACTION_V1).",
+     "Coverage rule for NO: absence is proven only by a feed page fetched without a continuation cursor, or whose oldest item is indexed before the window start; a page that stops inside the window proves nothing."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a top-level (non-reply) post by the pinned account whose text contains the phrase 'mainnet launch' (case-insensitive) and whose indexedAt time is on or after 2026-11-02T00:00:00Z and on or before 2026-11-06T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Bluesky public API (keeper snapshot)": "primary",
+     "Bluesky public API (live fetch)": "primary",
+     "Internet Archive Wayback Machine (capture)": "secondary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_LIVE",
+      "publisher": "Bluesky public API (live fetch)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "Bluesky public API (keeper snapshot)"
+     },
+     {
+      "id": "S_ARCH",
+      "publisher": "Internet Archive Wayback Machine (capture)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-13T00:00:00Z",
+     "window_end": "2026-11-06T00:00:00Z",
+     "window_start": "2026-11-02T00:00:00Z"
+    },
+    "window_close": "2026-11-20T00:00:00Z"
+   }
+  },
+  {
+   "name": "polymarket_ok",
+   "problems": [],
+   "ts": {
+    "_comment": "Prototype: bet on how a Polymarket market FINALLY resolves. Polymarket's (UMA's) final resolution is the oracle, even if it disagrees with reality. Real, already-resolved market used so the test fixtures are recorded truth.",
+    "bettype": {
+     "fetch": [
+      "GET https://gamma-api.polymarket.com/markets/<id>",
+      "GET https://clob.polymarket.com/markets/<conditionId>",
+      "POST https://polygon-bor-rpc.publicnode.com eth_call to 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045 payoutDenominator(bytes32)=0xdd34de67, payoutNumerators(bytes32,uint256)=0x0504c814"
+     ],
+     "outcome": "Yes",
+     "type": "polymarket_resolution"
+    },
+    "claim": "The Polymarket market with conditionId 0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e (slug pharos-fdv-above-800m-one-day-after-launch) finally resolves to the outcome 'Yes' on or before 2026-05-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "FINAL_SCORE_V1",
+     "TIE_V1",
+     "CONTESTED_PRIMARY_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The oracle is Polymarket's own final resolution, not the real-world truth: if Polymarket resolves 'Yes' in a way a reader thinks is wrong, the bet is still YES.",
+     "'Finally resolved' means ALL of: Gamma umaResolutionStatus is 'resolved', the market is closed, and the on-chain ConditionalTokens payoutDenominator is greater than zero. A proposed, disputed or still-trading market is not resolved and is never treated as NO.",
+     "The market is pinned by conditionId and by the SHA-256 of its description text (market_pin); a market with another conditionId is a different market, and if the description no longer matches the pin the bet is VOID because its resolution rules changed after signing.",
+     "The winning outcome is read from the on-chain payoutNumerators (index 0 = first listed outcome 'Yes'); Gamma outcomePrices and CLOB token winner flags must agree with it. A disagreement between these sources is a source conflict and resolves VOID, never YES by majority.",
+     "A 50-50 or equal split payout is a tie and resolves VOID (TIE_V1), never YES or NO.",
+     "Early resolution: YES may be declared as soon as the market is finally resolved; if the market is not finally resolved by the evidence cutoff the bet is VOID, not NO.",
+     "Fallback: Gamma and CLOB are interchangeable off-chain views; on-chain finality is mandatory and at least one of Gamma/CLOB must agree. If a source is blocked or rate-limited it is COULDNT_CHECK and the recovery ladder applies.",
+     "Burden of proof is on YES: if the winner cannot be shown, the element is not proven.",
+     "Post-resolution reversal: a later re-resolution by Polymarket after the evidence cutoff does not change the answer."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show that the pinned Polymarket market is finally resolved (UMA status resolved, closed, on-chain payout set) with the outcome 'Yes' as its sole winner?"
+     }
+    ],
+    "market_pin": {
+     "condition_id": "0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e",
+     "description_sha256": "ea4855581568f070b98367f7bf60fd6a71c25d4ad43720c06f18f828a7375348",
+     "outcomes": [
+      "Yes",
+      "No"
+     ],
+     "slug": "pharos-fdv-above-800m-one-day-after-launch"
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "Polygon CTF contract (payoutNumerators)": "primary",
+     "Polymarket CLOB API": "primary",
+     "Polymarket Gamma API": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_GAMMA",
+      "publisher": "Polymarket Gamma API"
+     },
+     {
+      "id": "S_CLOB",
+      "publisher": "Polymarket CLOB API"
+     },
+     {
+      "id": "S_CTF",
+      "publisher": "Polygon CTF contract (payoutNumerators)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-05-08T00:00:00Z",
+     "window_end": "2026-05-01T00:00:00Z",
+     "window_start": "2026-04-01T00:00:00Z"
+    },
+    "unresolved_at_cutoff": "VOID",
+    "window_close": "2026-05-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "github_release_ok",
+   "problems": [],
+   "ts": {
+    "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+    "bettype": {
+     "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+     ],
+     "tag_pattern": "v2\\.15\\.\\d+",
+     "type": "github_release"
+    },
+    "claim": "GitHub repository id 65600975 (pytorch/pytorch) publishes a non-draft, non-prerelease GitHub Release whose tag fully matches the pattern v2\\.15\\.\\d+ with published_at between 2026-10-20T00:00:00Z and 2026-11-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "PARTIAL_NONE_V1",
+     "CANCELLED_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+     "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+     "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+     "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+     "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+     "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+     "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+     "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+     }
+    ],
+    "repo_pin": {
+     "full_name_at_signing": "pytorch/pytorch",
+     "repo_id": 65600975
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "GitHub REST API (git refs)": "primary",
+     "GitHub REST API (releases)": "primary",
+     "GitHub keeper snapshot": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+     },
+     {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-08T00:00:00Z",
+     "window_end": "2026-11-01T00:00:00Z",
+     "window_start": "2026-10-20T00:00:00Z"
+    },
+    "window_close": "2026-11-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "same_origin_two_publishers",
+   "problems": [
+    "need >= 2 independent, non-party-controlled origins (publisher strings that share an origin count once); to fix: add a second independent source that is not party-controlled"
+   ],
+   "ts": {
+    "_comment": "Prototype: 'did account X post <phrase> in a window' on Bluesky (AT Protocol public AppView, no key, no login). Same shape as judge-proto/jason/term_sheet.json.",
+    "bettype": {
+     "actor_did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+     "fetch": "GET https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=<did>&filter=posts_no_replies&limit=50 (paginate by cursor)",
+     "phrase": "mainnet launch",
+     "platform": "bluesky",
+     "type": "social_post"
+    },
+    "claim": "The Bluesky account did:plc:z72i7hdynmk6r22z27h6tvur (bsky.app) publishes a top-level post whose text contains the phrase 'mainnet launch' with a server-indexed time between 2026-11-02T00:00:00Z and 2026-11-06T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1",
+     "SAYS_DIRECT_V1"
+    ],
+    "custom_definitions": [
+     "Deadline and window bounds are UTC instants pinned in the time block; 'UTC_V1' applies and no local time zone is ever read.",
+     "Early resolution: YES may be declared at the first qualifying post; NO may be declared only at/after the deadline and only with the coverage proof below.",
+     "Burden of proof is on YES: a post that is not shown in an admitted exhibit, or an ambiguous one, resolves NO, never YES by default.",
+     "Fallback: if the live fetch is unavailable or blocked, a keeper snapshot taken inside the window may be used; if neither is available the resolver reports COULDNT_CHECK and retries on the recovery ladder before VOID; a blocked or rate-limited page is never evidence of absence.",
+     "The account is identified by its DID (did:plc:z72i7hdynmk6r22z27h6tvur), never by handle; a handle change does not change which account is checked.",
+     "The time of a post is the AppView's indexedAt value. The author-set record createdAt is client-controlled and is never used to place a post inside or outside the window.",
+     "Only top-level posts count (feed filter posts_no_replies); replies, reposts and quote-posts of other accounts do not.",
+     "A post later deleted still counts as published if a keeper snapshot or archive exhibit captured it inside the window (RETRACTION_V1).",
+     "Coverage rule for NO: absence is proven only by a feed page fetched without a continuation cursor, or whose oldest item is indexed before the window start; a page that stops inside the window proves nothing."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a top-level (non-reply) post by the pinned account whose text contains the phrase 'mainnet launch' (case-insensitive) and whose indexedAt time is on or after 2026-11-02T00:00:00Z and on or before 2026-11-06T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Bluesky public API (keeper snapshot)": "primary",
+     "Bluesky public API (live fetch)": "primary",
+     "Internet Archive Wayback Machine (capture)": "secondary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_LIVE",
+      "publisher": "Bluesky public API (live fetch)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "Bluesky public API (keeper snapshot)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-13T00:00:00Z",
+     "window_end": "2026-11-06T00:00:00Z",
+     "window_start": "2026-11-02T00:00:00Z"
+    },
+    "window_close": "2026-11-20T00:00:00Z"
+   }
+  },
+  {
+   "name": "absence_without_coverage",
+   "problems": [
+    "coverage rule required for an absence bet over a paginated source: say what proves the whole window was covered (feed reaches back past window_start), otherwise the bet is COULDNT_CHECK, never NO; to fix: add a coverage rule custom_definition saying what proves the whole window was covered"
+   ],
+   "ts": {
+    "_comment": "Prototype: 'did account X post <phrase> in a window' on Bluesky (AT Protocol public AppView, no key, no login). Same shape as judge-proto/jason/term_sheet.json.",
+    "bettype": {
+     "actor_did": "did:plc:z72i7hdynmk6r22z27h6tvur",
+     "fetch": "GET https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=<did>&filter=posts_no_replies&limit=50 (paginate by cursor)",
+     "phrase": "mainnet launch",
+     "platform": "bluesky",
+     "type": "social_post"
+    },
+    "claim": "The Bluesky account did:plc:z72i7hdynmk6r22z27h6tvur (bsky.app) publishes a top-level post whose text contains the phrase 'mainnet launch' with a server-indexed time between 2026-11-02T00:00:00Z and 2026-11-06T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1",
+     "SAYS_DIRECT_V1"
+    ],
+    "custom_definitions": [
+     "Deadline and window bounds are UTC instants pinned in the time block; 'UTC_V1' applies and no local time zone is ever read.",
+     "Early resolution: YES may be declared at the first qualifying post; NO may be declared only at/after the deadline and only with the coverage proof below.",
+     "Burden of proof is on YES: a post that is not shown in an admitted exhibit, or an ambiguous one, resolves NO, never YES by default.",
+     "Fallback: if the live fetch is unavailable or blocked, a keeper snapshot taken inside the window may be used; if neither is available the resolver reports COULDNT_CHECK and retries on the recovery ladder before VOID; a blocked or rate-limited page is never evidence of absence.",
+     "The account is identified by its DID (did:plc:z72i7hdynmk6r22z27h6tvur), never by handle; a handle change does not change which account is checked.",
+     "The time of a post is the AppView's indexedAt value. The author-set record createdAt is client-controlled and is never used to place a post inside or outside the window.",
+     "Only top-level posts count (feed filter posts_no_replies); replies, reposts and quote-posts of other accounts do not.",
+     "A post later deleted still counts as published if a keeper snapshot or archive exhibit captured it inside the window (RETRACTION_V1)."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a top-level (non-reply) post by the pinned account whose text contains the phrase 'mainnet launch' (case-insensitive) and whose indexedAt time is on or after 2026-11-02T00:00:00Z and on or before 2026-11-06T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Bluesky public API (keeper snapshot)": "primary",
+     "Bluesky public API (live fetch)": "primary",
+     "Internet Archive Wayback Machine (capture)": "secondary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_LIVE",
+      "publisher": "Bluesky public API (live fetch)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "Bluesky public API (keeper snapshot)"
+     },
+     {
+      "id": "S_ARCH",
+      "publisher": "Internet Archive Wayback Machine (capture)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-13T00:00:00Z",
+     "window_end": "2026-11-06T00:00:00Z",
+     "window_start": "2026-11-02T00:00:00Z"
+    },
+    "window_close": "2026-11-20T00:00:00Z"
+   }
+  },
+  {
+   "name": "polymarket_without_market_pin",
+   "problems": [
+    "market_pin required for a polymarket-source term sheet: condition_id (0x + 64 hex) and description_sha256 (64 hex); to fix: add market_pin with condition_id and description_sha256"
+   ],
+   "ts": {
+    "_comment": "Prototype: bet on how a Polymarket market FINALLY resolves. Polymarket's (UMA's) final resolution is the oracle, even if it disagrees with reality. Real, already-resolved market used so the test fixtures are recorded truth.",
+    "bettype": {
+     "fetch": [
+      "GET https://gamma-api.polymarket.com/markets/<id>",
+      "GET https://clob.polymarket.com/markets/<conditionId>",
+      "POST https://polygon-bor-rpc.publicnode.com eth_call to 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045 payoutDenominator(bytes32)=0xdd34de67, payoutNumerators(bytes32,uint256)=0x0504c814"
+     ],
+     "outcome": "Yes",
+     "type": "polymarket_resolution"
+    },
+    "claim": "The Polymarket market with conditionId 0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e (slug pharos-fdv-above-800m-one-day-after-launch) finally resolves to the outcome 'Yes' on or before 2026-05-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "FINAL_SCORE_V1",
+     "TIE_V1",
+     "CONTESTED_PRIMARY_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The oracle is Polymarket's own final resolution, not the real-world truth: if Polymarket resolves 'Yes' in a way a reader thinks is wrong, the bet is still YES.",
+     "'Finally resolved' means ALL of: Gamma umaResolutionStatus is 'resolved', the market is closed, and the on-chain ConditionalTokens payoutDenominator is greater than zero. A proposed, disputed or still-trading market is not resolved and is never treated as NO.",
+     "The market is pinned by conditionId and by the SHA-256 of its description text (market_pin); a market with another conditionId is a different market, and if the description no longer matches the pin the bet is VOID because its resolution rules changed after signing.",
+     "The winning outcome is read from the on-chain payoutNumerators (index 0 = first listed outcome 'Yes'); Gamma outcomePrices and CLOB token winner flags must agree with it. A disagreement between these sources is a source conflict and resolves VOID, never YES by majority.",
+     "A 50-50 or equal split payout is a tie and resolves VOID (TIE_V1), never YES or NO.",
+     "Early resolution: YES may be declared as soon as the market is finally resolved; if the market is not finally resolved by the evidence cutoff the bet is VOID, not NO.",
+     "Fallback: Gamma and CLOB are interchangeable off-chain views; on-chain finality is mandatory and at least one of Gamma/CLOB must agree. If a source is blocked or rate-limited it is COULDNT_CHECK and the recovery ladder applies.",
+     "Burden of proof is on YES: if the winner cannot be shown, the element is not proven.",
+     "Post-resolution reversal: a later re-resolution by Polymarket after the evidence cutoff does not change the answer."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show that the pinned Polymarket market is finally resolved (UMA status resolved, closed, on-chain payout set) with the outcome 'Yes' as its sole winner?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Polygon CTF contract (payoutNumerators)": "primary",
+     "Polymarket CLOB API": "primary",
+     "Polymarket Gamma API": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_GAMMA",
+      "publisher": "Polymarket Gamma API"
+     },
+     {
+      "id": "S_CLOB",
+      "publisher": "Polymarket CLOB API"
+     },
+     {
+      "id": "S_CTF",
+      "publisher": "Polygon CTF contract (payoutNumerators)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-05-08T00:00:00Z",
+     "window_end": "2026-05-01T00:00:00Z",
+     "window_start": "2026-04-01T00:00:00Z"
+    },
+    "unresolved_at_cutoff": "VOID",
+    "window_close": "2026-05-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "polymarket_bad_pin_shape",
+   "problems": [
+    "market_pin required for a polymarket-source term sheet: condition_id (0x + 64 hex) and description_sha256 (64 hex); to fix: add market_pin with condition_id and description_sha256"
+   ],
+   "ts": {
+    "_comment": "Prototype: bet on how a Polymarket market FINALLY resolves. Polymarket's (UMA's) final resolution is the oracle, even if it disagrees with reality. Real, already-resolved market used so the test fixtures are recorded truth.",
+    "bettype": {
+     "fetch": [
+      "GET https://gamma-api.polymarket.com/markets/<id>",
+      "GET https://clob.polymarket.com/markets/<conditionId>",
+      "POST https://polygon-bor-rpc.publicnode.com eth_call to 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045 payoutDenominator(bytes32)=0xdd34de67, payoutNumerators(bytes32,uint256)=0x0504c814"
+     ],
+     "outcome": "Yes",
+     "type": "polymarket_resolution"
+    },
+    "claim": "The Polymarket market with conditionId 0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e (slug pharos-fdv-above-800m-one-day-after-launch) finally resolves to the outcome 'Yes' on or before 2026-05-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "FINAL_SCORE_V1",
+     "TIE_V1",
+     "CONTESTED_PRIMARY_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The oracle is Polymarket's own final resolution, not the real-world truth: if Polymarket resolves 'Yes' in a way a reader thinks is wrong, the bet is still YES.",
+     "'Finally resolved' means ALL of: Gamma umaResolutionStatus is 'resolved', the market is closed, and the on-chain ConditionalTokens payoutDenominator is greater than zero. A proposed, disputed or still-trading market is not resolved and is never treated as NO.",
+     "The market is pinned by conditionId and by the SHA-256 of its description text (market_pin); a market with another conditionId is a different market, and if the description no longer matches the pin the bet is VOID because its resolution rules changed after signing.",
+     "The winning outcome is read from the on-chain payoutNumerators (index 0 = first listed outcome 'Yes'); Gamma outcomePrices and CLOB token winner flags must agree with it. A disagreement between these sources is a source conflict and resolves VOID, never YES by majority.",
+     "A 50-50 or equal split payout is a tie and resolves VOID (TIE_V1), never YES or NO.",
+     "Early resolution: YES may be declared as soon as the market is finally resolved; if the market is not finally resolved by the evidence cutoff the bet is VOID, not NO.",
+     "Fallback: Gamma and CLOB are interchangeable off-chain views; on-chain finality is mandatory and at least one of Gamma/CLOB must agree. If a source is blocked or rate-limited it is COULDNT_CHECK and the recovery ladder applies.",
+     "Burden of proof is on YES: if the winner cannot be shown, the element is not proven.",
+     "Post-resolution reversal: a later re-resolution by Polymarket after the evidence cutoff does not change the answer."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show that the pinned Polymarket market is finally resolved (UMA status resolved, closed, on-chain payout set) with the outcome 'Yes' as its sole winner?"
+     }
+    ],
+    "market_pin": {
+     "condition_id": "0x12",
+     "description_sha256": "ea4855581568f070b98367f7bf60fd6a71c25d4ad43720c06f18f828a7375348",
+     "outcomes": [
+      "Yes",
+      "No"
+     ],
+     "slug": "pharos-fdv-above-800m-one-day-after-launch"
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "Polygon CTF contract (payoutNumerators)": "primary",
+     "Polymarket CLOB API": "primary",
+     "Polymarket Gamma API": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_GAMMA",
+      "publisher": "Polymarket Gamma API"
+     },
+     {
+      "id": "S_CLOB",
+      "publisher": "Polymarket CLOB API"
+     },
+     {
+      "id": "S_CTF",
+      "publisher": "Polygon CTF contract (payoutNumerators)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-05-08T00:00:00Z",
+     "window_end": "2026-05-01T00:00:00Z",
+     "window_start": "2026-04-01T00:00:00Z"
+    },
+    "unresolved_at_cutoff": "VOID",
+    "window_close": "2026-05-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "repo_without_repo_pin",
+   "problems": [
+    "repo_pin required for a repo-based term sheet: numeric repo_id (a name can be renamed/transferred to a hijacker); to fix: add repo_pin with the numeric repo_id"
+   ],
+   "ts": {
+    "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+    "bettype": {
+     "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+     ],
+     "tag_pattern": "v2\\.15\\.\\d+",
+     "type": "github_release"
+    },
+    "claim": "GitHub repository id 65600975 (pytorch/pytorch) publishes a non-draft, non-prerelease GitHub Release whose tag fully matches the pattern v2\\.15\\.\\d+ with published_at between 2026-10-20T00:00:00Z and 2026-11-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "PARTIAL_NONE_V1",
+     "CANCELLED_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+     "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+     "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+     "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+     "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+     "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+     "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+     "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "GitHub REST API (git refs)": "primary",
+     "GitHub REST API (releases)": "primary",
+     "GitHub keeper snapshot": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+     },
+     {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-08T00:00:00Z",
+     "window_end": "2026-11-01T00:00:00Z",
+     "window_start": "2026-10-20T00:00:00Z"
+    },
+    "window_close": "2026-11-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "repo_pin_string_id",
+   "problems": [
+    "repo_pin required for a repo-based term sheet: numeric repo_id (a name can be renamed/transferred to a hijacker); to fix: add repo_pin with the numeric repo_id"
+   ],
+   "ts": {
+    "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+    "bettype": {
+     "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+     ],
+     "tag_pattern": "v2\\.15\\.\\d+",
+     "type": "github_release"
+    },
+    "claim": "GitHub repository id 65600975 (pytorch/pytorch) publishes a non-draft, non-prerelease GitHub Release whose tag fully matches the pattern v2\\.15\\.\\d+ with published_at between 2026-10-20T00:00:00Z and 2026-11-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "PARTIAL_NONE_V1",
+     "CANCELLED_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+     "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+     "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+     "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+     "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+     "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+     "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+     "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+     }
+    ],
+    "repo_pin": {
+     "full_name_at_signing": "pytorch/pytorch",
+     "repo_id": "65600975"
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "GitHub REST API (git refs)": "primary",
+     "GitHub REST API (releases)": "primary",
+     "GitHub keeper snapshot": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+     },
+     {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-08T00:00:00Z",
+     "window_end": "2026-11-01T00:00:00Z",
+     "window_start": "2026-10-20T00:00:00Z"
+    },
+    "window_close": "2026-11-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "dollar_regex_anchor_not_price",
+   "problems": [],
+   "ts": {
+    "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+    "bettype": {
+     "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+     ],
+     "tag_pattern": "^v2\\.15\\.\\d+$",
+     "type": "github_release"
+    },
+    "claim": "A release whose tag matches the pattern v2\\.15\\.\\d+$ is published",
+    "clauses": [
+     "UTC_V1",
+     "PARTIAL_NONE_V1",
+     "CANCELLED_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+     "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+     "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+     "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+     "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+     "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+     "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+     "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+     }
+    ],
+    "repo_pin": {
+     "full_name_at_signing": "pytorch/pytorch",
+     "repo_id": 65600975
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "GitHub REST API (git refs)": "primary",
+     "GitHub REST API (releases)": "primary",
+     "GitHub keeper snapshot": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+     },
+     {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-08T00:00:00Z",
+     "window_end": "2026-11-01T00:00:00Z",
+     "window_start": "2026-10-20T00:00:00Z"
+    },
+    "window_close": "2026-11-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "dollar_amount_is_price",
+   "problems": [
+    "no wick-vs-close rule: claim references a price level but nothing says whether the candle HIGH (wick) or the CLOSE is what's checked; to fix: add a custom_definition saying whether the HIGH (wick) or the CLOSE counts",
+    "fork/ticker not pinned per venue (D-RESOLVE1): no ticker_pins entry for ['GitHub REST API (releases)', 'GitHub REST API (git refs)', 'GitHub keeper snapshot'] -- every named source must pin its canonical ticker before a price/candle term sheet can be written; to fix: add a ticker_pins entry for every named source"
+   ],
+   "ts": {
+    "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+    "bettype": {
+     "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+     ],
+     "tag_pattern": "v2\\.15\\.\\d+",
+     "type": "github_release"
+    },
+    "claim": "BTC price is $100 or more at close",
+    "clauses": [
+     "UTC_V1",
+     "PARTIAL_NONE_V1",
+     "CANCELLED_V1",
+     "RETRACTION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+     "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+     "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+     "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+     "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+     "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+     "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+     "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+     }
+    ],
+    "repo_pin": {
+     "full_name_at_signing": "pytorch/pytorch",
+     "repo_id": 65600975
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "GitHub REST API (git refs)": "primary",
+     "GitHub REST API (releases)": "primary",
+     "GitHub keeper snapshot": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+     },
+     {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+     },
+     {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-08T00:00:00Z",
+     "window_end": "2026-11-01T00:00:00Z",
+     "window_start": "2026-10-20T00:00:00Z"
+    },
+    "window_close": "2026-11-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "unresolved_at_cutoff_bad_value",
+   "problems": [
+    "unresolved_at_cutoff must be 'VOID' if set; to fix: change it to 'VOID' or remove it"
+   ],
+   "ts": {
+    "_comment": "Prototype: bet on how a Polymarket market FINALLY resolves. Polymarket's (UMA's) final resolution is the oracle, even if it disagrees with reality. Real, already-resolved market used so the test fixtures are recorded truth.",
+    "bettype": {
+     "fetch": [
+      "GET https://gamma-api.polymarket.com/markets/<id>",
+      "GET https://clob.polymarket.com/markets/<conditionId>",
+      "POST https://polygon-bor-rpc.publicnode.com eth_call to 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045 payoutDenominator(bytes32)=0xdd34de67, payoutNumerators(bytes32,uint256)=0x0504c814"
+     ],
+     "outcome": "Yes",
+     "type": "polymarket_resolution"
+    },
+    "claim": "The Polymarket market with conditionId 0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e (slug pharos-fdv-above-800m-one-day-after-launch) finally resolves to the outcome 'Yes' on or before 2026-05-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "FINAL_SCORE_V1",
+     "TIE_V1",
+     "CONTESTED_PRIMARY_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The oracle is Polymarket's own final resolution, not the real-world truth: if Polymarket resolves 'Yes' in a way a reader thinks is wrong, the bet is still YES.",
+     "'Finally resolved' means ALL of: Gamma umaResolutionStatus is 'resolved', the market is closed, and the on-chain ConditionalTokens payoutDenominator is greater than zero. A proposed, disputed or still-trading market is not resolved and is never treated as NO.",
+     "The market is pinned by conditionId and by the SHA-256 of its description text (market_pin); a market with another conditionId is a different market, and if the description no longer matches the pin the bet is VOID because its resolution rules changed after signing.",
+     "The winning outcome is read from the on-chain payoutNumerators (index 0 = first listed outcome 'Yes'); Gamma outcomePrices and CLOB token winner flags must agree with it. A disagreement between these sources is a source conflict and resolves VOID, never YES by majority.",
+     "A 50-50 or equal split payout is a tie and resolves VOID (TIE_V1), never YES or NO.",
+     "Early resolution: YES may be declared as soon as the market is finally resolved; if the market is not finally resolved by the evidence cutoff the bet is VOID, not NO.",
+     "Fallback: Gamma and CLOB are interchangeable off-chain views; on-chain finality is mandatory and at least one of Gamma/CLOB must agree. If a source is blocked or rate-limited it is COULDNT_CHECK and the recovery ladder applies.",
+     "Burden of proof is on YES: if the winner cannot be shown, the element is not proven.",
+     "Post-resolution reversal: a later re-resolution by Polymarket after the evidence cutoff does not change the answer."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show that the pinned Polymarket market is finally resolved (UMA status resolved, closed, on-chain payout set) with the outcome 'Yes' as its sole winner?"
+     }
+    ],
+    "market_pin": {
+     "condition_id": "0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e",
+     "description_sha256": "ea4855581568f070b98367f7bf60fd6a71c25d4ad43720c06f18f828a7375348",
+     "outcomes": [
+      "Yes",
+      "No"
+     ],
+     "slug": "pharos-fdv-above-800m-one-day-after-launch"
+    },
+    "rule": "ALL",
+    "source_classes": {
+     "Polygon CTF contract (payoutNumerators)": "primary",
+     "Polymarket CLOB API": "primary",
+     "Polymarket Gamma API": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S_GAMMA",
+      "publisher": "Polymarket Gamma API"
+     },
+     {
+      "id": "S_CLOB",
+      "publisher": "Polymarket CLOB API"
+     },
+     {
+      "id": "S_CTF",
+      "publisher": "Polygon CTF contract (payoutNumerators)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-05-08T00:00:00Z",
+     "window_end": "2026-05-01T00:00:00Z",
+     "window_start": "2026-04-01T00:00:00Z"
+    },
+    "unresolved_at_cutoff": "NO",
+    "window_close": "2026-05-15T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_app_store_rank.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): app store top chart rank (needs keeper snapshot at T)",
+    "bettype": {
+     "fetch": "GET https://rss.applemarketingtools.com/api/v2/us/apps/top-free/100/apps.json",
+     "type": "app_store_rank"
+    },
+    "claim": "App id 6462904878 is ranked in the top 10 of the US App Store Top Free iPhone chart at the keeper snapshot taken nearest 2026-12-01T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "NO_DATA_FALLBACK_V1",
+     "RETRACTION_V1"
+    ],
+    "custom_definitions": [
+     "The chart is live-only: no history endpoint exists, so only a keeper snapshot captured within 30 minutes of the instant can prove rank at that instant; a later fetch proves nothing.",
+     "Rank is the position in the chart's results array (1-based); region us; chart top-free; device iPhone.",
+     "Ranking can be gamed by short bursts of installs; v2 only.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show app id 6462904878 within the first 10 entries of the US Top Free apps chart in the snapshot taken within 30 minutes of 2026-12-01T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Apple Marketing Tools RSS (rss.applemarketingtools.com)": "primary",
+     "Apple iTunes Lookup API": "data"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "Apple Marketing Tools RSS (rss.applemarketingtools.com)"
+     },
+     {
+      "id": "S1",
+      "publisher": "Apple iTunes Lookup API"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-12-08T00:00:00Z",
+     "window_end": "2026-12-01T00:30:00Z",
+     "window_start": "2026-12-01T00:00:00Z"
+    },
+    "window_close": "2026-12-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_domain_change.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): domain / website change (RDAP, DNS-over-HTTPS, Wayback)",
+    "bettype": {
+     "fetch": "GET https://rdap.verisign.com/com/v1/domain/example.com",
+     "type": "domain_change"
+    },
+    "claim": "The registrar-of-record or nameservers for example.com in the Verisign RDAP record change between 2026-11-06T00:00:00Z and 2026-12-06T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "NO_DATA_FALLBACK_V1",
+     "RETRACTION_V1"
+    ],
+    "custom_definitions": [
+     "Compare two resolver snapshots (start at signing, end at deadline) field by field on the normalised, sorted nameserver list and registrar name; page content or TLS certificate changes do not count.",
+     "RDAP is authoritative for .com; DNS-over-HTTPS answers are corroboration only.",
+     "Round-trip changes (A to B to A) inside the window are invisible to two snapshots and are NOT detected: v2 until the keeper snapshots hourly.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show the Verisign RDAP nameserver set or registrar for example.com in the end snapshot differing from the start snapshot taken at the signing time?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Cloudflare DNS-over-HTTPS (cloudflare-dns.com)": "data",
+     "Verisign RDAP (rdap.verisign.com)": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "Verisign RDAP (rdap.verisign.com)"
+     },
+     {
+      "id": "S1",
+      "publisher": "Cloudflare DNS-over-HTTPS (cloudflare-dns.com)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-12-13T00:00:00Z",
+     "window_end": "2026-12-06T00:00:00Z",
+     "window_start": "2026-11-06T00:00:00Z"
+    },
+    "window_close": "2026-12-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_earnings.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): earnings figure from an SEC filing (EDGAR XBRL)",
+    "bettype": {
+     "fetch": "GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+     "type": "earnings"
+    },
+    "claim": "Apple Inc. (CIK 0000320193) reports fiscal-year 2026 total net sales of at least 450 billion USD in its Form 10-K filed on or before 2026-11-30T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "BEFORE_INCLUSIVE_V1",
+     "NUMERIC_EXACT_V1",
+     "REVISION_WINDOW_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The figure is the XBRL fact in the 10-K itself (form=10-K, fp=FY, fy=2026), filed date from EDGAR; press-release or analyst figures are never used.",
+     "A later 10-K/A amendment counts only if filed within 24 hours of the original (REVISION_WINDOW_V1).",
+     "SEC fair-access policy requires a descriptive User-Agent; the resolver must send one or it will be blocked (COULDNT_CHECK).",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show an Apple Inc. Form 10-K for fiscal year 2026, filed on or before 2026-11-30T00:00:00Z, with RevenueFromContractWithCustomerExcludingAssessedTax of at least 450000000000 USD?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Apple Investor Relations 10-K page": "primary",
+     "SEC EDGAR data.sec.gov": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "SEC EDGAR data.sec.gov"
+     },
+     {
+      "id": "S1",
+      "publisher": "Apple Investor Relations 10-K page"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-12-07T00:00:00Z",
+     "window_end": "2026-11-30T00:00:00Z",
+     "window_start": "2026-10-01T00:00:00Z"
+    },
+    "window_close": "2026-12-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_election_result.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): election result (certified state result) -- v2, no keyless wire API",
+    "bettype": {
+     "fetch": "per-state URL, pinned at creation",
+     "type": "election_result"
+    },
+    "claim": "Candidate A is certified the winner of the 2026 US Senate election in State S by the state's chief election official on or before 2026-12-31T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "BEFORE_INCLUSIVE_V1",
+     "CORRECTED_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "Only the certified result from the state's chief election official counts; media calls and projections do not (unless MEDIA_CONSENSUS_CALL_V1 is adopted, which this sheet does not).",
+     "Recounts and contests: the result certified at the evidence cutoff controls; a pending contest at the cutoff makes the element insufficient (VOID after the cap), never NO.",
+     "The AP Elections API needs a paid key and state pages differ per state; each state needs its own pinned URL pattern checked at creation (D-FETCH1).",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show the State S chief election official's certified results listing Candidate A as the winner of the 2026 US Senate race, certified on or before 2026-12-31T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "FEC official results page": "primary",
+     "State S Secretary of State results page": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "State S Secretary of State results page"
+     },
+     {
+      "id": "S1",
+      "publisher": "FEC official results page"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2027-01-15T00:00:00Z",
+     "window_end": "2026-12-31T00:00:00Z",
+     "window_start": "2026-11-03T00:00:00Z"
+    },
+    "window_close": "2027-01-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_news_headline.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): news headline (RSS + keeper snapshot) -- v2",
+    "bettype": {
+     "fetch": "GET https://feeds.bbci.co.uk/news/rss.xml",
+     "type": "news_headline"
+    },
+    "claim": "The BBC News front-page RSS feed lists an item whose title contains the phrase 'interest rates' at a keeper snapshot taken between 2026-11-10T00:00:00Z and 2026-11-12T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "FIRST_REPORT_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "RSS holds only the latest ~30 items, so only keeper snapshots inside the window can prove a headline; a later fetch proves nothing and is never NO.",
+     "Headlines are rewritten after publication; the title in a snapshot is what counts and later edits are ignored (FIRST_REPORT_V1).",
+     "Only the named outlet counts; aggregator echoes do not.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a BBC News RSS item whose title contains 'interest rates', captured by a keeper snapshot between 2026-11-10T00:00:00Z and 2026-11-12T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "BBC News RSS (feeds.bbci.co.uk)": "primary",
+     "NPR News RSS (feeds.npr.org)": "wire"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "BBC News RSS (feeds.bbci.co.uk)"
+     },
+     {
+      "id": "S1",
+      "publisher": "NPR News RSS (feeds.npr.org)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2026-11-19T00:00:00Z",
+     "window_end": "2026-11-12T00:00:00Z",
+     "window_start": "2026-11-10T00:00:00Z"
+    },
+    "window_close": "2026-11-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_onchain.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): on-chain balance or event (NEAR RPC + independent RPC)",
+    "bettype": {
+     "fetch": "POST https://rpc.mainnet.near.org {method: query, request_type: view_account, block_id: <height>}",
+     "type": "onchain"
+    },
+    "claim": "The NEAR mainnet account example.near holds at least 100 NEAR (view_account amount >= 100 * 10^24 yoctoNEAR) at finalized block height 230000000 or later, on or before 2026-12-31T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "NO_DATA_FALLBACK_V1",
+     "RETRACTION_V1"
+    ],
+    "custom_definitions": [
+     "Finality: only finality=final query results count; optimistic or non-final blocks never do.",
+     "Balance means the account's liquid amount field, excluding locked/staked balance, at the quoted block, pinned by block hash in the exhibit.",
+     "Two independent RPC providers must return the same block hash and amount at that height; a disagreement is a source conflict (VOID), not a majority.",
+     "Reorgs: NEAR has single-slot finality; for Ethereum-family chains require 64 blocks of depth.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a finalized view_account result for example.near with amount at least 100000000000000000000000000 yoctoNEAR at a block height of 230000000 or higher and block time on or before 2026-12-31T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "NEAR RPC independent provider (fastnear)": "primary",
+     "NEAR RPC rpc.mainnet.near.org": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "NEAR RPC rpc.mainnet.near.org"
+     },
+     {
+      "id": "S1",
+      "publisher": "NEAR RPC independent provider (fastnear)"
+     }
+    ],
+    "time": {
+     "evidence_cutoff": "2027-01-07T00:00:00Z",
+     "window_end": "2026-12-31T00:00:00Z",
+     "window_start": "2026-11-06T00:00:00Z"
+    },
+    "window_close": "2027-01-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_sports_result.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): sports result (ESPN scoreboard + league site)",
+    "bettype": {
+     "fetch": "GET https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=YYYYMMDD",
+     "type": "sports_result"
+    },
+    "claim": "The Buffalo Bills win their NFL game against the Baltimore Ravens scheduled 2026-11-01T18:00:00Z, final score including overtime.",
+    "clauses": [
+     "UTC_V1",
+     "FINAL_SCORE_V1",
+     "POSTPONED_V1",
+     "ABANDONED_EVENT_V1",
+     "TIE_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "FINAL_SCORE_V1 applies; the winner is the competitor with winner=true on a STATUS_FINAL event.",
+     "Postponed, suspended or cancelled games are not final: the element stays insufficient and the bet follows POSTPONED_V1/ABANDONED_EVENT_V1 caps, never NO.",
+     "The event is pinned by the ESPN event id and the scheduled kickoff; a rescheduled game keeps its id.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show the Bills' game against the Ravens (event id 401873026) with status STATUS_FINAL and the Bills' final score higher than the Ravens' final score?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "ESPN public scoreboard API": "data",
+     "NFL.com official game page": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "ESPN public scoreboard API"
+     },
+     {
+      "id": "S1",
+      "publisher": "NFL.com official game page"
+     }
+    ],
+    "superseded_by": {
+     "decision": "D-TPL1",
+     "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)",
+     "template": {
+      "id": "game_winner",
+      "version": 1
+     }
+    },
+    "time": {
+     "evidence_cutoff": "2026-11-15T00:00:00Z",
+     "window_end": "2026-11-08T00:00:00Z",
+     "window_start": "2026-11-01T00:00:00Z"
+    },
+    "window_close": "2026-11-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_token_price.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): token price touch (CEX candles, mirrors the Jason sheet)",
+    "claim": "NEAR-USD 1-minute candle high reaches or exceeds 5.00 USD on both Coinbase and Kraken in the same 5-minute window before 2026-12-31T00:00:00Z.",
+    "clauses": [
+     "UTC_V1",
+     "BEFORE_INCLUSIVE_V1",
+     "NUMERIC_EXACT_V1",
+     "ROUNDING_PRECISION_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "A wick: the candle HIGH counts, not the close.",
+     "Only USD pairs on the named venues count; aggregators (CoinGecko, CoinMarketCap) are never eligible; market cap and FDV are not resolvable in v1 (supply figures are aggregator-defined).",
+     "Thin-book risk: the same-5-minute-window two-venue rule closes single-venue manipulation; a one-venue print never fires.",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show a Coinbase NEAR-USD candle with high >= 5.00 and a Kraken NEARUSD candle with high >= 5.00 in the same 5-minute window before 2026-12-31T00:00:00Z?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "Bitstamp nearusd": "data",
+     "Coinbase NEAR-USD": "primary",
+     "Kraken NEARUSD": "primary"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "Coinbase NEAR-USD"
+     },
+     {
+      "id": "S1",
+      "publisher": "Kraken NEARUSD"
+     },
+     {
+      "id": "S2",
+      "publisher": "Bitstamp nearusd"
+     }
+    ],
+    "superseded_by": {
+     "also": [
+      "btc_close_at_t"
+     ],
+     "decision": "D-TPL1",
+     "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)",
+     "template": {
+      "id": "btc_touch",
+      "version": 1
+     }
+    },
+    "ticker_pins": {
+     "Bitstamp nearusd": "nearusd",
+     "Coinbase NEAR-USD": "NEAR-USD",
+     "Kraken NEARUSD": "NEARUSD"
+    },
+    "time": {
+     "evidence_cutoff": "2027-01-07T00:00:00Z",
+     "window_end": "2026-12-31T00:00:00Z",
+     "window_start": "2026-11-06T00:00:00Z"
+    },
+    "window_close": "2027-01-28T00:00:00Z"
+   }
+  },
+  {
+   "name": "template_weather.json",
+   "problems": [],
+   "ts": {
+    "_comment": "TEMPLATE (not a prototype): daily high temperature at a named station (NWS observations)",
+    "bettype": {
+     "fetch": "GET https://api.weather.gov/stations/KNYC/observations?start=...&end=...",
+     "type": "weather"
+    },
+    "claim": "The maximum observed temperature at NWS station KNYC on 2026-12-25 (UTC day) is at least 5 degrees Celsius.",
+    "clauses": [
+     "UTC_V1",
+     "CORRECTED_V1",
+     "NUMERIC_EXACT_V1",
+     "NO_DATA_FALLBACK_V1"
+    ],
+    "custom_definitions": [
+     "The UTC calendar day is used, never local midnight. Only observations with qualityControl 'V' (verified) count; 'Z'/'S' preliminary values do not.",
+     "Station is pinned by id; the observation list must cover the whole UTC day (first and last observation within 2 hours of the day bounds) or the element is not proven.",
+     "Source revision: NWS corrects observations for days; the figure at the evidence cutoff controls (CORRECTED_V1).",
+     "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+     "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+     "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+    ],
+    "elements": [
+     {
+      "id": "e1",
+      "q": "Do the exhibits show NWS station KNYC observations on 2026-12-25 UTC whose maximum temperature value is at least 5 degrees Celsius with quality control V?"
+     }
+    ],
+    "rule": "ALL",
+    "source_classes": {
+     "NWS api.weather.gov observations": "primary",
+     "Open-Meteo archive (ERA5)": "data"
+    },
+    "sources": true,
+    "sources_allowed": [
+     {
+      "id": "S0",
+      "publisher": "NWS api.weather.gov observations"
+     },
+     {
+      "id": "S1",
+      "publisher": "Open-Meteo archive (ERA5)"
+     }
+    ],
+    "superseded_by": {
+     "decision": "D-TPL1",
+     "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)",
+     "template": {
+      "id": "nws_daily_high",
+      "version": 1
+     }
+    },
+    "time": {
+     "evidence_cutoff": "2026-12-30T00:00:00Z",
+     "window_end": "2026-12-26T00:00:00Z",
+     "window_start": "2026-12-25T00:00:00Z"
+    },
+    "window_close": "2026-12-28T00:00:00Z"
+   }
+  }
+ ],
+ "recovery_cases": [
+  {
+   "first_unavailable_at": null,
+   "name": "void_at_cutoff",
+   "next_check": null,
+   "now": "2026-05-15T00:00:00Z",
+   "outcome": "VOID",
+   "unresolved_at_cutoff": "VOID",
+   "why": "unresolved at cutoff (unresolved_at_cutoff=VOID): no admissible data by 2026-05-15T00:00:00Z; VOID with full refunds",
+   "window_close": "2026-05-15T00:00:00Z"
+  },
+  {
+   "first_unavailable_at": "2026-05-15T00:00:00Z",
+   "name": "void_after_cutoff",
+   "next_check": null,
+   "now": "2026-05-16T03:00:00Z",
+   "outcome": "VOID",
+   "unresolved_at_cutoff": "VOID",
+   "why": "unresolved at cutoff (unresolved_at_cutoff=VOID): no admissible data by 2026-05-15T00:00:00Z; VOID with full refunds",
+   "window_close": "2026-05-15T00:00:00Z"
+  },
+  {
+   "first_unavailable_at": null,
+   "name": "retry_before_cutoff",
+   "next_check": "2026-05-15T00:00:00Z",
+   "now": "2026-05-14T00:00:00Z",
+   "outcome": "RETRY",
+   "unresolved_at_cutoff": "VOID",
+   "why": "resolver found no admissible data; retrying on the 24h-step recovery window before VOID (elapsed 0.0h of 168h cap)",
+   "window_close": "2026-05-15T00:00:00Z"
+  },
+  {
+   "first_unavailable_at": null,
+   "name": "ladder_without_setting_after_cutoff",
+   "next_check": "2026-05-16T00:00:00Z",
+   "now": "2026-05-15T00:00:00Z",
+   "outcome": "RETRY",
+   "unresolved_at_cutoff": null,
+   "why": "resolver found no admissible data; retrying on the 24h-step recovery window before VOID (elapsed 0.0h of 168h cap)",
+   "window_close": "2026-05-15T00:00:00Z"
+  }
+ ]
+}

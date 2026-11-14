@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-13T05:51:13+00:00",
+  "rpc": "https://test.rpc.fastnear.com",
+  "block_height": 277469625,
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "bet_id": 16,
+  "status": "Voided",
+  "outcome": "VOID",
+  "proposed_at": null,
+  "runs_used": 0,
+  "all_results": [],
+  "bonds": 0,
+  "challenged_by": null,
+  "judge_backend": null,
+  "resolution_notes": null
+}

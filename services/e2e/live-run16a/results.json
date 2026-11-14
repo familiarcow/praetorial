@@ -1,0 +1,577 @@
+{
+  "txs": [
+    {
+      "step": "wipe_deploy",
+      "hash": "Ct4kundD81Gv8WTNs9SEGRUq56euLeDz1dSvrMVitRQz",
+      "url": "https://testnet.nearblocks.io/txns/Ct4kundD81Gv8WTNs9SEGRUq56euLeDz1dSvrMVitRQz",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_call",
+      "hash": "2c3fYaGwPbPjkJUZNWzE5VSP9zzTRNrBnZLzFeab9zRi",
+      "url": "https://testnet.nearblocks.io/txns/2c3fYaGwPbPjkJUZNWzE5VSP9zzTRNrBnZLzFeab9zRi",
+      "removed": "20"
+    },
+    {
+      "step": "delete_escrow_account",
+      "hash": "XkVmhTh99GzRNYJpJz14mbKUWeYuH9uAhkgzdfvfVLM",
+      "url": "https://testnet.nearblocks.io/txns/XkVmhTh99GzRNYJpJz14mbKUWeYuH9uAhkgzdfvfVLM",
+      "beneficiary": "praetorial-dev-1101.testnet",
+      "status": "Success"
+    },
+    {
+      "step": "recreate_escrow_account",
+      "hash": "9vRYjFeb3fnoKG5pXHWXKo88dVpAJpSb4ktzL5MCAfLR",
+      "url": "https://testnet.nearblocks.io/txns/9vRYjFeb3fnoKG5pXHWXKo88dVpAJpSb4ktzL5MCAfLR",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "GfWAtcPZDySDvbHFFriWMaRrY4NVc7ikhVn4FrS7rNgL",
+      "url": "https://testnet.nearblocks.io/txns/GfWAtcPZDySDvbHFFriWMaRrY4NVc7ikhVn4FrS7rNgL",
+      "wasm_sha256": "97ab2577aa23768baf773e243ec2497e0cfb485561b9ed106d31598bc307c12f",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "FTMNoa4M66desrNnpYMT7sqCTpoYTRcrciabVHuphk6F",
+      "url": "https://testnet.nearblocks.io/txns/FTMNoa4M66desrNnpYMT7sqCTpoYTRcrciabVHuphk6F",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "DaYUCGwuzN6fjviqcJz9F4ccftNF1sZs3vh9mvZSjNn5",
+      "url": "https://testnet.nearblocks.io/txns/DaYUCGwuzN6fjviqcJz9F4ccftNF1sZs3vh9mvZSjNn5",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "16c_mutual_settle_maker",
+      "hash": "CZv3hfUxCqjp7TfUmMXZzmoxJDXHBDQExfsABgc7L7Yw",
+      "url": "https://testnet.nearblocks.io/txns/CZv3hfUxCqjp7TfUmMXZzmoxJDXHBDQExfsABgc7L7Yw",
+      "status": "Success"
+    },
+    {
+      "step": "16c_mutual_settle_taker",
+      "hash": "3SZ4x8Nrt1VBUA2fcs619AqvkUfsbGpkj7rgtMM1sHUH",
+      "url": "https://testnet.nearblocks.io/txns/3SZ4x8Nrt1VBUA2fcs619AqvkUfsbGpkj7rgtMM1sHUH",
+      "status": "Success"
+    }
+  ],
+  "balances": {
+    "dev_now": "941436046921922399999979",
+    "escrow_now": "6475583708066410399999991",
+    "dev_before_wipe": "941436046921922399999979",
+    "escrow_before_wipe": "6475583708066410399999991",
+    "dev_after_delete": "7415248460658585799999970",
+    "dev_before_create": "7415248460658585799999970",
+    "dev_after_create": "1408133471121085799999970",
+    "escrow_after_deploy": "6139543136112459200000000"
+  },
+  "pre_delete_snapshot": {
+    "ts": "2026-11-06T07:35:28.141Z",
+    "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+    "balance_yocto": "6475685927466410399999991",
+    "storage_usage": 522568,
+    "code_hash_b58": "85XxzsedHNGaBuKvtGBPeuRkEqWRUM1LedRgUBd2RHim",
+    "code_hash_hex": "692b24fdf5ef7585235764a024c5c667125905a8eb873d5af4efb840acc28006",
+    "views": {
+      "resolver_keys": [
+        "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+        "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05",
+        "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7"
+      ],
+      "outlayer_config": {
+        "error": "Contract method is not found"
+      },
+      "keeper_credit_balance": "0",
+      "open_offers": [],
+      "pending_payouts_view": [
+        {
+          "id": 1,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 2,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 3,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 4,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 5,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 6,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 7,
+          "bet_id": 1,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "16000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 8,
+          "bet_id": 2,
+          "token_id": "nep141:btc.mock.testnet",
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "amount": "4950",
+          "reason": "mutual_settle_maker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 9,
+          "bet_id": 2,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 10,
+          "bet_id": 2,
+          "token_id": "nep141:btc.mock.testnet",
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "amount": "4950",
+          "reason": "mutual_settle_taker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 11,
+          "bet_id": 2,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 12,
+          "bet_id": 2,
+          "token_id": "nep141:btc.mock.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "100",
+          "reason": "mutual_settle_fee",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 13,
+          "bet_id": 2,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 14,
+          "bet_id": 2,
+          "token_id": "nep141:btc.mock.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "8000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        },
+        {
+          "id": 15,
+          "bet_id": 2,
+          "token_id": "nep141:usdc.testnet",
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "amount": "8000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "attempts": 1,
+          "done": true,
+          "in_flight": false
+        }
+      ]
+    },
+    "bets": [
+      {
+        "id": 1,
+        "status": "Settled",
+        "outcome": "MUTUAL"
+      },
+      {
+        "id": 2,
+        "status": "Settled",
+        "outcome": "MUTUAL"
+      }
+    ],
+    "mt_balances": {
+      "nep141:usdc.testnet": "0",
+      "nep141:btc.mock.testnet": "0",
+      "nep141:usdt.testnet": "0",
+      "nep141:wrap.testnet": "0",
+      "nep141:eth.mock.testnet": "0"
+    },
+    "mt_balances_other": {},
+    "mt_tokens_for_owner": {
+      "error": "Contract method is not found"
+    },
+    "dev_balance_yocto": "941436046921922399999979",
+    "attest1_balance_yocto": "447622324449720500000000"
+  },
+  "precheck_result": "PASS: 0 open offers, 0 not-done pending payouts (15 done), bets 1,2 Settled, mt balance 0 on usdc/btc.mock/usdt/wrap/eth.mock",
+  "status": "BLOCKED-ON-PM",
+  "blocker": {
+    "step": "16a(3) delete account",
+    "error": "DeleteAccountWithLargeState (NEAR protocol refuses DeleteAccount when the account's contract state exceeds 10,000 bytes)",
+    "measured_state_bytes": 12356,
+    "state_keys": 20,
+    "limit_bytes": 10000,
+    "over_by_bytes": 2356,
+    "attempts": 2,
+    "failed_delete_tx_ids": [
+      "3PXEfgcHGGJ1yuxv3MkKuRXkBmWVDjxnwnDe7ojMPmZ2"
+    ],
+    "effect": "account NOT deleted; still holds old wasm 692b24fd..8006; only gas burned (~0.0256 NEAR per attempt)",
+    "why_no_workaround_inside_scope": "the escrow has no method that removes bets/payouts/asset-limit state; main's wasm cannot be re-init'd over existing state (new() is #[init]); clearing state needs new contract code or a throwaway wipe-wasm = a migration, which D-E2E1/item 16 forbids improvising",
+    "options": [
+      "A (recommended): deploy a throwaway 'wipe' wasm (a few lines: storage_clear/storage_remove over the 20 known keys behind a method only the account itself can call) to the account, call it, then delete + recreate as planned. Needs PM approval: new non-escrow code and a deploy over the item-8 account; testnet only, no escrow contract change.",
+      "B: drop the same-name requirement: create a NEW sub-account (praetorial-e2e-<ts>.praetorial-dev-1101.testnet) and deploy there, leaving the item-8 escrow as is. Budget problem: dev holds only ~0.94 tNEAR and the old escrow's 6.47 stays locked, so it needs a PM-granted top-up (faucet/top-up currently forbidden).",
+      "C: add a guardian-gated state-purge method to the escrow contract (TDD'd contract change). Not recommended: extra attack surface in a contract headed to mainnet, for a testnet convenience."
+    ]
+  },
+  "state_key_snapshot": {
+    "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+    "ts": "2026-11-06T09:01:02.540Z",
+    "block_height": 276466614,
+    "key_count": 20,
+    "total_value_bytes": 12146,
+    "keys": [
+      {
+        "key_b64": "QRMAAABuZXAxNDE6dXNkYy50ZXN0bmV0",
+        "key_utf8": "A????nep141:usdc.testnet",
+        "value_bytes": 80,
+        "value_sha256": "c62f831bde22b9d1b562d7bdc388a5376e1a5f08c5cb98544ce1eff5762ec689"
+      },
+      {
+        "key_b64": "QRcAAABuZXAxNDE6YnRjLm1vY2sudGVzdG5ldA==",
+        "key_utf8": "A????nep141:btc.mock.testnet",
+        "value_bytes": 80,
+        "value_sha256": "7c6f50fafe9cfbdb7213a46392180186cae2f79e8c45c2153affb9dd526fea3f"
+      },
+      {
+        "key_b64": "QgEAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 4700,
+        "value_sha256": "339acf4d53dbf6e0c16f19c3e5daca13b9e11df59fffeef0a5fd5cf076724a7e"
+      },
+      {
+        "key_b64": "QgIAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 4704,
+        "value_sha256": "c993291207f4363ef3aed3f7d1ca17159dcf7a40d23c8cdeb96a40261395295a"
+      },
+      {
+        "key_b64": "UAEAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "8de8333562bce5086dc0a3251e6ebfca6b2c5e17a32e2a2cd43375b6d2678c85"
+      },
+      {
+        "key_b64": "UAIAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "0a68fc20e4731d906fa1ac51e7fbe1ed282fc763918abfbc7001fa9594a00667"
+      },
+      {
+        "key_b64": "UAMAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "edf2dbc1b5097ca22b84df0bd88d7a4d5cf2512beebe417435d20e7754650308"
+      },
+      {
+        "key_b64": "UAQAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "e9a8c8de13ba9f5c84f86d5f8826c17f3902c5891280b89f4c76d8c5affeeffe"
+      },
+      {
+        "key_b64": "UAUAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "8292438a269d2da6138546952e3da6e0a8ff3afae67331dd86fc582ad3608bb1"
+      },
+      {
+        "key_b64": "UAYAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "2e02745144af51ebbf990c0e5c8b5356498c64d72e4cd46e9caaf8f7c66b8598"
+      },
+      {
+        "key_b64": "UAcAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 132,
+        "value_sha256": "67b5cf570aa5678a690d14ae82024e491d77aef4b4d94130ca34b75cfaf94d7e"
+      },
+      {
+        "key_b64": "UAgAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 126,
+        "value_sha256": "77a9387df80228e4697200d8e7f34af63d2a4ed16a5b9848d4ec48e6d7c5a0ac"
+      },
+      {
+        "key_b64": "UAkAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "b8fd435bbf676aa4fbf27920bbd6d4ea941dc7b84d5e7bab2418a9d44bda0081"
+      },
+      {
+        "key_b64": "UAoAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 126,
+        "value_sha256": "99edd2e59a3e55fa7f421d9914a8a5df55a17cffc2619cdd76d931f28d9743f2"
+      },
+      {
+        "key_b64": "UAsAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 122,
+        "value_sha256": "2f214967a8364ef182b58d100f4336007782cb3dca2239ce07c304f99b923df6"
+      },
+      {
+        "key_b64": "UAwAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 121,
+        "value_sha256": "25fb919f704d87d6fb405d6eb63c360d80f23094e45fed14d3201e4906a0f59d"
+      },
+      {
+        "key_b64": "UA0AAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 117,
+        "value_sha256": "a01de706ff3114c7631e6f256d4bd956db4a50f94d85a3ca0628e75d30bb2bbe"
+      },
+      {
+        "key_b64": "UA4AAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 136,
+        "value_sha256": "b3aca37c673910a50d98075500f576bc16ca2140009130adac7ac16a2dbc83b2"
+      },
+      {
+        "key_b64": "UA8AAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 132,
+        "value_sha256": "361c119eea3c214a0f926335db2aed20f70186a7fa04e1cfc55fc305aa4db446"
+      },
+      {
+        "key_b64": "U1RBVEU=",
+        "key_utf8": "STATE",
+        "value_bytes": 726,
+        "value_sha256": "dd763fa956a9f6de0aeaf41a4ff934faf568aec56fbc411f59bc725b10a5b44d"
+      }
+    ]
+  },
+  "wipe_view_state_keys_after": 0,
+  "recreated": {
+    "wasm_sha256": "97ab2577aa23768baf773e243ec2497e0cfb485561b9ed106d31598bc307c12f",
+    "wasm_bytes": 521257,
+    "outcome_pubkey": "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+    "attest_pubkey": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+    "resolver_wasm_hash": "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+      "attest_pubkey": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+      "resolver_wasm_hash": "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+        "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+        "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  },
+  "step16c_bet1_final": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "ea14703b576aa366ffb94ff462959d51365ba40f8d2226851dd1458b4ef7d6fe",
+      "models_snapshot_hash": "item16-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2026-11-04T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2028-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2028-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793956967294000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796548067294000000,
+      "consent_party_controlled": false
+    },
+    "status": "Settled",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793956069008164400,
+    "taken_at": 1793956072679517400,
+    "proposed_at": null,
+    "outcome": "MUTUAL",
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": "5000",
+      "taker_value": "5000"
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 1,
+    "last_resolution_raw": "{\"error\":\"outlayer_call_failed\"}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  }
+}

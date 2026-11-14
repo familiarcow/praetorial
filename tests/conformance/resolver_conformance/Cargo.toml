@@ -1,0 +1,19 @@
+[package]
+name = "resolver_conformance"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+# Spec-conformance test for resolver/core's decide(): design map L3
+# "ESCALATE as a 4th outcome? No. Resolver never signs ESCALATE;
+# returns unsigned 'no decision'". Depends on praetorial-core (path
+# dep) without editing resolver/core itself.
+#
+# Run: cargo test --manifest-path tests/conformance/resolver_conformance/Cargo.toml
+
+[dependencies]
+praetorial-core = { path = "../../../resolver/core" }
+serde_json = { version = "1", features = ["preserve_order"] }
+
+[workspace]

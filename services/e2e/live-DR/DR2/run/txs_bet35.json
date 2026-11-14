@@ -1,0 +1,101 @@
+{
+  "rows": [
+    {
+      "method": "request_resolution",
+      "hash": "p85bp4jhm4YmnpBRwCdB8JGm9UXm1Xwq8MRuFhzttG2",
+      "by": "keeper",
+      "signer": "keeper.praetorial-dev-1101.testnet",
+      "webDriven": false,
+      "tsNs": "1794347011979263700",
+      "logs": [
+        "request_resolution bet_id=35 request_id=4 payer=keeper.praetorial-dev-1101.testnet round=0 input_len=1838",
+        "EVENT_JSON:{\"standard\":\"near-outlayer\",\"version\":\"1.0.0\",\"event\":\"execution_requested\",\"data\":[{\"request_data\":\"{\\\"request_id\\\":17739,\\\"sender_id\\\":\\\"keeper.praetorial-dev-1101.testnet\\\",\\\"predecessor_id\\\":\\\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\\\",\\\"code_source\\\":{\\\"WasmUrl\\\":{\\\"url\\\":\\\"https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm\\\",\\\"hash\\\":\\\"8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473\\\",\\\"build_target\\\":\\\"wasm32-wasip2\\\"}},\\\"resource_limits\\\":{\\\"max_instructions\\\":500000000000,\\\"max_memory_mb\\\":128,\\\"max_execution_seconds\\\":150},\\\"input_data\\\":\\\"{\\\\\\\"contract\\\\\\\":\\\\\\\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\\\\\\\",\\\\\\\"bet_id\\\\\\\":35,\\\\\\\"envelope\\\\\\\":{\\\\\\\"bet_id\\\\\\\":35,\\\\\\\"version\\\\\\\":1,\\\\\\\"maker\\\\\\\":\\\\\\\"8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7\\\\\\\",\\\\\\\"taker_allow\\\\\\\":{\\\\\\\"InvitePubkey\\\\\\\":\\\\\\\"6f867ed8a76d71a5ecd5b16192d8126e58f118da2f655d4086a5d67ace8016a8\\\\\\\"},\\\\\\\"terms_hash\\\\\\\":\\\\\\\"e958ba07212ab83ad8c316f0105e7bd01744cac3a4e85f978c47d26480cdee67\\\\\\\",\\\\\\\"models_snapshot_hash\\\\\\\":\\\\\\\"551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2\\\\\\\",\\\\\\\"outcomes\\\\\\\":[\\\\\\\"YES\\\\\\\",\\\\\\\"NO\\\\\\\"],\\\\\\\"maker_side\\\\\\\":\\\\\\\"YES\\\\\\\",\\\\\\\"maker_asset\\\\\\\":\\\\\\\"nep141:wrap.testnet\\\\\\\",\\\\\\\"taker_asset\\\\\\\":\\\\\\\"nep141:wrap.testnet\\\\\\\",\\\\\\\"stake_maker\\\\\\\":\\\\\\\"3000000000000000000000000\\\\\\\",\\\\\\\"stake_taker\\\\\\\":\\\\\\\"3000000000000000000000000\\\\\\\",\\\\\\\"taker_options\\\\\\\":[],\\\\\\\"fee_bps\\\\\\\":100,\\\\\\\"storage_charge_per_side\\\\\\\":\\\\\\\"0\\\\\\\",\\\\\\\"keep_terms\\\\\\\":true,\\\\\\\"terms\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"fields\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"event_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"401909960\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"league\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"NBA\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"pick\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"New York Knicks\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"team_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"18\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"scheduled_date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-11-10\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"template\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"game_winner\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"version\\\\\\\\\\\\\\\":1}}\\\\\\\",\\\\\\\"max_paid_runs\\\\\\\":3,\\\\\\\"tier\\\\\\\":1,\\\\\\\"referee\\\\\\\":null,\\\\\\\"tip_maker\\\\\\\":false,\\\\\\\"funding_deadline\\\\\\\":1794346603000000000,\\\\\\\"early_settle_outcome\\\\\\\":null,\\\\\\\"finality_delay\\\\\\\":0,\\\\\\\"settlement_period\\\\\\\":3600000000000,\\\\\\\"resolve_deadline\\\\\\\":1794960000000000000,\\\\\\\"consent_party_controlled\\\\\\\":false},\\\\\\\"terms\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"fields\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"event_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"401909960\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"league\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"NBA\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"pick\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"New York Knicks\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"team_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"18\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"scheduled_date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-11-10\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"template\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"game_winner\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"version\\\\\\\\\\\\\\\":1}}\\\\\\\",\\\\\\\"round\\\\\\\":0,\\\\\\\"run_no\\\\\\\":1,\\\\\\\"payer_account_id\\\\\\\":\\\\\\\"keeper.praetorial-dev-1101.testnet\\\\\\\",\\\\\\\"judge_chain\\\\\\\":[{\\\\\\\"model_a\\\\\\\":\\\\\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"z-ai/glm-5.3-flash\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"Qwen/Qwen3.8-27B\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"moonshotai/kimi-k3\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"google/gemini-3.5-flash\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"openai/gpt-5.4-mini\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"x-ai/grok-4.7\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"anthropic/claude-haiku-5-5\\\\\\\"}],\\\\\\\"model_missing\\\\\\\":{},\\\\\\\"retired_models\\\\\\\":[]}\\\",\\\"input_data_in_state\\\":false,\\\"secrets_ref\\\":{\\\"profile\\\":\\\"praetorial-resolver\\\",\\\"account_id\\\":\\\"praetorial-dev-1101.testnet\\\"},\\\"response_format\\\":\\\"Json\\\",\\\"payment\\\":\\\"20062500000000000000000\\\",\\\"attached_usd\\\":\\\"0\\\",\\\"timestamp\\\":1794347013081078516,\\\"compile_only\\\":false,\\\"force_rebuild\\\":false,\\\"store_on_fastfs\\\":false,\\\"use_bound_identity\\\":false,\\\"project_uuid\\\":null,\\\"project_id\\\":null}\",\"data_id\":[147,206,245,25,181,151,65,67,54,188,60,255,159,223,230,164,162,12,111,142,171,210,147,214,46,31,251,254,91,90,179,180],\"timestamp\":1794347013081078516}]}",
+        "Retrieving large output from storage for request_id: 17739",
+        "[[yNEAR charged: \"1481006100000000000000\"]]",
+        "EVENT_JSON:{\"standard\":\"near-outlayer\",\"version\":\"1.0.0\",\"event\":\"execution_completed\",\"data\":[{\"sender_id\":\"keeper.praetorial-dev-1101.testnet\",\"code_source\":{\"WasmUrl\":{\"url\":\"https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm\",\"hash\":\"8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473\",\"build_target\":\"wasm32-wasip2\"}},\"resources_used\":{\"instructions\":61699275,\"time_ms\":4810,\"compile_time_ms\":null},\"success\":true,\"error_message\":null,\"payment_charged\":\"1481006100000000000000\",\"payment_refunded\":\"18581493900000000000000\",\"compilation_note\":\"Cached WASM from 2026-11-10T09:13:07.940066+00:00\",\"timestamp\":1794347022804708624}]}",
+        "Execution completed successfully. Output: Json(1423 bytes), Resources: { instructions: 61699275, time_ms: 4810 }, Cost: 1481006100000000000000 yoctoNEAR, Refund: 18581493900000000000000 yoctoNEAR, Cached WASM from 2026-11-10T09:13:07.940066+00:00"
+      ]
+    },
+    {
+      "method": "submit_outcome",
+      "hash": "97s9UP6Zt7XKk6pbNamswZ9Kte1z5yhXApSY81t6XbQj",
+      "by": "keeper",
+      "signer": "keeper.praetorial-dev-1101.testnet",
+      "webDriven": false,
+      "tsNs": "1794347432519334700",
+      "run_no": 1,
+      "outcome": "RETRY",
+      "logs": [
+        "submit_outcome RETRY bet_id=35 retry_count=1 next_check_ns=1794371400000000000",
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"outcome_retry\",\"data\":[{\"bet_id\":35,\"run_no\":1,\"judge_pair_index\":0,\"no_live_judge\":false,\"retry_count\":1,\"next_check_ns\":\"1794371400000000000\",\"model_not_found\":[]}]}"
+      ]
+    },
+    {
+      "method": "request_resolution",
+      "hash": "4jNnNcSnwmhFsNi3eHnWRrAWouXpC41tB9zaKQkfmCGp",
+      "by": "keeper",
+      "signer": "keeper.praetorial-dev-1101.testnet",
+      "webDriven": false,
+      "tsNs": "1794371552174435000",
+      "logs": [
+        "request_resolution bet_id=35 request_id=6 payer=keeper.praetorial-dev-1101.testnet round=0 input_len=1838",
+        "EVENT_JSON:{\"standard\":\"near-outlayer\",\"version\":\"1.0.0\",\"event\":\"execution_requested\",\"data\":[{\"request_data\":\"{\\\"request_id\\\":19593,\\\"sender_id\\\":\\\"keeper.praetorial-dev-1101.testnet\\\",\\\"predecessor_id\\\":\\\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\\\",\\\"code_source\\\":{\\\"WasmUrl\\\":{\\\"url\\\":\\\"https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm\\\",\\\"hash\\\":\\\"8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473\\\",\\\"build_target\\\":\\\"wasm32-wasip2\\\"}},\\\"resource_limits\\\":{\\\"max_instructions\\\":500000000000,\\\"max_memory_mb\\\":128,\\\"max_execution_seconds\\\":150},\\\"input_data\\\":\\\"{\\\\\\\"contract\\\\\\\":\\\\\\\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\\\\\\\",\\\\\\\"bet_id\\\\\\\":35,\\\\\\\"envelope\\\\\\\":{\\\\\\\"bet_id\\\\\\\":35,\\\\\\\"version\\\\\\\":1,\\\\\\\"maker\\\\\\\":\\\\\\\"8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7\\\\\\\",\\\\\\\"taker_allow\\\\\\\":{\\\\\\\"InvitePubkey\\\\\\\":\\\\\\\"6f867ed8a76d71a5ecd5b16192d8126e58f118da2f655d4086a5d67ace8016a8\\\\\\\"},\\\\\\\"terms_hash\\\\\\\":\\\\\\\"e958ba07212ab83ad8c316f0105e7bd01744cac3a4e85f978c47d26480cdee67\\\\\\\",\\\\\\\"models_snapshot_hash\\\\\\\":\\\\\\\"551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2\\\\\\\",\\\\\\\"outcomes\\\\\\\":[\\\\\\\"YES\\\\\\\",\\\\\\\"NO\\\\\\\"],\\\\\\\"maker_side\\\\\\\":\\\\\\\"YES\\\\\\\",\\\\\\\"maker_asset\\\\\\\":\\\\\\\"nep141:wrap.testnet\\\\\\\",\\\\\\\"taker_asset\\\\\\\":\\\\\\\"nep141:wrap.testnet\\\\\\\",\\\\\\\"stake_maker\\\\\\\":\\\\\\\"3000000000000000000000000\\\\\\\",\\\\\\\"stake_taker\\\\\\\":\\\\\\\"3000000000000000000000000\\\\\\\",\\\\\\\"taker_options\\\\\\\":[],\\\\\\\"fee_bps\\\\\\\":100,\\\\\\\"storage_charge_per_side\\\\\\\":\\\\\\\"0\\\\\\\",\\\\\\\"keep_terms\\\\\\\":true,\\\\\\\"terms\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"fields\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"event_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"401909960\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"league\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"NBA\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"pick\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"New York Knicks\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"team_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"18\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"scheduled_date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-11-10\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"template\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"game_winner\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"version\\\\\\\\\\\\\\\":1}}\\\\\\\",\\\\\\\"max_paid_runs\\\\\\\":3,\\\\\\\"tier\\\\\\\":1,\\\\\\\"referee\\\\\\\":null,\\\\\\\"tip_maker\\\\\\\":false,\\\\\\\"funding_deadline\\\\\\\":1794346603000000000,\\\\\\\"early_settle_outcome\\\\\\\":null,\\\\\\\"finality_delay\\\\\\\":0,\\\\\\\"settlement_period\\\\\\\":3600000000000,\\\\\\\"resolve_deadline\\\\\\\":1794960000000000000,\\\\\\\"consent_party_controlled\\\\\\\":false},\\\\\\\"terms\\\\\\\":\\\\\\\"{\\\\\\\\\\\\\\\"fields\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"event_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"401909960\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"league\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"NBA\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"pick\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"name\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"New York Knicks\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"team_id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"18\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"scheduled_date\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"2026-11-10\\\\\\\\\\\\\\\"},\\\\\\\\\\\\\\\"template\\\\\\\\\\\\\\\":{\\\\\\\\\\\\\\\"id\\\\\\\\\\\\\\\":\\\\\\\\\\\\\\\"game_winner\\\\\\\\\\\\\\\",\\\\\\\\\\\\\\\"version\\\\\\\\\\\\\\\":1}}\\\\\\\",\\\\\\\"round\\\\\\\":0,\\\\\\\"run_no\\\\\\\":2,\\\\\\\"payer_account_id\\\\\\\":\\\\\\\"keeper.praetorial-dev-1101.testnet\\\\\\\",\\\\\\\"judge_chain\\\\\\\":[{\\\\\\\"model_a\\\\\\\":\\\\\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"z-ai/glm-5.3-flash\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"Qwen/Qwen3.8-27B\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"moonshotai/kimi-k3\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"google/gemini-3.5-flash\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"openai/gpt-5.4-mini\\\\\\\"},{\\\\\\\"model_a\\\\\\\":\\\\\\\"x-ai/grok-4.7\\\\\\\",\\\\\\\"model_b\\\\\\\":\\\\\\\"anthropic/claude-haiku-5-5\\\\\\\"}],\\\\\\\"model_missing\\\\\\\":{},\\\\\\\"retired_models\\\\\\\":[]}\\\",\\\"input_data_in_state\\\":false,\\\"secrets_ref\\\":{\\\"profile\\\":\\\"praetorial-resolver\\\",\\\"account_id\\\":\\\"praetorial-dev-1101.testnet\\\"},\\\"response_format\\\":\\\"Json\\\",\\\"payment\\\":\\\"20062500000000000000000\\\",\\\"attached_usd\\\":\\\"0\\\",\\\"timestamp\\\":1794371553374067023,\\\"compile_only\\\":false,\\\"force_rebuild\\\":false,\\\"store_on_fastfs\\\":false,\\\"use_bound_identity\\\":false,\\\"project_uuid\\\":null,\\\"project_id\\\":null}\",\"data_id\":[96,21,105,139,15,196,146,248,28,48,205,29,65,203,64,40,244,79,105,111,5,130,167,127,126,185,59,232,84,126,158,5],\"timestamp\":1794371553374067023}]}",
+        "Retrieving large output from storage for request_id: 19593",
+        "[[yNEAR charged: \"1893906100000000000000\"]]",
+        "EVENT_JSON:{\"standard\":\"near-outlayer\",\"version\":\"1.0.0\",\"event\":\"execution_completed\",\"data\":[{\"sender_id\":\"keeper.praetorial-dev-1101.testnet\",\"code_source\":{\"WasmUrl\":{\"url\":\"https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm\",\"hash\":\"8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473\",\"build_target\":\"wasm32-wasip2\"}},\"resources_used\":{\"instructions\":61479766,\"time_ms\":8939,\"compile_time_ms\":null},\"success\":true,\"error_message\":null,\"payment_charged\":\"1893906100000000000000\",\"payment_refunded\":\"18168593900000000000000\",\"compilation_note\":\"Cached WASM from 2026-11-10T09:13:07.940066+00:00\",\"timestamp\":1794371567882142660}]}",
+        "Execution completed successfully. Output: Json(2608 bytes), Resources: { instructions: 61479766, time_ms: 8939 }, Cost: 1893906100000000000000 yoctoNEAR, Refund: 18168593900000000000000 yoctoNEAR, Cached WASM from 2026-11-10T09:13:07.940066+00:00"
+      ]
+    },
+    {
+      "method": "submit_outcome",
+      "hash": "HkPCczWjqpbtU9BJpqxEpABdCZj9tGPkmi2MUNyHRVCc",
+      "by": "keeper",
+      "signer": "keeper.praetorial-dev-1101.testnet",
+      "webDriven": false,
+      "tsNs": "1794372092169027300",
+      "run_no": 2,
+      "outcome": "YES",
+      "logs": [
+        "submit_outcome bet_id=35",
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"outcome_submitted\",\"data\":[{\"bet_id\":35,\"run_no\":2,\"judge_pair_index\":0,\"model_not_found\":[]}]}"
+      ]
+    },
+    {
+      "method": "finalize",
+      "hash": "Bc15i7y87gtSgVT4ZQZppfSf5jeGjuJhhCPrK4sbrjjq",
+      "by": "keeper",
+      "signer": "keeper.praetorial-dev-1101.testnet",
+      "webDriven": false,
+      "tsNs": "1794376112299763700",
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"bet_finalized\",\"data\":[{\"bet_id\":35}]}",
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"payout_done\",\"data\":[{\"bet_id\":35,\"payout_ids\":[62,63]}]}",
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"payout_done\",\"data\":[{\"bet_id\":35,\"payout_ids\":[64,65]}]}"
+      ]
+    }
+  ],
+  "runs": {
+    "runs": [
+      {
+        "run_no": 1,
+        "outcome": "RETRY",
+        "submit_tx": "97s9UP6Zt7XKk6pbNamswZ9Kte1z5yhXApSY81t6XbQj",
+        "by": "keeper",
+        "in_all_results": false,
+        "in_used_run_nos": true,
+        "log": "submit_outcome RETRY bet_id=35 retry_count=1 next_check_ns=1794371400000000000"
+      },
+      {
+        "run_no": 2,
+        "outcome": "YES",
+        "submit_tx": "HkPCczWjqpbtU9BJpqxEpABdCZj9tGPkmi2MUNyHRVCc",
+        "by": "keeper",
+        "in_all_results": true,
+        "in_used_run_nos": true,
+        "log": "submit_outcome bet_id=35"
+      }
+    ],
+    "auditFlag": false,
+    "judge_ran": false
+  }
+}

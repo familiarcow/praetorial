@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "1f223eca729488bbc925768b90c5a2caea273834",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.22.0-rust-1.97.1",
+  "image_digest": "sha256:7467038bdddc86484b73b416eeadce926ff59013e128e53dec5a19e1cb4b2234",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "hash_bs58": "EfCgMFheGBZpoFNrhDDozkGK43KL31W12dHUc2QWjQ7Q",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    }
+  ],
+  "notes": {
+    "item": "REDTEAM-DUST / D-RELREC2: record re-issued because the JC1r guard covers contracts/escrow/tests; wasm byte-identical to record-c40e5fa (caf134a4...), source diff vs c40e5fa is tests only; NOT a new deployment",
+    "size_bytes": 538601,
+    "toolchain": "cargo-near 0.22.0, rustc 1.97.1 inside the image == contracts/rust-toolchain.toml and the conformance crate pin (1.97.1); profile from contracts/Cargo.toml, --cfg near from contracts/.cargo/config.toml, ABI embedded",
+    "supersedes": "record-c40e5fa.json (same wasm hash caf134a4...; stale only vs contracts/escrow/tests/redteam_dust.rs); older records remain superseded",
+    "emulation": "colima rosetta/QEMU. Three build attempts died with the known linker SIGSEGV under emulation (discarded, re-run); the three recorded builds (docker run x2, docker create/cp fresh export) all succeeded and are identical. Colima VM DNS was pointed at 1.1.1.1 for the builds (host Tailscale resolver unreachable from VM); no effect on the artifact."
+  }
+}

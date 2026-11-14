@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "b67b3d7a43f00fa77e0105d40daf8e0d9c75176e",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3"
+    }
+  ],
+  "notes": {
+    "item": "SRCCHK3 (D-SRCCHK3): btc_touch open-time sourcecheck probes the last closed minute (resolver/core template.rs sourcecheck_probe_sources). Resolution unchanged (spec_hash/materialized sheet/granularity pinned in tests). NOT uploaded or deployed anywhere (RFRZ2 does).",
+    "emulation": "colima rosetta profile; build_reproducible.sh routes run, run, cp (fresh container)."
+  }
+}

@@ -1,0 +1,17 @@
+{"ts":"2026-11-02T05:47:30.502Z","service":"e2e","action":"resolver_keypair_generated","status":"ok","detail":"pubkey=409c73786f37b658e37f1bdddb22d0f69d27cfe6d719ed64e6328cc159630f7e"}
+{"ts":"2026-11-02T05:48:00.415Z","service":"e2e","action":"mint_test_usdc","status":"ok","detail":"maker=1032000 taker=1032000 token=nep141:usdc.testnet"}
+{"ts":"2026-11-02T05:48:13.221Z","service":"e2e","action":"open","status":"ok","detail":"maker=maker1.praetorial-dev-1101.testnet amount=1032000","tx_hash":"5RxGSKZRQpumJnhAPyHV7iLS55PpNdWWnuaL6ULJKqDf"}
+{"ts":"2026-11-02T05:48:16.389Z","service":"e2e","action":"discovered_bet_id","status":"ok","detail":"bet_id=1"}
+{"ts":"2026-11-02T05:48:29.421Z","service":"e2e","action":"take","status":"ok","detail":"taker=taker1.praetorial-dev-1101.testnet bet_id=1","tx_hash":"Gs9Jz6pqoQ6USuQTDDrQqunxV4rMHtnBhShpcivYioxa"}
+{"ts":"2026-11-02T05:48:32.568Z","service":"e2e","action":"post_take_status","status":"ok","detail":"status=Taken"}
+{"ts":"2026-11-02T05:50:40.033Z","service":"e2e","action":"resolver_keypair_generated","status":"ok","detail":"pubkey=b7c21c43b074ef0b2ce05199917fda6245ab3c230d472856f74b84d433e2a056"}
+{"ts":"2026-11-02T05:51:10.170Z","service":"e2e","action":"mint_test_usdc","status":"ok","detail":"maker=1032000 taker=1032000 token=nep141:usdc.testnet"}
+{"ts":"2026-11-02T05:51:22.777Z","service":"e2e","action":"open","status":"ok","detail":"maker=maker1.praetorial-dev-1101.testnet amount=1032000","tx_hash":"8d5q9APq6WqWmm6LPwVemBdDMqia9UspwN8wSjXbNRJ9"}
+{"ts":"2026-11-02T05:51:25.941Z","service":"e2e","action":"discovered_bet_id","status":"ok","detail":"bet_id=2"}
+{"ts":"2026-11-02T05:51:38.746Z","service":"e2e","action":"take","status":"ok","detail":"taker=taker1.praetorial-dev-1101.testnet bet_id=2","tx_hash":"4U1LANAwKLmWyUSXt6SgmHXNpNZqmbb8oM5WNnA7U9Gj"}
+{"ts":"2026-11-02T05:51:41.925Z","service":"e2e","action":"post_take_status","status":"ok","detail":"status=Taken"}
+{"ts":"2026-11-02T05:54:51.196Z","service":"keeper","action":"request_resolution","bet_id":1,"status":"ok","tx_hash":"6Y6ec13EFoFrVnk1xkEc9wGzCRcFvJH7DhqqhataqrTM"}
+{"ts":"2026-11-02T05:55:10.603Z","service":"keeper","action":"request_resolution","bet_id":2,"status":"ok","tx_hash":"27WK7zg7rbpLwrsRF4nVrPqdPQGcfdXHvBihMYUphK9T"}
+{"ts":"2026-11-02T05:55:28.845Z","service":"keeper-resolver-sim","action":"submit_outcome","bet_id":2,"status":"error","detail":"{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: bad signature\"}}}}"}
+{"ts":"2026-11-02T05:56:14.229Z","service":"keeper-resolver-sim","action":"submit_outcome","bet_id":2,"status":"ok","detail":"YES"}
+{"ts":"2026-11-02T05:57:29.342Z","service":"keeper","action":"finalize","bet_id":2,"status":"ok","tx_hash":"GYifjKUcPFYpJUNyikJjcnCRpZB6CrQMkoyTm6MoVCyP"}

@@ -1,0 +1,89 @@
+/* BRAND1 "Praetexta" (spikes/brand1/DIRECTION.md). Every rule is scoped to html[data-brand="praetorial"] (src/theme/brand.ts), so
+   VITE_BRAND=classic matches none of them and the app looks exactly as before. Colours come from the theme tokens
+   (src/theme/brandTokens.ts); this file only adds the type, the stripe, the seal and a few surface touches. */
+
+/* Newsreader 600, latin subset, self-hosted (SIL OFL, src/assets/fonts/Newsreader-OFL.txt). Fetched only when a rule below uses it. */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../assets/fonts/newsreader-latin-600-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root[data-brand="praetorial"] {
+  --brand-serif: "Newsreader", "Iowan Old Style", Charter, Georgia, serif;
+  --brand-stripe: 4px;
+}
+
+/* the praetexta stripe: one porphyry band along the top edge of every page */
+/* painted, not a border: the brand changes no geometry, so every screen lays out exactly as classic does */
+:root[data-brand="praetorial"] body { background: var(--color-background-page); }
+:root[data-brand="praetorial"] body::before { content: ""; position: fixed; z-index: 6; top: 0; left: 0; right: 0; height: var(--brand-stripe); background: var(--color-accent); pointer-events: none; }
+
+/* display type: headings, the wordmark, bet questions, rulings and payouts. Body, numbers and UI stay Inter. */
+:root[data-brand="praetorial"] :is(h1, h2, .k-header__q, .k-card__q, .k-ruling__outcome, .k-payout__headline, .k-details__title, .brand-word, .k-disc__title, .k-drow__title, .acct-head__name, .fund-h) {
+  font-family: var(--brand-serif); font-weight: 600; letter-spacing: -0.005em;
+}
+:root[data-brand="praetorial"] h1 { font-size: 2.1rem; }
+:root[data-brand="praetorial"] h2 { font-size: 1.55rem; }
+:root[data-brand="praetorial"] .k-card__q { font-size: 1.08rem; line-height: 1.3; }
+:root[data-brand="praetorial"] .k-card--compact .k-card__q { font-family: inherit; font-size: inherit; }
+
+/* nav: serif wordmark, porphyry active tab */
+:root[data-brand="praetorial"] .brand-word { font-size: 1.3rem; color: var(--color-text-primary); }
+:root[data-brand="praetorial"] .app-nav .nav-tab.active, :root[data-brand="praetorial"] .app-nav .nav-tab[aria-current="page"] { color: var(--color-text-accent); }
+
+/* Home: section titles carry a short porphyry rule; group labels are quiet small caps */
+:root[data-brand="praetorial"] .home h2::after, :root[data-brand="praetorial"] .about > h1::after, :root[data-brand="praetorial"] .docs-body > h1::after {
+  content: ""; display: block; width: 32px; height: 3px; margin-top: 6px; border-radius: 2px; background: var(--color-accent);
+}
+:root[data-brand="praetorial"] .h-group > h3, :root[data-brand="praetorial"] .bet-group h3, :root[data-brand="praetorial"] .acct-section__title, :root[data-brand="praetorial"] .fund-sub {
+  font-family: var(--font-family-body); font-size: 0.78rem; font-weight: 650; letter-spacing: 0.09em; color: var(--color-text-secondary);
+}
+:root[data-brand="praetorial"] .h-group--needs > h3 { color: var(--color-text-warning); }
+
+/* cards: white faces on the ivory ground, a whisper of shadow, a small lift on hover */
+:root[data-brand="praetorial"] :is(.k-card, .k-disc, .k-empty, .acct-rows, .acct-list, .fund-tokens, .about-card, .docs-card, .docs-flow__step, .login-card) {
+  background: var(--color-background-card); box-shadow: 0 1px 2px var(--color-shadow);
+}
+:root[data-brand="praetorial"] .k-card--click { transition: box-shadow 0.15s, transform 0.15s, border-color 0.15s; }
+:root[data-brand="praetorial"] .k-card--click:hover { border-color: var(--color-border-emphasized); box-shadow: 0 6px 18px var(--color-shadow); transform: translateY(-1px); }
+@media (prefers-reduced-motion: reduce) { :root[data-brand="praetorial"] .k-card--click:hover { transform: none; } }
+:root[data-brand="praetorial"] .h-group--needs .k-card { border-left: 3px solid var(--color-border-warning); }
+
+/* filter chips: porphyry when on */
+:root[data-brand="praetorial"] .h-chip { background: var(--color-background-card); }
+:root[data-brand="praetorial"] .h-chip[aria-pressed="true"] { background: var(--color-accent-muted); border-color: var(--color-accent); color: var(--color-text-accent); }
+
+/* bet page: the header card wears the stripe; the ruling and a paid payout carry the seal */
+:root[data-brand="praetorial"] .b1-head { box-shadow: inset 0 3px 0 var(--color-accent), 0 1px 2px var(--color-shadow); }
+:root[data-brand="praetorial"] :is([data-kit="RulingCard"], [data-kit="PayoutCard"][data-state="paid"]) { padding-right: calc(var(--spacing-4) + 44px); }
+:root[data-brand="praetorial"] :is([data-kit="RulingCard"], [data-kit="PayoutCard"][data-state="paid"])::after {
+  content: ""; position: absolute; top: var(--spacing-3); right: var(--spacing-3); width: 40px; height: 40px; pointer-events: none;
+  background: url("../assets/seal.svg") center / contain no-repeat;
+}
+:root[data-brand="praetorial"] .k-quote { border-left-color: var(--color-accent); }
+
+/* Create: the bet-type tiles get a porphyry icon */
+:root[data-brand="praetorial"] [data-testid^="bet-type-card-"] svg { color: var(--color-icon-accent); }
+
+/* Create: the step bar is inline-styled blue in src/modal/FlowModal.tsx; the brand wears porphyry */
+:root[data-brand="praetorial"] [data-testid="flow-progress"] { background: var(--color-background-muted) !important; }
+:root[data-brand="praetorial"] [data-testid="flow-progress"] > div { background: var(--color-accent) !important; }
+
+/* login: the hero of a logged-out visit */
+:root[data-brand="praetorial"] .login-card { box-shadow: inset 0 var(--brand-stripe) 0 var(--color-accent), 0 1px 2px var(--color-shadow); }
+:root[data-brand="praetorial"] .login-brand .brand-word { font-size: 1.55rem; }
+:root[data-brand="praetorial"] .login-card h1 { font-size: 1.6rem; }
+@media (max-width: 480px) { :root[data-brand="praetorial"] .login-card { box-shadow: none; background: transparent; } }
+
+/* docs + about: porphyry current page, numbered steps in porphyry */
+:root[data-brand="praetorial"] .docs-nav a[aria-current="page"] { color: var(--color-text-accent); border-color: var(--color-accent); background: var(--color-accent-muted); }
+:root[data-brand="praetorial"] :is(.docs-flow__n, .about-card__n, .k-vsec__n) { background: var(--color-accent-muted); color: var(--color-text-accent); }
+:root[data-brand="praetorial"] summary h2 { font-size: 1.1rem; }
+/* keep the kit's responsive sizes where a heading is also a kit title (the h1/h2 sizes above are for page titles) */
+:root[data-brand="praetorial"] .b1-head .k-header__q { font-size: var(--font-size-xl); }
+@media (min-width: 600px) { :root[data-brand="praetorial"] .b1-head .k-header__q { font-size: var(--font-size-2xl); } }
+:root[data-brand="praetorial"] .k-details__title { font-size: var(--font-size-xl); }

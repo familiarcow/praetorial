@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "55b34ef4d283516a7c81a063166490332781153e",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "cd976d8884ed931a04d64565c02032a32f1178b3fc7cede3979ec985113876c6",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "cd976d8884ed931a04d64565c02032a32f1178b3fc7cede3979ec985113876c6"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "cd976d8884ed931a04d64565c02032a32f1178b3fc7cede3979ec985113876c6"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "cd976d8884ed931a04d64565c02032a32f1178b3fc7cede3979ec985113876c6"
+    }
+  ],
+  "notes": {
+    "item": "J4 D-JUDGE5 (R2 judge settings: thinking ON, token-aware quote key, merged lane C prompt, 8192 budget); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; no linker flake retries needed"
+  }
+}

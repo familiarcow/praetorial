@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "58990adc00f5c804238972370c6bd2504ff91e50",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "015c1acc3495a6b861011f0298debd6b0fe502a7146e2fc5b4920e0876924bd8",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "015c1acc3495a6b861011f0298debd6b0fe502a7146e2fc5b4920e0876924bd8"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "015c1acc3495a6b861011f0298debd6b0fe502a7146e2fc5b4920e0876924bd8"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "015c1acc3495a6b861011f0298debd6b0fe502a7146e2fc5b4920e0876924bd8"
+    }
+  ],
+  "notes": {
+    "item": "RR1 release record after rt-inject c87d402 (resolver tree identical to c87d402); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (the first docker-run attempt hit a transient compiler crash (gcc internal error compiling displaydoc) under emulation and was re-run)"
+  }
+}

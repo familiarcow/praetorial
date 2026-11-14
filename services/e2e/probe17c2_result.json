@@ -1,0 +1,39 @@
+{
+ "group": "backup",
+ "mode": "probe-sources",
+ "near_ai_calls": 0,
+ "now_unix": 1794035372,
+ "planned": 2,
+ "signed": false,
+ "sources": [
+  {
+   "bytes": 9400,
+   "elapsed_ms": 679,
+   "error": null,
+   "http_status": 200,
+   "id": "binanceus-1m-now",
+   "kind": "BinanceUs",
+   "newest_ts": 1794035340,
+   "oldest_ts": 1794031800,
+   "records": 60,
+   "url": "https://api.binance.us/api/v3/klines?symbol=BTCUSD&interval=1m&limit=60"
+  },
+  {
+   "bytes": 3965,
+   "elapsed_ms": 673,
+   "error": null,
+   "http_status": 200,
+   "id": "binanceus-1h-now",
+   "kind": "BinanceUs",
+   "newest_ts": 1794034800,
+   "oldest_ts": 1793952000,
+   "records": 24,
+   "url": "https://api.binance.us/api/v3/klines?symbol=BTCUSD&interval=1h&limit=24"
+  }
+ ],
+ "total_elapsed_ms": 1352,
+ "truncated": false,
+ "tx_hash": "7QYABGUPeMu2yTnYRzcoHXPMdR12e6DG3FFuQHVy9wWH",
+ "probe_wasm_sha256": "ea72a347fc8af02107b65ac859863d53f4cb43b6d862a92335715a52ea491cb9",
+ "built_from_commit": "157f267 (features real-http,probe-sources)"
+}

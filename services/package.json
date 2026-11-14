@@ -1,0 +1,38 @@
+{
+  "name": "praetorial-services",
+  "version": "1.0.0",
+  "description": "Praetorial offchain services v0: keeper, indexer, notifier, relayer",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit",
+    "test:budget": "node scripts/run-budget.mjs",
+    "test": "node --import tsx --test 'common/test/**/*.test.ts' 'keeper/test/**/*.test.ts' 'indexer/test/**/*.test.ts' 'notifier/test/**/*.test.ts' 'relayer/test/**/*.test.ts' 'monitor/test/**/*.test.ts' 'treasury/test/**/*.test.ts' 'verifier/test/**/*.test.ts' 'release/test/**/*.test.ts' 'registry/test/**/*.test.ts' 'ops/test/**/*.test.ts' 'workers/**/test/**/*.test.ts' 'privy-e2e/test/**/*.test.ts' 'e2e/test/**/*.test.ts' 'e2e/live-DR/harness/test/**/*.test.ts' 'e2e/live-DR/DR5/test/**/*.test.ts' 'e2e/live-DR/DR6/test/**/*.test.ts' 'e2e/live-RFRZ2c/test/**/*.test.ts' 'e2e/live-DR/DR1/test/**/*.test.ts' 'e2e/live-DR/DR2/test/**/*.test.ts' 'e2e/live-DR/DR3/test/**/*.test.ts' 'e2e/live-DR/DR4/test/**/*.test.ts' 'e2e/live-DR/DR7/test/**/*.test.ts' 'e2e/live-DR/DR8/test/**/*.test.ts' 'e2e/live-DR/DR9/test/**/*.test.ts'",
+    "keeper": "node --import tsx keeper/src/runner.ts",
+    "indexer": "node --import tsx indexer/src/server.ts",
+    "notifier": "node --import tsx notifier/src/runner.ts",
+    "monitor:alerts": "node --import tsx monitor/src/runner.ts",
+    "relayer": "node --import tsx relayer/src/runner.ts",
+    "registry": "node --import tsx registry/src/server.ts",
+    "treasury": "node --import tsx treasury/src/runner.ts",
+    "ops:check": "node --import tsx ops/src/checkCli.ts",
+    "ops:test-alert": "node --import tsx ops/src/testAlertCli.ts",
+    "ops:gen-launchd": "node --import tsx ops/src/genLaunchdCli.ts",
+    "e2e": "node --import tsx e2e/run.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^26.6.6",
+    "bs58": "^6.0.0",
+    "js-sha256": "^1.0.0",
+    "near-api-js": "^5.1.1",
+    "tsx": "^4.23.15",
+    "tweetnacl": "^1.0.3",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "miniflare": "^4.20260730.0"
+  }
+}

@@ -1,0 +1,101 @@
+
+738 
+CDUS43 KDTX 060646
+CLIDTW
+
+CLIMATE REPORT 
+NATIONAL WEATHER SERVICE DETROIT/PONTIAC MI
+146 AM EST SAT DEC 06 2025
+
+...................................
+
+...THE DETROIT MI CLIMATE SUMMARY FOR DECEMBER 5 2025...
+
+CLIMATE NORMAL PERIOD 1991 TO 2020
+CLIMATE RECORD PERIOD 1874 TO 2025
+
+
+WEATHER ITEM   OBSERVED TIME   RECORD YEAR NORMAL DEPARTURE LAST      
+                VALUE   (LST)  VALUE       VALUE  FROM      YEAR     
+                                                  NORMAL           
+...................................................................
+TEMPERATURE (F)                                                          
+ YESTERDAY                                                           
+  MAXIMUM         27   1100 PM  67    2001  40    -13       31       
+  MINIMUM          5R   700 AM   6    1974  28    -23       19       
+  AVERAGE         16                        34    -18       25     
+
+PRECIPITATION (IN)                                                    
+  YESTERDAY        0.00          1.42 1906   0.08  -0.08     0.01     
+  MONTH TO DATE    T                         0.38  -0.38     0.04     
+  SINCE DEC 1      T                         0.38  -0.38     0.04     
+  SINCE JAN 1     27.69                     32.45  -4.76    29.23     
+
+SNOWFALL (IN)                                                              
+  YESTERDAY        0.0           6.4  1977   0.3   -0.3      0.1      
+  MONTH TO DATE    1.9                       1.1    0.8      0.6      
+  SINCE DEC 1      1.9                       1.1    0.8      0.6      
+  SINCE JUL 1      7.8                       3.0    4.8      2.4      
+  SNOW DEPTH       3                                                 
+
+DEGREE DAYS                                                           
+ HEATING                                                              
+  YESTERDAY       49                        31     18       40        
+  MONTH TO DATE  215                       151     64      185        
+  SINCE DEC 1    215                       151     64      185        
+  SINCE JUL 1   1282                      1345    -63     1029        
+
+ COOLING                                                              
+  YESTERDAY        0                         0      0        0        
+  MONTH TO DATE    0                         0      0        0        
+  SINCE DEC 1      0                         0      0        0        
+  SINCE JAN 1    955                       847    108      995        
+...................................................................
+
+
+WIND (MPH)                                                            
+  HIGHEST WIND SPEED    16   HIGHEST WIND DIRECTION    SW (230)       
+  HIGHEST GUST SPEED    MM   HIGHEST GUST DIRECTION    MM            
+  AVERAGE WIND SPEED     7.7                                        
+
+
+SKY COVER                                                             
+  POSSIBLE SUNSHINE  MM                                                 
+  AVERAGE SKY COVER 0.7                                                 
+
+
+WEATHER CONDITIONS                                                    
+THE FOLLOWING WEATHER WAS RECORDED YESTERDAY.                         
+  FOG                                                                 
+
+
+RELATIVE HUMIDITY (PERCENT)
+ HIGHEST    85          1000 AM                                      
+ LOWEST     62          1200 PM                                      
+ AVERAGE    74                                                        
+
+..........................................................
+
+
+THE DETROIT MI CLIMATE NORMALS FOR TODAY
+                         NORMAL    RECORD    YEAR                     
+ MAXIMUM TEMPERATURE (F)   40        69      1998                      
+ MINIMUM TEMPERATURE (F)   28         7      1885                      
+
+
+SUNRISE AND SUNSET                                                    
+DECEMBER  6 2025......SUNRISE   748 AM EST   SUNSET   501 PM EST     
+DECEMBER  7 2025......SUNRISE   749 AM EST   SUNSET   501 PM EST     
+
+
+-  INDICATES NEGATIVE NUMBERS.
+R  INDICATES RECORD WAS SET OR TIED.
+MM INDICATES DATA IS MISSING.
+T  INDICATES TRACE AMOUNT.
+
+
+
+
+$$
+
+

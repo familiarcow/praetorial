@@ -1,0 +1,7 @@
+# CF1f live evidence (registry Worker, testnet, D-REGW1 / D-CF1F1)
+
+- Worker `praetorial-registry-testnet`, version `a0d5c43f-dfb6-49ee-a19c-f9f5c4d0e0de`, https://praetorial-registry-testnet.familiarcow.workers.dev ; D1 `praetorial-registry-testnet` (3d8d896f-3368-4397-bec5-d0993567e3b5).
+- `live_proof.ts`: funds a fresh implicit testnet account (0.1 NEAR from the dev account, tx in results.json), claims ONE username with a real NEP-413 signature (the Worker verified the key is full-access on chain via the testnet RPC), then drives search / lookup / health traffic. No private key is printed or stored.
+- `tail_registry.json` = single-worker `wrangler tail praetorial-registry-testnet --format json` over that run (client IP header values redacted); `count_outcomes.mjs` -> `summary.txt`. PASS: 116 events (1 POST /claim, 30 search, 31 lookup/username, 29 lookup/account, 25 health), 0 exceededCpu, 0 non-ok, cpuTime p50 0 ms, max 6 ms.
+- `run1/`: first capture, 90 requests sent but wrangler tail delivered only 54 events (it drops events when requests are back-to-back; the Worker answered all 90 with the expected status). 0 exceededCpu, 0 non-ok on those 54; kept for honesty, not the gate evidence. The gate run paces requests ~0.7-1.5 s apart.
+- Re-run: start the tail in one shell, then `REGISTRY_URL=... node --import tsx e2e/live-CF1f/live_proof.ts` from `services/`, then `node e2e/live-CF1f/count_outcomes.mjs`.

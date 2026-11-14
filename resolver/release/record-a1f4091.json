@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "a1f4091c058cf7405f2ad6964a212815f79d587e",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "33240c23f166d1f146129d1a8ef2badb061688cbf8e8dfe2c527777f34a89b1b",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "33240c23f166d1f146129d1a8ef2badb061688cbf8e8dfe2c527777f34a89b1b"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "33240c23f166d1f146129d1a8ef2badb061688cbf8e8dfe2c527777f34a89b1b"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "33240c23f166d1f146129d1a8ef2badb061688cbf8e8dfe2c527777f34a89b1b"
+    }
+  ],
+  "notes": {
+    "item": "17d2c D-SNAP1 (snapshot wiring + caller text cannot replace allow-listed fetch); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; no linker flake retries needed"
+  }
+}

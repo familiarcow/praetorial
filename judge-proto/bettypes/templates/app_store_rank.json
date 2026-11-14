@@ -1,0 +1,49 @@
+{
+  "_comment": "TEMPLATE (not a prototype): app store top chart rank (needs keeper snapshot at T)",
+  "claim": "App id 6462904878 is ranked in the top 10 of the US App Store Top Free iPhone chart at the keeper snapshot taken nearest 2026-12-01T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show app id 6462904878 within the first 10 entries of the US Top Free apps chart in the snapshot taken within 30 minutes of 2026-12-01T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "NO_DATA_FALLBACK_V1",
+    "RETRACTION_V1"
+  ],
+  "custom_definitions": [
+    "The chart is live-only: no history endpoint exists, so only a keeper snapshot captured within 30 minutes of the instant can prove rank at that instant; a later fetch proves nothing.",
+    "Rank is the position in the chart's results array (1-based); region us; chart top-free; device iPhone.",
+    "Ranking can be gamed by short bursts of installs; v2 only.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-12-01T00:00:00Z",
+    "window_end": "2026-12-01T00:30:00Z",
+    "evidence_cutoff": "2026-12-08T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "Apple Marketing Tools RSS (rss.applemarketingtools.com)"
+    },
+    {
+      "id": "S1",
+      "publisher": "Apple iTunes Lookup API"
+    }
+  ],
+  "source_classes": {
+    "Apple Marketing Tools RSS (rss.applemarketingtools.com)": "primary",
+    "Apple iTunes Lookup API": "data"
+  },
+  "window_close": "2026-12-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "app_store_rank",
+    "fetch": "GET https://rss.applemarketingtools.com/api/v2/us/apps/top-free/100/apps.json"
+  }
+}

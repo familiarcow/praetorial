@@ -1,0 +1,344 @@
+[
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 13,
+  "ts": 1794199252817,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 13,
+  "ts": 1794199262943,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 10,
+  "ts": 1794199273128,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 18,
+  "ts": 1794199283256,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 14,
+  "ts": 1794199293390,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 19,
+  "wallMs": 830,
+  "ts": 1794199292548,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 12,
+  "ts": 1794199303632,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 9,
+  "ts": 1794199313758,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199323902,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199334057,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 12,
+  "ts": 1794199344181,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 22,
+  "wallMs": 1083,
+  "ts": 1794199352821,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 10,
+  "ts": 1794199354279,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 10,
+  "ts": 1794199364487,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199374604,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199384805,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199394933,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 10,
+  "ts": 1794199405050,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 15,
+  "ts": 1794199415215,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 10,
+  "wallMs": 2336,
+  "ts": 1794199412961,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 14,
+  "ts": 1794199425360,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 12,
+  "ts": 1794199435497,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199445685,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 11,
+  "ts": 1794199455820,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 10,
+  "ts": 1794199465960,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 25,
+  "wallMs": 1531,
+  "ts": 1794199472584,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199478041,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 13,
+  "ts": 1794199488168,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199498291,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 13,
+  "ts": 1794199508432,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 12,
+  "ts": 1794199518601,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 14,
+  "ts": 1794199528887,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 15,
+  "wallMs": 923,
+  "ts": 1794199532634,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "POST /tick/governance",
+  "outcome": "ok",
+  "cpuMs": 14,
+  "wallMs": 1385,
+  "ts": 1794199533554,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 11,
+  "ts": 1794199539048,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 12,
+  "ts": 1794199549168,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 10,
+  "ts": 1794199559277,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-indexer-testnet",
+  "trigger": "GET /health",
+  "outcome": "ok",
+  "cpuMs": 0,
+  "wallMs": 12,
+  "ts": 1794199569433,
+  "exceptions": 0
+ }
+]

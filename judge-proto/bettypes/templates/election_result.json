@@ -1,0 +1,50 @@
+{
+  "_comment": "TEMPLATE (not a prototype): election result (certified state result) -- v2, no keyless wire API",
+  "claim": "Candidate A is certified the winner of the 2026 US Senate election in State S by the state's chief election official on or before 2026-12-31T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show the State S chief election official's certified results listing Candidate A as the winner of the 2026 US Senate race, certified on or before 2026-12-31T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "BEFORE_INCLUSIVE_V1",
+    "CORRECTED_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "Only the certified result from the state's chief election official counts; media calls and projections do not (unless MEDIA_CONSENSUS_CALL_V1 is adopted, which this sheet does not).",
+    "Recounts and contests: the result certified at the evidence cutoff controls; a pending contest at the cutoff makes the element insufficient (VOID after the cap), never NO.",
+    "The AP Elections API needs a paid key and state pages differ per state; each state needs its own pinned URL pattern checked at creation (D-FETCH1).",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-03T00:00:00Z",
+    "window_end": "2026-12-31T00:00:00Z",
+    "evidence_cutoff": "2027-01-15T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "State S Secretary of State results page"
+    },
+    {
+      "id": "S1",
+      "publisher": "FEC official results page"
+    }
+  ],
+  "source_classes": {
+    "State S Secretary of State results page": "primary",
+    "FEC official results page": "primary"
+  },
+  "window_close": "2027-01-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "election_result",
+    "fetch": "per-state URL, pinned at creation"
+  }
+}

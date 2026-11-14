@@ -1,0 +1,258 @@
+{
+  "txs": [
+    {
+      "step": "wipe_deploy",
+      "hash": "JB2QE2uUYxuFy91LhQ4zZd4WrkFWroDQqxHp19FV4HVT",
+      "url": "https://testnet.nearblocks.io/txns/JB2QE2uUYxuFy91LhQ4zZd4WrkFWroDQqxHp19FV4HVT",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_call",
+      "hash": "DiKkrKxA4ekihMNLmrP4u1EoWzt89epvppYv5oE4GGFU",
+      "url": "https://testnet.nearblocks.io/txns/DiKkrKxA4ekihMNLmrP4u1EoWzt89epvppYv5oE4GGFU",
+      "removed": "19"
+    },
+    {
+      "step": "delete_account",
+      "hash": "53SCzFZCyRHZvdJzkcDgGJHmmPoN6rRB7ESmfa6gB6Th",
+      "url": "https://testnet.nearblocks.io/txns/53SCzFZCyRHZvdJzkcDgGJHmmPoN6rRB7ESmfa6gB6Th",
+      "beneficiary": "praetorial-dev-1101.testnet",
+      "status": "Success"
+    }
+  ],
+  "decision": "D-E2E1b",
+  "pre": {
+    "ts": "2026-11-07T10:03:16.653Z",
+    "account": "praetorial-r3c-11061912.praetorial-dev-1101.testnet",
+    "balance_yocto": "6133318613678240599999994",
+    "storage_usage": 537715,
+    "bets": [
+      {
+        "id": 1,
+        "status": "Settled",
+        "outcome": "VOID"
+      },
+      {
+        "id": 2,
+        "status": "Settled",
+        "outcome": "VOID"
+      }
+    ],
+    "open_offers": [],
+    "pending_payouts_view": [
+      {
+        "id": 1,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 2,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 3,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "void_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 4,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 5,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 6,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "void_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      }
+    ],
+    "keeper_credit_balance": "109875000000000000000000",
+    "mt": {
+      "nep141:usdc.testnet": "0",
+      "nep141:btc.mock.testnet": "0"
+    },
+    "dev_balance_yocto": "5834744660045221099999949"
+  },
+  "state_key_snapshot": {
+    "account": "praetorial-r3c-11061912.praetorial-dev-1101.testnet",
+    "ts": "2026-11-07T10:03:18.152Z",
+    "block_height": 276616097,
+    "key_count": 19,
+    "total_value_bytes": 12058,
+    "keys": [
+      {
+        "key_b64": "QRMAAABuZXAxNDE6dXNkYy50ZXN0bmV0",
+        "key_utf8": "A????nep141:usdc.testnet",
+        "value_bytes": 80,
+        "value_sha256": "c62f831bde22b9d1b562d7bdc388a5376e1a5f08c5cb98544ce1eff5762ec689"
+      },
+      {
+        "key_b64": "QRcAAABuZXAxNDE6YnRjLm1vY2sudGVzdG5ldA==",
+        "key_utf8": "A????nep141:btc.mock.testnet",
+        "value_bytes": 80,
+        "value_sha256": "7c6f50fafe9cfbdb7213a46392180186cae2f79e8c45c2153affb9dd526fea3f"
+      },
+      {
+        "key_b64": "QgEAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 4575,
+        "value_sha256": "65d2db7fb1b4607fa09ccb149a638388676778ad04958c8f0d9dfe873e65b443"
+      },
+      {
+        "key_b64": "QgIAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 5658,
+        "value_sha256": "e3899d440acf0d764140a22ed24901a9a17ba8c7dcf91e1ff1ac82fcfa4c53b7"
+      },
+      {
+        "key_b64": "UAEAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "6a33f0d20e5e97c929bc3990e2f942b82aa88a2487538fcbdc0047e2ab148fc2"
+      },
+      {
+        "key_b64": "UAIAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "315b031d028251ec2063d1236be9324e260587c1736eaba53d02fbc2a0f66ae1"
+      },
+      {
+        "key_b64": "UAMAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 123,
+        "value_sha256": "80e77da30df67e7b9763df6f88fd07a90b7e2e104942a7b2c52eccbb1dc2ea46"
+      },
+      {
+        "key_b64": "UAQAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "b749e10fa746257796900b742037641f6f3eaf8f8214543de91a45b6b257e3c1"
+      },
+      {
+        "key_b64": "UAUAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "3d94db0ce186e1dc520a7c08a895c123fdb3dfa5e6a9249546f55fef4c2eb491"
+      },
+      {
+        "key_b64": "UAYAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 123,
+        "value_sha256": "589f126d3c418900d600938218f7620c5131e80cf4ed455eba3182a6bae4ce07"
+      },
+      {
+        "key_b64": "UQEAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 28,
+        "value_sha256": "bfc6df2900e8590a474e7d4c16216f15471366020667e8900b3f0ef7a5e1c8fc"
+      },
+      {
+        "key_b64": "UQIAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 28,
+        "value_sha256": "a3e77d6b582ccaf3046209b1fcc244cf95cb8c4cc7d9ab797db73cc35042df3c"
+      },
+      {
+        "key_b64": "UgEAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      },
+      {
+        "key_b64": "UgIAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "d86e8112f3c4c4442126f8e9f44f16867da487f29052bf91b810457db34209a4"
+      },
+      {
+        "key_b64": "U1RBVEU=",
+        "key_utf8": "STATE",
+        "value_bytes": 737,
+        "value_sha256": "9573d79218c57119491cf20877098838a179e78d6ac58979c9ed8ad57a6afb27"
+      },
+      {
+        "key_b64": "WQEAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "a21ff071eb89bab4d94fb50f64b8232fd418d5eba54c4a8457efdc0d9e55f041"
+      },
+      {
+        "key_b64": "WQIAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "0ee3238d96e525cfc717d873768ee3dc4c5f1a54dd2824d04d9f83191b60e432"
+      },
+      {
+        "key_b64": "WgEAAAAAAAAA",
+        "key_utf8": "Z????????",
+        "value_bytes": 1,
+        "value_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      },
+      {
+        "key_b64": "WgIAAAAAAAAA",
+        "key_utf8": "Z????????",
+        "value_bytes": 1,
+        "value_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      }
+    ]
+  },
+  "balances": {
+    "dev_before": "5834744660045221099999949",
+    "escrow_before": "6133318613678240599999994",
+    "dev_after": "11966285039274030699999943"
+  },
+  "recheck": {
+    "ts": "2026-11-07T10:03:33.038Z",
+    "bets": [
+      "Settled",
+      "Settled"
+    ],
+    "pending_not_done": 0,
+    "open_offers": 0
+  },
+  "view_state_keys_after_wipe": 0,
+  "account_deleted": true,
+  "dev_delta_yocto": "6131540379228809599999994",
+  "escrow_before_minus_dev_delta_yocto": "1778234449431000000000"
+}

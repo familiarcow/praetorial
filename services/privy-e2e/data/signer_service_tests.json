@@ -1,0 +1,44 @@
+[
+  {
+    "name": "positive: allowlisted escrow.cancel call (nonexistent bet_id -- proves build/sign/broadcast/verify pipeline, contract-level outcome is irrelevant to the signer-safety claim)",
+    "expect": "allowed_onchain",
+    "actual": "allowed_onchain",
+    "txHash": "CnRfhwCLyCfviwVXJJeY9RET2zhsFFwnRApAsANQhDt7",
+    "pass": true
+  },
+  {
+    "name": "negative: receiver not on allowlist (funder account, arbitrary method)",
+    "expect": "rejected_before_privy",
+    "actual": "rejected_before_privy",
+    "error": "refusing to sign: receiver \"praetorial-dev-1101.testnet\" is not on the allowlist (allowed: escrow3.praetorial-dev-1101.testnet, intents-mock.praetorial-dev-1101.testnet)",
+    "pass": true
+  },
+  {
+    "name": "negative: allowlisted receiver, non-allowlisted method (escrow.finalize)",
+    "expect": "rejected_before_privy",
+    "actual": "rejected_before_privy",
+    "error": "refusing to sign: method \"finalize\" on \"escrow3.praetorial-dev-1101.testnet\" is not on the allowlist (allowed: take, cancel, request_resolution)",
+    "pass": true
+  },
+  {
+    "name": "negative: transfer_with_msg amount over cap",
+    "expect": "rejected_before_privy",
+    "actual": "rejected_before_privy",
+    "error": "refusing to sign: transfer_with_msg amount 5000001 exceeds cap 5000000",
+    "pass": true
+  },
+  {
+    "name": "negative: transfer_with_msg to a non-escrow receiver_id inside msg (fund drain attempt)",
+    "expect": "rejected_before_privy",
+    "actual": "rejected_before_privy",
+    "error": "refusing to sign: transfer_with_msg receiver_id \"praetorial-dev-1101.testnet\" is not the escrow contract \"escrow3.praetorial-dev-1101.testnet\"",
+    "pass": true
+  },
+  {
+    "name": "negative: ownership mismatch -- caller claims a different account than the user's own wallet",
+    "expect": "rejected_before_privy",
+    "actual": "rejected_before_privy",
+    "error": "sign_and_send: caller claims account 0000000000000000000000000000000000000000000000000000000000000000 but user did:privy:cmw1c0qd002dg0gi2bwe1da2y owns 3fe61da971ed8dc0b740d80485e3a9d3c1a673ac56ba3ff3fec6a4a928fde57f -- refusing",
+    "pass": true
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "8d8e3fecb753a8ba91a9de42b7b2a7cdef428f35",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "06062e7c3e22543bf9a49f7c7228d0f2ebe036e56162146a973f695e6c2a27a0",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "06062e7c3e22543bf9a49f7c7228d0f2ebe036e56162146a973f695e6c2a27a0"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "06062e7c3e22543bf9a49f7c7228d0f2ebe036e56162146a973f695e6c2a27a0"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "06062e7c3e22543bf9a49f7c7228d0f2ebe036e56162146a973f695e6c2a27a0"
+    }
+  ],
+  "notes": {
+    "item": "RR5 release record after L1b6 merge 8d8e3fe (bounded source fetch: per-request deadline + 45 s fetch budget, stage timing); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (docker-run-1, docker-run-2, fresh-container), no retries needed"
+  }
+}

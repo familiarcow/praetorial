@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "3b7d48bcdff99f8ea7964c8ca8ccaa85227f9f99",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "c580aa33aede1a43380bd0eb16d0116c989adcaa66120ec60a161f66d58f5a81",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "c580aa33aede1a43380bd0eb16d0116c989adcaa66120ec60a161f66d58f5a81"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "c580aa33aede1a43380bd0eb16d0116c989adcaa66120ec60a161f66d58f5a81"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "c580aa33aede1a43380bd0eb16d0116c989adcaa66120ec60a161f66d58f5a81"
+    }
+  ],
+  "notes": {
+    "item": "17d2d attempt 2 D-ORIGIN2 (wasm entry drops caller sources/exhibits via sanitize_entry_job); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; no linker flake retries needed"
+  }
+}

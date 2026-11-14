@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-drill9-2611102218.praetorial-dev-1101.testnet bet 1 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f; governance replay: guardian d9-guardian-2611102218.praetorial-dev-1101.testnet, 4 judge pair(s), 3 asset(s)
+FAIL E2  contract is_shutdown() is true
+PASS E3  resolver wasm (3404255 bytes) hashes to the pinned resolver_wasm_hash 8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473
+SKIP E4  offline: no live report-pubkey run supplied (run live without --offline; needs OutLayer homes logged in as the escrow and the attest signer, spends OutLayer credit); see docs/VERIFY.md
+PASS B1  sha256(terms) == envelope.terms_hash 4811edd68fe49d0d9635fca34106253fbdd57abd9260fd783b24657d1f72b1df
+PASS B2  attestation signature valid under pinned attest_pubkey; 27s old when the bet was opened (limit 3600s)
+SKIP B3  no submitted results in this evidence
+SKIP B4  judge record (last_resolution_raw) not available
+SKIP B5  outcome null: only YES/NO payout arithmetic is checked
+SKIP B6  proposed_at not available in this evidence
+# 4 PASS, 1 FAIL, 5 SKIP

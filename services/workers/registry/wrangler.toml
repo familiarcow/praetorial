@@ -1,0 +1,50 @@
+# CF1f registry Worker (D-REGW1, D-HOST3). NO secrets in this file: the registry holds no key or token at all (REGISTRY_ID is the public
+# NEP-413 recipient string clients sign for). Storage is Cloudflare D1 (praetorial-registry-testnet); apply the migration once:
+#   wrangler d1 migrations apply praetorial-registry-testnet --remote
+# NO cron trigger: the account allows 5 in total and the registry needs none.
+name = "praetorial-registry-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+# Deliberately no node compat flag: the bundle must run on bare workerd + WebCrypto.
+
+[[d1_databases]]
+binding = "REGISTRY_DB"
+database_name = "praetorial-registry-testnet"
+database_id = "3d8d896f-3368-4397-bec5-d0993567e3b5"
+migrations_dir = "migrations"
+
+# Non-secret configuration (testnet).
+[vars]
+NEAR_NETWORK_ID = "testnet"
+REGISTRY_ID = "registry.praetorial.testnet"
+# Browser origins allowed to call the registry (CORS). The web testnet origin is added when the web orchestrator points apps/web at this Worker.
+REGISTRY_CORS_ORIGINS = "https://praetorial-web-testnet.pages.dev,http://localhost:3000"
+# REGISTRY_RATE_CAPACITY = "20"          # per-IP token bucket (default 20)
+# REGISTRY_RATE_REFILL_PER_SEC = "0.5"   # default 0.5
+# NEAR_RPC_URL = "https://..."           # default: the public testnet RPC
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-registry-mainnet"
+# DOM1: public host registry.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "registry.praetorial.com", custom_domain = true }]
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[env.mainnet.d1_databases]]
+binding = "REGISTRY_DB"
+database_name = "praetorial-registry-mainnet"
+# MAINPREP1: created 2026-11-10 (`npx wrangler d1 create praetorial-registry-mainnet`), empty; migrations run by deploy-mainnet.sh.
+database_id = "0ce99891-f3bc-401e-b3db-26fb5a995115"
+migrations_dir = "migrations"
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+REGISTRY_ID = "registry.praetorial.near"
+REGISTRY_CORS_ORIGINS = "https://praetorial.com,https://www.praetorial.com,https://praetorial-web-mainnet.familiarcow.workers.dev"  # DOM1: TODO-REMOVE the workers.dev origin (last entry) once the praetorial.com cutover is confirmed

@@ -1,0 +1,601 @@
+[
+{
+"name": "pt4 REAL-text MINIMUM 5R line (KDTW 2025-12-05) does not disturb MAX 27 >= 27 -> YES",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KDTW",
+"date": "2025-12-05",
+"op": ">=",
+"x_f": 27
+}
+},
+"now": "2025-12-07T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/DTW",
+"file": "pt4/synth_nws_list_DTW_20251205_minrecord.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/00000000-0000-4000-8000-0000000d7e01",
+"file": "pt4/synth_nws_prod_DTW_20251205_minrecord.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KDTW&year=2025",
+"file": "pt4/iem_KDTW_2025_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "YES",
+"expect": {
+"outcome": "YES",
+"note_contains": "agree: 27 F"
+}
+},
+{
+"name": "pt4 REAL-text MINIMUM 5R line (KDTW 2025-12-05) MAX 27 >= 28 -> NO",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KDTW",
+"date": "2025-12-05",
+"op": ">=",
+"x_f": 28
+}
+},
+"now": "2025-12-07T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/DTW",
+"file": "pt4/synth_nws_list_DTW_20251205_minrecord.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/00000000-0000-4000-8000-0000000d7e01",
+"file": "pt4/synth_nws_prod_DTW_20251205_minrecord.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KDTW&year=2025",
+"file": "pt4/iem_KDTW_2025_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "NO",
+"expect": {
+"outcome": "NO",
+"note_contains": "agree: 27 F"
+}
+},
+{
+"name": "pt4 REAL-text MAXIMUM MM (KDCA 2026-02-05, IEM high M) -> VOID",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KDCA",
+"date": "2026-02-05",
+"op": ">=",
+"x_f": 40
+}
+},
+"now": "2026-02-07T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/DCA",
+"file": "pt4/synth_nws_list_DCA_20260205_mm.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/00000000-0000-4000-8000-0000000dca01",
+"file": "pt4/synth_nws_prod_DCA_20260205_mm.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KDCA&year=2026",
+"file": "pt4/iem_KDCA_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"expect": {
+"outcome": "VOID",
+"note_contains": "MM"
+}
+},
+{
+"name": "pt4 REAL KNYC 2026-11-01 DST fall-back day, max 59 >= 59 -> YES",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 59
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "YES",
+"expect": {
+"outcome": "YES",
+"note_contains": "agree: 59 F"
+}
+},
+{
+"name": "pt4 REAL KNYC 2026-11-01 DST day, max 59 >= 60 -> NO",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 60
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "NO",
+"expect": {
+"outcome": "NO",
+"note_contains": "agree: 59 F"
+}
+},
+{
+"name": "pt4 SYNTHETIC IEM 60 vs REAL NWS 59 (disagree by 1) -> VOID",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 60
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/synth_iem_KNYC_20261101_high60.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"expect": {
+"outcome": "VOID",
+"note_contains": "copies disagree"
+}
+},
+{
+"name": "pt4 SYNTHETIC IEM 60 vs REAL NWS 59, op <= 59 -> VOID",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": "<=",
+"x_f": 59
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/synth_iem_KNYC_20261101_high60.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"expect": {
+"outcome": "VOID",
+"note_contains": "copies disagree"
+}
+},
+{
+"name": "pt4 one copy (IEM down), day 3 of recovery -> RETRY",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 59
+}
+},
+"now": "2026-11-05T06:30:00Z",
+"fixtures": [
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"error": "connection refused (replayed outage)"
+},
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"first_unavailable": "2026-11-02T06:30:00Z",
+"expect": {
+"outcome": "RETRY",
+"note_contains": "need both copies"
+}
+},
+{
+"name": "pt4 one copy (IEM down), day 8 of recovery -> VOID",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 59
+}
+},
+"now": "2026-11-10T06:30:00Z",
+"fixtures": [
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"error": "connection refused (replayed outage)"
+},
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"first_unavailable": "2026-11-02T06:30:00Z",
+"expect": {
+"outcome": "VOID",
+"note_contains": "7-day recovery window"
+}
+},
+{
+"name": "pt4 REAL list no longer lists the >7-day-old KNYC 2026-10-28 product (IEM 61 only), day 3 -> RETRY",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-10-28",
+"op": ">=",
+"x_f": 61
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"first_unavailable": "2026-11-05T12:00:00Z",
+"expect": {
+"outcome": "RETRY",
+"note_contains": "NWS CLI Absent"
+}
+},
+{
+"name": "pt4 REAL list no longer lists the >7-day-old KNYC 2026-10-28 product (IEM 61 only), day 8+ -> VOID",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-10-28",
+"op": ">=",
+"x_f": 61
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"first_unavailable": "2026-10-30T06:00:00Z",
+"expect": {
+"outcome": "VOID",
+"note_contains": "7-day recovery window"
+}
+},
+{
+"name": "pt4 KMIA before the report is published (list+IEM lack 2026-11-07) -> RETRY, no decision",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KMIA",
+"date": "2026-11-07",
+"op": ">=",
+"x_f": 87
+}
+},
+"now": "2026-11-08T08:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/MIA",
+"file": "pt4/synth_nws_list_MIA_before_publish.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KMIA&year=2026",
+"file": "pt4/synth_iem_KMIA_2026_before_publish.json",
+"content_type": "application/json"
+}
+],
+"expect": {
+"outcome": "RETRY",
+"note_contains": "no CLI product issued after"
+}
+},
+{
+"name": "pt4 REAL KMIA after publication 2026-11-08T09:22Z: max 87 >= 87 -> YES",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KMIA",
+"date": "2026-11-07",
+"op": ">=",
+"x_f": 87
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/MIA",
+"file": "pt4/nws_list_MIA_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/3b693e9a-8109-46e1-9bb9-6bacdedb3db6",
+"file": "pt4/nws_prod_MIA_20261107.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KMIA&year=2026",
+"file": "pt4/iem_KMIA_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "YES",
+"expect": {
+"outcome": "YES",
+"note_contains": "agree: 87 F"
+}
+},
+{
+"name": "pt4 REAL KMIA after publication: max 87 >= 88 -> NO",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KMIA",
+"date": "2026-11-07",
+"op": ">=",
+"x_f": 88
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/MIA",
+"file": "pt4/nws_list_MIA_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/3b693e9a-8109-46e1-9bb9-6bacdedb3db6",
+"file": "pt4/nws_prod_MIA_20261107.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KMIA&year=2026",
+"file": "pt4/iem_KMIA_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "NO",
+"expect": {
+"outcome": "NO",
+"note_contains": "agree: 87 F"
+}
+},
+{
+"name": "pt4 SYNTHETIC mapping: hop 2 serves REAL KNYC 2026-11-02 product (max 66) for the 11-01 sheet -> Absent, RETRY, never 66 (truth NO)",
+"preset": "nws_daily_high",
+"sheet": {
+"template": {
+"id": "nws_daily_high",
+"version": 1
+},
+"fields": {
+"station": "KNYC",
+"date": "2026-11-01",
+"op": ">=",
+"x_f": 60
+}
+},
+"now": "2026-11-08T12:00:00Z",
+"fixtures": [
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261102_prelim.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+"file": "pt4/nws_list_NYC_20261108.json",
+"content_type": "application/json"
+},
+{
+"url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+"file": "pt4/nws_prod_NYC_20261101_dst.json",
+"content_type": "application/json"
+},
+{
+"url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+"file": "pt4/iem_KNYC_2026_trimmed.json",
+"content_type": "application/json"
+}
+],
+"truth": "NO",
+"expect": {
+"outcome": "RETRY",
+"note_contains": "Absent"
+}
+}
+]

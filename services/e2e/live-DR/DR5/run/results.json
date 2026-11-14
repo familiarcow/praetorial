@@ -1,0 +1,275 @@
+{
+  "txs": [
+    {
+      "step": "referee_rule (web referee screen, relayer)",
+      "hash": "ARPG1D9TTd1mkfHDJh3dEq8VCzQcJuzbY3KkTvu8QS9n",
+      "url": "https://testnet.nearblocks.io/txns/ARPG1D9TTd1mkfHDJh3dEq8VCzQcJuzbY3KkTvu8QS9n"
+    }
+  ],
+  "steps": [
+    {
+      "s": "taker: waiting view, no challenge button (before the ruling)",
+      "t": "2026-11-10T04:53:59.166Z"
+    },
+    {
+      "s": "referee ruled YES through the web referee screen",
+      "t": "2026-11-10T04:54:06.020Z",
+      "kind": "ruled",
+      "text": "Done. 8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7 has been paid. Your tip of 0.135869565217391304347826 NEAR is on its way."
+    }
+  ],
+  "resume": {
+    "phase": "rule",
+    "betId": 12,
+    "gas_before_resume_note": "first attempt FqawWQJpM67YzBKEutNStjQcqfRiB3bdMkk3NPCgsfyJ failed at 80 Tgas"
+  },
+  "betId": 12,
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "taker": "d974ff5c6680227af63cc35f3854147427fc2cb075dbf578d0501040320143dc",
+  "referee": "8979bbdbc1ffa52781abfaa760392fea84db8b23611bb1bba5542275533ef34c",
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "bet_taken": {
+    "envelope": {
+      "bet_id": 12,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "7c086f1f61fa3fae13cd992285988bf184b4e7d16a9f7cc66370b15a644a0628"
+      },
+      "terms_hash": "00b36f34f0a394f49720c2597f82ad9e3b86757e6a9af72d6f3ca9221faec5b1",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T04:22:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T04:13:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": {
+        "account": "8979bbdbc1ffa52781abfaa760392fea84db8b23611bb1bba5542275533ef34c",
+        "mode": "Human"
+      },
+      "tip_maker": true,
+      "funding_deadline": 1794284520000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 86400000000000,
+      "resolve_deadline": 1825820520000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "135869565217391304347826",
+    "tip_taker": "0",
+    "storage_maker": "17160000000000000000000",
+    "storage_taker": "17160000000000000000000",
+    "status": "Taken",
+    "taker": "d974ff5c6680227af63cc35f3854147427fc2cb075dbf578d0501040320143dc",
+    "created_at": 1794284056276268300,
+    "taken_at": 1794284076915029200,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "balances_before_ruling": {
+    "maker": "94683276553292934782608704",
+    "taker": "3182840000000000000000000",
+    "referee": "0",
+    "fee": "1546885652173913043478260",
+    "escrow": "18102940000000000000000000"
+  },
+  "escrow_baseline_other_bets": "12068620000000000000000000",
+  "referee_confirm_text": "You're ruling YES: 8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7 wins 5.592391304347826086956522 NEAR. This pays out immediately and can't be changed or challenged.",
+  "referee_result": {
+    "kind": "ruled",
+    "text": "Done. 8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7 has been paid. Your tip of 0.135869565217391304347826 NEAR is on its way."
+  },
+  "relay_responses": [
+    {
+      "status": 200,
+      "body": "{\"ok\":true,\"txHash\":\"ARPG1D9TTd1mkfHDJh3dEq8VCzQcJuzbY3KkTvu8QS9n\"}"
+    }
+  ],
+  "referee_rule_gas": "300000000000000",
+  "bet_final": {
+    "envelope": {
+      "bet_id": 12,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "7c086f1f61fa3fae13cd992285988bf184b4e7d16a9f7cc66370b15a644a0628"
+      },
+      "terms_hash": "00b36f34f0a394f49720c2597f82ad9e3b86757e6a9af72d6f3ca9221faec5b1",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T04:22:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T04:13:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": {
+        "account": "8979bbdbc1ffa52781abfaa760392fea84db8b23611bb1bba5542275533ef34c",
+        "mode": "Human"
+      },
+      "tip_maker": true,
+      "funding_deadline": 1794284520000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 86400000000000,
+      "resolve_deadline": 1825820520000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "135869565217391304347826",
+    "tip_taker": "0",
+    "storage_maker": "17160000000000000000000",
+    "storage_taker": "17160000000000000000000",
+    "status": "Settled",
+    "taker": "d974ff5c6680227af63cc35f3854147427fc2cb075dbf578d0501040320143dc",
+    "created_at": 1794284056276268300,
+    "taken_at": 1794284076915029200,
+    "proposed_at": 1794286443440780800,
+    "outcome": "YES",
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "balances_after": {
+    "maker": "100275667857640760869565226",
+    "taker": "3182840000000000000000000",
+    "referee": "135869565217391304347826",
+    "fee": "1852944782608695652173912",
+    "escrow": "12068620000000000000000000"
+  },
+  "money_check": {
+    "expected": [
+      {
+        "to": "maker",
+        "side": "maker",
+        "amount": "2728260869565217391304348",
+        "reason": "payout_winner"
+      },
+      {
+        "to": "maker",
+        "side": "taker",
+        "amount": "2864130434782608695652174",
+        "reason": "payout_winner"
+      },
+      {
+        "to": "fee",
+        "side": "maker",
+        "amount": "153029565217391304347826",
+        "reason": "fee_and_storage"
+      },
+      {
+        "to": "fee",
+        "side": "taker",
+        "amount": "153029565217391304347826",
+        "reason": "fee_and_storage"
+      },
+      {
+        "to": "referee",
+        "side": "maker",
+        "amount": "135869565217391304347826",
+        "reason": "referee_tip"
+      }
+    ],
+    "deltas": {
+      "maker": "5592391304347826086956522",
+      "taker": "0",
+      "referee": "135869565217391304347826",
+      "fee": "306059130434782608695652"
+    },
+    "mismatches": []
+  }
+}

@@ -1,0 +1,1 @@
+{"_note":"fixture: healthy run","output":{"outcome":"YES","run_diagnostics":[{"model":"deepseek-ai/DeepSeek-V4.1-Flash-1017","verify_result":"answer","http_status":200,"error":null}]}}

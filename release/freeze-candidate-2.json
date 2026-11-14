@@ -1,0 +1,23 @@
+{
+  "commit": "576b22932d5da5d7b4a981e8b00e2d496fd37698",
+  "escrow": {
+    "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+    "record": "contracts/escrow/release/record-c40e5fa.json",
+    "fresh_build_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+  },
+  "resolver": {
+    "hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "record": "resolver/release/record-f9c61ec.json"
+  },
+  "gen_new_args": {
+    "testnet_sha256": "9458784276678e09bf45c6bba5a7051e4d883a886dbe2415e72dc51816c32d3e",
+    "mainnet_sha256": "33d18f6f850651391f8b6d533eedc529ece3f89ee1c47b0f68e929007187b70e",
+    "mainnet_sha256_note": "KEYS2 (D-KEYS2, 2026-11-10): re-pinned after the mainnet account switch (was db419feb...; only fee_account -> praetorial.near and outlayer_config.secrets_account_id -> aikey.praetorial.near changed). Escrow wasm and resolver unchanged."
+  },
+  "test_summary": "NOKEY1b: frz3 escrow praetorial-frz3-2611100414 (same frozen escrow wasm caf134a4 / 6e33faa; code hash EfCgMFhe... == frz2); resolver 8791413f (record-f9c61ec); verify-escrow E1-E4 PASS live; key bound; check_key_bound OK. Full totals in the merge commit.",
+  "testnet_escrow": {
+    "account": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+    "deploy_tx": "HE9daBekRxBXcvTkSqWNSpPFjeXJPAeEDd7Zoncahxmj",
+    "verify_output_sha256": "b540c1792d1af9508fb7898a1be33531f5965f0e7e85d02d3b690a6ef37d1077"
+  }
+}

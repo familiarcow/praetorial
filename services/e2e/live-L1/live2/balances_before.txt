@@ -1,0 +1,5 @@
+praetorial-dev-1101 4.5326
+keeper 1.5408
+maker1 0.3557
+taker1 0.3078
+attest1 0.9587

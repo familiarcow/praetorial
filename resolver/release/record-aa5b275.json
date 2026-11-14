@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "aa5b27599df44d3168e17ed2459f32ba34be7970",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "349ee0204e33fadb82b912ef2a6420fb6140101f45629ab0a0b8df760c34ea6a",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "349ee0204e33fadb82b912ef2a6420fb6140101f45629ab0a0b8df760c34ea6a"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "349ee0204e33fadb82b912ef2a6420fb6140101f45629ab0a0b8df760c34ea6a"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "349ee0204e33fadb82b912ef2a6420fb6140101f45629ab0a0b8df760c34ea6a"
+    }
+  ],
+  "notes": {
+    "item": "RR4: resolver rebuilt after SP1 (MLB postponed/cancelled-final guard, 66d2b8f) and WX1 (NWS record flag R, 6a9f2a3); built from commit aa5b275; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; docker-run-1, docker-run-2 and fresh-container identical. Two earlier attempts of run-2/fresh-container failed with a cc/lld linker SIGSEGV under emulation (no hash produced) and were re-run unchanged."
+  }
+}

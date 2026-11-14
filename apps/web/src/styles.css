@@ -1,0 +1,335 @@
+@import "@astryxdesign/core/reset.css";
+@import "@astryxdesign/core/astryx.css";
+@import "@astryxdesign/theme-neutral/theme.css";
+
+/* ASTRYX1: light mode only. No prefers-color-scheme rules anywhere. */
+:root { color-scheme: light; }
+html, body { background: var(--color-background-page, #fff); color: var(--color-text, #111); font-family: var(--font-family-body, system-ui, sans-serif); }
+
+/* App shell + native controls styled from Astryx theme tokens (components that are not yet Astryx widgets). */
+#root { max-width: 880px; margin: 0 auto; padding: 0 20px 64px; }
+#root button { margin-top: 6px; margin-bottom: 6px; }
+nav button { margin: 0 !important; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 14px 0; margin-bottom: 20px; border-bottom: 1px solid var(--color-border); background: var(--color-background-page, #fff); }
+/* DFIX1: only the APP nav sticks (this used to be on every <nav>, so the Docs sidebar, a <nav> too, stuck at the top with the same
+   z-index and, later in the DOM, painted over the app nav and its logo). Its measured height is --app-nav-h (src/AppNavHeight.tsx),
+   which anything else that sticks to the top offsets by. The page-colour band spans the full width (box-shadow, clipped to the nav's
+   own height) so wider content (the 980 px Docs) never shows beside the 880 px nav while it scrolls under it. No geometry changes. */
+.app-nav { position: sticky; top: 0; z-index: 5; box-shadow: 0 0 0 100vmax var(--color-background-page, #fff); clip-path: inset(0 -100vmax); }
+nav > [data-testid="nav-home"] { font-weight: 700; margin-right: 8px; }
+h1 { font-size: 2rem; line-height: 1.2; font-weight: 700; margin: 24px 0 12px; }
+h2 { font-size: 1.35rem; font-weight: 650; margin: 24px 0 10px; }
+h3 { font-size: 1.1rem; font-weight: 600; margin: 16px 0 8px; }
+p, li { line-height: 1.55; color: var(--color-text-primary); }
+section { margin: 16px 0; }
+[data-testid="landing"] > p { color: var(--color-text-secondary); font-size: 1.1rem; max-width: 60ch; }
+[data-testid="landing"] > div { display: flex; gap: 10px; margin: 20px 0 32px; }
+[data-testid="how-it-works"] { background: var(--color-background-card, #fafafa); border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); padding: 8px 24px 16px; }
+label { display: block; margin: 12px 0 4px; font-weight: 500; }
+label > input[type="checkbox"], label > input[type="radio"] { margin-right: 8px; }
+/* NAV1: native controls only. :where() keeps this at zero specificity, so Astryx fields (TextInput, TextArea, ...), which draw their
+   own box on the wrapper, keep their inner control unboxed -- this rule used to draw a second box inside every Astryx text field. */
+:where(input:not([type="checkbox"]):not([type="radio"]), select, textarea) { display: block; width: 100%; max-width: 480px; box-sizing: border-box; margin-top: 4px; padding: 9px 12px; font: inherit; color: var(--color-text-primary); background: var(--color-background-surface, #fff); border: 1px solid var(--color-border-emphasized, var(--color-border)); border-radius: var(--radius-element, 8px); }
+:where(input, select, textarea):focus-visible { outline: 2px solid var(--color-accent); outline-offset: 1px; }
+.astryx-text-input input, .astryx-text-area textarea { border: 0; padding: 0; margin: 0; max-width: none; background: transparent; outline: none; box-shadow: none; }
+.astryx-text-input { padding-top: 8px; padding-bottom: 8px; }
+input:disabled, select:disabled, textarea:disabled { color: var(--color-text-disabled); background: var(--color-background-muted); }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--color-accent); }
+/* BET1b: the Stake section uses Astryx fields; the global input box above would draw a second box inside them. */
+[data-testid="stake-section"] input:not([type="checkbox"]):not([type="radio"]) { margin: 0; padding: 0; border: 0; background: transparent; max-width: none; }
+[data-testid="stake-section"] input:focus-visible { outline: none; }
+fieldset { border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); padding: 12px 16px; margin: 16px 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--color-border); }
+th { color: var(--color-text-secondary); font-weight: 600; }
+a { color: var(--color-text-accent); }
+code { background: var(--color-background-muted); padding: 1px 5px; border-radius: var(--radius-inner, 4px); }
+[role="alert"]:not([class]) { background: var(--color-error-muted); color: var(--color-on-error-muted); border-radius: var(--radius-element, 8px); padding: 10px 14px; margin: 12px 0; }
+[data-testid="status"] { font-size: 0.8rem; color: var(--color-text-secondary); }
+[data-testid="status"]:empty { display: none; }
+[data-testid="take-section"], [data-testid="dispute-section"], [data-testid="my-bets"] > div, [data-testid="browse-list"] > div { border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); padding: 12px 16px; margin: 12px 0; background: var(--color-background-card, #fff); }
+select { appearance: auto; }
+
+/* MODAL1b: a link inside a sentence must be told apart by more than colour (axe link-in-text-block). */
+p a, li a, dd a { text-decoration: underline; }
+
+/* LOGIN1 (UX-29): logged out, the whole app is this centred login page. Fits 375px without horizontal scroll. */
+.login-page { min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 24px 0; box-sizing: border-box; }
+.login-card { width: 100%; max-width: 400px; box-sizing: border-box; padding: 28px 24px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card, #fff); }
+.login-card h1 { font-size: 1.5rem; margin: 16px 0 12px; }
+.login-card form > button[type="submit"] { width: 100%; margin-top: 16px; }
+.login-brand { font-weight: 700; font-size: 1.25rem; }
+.login-card .k-notice { margin: 16px 0 0; }
+.login-line { color: var(--color-text-secondary); margin: 4px 0 0; }
+.login-secondary { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; margin-top: 8px; }
+@media (max-width: 480px) { .login-card { border: 0; padding: 8px 0; background: transparent; } }
+/* GUEST1: "Browse as guest" is the secondary way in, below the form; the guest banner is one slim line under the app nav. */
+.login-guest { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border); }
+.login-guest > button { width: 100%; }
+.guest-banner { margin: 0; padding: 6px 12px; font-size: 0.875rem; line-height: 1.4; text-align: center; color: var(--color-text-secondary); background: var(--color-background-muted, transparent); border-bottom: 1px solid var(--color-border); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* NAV1 (UX-31): Home / About / Wallet shell. Light, card-based, fits 375px without horizontal scroll. */
+.muted { color: var(--color-text-secondary); }
+.small { font-size: 0.85rem; }
+code.wrap { display: block; word-break: break-all; white-space: pre-wrap; padding: 8px 10px; margin: 8px 0; }
+.app-nav { gap: 4px 12px !important; }
+.app-nav .brand { font: inherit; font-weight: 750; font-size: 1.15rem; letter-spacing: -0.01em; background: none; border: 0; padding: 4px 8px 4px 0; cursor: pointer; color: var(--color-text-primary); }
+.app-nav .nav-tab { color: var(--color-text-secondary); }
+.app-nav .nav-tab.active, .app-nav .nav-tab[aria-current="page"] { color: var(--color-text-primary); font-weight: 650; box-shadow: inset 0 -2px 0 var(--color-accent); border-radius: 0; }
+@media (max-width: 560px) {
+  #root { padding: 0 14px 48px; }
+  .app-nav { display: grid !important; grid-template-columns: 1fr auto; padding: 10px 0 0 !important; }
+  .app-nav > div:first-child { display: contents; }
+  .app-nav > div:first-child > div:first-child { grid-column: 1; grid-row: 1; }
+  .app-nav > div:first-child > div:nth-child(2) { grid-column: 1 / -1; grid-row: 2; display: flex; justify-content: space-between; gap: 0; border-top: 1px solid var(--color-border); margin-top: 8px; }
+  .app-nav > div:first-child > div:nth-child(2) > * { flex: 1; }
+  .app-nav > div:last-child { grid-column: 2; grid-row: 1; }
+}
+.home > section { margin: 8px 0 36px; }
+.home h2, .wallet h2, .about h2 { margin-top: 8px; }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.section-head h2 { margin-bottom: 0; }
+.inline-filter { display: flex; align-items: center; gap: 8px; margin: 0; font-weight: 500; color: var(--color-text-secondary); }
+.inline-filter select { width: auto; margin: 0; padding: 5px 8px; }
+.bet-group h3 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); margin: 18px 0 4px; }
+.bet-group .count { font-weight: 500; }
+.bet-group ul { padding: 0; margin: 0; }
+[data-testid="my-bets"] .bet-group li { margin: 10px 0; }
+[data-testid="my-bets"] > div, [data-testid="browse-list"] > div { border: 0 !important; padding: 0 !important; margin: 0 !important; background: none !important; }
+.card-link { cursor: pointer; margin-bottom: 12px; border-radius: var(--radius-container, 12px); }
+.card-link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.card-title { font-weight: 600; }
+.state-line { margin-top: 4px; font-weight: 550; }
+.tag { display: inline-block; padding: 0 8px; border-radius: 999px; background: var(--color-background-muted); color: var(--color-text-primary); font-size: 0.8rem; }
+/* Wallet */
+/* F3: the Account page (was Wallet). Mobile first (375 px): one column, rows not cards; theme tokens only. */
+.about h1 { margin-top: 8px; }
+.acct { display: flex; flex-direction: column; gap: 12px; max-width: 640px; margin: 0 auto; }
+.acct-head { display: flex; flex-direction: column; gap: 10px; }
+.acct-head__name { margin: 0; font-size: 1.6rem; font-weight: 750; overflow-wrap: anywhere; }
+.acct-head__usd { margin: 0; font-size: 1.05rem; }
+.acct-head__who p { margin: 2px 0 0; }
+.acct-head__actions .k-actions > * { flex: 1 1 140px; }
+.acct-head__logout { display: flex; justify-content: flex-end; }
+.acct-id { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-width: 0; }
+.acct-id code { overflow-wrap: anywhere; word-break: break-all; font-size: 0.85rem; }
+.acct-need { display: flex; flex-direction: column; gap: 6px; }
+.acct-need p { margin: 0; }
+.acct-section { display: flex; flex-direction: column; gap: 6px; }
+.acct-section__title { margin: 8px 0 0; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); }
+.acct-rows, .acct-list { list-style: none; padding: 0; margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); overflow: hidden; }
+.acct-row, .acct-list > li { padding: 10px 12px; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.acct-row:first-child, .acct-list > li:first-child { border-top: 0; }
+.acct-row__main { all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; }
+.acct-row__main:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-radius: 6px; }
+.acct-row__token { display: inline-flex; align-items: center; gap: 8px; font-weight: 650; min-width: 0; }
+.acct-row__amount { margin-left: auto; font-weight: 650; font-variant-numeric: tabular-nums; text-align: right; overflow-wrap: anywhere; }
+.acct-row__chev { color: var(--color-text-secondary); }
+.acct-row--compact { padding-top: 6px; padding-bottom: 6px; color: var(--color-text-secondary); }
+.acct-row--compact .acct-row__amount, .acct-row--compact .acct-row__token { font-weight: 500; }
+.acct-row__line { margin: 0 0 0 calc(1.9em + 10px); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 0.9rem; }
+.acct-stray, [data-testid="payout-row"] { flex-direction: row !important; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.acct-stray__title { font-weight: 600; overflow-wrap: anywhere; }
+.acct-stray__amount { font-variant-numeric: tabular-nums; }
+.acct-inflight { list-style: none; margin: 4px 0 0; padding: 0; }
+.acct-link { all: unset; cursor: pointer; text-decoration: underline; }
+.acct-deposit { gap: 6px; }
+.acct-sheet { display: flex; flex-direction: column; gap: 12px; }
+.acct-sheet__token { display: flex; align-items: center; gap: 8px; margin: 0; font-size: 1.1rem; }
+.acct-faucet p { margin: 4px 0; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.deposit-panel { border-top: 1px solid var(--color-border); margin-top: 8px; padding-top: 8px; }
+.deposit-panel p { margin: 4px 0; }
+.deposit-panel code { overflow-wrap: anywhere; word-break: break-all; }
+.deposit-network { display: inline-block; font-size: 0.8rem; font-weight: 600; padding: 2px 8px; border: 1px solid var(--color-border-emphasized, var(--color-border)); border-radius: 999px; }
+.deposit-warning { border-left: 3px solid var(--color-accent); padding-left: 8px; }
+/* About */
+.about section { max-width: 68ch; margin: 8px 0 28px; }
+.about ol.steps, .about ul.facts { padding-left: 1.2em; }
+.about ol.steps li, .about ul.facts li { margin: 8px 0; }
+.about ol.models li { margin: 4px 0; }
+.about table { max-width: 560px; }
+@media (max-width: 480px) { .about th, .about td { padding: 6px 6px; font-size: 0.9rem; } }
+/* NAV1: the wallet set-up status line is for tests and screen readers, not a visible debug line at the top of every page. */
+[data-testid="status"] { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+[data-testid="my-bets"] [data-testid="mybet-sentence"] { display: block; font-weight: 600; margin-bottom: 4px; }
+[data-testid="my-bets"] [data-testid="mybet-next"], [data-testid="my-bets"] [data-testid="mybet-result"] { display: block; color: var(--color-text-secondary); margin-top: 4px; }
+
+/* Funding sheets */
+/* F4: the Add money sheet, the deposit address, the live tracker (full + compact strip). Mobile first; theme tokens only (the QR
+   is black on white on purpose: phone cameras read it in dark mode too). F5 appends its Cash out / Convert rules below. */
+.fund-sheet { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.fund-sheet p { margin: 0; }
+.fund-h { margin: 0; font-size: 1.05rem; font-weight: 650; }
+.fund-sub { margin: 8px 0 4px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); }
+.fund-token:focus-visible, .fund-chip:focus-visible, .fund-compact:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+.fund-picker { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.fund-tokens { list-style: none; margin: 0; padding: 0; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); overflow: hidden; }
+.fund-tokens > li + li { border-top: 1px solid var(--color-border); }
+.fund-token { all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 12px; }
+.fund-token:hover { background: var(--color-background-muted); }
+.fund-token__sym { font-weight: 650; }
+.fund-token__net { margin-left: auto; font-size: var(--font-size-sm); text-align: right; }
+.fund-amount, .fund-deposit, .fund-address, .fund-track { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.fund-amount > button:first-child { align-self: flex-start; }
+.fund-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.fund-chip { all: unset; box-sizing: border-box; cursor: pointer; min-height: 36px; min-width: 56px; padding: 6px 12px; text-align: center;
+  border: 1px solid var(--color-border-emphasized, var(--color-border)); border-radius: var(--radius-full, 999px); font-weight: 600; font-size: var(--font-size-sm); }
+.fund-chip[aria-checked="true"] { background: var(--color-accent-muted); color: var(--color-text-accent); border-color: var(--color-accent); }
+.fund-estimate { display: flex; flex-direction: column; gap: 4px; min-height: 2.5em; }
+.fund-address__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.fund-badge { display: inline-flex; padding: 2px 10px; border-radius: var(--radius-full, 999px); background: var(--color-info-muted); color: var(--color-on-info-muted); font-size: var(--font-size-sm); font-weight: 600; }
+.fund-address__qr { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px; min-width: 0; }
+.fund-address__text { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; flex: 1 1 160px; min-width: 0; }
+.fund-qr { flex-shrink: 0; border-radius: 8px; max-width: 100%; height: auto; }
+.fund-mono { font-family: var(--font-family-mono, ui-monospace, monospace); font-size: 0.9rem; overflow-wrap: anywhere; word-break: break-all; }
+.fund-memo { display: flex; flex-direction: column; gap: 6px; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); }
+.fund-warning { color: var(--color-text-warning); }
+.fund-hash { display: flex; flex-direction: column; gap: 6px; }
+.fund-hash > button { align-self: flex-start; }
+.fund-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+.fund-steps > li { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; font-size: var(--font-size-xs, 0.75rem); color: var(--color-text-secondary); }
+.fund-steps__dot { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: var(--radius-full, 999px); border: 2px solid var(--color-border-emphasized, var(--color-border)); font-size: 0.75rem; font-weight: 700; }
+.fund-steps > li[data-status="done"] .fund-steps__dot { background: var(--color-success-muted); border-color: var(--color-success, var(--color-border)); color: var(--color-on-success-muted); }
+.fund-steps > li[data-status="current"] { color: var(--color-text-primary); font-weight: 650; }
+.fund-steps > li[data-status="current"] .fund-steps__dot { border-color: var(--color-accent); }
+.fund-strip { display: flex; flex-direction: column; gap: 4px; max-width: 640px; margin: 4px auto 8px; padding: 0 12px; }
+.fund-compact { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; gap: 4px; width: 100%; padding: 8px 12px;
+  border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card); font-size: var(--font-size-sm); }
+.fund-compact__text { overflow-wrap: anywhere; }
+.fund-compact__bar { display: block; height: 4px; border-radius: 2px; background: var(--color-background-muted); overflow: hidden; }
+.fund-compact__bar > span { display: block; height: 100%; background: var(--color-accent); }
+/* F5: Cash out + Convert (WithdrawSheet, ConvertSheet, AddressInput). Same tokens; the 3-step tracker reuses .fund-steps. */
+.co-sheet .fund-amount > button:first-child, .co-address-step > button:first-child, .co-review > button:first-child, .fund-picker > button:first-child { align-self: flex-start; }
+.co-address, .co-address-step, .co-review, .co-convert { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.co-address__row { display: flex; align-items: flex-end; gap: 8px; min-width: 0; }
+.co-address__field { flex: 1 1 auto; min-width: 0; }
+.co-error { color: var(--color-text-error); font-size: var(--font-size-sm); overflow-wrap: anywhere; }
+.co-memo { display: flex; flex-direction: column; gap: 8px; padding: 10px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); }
+.co-sendas-line { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; font-weight: 600; }
+.co-track .fund-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.co-review .k-kv dd { overflow-wrap: anywhere; }
+
+/* V1: About › How to verify a bet, developer box */
+.about h3 { font-size: 1rem; margin: 16px 0 4px; }
+.about-dev { margin-top: 16px; padding: 12px 16px; border: 1px solid var(--color-border, #e5e7eb); border-radius: var(--radius-element, 8px); background: var(--color-background-muted, #f6f7f9); }
+.about-dev h3 { margin-top: 0; }
+.about-dev p { margin: 6px 0; }
+
+/* A1 (UIR1 §3.1, §3.7, §3.9-3.11): shell, login, about, username sheet. Theme tokens only. */
+.brand-lockup { display: inline-flex; align-items: center; gap: var(--spacing-2, 8px); }
+.brand-mark { flex: none; display: block; }
+.bet-back { margin: 0 0 var(--spacing-2, 8px); }
+.about-cards { list-style: none; padding: 0; margin: 0 0 28px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--spacing-3, 12px); max-width: 68ch; }
+@media (max-width: 640px) { .about-cards { grid-template-columns: 1fr; } }
+.about-card { position: relative; padding: var(--spacing-4, 16px); border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card); }
+.about-card h3 { margin: 6px 0 4px; font-size: 1rem; }
+.about-card p { margin: 0; color: var(--color-text-secondary); }
+.about-card__n { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--color-background-muted); font-weight: 650; font-size: 0.85rem; }
+.about-disc { max-width: 68ch; margin: 0 0 var(--spacing-3, 12px); }
+.about-disc > summary { flex-wrap: wrap; }
+.about-disc > summary h2 { margin: 0; font-size: 1.05rem; }
+.about-disc > summary .k-disc__summary { order: 3; flex-basis: 100%; white-space: normal; }
+.about-disc > summary .k-disc__chev { order: 2; }
+.about-disc section, .about-disc .k-disc__body > p:first-child { margin-top: 0; }
+.username-sheet { display: flex; flex-direction: column; gap: var(--spacing-3, 12px); }
+.username-sheet__lead { margin: 0; color: var(--color-text-secondary); }
+.username-sheet__line { margin: 0; min-height: 1.4em; font-size: 0.95rem; color: var(--color-text-secondary); }
+.username-sheet__line[data-tone="good"] { color: var(--color-on-success-muted); }
+.username-sheet__line[data-tone="bad"] { color: var(--color-on-error-muted); }
+.username-sheet__rules { margin: 0; padding-left: 1.2em; }
+
+/* DOCS1: the Docs section (src/components/docs). Light mode, kit tokens. Phone first: the sub-nav wraps, tables stack into labelled
+   rows below 720 px, command blocks wrap (no sideways scroll at 375 px: the visual gate checks it). */
+.docs { max-width: 980px; margin: 0 auto; padding: 0 var(--spacing-4, 16px) var(--spacing-6, 32px); display: grid; gap: var(--spacing-4, 16px); }
+@media (min-width: 900px) { .docs { grid-template-columns: 200px minmax(0, 1fr); align-items: start; } .docs-nav { position: sticky; top: calc(var(--app-nav-h, 0px) + 12px); } }
+.docs-nav ol { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+@media (min-width: 900px) { .docs-nav ol { flex-direction: column; } }
+.docs-nav a { display: block; padding: 6px 10px; border-radius: var(--radius-element, 8px); color: var(--color-text-secondary); text-decoration: none; border: 1px solid var(--color-border); background: var(--color-background-card); font-size: 0.92rem; }
+.docs-nav a[aria-current="page"] { color: var(--color-text-primary); font-weight: 650; border-color: var(--color-text-primary); }
+.docs-body { min-width: 0; }
+.docs-body h1 { margin-top: 8px; }
+.docs-body p, .docs-body ul, .docs-body ol { max-width: 72ch; }
+.docs-lede { font-size: 1.05rem; color: var(--color-text-secondary); }
+.docs-next { margin-top: var(--spacing-6, 32px); font-weight: 600; }
+.docs-public-head { max-width: 980px; margin: 0 auto; padding: 12px var(--spacing-4, 16px); display: flex; align-items: center; justify-content: space-between; }
+.docs-public-head .brand { text-decoration: none; color: inherit; }
+.docs-login { font-weight: 600; }
+.docs code.wrap, .docs td code, .docs li code { overflow-wrap: anywhere; }
+
+/* the lifecycle diagram: numbered boxes with arrows; the last step forks into payout / refund */
+.docs-flow { margin: 12px 0 8px; }
+.docs-flow > ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; grid-template-columns: 1fr; }
+@media (min-width: 720px) { .docs-flow > ol { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; } }
+.docs-flow__step { position: relative; display: flex; flex-direction: column; gap: 4px; padding: 12px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card); font-size: 0.92rem; }
+.docs-flow__step > span:last-child { color: var(--color-text-secondary); }
+.docs-flow__n { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--color-background-muted); font-weight: 650; font-size: 0.8rem; }
+.docs-flow > ol > .docs-flow__step::after { content: "↓"; position: absolute; left: 50%; bottom: -21px; transform: translateX(-50%); color: var(--color-text-secondary); }
+@media (min-width: 720px) { .docs-flow > ol > .docs-flow__step::after { content: "→"; left: auto; right: -15px; bottom: auto; top: 50%; transform: translateY(-50%); } }
+.docs-flow__fork ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.docs-flow__step[data-end="payout"] { border-color: var(--color-success, #2e7d32); }
+.docs-flow__step[data-end="refund"] { border-style: dashed; }
+
+/* command blocks */
+.docs-cmd { position: relative; margin: 8px 0 12px; }
+.docs-cmd pre, .docs-pre { margin: 0; padding: 10px 12px; padding-right: 44px; white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; background: var(--color-background-muted); border: 1px solid var(--color-border); border-radius: var(--radius-element, 8px); font-size: 0.82rem; line-height: 1.45; }
+.docs-pre { padding-right: 12px; max-height: 420px; overflow-y: auto; }
+.docs-cmd .k-copy { position: absolute; top: 6px; right: 6px; }
+
+/* status tags */
+.docs-tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; vertical-align: middle; border: 1px solid var(--color-border); background: var(--color-background-card); color: var(--color-text-secondary); white-space: nowrap; }
+.docs-tag[data-status="mainnet"], .docs-tag[data-status="both"] { color: var(--color-success, #2e7d32); border-color: currentColor; }
+.docs-tag[data-status="not-yet"], .docs-tag[data-status="none"] { color: var(--color-warning, #a15c00); border-color: currentColor; }
+.docs-tag[data-status="manual"] { color: var(--color-text-primary); }
+td > .docs-tag:first-child { margin-left: 0; }
+
+/* verify steps */
+.docs-steps { list-style: none; padding: 0; }
+.docs-steps > li { margin: 0 0 var(--spacing-5, 24px); }
+.docs-steps h3 { font-size: 1rem; }
+.docs-step-n { color: var(--color-text-secondary); }
+
+/* tables: a normal table from 720 px; below, each row is a card of "label: value" lines */
+.docs-table { width: 100%; max-width: none; border-collapse: collapse; margin: 8px 0 12px; font-size: 0.92rem; }
+.docs-table th, .docs-table td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--color-border); }
+.docs-table thead th { font-size: 0.82rem; color: var(--color-text-secondary); }
+@media (max-width: 719px) {
+  .docs-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .docs-table, .docs-table tbody, .docs-table tr, .docs-table th, .docs-table td { display: block; width: auto; }
+  .docs-table tr { padding: 8px 10px; margin: 0 0 10px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card); }
+  .docs-table th, .docs-table td { border: 0; padding: 3px 0; }
+  .docs-table th[scope="row"] { font-weight: 650; padding-bottom: 4px; }
+  .docs-table td::before { content: attr(data-label) ": "; font-weight: 600; color: var(--color-text-secondary); }
+}
+.docs-table--trust { font-size: 0.86rem; }
+/* DOCS2: achievement and case-study cards (Hackathon page), status from lib/mainnetEvidence.ts / lib/caseStudies.ts. */
+.docs-cards { list-style: none; padding: 0; margin: 8px 0 16px; display: grid; gap: 12px; max-width: none; }
+.docs-card { min-width: 0; padding: 12px 14px; border: 1px solid var(--color-border); border-radius: var(--radius-container, 12px); background: var(--color-background-card); }
+.docs-card[data-status="proven"] { border-color: var(--color-success, #2e7d32); }
+.docs-card[data-status="in-progress"] { border-style: dashed; }
+.docs-card h3 { font-size: 1rem; margin: 0 0 6px; }
+.docs-card .docs-tag { margin-left: 0; }
+.docs-txs { margin: 4px 0 8px; padding-left: 18px; font-size: 0.88rem; overflow-wrap: anywhere; }
+.docs-tag[data-status="proven"] { color: var(--color-success, #2e7d32); border-color: currentColor; }
+.docs-tag[data-status="partial"] { color: var(--color-success, #2e7d32); border-style: dashed; border-color: currentColor; }
+.docs-tag[data-status="in-progress"], .docs-tag[data-status="pending"] { color: var(--color-warning, #a15c00); border-color: currentColor; }
+.docs-tag[data-status="rehearsal"] { color: var(--color-text-primary); border-style: dashed; }
+.docs-body p { margin: 0 0 10px; }
+.docs-body .docs-lede { margin-bottom: 14px; }
+/* TFIX2: the top-level crash screen (src/CrashBoundary.tsx). It renders OUTSIDE <Theme>, so every token has a fallback. */
+.crash-screen { max-width: 520px; margin: 15vh auto 0; padding: 24px; font-family: system-ui, sans-serif; color: var(--color-text, #111); }
+.crash-screen h1 { font-size: 1.5rem; margin: 0 0 12px; }
+.crash-screen p { line-height: 1.5; margin: 0 0 16px; }
+.crash-screen__actions { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.crash-screen button { font: inherit; padding: 10px 20px; border: 0; border-radius: 8px; background: #6b1d5c; color: #fff; cursor: pointer; }
+.crash-screen a { color: #6b1d5c; text-decoration: underline; }
+/* CFIX1: the site footer (src/components/SiteFooter.tsx), after every page. It is in normal flow, so a sticky bottom bar (bet page
+   actions, .k-actions--sticky) stops at the end of its own section, above the footer, and never covers it; the extra bottom room on
+   pages that have such a bar keeps the last footer line clear of the bar while the page is still scrolling on a phone. */
+.site-footer { display: flex; flex-wrap: wrap; gap: var(--spacing-1) var(--spacing-3); align-items: center; justify-content: center; margin: var(--spacing-12) 0 0;
+  padding: var(--spacing-4) 0 calc(var(--spacing-2) + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-sm); line-height: 1.5; color: var(--color-text-secondary); text-align: center; }
+.site-footer a { color: var(--color-text-primary); text-decoration: underline; text-underline-offset: 2px; }
+.site-footer a:hover { color: var(--color-text-accent, var(--color-text-primary)); }
+.site-footer__dot { color: var(--color-text-secondary); }
+#root:has(.k-actions--sticky) .site-footer, #root:has(.create-footer) .site-footer { padding-bottom: calc(var(--spacing-12) + var(--spacing-6) + env(safe-area-inset-bottom, 0px)); }

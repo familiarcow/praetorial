@@ -1,0 +1,86 @@
+[
+  {
+    "step": "resolver_keypair_generated",
+    "detail": {
+      "pubkey": "51479a7a7630eea848d31c39123075e6eb40f8ce71551226fee7ddb7f5980428"
+    }
+  },
+  {
+    "step": "mint_test_usdc",
+    "detail": {
+      "maker": "1032000",
+      "taker": "1032000"
+    }
+  },
+  {
+    "step": "open",
+    "detail": {
+      "tx_hash": "3cLyi9Xz9TMXsqfomrC3e3NfmqevfJ9SmdS3TreMGKUV"
+    }
+  },
+  {
+    "step": "discovered_bet_id",
+    "detail": {
+      "bet_id": 4
+    }
+  },
+  {
+    "step": "take",
+    "detail": {
+      "tx_hash": "ENb8vuR3nve1ZPC412WjBBhCiKKEhhEsgmCJXtfozNWr"
+    }
+  },
+  {
+    "step": "post_take_status",
+    "detail": {
+      "status": "Taken"
+    }
+  },
+  {
+    "step": "resolver_ran",
+    "detail": {
+      "result": {
+        "bet_id": 4,
+        "terms_hash": "b175b21d6182bc4bf338e8c614e9fd7b518fdcaaf713559773a7d28a486ea6ed",
+        "outcome": "NO",
+        "element_results_hash": "d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf",
+        "run_no": 1793601060581,
+        "checked_until": 0
+      },
+      "notes": [
+        "source fetched: S1 (https://example.com/)",
+        "source fetched: S2 (https://www.iana.org/domains/reserved)",
+        "decision: an element is not proven (burden on YES); other elements irrelevant"
+      ],
+      "signed": true
+    }
+  },
+  {
+    "step": "submit_outcome",
+    "detail": {
+      "tx_hash": "HW21kUyZaqusoc4cpGr8Ze4U3RmbjWjtjahmqQm7nngG",
+      "outcome": "NO"
+    }
+  },
+  {
+    "step": "post_submit_status",
+    "detail": {
+      "status": "Proposed",
+      "outcome": "NO"
+    }
+  },
+  {
+    "step": "tampered_submit_outcome",
+    "detail": {
+      "rejected": true,
+      "error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}"
+    }
+  },
+  {
+    "step": "final_status_unchanged_by_tamper_attempt",
+    "detail": {
+      "status": "Proposed",
+      "outcome": "NO"
+    }
+  }
+]

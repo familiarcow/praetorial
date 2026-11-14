@@ -1,0 +1,1 @@
+{"_note":"fixture: rate limit, never a credit failure","output":{"outcome":"INVALID","run_diagnostics":[{"model":"deepseek-ai/DeepSeek-V4.1-Flash-1017","verify_result":"error","http_status":429,"error":"Too Many Requests: quota per minute"}]}}

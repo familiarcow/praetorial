@@ -1,0 +1,34 @@
+[
+  {
+    "privyUserId": "did:privy:cmw1c0qd002dg0gi2bwe1da2y",
+    "email": "praetorial-e2e+wallet-user-a@example.com",
+    "walletId": "pnlxy8w7nf9fpaqiv2avswdh",
+    "publicKeyHex": "3fe61da971ed8dc0b740d80485e3a9d3c1a673ac56ba3ff3fec6a4a928fde57f",
+    "implicitAccountId": "3fe61da971ed8dc0b740d80485e3a9d3c1a673ac56ba3ff3fec6a4a928fde57f",
+    "createdAt": "2026-11-03T23:42:07.564Z"
+  },
+  {
+    "privyUserId": "did:privy:cmw1c1ben02640gi9zf05n2kv",
+    "email": "praetorial-e2e+wallet-user-b@example.com",
+    "walletId": "ftyunsnwi7efkteyeyp0e1d8",
+    "publicKeyHex": "4aa62a0c89a01fd1b10c2f5d2d40454eb51f7a618499def229a0243af1e1529c",
+    "implicitAccountId": "4aa62a0c89a01fd1b10c2f5d2d40454eb51f7a618499def229a0243af1e1529c",
+    "createdAt": "2026-11-03T23:42:08.611Z"
+  },
+  {
+    "privyUserId": "did:privy:cmw1c6qzo00eu0gl5rkdwoduu",
+    "email": "praetorial-e2e+wallet-user-c@example.com",
+    "walletId": "ed16wnt5gbhmshxcbf7gn0uf",
+    "publicKeyHex": "cf846c8e62324f7341f98a7156aae3aac929a2c584d2c923c36ebc9d62ad6980",
+    "implicitAccountId": "cf846c8e62324f7341f98a7156aae3aac929a2c584d2c923c36ebc9d62ad6980",
+    "createdAt": "2026-11-03T23:46:21.844Z"
+  },
+  {
+    "privyUserId": "did:privy:cmw1cc4le00jn0gl5zkjyulhq",
+    "email": "praetorial-e2e+option1-user-d@example.com",
+    "walletId": "w446sssf9g4yc13lf57woqof",
+    "publicKeyHex": "d82389d4a98a5da0ca62b5e777b93c1e0b6c6c22c0d72f7e324a608aaff00d48",
+    "implicitAccountId": "d82389d4a98a5da0ca62b5e777b93c1e0b6c6c22c0d72f7e324a608aaff00d48",
+    "createdAt": "2026-11-03T23:50:33.049Z"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "f7f28d4691b4e8fca34e5b870db80249adc47c4c",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "c30cd2774f58616156ab6a7fa66e028558c387d816e1e3b60117db08549c7467",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "c30cd2774f58616156ab6a7fa66e028558c387d816e1e3b60117db08549c7467"},
+    {"route": "docker-run-2", "sha256": "c30cd2774f58616156ab6a7fa66e028558c387d816e1e3b60117db08549c7467"},
+    {"route": "fresh-container", "sha256": "c30cd2774f58616156ab6a7fa66e028558c387d816e1e3b60117db08549c7467"}
+  ],
+  "notes": {
+    "item": "17c5 AI audit of typed-template code outcome (D-TPL1/D-JUDGE4); built from the branch GREEN commit (resolver tree identical to the merge); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (a first docker-run attempt hit a transient linker SIGSEGV under emulation and was re-run)"
+  }
+}

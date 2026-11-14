@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-l1b11-11072031.praetorial-dev-1101.testnet bet 1 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97
+FAIL E2  attest_pubkey: pinned view b92575a2949567138b8b6359ceafb79dbc582fa3fa8c4f99a22793bd5c583cf1 != new() arg accc1a8632647620243073c56ab978fa713b7ca446d6b7e21ce7d8d723997a16
+PASS E3  resolver wasm (3300094 bytes) hashes to the pinned resolver_wasm_hash 2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773
+SKIP E4  offline: pubkey reproduction needs a live OutLayer report-pubkey run (spends credit); see docs/VERIFY.md for the by-hand command
+PASS B1  sha256(terms) == envelope.terms_hash 1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284
+PASS B2  attestation signature valid under pinned attest_pubkey; 11s old when the bet was opened (limit 3600s)
+SKIP B3  no submitted results in this evidence
+SKIP B4  judge record (last_resolution_raw) not available
+SKIP B5  finalize before/after balances not available in this evidence (no successful finalize/drain_payouts/void_after_deadline/emergency_refund call for this bet in the escrow's history)
+SKIP B6  proposed_at not available in this evidence
+# 4 PASS, 1 FAIL, 5 SKIP

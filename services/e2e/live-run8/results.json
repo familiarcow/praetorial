@@ -1,0 +1,408 @@
+{
+  "txs": [
+    {
+      "step": "fastfs_upload_chunk1",
+      "hash": "4QTVz72jrrzbkUn1g2aixdb5piJF2QB7U9YdzedQmvqf",
+      "url": "https://testnet.nearblocks.io/txns/4QTVz72jrrzbkUn1g2aixdb5piJF2QB7U9YdzedQmvqf",
+      "note": "resolver wasm cd853f8f..19d7 uploaded; pinned = fastfs url + sha256 in escrow new()"
+    },
+    {
+      "step": "fastfs_upload_chunk2",
+      "hash": "8x1hNTGm2ZKvwwZTHnZznqn9BisAw55Tp5b4zgvdbdLX",
+      "url": "https://testnet.nearblocks.io/txns/8x1hNTGm2ZKvwwZTHnZznqn9BisAw55Tp5b4zgvdbdLX"
+    },
+    {
+      "step": "fastfs_upload_chunk3",
+      "hash": "3PG3vpmzCM9RhJiakwcmBrUzcWTU9gLyGE45NFS6SaAd",
+      "url": "https://testnet.nearblocks.io/txns/3PG3vpmzCM9RhJiakwcmBrUzcWTU9gLyGE45NFS6SaAd"
+    },
+    {
+      "step": "create_escrow_account",
+      "hash": "7MPSeKRNoEWuZFoPqzzmyx1ppL7niubbRfDajSyvyPv4",
+      "url": "https://testnet.nearblocks.io/txns/7MPSeKRNoEWuZFoPqzzmyx1ppL7niubbRfDajSyvyPv4",
+      "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+      "funded_near": "6.5"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "5ZQhsihw48QSFesXJF9zNV8Uc4fZ2amhRTYDDGfsPDDd",
+      "url": "https://testnet.nearblocks.io/txns/5ZQhsihw48QSFesXJF9zNV8Uc4fZ2amhRTYDDGfsPDDd",
+      "note": "escrow wasm built via cargo wasm32-unknown-unknown release (cargo-near not installed), 509230 bytes; hash in escrow_wasm_sha256. Hand-added: 02_deploy.mjs's final save() overwrote these two entries (script bug, fixed)"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "33QHj3NfpvbfqhzbM9CfSEKtgsnJQJzmKQygdBj1vtzs",
+      "url": "https://testnet.nearblocks.io/txns/33QHj3NfpvbfqhzbM9CfSEKtgsnJQJzmKQygdBj1vtzs",
+      "note": "new(outcome_pubkey, attest_pubkey, resolver_wasm_hash,...); resolver_keys() view returned the 3 pinned values"
+    },
+    {
+      "step": "sourcecheck_usdc",
+      "hash": "GdqAbhC61azEz5epaCpUHHwgqqr9vRxRuKBNNDtKGWnM",
+      "url": "https://testnet.nearblocks.io/txns/GdqAbhC61azEz5epaCpUHHwgqqr9vRxRuKBNNDtKGWnM",
+      "spec_hash": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+      "checked_at": "1793936416315789300",
+      "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_maker1",
+      "hash": "D69sDqjBsS6CvBF6mA3oJ8qZutU8SojipfHH9SSNUGXy",
+      "url": "https://testnet.nearblocks.io/txns/D69sDqjBsS6CvBF6mA3oJ8qZutU8SojipfHH9SSNUGXy"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_taker1",
+      "hash": "HrzKgqKdtLe6qSJuj3oxfsseN6BMPYWa4gnc3MMjsoHy",
+      "url": "https://testnet.nearblocks.io/txns/HrzKgqKdtLe6qSJuj3oxfsseN6BMPYWa4gnc3MMjsoHy"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "BKEe4xN2mqCN1WEsT3TacxVUWZKsYqc6pyubiMSkK9CL",
+      "url": "https://testnet.nearblocks.io/txns/BKEe4xN2mqCN1WEsT3TacxVUWZKsYqc6pyubiMSkK9CL"
+    },
+    {
+      "step": "sourcecheck_usdc",
+      "hash": "Covzspyk97J2EnW6XdN1NAYBio3oUQoWkBVnqrMhbWkP",
+      "url": "https://testnet.nearblocks.io/txns/Covzspyk97J2EnW6XdN1NAYBio3oUQoWkBVnqrMhbWkP",
+      "spec_hash": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+      "checked_at": "1793936579696296000",
+      "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_maker1",
+      "hash": "B39V9JoEed8UkWEhFLrp36tPobcnkyuXjmRcmf1kcEdd",
+      "url": "https://testnet.nearblocks.io/txns/B39V9JoEed8UkWEhFLrp36tPobcnkyuXjmRcmf1kcEdd"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_taker1",
+      "hash": "EHqbyraJSmn4TVj9qJ6qsFj2Nj6TXqbBrAYDdrv3f6Mi",
+      "url": "https://testnet.nearblocks.io/txns/EHqbyraJSmn4TVj9qJ6qsFj2Nj6TXqbBrAYDdrv3f6Mi"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "GXsbG7LiA2iCLeHiUQ41H66u9YRM7eaYuNig4j35HnpC",
+      "url": "https://testnet.nearblocks.io/txns/GXsbG7LiA2iCLeHiUQ41H66u9YRM7eaYuNig4j35HnpC"
+    },
+    {
+      "step": "sourcecheck_usdc",
+      "hash": "4pwetaJv1kcXUkBwir9j6mr6pRLtGG7xRvHcYZw6rmzr",
+      "url": "https://testnet.nearblocks.io/txns/4pwetaJv1kcXUkBwir9j6mr6pRLtGG7xRvHcYZw6rmzr",
+      "spec_hash": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+      "checked_at": "1793936765044572160",
+      "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_maker1",
+      "hash": "HnCG78EqiZYVBL7CWSYwGUYohnx6fiJVAzYnEXdBhHja",
+      "url": "https://testnet.nearblocks.io/txns/HnCG78EqiZYVBL7CWSYwGUYohnx6fiJVAzYnEXdBhHja"
+    },
+    {
+      "step": "mint_usdc_nep141:usdc.testnet_taker1",
+      "hash": "GoVioXUQPsMhWjMGtA3vXc1LbWdXqQ8sKHZZY3PHbFTc",
+      "url": "https://testnet.nearblocks.io/txns/GoVioXUQPsMhWjMGtA3vXc1LbWdXqQ8sKHZZY3PHbFTc"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "C2k4SH9EWjXvKfXnT2xKYTVgF65gov6qSK14SULKCz4i",
+      "url": "https://testnet.nearblocks.io/txns/C2k4SH9EWjXvKfXnT2xKYTVgF65gov6qSK14SULKCz4i"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "HFGm1s4eL7nbrPnWesDvwJM2KfxT8xTtqtbEs1S2Hxk8",
+      "url": "https://testnet.nearblocks.io/txns/HFGm1s4eL7nbrPnWesDvwJM2KfxT8xTtqtbEs1S2Hxk8"
+    },
+    {
+      "step": "mutual_settle_maker_usdc",
+      "hash": "8E3QVDyiLcsYzh4ozHq1LcW9KwmfmL1k7xaRKPQjX1LA",
+      "url": "https://testnet.nearblocks.io/txns/8E3QVDyiLcsYzh4ozHq1LcW9KwmfmL1k7xaRKPQjX1LA"
+    },
+    {
+      "step": "mutual_settle_taker_usdc",
+      "hash": "54gPYGSChcD8dGwffFfwvvjhg1sSDEY2UfNXVYxh1Nun",
+      "url": "https://testnet.nearblocks.io/txns/54gPYGSChcD8dGwffFfwvvjhg1sSDEY2UfNXVYxh1Nun"
+    },
+    {
+      "step": "sourcecheck_btc",
+      "hash": "9yFHidLm5LjXQcTukVX1K3d6Q1chUbGEv8hVSkGRMZqN",
+      "url": "https://testnet.nearblocks.io/txns/9yFHidLm5LjXQcTukVX1K3d6Q1chUbGEv8hVSkGRMZqN",
+      "spec_hash": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+      "checked_at": "1793936956882198528",
+      "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05"
+    },
+    {
+      "step": "mint_btc_nep141:btc.mock.testnet_maker1",
+      "hash": "E51TQbZwLo7evj2vVQCnmbpH1V4ZRJck4pBAb8xC7V2D",
+      "url": "https://testnet.nearblocks.io/txns/E51TQbZwLo7evj2vVQCnmbpH1V4ZRJck4pBAb8xC7V2D"
+    },
+    {
+      "step": "mint_btc_nep141:usdc.testnet_taker1",
+      "hash": "CHzbvW38GkoKDRS8PRK2PUg1ZqiCCQoDUbdF8a5GtRNY",
+      "url": "https://testnet.nearblocks.io/txns/CHzbvW38GkoKDRS8PRK2PUg1ZqiCCQoDUbdF8a5GtRNY"
+    },
+    {
+      "step": "open_btc",
+      "hash": "8YZQxMN1JUQTjtDFWGPnKak9viuUgs6wCzw7tvbGhUty",
+      "url": "https://testnet.nearblocks.io/txns/8YZQxMN1JUQTjtDFWGPnKak9viuUgs6wCzw7tvbGhUty"
+    },
+    {
+      "step": "take_btc",
+      "hash": "5SrREPMTu5TxXjGRNaCBojKWJGkkQXjqbphUrTewwHy",
+      "url": "https://testnet.nearblocks.io/txns/5SrREPMTu5TxXjGRNaCBojKWJGkkQXjqbphUrTewwHy"
+    },
+    {
+      "step": "mutual_settle_maker_btc",
+      "hash": "AHECRvWiVYoUBbAquhABoYDxFU8ng3nVBnsFhVU45Fsf",
+      "url": "https://testnet.nearblocks.io/txns/AHECRvWiVYoUBbAquhABoYDxFU8ng3nVBnsFhVU45Fsf"
+    },
+    {
+      "step": "mutual_settle_taker_btc",
+      "hash": "5uygWuVNWSHbcYsUZPQ6wDDu1oRH6n424LQdBBCdAn7A",
+      "url": "https://testnet.nearblocks.io/txns/5uygWuVNWSHbcYsUZPQ6wDDu1oRH6n424LQdBBCdAn7A"
+    },
+    {
+      "step": "report_pubkey_FROM_escrow (the one that returned keys)",
+      "hash": "BCqdT9Fomqq4YHVMSnPV2WJbG1Rkd5i8xxqfkihLGwzh",
+      "url": "https://testnet.nearblocks.io/txns/BCqdT9Fomqq4YHVMSnPV2WJbG1Rkd5i8xxqfkihLGwzh"
+    },
+    {
+      "step": "wasted_report_pubkey_inline_input_ran_default_judge",
+      "hash": "7aPstrCzoC8pSyFkL92KWaYVir4xRVMes2rxPPJeE4qG",
+      "url": "https://testnet.nearblocks.io/txns/7aPstrCzoC8pSyFkL92KWaYVir4xRVMes2rxPPJeE4qG",
+      "note": "inline JSON arg not delivered to stdin; use --input file"
+    },
+    {
+      "step": "wasted_sourcecheck_from_dev1101_attest_key_5643..1e14_mismatch",
+      "hash": "4aCeS3fCH6FWxiQxqc2ZaLbFRq1fDY5Zgi9VEtYxwbap",
+      "url": "https://testnet.nearblocks.io/txns/4aCeS3fCH6FWxiQxqc2ZaLbFRq1fDY5Zgi9VEtYxwbap",
+      "note": "FINDING: attest key differs by calling account (dev1101 -> 5643..., escrow -> 861e...)"
+    }
+  ],
+  "parent": "praetorial-dev-1101.testnet",
+  "escrow_account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+  "balances": {
+    "parent_before": "7922974582295822999999979",
+    "escrow_after_create": "6500000000000000000000000",
+    "escrow_after_deploy": "6388999883931962300000000",
+    "parent_after": "1406061337107108599999979",
+    "escrow_final": "6477728285798747899999991"
+  },
+  "escrow_wasm_sha256": "692b24fdf5ef7585235764a024c5c667125905a8eb873d5af4efb840acc28006",
+  "resolver_wasm_sha256": "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7",
+  "outcome_pubkey": "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+  "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05",
+  "new_args": {
+    "intents": "intents-mock.praetorial-dev-1101.testnet",
+    "usdc_token_id": "nep141:usdc.testnet",
+    "outlayer": "outlayer.testnet",
+    "operator": "praetorial-dev-1101.testnet",
+    "guardian": "arbiter1.praetorial-dev-1101.testnet",
+    "registry": "praetorial-dev-1101.testnet",
+    "fee_account": "fee.praetorial-dev-1101.testnet",
+    "keeper": "keeper.praetorial-dev-1101.testnet",
+    "limits": {
+      "max_stake": "1000000000000",
+      "max_offer_ttl_secs": 31536000,
+      "max_stake_per_side_near": "100000000000000000000000000",
+      "max_rounds": 2
+    },
+    "beta_sunset_ns": null,
+    "asset_limits": [
+      [
+        "nep141:usdc.testnet",
+        {
+          "min_per_side": "1",
+          "max_per_side": "250000000",
+          "run_price": "5000",
+          "min_bond": "5000000",
+          "min_objection": "1000000"
+        }
+      ],
+      [
+        "nep141:btc.mock.testnet",
+        {
+          "min_per_side": "6501",
+          "max_per_side": "325059",
+          "run_price": "1",
+          "min_bond": "6501",
+          "min_objection": "1300"
+        }
+      ]
+    ],
+    "outcome_pubkey": "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+    "attest_pubkey": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05",
+    "resolver_wasm_hash": "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7"
+  },
+  "bets": {
+    "usdc": {
+      "kind": "usdc",
+      "steps": [],
+      "before": {
+        "maker1:nep141:usdc.testnet": "3775290000",
+        "maker1:nep141:btc.mock.testnet": "0",
+        "taker1:nep141:usdc.testnet": "3600809000",
+        "taker1:nep141:btc.mock.testnet": "0",
+        "fee:nep141:usdc.testnet": "1512000",
+        "fee:nep141:btc.mock.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:usdc.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:btc.mock.testnet": "0"
+      },
+      "bet_id": 1,
+      "status_after_take": "Taken",
+      "status_after_settle": "Settled",
+      "final_status": "Settled",
+      "outcome": "MUTUAL",
+      "after": {
+        "maker1:nep141:usdc.testnet": "3785190000",
+        "maker1:nep141:btc.mock.testnet": "0",
+        "taker1:nep141:usdc.testnet": "3610709000",
+        "taker1:nep141:btc.mock.testnet": "0",
+        "fee:nep141:usdc.testnet": "1728000",
+        "fee:nep141:btc.mock.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:usdc.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:btc.mock.testnet": "0"
+      },
+      "pending_payouts": [
+        {
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "done": true
+        },
+        {
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "done": true
+        },
+        {
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "done": true
+        },
+        {
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "16000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "done": true
+        }
+      ]
+    },
+    "btc": {
+      "kind": "btc",
+      "steps": [],
+      "before": {
+        "maker1:nep141:usdc.testnet": "3785190000",
+        "maker1:nep141:btc.mock.testnet": "0",
+        "taker1:nep141:usdc.testnet": "3610709000",
+        "taker1:nep141:btc.mock.testnet": "0",
+        "fee:nep141:usdc.testnet": "1728000",
+        "fee:nep141:btc.mock.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:usdc.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:btc.mock.testnet": "0"
+      },
+      "bet_id": 2,
+      "status_after_take": "Taken",
+      "status_after_settle": "Settled",
+      "final_status": "Settled",
+      "outcome": "MUTUAL",
+      "after": {
+        "maker1:nep141:usdc.testnet": "3790140000",
+        "maker1:nep141:btc.mock.testnet": "4950",
+        "taker1:nep141:usdc.testnet": "3615659000",
+        "taker1:nep141:btc.mock.testnet": "4950",
+        "fee:nep141:usdc.testnet": "1836000",
+        "fee:nep141:btc.mock.testnet": "8100",
+        "praetorial-e2e-2611052236:nep141:usdc.testnet": "0",
+        "praetorial-e2e-2611052236:nep141:btc.mock.testnet": "0"
+      },
+      "pending_payouts": [
+        {
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "token": "nep141:btc.mock.testnet",
+          "amount": "4950",
+          "reason": "mutual_settle_maker",
+          "done": true
+        },
+        {
+          "receiver": "maker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_maker",
+          "done": true
+        },
+        {
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "token": "nep141:btc.mock.testnet",
+          "amount": "4950",
+          "reason": "mutual_settle_taker",
+          "done": true
+        },
+        {
+          "receiver": "taker1.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "4950000",
+          "reason": "mutual_settle_taker",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:btc.mock.testnet",
+          "amount": "100",
+          "reason": "mutual_settle_fee",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "100000",
+          "reason": "mutual_settle_fee",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:btc.mock.testnet",
+          "amount": "8000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "done": true
+        },
+        {
+          "receiver": "fee.praetorial-dev-1101.testnet",
+          "token": "nep141:usdc.testnet",
+          "amount": "8000",
+          "reason": "mutual_settle_storage_keep_terms",
+          "done": true
+        }
+      ]
+    }
+  },
+  "pubkeys": {
+    "outcome": "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+    "attest": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05",
+    "outcome_near": "ed25519:2NQjNtxvPJqQgihzuQcsAtiTR8NELREDSjib2JEpo3Gi"
+  },
+  "not_exercised": "Judge-resolved settle NOT exercised on this deployment (Jason deadline 2028; NEAR AI spend not allowed); proven live earlier (RES-01). Both bets settled via mutual_settle 50/50 + drain_payouts."
+}

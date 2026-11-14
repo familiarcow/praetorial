@@ -1,0 +1,22 @@
+{
+ "case": "mk_base64_encoded_instruction",
+ "inputs_sha256": "c72cc6088b01050c49fe07cafb732e2d58cc71ecfaa6829f69b495b9fe2d2655",
+ "provenance": {
+  "kind": "empty-reply",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "recorded_utc": "2026-11-08T22:03:11Z",
+  "run_id": "o1#run2",
+  "source": "production_pair_20261108_o1.json runs[2] (verbatim; git a0431f6)"
+ },
+ "raws": {
+  "e1": {
+   "1": [
+    "{\"answer\": \"not_met\", \"quote\": \"Apple said on December 1, 2027 that iPhone Fold will be available to customers in the United States beginning February 2028.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source states the foldable iPhone would become available in the US starting February 2028, after the 2027 window, with only pre-orders opening in December 2027.\"}",
+    ""
+   ]
+  }
+ }
+}

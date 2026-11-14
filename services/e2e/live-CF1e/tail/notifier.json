@@ -1,0 +1,97 @@
+[
+ {
+  "worker": "praetorial-notifier-testnet",
+  "entrypoint": "NotifierDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 4,
+  "wallMs": 1083,
+  "ts": 1794195332273,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "trigger": "POST /tick",
+  "outcome": "canceled",
+  "cpuMs": 0,
+  "wallMs": 1346,
+  "ts": 1794195332051,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "entrypoint": "NotifierDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 4,
+  "wallMs": 1101,
+  "ts": 1794195391623,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "trigger": "POST /tick",
+  "outcome": "canceled",
+  "cpuMs": 0,
+  "wallMs": 1117,
+  "ts": 1794195391601,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "entrypoint": "NotifierDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 5,
+  "wallMs": 1136,
+  "ts": 1794195453650,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "trigger": "POST /tick",
+  "outcome": "canceled",
+  "cpuMs": 0,
+  "wallMs": 1898,
+  "ts": 1794195453026,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "entrypoint": "NotifierDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 5,
+  "wallMs": 1101,
+  "ts": 1794195511432,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "trigger": "POST /tick",
+  "outcome": "canceled",
+  "cpuMs": 0,
+  "wallMs": 1113,
+  "ts": 1794195511412,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "entrypoint": "NotifierDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 4,
+  "wallMs": 1084,
+  "ts": 1794195571562,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-notifier-testnet",
+  "trigger": "POST /tick",
+  "outcome": "canceled",
+  "cpuMs": 0,
+  "wallMs": 1326,
+  "ts": 1794195571427,
+  "exceptions": 0
+ }
+]

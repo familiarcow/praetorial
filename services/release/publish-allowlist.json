@@ -1,0 +1,6 @@
+[
+  {"path": "resolver/wasm-bin/src/item16u_tests.rs", "rule": "sk-key", "reason": "test constant KEY (sk-live...TKEY) used as the redaction fixture in judge transport diagnostics tests; not a real key"},
+  {"path": "resolver/wasm-bin/src/item16u_tests.rs", "rule": "ghp-token", "reason": "j16u_redacts_unknown_token_shaped_strings: fake ghp_abc... string asserted to be redacted; not a real token"},
+  {"path": "resolver/wasm-bin/src/item_j1_ping_tests.rs", "rule": "sk-key", "reason": "test constant KEY (sk-test-...) for mock judge ping tests; placeholder, not a real key"},
+  {"path": "resolver/wasm-bin/src/item_r1_stream_tests.rs", "rule": "sk-key", "reason": "test constant KEY (sk-test-...) for mock stream tests; placeholder, not a real key"}
+]

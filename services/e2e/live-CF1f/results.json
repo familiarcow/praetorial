@@ -1,0 +1,880 @@
+{
+  "network": "testnet",
+  "registry": "https://praetorial-registry-testnet.familiarcow.workers.dev",
+  "account": "3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+  "public_key": "ed25519:5DB215agQCW5LpTwydJQhBvvFXxF9SBE4jEDLRfWWzW6",
+  "username": "cf1f_93a69c",
+  "txs": [
+    {
+      "step": "fund fresh implicit account 0.1 NEAR",
+      "hash": "HCbzn9PnLJfh4T6Zmq8vqP3QyNyT9sgjkgZr4sHrL2Mb",
+      "url": "https://testnet.nearblocks.io/txns/HCbzn9PnLJfh4T6Zmq8vqP3QyNyT9sgjkgZr4sHrL2Mb"
+    }
+  ],
+  "requests": [
+    {
+      "method": "POST",
+      "path": "/claim",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_93a",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/search?q=cf1f_9",
+      "status": 200,
+      "body": "[{\"username\":\"cf1f_93827z\",\"account_tail\":\"48c2c8b6\"},{\"username\":\"cf1f_93a69c\",\"account_tail\":\"a0378633\"}]"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/CF1F_93A69C",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\",\"account_id\":\"3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/account/3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633",
+      "status": 200,
+      "body": "{\"username\":\"cf1f_93a69c\"}"
+    },
+    {
+      "method": "GET",
+      "path": "/health",
+      "status": 200,
+      "body": "{\"ok\":true}"
+    },
+    {
+      "method": "GET",
+      "path": "/lookup/username/nobodyhere_xyz",
+      "status": 404,
+      "body": "{\"error\":\"not_found\"}"
+    }
+  ],
+  "claim": {
+    "status": 200,
+    "body": {
+      "username": "cf1f_93a69c",
+      "account_id": "3e8d0b41bc4457ffa6fa11f12a3e1b48a1055e8e89ea6e5a93d78df8a0378633"
+    }
+  },
+  "checks": [
+    "PASS search 0",
+    "PASS lookup username 0",
+    "PASS lookup account 0",
+    "PASS health 0",
+    "PASS search 1",
+    "PASS lookup username 1",
+    "PASS lookup account 1",
+    "PASS health 1",
+    "PASS search 2",
+    "PASS lookup username 2",
+    "PASS lookup account 2",
+    "PASS health 2",
+    "PASS search 3",
+    "PASS lookup username 3",
+    "PASS lookup account 3",
+    "PASS health 3",
+    "PASS search 4",
+    "PASS lookup username 4",
+    "PASS lookup account 4",
+    "PASS health 4",
+    "PASS search 5",
+    "PASS lookup username 5",
+    "PASS lookup account 5",
+    "PASS health 5",
+    "PASS search 6",
+    "PASS lookup username 6",
+    "PASS lookup account 6",
+    "PASS health 6",
+    "PASS search 7",
+    "PASS lookup username 7",
+    "PASS lookup account 7",
+    "PASS health 7",
+    "PASS search 8",
+    "PASS lookup username 8",
+    "PASS lookup account 8",
+    "PASS health 8",
+    "PASS search 9",
+    "PASS lookup username 9",
+    "PASS lookup account 9",
+    "PASS health 9",
+    "PASS search 10",
+    "PASS lookup username 10",
+    "PASS lookup account 10",
+    "PASS health 10",
+    "PASS search 11",
+    "PASS lookup username 11",
+    "PASS lookup account 11",
+    "PASS health 11",
+    "PASS search 12",
+    "PASS lookup username 12",
+    "PASS lookup account 12",
+    "PASS health 12",
+    "PASS search 13",
+    "PASS lookup username 13",
+    "PASS lookup account 13",
+    "PASS health 13",
+    "PASS search 14",
+    "PASS lookup username 14",
+    "PASS lookup account 14",
+    "PASS health 14",
+    "PASS search 15",
+    "PASS lookup username 15",
+    "PASS lookup account 15",
+    "PASS health 15",
+    "PASS search 16",
+    "PASS lookup username 16",
+    "PASS lookup account 16",
+    "PASS health 16",
+    "PASS search 17",
+    "PASS lookup username 17",
+    "PASS lookup account 17",
+    "PASS health 17",
+    "PASS search 18",
+    "PASS lookup username 18",
+    "PASS lookup account 18",
+    "PASS health 18",
+    "PASS search 19",
+    "PASS lookup username 19",
+    "PASS lookup account 19",
+    "PASS health 19",
+    "PASS search 20",
+    "PASS lookup username 20",
+    "PASS lookup account 20",
+    "PASS health 20",
+    "PASS search 21",
+    "PASS lookup username 21",
+    "PASS lookup account 21",
+    "PASS health 21",
+    "PASS search 22",
+    "PASS lookup username 22",
+    "PASS lookup account 22",
+    "PASS health 22",
+    "PASS search 23",
+    "PASS lookup username 23",
+    "PASS lookup account 23",
+    "PASS health 23",
+    "PASS search 24",
+    "PASS lookup username 24",
+    "PASS lookup account 24",
+    "PASS health 24",
+    "PASS search 25",
+    "PASS lookup username 25",
+    "PASS lookup account 25",
+    "PASS health 25",
+    "PASS search 26",
+    "PASS lookup username 26",
+    "PASS lookup account 26",
+    "PASS health 26",
+    "PASS search 27",
+    "PASS lookup username 27",
+    "PASS lookup account 27",
+    "PASS health 27",
+    "PASS search 28",
+    "PASS lookup username 28",
+    "PASS lookup account 28",
+    "PASS health 28",
+    "PASS search 29",
+    "PASS lookup username 29",
+    "PASS lookup account 29",
+    "PASS health 29",
+    "PASS unknown username 404"
+  ],
+  "requestCount": 122,
+  "failedChecks": 0
+}

@@ -1,0 +1,7 @@
+{
+ "url": "polygon-rpc eth_call x3 (publicnode) to CTF 0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+ "recorded_at": "2026-11-06T05:16:30Z",
+ "status": 200,
+ "content_type": "application/json",
+ "body": "{\n \"condition_id\": \"0x03c2271926c13386ceabaee1f925b9329a6d1472897831ccdb93f666f8105c7e\",\n \"calls\": [\n  {\n   \"call\": \"payoutDenominator\",\n   \"result\": \"0x0000000000000000000000000000000000000000000000000000000000000001\"\n  },\n  {\n   \"call\": \"payoutNumerators(0)\",\n   \"result\": \"0x0000000000000000000000000000000000000000000000000000000000000001\"\n  },\n  {\n   \"call\": \"payoutNumerators(1)\",\n   \"result\": \"0x0000000000000000000000000000000000000000000000000000000000000000\"\n  }\n ]\n}"
+}

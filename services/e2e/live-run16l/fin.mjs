@@ -1,0 +1,12 @@
+import fs from "node:fs";
+import { account, balance } from "./lib.mjs";
+import * as C from "./config.mjs";
+const a = await account(C.OPERATOR);
+const b = await a.viewFunction({ contractId: C.ESCROW, methodName: "get_bet", args: { bet_id: 1 } });
+const nb = BigInt(b.proposed_at) + 3600n * 1000000000n;
+const ms = Number(nb / 1000000n);
+const r = JSON.parse(fs.readFileSync("results.json"));
+const bal = {}; for (const [k, v] of Object.entries({ dev: C.OPERATOR, escrow: C.ESCROW, keeper: C.KEEPER, attest1: "attest1.praetorial-dev-1101.testnet" })) bal[k] = await balance(v);
+r.final = { bet_status: b.status, outcome: b.outcome, proposed_at_ns: b.proposed_at, finalize_not_before_utc: new Date(ms).toISOString(), finalize_not_before_et: new Date(ms).toLocaleString("en-US", { timeZone: "America/New_York" }) + " ET", balances_end_yocto: bal };
+fs.writeFileSync("results.json", JSON.stringify(r, null, 1));
+console.log(JSON.stringify(r.final));

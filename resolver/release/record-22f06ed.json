@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "22f06ed156a306dab4f2b15d2874d67083e3b601",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; any known QEMU/linker SIGSEGV flake attempts were retried",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-dfa20586.json (dc79520f...). Item 16k2 (D-RESOLVE8a: every venue gap slot must be covered by another counted venue) changes resolver code, so the wasm hash and the bind:wasm outcome/attest pubkeys change: the D-KEY2 report-pubkey bootstrap must be redone against THIS hash. Built from 22f06ed (the last code commit; later commits are docs/record only). Routes docker-run-1, docker-run-2, fresh-container all byte-identical (cmp). Not uploaded."
+  }
+}

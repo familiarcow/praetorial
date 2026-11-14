@@ -1,0 +1,111 @@
+{
+ "cases": [
+  {
+   "expect_outcome": "YES",
+   "expect_reason": "unanimous panel overturns the standing outcome",
+   "name": "unanimous_overturns",
+   "standing_outcome": "NO",
+   "votes": [
+    "YES",
+    "YES",
+    "YES"
+   ]
+  },
+  {
+   "expect_outcome": "NO",
+   "expect_reason": "unanimous panel affirms the standing outcome",
+   "name": "unanimous_affirms",
+   "standing_outcome": "NO",
+   "votes": [
+    "NO",
+    "NO",
+    "NO"
+   ]
+  },
+  {
+   "expect_outcome": "VOID",
+   "expect_reason": "majority of the panel disagrees with the standing outcome but is not unanimous",
+   "name": "majority_against_not_unanimous_voids",
+   "standing_outcome": "NO",
+   "votes": [
+    "YES",
+    "VOID",
+    "NO"
+   ]
+  },
+  {
+   "expect_outcome": "NO",
+   "expect_reason": "no majority against the standing outcome; it stands",
+   "name": "split_the_other_way_stands",
+   "standing_outcome": "NO",
+   "votes": [
+    "YES",
+    "NO",
+    "NO"
+   ]
+  },
+  {
+   "expect_outcome": "VOID",
+   "expect_reason": "unanimous panel overturns the standing outcome",
+   "name": "unanimous_void_overturns",
+   "standing_outcome": "YES",
+   "votes": [
+    "VOID",
+    "VOID",
+    "VOID"
+   ]
+  },
+  {
+   "expect_outcome": "VOID",
+   "expect_reason": "majority of the panel disagrees with the standing outcome but is not unanimous",
+   "name": "5family_majority_against_voids",
+   "standing_outcome": "NO",
+   "votes": [
+    "YES",
+    "YES",
+    "VOID",
+    "NO",
+    "NO"
+   ]
+  },
+  {
+   "expect_outcome": "NO",
+   "expect_reason": "no majority against the standing outcome; it stands",
+   "name": "5family_exact_half_stands",
+   "standing_outcome": "NO",
+   "votes": [
+    "YES",
+    "VOID",
+    "NO",
+    "NO",
+    "NO"
+   ]
+  }
+ ],
+ "panels": [
+  {
+   "panel": {
+    "debate": false,
+    "families": [
+     "family_a",
+     "family_b",
+     "family_c"
+    ]
+   },
+   "round_no": 1
+  },
+  {
+   "panel": {
+    "debate": true,
+    "families": [
+     "family_a",
+     "family_b",
+     "family_c",
+     "family_d",
+     "family_e"
+    ]
+   },
+   "round_no": 2
+  }
+ ]
+}

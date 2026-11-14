@@ -1,0 +1,59 @@
+# CF1c2 notifier Worker (D-HOST3). NO secrets in this file: NOTIFIER_CONTACT_KEY (AES-256-GCM key for contacts at rest) and the
+# Telegram bot token (TELEGRAM_BOT_TOKEN) are Worker secrets (`wrangler secret put ...`, see README.md). NO cron trigger here
+# either: the account allows 5 in total and the keeper Worker's single `* * * * *` dispatcher (workers/common/src/dispatcher.ts)
+# runs this service's periodic job (notifier-tick) through the NOTIFIER_SERVICE binding declared in the keeper's toml.
+name = "praetorial-notifier-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# Reachable only through the service binding, never on a public workers.dev URL.
+workers_dev = false
+# Deliberately no node compat flag: the bundle must run on bare workerd + WebCrypto.
+
+[[durable_objects.bindings]]
+name = "NOTIFIER"
+class_name = "NotifierDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["NotifierDO"]
+
+# Non-secret configuration (testnet). Account/contract ids are public.
+[vars]
+NEAR_NETWORK_ID = "testnet"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+# NOKEY1b (D-UPGRADE1): frz3 (primary, resolver 8791413f) + frz2 (in-flight bets: DR1, DR7, 19-26). Same frozen escrow source, both v1.
+ESCROW_CONTRACTS = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet@v1,praetorial-frz2-2611091914.praetorial-dev-1101.testnet@v1"
+INTENTS_CONTRACT_ID = "intents-mock.praetorial-dev-1101.testnet"
+# CS1 (D-DSY1): independent second testnet RPC (Intear) + NEAR RPC; without it every Settled/Voided bet stays "settling, confirming".
+NEAR_RPC_FALLBACKS = "https://testnet-rpc.intea.rs,https://rpc.testnet.near.org"
+# NOTIFIER_ASSET_PRICES = '{"usdc.fakes.testnet":{"decimals":6,"usdPerToken":1}}'
+# NOTIFIER_BET_LINK_BASE = "https://app.example/bet"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-notifier-mainnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = false
+
+[[env.mainnet.durable_objects.bindings]]
+name = "NOTIFIER"
+class_name = "NotifierDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["NotifierDO"]
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+# MAINPREP1 (D-DSY1): independent second RPC (Intear) + NEAR Foundation RPC; both answered mainnet views 2026-11-10.
+NEAR_RPC_FALLBACKS = "https://rpc.intea.rs,https://rpc.mainnet.near.org"
+# DOM1: Telegram bet links go to the praetorial.com apex (custom domain on praetorial-web-mainnet).
+NOTIFIER_BET_LINK_BASE = "https://praetorial.com/bet"
+# MAINPREP1: high-stake USD valuation for the two stables (volatile assets are unpriced -> skipped and logged, never mis-valued).
+NOTIFIER_ASSET_PRICES = '{"nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1":{"decimals":6,"usdPerToken":1},"nep141:usdt.tether-token.near":{"decimals":6,"usdPerToken":1}}'

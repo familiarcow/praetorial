@@ -1,0 +1,179 @@
+{
+  "txs": [
+    {
+      "step": "mint wNEAR (betting balance) to maker",
+      "by": "harness",
+      "hash": "C5vUTWV4YDgY7PuwWqucZsHazThNu4wC5MUV5mCNM5vw",
+      "url": "https://testnet.nearblocks.io/txns/C5vUTWV4YDgY7PuwWqucZsHazThNu4wC5MUV5mCNM5vw"
+    },
+    {
+      "step": "mint wNEAR (betting balance) to taker",
+      "by": "harness",
+      "hash": "AKKTULtKY8AwcSkojoKnqX6bPboeUAEjYeZMnuTURWho",
+      "url": "https://testnet.nearblocks.io/txns/AKKTULtKY8AwcSkojoKnqX6bPboeUAEjYeZMnuTURWho"
+    },
+    {
+      "step": "tNEAR to taker implicit",
+      "by": "harness",
+      "hash": "A2rarFy9mAHtbdDJHAQbtEEBcGTeXVBwVg9iYiRpfGj9",
+      "url": "https://testnet.nearblocks.io/txns/A2rarFy9mAHtbdDJHAQbtEEBcGTeXVBwVg9iYiRpfGj9"
+    },
+    {
+      "step": "cancel orphan bet 32 (web, maker)",
+      "by": "web",
+      "hash": null,
+      "url": null
+    },
+    {
+      "step": "open (web, maker)",
+      "by": "web",
+      "hash": null,
+      "url": null
+    },
+    {
+      "step": "take (web, taker)",
+      "by": "web",
+      "hash": "4ybG5eGq8GXRwP9nLQQuceeyThnwddGjJmvNC6Y3hMrn",
+      "url": "https://testnet.nearblocks.io/txns/4ybG5eGq8GXRwP9nLQQuceeyThnwddGjJmvNC6Y3hMrn"
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T21:06:41.167Z"
+    },
+    {
+      "s": "orphan bet cancelled",
+      "t": "2026-11-10T21:07:40.531Z",
+      "bet": 32,
+      "status": "Cancelled"
+    },
+    {
+      "s": "maker opened the AI bet via web",
+      "t": "2026-11-10T21:08:20.924Z",
+      "betId": 33
+    },
+    {
+      "s": "maker made the taker's invite link",
+      "t": "2026-11-10T21:08:22.202Z"
+    },
+    {
+      "s": "DR3 phase 1 done; resume once the CLI product is out with DR3_PHASE=finish",
+      "t": "2026-11-10T21:08:35.213Z"
+    }
+  ],
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "taker": "e1a903aae7db7c57dd581ca654ef53fe74269d6e941e4c8b2b08ce5a25f3f21f",
+  "market": {
+    "station": "KNYC",
+    "date": "2026-11-11",
+    "op": ">=",
+    "x_f": 61
+  },
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "120915102134817025360869577",
+    "taker": "3100000000000000000000000",
+    "fee": "3749149565217391304347824",
+    "escrow": "55891180000000000000000000"
+  },
+  "orphan": {
+    "bet": 32,
+    "status": "Cancelled"
+  },
+  "username_taker": "claimed dr3t5da0c75a via the first-login dialog",
+  "review_text": "You are betting that the daily high at KNYC on 2026-11-11 is at or above 61°F. Sources: NWS CLI (api.weather.gov), IEM CLI (mesonet.agron.iastate.edu). Decided by 2026-11-11.\n\nThe AI decides, using these sources: NWS CLI (api.weather.gov), IEM CLI (mesonet.agron.iastate.edu).\n\nStake\t3 NEAR\nNetwork storage\tloading from the contract...\nYou pay now\tloading from the contract...\nDeadlines\nOffer expires: 2026-11-11 05:00 UTC (the event starts then, so that is as long as it can stay open).\nEvent: decided by 2026-11-11.\nChallenge window: 1h per round, 2 rounds.\n\nIf you lose, you lose your 3 NEAR stake. You can't lose more than what you pay now.\n\nRefunds\nNobody takes it: full refund.\nThe AI can't decide (VOID): you both get your stakes back and no fee is charged.\nIf the app is shut down, anyone can trigger a full refund.\nMaker stakes 3 NEAR\nTaker stakes 3 NEAR\nStorage charge, maker side: loading from the contract... (paid in NEAR, on top of the stake)\nStorage charge, taker side: loading from the contract... (paid in NEAR, on top of the stake)\nOdds: 1:1\nSettlement period: 1h\nThis offer closes 2026-11-11 05:00 UTC (the event starts then, so that is as long as it can stay open).\nFee: 1% of pot per asset, minimum 0.14 NEAR per side (maker side 0.14 NEAR, taker side 0.14 NEAR)\nTaker can pay with\n3 NEAR (same asset, 1:1 by odds)\n\nInvite by link: only people you send a personal invite link to can take this offer.\n\nReferee: none -- the AI judges this bet.\n\nTerms fingerprint (sha256 of the exact terms that will be locked): 4f426bd2ad0f88442dbf89f0dc4256140c83047d4d1de3fea4df29e517af7f98\n\nMoney can only go to you or the other party.\n\nready",
+  "sourcecheck_status": "The AI can read these sources. Checked at 21:08 UTC.",
+  "betId": 33,
+  "bet_open": {
+    "envelope": {
+      "bet_id": 33,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "23b5d638381250631fb67fedb7b981e16063ce19b46d72a5981553b0e5966536"
+      },
+      "terms_hash": "4f426bd2ad0f88442dbf89f0dc4256140c83047d4d1de3fea4df29e517af7f98",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"date\":\"2026-11-11\",\"op\":\">=\",\"station\":\"KNYC\",\"x_f\":61},\"template\":{\"id\":\"nws_daily_high\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794373200000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1795064400000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "16895000000000000000000",
+    "storage_taker": "0",
+    "status": "Open",
+    "taker": null,
+    "created_at": 1794344898209558500,
+    "taken_at": null,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "balances_after_take": {
+    "maker": "123931997134817025360869577",
+    "taker": "83105000000000000000000",
+    "fee": "3749149565217391304347824",
+    "escrow": "55891180000000000000000000"
+  }
+}

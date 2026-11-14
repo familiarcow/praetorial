@@ -1,0 +1,35 @@
+{
+  "txs": [
+    {
+      "step": "setup: fund fresh user 0.2 NEAR",
+      "hash": "HDSksa26ZU9sxpVTSxNb9jQaN8cPN9yxcm2C3KxW1bz1",
+      "url": "https://testnet.nearblocks.io/txns/HDSksa26ZU9sxpVTSxNb9jQaN8cPN9yxcm2C3KxW1bz1"
+    },
+    {
+      "step": "1 relayed near_deposit 0.1 NEAR on wrap.testnet",
+      "hash": "9ciqLPywxxp4JLaJJygeDPrRhUJTkLG21P5pFbkSNDua",
+      "url": "https://testnet.nearblocks.io/txns/9ciqLPywxxp4JLaJJygeDPrRhUJTkLG21P5pFbkSNDua"
+    },
+    {
+      "step": "2 relayed ft_transfer_call wrap.testnet -> intents (msg json)",
+      "error": "NEAR RPC error (send_tx): {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{},\"name\":\"INVALID_TRANSACTION\"},\"code\":-32000,\"message\":\"Server error\",\"data\":{\"TxExecutionError\":{\"InvalidTxError\":{\"InvalidNonce\":{\"ak_nonce\":276863986000002,\"tx_nonce\":276863986000002}}}}}"
+    }
+  ],
+  "user": "c1691e9e7e1e3f07b34533884f4c81002f7586b10dd82178de351e0d53db2c0d",
+  "msgFormat": "json",
+  "network": "testnet",
+  "intentsStorageOnWnearBefore": {
+    "total": "1250000000000000000000",
+    "available": "0"
+  },
+  "userStorageOnWnearBefore": null,
+  "mtBalanceBefore": "0",
+  "nearDepositOutcome": {
+    "failures": [],
+    "logs": [
+      "Deposit 98750000000000000000000 NEAR to c1691e9e7e1e3f07b34533884f4c81002f7586b10dd82178de351e0d53db2c0d"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterWrap": "98750000000000000000000"
+}

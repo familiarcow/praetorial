@@ -1,0 +1,30 @@
+// RELAY500 live probe (testnet only): fresh implicit account, funded by the dev account, signs a wrap.testnet near_deposit
+// delegate and POSTs it to the deployed relayer Worker. Never prints keys. usage (from services/): NEAR_RPC_URL=<testnet rpc> tsx relayer/scripts/relay500_probe.ts
+import { KeyPair, connect, keyStores } from "near-api-js";
+import { actionCreators, buildDelegateAction, Signature, SCHEMA, encodeDelegateAction } from "@near-js/transactions";
+import * as borsh from "borsh";
+import { createHash } from "node:crypto";
+import fs from "node:fs";
+import { DEFAULT_TESTNET_RPC_URL } from "@praetorial/common/rpc.js";
+const DEV = "praetorial-dev-1101.testnet", RPC = process.env.NEAR_RPC_URL ?? DEFAULT_TESTNET_RPC_URL;
+const URL_ = process.env.RELAYER_URL ?? "https://praetorial-relayer-testnet.familiarcow.workers.dev";
+const devKey = JSON.parse(fs.readFileSync(`${process.env.HOME}/.near-credentials/testnet/${DEV}.json`, "utf8")).private_key;
+const ks = new keyStores.InMemoryKeyStore();
+await ks.setKey("testnet", DEV, KeyPair.fromString(devKey));
+const dev: any = await (await connect({ networkId: "testnet", nodeUrl: RPC, keyStore: ks })).account(DEV);
+const userKey = KeyPair.fromRandom("ed25519");
+const pub: any = userKey.getPublicKey();
+const user = Buffer.from(pub.data).toString("hex");
+const f = await dev.sendMoney(user, 100_000_000_000_000_000_000_000n);
+console.log("fund tx", f.transaction.hash);
+await new Promise((r) => setTimeout(r, 4000));
+const provider = dev.connection.provider;
+const ak: any = await provider.query({ request_type: "view_access_key", finality: "final", account_id: user, public_key: pub.toString() });
+const blk: any = await provider.block({ finality: "final" });
+const da = buildDelegateAction({ senderId: user, receiverId: "wrap.testnet", actions: [actionCreators.functionCall("near_deposit", {}, 30_000_000_000_000n, 50_000_000_000_000_000_000_000n)], nonce: BigInt(ak.nonce) + 1n, maxBlockHeight: BigInt(blk.header.height) + 100n, publicKey: pub });
+const hash = createHash("sha256").update(Buffer.from(encodeDelegateAction(da))).digest();
+const signature = new Signature({ keyType: 0, data: userKey.sign(hash).signature });
+const b64 = Buffer.from(borsh.serialize(SCHEMA.SignedDelegate, { delegateAction: da, signature })).toString("base64");
+console.log("user", user);
+const r = await fetch(`${URL_}/relay`, { method: "POST", body: JSON.stringify({ signedDelegate: b64 }) });
+console.log("HTTP", r.status, await r.text());

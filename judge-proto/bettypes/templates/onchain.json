@@ -1,0 +1,50 @@
+{
+  "_comment": "TEMPLATE (not a prototype): on-chain balance or event (NEAR RPC + independent RPC)",
+  "claim": "The NEAR mainnet account example.near holds at least 100 NEAR (view_account amount >= 100 * 10^24 yoctoNEAR) at finalized block height 230000000 or later, on or before 2026-12-31T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show a finalized view_account result for example.near with amount at least 100000000000000000000000000 yoctoNEAR at a block height of 230000000 or higher and block time on or before 2026-12-31T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "NO_DATA_FALLBACK_V1",
+    "RETRACTION_V1"
+  ],
+  "custom_definitions": [
+    "Finality: only finality=final query results count; optimistic or non-final blocks never do.",
+    "Balance means the account's liquid amount field, excluding locked/staked balance, at the quoted block, pinned by block hash in the exhibit.",
+    "Two independent RPC providers must return the same block hash and amount at that height; a disagreement is a source conflict (VOID), not a majority.",
+    "Reorgs: NEAR has single-slot finality; for Ethereum-family chains require 64 blocks of depth.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-06T00:00:00Z",
+    "window_end": "2026-12-31T00:00:00Z",
+    "evidence_cutoff": "2027-01-07T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "NEAR RPC rpc.mainnet.near.org"
+    },
+    {
+      "id": "S1",
+      "publisher": "NEAR RPC independent provider (fastnear)"
+    }
+  ],
+  "source_classes": {
+    "NEAR RPC rpc.mainnet.near.org": "primary",
+    "NEAR RPC independent provider (fastnear)": "primary"
+  },
+  "window_close": "2027-01-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "onchain",
+    "fetch": "POST https://rpc.mainnet.near.org {method: query, request_type: view_account, block_id: <height>}"
+  }
+}

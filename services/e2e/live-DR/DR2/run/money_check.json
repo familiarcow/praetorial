@@ -1,0 +1,22 @@
+{
+  "status": "Settled",
+  "outcome": "YES",
+  "truth": "YES",
+  "finalize_tx": "Bc15i7y87gtSgVT4ZQZppfSf5jeGjuJhhCPrK4sbrjjq",
+  "finalize_by": "keeper",
+  "payout_bet_ids": [
+    35
+  ],
+  "is_fully_paid": true,
+  "pending_undone": [],
+  "expected": {
+    "maker": "5728260869565217391304348",
+    "taker": "0",
+    "fee": "306109130434782608695652"
+  },
+  "receipt_credits": {
+    "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7": "5728260869565217391304348",
+    "fee.praetorial-dev-1101.testnet": "306109130434782608695652"
+  },
+  "mismatches": []
+}

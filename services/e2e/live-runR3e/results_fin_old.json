@@ -1,0 +1,147 @@
+{
+  "txs": [
+    {
+      "step": "finalize_bet1",
+      "hash": "AsBnfX8UUBVLEbTLHeh4ERbQCNSiaFKQ8Dx4EqEbjVwU",
+      "url": "https://testnet.nearblocks.io/txns/AsBnfX8UUBVLEbTLHeh4ERbQCNSiaFKQ8Dx4EqEbjVwU",
+      "status": "Success"
+    },
+    {
+      "step": "finalize_bet2",
+      "hash": "8MKNnVYuh7jq13xpr12CfNpuDoenMu4b7neFJfGiUCzP",
+      "url": "https://testnet.nearblocks.io/txns/8MKNnVYuh7jq13xpr12CfNpuDoenMu4b7neFJfGiUCzP",
+      "status": "Success"
+    }
+  ],
+  "before": {
+    "ts": "2026-11-07T01:26:11.553Z",
+    "balances": {
+      "maker1": "3879848000",
+      "taker1": "3705367000",
+      "fee": "2564000",
+      "praetorial-r3c-11061912": "4032000"
+    },
+    "bets": {
+      "1": {
+        "status": "Proposed",
+        "outcome": "VOID",
+        "proposed_at": 1794011339096890600,
+        "maker": "maker1.praetorial-dev-1101.testnet",
+        "taker": "taker1.praetorial-dev-1101.testnet",
+        "stake_maker": "1000000",
+        "stake_taker": "1000000",
+        "storage": "8000"
+      },
+      "2": {
+        "status": "Proposed",
+        "outcome": "VOID",
+        "proposed_at": 1794011822121000000,
+        "maker": "maker1.praetorial-dev-1101.testnet",
+        "taker": "taker1.praetorial-dev-1101.testnet",
+        "stake_maker": "1000000",
+        "stake_taker": "1000000",
+        "storage": "8000"
+      }
+    },
+    "pending": []
+  },
+  "after": {
+    "ts": "2026-11-07T01:37:39.143Z",
+    "balances": {
+      "maker1": "3881848000",
+      "taker1": "3707367000",
+      "fee": "2596000",
+      "praetorial-r3c-11061912": "0"
+    },
+    "bets": {
+      "1": {
+        "status": "Settled",
+        "outcome": "VOID",
+        "proposed_at": 1794011339096890600,
+        "maker": "maker1.praetorial-dev-1101.testnet",
+        "taker": "taker1.praetorial-dev-1101.testnet",
+        "stake_maker": "1000000",
+        "stake_taker": "1000000",
+        "storage": "8000"
+      },
+      "2": {
+        "status": "Settled",
+        "outcome": "VOID",
+        "proposed_at": 1794011822121000000,
+        "maker": "maker1.praetorial-dev-1101.testnet",
+        "taker": "taker1.praetorial-dev-1101.testnet",
+        "stake_maker": "1000000",
+        "stake_taker": "1000000",
+        "storage": "8000"
+      }
+    },
+    "pending": [
+      {
+        "id": 1,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 2,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 3,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "void_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 4,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 5,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "1000000",
+        "reason": "void_refund_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 6,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "void_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      }
+    ]
+  }
+}

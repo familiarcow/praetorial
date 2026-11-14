@@ -1,0 +1,646 @@
+{
+  "txs": [
+    {
+      "step": "mint wNEAR (betting balance) to maker",
+      "hash": "6BTRpxNcnd9FysviZXApjmuqC1iJotQufAxLXpBC4G8f",
+      "url": "https://testnet.nearblocks.io/txns/6BTRpxNcnd9FysviZXApjmuqC1iJotQufAxLXpBC4G8f"
+    },
+    {
+      "step": "mint wNEAR (betting balance) to taker",
+      "hash": "AN7jwRatNNekTgtzrKiMu9En2Lpz63wqEV7yNv8RXyUe",
+      "url": "https://testnet.nearblocks.io/txns/AN7jwRatNNekTgtzrKiMu9En2Lpz63wqEV7yNv8RXyUe"
+    },
+    {
+      "step": "cancel orphan bet 24 (web, maker)",
+      "hash": "5jyD4odeRmdfxqcszb72gvTQBTUjNMyS2jL9iC9ALZnf",
+      "url": "https://testnet.nearblocks.io/txns/5jyD4odeRmdfxqcszb72gvTQBTUjNMyS2jL9iC9ALZnf"
+    },
+    {
+      "step": "open (web, maker; txHash shown on the share screen, else the relay response)",
+      "hash": null,
+      "url": null
+    },
+    {
+      "step": "take (web, taker)",
+      "hash": "4ZjvNFSzDpcHW2qVWYFw3EJVRpJ7qA4cmgEEAH3Y783x",
+      "url": "https://testnet.nearblocks.io/txns/4ZjvNFSzDpcHW2qVWYFw3EJVRpJ7qA4cmgEEAH3Y783x"
+    },
+    {
+      "step": "tNEAR top-up to taker for the resolution deposit",
+      "hash": "5Y5FuGWdGyUpNiua9ErAoeWAdfd8UWpcKZBE7LStfdhC",
+      "url": "https://testnet.nearblocks.io/txns/5Y5FuGWdGyUpNiua9ErAoeWAdfd8UWpcKZBE7LStfdhC"
+    },
+    {
+      "step": "request_resolution (web)",
+      "hash": null,
+      "url": null
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T06:52:49.595Z"
+    },
+    {
+      "s": "orphan bet cancelled",
+      "t": "2026-11-10T06:54:37.923Z",
+      "bet": 24,
+      "status": "Cancelled"
+    },
+    {
+      "s": "maker opened the AI bet via web",
+      "t": "2026-11-10T06:55:03.717Z",
+      "betId": 25
+    },
+    {
+      "s": "maker made the taker's invite link",
+      "t": "2026-11-10T06:55:05.034Z"
+    },
+    {
+      "s": "taker took via invite link",
+      "t": "2026-11-10T06:55:21.583Z"
+    },
+    {
+      "s": "DR4 phase 1 done; resume after the evidence cutoff with DR4_PHASE=finish",
+      "t": "2026-11-10T06:55:22.394Z",
+      "window_end": "2026-11-10T07:08",
+      "earliest_request_resolution": "2026-11-10T07:12:00.000Z"
+    },
+    {
+      "s": "cutoff passed; fetching independent ground truth (both pages, raw saved)",
+      "t": "2026-11-10T07:12:00.087Z"
+    },
+    {
+      "s": "ground_truth.json written",
+      "t": "2026-11-10T07:12:01.073Z",
+      "outcome": "YES",
+      "breached": []
+    },
+    {
+      "s": "request_resolution clicked in the web",
+      "t": "2026-11-10T07:13:00.763Z"
+    }
+  ],
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "taker": "35edd24982644195357b16dc61e68db6172b292ba7df043639525126d136f0fe",
+  "scenario": {
+    "claim": "BTC stays below $74690 for the whole session",
+    "element": "Does BTC stay below $74690 for the whole session?",
+    "level_usd": 74690,
+    "coinbase_spot_at_choice": 74598.82,
+    "pct_above_spot": 0.122,
+    "window": {
+      "start": "2026-11-10T06:58",
+      "end": "2026-11-10T07:08",
+      "cutoff": "2026-11-10T07:10"
+    }
+  },
+  "relayer_responses": [
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Praetorial</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-BfeeDAsi.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DODEeKc3.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-DODEeKc3.css",
+      "method": "GET",
+      "status": 200,
+      "body": "@layer reset,astryx-base,astryx-theme;@layer reset{:where(*),:where(*):before,:where(*):after{box-sizing:border-box}:where(*),:where(*):before,:where(*):after{border-width:0;border-style:solid;border-color:currentColor}:where(html){line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-si"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-BfeeDAsi.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/tempoChains-2uJ5F5se-DzAIabUh.js\",\"assets/defineChain-7I0Ce1VT.js\",\"assets/sendTransaction-BQkqgNlz.js\",\"assets/writeContract-CgRD8KxN.js\",\"assets/parseTransaction-XHyLiMSt.js\",\"assets/index-D_2uOCfY.js\",\"assets/hooks.module-D-gkpI6U.j"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/sendTransaction-BQkqgNlz.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{E as X,D as k,eh as H,bf as J,fv as K,B as Q,ei as E,fw as V,bX as Y,bs as U,fx as Z,fy as $,fz as aa,fA as ta,fB as ea,fC as M,fD as ra,ej as na}from\"./index-BfeeDAsi.js\";function sa({chain:t,currentChainId:r}){if(!t)throw new X;if(r!==t.id)throw new k({chain:t,currentChainId:r})}const R=new"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-nibyPLVP.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function r(e){return new Promise((t,n)=>{e.oncomplete=e.onsuccess=()=>t(e.result),e.onabort=e.onerror=()=>n(e.error)})}function l(e,t){const n=indexedDB.open(e);n.onupgradeneeded=()=>n.result.createObjectStore(t);const u=r(n);return(a,i)=>u.then(s=>i(s.transaction(t,a).objectStore(t)))}let c;functio"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/parseSignature-BDHDVRe5.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{g as w,bu as l,cf as x,a7 as z,cp as y,cL as M,bj as T,g$ as k,co as h,h0 as E,x as L,h1 as N,ba as P,fy as S,bH as B,cc as A,h2 as H}from\"./index-BfeeDAsi.js\";function C(r,e){if(r.length!==e.length)throw new w({expectedLength:r.length,givenLength:e.length});const o=[];for(let n=0;n<r.length;"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/defineChain-7I0Ce1VT.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function o(c){const n={formatters:void 0,fees:void 0,serializers:void 0,...c};function t(i){return e=>{const r=typeof e==\"function\"?e(i):e,s={...i,...r};return Object.assign(s,{extend:t(s)})}}return Object.assign(n,{extend:t(n)})}function u(){return{}}export{o as d,u as e};\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/hooks.module-D-gkpI6U.js",
+      "method": "GET",
+      "status": 200,
+      "body": "var I,d,a_,x,__,p_,j,J,O,z,N={},h_=[],x_=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,K=Array.isArray;function H(e,_){for(var t in _)e[t]=_[t];return e}function d_(e){e&&e.parentNode&&e.parentNode.removeChild(e)}function C_(e,_,t){var n,o,i,c={};for(i in _)i==\"key\"?n=_[i]:i==\""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/prepareAuthorization-Dp_YL2n4.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{B as v,bL as D,co as b,bs as T,b9 as L,t as q,ca as x,fD as j,ej as I,gU as B,cd as E,cV as O,cJ as N,cM as R,gV as M,gW as W,gX as z,cY as P,ei as S,eh as U,cg as $,fw as H,gY as V}from\"./index-BfeeDAsi.js\";import{s as Y}from\"./sendTransaction-BQkqgNlz.js\";class G extends v{constructor(t){su"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/wallet-connect-D29SXjdm-Btwz5cOD.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{d1 as t,d5 as A}from\"./index-BfeeDAsi.js\";const l=({style:C,...e})=>{let d=t();return A.jsxs(\"svg\",{width:\"28\",height:\"28\",viewBox:\"0 0 28 28\",fill:\"none\",xmlns:\"http://www.w3.org/2000/svg\",style:{height:\"28px\",width:\"28px\",...C},...e,children:[A.jsx(\"rect\",{width:\"28\",height:\"28\",rx:\"3\",fill"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-D_2uOCfY.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{l as dr,B as lr,_ as pi,h as Ue,c as cn,y as un,T as fi}from\"./hooks.module-D-gkpI6U.js\";import{hg as mi,bs as Ne,cp as se,co as N,cG as _r,c9 as Lt,bH as st,ci as me,ei as ge,hX as $r,hp as dn,cs as hi,B,hY as yi,bT as pr,by as gi,J as bi,I as vi,H as wi,ca as ke,eh as Zn,bL as de,hZ as xi,e"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/coinbase-D6cLRNDa-CeAnRvpV.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{hg as Tn,hR as Rn,hS as On,hT as Nn,h3 as de,h4 as Dn,hU as Un,hV as jn,hW as Bn}from\"./index-BfeeDAsi.js\";import{B as Se,_ as y,c as ee,h as Ke,y as Wn}from\"./hooks.module-D-gkpI6U.js\";class R{constructor(e,n){this.scope=e,this.module=n}storeObject(e,n){this.setItem(e,JSON.stringify(n))}load"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/walletconnect-v2-wlC4EZZ7-B4CaciaB.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/core-DbZrRwlN.js\",\"assets/index-BfeeDAsi.js\",\"assets/index-DODEeKc3.css\",\"assets/index-nibyPLVP.js\"])))=>i.map(i=>d[i]);\nimport{hg as ic,i3 as Py,i2 as Cy,i1 as Ns,i4 as Ft,hQ as By,hS as Ty,h3 as Ie,i5 as io,i6 as Ry,i7 as Uy,h4 as so"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/lookup/account/8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"username\":\"rc1_35626\"}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/24",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Praetorial</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-BfeeDAsi.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DODEeKc3.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-DODEeKc3.css",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-BfeeDAsi.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/defineChain-7I0Ce1VT.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/hooks.module-D-gkpI6U.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/parseSignature-BDHDVRe5.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/wallet-connect-D29SXjdm-Btwz5cOD.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-D_2uOCfY.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/sendTransaction-BQkqgNlz.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/walletconnect-v2-wlC4EZZ7-B4CaciaB.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/coinbase-D6cLRNDa-CeAnRvpV.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-nibyPLVP.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/prepareAuthorization-Dp_YL2n4.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/24",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/24",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/lookup/account/8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"username\":\"rc1_35626\"}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/relayer/relay",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"txHash\":\"5jyD4odeRmdfxqcszb72gvTQBTUjNMyS2jL9iC9ALZnf\"}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Praetorial</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-BfeeDAsi.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DODEeKc3.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-DODEeKc3.css",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-BfeeDAsi.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/defineChain-7I0Ce1VT.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/wallet-connect-D29SXjdm-Btwz5cOD.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/sendTransaction-BQkqgNlz.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/hooks.module-D-gkpI6U.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/coinbase-D6cLRNDa-CeAnRvpV.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/parseSignature-BDHDVRe5.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-nibyPLVP.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/prepareAuthorization-Dp_YL2n4.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-D_2uOCfY.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/walletconnect-v2-wlC4EZZ7-B4CaciaB.js",
+      "method": "GET",
+      "status": 304,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/lookup/account/8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"username\":\"rc1_35626\"}"
+    },
+    {
+      "url": "https://praetorial-sourcecheck-testnet.familiarcow.workers.dev/sourcecheck",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"spec_hash\":\"4e5c63247cbfbc3d6af92beb9ad7312b21f12adc7e76dd6ffacfedd80bb6ab7c\",\"checked_at\":\"1794293689631338496\",\"unreachable\":[],\"signing\":{\"pubkey_hex\":\"2be89b6565161859779d64f39fca6ba1aa99c500bc7687731bc40374dc866cfc\",\"signature_hex\":\"f0f549d5d071ed739959f4cd6520c722bf82851eeab2dcd68d"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/relayer/relay",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"txHash\":\"ANMaWWoKSGv5PMpGTVQQwyohkK6u6tpA7haD3F6nunxb\"}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/25",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Praetorial</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-CwXXn5Mt.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-dQj3koK6.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-dQj3koK6.css",
+      "method": "GET",
+      "status": 200,
+      "body": "@layer reset,astryx-base,astryx-theme;@layer reset{:where(*),:where(*):before,:where(*):after{box-sizing:border-box}:where(*),:where(*):before,:where(*):after{border-width:0;border-style:solid;border-color:currentColor}:where(html){line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-si"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-CwXXn5Mt.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/tempoChains-2uJ5F5se-nY31JsUW.js\",\"assets/defineChain-7I0Ce1VT.js\",\"assets/sendTransaction-d79jv-a7.js\",\"assets/writeContract-C8Op0JSM.js\",\"assets/parseTransaction-Cb237_79.js\",\"assets/index-BH4sIUB1.js\",\"assets/hooks.module-D-gkpI6U.j"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/lookup/account/35edd24982644195357b16dc61e68db6172b292ba7df043639525126d136f0fe",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"username\":\"dr4tac584n\"}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/hooks.module-D-gkpI6U.js",
+      "method": "GET",
+      "status": 200,
+      "body": "var I,d,a_,x,__,p_,j,J,O,z,N={},h_=[],x_=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,K=Array.isArray;function H(e,_){for(var t in _)e[t]=_[t];return e}function d_(e){e&&e.parentNode&&e.parentNode.removeChild(e)}function C_(e,_,t){var n,o,i,c={};for(i in _)i==\"key\"?n=_[i]:i==\""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-nibyPLVP.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function r(e){return new Promise((t,n)=>{e.oncomplete=e.onsuccess=()=>t(e.result),e.onabort=e.onerror=()=>n(e.error)})}function l(e,t){const n=indexedDB.open(e);n.onupgradeneeded=()=>n.result.createObjectStore(t);const u=r(n);return(a,i)=>u.then(s=>i(s.transaction(t,a).objectStore(t)))}let c;functio"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/defineChain-7I0Ce1VT.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function o(c){const n={formatters:void 0,fees:void 0,serializers:void 0,...c};function t(i){return e=>{const r=typeof e==\"function\"?e(i):e,s={...i,...r};return Object.assign(s,{extend:t(s)})}}return Object.assign(n,{extend:t(n)})}function u(){return{}}export{o as d,u as e};\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/sendTransaction-d79jv-a7.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{E as X,D as k,eh as H,bf as J,fv as K,B as Q,ei as E,fw as V,bX as Y,bs as U,fx as Z,fy as $,fz as aa,fA as ta,fB as ea,fC as M,fD as ra,ej as na}from\"./index-CwXXn5Mt.js\";function sa({chain:t,currentChainId:r}){if(!t)throw new X;if(r!==t.id)throw new k({chain:t,currentChainId:r})}const R=new"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/coinbase-D6cLRNDa-CYRHlTEm.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{hg as Tn,hR as Rn,hS as On,hT as Nn,h3 as de,h4 as Dn,hU as Un,hV as jn,hW as Bn}from\"./index-CwXXn5Mt.js\";import{B as Se,_ as y,c as ee,h as Ke,y as Wn}from\"./hooks.module-D-gkpI6U.js\";class R{constructor(e,n){this.scope=e,this.module=n}storeObject(e,n){this.setItem(e,JSON.stringify(n))}load"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/prepareAuthorization-CGHZl2ap.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{B as v,bL as D,co as b,bs as T,b9 as L,t as q,ca as x,fD as j,ej as I,gU as B,cd as E,cV as O,cJ as N,cM as R,gV as M,gW as W,gX as z,cY as P,ei as S,eh as U,cg as $,fw as H,gY as V}from\"./index-CwXXn5Mt.js\";import{s as Y}from\"./sendTransaction-d79jv-a7.js\";class G extends v{constructor(t){su"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/parseSignature-Ql9AvLZt.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{g as w,bu as l,cf as x,a7 as z,cp as y,cL as M,bj as T,g$ as k,co as h,h0 as E,x as L,h1 as N,ba as P,fy as S,bH as B,cc as A,h2 as H}from\"./index-CwXXn5Mt.js\";function C(r,e){if(r.length!==e.length)throw new w({expectedLength:r.length,givenLength:e.length});const o=[];for(let n=0;n<r.length;"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/wallet-connect-D29SXjdm-B5I0Zu8g.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{d1 as t,d5 as A}from\"./index-CwXXn5Mt.js\";const l=({style:C,...e})=>{let d=t();return A.jsxs(\"svg\",{width:\"28\",height:\"28\",viewBox:\"0 0 28 28\",fill:\"none\",xmlns:\"http://www.w3.org/2000/svg\",style:{height:\"28px\",width:\"28px\",...C},...e,children:[A.jsx(\"rect\",{width:\"28\",height:\"28\",rx:\"3\",fill"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/25",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-BH4sIUB1.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{l as dr,B as lr,_ as pi,h as Ue,c as cn,y as un,T as fi}from\"./hooks.module-D-gkpI6U.js\";import{hg as mi,bs as Ne,cp as se,co as N,cG as _r,c9 as Lt,bH as st,ci as me,ei as ge,hX as $r,hp as dn,cs as hi,B,hY as yi,bT as pr,by as gi,J as bi,I as vi,H as wi,ca as ke,eh as Zn,bL as de,hZ as xi,e"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/walletconnect-v2-wlC4EZZ7-CPgVqVDH.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/core-CeLDlTSe.js\",\"assets/index-CwXXn5Mt.js\",\"assets/index-dQj3koK6.css\",\"assets/index-nibyPLVP.js\"])))=>i.map(i=>d[i]);\nimport{hg as ic,i3 as Py,i2 as Cy,i1 as Ns,i4 as Ft,hQ as By,hS as Ty,h3 as Ie,i5 as io,i6 as Ry,i7 as Uy,h4 as so"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/25",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/relayer/relay",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"txHash\":\"6rh32jwK68qywrb4hrvA1KgkLauzXX4w2G2XseKyzmGR\"}"
+    }
+  ],
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "105944330038565760869565228",
+    "taker": "12400000000000000000000000",
+    "fee": "1852944782608695652173912",
+    "escrow": "26169690000000000000000000"
+  },
+  "orphan": {
+    "bet": 24,
+    "status": "Cancelled"
+  },
+  "builder_sentence": "You are betting that BTC stays below $74690 for the whole session. The other person bets it won't happen.",
+  "review_text": "You are betting that BTC stays below $74690 for the whole session. Sources: api.exchange.coinbase.com, www.bitstamp.net. Decided by 2026-11-10 07:08 UTC.\n\nThe AI decides, using these sources: api.exchange.coinbase.com, www.bitstamp.net.\n\nStake\t3 NEAR\nNetwork storage\tloading from the contract...\nYou pay now\tloading from the contract...\nDeadlines\nOffer expires: 2026-11-10 07:08 UTC (the event starts then, so that is as long as it can stay open).\nEvent: decided by 2026-11-10 07:08 UTC.\nChallenge window: 1h per round, 2 rounds.\n\nIf you lose, you lose your 3 NEAR stake. You can't lose more than what you pay now.\n\nRefunds\nNobody takes it: full refund.\nThe AI can't decide (VOID): you both get your stakes back and no fee is charged.\nIf the app is shut down, anyone can trigger a full refund.\nMaker stakes 3 NEAR\nTaker stakes 3 NEAR\nStorage charge, maker side: loading from the contract... (paid in NEAR, on top of the stake)\nStorage charge, taker side: loading from the contract... (paid in NEAR, on top of the stake)\nOdds: 1:1\nSettlement period: 1h\nThis offer closes 2026-11-10 07:08 UTC (the event starts then, so that is as long as it can stay open).\nFee: 1% of pot per asset, minimum 0.14 NEAR per side (maker side 0.14 NEAR, taker side 0.14 NEAR)\nTaker can pay with\n3 NEAR (same asset, 1:1 by odds)\n\nInvite by link: only people you send a personal invite link to can take this offer.\n\nReferee: none -- the AI judges this bet.\n\nTerms fingerprint (sha256 of the exact terms that will be locked): 4e5c63247cbfbc3d6af92beb9ad7312b21f12adc7e76dd6ffacfedd80bb6ab7c\n\nMoney can only go to you or the other party.\n\nready",
+  "sourcecheck_status": "The AI can read these sources. Checked at 06:54 UTC.",
+  "betId": 25,
+  "bet_open": {
+    "envelope": {
+      "bet_id": 25,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "51cf231d118a70528fa1bd762e6dfa0c3661810b510249e3a9accdf210295122"
+      },
+      "terms_hash": "4e5c63247cbfbc3d6af92beb9ad7312b21f12adc7e76dd6ffacfedd80bb6ab7c",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"claim\":\"BTC stays below $74690 for the whole session\",\"clauses\":[\"UTC_V1\",\"PARTIAL_NONE_V1\"],\"custom_definitions\":[\"Only candle data from the two listed venues counts; a 1-minute candle HIGH (the wick) is what is read, not the close.\",\"Fallback: if one named venue is unavailable the other must confirm; if fewer than two can be checked the outcome is VOID.\",\"No early settlement: the outcome is decided at the window end.\"],\"elements\":[{\"id\":\"e1\",\"q\":\"Does BTC stay below $74690 for the whole session?\"}],\"rule\":\"ALL\",\"source_classes\":{\"Bitstamp btcusd\":\"primary\",\"Coinbase BTC-USD\":\"primary\"},\"sources\":true,\"sources_allowed\":[{\"id\":\"S1\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S2\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"}],\"ticker_pins\":{\"Bitstamp btcusd\":\"btcusd\",\"Coinbase BTC-USD\":\"BTC-USD\"},\"time\":{\"evidence_cutoff\":\"2026-11-10T07:10:00Z\",\"window_end\":\"2026-11-10T07:08:00Z\",\"window_start\":\"2026-11-10T06:58:00Z\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794294480000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1794899280000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "21650000000000000000000",
+    "storage_taker": "0",
+    "status": "Open",
+    "taker": null,
+    "created_at": 1794293700572208400,
+    "taken_at": null,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "username_taker": "claimed through the registry",
+  "balances_after_take": {
+    "maker": "105944330038565760869565228",
+    "taker": "9378350000000000000000000",
+    "fee": "1852944782608695652173912",
+    "escrow": "29191340000000000000000000"
+  },
+  "ground_truth": {
+    "outcome": "YES",
+    "perVenue": [
+      {
+        "venue": "Coinbase",
+        "candles": 10,
+        "maxHigh": 74684.18,
+        "breached": false,
+        "firstBreachT": null,
+        "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60",
+        "rawFile": "raw_coinbase.json",
+        "rawSha256": "3fcc6f0a79afb82e47b28649ab6911d6ca0b26516ef7a9b97924d681e45ec94c"
+      },
+      {
+        "venue": "Bitstamp",
+        "candles": 10,
+        "maxHigh": 74683.5,
+        "breached": false,
+        "firstBreachT": null,
+        "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100",
+        "rawFile": "raw_bitstamp.json",
+        "rawSha256": "bcbd85dca0617c83ff61efa48251d1d4eea612be85aa781c636dde87474632ba"
+      }
+    ],
+    "rule": "claim 'stays below x for the whole session' (candle HIGH): YES if no candle high >= x on either site; NO if both sites have one; one site only = the sources disagree = VOID; a site with no candle in the window = VOID"
+  },
+  "request_result_ui": {
+    "status": null,
+    "error": null,
+    "tx": null
+  }
+}

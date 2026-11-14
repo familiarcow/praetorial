@@ -1,0 +1,6 @@
+attestation_report_z-ai_glm-5.3.json: REAL, unmodified response body of a read-only keyless GET (HTTP 200, no API key, no completion/spend):
+  GET https://cloud-api.near.ai/v1/attestation/report?model=z-ai/glm-5.3&signing_address=40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb
+  fetched 2026-11-07. sha256 56af17aea559d10f571044b6a300f59a34937e327dc397fee5cb545b63edd58d
+Binding fields: gateway_attestation.signing_address (+ ohttp_attestation.signing_key) = the ed25519 key that signs responses; model_attestations[].model = attested model.
+The signed response used for the positive real-data test is judge-proto/attest/{sig,req,resp}.json (a real NEAR AI signed completion, signature_kind=gateway, same address).
+Everything else in v1d tests (mismatch / negative reports) is built in the test code by editing a clone of this report: synthetic, labelled as such.

@@ -1,0 +1,92 @@
+{
+  "at": "2026-11-11T19:16:42.763Z",
+  "betId": 51,
+  "names": {
+    "d958ba3746c645862caab72d8fa4b98c9fe932458bba1f0115e968d8a96dfcf9": "bob_demo",
+    "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d": "carol_demo"
+  },
+  "pending": [],
+  "bet": {
+    "envelope": {
+      "bet_id": 51,
+      "version": 1,
+      "maker": "d958ba3746c645862caab72d8fa4b98c9fe932458bba1f0115e968d8a96dfcf9",
+      "taker_allow": "Any",
+      "terms_hash": "f4fe20d23fb4eca864b2b492e9d0495a82419077e5494b6cdf68ad4fce93efe7",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"event_id\":\"2026020294\",\"league\":\"NHL\",\"pick\":{\"name\":\"New York Rangers\",\"team_id\":\"3\"},\"scheduled_date\":\"2026-11-11\"},\"template\":{\"id\":\"game_winner\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794425714000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1795046400000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "17190000000000000000000",
+    "storage_taker": "17190000000000000000000",
+    "status": "Taken",
+    "taker": "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d",
+    "created_at": 1794423933373368300,
+    "taken_at": 1794423941000643600,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  }
+}

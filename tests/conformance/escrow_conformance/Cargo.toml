@@ -1,0 +1,25 @@
+[package]
+name = "escrow_conformance"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+# Spec-conformance tests for contracts/escrow, kept OUT of
+# contracts/escrow/{src,tests} on purpose: another agent is actively
+# changing that crate's src/ (settlement bound, exhibit timestamps,
+# re-judge bond funding, storage charge, keeper key, stake cap/sunset).
+# This crate only *depends on* escrow as a library (path dep, rlib) and
+# calls its public #[near] methods the same way contracts/escrow/src/
+# tests.rs does, via near-sdk's unit-testing VMContextBuilder. It never
+# edits escrow's own files.
+#
+# Run: cargo test --manifest-path tests/conformance/escrow_conformance/Cargo.toml
+# (also wired into tests/conformance/run.sh)
+
+[dependencies]
+escrow = { path = "../../../contracts/escrow" }
+near-sdk = { version = "5.29", features = ["unit-testing"] }
+ed25519-dalek = { version = "2", features = ["rand_core"] }
+
+[workspace]

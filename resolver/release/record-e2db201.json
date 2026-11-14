@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "e2db2015bf714339f0cfd5412649c7dab47a0684",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "0015abc21a5d939d10ba6fff57fbbeb7c4e1b8bc16f99c4adfa798c55de5b01f",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "0015abc21a5d939d10ba6fff57fbbeb7c4e1b8bc16f99c4adfa798c55de5b01f"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "0015abc21a5d939d10ba6fff57fbbeb7c4e1b8bc16f99c4adfa798c55de5b01f"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "0015abc21a5d939d10ba6fff57fbbeb7c4e1b8bc16f99c4adfa798c55de5b01f"
+    }
+  ],
+  "notes": {
+    "item": "RR5: resolver rebuilt after LH2 (model-gone-void: both pinned judge models not found + first failure >= 7d -> signed VOID note MODEL_UNAVAILABLE, else RETRY); built from commit e2db201; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; docker-run-1, docker-run-2 and fresh-container identical."
+  }
+}

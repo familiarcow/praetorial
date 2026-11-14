@@ -1,0 +1,492 @@
+{
+  "item": "16l",
+  "txs": [
+    {
+      "step": "upload_chunk1",
+      "hash": "CVsjRv6YQChWyywST4y7sZnPQGncQ4CHjw8284JN9BAx",
+      "url": "https://testnet.nearblocks.io/txns/CVsjRv6YQChWyywST4y7sZnPQGncQ4CHjw8284JN9BAx",
+      "status": "Success"
+    },
+    {
+      "step": "upload_chunk2",
+      "hash": "rE5cAHuku6LdLRQQQtxoK6HrBVSRoBEfGww4Mekd5qn",
+      "url": "https://testnet.nearblocks.io/txns/rE5cAHuku6LdLRQQQtxoK6HrBVSRoBEfGww4Mekd5qn",
+      "status": "Success"
+    },
+    {
+      "step": "upload_chunk3",
+      "hash": "BnZikZBQLpdgUJTV11bMJNDuRfiRHNrfZ94VXDqtFzND",
+      "url": "https://testnet.nearblocks.io/txns/BnZikZBQLpdgUJTV11bMJNDuRfiRHNrfZ94VXDqtFzND",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_deploy",
+      "hash": "D8tuEiCXa9Pn9bD7bxmA2vUX7f8CFdevFKxZzc8Ew9Cf",
+      "url": "https://testnet.nearblocks.io/txns/D8tuEiCXa9Pn9bD7bxmA2vUX7f8CFdevFKxZzc8Ew9Cf",
+      "status": "Success"
+    },
+    {
+      "step": "wipe_call",
+      "hash": "FsdyDMtNELCqrsRcbhqZWxZLQDmY4jxJ1XKcgVcoZ9S8",
+      "url": "https://testnet.nearblocks.io/txns/FsdyDMtNELCqrsRcbhqZWxZLQDmY4jxJ1XKcgVcoZ9S8",
+      "status": "Success",
+      "removed": "11"
+    },
+    {
+      "step": "delete_escrow_account",
+      "hash": "6MVaeP6rWmz22aNPUH4yJbA39KPjEvJLbrNzUweFtsXE",
+      "url": "https://testnet.nearblocks.io/txns/6MVaeP6rWmz22aNPUH4yJbA39KPjEvJLbrNzUweFtsXE",
+      "beneficiary": "praetorial-dev-1101.testnet",
+      "status": "Success"
+    },
+    {
+      "step": "recreate_escrow_account",
+      "hash": "9yvWXEQg5XNa7fTrsrse9eVc59iCtaxsisH5A6wkuy2R",
+      "url": "https://testnet.nearblocks.io/txns/9yvWXEQg5XNa7fTrsrse9eVc59iCtaxsisH5A6wkuy2R",
+      "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "report_pubkey_outcome",
+      "hash": "GsaxDRzpQw2Jj5v6CxXnmeR2NHJFWkW9ojBn3YhQunjG",
+      "url": "https://testnet.nearblocks.io/txns/GsaxDRzpQw2Jj5v6CxXnmeR2NHJFWkW9ojBn3YhQunjG",
+      "status": "Success",
+      "outcome_pubkey": "4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3"
+    },
+    {
+      "step": "report_pubkey_attest1",
+      "hash": "AtWi2nfLsReMP4s3gowVjusM8X6wz2ZJebkiRRK5jMPX",
+      "url": "https://testnet.nearblocks.io/txns/AtWi2nfLsReMP4s3gowVjusM8X6wz2ZJebkiRRK5jMPX",
+      "status": "Success",
+      "attest_pubkey": "3e9d3b1c3d8c12e50274b674cd2e7c84f6e826d24c9f8a9abd038eea88b744fb"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "3TAtysY33Ms5xi44GVjF9vaaLhLRTHuzy6txSzZSHDWk",
+      "url": "https://testnet.nearblocks.io/txns/3TAtysY33Ms5xi44GVjF9vaaLhLRTHuzy6txSzZSHDWk",
+      "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "AYppPbeY33PRDKoBj376hBjMvUEu5h3eXaFs825ZhFgr",
+      "url": "https://testnet.nearblocks.io/txns/AYppPbeY33PRDKoBj376hBjMvUEu5h3eXaFs825ZhFgr",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "GtRED45x89Z65NCXBWHeBTz7QB2FzWeiVQtJDCoXtKCN",
+      "url": "https://testnet.nearblocks.io/txns/GtRED45x89Z65NCXBWHeBTz7QB2FzWeiVQtJDCoXtKCN",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "H5MQ6tHHkxMBxUmBdswHnBLB7qLVoAuDk8xYNLADRmDA",
+      "url": "https://testnet.nearblocks.io/txns/H5MQ6tHHkxMBxUmBdswHnBLB7qLVoAuDk8xYNLADRmDA",
+      "spec_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "checked_at": "1793973676819177472",
+      "attest_pubkey": "3e9d3b1c3d8c12e50274b674cd2e7c84f6e826d24c9f8a9abd038eea88b744fb",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "9u1xBj5D9zGhekyBo2bZ36yJWvvh8ZTypfTe9zK6DQaa",
+      "url": "https://testnet.nearblocks.io/txns/9u1xBj5D9zGhekyBo2bZ36yJWvvh8ZTypfTe9zK6DQaa",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "B2ZJnqosz9hpEDbFS6tcm8zUHAASyTa1A1gxxke4tR5C",
+      "url": "https://testnet.nearblocks.io/txns/B2ZJnqosz9hpEDbFS6tcm8zUHAASyTa1A1gxxke4tR5C",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "FhMCDJoNVXQ13RKmqb5HgysZqNdAysvjBKVdzP9s5D2x",
+      "url": "https://testnet.nearblocks.io/txns/FhMCDJoNVXQ13RKmqb5HgysZqNdAysvjBKVdzP9s5D2x"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "F4DV8MDFC9pTSrCJ5Tu2QvMmZhX461GZXeWcGkfHWFwj",
+      "url": "https://testnet.nearblocks.io/txns/F4DV8MDFC9pTSrCJ5Tu2QvMmZhX461GZXeWcGkfHWFwj"
+    },
+    {
+      "step": "fund_keeper_0.3_near",
+      "hash": "9LcnetQVGz9sw9dWLt4fXQ1PUbzgcChKPfacSiq9tB7P",
+      "url": "https://testnet.nearblocks.io/txns/9LcnetQVGz9sw9dWLt4fXQ1PUbzgcChKPfacSiq9tB7P",
+      "status": "Success"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "GWscpAfnAkaNADVMcZGJwRoq1sX9QHxifDroAYn53mEA",
+      "url": "https://testnet.nearblocks.io/txns/GWscpAfnAkaNADVMcZGJwRoq1sX9QHxifDroAYn53mEA",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "150000000000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "BdnGmyFFUeCdJBuhgz9Aj1CVC89hd7EzkjB23qiBmyB4",
+      "url": "https://testnet.nearblocks.io/txns/BdnGmyFFUeCdJBuhgz9Aj1CVC89hd7EzkjB23qiBmyB4",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 1,
+        "checked_until": "0",
+        "element_results_hash": "4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f",
+        "outcome": "VOID",
+        "run_no": 1,
+        "terms_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837"
+      }
+    },
+    {
+      "step": "finalize_16m",
+      "hash": "qqS5QxAjKDQGqwdZm67aFBt4qbfUmQdmdEfCjyeMTSD",
+      "url": "https://testnet.nearblocks.io/txns/qqS5QxAjKDQGqwdZm67aFBt4qbfUmQdmdEfCjyeMTSD",
+      "status": "Success"
+    }
+  ],
+  "state_key_snapshot": {
+    "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+    "ts": "2026-11-06T13:59:29.546Z",
+    "block_height": 276495726,
+    "key_count": 11,
+    "total_value_bytes": 7496,
+    "code_hash_hex": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+    "keys": [
+      {
+        "key_b64": "QRMAAABuZXAxNDE6dXNkYy50ZXN0bmV0",
+        "key_utf8": "A????nep141:usdc.testnet",
+        "value_bytes": 80,
+        "value_sha256": "c62f831bde22b9d1b562d7bdc388a5376e1a5f08c5cb98544ce1eff5762ec689"
+      },
+      {
+        "key_b64": "QRcAAABuZXAxNDE6YnRjLm1vY2sudGVzdG5ldA==",
+        "key_utf8": "A????nep141:btc.mock.testnet",
+        "value_bytes": 80,
+        "value_sha256": "7c6f50fafe9cfbdb7213a46392180186cae2f79e8c45c2153affb9dd526fea3f"
+      },
+      {
+        "key_b64": "QgEAAAAAAAAA",
+        "key_utf8": "B????????",
+        "value_bytes": 6143,
+        "value_sha256": "9ba6f505136b5a152ec59a89dda06c0a64b576e4d65e39df735052795e642c64"
+      },
+      {
+        "key_b64": "UAEAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "57feeb2d162dfe5fd3fbc32df82e5a57b37d38bcc4df01431f5fe921a54ad648"
+      },
+      {
+        "key_b64": "UAIAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 120,
+        "value_sha256": "46373f114910f597edf54fc50c3d26fec0ca7a2d1cfd8348bead15d22482f132"
+      },
+      {
+        "key_b64": "UAMAAAAAAAAA",
+        "key_utf8": "P????????",
+        "value_bytes": 123,
+        "value_sha256": "80e77da30df67e7b9763df6f88fd07a90b7e2e104942a7b2c52eccbb1dc2ea46"
+      },
+      {
+        "key_b64": "UQEAAAAAAAAA",
+        "key_utf8": "Q????????",
+        "value_bytes": 28,
+        "value_sha256": "bfc6df2900e8590a474e7d4c16216f15471366020667e8900b3f0ef7a5e1c8fc"
+      },
+      {
+        "key_b64": "UgEAAAAAAAAA",
+        "key_utf8": "R????????",
+        "value_bytes": 8,
+        "value_sha256": "7c9fa136d4413fa6173637e883b6998d32e1d675f88cddff9dcbcf331820f4b8"
+      },
+      {
+        "key_b64": "U1RBVEU=",
+        "key_utf8": "STATE",
+        "value_bytes": 729,
+        "value_sha256": "fd2a785d00d2381beb908e816c233b1c532378930b1768648a001579ec202e72"
+      },
+      {
+        "key_b64": "WQEAAAAAAAAA",
+        "key_utf8": "Y????????",
+        "value_bytes": 64,
+        "value_sha256": "a21ff071eb89bab4d94fb50f64b8232fd418d5eba54c4a8457efdc0d9e55f041"
+      },
+      {
+        "key_b64": "WgEAAAAAAAAA",
+        "key_utf8": "Z????????",
+        "value_bytes": 1,
+        "value_sha256": "4bf5122f344554c53bde2ebb8cd2b7e3d1600ad631c385a5d7cce23c7785459a"
+      }
+    ]
+  },
+  "balances": {
+    "dev_before_wipe": "10159800105871581499999958",
+    "escrow_before_wipe": "6140162674219498799999997",
+    "dev_after_delete": "16298293024860164899999955",
+    "escrow_after_create": "6000000000000000000000000",
+    "dev_after_create": "10291178035322664899999955",
+    "escrow_after_deploy": "6143708121956502000000000"
+  },
+  "view_state_keys_after_wipe": 0,
+  "recreated": {
+    "wasm_sha256": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+    "wasm_bytes": 523816,
+    "outcome_pubkey": "4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3",
+    "attest_pubkey": "3e9d3b1c3d8c12e50274b674cd2e7c84f6e826d24c9f8a9abd038eea88b744fb",
+    "resolver_wasm_hash": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3",
+      "attest_pubkey": "3e9d3b1c3d8c12e50274b674cd2e7c84f6e826d24c9f8a9abd038eea88b744fb",
+      "resolver_wasm_hash": "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3",
+        "3e9d3b1c3d8c12e50274b674cd2e7c84f6e826d24c9f8a9abd038eea88b744fb",
+        "56a61269cb2700918d7bffc0699e3698816b9ecddd3de3da116f995545d18d71"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  },
+  "terms_diff": {
+    "replaced": [
+      "2028-10-28 -> 2025-10-28 (deadline, window_end)",
+      "October 28, 2028 -> October 28, 2025",
+      "evidence_cutoff 2028-11-04T19:00:00Z -> 2025-11-04T19:00:00Z",
+      "window_close 2028-11-06T19:00:00Z -> 2025-11-06T19:00:00Z",
+      "window_start 2026-11-04T00:00:00Z -> 2025-10-01T00:00:00Z (keeps window_start < window_end)"
+    ],
+    "occurrences": 8,
+    "remaining_2028": 0,
+    "orig_sha256": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "new_sha256": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837"
+  },
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error": "Sender keeper.praetorial-dev-1101.testnet does not have enough balance 0.2206262392690059 for operation costing 0.280919075579165",
+  "request_resolution_error_tx": "CjptTA3vMJDcp1hZJHJR9LHghmQavfNkDW23Wz4dt53k",
+  "poll": {
+    "i": 59,
+    "status": "Resolving",
+    "runs_used": 0
+  },
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "models_snapshot_hash": "item16c-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2025-10-01T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2025-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2025-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793973835147000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796565685147000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793973687149049900,
+    "taken_at": 1793973690712445000,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 1,
+    "last_resolution_raw": "{\"contract\":\"praetorial-e2e-2611052236.praetorial-dev-1101.testnet\",\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-01T00:00:00Z&end=2025-10-11T09:59:59Z https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-11T10:00:00Z&end=2025-10-21T19:59:59Z https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-21T20:00:00Z&end=2025-10-28T18:59:59Z) window-scoped, granularity 3600s, 662 in-window candles, coverage COMPLETE_WITH_GAPS (5 missing candles, D-RESOLVE8)\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=3600&limit=667&start=1759276800&end=1761677999) window-scoped, granularity 3600s, 667 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 3600s over 2025-10-01T00:00:00Z to 2025-10-28T19:00:00Z: no candles returned inside the window\",\"decision: runs/models disagree or an answer failed verification\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837\"},\"signing\":{\"pubkey_hex\":\"4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3\",\"signature_hex\":\"5b9e4fea0f9e56aab794f38d552d1747e1743b5f073ec470ecfa4ca211a9a99c978d8f3c8f8f797b09a6d76188788c06883772ef37b08760b23d2a2b416b830a\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  },
+  "keeper_credit_after": "129937500000000000000000",
+  "last_resolution_raw": "{\"contract\":\"praetorial-e2e-2611052236.praetorial-dev-1101.testnet\",\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-01T00:00:00Z&end=2025-10-11T09:59:59Z https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-11T10:00:00Z&end=2025-10-21T19:59:59Z https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=3600&start=2025-10-21T20:00:00Z&end=2025-10-28T18:59:59Z) window-scoped, granularity 3600s, 662 in-window candles, coverage COMPLETE_WITH_GAPS (5 missing candles, D-RESOLVE8)\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=3600&limit=667&start=1759276800&end=1761677999) window-scoped, granularity 3600s, 667 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 3600s over 2025-10-01T00:00:00Z to 2025-10-28T19:00:00Z: no candles returned inside the window\",\"decision: runs/models disagree or an answer failed verification\"],\"result\":{\"bet_id\":1,\"checked_until\":0,\"element_results_hash\":\"4adc73cc912c2dbf395791918dfc8a563290d139bb4e872b0601106a25f2280f\",\"outcome\":\"VOID\",\"run_no\":1,\"terms_hash\":\"25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837\"},\"signing\":{\"pubkey_hex\":\"4ee50d8eb8315903ff151e64f93bc0f9b203a5df5be7901c192afdb4e7bc42c3\",\"signature_hex\":\"5b9e4fea0f9e56aab794f38d552d1747e1743b5f073ec470ecfa4ca211a9a99c978d8f3c8f8f797b09a6d76188788c06883772ef37b08760b23d2a2b416b830a\"}}",
+  "bet_status_at_submit": "Resolving",
+  "after_submit": {
+    "status": "Proposed",
+    "outcome": "VOID",
+    "settle_ready_ns": null
+  },
+  "judge": {
+    "judge_ran": "stage reached, no valid model verdict (see notes)",
+    "term_has_models_field": false,
+    "model_requested_by_resolver": "mock (fallback; Jason sheet has no models[] -> resolver.rs:1754)",
+    "venue": {
+      "S_CB": "COMPLETE_WITH_GAPS, 5 missing hourly candles (662 in-window)",
+      "S_BS": "COMPLETE, 667 candles",
+      "S_KR": "EXCLUDED COULDNT_CHECK (no candles returned inside the window), D-RESOLVE6"
+    },
+    "decision_note": "decision: runs/models disagree or an answer failed verification (element verdict unresolved -> ESCALATE -> VOID)",
+    "signed_outcome": "VOID",
+    "nearai_calls": "1 attempted (model id mock); no valid verdict"
+  },
+  "bet_after_submit": {
+    "status": "Proposed",
+    "outcome": "VOID",
+    "proposed_at_ns": 1793974315120259800
+  },
+  "finalize_not_before": {
+    "utc": "2026-11-06T15:11:55.120Z",
+    "et": "11/6/2026, 10:11:55 AM ET",
+    "epoch_ms": 1793977915120
+  },
+  "balances_end": {
+    "dev": "9984954403117964599999955",
+    "escrow": "6142239110356502000000000",
+    "keeper": "518364771255533000000000",
+    "attest1": "420371616219710400000000"
+  },
+  "finalize_16m": {
+    "not_before_ms": 1793977915120,
+    "status_before": "Proposed",
+    "outcome_before": "VOID",
+    "balances_before": {
+      "maker1|nep141:usdc.testnet": "3849848000",
+      "taker1|nep141:usdc.testnet": "3675367000",
+      "fee|nep141:usdc.testnet": "2516000",
+      "praetorial-e2e-2611052236|nep141:usdc.testnet": "20016000",
+      "maker1|nep141:btc.mock.testnet": "4950",
+      "taker1|nep141:btc.mock.testnet": "4950",
+      "fee|nep141:btc.mock.testnet": "8100",
+      "praetorial-e2e-2611052236|nep141:btc.mock.testnet": "0"
+    },
+    "dev_near_before": "9984954403117964599999955",
+    "txs": [
+      {
+        "step": "finalize",
+        "hash": "qqS5QxAjKDQGqwdZm67aFBt4qbfUmQdmdEfCjyeMTSD",
+        "url": "https://testnet.nearblocks.io/txns/qqS5QxAjKDQGqwdZm67aFBt4qbfUmQdmdEfCjyeMTSD",
+        "status": "Success",
+        "raw_status": "{\"SuccessValue\":\"\"}"
+      }
+    ],
+    "status_after": "Settled",
+    "outcome_after": "VOID",
+    "balances_after": {
+      "maker1|nep141:usdc.testnet": "3859848000",
+      "taker1|nep141:usdc.testnet": "3685367000",
+      "fee|nep141:usdc.testnet": "2532000",
+      "praetorial-e2e-2611052236|nep141:usdc.testnet": "0",
+      "maker1|nep141:btc.mock.testnet": "4950",
+      "taker1|nep141:btc.mock.testnet": "4950",
+      "fee|nep141:btc.mock.testnet": "8100",
+      "praetorial-e2e-2611052236|nep141:btc.mock.testnet": "0"
+    },
+    "pending_payouts": 0,
+    "dev_near_after": "9983104285926542199999955",
+    "deltas": {
+      "maker1|nep141:usdc.testnet": "10000000",
+      "taker1|nep141:usdc.testnet": "10000000",
+      "fee|nep141:usdc.testnet": "16000",
+      "praetorial-e2e-2611052236|nep141:usdc.testnet": "-20016000",
+      "maker1|nep141:btc.mock.testnet": "0",
+      "taker1|nep141:btc.mock.testnet": "0",
+      "fee|nep141:btc.mock.testnet": "0",
+      "praetorial-e2e-2611052236|nep141:btc.mock.testnet": "0"
+    },
+    "verified": {
+      "maker_usdc_plus_10": true,
+      "taker_usdc_plus_10": true,
+      "escrow_zero": true,
+      "pending_zero": true
+    }
+  }
+}

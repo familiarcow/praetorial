@@ -1,0 +1,1 @@
+cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7  praetorial-resolver-prod.wasm  # cd resolver && cargo build --release --target wasm32-wasip2 --features real-http,outlayer-sign -p praetorial-resolver (branch feat/8e-report-pubkey; 7g3 was d6d884a6...82af)

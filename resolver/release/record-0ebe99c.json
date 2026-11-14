@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "0ebe99c7e7f0fba5eacfb3837b4f3da63b1e4a39",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "6666a2810eae620fa317f476f09f1a67580971219fcc0cf532070f950eba1a81",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "6666a2810eae620fa317f476f09f1a67580971219fcc0cf532070f950eba1a81"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "6666a2810eae620fa317f476f09f1a67580971219fcc0cf532070f950eba1a81"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "6666a2810eae620fa317f476f09f1a67580971219fcc0cf532070f950eba1a81"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; two of the first three builds hit the cc SIGSEGV linker flake and were retried",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-548e3e0.json (3dd936d8...). Item 16u (judge transport diagnostics: run_diagnostics gains http_status, transport_error, response_bytes, error_body_head; no verdict/signing change) changes resolver code, so the wasm hash and bind:wasm pubkeys change: D-KEY2 bootstrap must be redone against THIS hash. Built from 0ebe99c (GREEN code commit; later commits are docs/record only). Modules at ~/.cache/16u/{a2,b1,b3}/module.wasm. Not uploaded."
+  }
+}

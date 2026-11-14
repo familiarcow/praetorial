@@ -1,0 +1,38 @@
+{
+  "written_at": "2026-11-10T07:12:01.064Z",
+  "bet_id": 25,
+  "claim": "BTC stays below $74690 for the whole session",
+  "window_utc": [
+    "2026-11-10T06:58:00.000Z",
+    "2026-11-10T07:08:00.000Z"
+  ],
+  "source": "the two pages named in the bet (Coinbase BTC-USD candles, Bitstamp btcusd OHLC) fetched by the harness; raw bodies in raw_*.json; judge not consulted",
+  "outcome": "YES",
+  "perVenue": [
+    {
+      "venue": "Coinbase",
+      "candles": 10,
+      "maxHigh": 74684.18,
+      "breached": false,
+      "firstBreachT": null,
+      "url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60",
+      "rawFile": "raw_coinbase.json",
+      "rawSha256": "3fcc6f0a79afb82e47b28649ab6911d6ca0b26516ef7a9b97924d681e45ec94c"
+    },
+    {
+      "venue": "Bitstamp",
+      "candles": 10,
+      "maxHigh": 74683.5,
+      "breached": false,
+      "firstBreachT": null,
+      "url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100",
+      "rawFile": "raw_bitstamp.json",
+      "rawSha256": "bcbd85dca0617c83ff61efa48251d1d4eea612be85aa781c636dde87474632ba"
+    }
+  ],
+  "rule": "claim 'stays below x for the whole session' (candle HIGH): YES if no candle high >= x on either site; NO if both sites have one; one site only = the sources disagree = VOID; a site with no candle in the window = VOID",
+  "outcome_read_before_this": false,
+  "bet_status_at_write": "Taken",
+  "bet_outcome_at_write": null,
+  "request_resolution_sent_before_this": false
+}

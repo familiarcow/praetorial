@@ -1,0 +1,1 @@
+{"_note":"fixture shaped like a resolver run result (judge run_diagnostics entry); 402 = NEAR AI credits exhausted","output":{"outcome":"INVALID","run_diagnostics":[{"model":"deepseek-ai/DeepSeek-V4.1-Flash-1017","verify_result":"error","http_status":402,"error":"Payment Required: insufficient credits"}]}}

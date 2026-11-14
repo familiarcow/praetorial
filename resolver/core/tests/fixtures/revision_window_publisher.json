@@ -1,0 +1,92 @@
+{
+ "cases": [
+  {
+   "kept_ids": [
+    "BLS2"
+   ],
+   "name": "same_publisher_timely_correction_replaces_original",
+   "notes": [
+    "dropped BLS1: superseded by timely correction BLS2 (REVISION_WINDOW_V1)"
+   ],
+   "sources": [
+    {
+     "id": "BLS1",
+     "published": "2027-10-13T12:30:00Z",
+     "publisher": "bls.gov"
+    },
+    {
+     "corrects": "BLS1",
+     "id": "BLS2",
+     "published": "2027-10-13T22:00:00Z",
+     "publisher": "bls.gov"
+    }
+   ]
+  },
+  {
+   "kept_ids": [
+    "BLS1"
+   ],
+   "name": "same_publisher_late_correction_dropped",
+   "notes": [
+    "dropped BLS2: correction outside 24h revision window, BLS1 stands (REVISION_WINDOW_V1)"
+   ],
+   "sources": [
+    {
+     "id": "BLS1",
+     "published": "2027-10-13T12:30:00Z",
+     "publisher": "bls.gov"
+    },
+    {
+     "corrects": "BLS1",
+     "id": "BLS2",
+     "published": "2027-10-19T12:30:00Z",
+     "publisher": "bls.gov"
+    }
+   ]
+  },
+  {
+   "kept_ids": [
+    "N1"
+   ],
+   "name": "cross_publisher_timely_fake_correction_dropped",
+   "notes": [
+    "dropped Y1: correction publisher 'The Verge' != original publisher 'apple.com newsroom' (REVISION_WINDOW_V1)"
+   ],
+   "sources": [
+    {
+     "id": "N1",
+     "published": "2027-12-01T15:00:00Z",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "corrects": "N1",
+     "id": "Y1",
+     "published": "2027-12-02T10:00:00Z",
+     "publisher": "The Verge"
+    }
+   ]
+  },
+  {
+   "kept_ids": [
+    "N1"
+   ],
+   "name": "cross_publisher_late_fake_correction_also_dropped",
+   "notes": [
+    "dropped Y1: correction publisher 'The Verge' != original publisher 'apple.com newsroom' (REVISION_WINDOW_V1)"
+   ],
+   "sources": [
+    {
+     "id": "N1",
+     "published": "2027-12-01T15:00:00Z",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "corrects": "N1",
+     "id": "Y1",
+     "published": "2027-12-10T10:00:00Z",
+     "publisher": "The Verge"
+    }
+   ]
+  }
+ ]
+}

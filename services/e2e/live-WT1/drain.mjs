@@ -1,0 +1,20 @@
+// WT1c: drain the cancel's scheduled refund payout (anyone may call drain_payouts) and record the tx.
+import fs from "node:fs";
+import { createRequire } from "node:module";
+const require = createRequire(new URL("../../package.json", import.meta.url));
+const { connect, keyStores, KeyPair } = require("near-api-js");
+const F = new URL("results.json", import.meta.url).pathname; const res = JSON.parse(fs.readFileSync(F, "utf8"));
+const id = "keeper.praetorial-dev-1101.testnet";
+const ks = new keyStores.InMemoryKeyStore();
+await ks.setKey("testnet", id, KeyPair.fromString(JSON.parse(fs.readFileSync(`${process.env.HOME}/.near-credentials/testnet/${id}.json`, "utf8")).private_key));
+const a = await (await connect({ networkId: "testnet", nodeUrl: process.env.NEAR_RPC_URL, keyStore: ks })).account(id);
+const bal = (acc) => a.viewFunction({ contractId: "intents-mock.praetorial-dev-1101.testnet", methodName: "mt_balance_of", args: { account_id: acc, token_id: "nep141:usdc.testnet" } });
+const M = "maker1.praetorial-dev-1101.testnet";
+res.pending_after_cancel = await a.viewFunction({ contractId: res.escrow, methodName: "pending_payouts", args: { bet_id: res.bet_id } });
+const r = await a.functionCall({ contractId: res.escrow, methodName: "drain_payouts", args: { bet_id: res.bet_id, limit: 20 }, gas: 300_000_000_000_000n });
+res.txs.push({ step: "drain_payouts_refund", hash: r.transaction.hash, url: `https://testnet.nearblocks.io/txns/${r.transaction.hash}` });
+await new Promise((x) => setTimeout(x, 5000));
+res.maker_usdc_after_drain = await bal(M); res.escrow_usdc_after_drain = await bal(res.escrow);
+res.pending_after_drain = await a.viewFunction({ contractId: res.escrow, methodName: "pending_payouts", args: { bet_id: res.bet_id } });
+fs.writeFileSync(F, JSON.stringify(res, null, 2));
+console.log(r.transaction.hash, JSON.stringify(res.pending_after_cancel).slice(0, 300), res.maker_usdc_after_drain, res.escrow_usdc_after_drain, JSON.stringify(res.pending_after_drain));

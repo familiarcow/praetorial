@@ -1,0 +1,102 @@
+[
+ {
+  "file": "wick_cb.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-08T11:06:00Z&end=2026-11-08T15:05:59Z",
+  "fetched_at": "2026-11-08T15:11:12Z",
+  "http_status": 200,
+  "sha256": "67f1b24671b9f31bacb967b9e1627c51d263f4ec1438b27cc4697f1fe4a146b5",
+  "kind": "real",
+  "bytes": 14141,
+  "note": "Coinbase 1m, 2026-11-08T11:06Z..15:06Z (real, 240 candles)"
+ },
+ {
+  "file": "wick_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=240&start=1794135960&end=1794150359",
+  "fetched_at": "2026-11-08T15:11:12Z",
+  "http_status": 200,
+  "sha256": "7e610a22b2f1c41cb7cab1d058a018ed737ab098bab6304123fddee1e09868e3",
+  "kind": "real",
+  "bytes": 31959,
+  "note": "Bitstamp 1m same window (real)"
+ },
+ {
+  "file": "wick_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1794135959",
+  "fetched_at": "2026-11-08T15:11:13Z",
+  "http_status": 200,
+  "sha256": "343580fed0d19a7c9d2da791d36ec16a164ebc5bd993b950673f6d285a765ce9",
+  "kind": "real",
+  "bytes": 19498,
+  "note": "Kraken 1m since=window start (real; returns latest ~720 candles). Wick day: window highs Coinbase 76094.99, Bitstamp 76081.40, Kraken 76096.20"
+ },
+ {
+  "file": "gap_cb.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-10-30T19:55:00Z&end=2026-10-30T19:55:59Z",
+  "fetched_at": "2026-11-08T15:11:55Z",
+  "http_status": 200,
+  "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "kind": "real",
+  "bytes": 2,
+  "note": "Coinbase real EMPTY response ([]) for the missing minute 2026-10-30T19:55:00Z"
+ },
+ {
+  "file": "gap_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=1&start=1793390100&end=1793390159",
+  "fetched_at": "2026-11-08T15:11:56Z",
+  "http_status": 200,
+  "sha256": "38feb363815690bd2fba280c6e56eb0b2febff7523ce6f6c2a0d327a10218f55",
+  "kind": "real",
+  "bytes": 172,
+  "note": "Bitstamp real candle for 2026-10-30T19:55:00Z"
+ },
+ {
+  "file": "gap_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1793390099",
+  "fetched_at": "2026-11-08T15:11:56Z",
+  "http_status": 200,
+  "sha256": "af055404322659c81526bc4bf4916cfab571fa3cc75f9d5aa25e883abb44abc6",
+  "kind": "real",
+  "bytes": 56985,
+  "note": "Kraken real: since ignored for >12h old, returns latest candles (does not contain the minute)"
+ },
+ {
+  "file": "gap_bu.json",
+  "source_url": "https://api.binance.us/api/v3/klines?symbol=BTCUSD&interval=1m&startTime=1793390100000&endTime=1793390159000&limit=1",
+  "fetched_at": "2026-11-08T15:11:56Z",
+  "http_status": 200,
+  "sha256": "989a8bc73d488971b3acbf05a5b8a0a3df1a587b00c624d1317ca87b763c4a65",
+  "kind": "real",
+  "bytes": 162,
+  "note": "Binance.US real candle for 2026-10-30T19:55:00Z"
+ },
+ {
+  "file": "synth_tie_cb.json",
+  "source_url": "n/a (synthetic)",
+  "fetched_at": "2026-11-08T15:20:00Z",
+  "http_status": null,
+  "sha256": "1e7b56af2cf6677cf65fa2c4b38a5f111181554f6ec4af96d26c408ca02b8231",
+  "kind": "synthetic",
+  "bytes": 55,
+  "note": "SYNTHETIC hand-built Coinbase payload: candle opening T-60 (T=2026-11-08T14:00Z) with close exactly 76000 (tie vs X=76000)"
+ },
+ {
+  "file": "synth_tie_bs.json",
+  "source_url": "n/a (synthetic)",
+  "fetched_at": "2026-11-08T15:20:00Z",
+  "http_status": null,
+  "sha256": "74fe690ee0ac2b5c36e457a27be5ebf2307c7576954831df529b2142757bfb50",
+  "kind": "synthetic",
+  "bytes": 165,
+  "note": "SYNTHETIC hand-built Bitstamp payload: candle opening T-60 (T=2026-11-08T14:00Z) with close exactly 76000 (tie vs X=76000)"
+ },
+ {
+  "file": "synth_tie_kr.json",
+  "source_url": "n/a (synthetic)",
+  "fetched_at": "2026-11-08T15:20:00Z",
+  "http_status": null,
+  "sha256": "2745ff69e47367d0b837147deffe4bed0cc420366c95401ce9a2e02eb8ca041c",
+  "kind": "synthetic",
+  "bytes": 138,
+  "note": "SYNTHETIC hand-built Kraken payload: candle opening T-60 (T=2026-11-08T14:00Z) with close exactly 76000 (tie vs X=76000)"
+ }
+]

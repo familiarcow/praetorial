@@ -1,0 +1,3 @@
+#!/bin/sh
+d="$(cd "$(dirname "$0")" && pwd)"
+exec node --import "file://$d/../node_modules/tsx/dist/loader.mjs" "$d/src/cli.ts" verify-bet "$@"

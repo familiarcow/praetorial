@@ -1,0 +1,15 @@
+{
+  "_comment": "MAINPREP1: mainnet release record for tonight (filled step by step in RUNBOOK.md). check-deployed-stack reads mainnet_escrow.account.",
+  "network": "mainnet",
+  "web": { "origin": "https://praetorial.com", "www_redirect": "https://www.praetorial.com", "_comment": "DOM1: custom domains on praetorial-web-mainnet; www 301s to the apex (apps/web/worker). workers_dev stays on (rollback)." },
+  "service_hosts": { "indexer": "https://indexer.praetorial.com", "relayer": "https://relayer.praetorial.com", "registry": "https://registry.praetorial.com", "funding": "https://funding.praetorial.com", "sourcecheck": "https://sourcecheck.praetorial.com", "keeper": "https://keeper.praetorial.com" },
+  "escrow_wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "escrow_code_hash_b58": "EfCgMFheGBZpoFNrhDDozkGK43KL31W12dHUc2QWjQ7Q",
+  "resolver_wasm_sha256": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "resolver_record": "resolver/release/record-f5695b9.json",
+  "escrow_record": "contracts/escrow/release/record-84f23c8.json",
+  "mainnet_escrow": { "account": "bets.praetorial.near", "deploy_tx": "9gFoypqaFzHEnUmkecG6NarvzoH8fdg8Bn2TPfy34NpX", "delete_key_tx": "ACkj5srVv2nav4iUuszyefkEGtonjQJVfusbRAS36UT3" },
+  "args_file": "release/mainnet-night/args.mainnet.json",
+  "args_sha256": "a9d7eeee52081ebe1cd76dd7d6cb39097a55db244b8e6330a445ef60c3bca17f",
+  "outlayer": { "upload_url": "https://main.fastfs.io/ops.praetorial.near/outlayer.near/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm", "outcome_run_tx": "68bixJNEftXehdSjrSfF9r6VSa5diPAMnFEkLFATeCAB", "attest_run_tx": "FF7ta6qDfBEN4ivby1VQ5Nyyfj9qgxvjxuveFWgUH3bP", "secret_bind": "PENDING" }
+}

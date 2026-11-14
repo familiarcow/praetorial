@@ -1,0 +1,51 @@
+{
+  "step": "account_lifecycle",
+  "probes": [
+    {
+      "probe": "1 yoctoNEAR",
+      "amountYocto": "1",
+      "accountId": "41860911b4704e4b437bde00d1c29fca06940033d46266e26b4904ae6ca50605",
+      "existedBefore": false,
+      "fundTxHash": "5g5UMPEoZvxWYBmaZc9vW3NpxEVsycHZjpqEWossD7fr",
+      "existsAfter": true,
+      "balanceAfter": "1",
+      "hasFullAccessKeyAfter": true,
+      "accessKeyDetail": "FullAccess"
+    },
+    {
+      "probe": "0.000001 NEAR (1e18 yocto)",
+      "amountYocto": "1000000000000000000",
+      "accountId": "59841d8291d7e2cbc05e2ba40ee7f1aa96768371435cb59c3ce0db69751b2a79",
+      "existedBefore": false,
+      "fundTxHash": "CGjG1TnVMpTy9NqCwFCm2GZfMatGAYEFJaYPcZvsDGZ4",
+      "existsAfter": true,
+      "balanceAfter": "1000000000000000000",
+      "hasFullAccessKeyAfter": true,
+      "accessKeyDetail": "FullAccess"
+    },
+    {
+      "probe": "0.001 NEAR (1e21 yocto)",
+      "amountYocto": "1000000000000000000000",
+      "accountId": "28e1e1dc1e4ca3125dc5ff98d0de65c1d40b95ed1a14951e187b47a349b507b9",
+      "existedBefore": false,
+      "fundTxHash": "5eFzwsj2Tiw6RSd7cCHs2JWR82YfGfpoAKMq2HkLRceS",
+      "existsAfter": true,
+      "balanceAfter": "1000000000000000000000",
+      "hasFullAccessKeyAfter": true,
+      "accessKeyDetail": "FullAccess"
+    },
+    {
+      "probe": "0.01 NEAR (1e22 yocto)",
+      "amountYocto": "10000000000000000000000",
+      "accountId": "afcb607b3bb22fc155bccf585e3b8499d731550d6a926826421cdcb5273a8f0f",
+      "existedBefore": false,
+      "fundTxHash": "D3b2PzTwYFFot7tuvBb4UxxANLPfQ69mpE22orSZdRgC",
+      "existsAfter": true,
+      "balanceAfter": "10000000000000000000000",
+      "hasFullAccessKeyAfter": true,
+      "accessKeyDetail": "FullAccess"
+    }
+  ],
+  "privyWalletBAccountId": "4aa62a0c89a01fd1b10c2f5d2d40454eb51f7a618499def229a0243af1e1529c",
+  "privyWalletBExistedBeforeFunding": false
+}

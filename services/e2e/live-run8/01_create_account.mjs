@@ -1,0 +1,22 @@
+import fs from "node:fs";
+import { account, balance, recordTx, results, save, KeyPair, utils, CRED } from "./lib.mjs";
+const PARENT = "praetorial-dev-1101.testnet";
+const id = process.argv[2];
+const fundNear = process.argv[3] ?? "6";
+const r = results();
+r.parent = PARENT; r.escrow_account = id;
+r.balances = r.balances ?? {};
+r.balances.parent_before = await balance(PARENT);
+const kp = KeyPair.fromRandom("ed25519");
+const parent = await account(PARENT);
+const res = await parent.createAccount(id, kp.getPublicKey(), utils.format.parseNearAmount(fundNear));
+const hash = res.transaction.hash;
+fs.writeFileSync(`${CRED}/${id}.json`, JSON.stringify({ account_id: id, public_key: kp.getPublicKey().toString(), private_key: kp.toString() }), { mode: 0o600 });
+// OutLayer CLI home logged in AS the escrow account (so report-pubkey is called from it)
+const home = `${(process.env.PRAETORIAL_CACHE_DIR ?? (() => { throw new Error("set PRAETORIAL_CACHE_DIR (operator cache dir)"); })())}/scratch/olhome-escrow8`;
+fs.mkdirSync(`${home}/testnet`, { recursive: true });
+fs.writeFileSync(`${home}/default-network`, "testnet\n");
+fs.writeFileSync(`${home}/testnet/credentials.json`, JSON.stringify({ account_id: id, public_key: kp.getPublicKey().toString(), private_key: kp.toString(), contract_id: "outlayer.testnet", auth_type: "near_key" }, null, 2), { mode: 0o600 });
+r.balances.escrow_after_create = await balance(id);
+save(r);
+recordTx("create_escrow_account", hash, { account: id, funded_near: fundNear });

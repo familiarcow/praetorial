@@ -1,0 +1,9 @@
+{
+  "written_at": "2026-11-10T03:11:36.823Z",
+  "bet_id": 8,
+  "claim": "BTC at_or_above 1000000 USD before the deadline",
+  "expected_by_ground_truth": "NO touch (BTC trades far below $1,000,000)",
+  "note": "Written before any outcome/ruling is read. DR6 expects no ruling at all: the taker concedes first.",
+  "outcome_read_before_this": false,
+  "bet_outcome_at_write": null
+}

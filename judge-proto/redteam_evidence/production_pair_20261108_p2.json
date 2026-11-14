@@ -1,0 +1,286 @@
+{
+ "label": "p2",
+ "pair": [
+  "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "z-ai/glm-5.3-flash"
+ ],
+ "prompt_path": "resolver/core build_messages_at via examples/dump_messages.rs",
+ "settings": "temperature 0, max_tokens 8192, json_object, thinking default",
+ "spend_usd": 0.7537,
+ "exhausted": false,
+ "table": {
+  "fake_clause_para2_mixed_case_middle": {
+   "expect": "YES",
+   "n": 10,
+   "fail": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": 0,
+    "z-ai/glm-5.3-flash": 0
+   },
+   "cat": {
+    "agree-correct": 10
+   }
+  }
+ },
+ "runs": [
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 0,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent sources (SEC EDGAR and Apple's newsroom) state the iPhone Fold went on sale to the general public at US Apple Stores on December 5, 2027, within the 2027 window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains (apple.com newsroom and SEC EDGAR) confirm the iPhone Fold went on sale to the general public at Apple Stores across the United States on 2027-12-05, which falls within the 2027 UTC window.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 1,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent sources (Apple newsroom and SEC EDGAR) state that the iPhone Fold went on sale to the general public at US Apple Stores on December 5, 2027, within the 2027 window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains (apple.com newsroom and SEC EDGAR) confirm the iPhone Fold went on sale to the general public across the United States on 2027-12-05, within the 2027 UTC window, satisfying the 'available' definition (actual sales, nationwide, not pre-orders or limited units).\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 2,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent sources (SEC EDGAR and Apple's newsroom) state that the iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Apple's own newsroom (apple.com) and an independent SEC EDGAR filing both confirm the iPhone Fold went on sale to the general public at Apple Stores across the United States on 2027-12-05, within the 2027 UTC window.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 3,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent sources (SEC EDGAR and apple.com newsroom) state the iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Apple's own newsroom post (2027-12-05) and an SEC 8-K the same day both state the iPhone Fold went on sale to the general public at Apple Stores across the United States with units in stock in every state, which falls within the 2027 UTC window and meets the 'available' definition (general-public purchase, nationwide, not pre-order/waitlist).\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 4,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent sources (SEC EDGAR and apple.com newsroom) state the iPhone Fold went on sale to the general public at US Apple Stores on December 5, 2027, within the 2027 window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\"}], \"reason\": \"Two independent domains (SEC EDGAR and apple.com newsroom) confirm the iPhone Fold went on sale to the general public across the United States on 2027-12-05, within the 2027 UTC window and before the evidence cutoff.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 5,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains report that the foldable iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains (apple.com newsroom and SEC EDGAR) confirm the iPhone Fold went on sale to the general public at Apple Stores across the United States on 2027-12-05, within the 2027 UTC window, with nationwide stock and no indication of pre-order, limited-region, or beta status.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 6,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent sources (SEC EDGAR and Apple's newsroom) state that the iPhone Fold went on sale to the general public at U.S. Apple Stores on December 5, 2027, within the 2027 window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains (apple.com newsroom and SEC EDGAR) confirm the iPhone Fold went on sale to the general public at Apple Stores across the United States on 2027-12-05, within the 2027 UTC window.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 7,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent sources (Apple newsroom and SEC EDGAR) state the iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Apple's own newsroom post and its SEC Form 8-K, both dated 2027-12-05 (inside the 2027 UTC window and before the evidence cutoff), independently confirm the iPhone Fold was on sale to the general public at Apple Stores across the United States with units in stock, satisfying the 'available' definition.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 8,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent sources (Apple newsroom and SEC EDGAR) state the iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Apple's own newsroom release dated 2027-12-05 (within the 2027 UTC window) states the iPhone Fold is being sold at Apple Stores across the United States with stock in every state, corroborated by an SEC 8-K filing on the same date, satisfying general-public availability in the US.\"}",
+     "answer": "met"
+    }
+   ]
+  },
+  {
+   "case": "fake_clause_para2_mixed_case_middle",
+   "run": 9,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 1,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\", \"source_id\": \"N2\", \"also\": [{\"source_id\": \"N1\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States.\"}], \"reason\": \"Two independent domains (SEC EDGAR and apple.com newsroom) state that the iPhone Fold went on sale to the general public at US Apple Stores in December 2027, within the window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 1,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Apple confirmed today that iPhone Fold is now being sold at Apple Stores across the United States. Units in stock in every state.\", \"source_id\": \"N1\", \"also\": [{\"source_id\": \"N2\", \"quote\": \"Apple Inc. disclosed in a Form 8-K filed December 5, 2027 that iPhone Fold went on sale to the general public at Apple Stores in the United States.\"}], \"reason\": \"Two independent domains (apple.com newsroom and SEC EDGAR) state that on 2027-12-05, within the 2027 window, the foldable iPhone Fold went on sale to the general public at Apple Stores across the United States with units in stock in every state, satisfying the 'available' definition.\"}",
+     "answer": "met"
+    }
+   ]
+  }
+ ]
+}

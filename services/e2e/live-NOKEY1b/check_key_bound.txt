@@ -1,0 +1,4 @@
+OK: NEAR_AI_API_KEY bound for escrow praetorial-frz3-2611100414.praetorial-dev-1101.testnet, resolver hash 8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473 (profile praetorial-resolver)
+exit=0
+FAIL NEAR_AI_API_KEY is NOT bound: no row `praetorial-resolver WasmHash(11111111...) from:praetorial-frz3-2611100414.praetorial-dev-1101.testnet` in `outlayer secrets list -v` (secrets-owner home). Run: OUTLAYER_HOME=<secrets-owner home> bash services/e2e/live-run16r/bind_secret.sh praetorial-frz3-2611100414.praetorial-dev-1101.testnet <r>. Without it the resolver emits no outcome at all (NOKEY1).
+exit=1

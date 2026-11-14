@@ -1,0 +1,6 @@
+s=open('1_clear.mjs').read().replace('mk("../live-run16a/results.json")','mk("../live-run16c/results.json")').replace('const betId = 1;','const betId = 1; // second clear (after outlayer_call_failed: OutLayer needs 0.01605 NEAR, escrow sent 0.01)').replace('16c_mutual','16c2_mutual').replace('16c_drain','16c2_drain').replace('step16c_bet1_final','step16c2_bet1_final').replace('step16c_clear_failure','step16c2_clear_failure')
+open('1b_clear2.mjs','w').write(s)
+o=open('16c_open_take.mjs').read().replace('300e9','150e9').replace('mk("../live-run16c/results.json")','mk("../live-run16c/results_try2.json")')
+open('16c_open_take2.mjs','w').write(o)
+r=open('16c_resolve.mjs').read().replace('mk("../live-run16c/results.json")','mk("../live-run16c/results_try2.json")').replace('args: { bet_id: betId }, gas: 280_000_000_000_000n','args: { bet_id: betId }, gas: 280_000_000_000_000n, attachedDeposit: 20_000_000_000_000_000_000_000n')
+open('16c_resolve2.mjs','w').write(r)

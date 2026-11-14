@@ -1,0 +1,15 @@
+{
+ "scanned_from": "2026-09-08T03:26:00Z",
+ "scanned_to": "2026-11-07T03:26:00Z",
+ "requests": 288,
+ "gap_runs": [
+  {
+   "start": "2026-10-02T16:47:00Z",
+   "minutes": 1
+  },
+  {
+   "start": "2026-10-30T19:55:00Z",
+   "minutes": 2
+  }
+ ]
+}

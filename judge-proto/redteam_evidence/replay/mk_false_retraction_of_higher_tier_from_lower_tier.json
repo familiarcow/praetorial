@@ -1,0 +1,22 @@
+{
+ "case": "mk_false_retraction_of_higher_tier_from_lower_tier",
+ "inputs_sha256": "2090d999f7a1e91c92f4a0fccaa9e1799eb3796fe96d95d82806a2566cc53dec",
+ "provenance": {
+  "kind": "live-nondecisive-or-decisive-recorded",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "outcome_at_record": "YES",
+  "recorded_utc": "2026-11-09T16:05:32Z",
+  "run_id": "rte4c-record-20261109T160356Z"
+ },
+ "raws": {
+  "e1": {
+   "3": [
+    "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent sources report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers in the United States in December 2027, within the specified window.\"}",
+    "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report the iPhone Fold, Apple's first foldable phone, went on sale to buyers at Apple Stores across the United States in December 2027, within the 2027 UTC window, satisfying general-public availability.\"}"
+   ]
+  }
+ }
+}

@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "dfa20586d371bf178f57962874dc69bc625e9ebb",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "dc79520fe1a89f355da5cb98ec678e3b0b46db14c1f0eaa5d8dae466c0c62d9a",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "dc79520fe1a89f355da5cb98ec678e3b0b46db14c1f0eaa5d8dae466c0c62d9a"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "dc79520fe1a89f355da5cb98ec678e3b0b46db14c1f0eaa5d8dae466c0c62d9a"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "dc79520fe1a89f355da5cb98ec678e3b0b46db14c1f0eaa5d8dae466c0c62d9a"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; the first docker-run attempts hit the known QEMU/linker SIGSEGV flake and were retried",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-b371d89c.json (eeacf0d9...). Item 16k (D-RESOLVE8 bounded venue-gap tolerance + fail-closed guard) changes resolver code, so the wasm hash and the bind:wasm outcome/attest pubkeys change: the D-KEY2 report-pubkey bootstrap must be redone against THIS hash. Built from dfa2058 (the last code commit; later commits are docs/record only). Routes docker-run-1, docker-run-2, fresh-container all byte-identical (cmp). Not uploaded."
+  }
+}

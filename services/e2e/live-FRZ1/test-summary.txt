@@ -1,0 +1,1 @@
+commit a0852fc (branch feat/frz1b-freeze-candidate-2-deploy): escrow cargo test 611 pass 0 fail 0 ignored; services npm test 771/771 pass; tsc 0 errors; test.sh fast recorded in STATUS.md. Escrow caf134a4 deployed to praetorial-frz1b-2611081810.praetorial-dev-1101.testnet; verify-escrow E1-E4 all PASS live (services/e2e/live-FRZ1/verify-escrow.txt).

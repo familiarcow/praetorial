@@ -1,0 +1,58 @@
+{
+  "superseded_by": {"template": {"id": "btc_touch", "version": 1}, "also": ["btc_close_at_t"], "decision": "D-TPL1", "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)"},
+  "_comment": "TEMPLATE (not a prototype): token price touch (CEX candles, mirrors the Jason sheet)",
+  "claim": "NEAR-USD 1-minute candle high reaches or exceeds 5.00 USD on both Coinbase and Kraken in the same 5-minute window before 2026-12-31T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show a Coinbase NEAR-USD candle with high >= 5.00 and a Kraken NEARUSD candle with high >= 5.00 in the same 5-minute window before 2026-12-31T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "BEFORE_INCLUSIVE_V1",
+    "NUMERIC_EXACT_V1",
+    "ROUNDING_PRECISION_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "A wick: the candle HIGH counts, not the close.",
+    "Only USD pairs on the named venues count; aggregators (CoinGecko, CoinMarketCap) are never eligible; market cap and FDV are not resolvable in v1 (supply figures are aggregator-defined).",
+    "Thin-book risk: the same-5-minute-window two-venue rule closes single-venue manipulation; a one-venue print never fires.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-06T00:00:00Z",
+    "window_end": "2026-12-31T00:00:00Z",
+    "evidence_cutoff": "2027-01-07T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "Coinbase NEAR-USD"
+    },
+    {
+      "id": "S1",
+      "publisher": "Kraken NEARUSD"
+    },
+    {
+      "id": "S2",
+      "publisher": "Bitstamp nearusd"
+    }
+  ],
+  "source_classes": {
+    "Coinbase NEAR-USD": "primary",
+    "Kraken NEARUSD": "primary",
+    "Bitstamp nearusd": "data"
+  },
+  "window_close": "2027-01-28T00:00:00Z",
+  "sources": true,
+  "ticker_pins": {
+    "Coinbase NEAR-USD": "NEAR-USD",
+    "Kraken NEARUSD": "NEARUSD",
+    "Bitstamp nearusd": "nearusd"
+  }
+}

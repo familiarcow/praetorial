@@ -1,0 +1,9 @@
+[package]
+name = "sandbox-launcher"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+near-sandbox = "0.3.12"
+tokio = { version = "1", features = ["full"] }

@@ -1,0 +1,12 @@
+# Cloudflare Pages config (D-HOST1: Cloudflare free tier -- Pages +
+# Functions for the ticker proxy). This repo is NOT deployed by this
+# task; wrangler.toml just makes `wrangler pages deploy` / the Cloudflare
+# dashboard's Git integration work once someone chooses to deploy.
+name = "praetorial-web"
+compatibility_date = "2026-11-04"
+pages_build_output_dir = "dist"
+
+[vars]
+# Public, non-secret. Point this at mainnet to flip CURRENT_NETWORK in
+# lib/assets.ts; defaults to testnet if unset.
+NEAR_RPC_URL = "https://test.rpc.fastnear.com"

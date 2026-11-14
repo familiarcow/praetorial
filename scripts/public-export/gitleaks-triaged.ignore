@@ -1,0 +1,56 @@
+# HK1 GATE-10: gitleaks findings in the exported tree, each triaged by hand as NOT a secret (see spikes/hk1/GATE10.md).
+# Format: <path>:<rule>:<line> (gitleaks dir fingerprint). If a file changes and a line moves, export.sh fails: re-triage, then
+# regenerate with: scripts/public-export/export.sh --retriage <outdir>  (prints candidate lines; never values).
+# apps/web/src/kit/Playground.tsx: outcomeKey enum label in a UI playground, not a key
+apps/web/src/kit/Playground.tsx:generic-api-key:235
+# resolver/release/test_check_key_bound.py: synthetic fake key in a test proving the checker never prints a key
+resolver/release/test_check_key_bound.py:generic-api-key:58
+# resolver/wasm-bin/src/item_: synthetic test api_key literal (contains the word "secret"), points at https://x
+resolver/wasm-bin/src/item_r3d_tests.rs:generic-api-key:53
+resolver/wasm-bin/src/item_v1b_tests.rs:generic-api-key:82
+# services/data/g6-authcall-proof-results.json: authTx = public NEAR transaction hash
+services/data/g6-authcall-proof-results.json:generic-api-key:6
+# judge-proto/attest/att.json: NEAR AI public attestation report: tls_key_fp / signing_key / key_config are PUBLIC keys
+judge-proto/attest/att.json:generic-api-key:1
+# services/e2e/live-run: contract state dump: key_b64 = base64 of PUBLIC escrow storage keys (key_utf8 shown alongside)
+services/e2e/live-run16a/results.json:generic-api-key:313
+services/e2e/live-run16a/results.json:generic-api-key:319
+services/e2e/live-run16c/results.json:generic-api-key:118
+services/e2e/live-run16c/results.json:generic-api-key:124
+services/e2e/live-run16f/results.json:generic-api-key:126
+services/e2e/live-run16f/results.json:generic-api-key:132
+services/e2e/live-run16f/results_before_retry.json:generic-api-key:106
+services/e2e/live-run16f/results_before_retry.json:generic-api-key:112
+services/e2e/live-run16i/results.json:generic-api-key:164
+services/e2e/live-run16i/results.json:generic-api-key:170
+services/e2e/live-run16i/results_16f_before_retry.json:generic-api-key:106
+services/e2e/live-run16i/results_16f_before_retry.json:generic-api-key:112
+services/e2e/live-run16i/results_16f_inherited.json:generic-api-key:126
+services/e2e/live-run16i/results_16f_inherited.json:generic-api-key:132
+services/e2e/live-run16i/results_before_retry.json:generic-api-key:136
+services/e2e/live-run16i/results_before_retry.json:generic-api-key:142
+services/e2e/live-run16l/results.json:generic-api-key:159
+services/e2e/live-run16l/results.json:generic-api-key:165
+services/e2e/live-run16o/results.json:generic-api-key:162
+services/e2e/live-run16o/results.json:generic-api-key:168
+services/e2e/live-run16o/results_16l_inherited.json:generic-api-key:159
+services/e2e/live-run16o/results_16l_inherited.json:generic-api-key:165
+services/e2e/live-run16r/results.json:generic-api-key:207
+services/e2e/live-run16r/results.json:generic-api-key:213
+services/e2e/live-run16r/results_attempt1.json:generic-api-key:156
+services/e2e/live-run16r/results_attempt1.json:generic-api-key:162
+services/e2e/live-runR3/r3h_results.json:generic-api-key:125
+services/e2e/live-runR3/r3h_results.json:generic-api-key:131
+# services/release/test/rfrz2.test.ts: NOKEY1_HASH = public code hash in a test
+services/release/test/rfrz2.test.ts:generic-api-key:20
+# services/workers/relayer/wrangler.toml: USDC_TOKEN_ID = public NEP-141 token contract id (hex implicit account)
+services/workers/relayer/wrangler.toml:generic-api-key:57
+# spikes/fund3/REPORT.md: prose ("API, ..."), not a key
+spikes/fund3/REPORT.md:generic-api-key:78
+# services/verifier/test/fixtures/v1d/: NEAR AI public attestation report fixture: PUBLIC keys
+services/verifier/test/fixtures/v1d/attestation_report_z-ai_glm-5.3.json:generic-api-key:1
+# spikes/fund3/evidence: 1Click/PoA public token list: near_token_id / multi_token_id / intents_token_id values (public on-chain token ids)
+spikes/fund3/evidence/oneclick/poa-supported_tokens.json:generic-api-key:1
+spikes/fund3/evidence/poa/supported_tokens_all.json:generic-api-key:1
+# release/mainnet-night/input.priced.json: mainnet_escrow.deploy_tx = public NEAR transaction hash (HK1 FU1)
+release/mainnet-night/input.priced.json:generic-api-key:14

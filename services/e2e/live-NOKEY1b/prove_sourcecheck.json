@@ -1,0 +1,8 @@
+{
+  "via": "outlayer-cli-as-attest1",
+  "ok": true,
+  "unreachable": [],
+  "spec_hash": "2df18a71b0902ebf70a1715890121835487b7a22ce3d33e6a19d93d500966431",
+  "checked_at": "1794302696466997248",
+  "pubkey_equals_pinned": true
+}

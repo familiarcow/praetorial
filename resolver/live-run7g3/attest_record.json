@@ -1,0 +1,17 @@
+{
+  "tx_hash": "DiTxKVAWamj6MFgMPLDGoerxADVFWQAUDYfPCAwaYJBs",
+  "network": "testnet",
+  "signer": "praetorial-dev-1101.testnet",
+  "wasm_sha256": "d6d884a695b47fb8dc69f5644898e21b638d35016f077461172188f5395982af",
+  "fastfs_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/d6d884a695b47fb8dc69f5644898e21b638d35016f077461172188f5395982af.wasm",
+  "output": {
+    "checked_at": 1793934402624679936,
+    "ok": true,
+    "signing": {
+      "pubkey_hex": "0683a9a70b9ba6bc3d54b800ccf692a4321351a2814cc0130919cb992f1346e8",
+      "signature_hex": "57799712a4c3b62337739044dd0d2a5700c1edb0d021eb70d033c6ffd16427520267c9c63a169490ca92afe815bd7b219cf5eebb468f1d8724568c9b257a0205"
+    },
+    "spec_hash": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "unreachable": []
+  }
+}

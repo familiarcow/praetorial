@@ -1,0 +1,450 @@
+{
+ "_comment": "V1 fixture: REAL testnet data (read-only views + tx.test.fastnear.com) for bet 49 on escrow praetorial-frz3-2611100414.praetorial-dev-1101.testnet. get_bet_text = the exact view text; txs = services/common/src/betTxIndex.ts output (= GET /bet/txs?bet_id=49).",
+ "network": "testnet",
+ "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+ "bet_id": 49,
+ "get_bet_text": "{\"envelope\":{\"bet_id\":49,\"version\":1,\"maker\":\"979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d\",\"taker_allow\":\"Any\",\"terms_hash\":\"55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4\",\"models_snapshot_hash\":\"551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2\",\"outcomes\":[\"YES\",\"NO\"],\"maker_side\":\"YES\",\"maker_asset\":\"nep141:usdc.testnet\",\"taker_asset\":\"nep141:usdc.testnet\",\"stake_maker\":\"20000000\",\"stake_taker\":\"20000000\",\"taker_options\":[],\"fee_bps\":100,\"storage_charge_per_side\":\"0\",\"keep_terms\":true,\"terms\":\"{\\\"fields\\\":{\\\"op\\\":\\\">=\\\",\\\"open_utc\\\":\\\"2026-11-11T19:04:00Z\\\",\\\"t_utc\\\":\\\"2026-11-11T20:30:00Z\\\",\\\"x_usd\\\":74400},\\\"template\\\":{\\\"id\\\":\\\"btc_close_at_t\\\",\\\"version\\\":1}}\",\"max_paid_runs\":3,\"tier\":1,\"referee\":null,\"tip_maker\":false,\"funding_deadline\":1794429000000000000,\"early_settle_outcome\":null,\"finality_delay\":0,\"settlement_period\":3600000000000,\"resolve_deadline\":1795033800000000000,\"consent_party_controlled\":false},\"fee_min_maker\":\"500000\",\"fee_min_taker\":\"500000\",\"fee_min_taker_options\":[],\"tip_maker\":\"0\",\"tip_taker\":\"0\",\"storage_maker\":\"62783\",\"storage_taker\":\"62783\",\"status\":\"Settled\",\"taker\":\"371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488\",\"created_at\":1794423865849395398,\"taken_at\":1794423874366488358,\"proposed_at\":1794445712490887086,\"outcome\":\"YES\",\"used_run_nos\":[9,10],\"runs_used\":2,\"bonds\":[],\"pre_challenge_outcome\":null,\"challenged_by\":\"371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488\",\"exhibits\":[],\"rebuttals\":[],\"objection_deposits\":[],\"amend_count\":0,\"referee_proposal\":{\"maker_value\":null,\"taker_value\":null},\"amend_proposal\":{\"maker_value\":null,\"taker_value\":null},\"prune_proposal\":{\"maker_value\":null,\"taker_value\":null},\"pending_resolution_request\":24,\"last_resolution_raw\":\"{\\\"contract\\\":\\\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\\\",\\\"judge\\\":{\\\"element_evidence\\\":[],\\\"elements\\\":[{\\\"id\\\":\\\"e1\\\",\\\"verdict\\\":\\\"met\\\"}],\\\"judge_backend\\\":\\\"near-ai\\\",\\\"judge_backend_reason\\\":null,\\\"judge_chain\\\":[{\\\"model_a\\\":\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\",\\\"model_b\\\":\\\"z-ai/glm-5.3-flash\\\"},{\\\"model_a\\\":\\\"Qwen/Qwen3.8-27B\\\",\\\"model_b\\\":\\\"moonshotai/kimi-k3\\\"},{\\\"model_a\\\":\\\"google/gemini-3.5-flash\\\",\\\"model_b\\\":\\\"openai/gpt-5.4-mini\\\"},{\\\"model_a\\\":\\\"x-ai/grok-4.7\\\",\\\"model_b\\\":\\\"anthropic/claude-haiku-5-5\\\"}],\\\"judge_pair_index\\\":0,\\\"judge_ran\\\":false,\\\"model_not_found_observations\\\":[],\\\"models_echoed\\\":[\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\"],\\\"models_requested\\\":[\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\"],\\\"no_live_judge\\\":false,\\\"run_diagnostics\\\":[{\\\"content\\\":\\\"{\\\\\\\"audit\\\\\\\":\\\\\\\"agree\\\\\\\"}\\\",\\\"content_complete\\\":true,\\\"content_head\\\":\\\"{\\\\\\\"audit\\\\\\\":\\\\\\\"agree\\\\\\\"}\\\",\\\"content_len\\\":17,\\\"content_sha256\\\":\\\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\\\",\\\"error_body_head\\\":null,\\\"finish_reason\\\":\\\"stop\\\",\\\"first_byte_ms\\\":1627,\\\"http_status\\\":200,\\\"idle_timeout_hit\\\":false,\\\"model\\\":\\\"deepseek-ai/DeepSeek-V4.1-Flash-1017\\\",\\\"raw_sha256\\\":\\\"0b327974e9135f8a70bbae3f75deedd0084c1db42576c4cbbd3198e752bccd3c\\\",\\\"response_bytes\\\":6762,\\\"signature_proof\\\":{\\\"request_sha256\\\":\\\"f266eba445f70a7445d84da955487d3e3b6a67d9ff4c2364cfdbd976b808e2d9\\\",\\\"response_sha256\\\":\\\"da66d6209f73092c8bae19305cce1d1f960749b7d4c14bac8a2cd57c9499f21a\\\",\\\"signature\\\":\\\"0d3f083917bd9400a00eb9abe34e37ce1f166e071ba2a4fd4e685ff4a6c422e5d8992f9295b421ef5e05174c3fdd4ac3e3116ea44eb0c8b2b62df1010bcbeb02\\\",\\\"signing_address\\\":\\\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\\\",\\\"signing_algo\\\":\\\"ed25519\\\",\\\"text\\\":\\\"f266eba445f70a7445d84da955487d3e3b6a67d9ff4c2364cfdbd976b808e2d9:da66d6209f73092c8bae19305cce1d1f960749b7d4c14bac8a2cd57c9499f21a\\\"},\\\"signature_verified\\\":true,\\\"total_ms\\\":5845,\\\"total_timeout_hit\\\":false,\\\"transport_error\\\":null,\\\"verify_reason\\\":\\\"not verified\\\",\\\"verify_result\\\":\\\"invalid\\\"}],\\\"runs\\\":1,\\\"sources\\\":[]},\\\"notes\\\":[\\\"1a: Coinbase close of the minute ending T = 74448.2\\\",\\\"1a: Bitstamp close of the minute ending T = 74453.48\\\",\\\"1a: Kraken close of the minute ending T = 74454.2\\\",\\\"decision: YES (code-decided 1a: median close of 3 venues = 74453.48 >= 74400 true)\\\",\\\"17c5 audit agrees with the code outcome YES\\\",\\\"D-BUDGET1: calls_ms=[] rerun=false\\\"],\\\"result\\\":{\\\"bet_id\\\":49,\\\"checked_until\\\":0,\\\"element_results_hash\\\":\\\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\\\",\\\"judge_pair_index\\\":0,\\\"outcome\\\":\\\"YES\\\",\\\"run_no\\\":10,\\\"terms_hash\\\":\\\"55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4\\\"},\\\"signing\\\":{\\\"pubkey_hex\\\":\\\"4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23\\\",\\\"signature_hex\\\":\\\"922ee56f5adce4233c597f34c977a0fcfcc91ecba7e1a8a5752c6189e7fd4f0a7500a8f69238d99ed59fcaef5374018b4e4094e09745a516412a563e68b3c10e\\\"}}\",\"pruned\":false,\"next_expected_run_no\":11,\"all_results\":[{\"run_no\":9,\"outcome\":\"YES\",\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"checked_until\":\"0\"},{\"run_no\":10,\"outcome\":\"YES\",\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"checked_until\":\"0\"}],\"window_extended\":false,\"window_extension_ns\":0,\"first_unavailable_ns\":null,\"retry_count\":0,\"next_check_ns\":null,\"no_live_judge_until_ns\":null,\"request_judge_snapshot\":null,\"judge_pair_index\":0,\"next_run_no\":11,\"pending_run_no\":null}",
+ "resolver_keys": [
+  "4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23",
+  "a3fa8914a3c6eccd792660167d1e7e67fc06f4294521eadcc2b7a8f6c097f6ae",
+  "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473"
+ ],
+ "outlayer_config": {
+  "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+  "secrets_profile": "praetorial-resolver",
+  "secrets_account_id": "praetorial-dev-1101.testnet"
+ },
+ "code_hash_b58": "EfCgMFheGBZpoFNrhDDozkGK43KL31W12dHUc2QWjQ7Q",
+ "txs": [
+  {
+   "hash": "3FtMzC9DoXPPGR8rbPLwLDMZAXy19Fgg5FYqL6G3qbDk",
+   "at_ns": "1794423865849395500",
+   "method": "mt_on_transfer",
+   "signer": "relayer.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [
+    {
+     "account": "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d",
+     "token": "nep141:usdc.testnet",
+     "amount": "20062783"
+    }
+   ],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "create",
+   "actor": "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d"
+  },
+  {
+   "hash": "7efBWmGaEkYfh5MNgmpETubm7th2cZbmckAV4X6L6N3P",
+   "at_ns": "1794423874366488300",
+   "method": "mt_on_transfer",
+   "signer": "relayer.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [
+    {
+     "account": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+     "token": "nep141:usdc.testnet",
+     "amount": "20062783"
+    }
+   ],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "take",
+   "actor": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488"
+  },
+  {
+   "hash": "7Kpt1EgLgfq2ozQvzA6sLPKZaMCGT1gD8N4diX8gsjra",
+   "at_ns": "1794429812810018300",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "3oQBrLksZmU5pkbNzzEnuy6Sj4qLQC61FMPrSkTpxQW2",
+   "at_ns": "1794430352936144100",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "BYnoovGFk2RtgnzsHTo4PFeQbDb1A5LqokWGicakLoPY",
+   "at_ns": "1794430892715043600",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "9LnieEPFmy5TKKbapgcyrUFv6ZosWwRHUwMUkAdorghp",
+   "at_ns": "1794431492839830500",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "6TzASvrxnU51Z43AUhgUTaW4BWiKvGjFBRbuBwATsTTY",
+   "at_ns": "1794432032734851300",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "Gq3dsKFNFNMjHXC6vN7avysPPsLE1qEfXACiQ9ZCYWpR",
+   "at_ns": "1794432572867244000",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "47gRjVNtJLd23WmUJ7N1d7qJ6cwq5iquSviJpVHojz17",
+   "at_ns": "1794433172885792300",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "6n5CMLhoD2BZPYoau4DYt3HNTTVV5Sf2TFbCom5N8cWT",
+   "at_ns": "1794433713090616600",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "6J4xSn7cnM1Wx4LrFTDzuGReHeLQRXYYpRoyRDDAGt9U",
+   "at_ns": "1794434252896433200",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "B1k1DqC1EzjHAqRpFk8FeLE8gWd7J3PqoFFuCNf2Lyc4",
+   "at_ns": "1794434852927406300",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "BfL5uhgb2kbpskPyUePWXprVNnCgduAbFLkS6GZBVGCV",
+   "at_ns": "1794435392709892900",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "Gc32Ny4kkvyb61BdofvzdpkDsQ2kjR1yyDR4weJb4rNN",
+   "at_ns": "1794435933385275400",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "G46nXFbipCyvY1dkkKNsUn4s8pJX8ZWjg5Wo5RiRUA39",
+   "at_ns": "1794436532967070500",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "HzwRD7YhJJdckHe99kdTAtmhCjea56ZtwNNLwtG2pHcz",
+   "at_ns": "1794437073481803300",
+   "method": "request_resolution",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "BEZLGN6Xi76fCiYyKNQrv3izZpFJYeV3v7e8NmW1jo3J",
+   "at_ns": "1794437683275384300",
+   "method": "submit_outcome",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "ruling",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "outcome": "YES",
+   "run_no": 9,
+   "signed": {
+    "result_json": "{\"bet_id\":49,\"checked_until\":\"0\",\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"judge_pair_index\":0,\"outcome\":\"YES\",\"run_no\":9,\"terms_hash\":\"55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4\"}",
+    "signature_hex": "d836c03ae2de04ac96512403c745f68369dde7a30f43cc2fc34dd0f34c182e11a03d33a43c35b5b4b779bb17016953c8a87d3c50397d1db82ffbc4a5aa30990a"
+   }
+  },
+  {
+   "hash": "4N3EanAwrJ4yStku1fwovW1UeVC5aTfyHnuHyGVHjwKW",
+   "at_ns": "1794437866898254300",
+   "method": "mt_on_transfer",
+   "signer": "relayer.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [
+    {
+     "account": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+     "token": "nep141:usdc.testnet",
+     "amount": "5005000"
+    }
+   ],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "challenge",
+   "actor": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+   "round": 1
+  },
+  {
+   "hash": "7bCmfPymqTzkuuzs4ddTb6YRui2SEiasusNSXejctRw",
+   "at_ns": "1794441692917039400",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "fJ7LNwZAHHydz61wee2B66GSQdCTgPv3hPEWPm8PdBS",
+   "at_ns": "1794442292713509000",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "FEWawn7qeGn3583zoHtxpW9z7Q7MkvP7XWRnLWNaFqP2",
+   "at_ns": "1794442893332173800",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "9f3P45RCVK6Df6wnhe4992ZNSQHBM4pkCv37hhT51fdq",
+   "at_ns": "1794443432877004300",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "96Lyg7qAJqG2HQZU3BDqX5gyhWdV8eb7yUGd2No86TpZ",
+   "at_ns": "1794444033709553700",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "83MzTgWDHDfeKYbuUghZ26UEXDmg6fCFwrTd1ZU6fhC2",
+   "at_ns": "1794444572963785500",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "AoroPXs2aNggLg17ASab8jmUu3xyPNKfS9JVZk1k2i7s",
+   "at_ns": "1794445173128197000",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": false,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  },
+  {
+   "hash": "9SbiLsizpBHSGnnragbY5Z8porbzpnZtWggaYfKPLG6j",
+   "at_ns": "1794445261249694700",
+   "method": "request_resolution",
+   "signer": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+   "ok": true,
+   "moved_in": [
+    {
+     "account": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+     "token": "near",
+     "amount": "20062500000000000000000"
+    }
+   ],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "request-result",
+   "actor": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+   "program": {
+    "wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473.wasm"
+   }
+  },
+  {
+   "hash": "AXvXrG32NxybxRhrxCWBBVCipWG99PhvDsN8t5WqvJ7m",
+   "at_ns": "1794445712490887200",
+   "method": "submit_outcome",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [],
+   "bet_id": 49,
+   "kind": "ruling",
+   "actor": "keeper.praetorial-dev-1101.testnet",
+   "outcome": "YES",
+   "run_no": 10,
+   "signed": {
+    "result_json": "{\"bet_id\":49,\"checked_until\":\"0\",\"element_results_hash\":\"09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7\",\"judge_pair_index\":0,\"outcome\":\"YES\",\"run_no\":10,\"terms_hash\":\"55b75815b1ff6ce3f332eca2f724615c1c7221b0c97290ffdfe1bb5cc4760cd4\"}",
+    "signature_hex": "922ee56f5adce4233c597f34c977a0fcfcc91ecba7e1a8a5752c6189e7fd4f0a7500a8f69238d99ed59fcaef5374018b4e4094e09745a516412a563e68b3c10e"
+   }
+  },
+  {
+   "hash": "3hJouvbQA5vQQGxX1FazaNUgRmxS3CbyGpv63CXJynaK",
+   "at_ns": "1794449612584054300",
+   "method": "finalize",
+   "signer": "keeper.praetorial-dev-1101.testnet",
+   "ok": true,
+   "moved_in": [],
+   "moved_out": [
+    {
+     "account": "979f2614c265b2dfacbde2628b66979c26afac83ba2f98f826a010aaab8eba7d",
+     "token": "nep141:usdc.testnet",
+     "amount": "44000000"
+    },
+    {
+     "account": "keeper.praetorial-dev-1101.testnet",
+     "token": "nep141:usdc.testnet",
+     "amount": "5000"
+    },
+    {
+     "account": "fee.praetorial-dev-1101.testnet",
+     "token": "nep141:usdc.testnet",
+     "amount": "1125566"
+    }
+   ],
+   "bet_id": 49,
+   "kind": "finalize",
+   "actor": "keeper.praetorial-dev-1101.testnet"
+  }
+ ],
+ "fee_account": "fee.praetorial-dev-1101.testnet"
+}

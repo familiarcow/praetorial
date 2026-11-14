@@ -1,0 +1,17 @@
+{
+ "tx": "DiTxKVAWamj6MFgMPLDGoerxADVFWQAUDYfPCAwaYJBs",
+ "wasm_sha256": "d6d884a695b47fb8dc69f5644898e21b638d35016f077461172188f5395982af",
+ "checked_at_ns": 1793934402624679936,
+ "checked_at_utc_ns_rounding": "rounded to 2^12 ns",
+ "request_block_ts_ns": 1793934393294361128,
+ "result_receipt": "EdrmGKmdVUjPbanFTK8wjj8x4xouhSfas8jDShXEULNH",
+ "result_block_ts_ns": 1793934404798305280,
+ "skew_vs_result_block_s": -2.173625344,
+ "skew_vs_request_block_s": 9.330318808,
+ "outside_window_s": 0.0,
+ "rpc_latest_block": [
+  276433227,
+  "2026-11-06T03:19:44.831188194Z"
+ ],
+ "verdict": "PASS"
+}

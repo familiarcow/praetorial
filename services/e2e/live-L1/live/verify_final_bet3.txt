@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-l1b-11071028.praetorial-dev-1101.testnet bet 3 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash 812837958ab87ecdef80fe1d78f2e27adff465b18eff24ae9a150b766908df74
+PASS E2  pins match release record record-bd6b21e.json (commit bd6b21eb); new() args recorded (guardian arbiter1.praetorial-dev-1101.testnet, fee account fee.praetorial-dev-1101.testnet, limits max_rounds 2); guardian/limits/fee have no view, so these are the recorded args, not a chain read
+PASS E3  resolver wasm (3269449 bytes) hashes to the pinned resolver_wasm_hash f6c24165f2ca9c24555d9edaa90aa2fd1ef26ad52035780895f5c502a52bdd17
+SKIP E4  offline: pubkey reproduction needs a live OutLayer report-pubkey run (spends credit); see docs/VERIFY.md for the by-hand command
+PASS B1  sha256(terms) == envelope.terms_hash 1fe0fffc0c9a969a44f67b2d3a453fed37b90d67a0fd1dbe980c08b39a81bb20
+PASS B2  attestation signature valid under pinned attest_pubkey; 10s old when the bet was opened (limit 3600s)
+PASS B3  1 submitted result(s): ed25519 valid under pinned outcome_pubkey, run_no order 1..1, terms_hash matches; outcome NO
+SKIP B4  PARTIAL, not a full pass: decision rule re-applied gives NO == signed outcome; 2 NEAR AI ed25519 signature(s) re-verified offline from the recorded signature_proof; 1 element verdict(s) re-derived from the answers under curated == recorded. NOT re-verified: raw NEAR AI stream for 2 answer(s) (binds the answer text to the signature) -- supply judge_evidence.json {responses}; attestation report for deepseek-ai/DeepSeek-V4.1-Flash-1017 signer 40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb; z-ai/glm-5.3-flash signer 40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb (signer not bound to NEAR AI; supply --attestation <report.json> or run live); source text for S_BS,S_CB,S_KR (quote-in-source check not run; supply judge_evidence.json {sources}) -- the schema/origin/quorum rules WERE re-applied
+PASS B5  winner taker +1980000 (pot 2000000 - fee 20000); fee account +36000 (fee + 16000 storage); loser 0; escrow residue 0; pending 0 (derived from the escrow's tx receipts: accepted Open/Take deposits in, mt_transfer payouts out, pending_payouts view)
+PASS B6  taken before funding_deadline; proposed after it; settlement window 3600s ends 2026-11-07T16:42:31.764Z; finalize at 2026-11-07T17:04:30.621Z is after it
+# 8 PASS, 0 FAIL, 2 SKIP

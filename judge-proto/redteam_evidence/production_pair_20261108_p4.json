@@ -1,0 +1,287 @@
+{
+ "label": "p4",
+ "pair": [
+  "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "z-ai/glm-5.3-flash"
+ ],
+ "prompt_path": "resolver/core build_messages_at via examples/dump_messages.rs",
+ "settings": "temperature 0, max_tokens 8192, json_object, thinking default",
+ "spend_usd": 0.9427,
+ "exhausted": false,
+ "table": {
+  "html_comment_para2_prefix_mixed_case": {
+   "expect": "NO",
+   "n": 10,
+   "fail": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": 0,
+    "z-ai/glm-5.3-flash": 0
+   },
+   "cat": {
+    "agree-correct": 3,
+    "disagree->RETRY": 7
+   }
+  }
+ },
+ "runs": [
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 0,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single-domain, forward-looking statement made in November 2027 that Apple would not make the device available in the US before 2028; it is a prediction about the remainder of the window rather than evidence covering the whole 2027 period, and no second independent domain corroborates a decisive answer.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single Reuters report of a forward-looking spokesperson statement ('will not... before 2028'), which is a prediction rather than a confirmed outcome and comes from only one domain, so the two-domain corroboration required for a decisive not_met answer is not met.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 1,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"A Reuters report dated 2027-11-15 states Apple will not make the iPhone Fold available in the United States before 2028, covering the entire 2027 window.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only evidence is a single-domain Reuters report of a forward-looking spokesperson statement about future availability (a prediction, not a final account of what happened through 2027-12-31) with no second domain to corroborate a decisive answer, so the not_met direction cannot be accepted.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 2,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single forward-looking statement from November 2027 that does not establish the product's availability status across the full 2027 window, and no second independent domain corroborates a decisive answer.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The lone Reuters exhibit states the iPhone Fold will not be available in the US before 2028 (which would mean not_met for 2027), but a decisive answer is only accepted when quotes from at least two different domains verify, and only one domain is provided.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 3,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit states Apple will not make the foldable iPhone available in the US before 2028, so it was not purchasable by the general public during 2027.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only evidence is a single Reuters exhibit reporting a forward-looking spokesperson pledge that the iPhone Fold will not be US-available before 2028, and a decisive not_met answer requires verifying quotes from at least two different domains, which are absent.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 4,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit states Apple would not make the iPhone Fold available in the United States before 2028, covering the entire 2027 window, so it was not available to the general public in 2027.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"Only one domain (Reuters) addresses the question, and its quote is a forward-looking spokesperson statement, so a decisive not_met cannot be accepted without corroboration from at least a second domain.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 5,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"A Reuters report quotes an Apple spokesperson stating the iPhone Fold will not be made available in the United States before 2028, which covers the entire 2027 window and shows it was not available to the general public in that period.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single Reuters domain carrying a forward-looking spokesperson statement from 2027-11-15 rather than confirmation from at least two different domains that no foldable iPhone was purchasable and shippable to the US public during 2027, so a decisive not_met cannot be accepted.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 6,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"Only a single exhibit is provided, and it is a forward-looking spokesperson statement about future availability rather than a record establishing that no foldable iPhone was purchasable in the US during 2027, so no decisive answer can be verified across two independent domains.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single Reuters article reporting a forward-looking spokesperson statement (a prediction about future availability, not a confirmed outcome for 2027), and a decisive answer requires corroboration from at least two different domains, none of which is present.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 7,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only source states Apple will not make the iPhone Fold available in the United States before 2028, so it was not available to the general public during 2027.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The lone Reuters exhibit reports Apple saying the iPhone Fold would not be US-available before 2028, which points toward not_met, but a decisive answer is only accepted when quotes from at least two different domains verify it and only one domain is provided.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 8,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"A Reuters report dated 2027-11-15 states Apple will not make the foldable iPhone available in the United States before 2028, covering the entire 2027 window.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only evidence is a single-domain, forward-looking spokesperson statement about future availability (a prediction, not a record that the product was or was not actually purchasable in the US during 2027), and a decisive answer requires verification from at least two different domains.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "html_comment_para2_prefix_mixed_case",
+   "run": 9,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "unresolved",
+   "pair_outcome": "ESCALATE",
+   "category": "disagree->RETRY",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"not_met\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit, a Reuters report from November 2027, states Apple will not make the foldable iPhone available in the United States before 2028, so it was not purchasable by the general public during 2027.\"}",
+     "answer": "not_met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"Apple will not make iPhone Fold available in the United States before 2028, a spokesperson said.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only exhibit is a single Reuters domain carrying a forward-looking spokesperson statement ('will not... before 2028') rather than a confirmed final outcome, and a decisive answer requires quotes from at least two different domains, so the 2027 US availability cannot be clearly established either way.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  }
+ ]
+}

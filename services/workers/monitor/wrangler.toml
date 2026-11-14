@@ -1,0 +1,66 @@
+# CF1c monitor Worker (D-HOST3). NO secrets in this file: the Telegram bot token (ALERT_TELEGRAM_BOT_TOKEN) is a
+# Worker secret (`wrangler secret put ALERT_TELEGRAM_BOT_TOKEN`, see README.md). NO cron trigger here either: the
+# account allows 5 in total and the keeper Worker's single `* * * * *` dispatcher (workers/common/src/dispatcher.ts)
+# runs this service's periodic job (monitor-tick) through the MONITOR_SERVICE binding declared in the keeper's toml.
+name = "praetorial-monitor-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# Reachable only through the service binding, never on a public workers.dev URL.
+workers_dev = false
+# Deliberately no node compat flag: the bundle must run on bare workerd + WebCrypto.
+
+[[durable_objects.bindings]]
+name = "MONITOR"
+class_name = "MonitorDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MonitorDO"]
+
+# Non-secret configuration (testnet). Account/contract ids are public.
+[vars]
+NEAR_NETWORK_ID = "testnet"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+INTENTS_CONTRACT_ID = "intents-mock.praetorial-dev-1101.testnet"
+FEE_ACCOUNT_ID = "fee.praetorial-dev-1101.testnet"
+KEEPER_ACCOUNT_ID = "keeper.praetorial-dev-1101.testnet"
+# LIVE1: the code default is usdc.fakes.testnet (not on this stack); the testnet launch USDC asset id.
+USDC_TOKEN_ID = "nep141:usdc.testnet"
+# ALERT_TELEGRAM_CHAT_ID = "<operator chat id>"  # optional; testnet rehearsal runs without Telegram
+# RELAYER_BUDGET_URL = "https://..."   # optional: relayer global gas budget feed (RLY1)
+# LIVE1: the relayer ran out of NEAR (send_tx InvalidTxError NotEnoughBalance) and every relayed action failed; alert below 5 NEAR.
+# MON1 (PREMAIN1 MAINNET-RISK #1): CRITICAL once per payout line seen in_flight >= 10 min (normal callback: 3 blocks, <2 s).
+ALERT_STUCK_PAYOUT_MS = "600000"
+CREDIT_WATCH = "relayer.praetorial-dev-1101.testnet:5000000000000000000000000,keeper.praetorial-dev-1101.testnet:2000000000000000000000000"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-monitor-mainnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = false
+
+[[env.mainnet.durable_objects.bindings]]
+name = "MONITOR"
+class_name = "MonitorDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["MonitorDO"]
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+FEE_ACCOUNT_ID = "praetorial.near"
+KEEPER_ACCOUNT_ID = "keeper.praetorial.near"
+USDC_TOKEN_ID = "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+# MAINPREP1 (D-DSY1): independent second RPC (Intear) + NEAR Foundation RPC; both answered mainnet views 2026-11-10.
+NEAR_RPC_FALLBACKS = "https://rpc.intea.rs,https://rpc.mainnet.near.org"
+# MAINPREP1: NEAR balance floors (yocto): relayer 1 NEAR, keeper 0.3 NEAR (LIVE1: an empty relayer broke every relayed action).
+# MON1 (PREMAIN1 MAINNET-RISK #1): CRITICAL once per payout line seen in_flight >= 10 min (normal callback: 3 blocks, <2 s).
+ALERT_STUCK_PAYOUT_MS = "600000"
+CREDIT_WATCH = "relayer.praetorial.near:1000000000000000000000000,keeper.praetorial.near:300000000000000000000000"

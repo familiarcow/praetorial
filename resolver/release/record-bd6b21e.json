@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "bd6b21eb74c8e2481221bcd843fe9dbdb03ed118",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "f6c24165f2ca9c24555d9edaa90aa2fd1ef26ad52035780895f5c502a52bdd17",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "f6c24165f2ca9c24555d9edaa90aa2fd1ef26ad52035780895f5c502a52bdd17"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "f6c24165f2ca9c24555d9edaa90aa2fd1ef26ad52035780895f5c502a52bdd17"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "f6c24165f2ca9c24555d9edaa90aa2fd1ef26ad52035780895f5c502a52bdd17"
+    }
+  ],
+  "notes": {
+    "item": "RR2 release record after L1c a7e4bd2 (custom price-sheet code/judge agreement gate, D-L1GATE1); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical, no compiler crashes or re-runs"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "548e3e09478e8f88e67f775e60f3b6ed951807e4",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "3dd936d8deee90bb452d8e4f242062d8ef6a1f05e4cd62a548941e380fe4ad49",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "3dd936d8deee90bb452d8e4f242062d8ef6a1f05e4cd62a548941e380fe4ad49"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "3dd936d8deee90bb452d8e4f242062d8ef6a1f05e4cd62a548941e380fe4ad49"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "3dd936d8deee90bb452d8e4f242062d8ef6a1f05e4cd62a548941e380fe4ad49"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; any known QEMU/linker SIGSEGV flake attempts were retried; one run hit the QEMU cc SIGSEGV flake and was retried",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-55756ff.json (561f9f47...). Item 16q (D-JUDGE2: max_tokens 400->2048; strip leading <think> block, unterminated <think> => invalid; last balanced top-level JSON object; finish_reason length => invalid; empty content never falls back to reasoning_content; judge.run_diagnostics per run) changes resolver code, so the wasm hash and bind:wasm outcome/attest pubkeys change: the D-KEY2 report-pubkey bootstrap must be redone against THIS hash. Built from 548e3e0 (last code commit; later commits are docs/record only). Routes docker-run-1, docker-run-2, fresh-container all byte-identical (cmp). Modules kept at ~/.cache/16q/{a1,a2,a3}/module.wasm. Not uploaded."
+  }
+}

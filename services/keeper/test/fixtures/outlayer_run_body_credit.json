@@ -1,0 +1,1 @@
+{"_note":"fixture: 403 whose body names credit (credit/quota body rule)","output":{"run_diagnostics":[{"http_status":403,"error":"account has no credit remaining"}]}}

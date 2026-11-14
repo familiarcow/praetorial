@@ -1,0 +1,10 @@
+import { account } from "./lib.mjs";
+import * as C from "./config.mjs";
+import fs from "node:fs";
+const a = await account(C.OPERATOR);
+const v = (m, x) => a.viewFunction({ contractId: C.ESCROW, methodName: m, args: x });
+const b = await v("get_bet", { bet_id: 1 });
+const mt = (id, t) => a.viewFunction({ contractId: C.INTENTS, methodName: "mt_balance_of", args: { account_id: id, token_id: t } });
+console.log(JSON.stringify({ status: b.status, outcome: b.outcome, proposed_at: b.proposed_at, now_ms: Date.now(), nb_ms: Number(BigInt(b.proposed_at) / 1000000n) + 3600000, bet_id_in_results: JSON.parse(fs.readFileSync("results.json")).bet_id }));
+console.log(JSON.stringify({ maker: await mt(C.MAKER, C.USDC), taker: await mt(C.TAKER, C.USDC), fee: await mt(C.FEE, C.USDC), esc_usdc: await mt(C.ESCROW, C.USDC), esc_btc: await mt(C.ESCROW, C.BTC), pend: (await v("pending_payouts_view", { from: 0, limit: 50 })).length }));
+console.log(JSON.stringify(b).slice(0,800));

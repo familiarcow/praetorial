@@ -1,0 +1,32 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "a1667ae9da3a79aa415612d69208aae50f1570aa",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "da6e2ed57a03f31f8d261fa5de3868524166efba22261420bbae1f5dabc04363",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "da6e2ed57a03f31f8d261fa5de3868524166efba22261420bbae1f5dabc04363"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "da6e2ed57a03f31f8d261fa5de3868524166efba22261420bbae1f5dabc04363"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "da6e2ed57a03f31f8d261fa5de3868524166efba22261420bbae1f5dabc04363"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-3550c7e7.json (2dd8ab4a...). R3b (D-JUDGE4 wiring: verified streamed judge calls with own idle/total timers, two-model agreement in direct/evidence/fallback/build_submission, lane A/B audit, real in-run preflight) changes resolver code, so the wasm hash and bind:wasm pubkeys change; D-KEY2 bootstrap must be redone against THIS hash. Built from a1667ae (last code commit; later commits are docs/record only). Routes docker-run-1, docker-run-2, fresh-container byte-identical. Not uploaded."
+  }
+}

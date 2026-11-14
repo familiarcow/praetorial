@@ -1,0 +1,10 @@
+{
+  "step": "fund_and_mint",
+  "ok": true,
+  "accountId": "73a2e53382431d020c0a73345f20c0b85ebe7adea255942957542318278052d5",
+  "fundTxHash": "H8b33MUkxRrjvX9u4BJzTUzgErrgG7eSsrYeRESr11pa",
+  "fundAmountYocto": "300000000000000000000000",
+  "mintTxHash": "EhUT5EkavWtW7C2HMZi6MSvgaHFRxzyYyfPYHrSPwsZu",
+  "mintAmountUsdc6dp": "50000000",
+  "usdcBalanceAfterMint": "50000000"
+}

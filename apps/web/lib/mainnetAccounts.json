@@ -1,0 +1,15 @@
+{
+  "_comment": "DOCS2: the mainnet accounts the Docs name (data, not config: the app reads its ids from lib/network.ts). Test-checked in tests/docs2.unit.test.ts against release/mainnet-night/args.mainnet.json (the escrow's new() args), lib/network.ts and the mainnet sections of services/workers/{relayer,sourcecheck}/wrangler.toml.",
+  "escrow": "bets.praetorial.near",
+  "guardian": "praetorial.near",
+  "feeAccount": "praetorial.near",
+  "keeper": "keeper.praetorial.near",
+  "relayer": "relayer.praetorial.near",
+  "attestSigner": "attest.praetorial.near",
+  "aiKeyOwner": "aikey.praetorial.near",
+  "wasmUploader": "ops.praetorial.near",
+  "operator": "operator.praetorial.near",
+  "outlayer": "outlayer.near",
+  "registry": "registry.praetorial.near",
+  "intents": "intents.near"
+}

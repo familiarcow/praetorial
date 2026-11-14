@@ -1,0 +1,87 @@
+{
+ "domains": [
+  [
+   "https://site.api.espn.com/a?b=1",
+   "espn.com"
+  ],
+  [
+   "https://www.bbc.co.uk/x",
+   "bbc.co.uk"
+  ],
+  [
+   "https://a.b.example.com:8443/p",
+   "example.com"
+  ],
+  [
+   "https://user@news.example.org/",
+   "example.org"
+  ],
+  [
+   "http://127.0.0.1:80/x",
+   "127.0.0.1"
+  ],
+  [
+   "https://example.com./",
+   "example.com"
+  ],
+  [
+   "not a url",
+   null
+  ]
+ ],
+ "groups": [
+  {
+   "sources": [
+    {
+     "publisher": "ESPN (scoreboard)",
+     "url": "https://site.api.espn.com/a"
+    },
+    {
+     "publisher": "ESPN Stats",
+     "url": "https://www.espn.com/b"
+    },
+    {
+     "publisher": "Reuters",
+     "url": "https://www.reuters.com/c"
+    }
+   ],
+   "want": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "sources": [
+    {
+     "origin": "shared",
+     "publisher": "A",
+     "url": "https://a.example.com/"
+    },
+    {
+     "origin": "shared",
+     "publisher": "B",
+     "url": "https://b.example.net/"
+    }
+   ],
+   "want": [
+    0,
+    0
+   ]
+  },
+  {
+   "sources": [
+    {
+     "publisher": "No Url (live)"
+    },
+    {
+     "publisher": "No Url"
+    }
+   ],
+   "want": [
+    0,
+    0
+   ]
+  }
+ ]
+}

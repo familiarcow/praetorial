@@ -1,0 +1,22 @@
+{
+ "case": "tk_near_duplicate_flood_burial",
+ "inputs_sha256": "79267f94a7172fb52c60d521f6ed0a74a46c690cf0dc4cc85a1530827abaf9a9",
+ "provenance": {
+  "kind": "live-nondecisive-or-decisive-recorded",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "outcome_at_record": "VOID",
+  "recorded_utc": "2026-11-09T16:04:08Z",
+  "run_id": "rte4c-record-20261109T160356Z"
+ },
+ "raws": {
+  "e1": {
+   "4": [
+    "{\"answer\": \"insufficient\", \"quote\": \"iPhone Fold remains unavailable for purchase anywhere in the United States as of early October 2027; Apple has not announced a US on-sale date.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The exhibits only establish that the foldable iPhone was unavailable as of early October 2027, leaving the remainder of the 2027 window (through 2027-12-31) uncovered, so the year-long claim cannot be resolved either way.\"}",
+    "{\"answer\": \"insufficient\", \"quote\": \"iPhone Fold remains unavailable for purchase anywhere in the United States as of early October 2027; Apple has not announced a US on-sale date.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The exhibits only show the iPhone Fold was unavailable as of early October 2027 and do not cover the rest of the 2027 window (October\u2013December), so they cannot establish whether it became available later in 2027; additionally all sources are from a single domain, which cannot yield a decisive answer.\"}"
+   ]
+  }
+ }
+}

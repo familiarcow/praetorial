@@ -1,0 +1,43 @@
+{
+  "item": "11b predecessor-whitelist-rehearsal",
+  "date": "2026-11-06",
+  "network": "testnet",
+  "escrow_account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+  "wasm_hash": "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7",
+  "secret": {
+    "owner": "praetorial-dev-1101.testnet",
+    "profile": "rehearsal11b",
+    "accessor": "WasmHash(cd853f8f...)",
+    "key_names": ["REHEARSAL_CANARY"],
+    "value": "withheld (random 128-bit hex, never printed, not stored)",
+    "set_command": "outlayer secrets set <json> --profile rehearsal11b --wasm-hash <hash> --via <escrow>   (no --access: row 'new hash row' => CLI printed 'Access: allow-all' + 'Calls admitted only from: <escrow>')",
+    "stored_access_condition_as_listed": "from:praetorial-e2e-2611052236.praetorial-dev-1101.testnet  (outlayer secrets list -v; ACCESS column)",
+    "note": "CLI prints 'Access: allow-all (new row...)' at set time but list shows from:<escrow>; the effective condition is the caller (predecessor) rule."
+  },
+  "txs": [
+    {"step": "positive_via_escrow", "hash": "Hr47zpjEAFZHmbX7cnMxyfRE6JaoBvhfWGT82gc2wXHx", "predecessor": "escrow", "result": "execution_completed successfully, output returned (report-pubkey)"},
+    {"step": "negative_stranger_maker1", "hash": "8hKeNmJT9qLz8xcP7tff9AQaD1Bz9ZBuPEv1TmESofog", "predecessor": "maker1.praetorial-dev-1101.testnet", "result": "REJECTED: 'Access denied by access condition — signer maker1..., called from maker1...' ; instructions 0; refunded"},
+    {"step": "negative_owner_direct_dev1101", "hash": "4LDRAX8d287CrKdDJ5hiXGzwn5NvPK57B92KZsXHHSXH", "predecessor": "praetorial-dev-1101.testnet", "result": "REJECTED likewise (even the secret owner is refused when calling directly)"},
+    {"step": "create_attest_signer", "hash": "AmXb9Qga1CFtT8p9VmWamUmyngGa9S3EaYCWqdfDynKz", "account": "attest1.praetorial-dev-1101.testnet", "funded_near": "0.25"},
+    {"step": "topup_attest_signer", "hash": "9merKVzE4D1MN7QgBZMjXoMZoAvCXm7Pt52zjZmhjHnd", "near": "0.2", "why": "first sourcecheck attempt failed NotEnoughBalance: attached deposit ~0.303 NEAR > 0.25 (no tx landed)"},
+    {"step": "sourcecheck_signed_by_attest_signer", "hash": "9QQQeCuBBPUQ7utqpfkAfAkfw52P6thdJCsDRpX5RAXT", "signature_verified_locally": true}
+  ],
+  "attest_signer": {
+    "account": "attest1.praetorial-dev-1101.testnet",
+    "attest_pubkey_hex": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+    "same_wasm_other_signers": {"escrow (item 8)": "861e05fed851ed724f917ab74b59cc739358f0f104534cb0ffa8b2269d428e05", "dev1101 (item 8 mismatch run)": "564382110695654ad7d6592740e5cc51c252e6f952b1e02ea188bb04b7e81e14"},
+    "pinned_anywhere": false
+  },
+  "limits_of_evidence": [
+    "Positive run proves the escrow-predecessor call is admitted and executes; the report-pubkey mode does not echo the secret, so decryption/injection of REHEARSAL_CANARY into the wasm env was NOT observed directly (wasm not rebuilt per ruling).",
+    "Negative proves the access condition rejects non-whitelisted predecessors before execution (0 instructions).",
+    "CLI exits rc=0 and prints no result on denial; the denial is only visible in the tx logs (execution_completed ... 'Execution failed: Access denied')."
+  ],
+  "balances_near": {
+    "dev1101_before": 1.4060, "dev1101_after": 0.9414,
+    "attest1_after": 0.4476, "dev_outflow": 0.4646,
+    "net_spent_excluding_funds_parked_in_attest1": "~0.017 (0.4646 - 0.4476 parked; includes secret storage deposit, refundable on 'secrets delete')",
+    "escrow_8_before": 6.4777, "escrow_8_after": 6.4756,
+    "maker1_before": 0.3719, "maker1_after": 0.3702
+  }
+}

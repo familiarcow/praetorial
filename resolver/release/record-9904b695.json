@@ -1,0 +1,32 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "9904b695c07a165aadce3fc9234f663a1aeae1a5",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs; the first attempt of run 2 hit the known QEMU/serde build-script flake and was re-run, same hash)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-9e73e868.json (4a69b059...). R3d (judge-live-fixes): primary model id is now the exact listed deepseek-ai/DeepSeek-V4.1-Flash-1017; streaming error_body_head + http_status; stream timings and signature_verified in run_diagnostics; judge_backend/judge_backend_reason (real-http without NEAR_AI_API_KEY reports offline-mock + reason). Wasm hash and bind:wasm pubkeys change; D-KEY2 bootstrap must be redone against THIS hash. Built from 9904b69 (last code commit). Not uploaded."
+  }
+}

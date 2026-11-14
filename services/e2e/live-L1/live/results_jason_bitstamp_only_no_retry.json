@@ -1,0 +1,48 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "3BcSNANFfeE2wAe5TSgdAah3vKtccd6yQUQomqK1GFSL",
+      "url": "https://testnet.nearblocks.io/txns/3BcSNANFfeE2wAe5TSgdAah3vKtccd6yQUQomqK1GFSL",
+      "spec_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "checked_at": "1794066702403448832",
+      "attest_pubkey": "69ad737f119cc4961d024fe75a2bcd71b6409bc34314b6a3ad639e9ed6ebbb5c",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "6hnfEmpvWUqV1jLwx5N1evVA6kNZDED2iSX9dqJL5Lbb",
+      "url": "https://testnet.nearblocks.io/txns/6hnfEmpvWUqV1jLwx5N1evVA6kNZDED2iSX9dqJL5Lbb",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "H28jUfxwjbKwfWaxiMywJcKUioR186f9W64wKXXdhuGA",
+      "url": "https://testnet.nearblocks.io/txns/H28jUfxwjbKwfWaxiMywJcKUioR186f9W64wKXXdhuGA",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "6GxCioiCD6FGqsa2jKXKhp3U7R2Kt8XNSTkfUm7TdvNS",
+      "url": "https://testnet.nearblocks.io/txns/6GxCioiCD6FGqsa2jKXKhp3U7R2Kt8XNSTkfUm7TdvNS"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "GT3AqSNh435ZWSjMavaAZR4RU41RbyB1KsNYHGvizuXr",
+      "url": "https://testnet.nearblocks.io/txns/GT3AqSNh435ZWSjMavaAZR4RU41RbyB1KsNYHGvizuXr"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "EARNw739Nzo4rgtabGKWUjXUGfLChKJgx2sz3nmgYzX8",
+      "url": "https://testnet.nearblocks.io/txns/EARNw739Nzo4rgtabGKWUjXUGfLChKJgx2sz3nmgYzX8",
+      "status": "Success",
+      "keeper_credit_before": "89812500000000000000000"
+    }
+  ],
+  "terms_sha256": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+  "bet_id": 4,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error_tx": null,
+  "early_attempt_too_early": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: too early to request resolution\"}}}}"
+}

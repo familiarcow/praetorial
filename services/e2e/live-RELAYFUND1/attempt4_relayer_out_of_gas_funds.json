@@ -1,0 +1,35 @@
+{
+  "txs": [
+    {
+      "step": "setup: fund fresh user 0.2 NEAR",
+      "hash": "4mm1UsatS21oc8icD35AscrccH5zkzGmsqSNJ9pZramW",
+      "url": "https://testnet.nearblocks.io/txns/4mm1UsatS21oc8icD35AscrccH5zkzGmsqSNJ9pZramW"
+    },
+    {
+      "step": "1 relayed near_deposit 0.1 NEAR on wrap.testnet",
+      "hash": "2xEjHKuqYEYGCGNzngKfavsc6y2N4JxV8s3aL5b1Yc8x",
+      "url": "https://testnet.nearblocks.io/txns/2xEjHKuqYEYGCGNzngKfavsc6y2N4JxV8s3aL5b1Yc8x"
+    },
+    {
+      "step": "2 relayed ft_transfer_call wrap.testnet -> intents (msg json)",
+      "error": "NEAR RPC error (send_tx): {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{},\"name\":\"INVALID_TRANSACTION\"},\"code\":-32000,\"message\":\"Server error\",\"data\":{\"TxExecutionError\":{\"InvalidTxError\":{\"NotEnoughBalance\":{\"balance\":\"98665834209307399999999\",\"cost\":\"101458081306182000000001\",\"signer_id\":\"relayer.praetorial-dev-1101.testnet\"}}}}}"
+    }
+  ],
+  "user": "90c800124e246e0e794e0e7328759c02bd4a2f72228959b4d34ea13f86c0d1ed",
+  "msgFormat": "json",
+  "network": "testnet",
+  "intentsStorageOnWnearBefore": {
+    "total": "1250000000000000000000",
+    "available": "0"
+  },
+  "userStorageOnWnearBefore": null,
+  "mtBalanceBefore": "0",
+  "nearDepositOutcome": {
+    "failures": [],
+    "logs": [
+      "Deposit 98750000000000000000000 NEAR to 90c800124e246e0e794e0e7328759c02bd4a2f72228959b4d34ea13f86c0d1ed"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterWrap": "98750000000000000000000"
+}

@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "a646d02d7991adb760b5617aee5528512ff2db91",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "88f42fab5d13dd8e0e4056733b65caa4fc9590efad8a49d7e662b4c9938599df",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "88f42fab5d13dd8e0e4056733b65caa4fc9590efad8a49d7e662b4c9938599df"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "88f42fab5d13dd8e0e4056733b65caa4fc9590efad8a49d7e662b4c9938599df"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "88f42fab5d13dd8e0e4056733b65caa4fc9590efad8a49d7e662b4c9938599df"
+    }
+  ],
+  "notes": {
+    "item": "RR6 release record after L1b9 merge a646d02 (D-EARLYREQ1: early resolution request gets no signed outcome); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (docker-run-1, docker-run-2, fresh-container); the first fresh-container attempt hit a transient linker segfault under emulation (cc collect2 SIGSEGV in yoke-derive) and was rerun unchanged"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_provenance": {
+    "source": "OutLayer contract source checkout, repo https://github.com/out-layer/outlayer.git @ a2a8510528d9c8051e63765783d1e4ed998a273a, contract/src/execution.rs `pub fn request_execution` + contract/src/lib.rs types (ExecutionSource, ResourceLimits, SecretsReference, ResponseFormat, RequestParams); corroborated by the live outlayer.testnet panic recorded in services/e2e/live-run16/results.json (tx 6U8HN1hWiESqhfVgZFna3MMCHcVMYB438EoLu9jCnKEJ: 'missing field `source`') and the vault note 'OutLayer production setup' (raw `near contract call-function ... request_execution file-args`).",
+    "pinned_by": "queue item 16b / D-OL-WIRE1"
+  },
+  "method": "request_execution",
+  "payable": true,
+  "args_wire_format": "ONE top-level JSON object whose keys are the parameter names below (near-sdk multi-arg method). NOT wrapped in {\"args_json\": \"...\"}.",
+  "params": {
+    "source": {"required": true, "type": "ExecutionSource (externally tagged enum)", "variants": {"GitHub": ["repo", "commit", "build_target?"], "WasmUrl": ["url", "hash", "build_target?"], "Project": ["project_id", "version_key?"]}},
+    "resource_limits": {"required": false, "type": "ResourceLimits", "fields": ["max_instructions?:u64", "max_memory_mb?:u32", "max_execution_seconds?:u64"], "note": "None => compile-only mode (no execution)"},
+    "input_data": {"required": false, "type": "string"},
+    "secrets_ref": {"required": false, "type": "SecretsReference", "fields": ["profile:string", "account_id:AccountId"]},
+    "response_format": {"required": false, "type": "enum", "values": ["Bytes", "Text", "Json"]},
+    "payer_account_id": {"required": false, "type": "AccountId", "note": "refund recipient; defaults to predecessor (= the escrow when it calls)"},
+    "params": {"required": false, "type": "RequestParams", "fields": ["force_rebuild", "store_on_fastfs", "compile_only", "project_uuid", "attached_usd", "use_bound_identity"]}
+  },
+  "return_shape": {
+    "summary": "request_execution itself returns nothing; it creates a yield promise. The caller's .then() callback receives the on_execution_response return value: the guest's output as a JSON value (Json format: the guest's JSON object; Text: JSON string; Bytes: base64 string), or `null` when the run failed / produced nothing.",
+    "no_unused_compute_field": "OutLayer does NOT report unused compute to the caller. Excess deposit (payment - cost) is transferred natively to payer_account_id (default: predecessor) by OutLayer's callback.",
+    "promise_failed": "Malformed args or insufficient payment => the call panics => caller sees PromiseResult::Failed."
+  }
+}

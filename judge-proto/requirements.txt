@@ -1,0 +1,3 @@
+# Non-stdlib deps for judge-proto/redteam_evidence (via evidence.py) and test.sh python steps.
+# test.sh bootstraps a repo-local .venv from this file (see TESTING.md).
+cryptography==50.0.2

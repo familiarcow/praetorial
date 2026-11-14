@@ -1,0 +1,173 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "72wJ2SReCLPfZUyBRtL6hiYvrqnhzNz1m3YohY3TnBsg",
+      "url": "https://testnet.nearblocks.io/txns/72wJ2SReCLPfZUyBRtL6hiYvrqnhzNz1m3YohY3TnBsg",
+      "spec_hash": "e4464cf3b259cbf05f516b9f7e42212085a13a1e914cf93e486a3271dcd61dd5",
+      "checked_at": "1794205737068081152",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker_x20",
+      "hash": "5ZvC8q5nFQQTg4FzZo6curyb8QfocwoyQ1S1yw3m5JoA",
+      "url": "https://testnet.nearblocks.io/txns/5ZvC8q5nFQQTg4FzZo6curyb8QfocwoyQ1S1yw3m5JoA",
+      "amount": "201255660",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc_0",
+      "hash": "EfNfDQcoDMgZTMfBir5bthVcG25QxbxWoqJVDVwdVQ1B",
+      "url": "https://testnet.nearblocks.io/txns/EfNfDQcoDMgZTMfBir5bthVcG25QxbxWoqJVDVwdVQ1B",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_1",
+      "hash": "FwP77jnE6rWLm6HaDg1f95B3TjKKgyLyhc1JtkuAi7Mz",
+      "url": "https://testnet.nearblocks.io/txns/FwP77jnE6rWLm6HaDg1f95B3TjKKgyLyhc1JtkuAi7Mz",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_2",
+      "hash": "GzYaqQmURV3B3AzPEKyyhFmXTNyiFPXav5JmgkTJtYBU",
+      "url": "https://testnet.nearblocks.io/txns/GzYaqQmURV3B3AzPEKyyhFmXTNyiFPXav5JmgkTJtYBU",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_3",
+      "hash": "6KUSfXTj4gs8qt7FMaYUmQH2e75mnESHJJjZMBdWpyR4",
+      "url": "https://testnet.nearblocks.io/txns/6KUSfXTj4gs8qt7FMaYUmQH2e75mnESHJJjZMBdWpyR4",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_4",
+      "hash": "AVQRAt4bnDQ6jkVdAkFC47J8tzqBxAzCBeEauxtrWAEE",
+      "url": "https://testnet.nearblocks.io/txns/AVQRAt4bnDQ6jkVdAkFC47J8tzqBxAzCBeEauxtrWAEE",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_5",
+      "hash": "HkhJ637xVPRfomZ7qjRT9SXwJrrthgEeHG8uGWt74UGv",
+      "url": "https://testnet.nearblocks.io/txns/HkhJ637xVPRfomZ7qjRT9SXwJrrthgEeHG8uGWt74UGv",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_6",
+      "hash": "GX7vqyzWAjjjtvaTp8rdkzbvHPf6XyyUECfCKqDiH1KT",
+      "url": "https://testnet.nearblocks.io/txns/GX7vqyzWAjjjtvaTp8rdkzbvHPf6XyyUECfCKqDiH1KT",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_7",
+      "hash": "FUMG2rWmJdZgFXfk9Hz4SwQjJ3ivJnq5o3vt1ArTF9dW",
+      "url": "https://testnet.nearblocks.io/txns/FUMG2rWmJdZgFXfk9Hz4SwQjJ3ivJnq5o3vt1ArTF9dW",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_8",
+      "hash": "HwaJmecUpWpvdv6BF3xhHXKs6sK2cM56gPTHYAutZLVy",
+      "url": "https://testnet.nearblocks.io/txns/HwaJmecUpWpvdv6BF3xhHXKs6sK2cM56gPTHYAutZLVy",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_9",
+      "hash": "39Gbux3bGQtT2LmWkDkEPbnh4Xd84y8g1aCMtgYxdLgP",
+      "url": "https://testnet.nearblocks.io/txns/39Gbux3bGQtT2LmWkDkEPbnh4Xd84y8g1aCMtgYxdLgP",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_10",
+      "hash": "97zpqHQbqQ81b3QLeNQNHDdJzBd84VWFAaxSGDWVfGqn",
+      "url": "https://testnet.nearblocks.io/txns/97zpqHQbqQ81b3QLeNQNHDdJzBd84VWFAaxSGDWVfGqn",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_11",
+      "hash": "JDw5u8snpiYcTLezc7RghFwXV7KwL9ChZQJBYTajsQqn",
+      "url": "https://testnet.nearblocks.io/txns/JDw5u8snpiYcTLezc7RghFwXV7KwL9ChZQJBYTajsQqn",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_12",
+      "hash": "3efWkxFcT7zJsyvBxfBUj5pTbQTDfVXksS63fX6rqvQL",
+      "url": "https://testnet.nearblocks.io/txns/3efWkxFcT7zJsyvBxfBUj5pTbQTDfVXksS63fX6rqvQL",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_13",
+      "hash": "5GHTG87j4QGZKvuT9w9ocbA5kWK6BE9QqX7h5Lev3nj1",
+      "url": "https://testnet.nearblocks.io/txns/5GHTG87j4QGZKvuT9w9ocbA5kWK6BE9QqX7h5Lev3nj1",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_14",
+      "hash": "EkcJNZrRAiot9fNVNhQ8dnhqHUJGCPTdBgeWhuSWCzrx",
+      "url": "https://testnet.nearblocks.io/txns/EkcJNZrRAiot9fNVNhQ8dnhqHUJGCPTdBgeWhuSWCzrx",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_15",
+      "hash": "GNgHqS69mBvZJFsZxbE3QqmZAgNTKbZrSTRLvgrMwPCr",
+      "url": "https://testnet.nearblocks.io/txns/GNgHqS69mBvZJFsZxbE3QqmZAgNTKbZrSTRLvgrMwPCr",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_16",
+      "hash": "4WfPHAXuWzFr2LhRsZoc4LW2dyiNsjYEsbaDEx7JdYYE",
+      "url": "https://testnet.nearblocks.io/txns/4WfPHAXuWzFr2LhRsZoc4LW2dyiNsjYEsbaDEx7JdYYE",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_17",
+      "hash": "96SDfCKbhcDx8RbcjcRK4dXxRJhqW9uFHC8kBui4ZmPS",
+      "url": "https://testnet.nearblocks.io/txns/96SDfCKbhcDx8RbcjcRK4dXxRJhqW9uFHC8kBui4ZmPS",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_18",
+      "hash": "AGKim5QE5f7jZo4M7YdkzcFVjUsW92GF7UUnvffPxoZ4",
+      "url": "https://testnet.nearblocks.io/txns/AGKim5QE5f7jZo4M7YdkzcFVjUsW92GF7UUnvffPxoZ4",
+      "amount": "10062783"
+    },
+    {
+      "step": "open_usdc_19",
+      "hash": "Ap9zBUkrUrBRCft9BZ3rP7oRhdfTJtKyC9f5MqPVTN4H",
+      "url": "https://testnet.nearblocks.io/txns/Ap9zBUkrUrBRCft9BZ3rP7oRhdfTJtKyC9f5MqPVTN4H",
+      "amount": "10062783"
+    }
+  ],
+  "form": {
+    "t_utc": "2026-11-09T08:59",
+    "op": ">=",
+    "x_usd": "75900"
+  },
+  "sheet": {
+    "template": {
+      "id": "btc_close_at_t",
+      "version": 1
+    },
+    "fields": {
+      "t_utc": "2026-11-09T08:59:00Z",
+      "op": ">=",
+      "x_usd": 75900,
+      "open_utc": "2026-11-09T06:28:00Z"
+    }
+  },
+  "release": {
+    "network": "testnet",
+    "resolver_wasm_hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+    "models": [
+      "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "z-ai/glm-5.3-flash"
+    ],
+    "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2"
+  },
+  "resolver_keys": [
+    "eab0e7b74f13fac3a2ad1e0c4c4ad6f776aa1904bb6f0fafd0ba035a23daaa4d",
+    "b0bd538e5a1cc4a31216a8020f992b3f9dcde612bc9889c7a828dc697abf8e9f",
+    "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"
+  ],
+  "checkOpenPins": null,
+  "open_offers_now": 20,
+  "escrow": "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet"
+}

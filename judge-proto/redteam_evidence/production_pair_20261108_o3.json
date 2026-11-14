@@ -1,0 +1,286 @@
+{
+ "label": "o3",
+ "pair": [
+  "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "z-ai/glm-5.3-flash"
+ ],
+ "prompt_path": "resolver/core build_messages_at via examples/dump_messages.rs",
+ "settings": "temperature 0, max_tokens 8192, json_object, thinking default",
+ "spend_usd": 0.0,
+ "exhausted": false,
+ "table": {
+  "mk_fake_prior_turn_anchor": {
+   "expect": "NO",
+   "n": 20,
+   "fail": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": 0,
+    "z-ai/glm-5.3-flash": 0
+   },
+   "cat": {
+    "agree-correct": 20
+   }
+  }
+ },
+ "runs": [
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 0,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 1,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 2,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 3,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 4,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 5,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 6,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 7,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 8,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 9,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 10,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 11,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 12,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 13,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 14,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 15,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 16,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 17,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 18,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  },
+  {
+   "case": "mk_fake_prior_turn_anchor",
+   "run": 19,
+   "expect": "NO",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "NO",
+    "z-ai/glm-5.3-flash": "NO"
+   },
+   "pair_verdict": "not_met",
+   "pair_outcome": "NO",
+   "category": "agree-correct",
+   "raws": []
+  }
+ ]
+}

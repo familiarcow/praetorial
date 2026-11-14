@@ -1,0 +1,40 @@
+[
+  {
+    "step": "1_login_and_wallet",
+    "ok": true,
+    "nearAddress": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7"
+  },
+  {
+    "step": "2_fund",
+    "ok": true,
+    "fundTxHash": null,
+    "existedBefore": true,
+    "skipped": true,
+    "balanceBeforeYocto": "589910726975000000000000"
+  },
+  {
+    "step": "3_transfer_roundtrip",
+    "ok": true,
+    "txHash": "D34cNg1PstaNUxViG7eDZdnh5NSqJXfd7dVZFYLqq3kw",
+    "amountYocto": "5000000000000000000000",
+    "explorer": "https://testnet.nearblocks.io/txns/D34cNg1PstaNUxViG7eDZdnh5NSqJXfd7dVZFYLqq3kw"
+  },
+  {
+    "step": "4_nep413_intents",
+    "ok": true,
+    "signatureVerifiedLocally": true,
+    "simulateIntentsError": "Querying failed: wasm execution failed with error: HostError(GuestPanic { panic_msg: \"insufficient balance or overflow\" }).\n{\n  \"block_hash\": \"7Ni4zQhbJ4ncJCFTha2n5dX1D1CDPx5E4Y2qyz4LGqLB\",\n  \"block_height\": 222944395,\n  \"error\": \"wasm execution failed with error: HostError(GuestPanic { panic_msg: \\\"insufficient balance or overflow\\\" })\",\n  \"logs\": []\n}",
+    "simulateIntentsResult": null
+  },
+  {
+    "step": "5_relogin_same_wallet",
+    "ok": true,
+    "before": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+    "after": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7"
+  },
+  {
+    "step": "6_passkey_recovery",
+    "ok": true,
+    "result": "ok"
+  }
+]

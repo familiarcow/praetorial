@@ -1,0 +1,69 @@
+{
+ "results": [
+  {
+   "station": "KNYC",
+   "valid": "2026-11-01",
+   "state": "NY",
+   "wfo": "OKX",
+   "link": "/api/1/nwstext/202611020621-KOKX-CDUS41-CLINYC",
+   "product": "202611020621-KOKX-CDUS41-CLINYC",
+   "name": "NEW YORK CITY",
+   "high": 60,
+   "high_record": 84,
+   "high_record_years": [
+    1950
+   ],
+   "high_normal": 59,
+   "high_depart": 0,
+   "high_time": "230 PM",
+   "low": 42,
+   "low_record": 30,
+   "low_record_years": [
+    1869,
+    1885
+   ],
+   "low_normal": 46,
+   "low_depart": -4,
+   "low_time": "1156 PM",
+   "precip": 0.0,
+   "precip_normal": 0.12,
+   "precip_month": 0.0,
+   "precip_month_normal": 0.12,
+   "precip_jan1": 38.88,
+   "precip_jan1_normal": 41.68,
+   "precip_jun1": "M",
+   "precip_jun1_normal": "M",
+   "precip_jul1": "M",
+   "precip_dec1": "M",
+   "precip_dec1_normal": "M",
+   "precip_record": 1.69,
+   "precip_record_years": [
+    1988
+   ],
+   "snow": 0.0,
+   "snowdepth": 0.0,
+   "snow_normal": 0.0,
+   "snow_month": 0.0,
+   "snow_jun1": "M",
+   "snow_jul1": 0.0,
+   "snow_dec1": "M",
+   "snow_record": 0.1,
+   "snow_record_years": [
+    1887
+   ],
+   "snow_jul1_normal": 0.1,
+   "snow_jul1_depart": -0.1,
+   "snow_dec1_normal": "M",
+   "snow_month_normal": 0.0,
+   "average_sky_cover": 0.0,
+   "resultant_wind_speed": "M",
+   "resultant_wind_direction": "M",
+   "highest_wind_speed": 9,
+   "highest_wind_direction": 260,
+   "highest_gust_speed": 16,
+   "highest_gust_direction": 240,
+   "average_wind_speed": 3.5
+  }
+ ],
+ "generated_at": "2026-11-08T22:13:41Z"
+}

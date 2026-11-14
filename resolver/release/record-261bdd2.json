@@ -1,0 +1,20 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "261bdd25951a45ff806e658aef8d7c1f108789d2",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "probe-sources",
+  "hash": "f9adbe6f631ea7e13cf77f651c8a8fff0c0a8876c5f3f9a0f44e72f7e383e5a2",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "f9adbe6f631ea7e13cf77f651c8a8fff0c0a8876c5f3f9a0f44e72f7e383e5a2"},
+    {"route": "docker-run-2", "sha256": "f9adbe6f631ea7e13cf77f651c8a8fff0c0a8876c5f3f9a0f44e72f7e383e5a2"},
+    {"route": "fresh-container", "sha256": "f9adbe6f631ea7e13cf77f651c8a8fff0c0a8876c5f3f9a0f44e72f7e383e5a2"}
+  ],
+  "notes": {
+    "purpose": "Item 17a PROBE-ONLY wasm (mode probe-sources). Signs nothing, no NEAR AI calls. NOT a production resolver; never bind to an escrow.",
+    "features_note": "probe-sources implies real-http and is mutually exclusive with outlayer-sign (compile_error). Production resolver hashes are unchanged.",
+    "testnet_fastfs": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/f9adbe6f631ea7e13cf77f651c8a8fff0c0a8876c5f3f9a0f44e72f7e383e5a2.wasm"
+  }
+}

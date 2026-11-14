@@ -1,0 +1,364 @@
+{
+  "txs": [
+    {
+      "step": "mint mock wNEAR (betting balance) to maker",
+      "hash": "6TS1svJuCW59jJUaHLy85KTjf12vFfnwJcJoQnn64y4U",
+      "url": "https://testnet.nearblocks.io/txns/6TS1svJuCW59jJUaHLy85KTjf12vFfnwJcJoQnn64y4U"
+    },
+    {
+      "step": "mint mock wNEAR (betting balance) to taker",
+      "hash": "9LURBNf38ZVdAt9Aidf2cNaJ7yg1cFFC1TDC7VTTYXcD",
+      "url": "https://testnet.nearblocks.io/txns/9LURBNf38ZVdAt9Aidf2cNaJ7yg1cFFC1TDC7VTTYXcD"
+    },
+    {
+      "step": "take (web, taker)",
+      "hash": "GJjpDVz54ipWZim9QkWQZ4doVUDA6TmVeWyEcN9uFc6W",
+      "url": "https://testnet.nearblocks.io/txns/GJjpDVz54ipWZim9QkWQZ4doVUDA6TmVeWyEcN9uFc6W"
+    },
+    {
+      "step": "concede (web, taker)",
+      "hash": null,
+      "url": null
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T03:01:02.557Z"
+    },
+    {
+      "s": "A: maker opened via web",
+      "t": "2026-11-10T03:01:31.109Z",
+      "betId": 4
+    },
+    {
+      "s": "maker made the taker's invite link",
+      "t": "2026-11-10T03:01:32.788Z"
+    },
+    {
+      "s": "A: taker took via invite link",
+      "t": "2026-11-10T03:01:49.021Z"
+    },
+    {
+      "s": "A: taker conceded via S12 confirm",
+      "t": "2026-11-10T03:01:57.712Z",
+      "dialog": "Concede this bet? Your side loses and 8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7 is paid right away. This cannot be undone."
+    }
+  ],
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "taker": "763be141391ca87d99ff65dfdd901d962f28eb9f79df1e4fcdffd289acf05f98",
+  "relayer_responses": [
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "GET",
+      "status": 200,
+      "body": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <title>Praetorial</title>\n    <script type=\"module\" crossorigin src=\"/assets/index-ytTVcxqc.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-DODEeKc3.css\">\n  </head>\n  <body>\n    <div id=\"root\"></div>\n  </body>\n</html>\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-DODEeKc3.css",
+      "method": "GET",
+      "status": 200,
+      "body": "@layer reset,astryx-base,astryx-theme;@layer reset{:where(*),:where(*):before,:where(*):after{box-sizing:border-box}:where(*),:where(*):before,:where(*):after{border-width:0;border-style:solid;border-color:currentColor}:where(html){line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;color-scheme:light dark}:where(body){margin:0;line-height:inherit;-webkit-font-smoothing:antial"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-ytTVcxqc.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/tempoChains-2uJ5F5se-C50rtr9p.js\",\"assets/defineChain-7I0Ce1VT.js\",\"assets/sendTransaction-CsYyjDxW.js\",\"assets/writeContract-BIr0Z0HO.js\",\"assets/parseTransaction-Huv1Tvrp.js\",\"assets/index-DQELInt_.js\",\"assets/hooks.module-D-gkpI6U.js\",\"assets/prepareAuthorization-B_b4ZO9S.js\",\"assets/index-nibyPLVP.js\",\"assets/parseSignature-j6j15"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/sendTransaction-CsYyjDxW.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{E as X,D as k,eh as H,bf as J,fv as K,B as Q,ei as E,fw as V,bX as Y,bs as U,fx as Z,fy as $,fz as aa,fA as ta,fB as ea,fC as M,fD as ra,ej as na}from\"./index-ytTVcxqc.js\";function sa({chain:t,currentChainId:r}){if(!t)throw new X;if(r!==t.id)throw new k({chain:t,currentChainId:r})}const R=new $(128);async function ia(t,r){var S,b,B,L,_,G,j,D;const{account:w=t.account,assertChainId:W=!0,chai"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-nibyPLVP.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function r(e){return new Promise((t,n)=>{e.oncomplete=e.onsuccess=()=>t(e.result),e.onabort=e.onerror=()=>n(e.error)})}function l(e,t){const n=indexedDB.open(e);n.onupgradeneeded=()=>n.result.createObjectStore(t);const u=r(n);return(a,i)=>u.then(s=>i(s.transaction(t,a).objectStore(t)))}let c;function o(){return c||(c=l(\"keyval-store\",\"keyval\")),c}function f(e,t=o()){return t(\"readonly\",n=>r(n.get("
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/coinbase-D6cLRNDa-BdhxmQJ0.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{hg as Tn,hR as Rn,hS as On,hT as Nn,h3 as de,h4 as Dn,hU as Un,hV as jn,hW as Bn}from\"./index-ytTVcxqc.js\";import{B as Se,_ as y,c as ee,h as Ke,y as Wn}from\"./hooks.module-D-gkpI6U.js\";class R{constructor(e,n){this.scope=e,this.module=n}storeObject(e,n){this.setItem(e,JSON.stringify(n))}loadObject(e){const n=this.getItem(e);return n?JSON.parse(n):void 0}setItem(e,n){localStorage.setItem(th"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/defineChain-7I0Ce1VT.js",
+      "method": "GET",
+      "status": 200,
+      "body": "function o(c){const n={formatters:void 0,fees:void 0,serializers:void 0,...c};function t(i){return e=>{const r=typeof e==\"function\"?e(i):e,s={...i,...r};return Object.assign(s,{extend:t(s)})}}return Object.assign(n,{extend:t(n)})}function u(){return{}}export{o as d,u as e};\n"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/prepareAuthorization-B_b4ZO9S.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{B as v,bL as D,co as b,bs as T,b9 as L,t as q,ca as x,fD as j,ej as I,gU as B,cd as E,cV as O,cJ as N,cM as R,gV as M,gW as W,gX as z,cY as P,ei as S,eh as U,cg as $,fw as H,gY as V}from\"./index-ytTVcxqc.js\";import{s as Y}from\"./sendTransaction-CsYyjDxW.js\";class G extends v{constructor(t){super(`Call bundle failed with status: ${t.statusCode}`,{name:\"BundleFailedError\"}),Object.definePrope"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/parseSignature-j6j15YZ_.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{g as w,bu as l,cf as x,a7 as z,cp as y,cL as M,bj as T,g$ as k,co as h,h0 as E,x as L,h1 as N,ba as P,fy as S,bH as B,cc as A,h2 as H}from\"./index-ytTVcxqc.js\";function C(r,e){if(r.length!==e.length)throw new w({expectedLength:r.length,givenLength:e.length});const o=[];for(let n=0;n<r.length;n++){const a=r[n],c=e[n];o.push(m(a,c))}return l(o)}function m(r,e,o=!1){if(r===\"address\"){const u=e"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/wallet-connect-D29SXjdm-B78lmk5j.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{d1 as t,d5 as A}from\"./index-ytTVcxqc.js\";const l=({style:C,...e})=>{let d=t();return A.jsxs(\"svg\",{width:\"28\",height:\"28\",viewBox:\"0 0 28 28\",fill:\"none\",xmlns:\"http://www.w3.org/2000/svg\",style:{height:\"28px\",width:\"28px\",...C},...e,children:[A.jsx(\"rect\",{width:\"28\",height:\"28\",rx:\"3\",fill:(d==null?void 0:d.appearance.palette.colorScheme)===\"dark\"?\"#3396ff\":\"#141414\"}),A.jsx(\"g\",{clipPat"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/hooks.module-D-gkpI6U.js",
+      "method": "GET",
+      "status": 200,
+      "body": "var I,d,a_,x,__,p_,j,J,O,z,N={},h_=[],x_=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,K=Array.isArray;function H(e,_){for(var t in _)e[t]=_[t];return e}function d_(e){e&&e.parentNode&&e.parentNode.removeChild(e)}function C_(e,_,t){var n,o,i,c={};for(i in _)i==\"key\"?n=_[i]:i==\"ref\"?o=_[i]:c[i]=_[i];if(arguments.length>2&&(c.children=arguments.length>3?I.call(arguments,2):t),t"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/walletconnect-v2-wlC4EZZ7-DJ2pEAI-.js",
+      "method": "GET",
+      "status": 200,
+      "body": "const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=[\"assets/core-DKimsXjx.js\",\"assets/index-ytTVcxqc.js\",\"assets/index-DODEeKc3.css\",\"assets/index-nibyPLVP.js\"])))=>i.map(i=>d[i]);\nimport{hg as ic,i3 as Py,i2 as Cy,i1 as Ns,i4 as Ft,hQ as By,hS as Ty,h3 as Ie,i5 as io,i6 as Ry,i7 as Uy,h4 as so,hU as Ny,i8 as ky,dy as nl,i9 as Ly,ia as jy,ib as Fy,ic as My,id as ol,hV as qy,ie as zy,ig as Vy}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/assets/index-DQELInt_.js",
+      "method": "GET",
+      "status": 200,
+      "body": "import{l as dr,B as lr,_ as pi,h as Ue,c as cn,y as un,T as fi}from\"./hooks.module-D-gkpI6U.js\";import{hg as mi,bs as Ne,cp as se,co as N,cG as _r,c9 as Lt,bH as st,ci as me,ei as ge,hX as $r,hp as dn,cs as hi,B,hY as yi,bT as pr,by as gi,J as bi,I as vi,H as wi,ca as ke,eh as Zn,bL as de,hZ as xi,ej as Wn,fw as ea,h_ as Ei,bU as Si,bW as Ai,cM as ki,gW as Oi,gX as Pi,bv as Ii,c as Ci,h as fr,cf a"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "method": "HEAD",
+      "status": 200,
+      "body": ""
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/lookup/account/8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"username\":\"rc1_35626\"}"
+    },
+    {
+      "url": "https://praetorial-sourcecheck-testnet.familiarcow.workers.dev/sourcecheck",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"spec_hash\":\"765ee2998e7c782afcdbca2c052a8fec1f07a367c03f440bb5f118c6838d32ab\",\"checked_at\":\"1794279677492367360\",\"unreachable\":[],\"signing\":{\"pubkey_hex\":\"2be89b6565161859779d64f39fca6ba1aa99c500bc7687731bc40374dc866cfc\",\"signature_hex\":\"8606412a8fe93cd0f92aba3087d036f519501253c7554e1f2c5012e18ab054c2aa38fc9d4cb77eb36b4662126e4c56b90f3dc55d2bedfd8f8bd18f72fb224904\"}}"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/relayer/relay",
+      "method": "POST",
+      "status": 200,
+      "body": "{\"ok\":true,\"txHash\":\"ENviehjRWKiZg9TqJixgTWxx3q88ovQRoxTocJaPBgHi\"}"
+    }
+  ],
+  "failed_requests": [
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "err": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://praetorial-web-testnet.familiarcow.workers.dev/",
+      "err": "net::ERR_ABORTED"
+    }
+  ],
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "60438214361850000000000003",
+    "taker": "22800000000000000000000000",
+    "fee": "0",
+    "escrow": "2739935000000000000000000"
+  },
+  "A": {
+    "betId": 4,
+    "link": "https://praetorial-web-testnet.familiarcow.workers.dev/bet/4",
+    "terms_hash": "765ee2998e7c782afcdbca2c052a8fec1f07a367c03f440bb5f118c6838d32ab"
+  },
+  "A_bet_open": {
+    "envelope": {
+      "bet_id": 4,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "ac28567ce09487aa5a6162fe0352c0828eb503229688879abbc52cd10ede0c28"
+      },
+      "terms_hash": "765ee2998e7c782afcdbca2c052a8fec1f07a367c03f440bb5f118c6838d32ab",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T07:01:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T03:01:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794294060000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 86400000000000,
+      "resolve_deadline": 1794898860000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "17160000000000000000000",
+    "storage_taker": "0",
+    "status": "Open",
+    "taker": null,
+    "created_at": 1794279688504424400,
+    "taken_at": null,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "invite_link_has_sig": true,
+  "registry_claim_response_taker": {
+    "status": 200,
+    "body": "{\"username\":\"dr6tkmwa3sw80\",\"account_id\":\"763be141391ca87d99ff65dfdd901d962f28eb9f79df1e4fcdffd289acf05f98\"}"
+  },
+  "A_bet_taken": {
+    "envelope": {
+      "bet_id": 4,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "ac28567ce09487aa5a6162fe0352c0828eb503229688879abbc52cd10ede0c28"
+      },
+      "terms_hash": "765ee2998e7c782afcdbca2c052a8fec1f07a367c03f440bb5f118c6838d32ab",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T07:01:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T03:01:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794294060000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 86400000000000,
+      "resolve_deadline": 1794898860000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "17160000000000000000000",
+    "storage_taker": "17160000000000000000000",
+    "status": "Taken",
+    "taker": "763be141391ca87d99ff65dfdd901d962f28eb9f79df1e4fcdffd289acf05f98",
+    "created_at": 1794279688504424400,
+    "taken_at": 1794279706776732700,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "balances_after_take": {
+    "maker": "57421054361850000000000003",
+    "taker": "19782840000000000000000000",
+    "fee": "0",
+    "escrow": "8774255000000000000000000"
+  },
+  "concede_dialog": "Concede this bet? Your side loses and 8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7 is paid right away. This cannot be undone."
+}

@@ -1,0 +1,102 @@
+[
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "KeeperDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 1093,
+  "ts": 1794199947634,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "default",
+  "trigger": "cron * * * * *",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 5113,
+  "ts": 1794199947602,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "KeeperDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 3,
+  "wallMs": 1092,
+  "ts": 1794200007646,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "default",
+  "trigger": "cron * * * * *",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 4970,
+  "ts": 1794200007612,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "KeeperDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 1092,
+  "ts": 1794200067742,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "default",
+  "trigger": "cron * * * * *",
+  "outcome": "ok",
+  "cpuMs": 1,
+  "wallMs": 5405,
+  "ts": 1794200067663,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "KeeperDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 3,
+  "wallMs": 1094,
+  "ts": 1794200127825,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "default",
+  "trigger": "cron * * * * *",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 6941,
+  "ts": 1794200127737,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "KeeperDO",
+  "trigger": "POST /tick",
+  "outcome": "ok",
+  "cpuMs": 3,
+  "wallMs": 1123,
+  "ts": 1794200187871,
+  "exceptions": 0
+ },
+ {
+  "worker": "praetorial-keeper-testnet",
+  "entrypoint": "default",
+  "trigger": "cron * * * * *",
+  "outcome": "ok",
+  "cpuMs": 2,
+  "wallMs": 5610,
+  "ts": 1794200187766,
+  "exceptions": 0
+ }
+]

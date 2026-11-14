@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "9b48049fa7f06c7047b2a0c1af3f32cd8842bc16",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "bf9b105c6b2d251791df0f4c3126c818ee7a1f8c872a8c85742adbcf839b9bd2",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "bf9b105c6b2d251791df0f4c3126c818ee7a1f8c872a8c85742adbcf839b9bd2"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "bf9b105c6b2d251791df0f4c3126c818ee7a1f8c872a8c85742adbcf839b9bd2"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "bf9b105c6b2d251791df0f4c3126c818ee7a1f8c872a8c85742adbcf839b9bd2"
+    }
+  ],
+  "notes": {
+    "item": "17d2a D-ORIGIN1 (multi-origin decisive verdicts); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima profile 'rosetta'; one docker-run and one first cp attempt hit the cc SIGSEGV linker flake and were retried"
+  }
+}

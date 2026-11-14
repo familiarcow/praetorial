@@ -1,0 +1,68 @@
+{
+ "results": [
+  {
+   "station": "KDTW",
+   "valid": "2025-12-05",
+   "state": "MI",
+   "wfo": "DTX",
+   "link": "/api/1/nwstext/202512060646-KDTX-CDUS43-CLIDTW",
+   "product": "202512060646-KDTX-CDUS43-CLIDTW",
+   "name": "DETROIT/WAYNE",
+   "high": 27,
+   "high_record": 67,
+   "high_record_years": [
+    2001
+   ],
+   "high_normal": 40,
+   "high_depart": -13,
+   "high_time": "1100 PM",
+   "low": 5,
+   "low_record": 6,
+   "low_record_years": [
+    1974
+   ],
+   "low_normal": 28,
+   "low_depart": -23,
+   "low_time": "700 AM",
+   "precip": 0.0,
+   "precip_normal": 0.08,
+   "precip_month": "T",
+   "precip_month_normal": 0.38,
+   "precip_jan1": 27.69,
+   "precip_jan1_normal": 32.45,
+   "precip_jun1": "M",
+   "precip_jun1_normal": "M",
+   "precip_jul1": "M",
+   "precip_dec1": "T",
+   "precip_dec1_normal": 0.38,
+   "precip_record": 1.42,
+   "precip_record_years": [
+    1906
+   ],
+   "snow": 0.0,
+   "snowdepth": 3.0,
+   "snow_normal": 0.3,
+   "snow_month": 1.9,
+   "snow_jun1": "M",
+   "snow_jul1": 7.8,
+   "snow_dec1": 1.9,
+   "snow_record": 6.4,
+   "snow_record_years": [
+    1977
+   ],
+   "snow_jul1_normal": 3.0,
+   "snow_jul1_depart": 4.8,
+   "snow_dec1_normal": 1.1,
+   "snow_month_normal": 1.1,
+   "average_sky_cover": 0.7,
+   "resultant_wind_speed": "M",
+   "resultant_wind_direction": "M",
+   "highest_wind_speed": 16,
+   "highest_wind_direction": 230,
+   "highest_gust_speed": "M",
+   "highest_gust_direction": "M",
+   "average_wind_speed": 7.7
+  }
+ ],
+ "generated_at": "2026-11-08T22:15:19Z"
+}

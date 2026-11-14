@@ -1,0 +1,36 @@
+{
+  "bet_id": "btc-live-outlayer-1",
+  "models": ["z-ai/glm-5.3-flash"],
+  "term": {
+    "claim": "BTC/USD closes at or above $100,000 before the window end",
+    "rule": "ALL",
+    "elements": [
+      {"id": "E1", "q": "Did BTC/USD close at or above $100,000 at any point before the window end?"}
+    ],
+    "clauses": ["NUMERIC_EXACT_V1"],
+    "sources": ["S1", "S2"],
+    "time": {
+      "window_start": "2026-10-01T00:00:00Z",
+      "window_end": "2026-11-10T00:00:00Z",
+      "evidence_cutoff": "2026-11-10T00:00:00Z"
+    },
+    "sources_allowed": [
+      {"id": "S1", "publisher": "CoinDesk", "party_controlled": false},
+      {"id": "S2", "publisher": "Reuters", "party_controlled": false}
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "CoinDesk",
+      "published": "2026-11-03T12:00:00Z",
+      "text": "CoinDesk reported on November 3, 2026 that bitcoin (BTC/USD) closed the trading day at $100,432, the first daily close above the $100,000 threshold this cycle."
+    },
+    {
+      "id": "S2",
+      "publisher": "Reuters",
+      "published": "2026-11-03T18:00:00Z",
+      "text": "Reuters confirmed bitcoin ended the November 3, 2026 session at just over $100,000, trading as high as $100,900 before settling near $100,400."
+    }
+  ]
+}

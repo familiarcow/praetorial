@@ -1,0 +1,142 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "FtxJttQ6Uhd3sQoHZT9q42eDAdYqYhK6Q8NGY8X7PYK4",
+      "url": "https://testnet.nearblocks.io/txns/FtxJttQ6Uhd3sQoHZT9q42eDAdYqYhK6Q8NGY8X7PYK4",
+      "account": "praetorial-l1b11-11072031.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "25h13hqmNw3QvwaTa1e1buhi4UyDDLip1HqATcfNLV5W",
+      "url": "https://testnet.nearblocks.io/txns/25h13hqmNw3QvwaTa1e1buhi4UyDDLip1HqATcfNLV5W",
+      "wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+      "wasm_bytes": 514005,
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "GaAzVHELAEWNrB97zKgRNYPDYmx827TtY8P2SzTo56xc",
+      "url": "https://testnet.nearblocks.io/txns/GaAzVHELAEWNrB97zKgRNYPDYmx827TtY8P2SzTo56xc",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "6WT88Z8VYakD92CZzCtB1fEiFPTeY2mfysC3NmKQ6MhJ",
+      "url": "https://testnet.nearblocks.io/txns/6WT88Z8VYakD92CZzCtB1fEiFPTeY2mfysC3NmKQ6MhJ",
+      "near": "0.15",
+      "status": "Success"
+    },
+    {
+      "step": "delete_escrow_account_wrong_attest_key",
+      "hash": "EgaXngJsZsM53xdrgXWuU1BFk7JsfCCDHsz34tq88Ppw",
+      "url": "https://testnet.nearblocks.io/txns/EgaXngJsZsM53xdrgXWuU1BFk7JsfCCDHsz34tq88Ppw",
+      "status": "Success"
+    },
+    {
+      "step": "create_escrow_account",
+      "hash": "5juwKC7Rmy7vcZuvRmPx1hckHnkHjHy2WzZFZKByidLK",
+      "url": "https://testnet.nearblocks.io/txns/5juwKC7Rmy7vcZuvRmPx1hckHnkHjHy2WzZFZKByidLK",
+      "account": "praetorial-l1b11-11072031.praetorial-dev-1101.testnet",
+      "funded_near": "6",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "H7UW6oFnSuzWM5KscSNZnJdw7MWGWi5thVNidFZFgPrW",
+      "url": "https://testnet.nearblocks.io/txns/H7UW6oFnSuzWM5KscSNZnJdw7MWGWi5thVNidFZFgPrW",
+      "wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+      "wasm_bytes": 514005,
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "Ax6Xd9RauWAqjAvpevfUN4fRvpAEFTAZyVDHZRKoHH5N",
+      "url": "https://testnet.nearblocks.io/txns/Ax6Xd9RauWAqjAvpevfUN4fRvpAEFTAZyVDHZRKoHH5N",
+      "status": "Success"
+    },
+    {
+      "step": "topup_keeper_credit",
+      "hash": "DN55tjqLgXXcV32zsAroX5BNvggeh9CDtMYs6NH4REX3",
+      "url": "https://testnet.nearblocks.io/txns/DN55tjqLgXXcV32zsAroX5BNvggeh9CDtMYs6NH4REX3",
+      "near": "0.15",
+      "status": "Success"
+    }
+  ],
+  "balances": {
+    "dev_before": "7610181061842938099999943",
+    "dev_after_create": "1603066072305438099999943",
+    "escrow_after_deploy": "6146026386831884600000000"
+  },
+  "escrow_wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+  "source_commit": "79c4bd4 (escrow code unchanged; hash a240f363 identical)",
+  "recreated": {
+    "wasm_sha256": "a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97",
+    "wasm_bytes": 514005,
+    "outcome_pubkey": "1ba2657242fca411cf7e56abb002e1db279808ea0ea3e8e52f29cb3bb75436bc",
+    "attest_pubkey": "b92575a2949567138b8b6359ceafb79dbc582fa3fa8c4f99a22793bd5c583cf1",
+    "resolver_wasm_hash": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773",
+    "new_args": {
+      "intents": "intents-mock.praetorial-dev-1101.testnet",
+      "usdc_token_id": "nep141:usdc.testnet",
+      "outlayer": "outlayer.testnet",
+      "operator": "praetorial-dev-1101.testnet",
+      "guardian": "arbiter1.praetorial-dev-1101.testnet",
+      "registry": "praetorial-dev-1101.testnet",
+      "fee_account": "fee.praetorial-dev-1101.testnet",
+      "keeper": "keeper.praetorial-dev-1101.testnet",
+      "limits": {
+        "max_stake": "1000000000000",
+        "max_offer_ttl_secs": 31536000,
+        "max_stake_per_side_near": "100000000000000000000000000",
+        "max_rounds": 2
+      },
+      "beta_sunset_ns": null,
+      "asset_limits": [
+        [
+          "nep141:usdc.testnet",
+          {
+            "min_per_side": "1",
+            "max_per_side": "250000000",
+            "run_price": "5000",
+            "min_bond": "5000000",
+            "min_objection": "1000000"
+          }
+        ],
+        [
+          "nep141:btc.mock.testnet",
+          {
+            "min_per_side": "6501",
+            "max_per_side": "325059",
+            "run_price": "1",
+            "min_bond": "6501",
+            "min_objection": "1300"
+          }
+        ]
+      ],
+      "outcome_pubkey": "1ba2657242fca411cf7e56abb002e1db279808ea0ea3e8e52f29cb3bb75436bc",
+      "attest_pubkey": "b92575a2949567138b8b6359ceafb79dbc582fa3fa8c4f99a22793bd5c583cf1",
+      "resolver_wasm_hash": "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773",
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      }
+    },
+    "views": {
+      "outlayer_config": {
+        "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+        "secrets_profile": "praetorial-resolver",
+        "secrets_account_id": "praetorial-dev-1101.testnet"
+      },
+      "resolver_keys": [
+        "1ba2657242fca411cf7e56abb002e1db279808ea0ea3e8e52f29cb3bb75436bc",
+        "b92575a2949567138b8b6359ceafb79dbc582fa3fa8c4f99a22793bd5c583cf1",
+        "2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773"
+      ],
+      "keeper_credit_balance": "150000000000000000000000"
+    }
+  }
+}

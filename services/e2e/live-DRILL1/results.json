@@ -1,0 +1,661 @@
+{
+  "txs": [
+    {
+      "step": "fund_dev_from_pf-109110569",
+      "hash": "EWfYhE9UJnX9U2ae5Me1wG3hPeh2E3nNpguWadKNQoxq",
+      "url": "https://testnet.nearblocks.io/txns/EWfYhE9UJnX9U2ae5Me1wG3hPeh2E3nNpguWadKNQoxq",
+      "near": "6.4"
+    },
+    {
+      "step": "create_escrow_account",
+      "hash": "CMPxoiFo4xA5s3xWkAz4vv2MGkPWd8z7aRWvdf981Jce",
+      "url": "https://testnet.nearblocks.io/txns/CMPxoiFo4xA5s3xWkAz4vv2MGkPWd8z7aRWvdf981Jce",
+      "account": "drill1-2611091903.praetorial-dev-1101.testnet",
+      "funded_near": "6.5"
+    },
+    {
+      "step": "create_guardian_account",
+      "hash": "EUaXf3FnvjhCu8twa4zGMfQwD42zxhiqUC6gzXdAjf9g",
+      "url": "https://testnet.nearblocks.io/txns/EUaXf3FnvjhCu8twa4zGMfQwD42zxhiqUC6gzXdAjf9g",
+      "account": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+      "funded_near": "0.3"
+    },
+    {
+      "step": "create_guardian_account",
+      "hash": "5Ex6vjWY7fTDmYJTsiJNbo9JgQJtsKhgVUBzLLeAHr3F",
+      "url": "https://testnet.nearblocks.io/txns/5Ex6vjWY7fTDmYJTsiJNbo9JgQJtsKhgVUBzLLeAHr3F",
+      "account": "drill1-g2-2611091903.praetorial-dev-1101.testnet",
+      "funded_near": "0.3"
+    },
+    {
+      "step": "create_guardian_account",
+      "hash": "9izg4QqondJjh5JrY7mXmk3BJJQrqCmtSCa9yWzFHtAK",
+      "url": "https://testnet.nearblocks.io/txns/9izg4QqondJjh5JrY7mXmk3BJJQrqCmtSCa9yWzFHtAK",
+      "account": "drill1-g3-2611091903.praetorial-dev-1101.testnet",
+      "funded_near": "0.3"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "3seR4EmrYrhTuxGFDiSuFkAi7eee5NnRnbKAccMBz5Vu",
+      "url": "https://testnet.nearblocks.io/txns/3seR4EmrYrhTuxGFDiSuFkAi7eee5NnRnbKAccMBz5Vu",
+      "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "BFDZBaJjW5Fz4iSURw4RBRqs5BG5t5FUNLReHCHHVjAR",
+      "url": "https://testnet.nearblocks.io/txns/BFDZBaJjW5Fz4iSURw4RBRqs5BG5t5FUNLReHCHHVjAR"
+    },
+    {
+      "step": "sourcecheck_A",
+      "hash": "AYxND9JFPehdtrquujxdoay5N8GCC5BVBQEwwkvhAJfd",
+      "url": "https://testnet.nearblocks.io/txns/AYxND9JFPehdtrquujxdoay5N8GCC5BVBQEwwkvhAJfd",
+      "spec_hash": "b8b9fa7bca4cb06300fcd0d25b597a4da57ecb0716783d75571a9c673f3464a5"
+    },
+    {
+      "step": "mint_A_maker1",
+      "hash": "EKQsXrPmSFWFhwjoQSQx9DxuRsGFwbdedCd6NoE5jWvJ",
+      "url": "https://testnet.nearblocks.io/txns/EKQsXrPmSFWFhwjoQSQx9DxuRsGFwbdedCd6NoE5jWvJ"
+    },
+    {
+      "step": "open_A",
+      "hash": "8yyVgRKFZ9J7Lorh2ebz1NMeWSRtnPuX6qreoQ8AcqYX",
+      "url": "https://testnet.nearblocks.io/txns/8yyVgRKFZ9J7Lorh2ebz1NMeWSRtnPuX6qreoQ8AcqYX"
+    },
+    {
+      "step": "sourcecheck_B",
+      "hash": "2xsrnYt5raXxsggzGXcAuSDuVRPupK9AdXSCSQNrqUhq",
+      "url": "https://testnet.nearblocks.io/txns/2xsrnYt5raXxsggzGXcAuSDuVRPupK9AdXSCSQNrqUhq",
+      "spec_hash": "01f7d9586f677a787d697e20243fd484a13b255d726ccea61d5df9d6f89a02e3"
+    },
+    {
+      "step": "mint_B_maker1",
+      "hash": "5ESLHKE6jrnbG9abJRYhVU4avz9HJiJrXKsWKxZS9nHZ",
+      "url": "https://testnet.nearblocks.io/txns/5ESLHKE6jrnbG9abJRYhVU4avz9HJiJrXKsWKxZS9nHZ"
+    },
+    {
+      "step": "mint_B_taker1",
+      "hash": "E2NfBU9K2qsouXGwPsJPctHGKY5jAR2Pj6iETqpVLXz4",
+      "url": "https://testnet.nearblocks.io/txns/E2NfBU9K2qsouXGwPsJPctHGKY5jAR2Pj6iETqpVLXz4"
+    },
+    {
+      "step": "open_B",
+      "hash": "3YG6YJoQxXBN4Z7cmNgAkHb1C9GjpmUzZxK7eGV9UNi9",
+      "url": "https://testnet.nearblocks.io/txns/3YG6YJoQxXBN4Z7cmNgAkHb1C9GjpmUzZxK7eGV9UNi9"
+    },
+    {
+      "step": "take_B",
+      "hash": "5hgvK6GuwV3rkgdKvC747yAVUGZTwMavYBedXHweMe3o",
+      "url": "https://testnet.nearblocks.io/txns/5hgvK6GuwV3rkgdKvC747yAVUGZTwMavYBedXHweMe3o"
+    },
+    {
+      "step": "sourcecheck_C",
+      "hash": "73MUkqRzNPjwCWrh6WAuNy6FwbaK5Sr7haaWPhcCPTrH",
+      "url": "https://testnet.nearblocks.io/txns/73MUkqRzNPjwCWrh6WAuNy6FwbaK5Sr7haaWPhcCPTrH",
+      "spec_hash": "c7c826969bed1383592c8b7f723c001a00b192411242f0ad544557cb0a7ac721"
+    },
+    {
+      "step": "mint_C_maker1",
+      "hash": "G1yfWVvq55CdTFgvQgXUi45duyhf3dudtcgcC9FwqxSZ",
+      "url": "https://testnet.nearblocks.io/txns/G1yfWVvq55CdTFgvQgXUi45duyhf3dudtcgcC9FwqxSZ"
+    },
+    {
+      "step": "mint_C_taker1",
+      "hash": "GXax7owVcM1aKnmLXCtpPYqjotLZY8JdoU9SMZ6o471i",
+      "url": "https://testnet.nearblocks.io/txns/GXax7owVcM1aKnmLXCtpPYqjotLZY8JdoU9SMZ6o471i"
+    },
+    {
+      "step": "open_C",
+      "hash": "JCdk8y7dSuT4iTwr7pBnbywpY2ByBNYo6mwteBK2rxgF",
+      "url": "https://testnet.nearblocks.io/txns/JCdk8y7dSuT4iTwr7pBnbywpY2ByBNYo6mwteBK2rxgF"
+    },
+    {
+      "step": "take_C",
+      "hash": "5rZFuB55WYuiteDcbkgCXpF2cboZNvd2xKgNBqau5c4Y",
+      "url": "https://testnet.nearblocks.io/txns/5rZFuB55WYuiteDcbkgCXpF2cboZNvd2xKgNBqau5c4Y"
+    },
+    {
+      "step": "non-guardian (G3) pause_new_offers refused_refused",
+      "hash": "FD6DGjKHG4KQD8BoejzqjwBgSmbebPACqjwP6SMt4SLN",
+      "url": "https://testnet.nearblocks.io/txns/FD6DGjKHG4KQD8BoejzqjwBgSmbebPACqjwP6SMt4SLN"
+    },
+    {
+      "step": "emergency_refund before shutdown refused_refused",
+      "hash": "Hz1apygczYmbguErzapc95QWXUWKxZXne6LPAZXkhGpE",
+      "url": "https://testnet.nearblocks.io/txns/Hz1apygczYmbguErzapc95QWXUWKxZXne6LPAZXkhGpE"
+    },
+    {
+      "step": "pause_new_offers_1",
+      "hash": "7ioZYcHReSxbvHU1STH3SHTRPJ5zcY5Hgxo6H19Y1n2j",
+      "url": "https://testnet.nearblocks.io/txns/7ioZYcHReSxbvHU1STH3SHTRPJ5zcY5Hgxo6H19Y1n2j",
+      "ok": true
+    },
+    {
+      "step": "mint_G3_for_refused_open_and_take",
+      "hash": "B51xDL9qgoXckdMv7ypt3SBgUhWu4Rg4wY1XbrLwBmb4",
+      "url": "https://testnet.nearblocks.io/txns/B51xDL9qgoXckdMv7ypt3SBgUhWu4Rg4wY1XbrLwBmb4"
+    },
+    {
+      "step": "open_while_paused_refused",
+      "hash": "UnwRNWtyXzrPDSjNDEfrLKAJAZmTzQWRaeNCE8EW9Aa",
+      "url": "https://testnet.nearblocks.io/txns/UnwRNWtyXzrPDSjNDEfrLKAJAZmTzQWRaeNCE8EW9Aa"
+    },
+    {
+      "step": "take_A_while_paused_refused",
+      "hash": "4WoZgmRyaNaas8ruWc7mbVJ5xS4RpaoU24xmX4BJGtxG",
+      "url": "https://testnet.nearblocks.io/txns/4WoZgmRyaNaas8ruWc7mbVJ5xS4RpaoU24xmX4BJGtxG"
+    },
+    {
+      "step": "concede_B_while_paused",
+      "hash": "3wPqL68W8WdT38K3gbJ2U2qg1j9qDbmi3EPakeY3n3hq",
+      "url": "https://testnet.nearblocks.io/txns/3wPqL68W8WdT38K3gbJ2U2qg1j9qDbmi3EPakeY3n3hq",
+      "ok": true
+    },
+    {
+      "step": "unpause_new_offers",
+      "hash": "9aaBv1HdyCbG7i2tVVFdj5PymNtx9LijH4AryLvyZ9S",
+      "url": "https://testnet.nearblocks.io/txns/9aaBv1HdyCbG7i2tVVFdj5PymNtx9LijH4AryLvyZ9S",
+      "ok": true
+    },
+    {
+      "step": "pause_new_offers_2",
+      "hash": "5iJPunk7Z9kkoV1xGyiitDtWCvEDq7X6mesgCNAKh9sa",
+      "url": "https://testnet.nearblocks.io/txns/5iJPunk7Z9kkoV1xGyiitDtWCvEDq7X6mesgCNAKh9sa",
+      "ok": true
+    },
+    {
+      "step": "non-guardian (G3) set_guardian refused_refused",
+      "hash": "CyqpeqnfNJqYCS2M43gT87kv7jcuW8eNRDGoNAy3fAoK",
+      "url": "https://testnet.nearblocks.io/txns/CyqpeqnfNJqYCS2M43gT87kv7jcuW8eNRDGoNAy3fAoK"
+    },
+    {
+      "step": "set_guardian_G2_1",
+      "hash": "CoRjSQNk2vXgX3DEkUm6QZD7ZiTfWctjH2FrJs1XGTQt",
+      "url": "https://testnet.nearblocks.io/txns/CoRjSQNk2vXgX3DEkUm6QZD7ZiTfWctjH2FrJs1XGTQt",
+      "ok": true
+    },
+    {
+      "step": "G3 accept_guardian refused (not the proposed)_refused",
+      "hash": "H9UvCrhK8KibBoLz3ncvxAQzhjcp7aw6hNuhqsx8gSM2",
+      "url": "https://testnet.nearblocks.io/txns/H9UvCrhK8KibBoLz3ncvxAQzhjcp7aw6hNuhqsx8gSM2"
+    },
+    {
+      "step": "cancel_guardian",
+      "hash": "E9cJyL3jRzUvwxsSSKd64HC8rHESUdXQQQMZvTanPKU7",
+      "url": "https://testnet.nearblocks.io/txns/E9cJyL3jRzUvwxsSSKd64HC8rHESUdXQQQMZvTanPKU7",
+      "ok": true
+    },
+    {
+      "step": "set_guardian_G2_2",
+      "hash": "AqAXwcFZLsQRT28VAxh6zumgR4JnSonXUR9iFred8JL9",
+      "url": "https://testnet.nearblocks.io/txns/AqAXwcFZLsQRT28VAxh6zumgR4JnSonXUR9iFred8JL9",
+      "ok": true
+    },
+    {
+      "step": "accept_guardian",
+      "hash": "46skGfx9LSMG9qbKPZc2HheWdannduteKmG8jESzhATM",
+      "url": "https://testnet.nearblocks.io/txns/46skGfx9LSMG9qbKPZc2HheWdannduteKmG8jESzhATM",
+      "ok": true
+    },
+    {
+      "step": "old guardian G1 pause_new_offers refused after rotation_refused",
+      "hash": "CbkKEHsMm2xe5FHHyxJswNCkn2SvCTTVQbSqmXBk1uiU",
+      "url": "https://testnet.nearblocks.io/txns/CbkKEHsMm2xe5FHHyxJswNCkn2SvCTTVQbSqmXBk1uiU"
+    },
+    {
+      "step": "non-guardian (G1, old) emergency_shutdown refused_refused",
+      "hash": "AxRTMpLeh8DF4qehNDqZUU5kRcKfpPVq4XEy11wKAtTG",
+      "url": "https://testnet.nearblocks.io/txns/AxRTMpLeh8DF4qehNDqZUU5kRcKfpPVq4XEy11wKAtTG"
+    },
+    {
+      "step": "emergency_shutdown",
+      "hash": "8Ly2t36BYLVZ8CphhNPCoMwE9yWQoqyP97M6i43CqUS5",
+      "url": "https://testnet.nearblocks.io/txns/8Ly2t36BYLVZ8CphhNPCoMwE9yWQoqyP97M6i43CqUS5",
+      "ok": true
+    },
+    {
+      "step": "G2 unpause_new_offers refused after shutdown_refused",
+      "hash": "FxLWdh8Bo3sxmo7zX3BFBYk4xJ73Y9Psfp99ayT166cp",
+      "url": "https://testnet.nearblocks.io/txns/FxLWdh8Bo3sxmo7zX3BFBYk4xJ73Y9Psfp99ayT166cp"
+    },
+    {
+      "step": "second emergency_shutdown refused_refused",
+      "hash": "ALGozHu5pd7QMKwoapiv9iATw86iTYVnDUueoMQJfgzg",
+      "url": "https://testnet.nearblocks.io/txns/ALGozHu5pd7QMKwoapiv9iATw86iTYVnDUueoMQJfgzg"
+    },
+    {
+      "step": "void_after_deadline refused after shutdown_refused",
+      "hash": "HgFVpGZ9JDAM5dUb2rJ3446NFvXLAJo13gYhEDniN8TH",
+      "url": "https://testnet.nearblocks.io/txns/HgFVpGZ9JDAM5dUb2rJ3446NFvXLAJo13gYhEDniN8TH"
+    },
+    {
+      "step": "concede on C refused after shutdown_refused",
+      "hash": "2bFtNkWTsi3UeKwKx4qVbBJ4M65uVdnfgaT5qqXi2HuW",
+      "url": "https://testnet.nearblocks.io/txns/2bFtNkWTsi3UeKwKx4qVbBJ4M65uVdnfgaT5qqXi2HuW"
+    }
+  ],
+  "observations": [
+    {
+      "key": "state_initial",
+      "guardian": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+      "pending": null,
+      "paused": false,
+      "shutdown": false
+    },
+    {
+      "key": "B_concede_payout",
+      "expected": {
+        "maker1.praetorial-dev-1101.testnet": "19000000",
+        "fee.praetorial-dev-1101.testnet": "1275234"
+      },
+      "observed": {
+        "maker1.praetorial-dev-1101.testnet": "19000000",
+        "taker1.praetorial-dev-1101.testnet": "0",
+        "fee.praetorial-dev-1101.testnet": "1275234"
+      },
+      "lines": []
+    }
+  ],
+  "escrow": "drill1-2611091903.praetorial-dev-1101.testnet",
+  "guardians": {
+    "G1": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+    "G2": "drill1-g2-2611091903.praetorial-dev-1101.testnet",
+    "G3": "drill1-g3-2611091903.praetorial-dev-1101.testnet"
+  },
+  "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "new_args": {
+    "intents": "intents-mock.praetorial-dev-1101.testnet",
+    "usdc_token_id": "nep141:usdc.testnet",
+    "outlayer": "outlayer.testnet",
+    "operator": "praetorial-dev-1101.testnet",
+    "guardian": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+    "registry": "praetorial-dev-1101.testnet",
+    "fee_account": "fee.praetorial-dev-1101.testnet",
+    "keeper": "keeper.praetorial-dev-1101.testnet",
+    "limits": {
+      "max_stake": "10000000000000000000000000000000000",
+      "max_offer_ttl_secs": 5184000,
+      "max_stake_per_side_near": "10000000000000000000000000000000000",
+      "max_rounds": 2
+    },
+    "beta_sunset_ns": null,
+    "asset_limits": [
+      [
+        "nep141:usdc.testnet",
+        {
+          "min_per_side": "10000000",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "500000",
+          "min_fee_cap_per_side": "2500000",
+          "run_price": "5000",
+          "min_bond": "5000000",
+          "min_objection": "1000000",
+          "storage_per_kib": "37684"
+        }
+      ],
+      [
+        "nep141:btc.mock.testnet",
+        {
+          "min_per_side": "13189",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "659",
+          "min_fee_cap_per_side": "3297",
+          "run_price": "7",
+          "min_bond": "6595",
+          "min_objection": "1319",
+          "storage_per_kib": "50"
+        }
+      ]
+    ],
+    "outcome_pubkey": "69a1de06348f3671b7685a6d07c8c1297cfae6404ae8822c610d30ee14bda594",
+    "attest_pubkey": "b0bd538e5a1cc4a31216a8020f992b3f9dcde612bc9889c7a828dc697abf8e9f",
+    "resolver_wasm_hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+    "outlayer_config": {
+      "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+      "secrets_profile": "praetorial-resolver",
+      "secrets_account_id": "praetorial-dev-1101.testnet"
+    },
+    "judge_chain": [
+      {
+        "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "model_b": "z-ai/glm-5.3-flash"
+      },
+      {
+        "model_a": "Qwen/Qwen3.8-27B",
+        "model_b": "moonshotai/kimi-k3"
+      },
+      {
+        "model_a": "google/gemini-3.5-flash",
+        "model_b": "openai/gpt-5.4-mini"
+      },
+      {
+        "model_a": "x-ai/grok-4.7",
+        "model_b": "anthropic/claude-haiku-5-5"
+      }
+    ]
+  },
+  "frz1b_args_diff": {
+    "guardian": "arbiter1.praetorial-dev-1101.testnet -> drill1-g1-2611091903.praetorial-dev-1101.testnet",
+    "outcome_pubkey": "eab0e7b74f13fac3a2ad1e0c4c4ad6f776aa1904bb6f0fafd0ba035a23daaa4d -> 69a1de06348f3671b7685a6d07c8c1297cfae6404ae8822c610d30ee14bda594 (report-pubkey bound to the new escrow account)"
+  },
+  "balances": {
+    "before": {
+      "maker1.praetorial-dev-1101.testnet": "4106069855",
+      "taker1.praetorial-dev-1101.testnet": "3714307000",
+      "fee.praetorial-dev-1101.testnet": "2900000",
+      "drill1-g3-2611091903.praetorial-dev-1101.testnet": "20275234"
+    },
+    "after": {
+      "maker1.praetorial-dev-1101.testnet": "4145345089",
+      "taker1.praetorial-dev-1101.testnet": "3724444617",
+      "fee.praetorial-dev-1101.testnet": "4175234",
+      "drill1-g3-2611091903.praetorial-dev-1101.testnet": "20275234"
+    }
+  },
+  "escrow_balance": {
+    "before": "0",
+    "after": "0"
+  },
+  "bets": {
+    "A": {
+      "storage": "137617",
+      "req": "10137617",
+      "spec_hash": "b8b9fa7bca4cb06300fcd0d25b597a4da57ecb0716783d75571a9c673f3464a5",
+      "id": 1,
+      "status_after": "Open",
+      "storage_maker_view": "137617",
+      "storage_taker_view": "0",
+      "fee_min_maker": "500000",
+      "fee_min_taker": "500000"
+    },
+    "B": {
+      "storage": "137617",
+      "req": "10137617",
+      "spec_hash": "01f7d9586f677a787d697e20243fd484a13b255d726ccea61d5df9d6f89a02e3",
+      "id": 2,
+      "status_after": "Taken",
+      "storage_maker_view": "137617",
+      "storage_taker_view": "137617",
+      "fee_min_maker": "500000",
+      "fee_min_taker": "500000"
+    },
+    "C": {
+      "storage": "137617",
+      "req": "10137617",
+      "spec_hash": "c7c826969bed1383592c8b7f723c001a00b192411242f0ad544557cb0a7ac721",
+      "id": 3,
+      "status_after": "Taken",
+      "storage_maker_view": "137617",
+      "storage_taker_view": "137617",
+      "fee_min_maker": "500000",
+      "fee_min_taker": "500000"
+    }
+  },
+  "stake": "10000000",
+  "refusals": [
+    {
+      "step": "non-guardian (G3) pause_new_offers refused",
+      "kind": "panic",
+      "caller": "drill1-g3-2611091903.praetorial-dev-1101.testnet",
+      "method": "pause_new_offers",
+      "expected": "only guardian",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only guardian\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "emergency_refund before shutdown refused",
+      "kind": "panic",
+      "caller": "keeper",
+      "method": "emergency_refund",
+      "expected": "emergency_refund is only callable after emergency_shutdown",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: Method emergency_refund doesn't accept deposit\"}}}} \"ActionError\"",
+      "observed": false,
+      "invalid": "script attached 1 yocto to a non-payable method; failure text is NEAR's deposit guard, not the contract guard",
+      "note": "NOT DRILLED LIVE (irreversible shutdown already happened); covered by contract unit tests only"
+    },
+    {
+      "step": "open_bet while paused refused (silent full refund)",
+      "kind": "silent_refund",
+      "observed": true,
+      "note": "tx succeeded; mt_on_transfer returned the full amount. bet_count 3->3; maker balance 20275234->20275234; escrow balance 50688085->50688085"
+    },
+    {
+      "step": "take of Open bet A while paused refused (silent full refund)",
+      "kind": "silent_refund",
+      "observed": true,
+      "note": "A status Open, taker null; taker balance 20275234->20275234"
+    },
+    {
+      "step": "B concede while paused: payout lands exactly",
+      "kind": "state",
+      "observed": true,
+      "note": "maker +19000000 (exp 19000000), fee +1275234 (exp 1275234), taker 0"
+    },
+    {
+      "step": "unpause: is_new_offers_paused false",
+      "kind": "state",
+      "observed": true,
+      "note": "re-established from tx logs (view read raced finality): EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"offers_unpaused\",\"data\":[{\"guardian\":\"drill1-g1-2611091903.praetorial-dev-1101.testnet\",\"at_ns\":\"1794251275743907802\"}]}"
+    },
+    {
+      "step": "pause again: is_new_offers_paused true",
+      "kind": "state",
+      "observed": true
+    },
+    {
+      "step": "non-guardian (G3) set_guardian refused",
+      "kind": "panic",
+      "caller": "drill1-g3-2611091903.praetorial-dev-1101.testnet",
+      "method": "set_guardian",
+      "expected": "only guardian",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only guardian\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "set_guardian(G2) proposes only (guardian still G1, pending G2)",
+      "kind": "state",
+      "observed": true
+    },
+    {
+      "step": "G3 accept_guardian refused (not the proposed)",
+      "kind": "panic",
+      "caller": "drill1-g3-2611091903.praetorial-dev-1101.testnet",
+      "method": "accept_guardian",
+      "expected": "only the proposed guardian may accept",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only the proposed guardian may accept\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "cancel_guardian clears pending",
+      "kind": "state",
+      "observed": true
+    },
+    {
+      "step": "after accept: guardian view == G2",
+      "kind": "state",
+      "observed": true,
+      "note": "re-established from tx logs: EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"guardian_rotated\",\"data\":[{\"old_guardian\":\"drill1-g1-2611091903.praetorial-dev-1101.testnet\",\"guardian\":\"drill1-g2-2611091903.praetorial-dev-1101.testnet\",\"at_ns\":\"1794251297880083678\"}]}"
+    },
+    {
+      "step": "old guardian G1 pause_new_offers refused after rotation",
+      "kind": "panic",
+      "caller": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+      "method": "pause_new_offers",
+      "expected": "only guardian",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only guardian\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "non-guardian (G1, old) emergency_shutdown refused",
+      "kind": "panic",
+      "caller": "drill1-g1-2611091903.praetorial-dev-1101.testnet",
+      "method": "emergency_shutdown",
+      "expected": "only guardian",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: only guardian\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "is_shutdown true",
+      "kind": "state",
+      "observed": true
+    },
+    {
+      "step": "G2 unpause_new_offers refused after shutdown",
+      "kind": "panic",
+      "caller": "drill1-g2-2611091903.praetorial-dev-1101.testnet",
+      "method": "unpause_new_offers",
+      "expected": "contract is shut down; unpause is impossible after shutdown",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: contract is shut down; unpause is impossible after shutdown\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "second emergency_shutdown refused",
+      "kind": "panic",
+      "caller": "drill1-g2-2611091903.praetorial-dev-1101.testnet",
+      "method": "emergency_shutdown",
+      "expected": "already shut down",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: already shut down\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "void_after_deadline refused after shutdown",
+      "kind": "panic",
+      "caller": "keeper",
+      "method": "void_after_deadline",
+      "expected": "contract is shut down",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: Method void_after_deadline doesn't accept deposit\"}}}} \"ActionError\"",
+      "observed": false,
+      "invalid": "script attached 1 yocto to a non-payable method; failure text is NEAR's deposit guard, not the contract guard"
+    },
+    {
+      "step": "concede on C refused after shutdown",
+      "kind": "panic",
+      "caller": "maker",
+      "method": "concede",
+      "expected": "contract is shut down",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: Method concede doesn't accept deposit\"}}}} \"ActionError\"",
+      "observed": false,
+      "invalid": "script attached 1 yocto to a non-payable method; failure text is NEAR's deposit guard, not the contract guard"
+    },
+    {
+      "step": "void_after_deadline refused after shutdown (0 deposit)",
+      "kind": "panic",
+      "caller": "keeper",
+      "method": "void_after_deadline",
+      "expected": "contract is shut down",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: contract is shut down\"}}}} \"ActionError\"",
+      "observed": true
+    },
+    {
+      "step": "concede on C by maker refused after shutdown (0 deposit)",
+      "kind": "panic",
+      "caller": "maker",
+      "method": "concede",
+      "expected": "contract is shut down",
+      "text": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: contract is shut down\"}}}} \"ActionError\"",
+      "observed": true
+    }
+  ],
+  "expected_credits": {
+    "maker1.praetorial-dev-1101.testnet": "39275234",
+    "taker1.praetorial-dev-1101.testnet": "10137617",
+    "fee.praetorial-dev-1101.testnet": "1275234",
+    "drill1-g3-2611091903.praetorial-dev-1101.testnet": "0"
+  },
+  "refund_rule": "lib.rs emergency_refund: maker/taker each get stake + storage back, NO fee; concede: winner gets both stakes minus per-side fee max(1%, 500000), fee account gets fees + both storage charges",
+  "expected_detail": {
+    "credits": {
+      "maker1.praetorial-dev-1101.testnet": "39275234",
+      "fee.praetorial-dev-1101.testnet": "1275234",
+      "taker1.praetorial-dev-1101.testnet": "10137617"
+    },
+    "deposits": {
+      "maker1.praetorial-dev-1101.testnet": "30412851",
+      "taker1.praetorial-dev-1101.testnet": "20275234"
+    }
+  },
+  "residue": {
+    "maker1.praetorial-dev-1101.testnet": "0",
+    "taker1.praetorial-dev-1101.testnet": "0",
+    "fee.praetorial-dev-1101.testnet": "0",
+    "drill1-g3-2611091903.praetorial-dev-1101.testnet": "0",
+    "drill1-2611091903.praetorial-dev-1101.testnet": "0"
+  },
+  "payout_lines": {
+    "A": {
+      "bet_id": 1,
+      "status": "Voided",
+      "fully_paid": true,
+      "lines": []
+    },
+    "B": {
+      "bet_id": 2,
+      "status": "Settled",
+      "fully_paid": true,
+      "lines": []
+    },
+    "C": {
+      "bet_id": 3,
+      "status": "Voided",
+      "fully_paid": true,
+      "lines": []
+    }
+  },
+  "expected_credits_note": "FIRST computation (credits - deposits) was a script defect: each deposit was funded by an exact mint recorded AFTER the 'before' snapshot, so observed delta = credits. Corrected to credits; the contract behaved as designed (observed deltas are exactly the contract-rule credits).",
+  "keeper_actions": [
+    {
+      "ts": "2026-11-09T19:10:03.933Z",
+      "service": "keeper",
+      "action": "emergency_refund",
+      "bet_id": 1,
+      "status": "ok",
+      "tx_hash": "GwPBtSuk26KhQ4AuYm3WHJFmUxN1YJT2QwJMupin4Ybi",
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    },
+    {
+      "ts": "2026-11-09T19:10:04.222Z",
+      "service": "keeper",
+      "action": "emergency_refund",
+      "status": "error",
+      "detail": "NEAR RPC error (send_tx): {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{},\"name\":\"INVALID_TRANSACTION\"},\"code\":-32000,\"message\":\"Server error\",\"data\":{\"TxExecutionError\":{\"InvalidTxError\":{\"InvalidNonce\":{\"ak_nonce\":275838030000821,\"tx_nonce\":275838030000821}}}}}",
+      "bet_id": 3,
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    },
+    {
+      "ts": "2026-11-09T19:10:17.145Z",
+      "service": "keeper",
+      "action": "emergency_refund",
+      "status": "skipped",
+      "detail": "rate-limited",
+      "bet_id": 3,
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    },
+    {
+      "ts": "2026-11-09T19:10:21.431Z",
+      "service": "keeper",
+      "action": "drain_payouts",
+      "bet_id": 1,
+      "status": "ok",
+      "tx_hash": "7HeUxdwFvtpBDw8igtdtmbHmBgSd6Ca3BqzBxVk38gTh",
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    },
+    {
+      "ts": "2026-11-09T19:11:28.374Z",
+      "service": "keeper",
+      "action": "emergency_refund",
+      "bet_id": 3,
+      "status": "ok",
+      "tx_hash": "B7iCDUPBCxFDcf3yPVv1Kmp5zij57q9tYEaiCzxgW3Gd",
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    },
+    {
+      "ts": "2026-11-09T19:11:45.771Z",
+      "service": "keeper",
+      "action": "drain_payouts",
+      "bet_id": 3,
+      "status": "ok",
+      "tx_hash": "GrhevnjvD3fLtTRABTbBQNnM2fGmFgJNdgFWdzMMBEaF",
+      "contract_id": "drill1-2611091903.praetorial-dev-1101.testnet"
+    }
+  ],
+  "keeper_note": "Runs: ticks 1-2 (rm'd log; first file) then ticks 3-4 (KEEP=1). See keeper-tx-log.jsonl. Tick 1: emergency_refund bet 1 ok; bet 3 got InvalidNonce (same-key back-to-back send, no retry); tick 2: bet 3 'rate-limited' (skipped), drain bet 1 ok; tick 3: emergency_refund bet 3 ok; tick 4: drain bet 3 ok. Bet 2 (terminal Settled) never actioned = skipped as policy requires. One keeper emergency_refund per tick is the policy's rate limit."
+}

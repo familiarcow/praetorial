@@ -1,0 +1,139 @@
+{
+  "note": "synthetic-but-realistic; see build.mjs",
+  "new_args": {
+    "guardian": "guardian.testnet",
+    "fee_account": "fee.testnet",
+    "asset_limits": [
+      [
+        "usdc.fakes.testnet",
+        {
+          "min_per_side": "5000000",
+          "max_per_side": "100000000",
+          "min_fee_per_side": "250000",
+          "min_fee_cap_per_side": "2500000",
+          "run_price": "250000",
+          "min_bond": "5000000",
+          "min_objection": "1000000"
+        }
+      ],
+      [
+        "usdt.fakes.testnet",
+        {
+          "min_per_side": "5000000",
+          "max_per_side": "100000000",
+          "min_fee_per_side": "250000",
+          "min_fee_cap_per_side": "0",
+          "run_price": "250000",
+          "min_bond": "5000000",
+          "min_objection": "1000000"
+        }
+      ]
+    ]
+  },
+  "receipts": [
+    {
+      "tx_hash": "PA1bTx001",
+      "method": "propose_params",
+      "block_timestamp": "1793086400000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_proposed\",\"data\":[{\"fee_bps\":150,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":\"200000\",\"min_per_side\":null,\"max_per_side\":null}],\"proposed_at_ns\":1793086400000000000,\"effective_at_ns\":1793172800000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTx002",
+      "method": "apply_params",
+      "block_timestamp": "1793173100000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_applied\",\"data\":[{\"fee_bps\":150,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":\"200000\",\"min_per_side\":null,\"max_per_side\":null}],\"proposed_at_ns\":1793086400000000000,\"effective_at_ns\":1793172800000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTx003",
+      "method": "propose_params",
+      "block_timestamp": "1793259200000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_proposed\",\"data\":[{\"fee_bps\":null,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":null,\"min_per_side\":\"20000000\",\"max_per_side\":\"500000000\"}],\"proposed_at_ns\":1793259200000000000,\"effective_at_ns\":1793345600000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTx004",
+      "method": "cancel_params",
+      "block_timestamp": "1793262800000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_cancelled\",\"data\":[{\"fee_bps\":null,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":null,\"min_per_side\":\"20000000\",\"max_per_side\":\"500000000\"}],\"proposed_at_ns\":1793259200000000000,\"effective_at_ns\":1793345600000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTx005",
+      "method": "propose_params",
+      "block_timestamp": "1793432000000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_proposed\",\"data\":[{\"fee_bps\":120,\"assets\":[{\"asset_id\":\"usdt.fakes.testnet\",\"min_fee_per_side\":\"100000\",\"min_per_side\":null,\"max_per_side\":\"250000000\"}],\"proposed_at_ns\":1793432000000000000,\"effective_at_ns\":1793518400000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTxEarly",
+      "method": "apply_params",
+      "block_timestamp": "1793435600000000000",
+      "ok": false,
+      "logs": []
+    },
+    {
+      "tx_hash": "PA1bTx006",
+      "method": "apply_params",
+      "block_timestamp": "1793518400000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_applied\",\"data\":[{\"fee_bps\":120,\"assets\":[{\"asset_id\":\"usdt.fakes.testnet\",\"min_fee_per_side\":\"100000\",\"min_per_side\":null,\"max_per_side\":\"250000000\"}],\"proposed_at_ns\":1793432000000000000,\"effective_at_ns\":1793518400000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTx007",
+      "method": "propose_params",
+      "block_timestamp": "1793691200000000000",
+      "ok": true,
+      "logs": [
+        "EVENT_JSON:{\"standard\":\"praetorial-escrow\",\"version\":\"1.0.0\",\"event\":\"params_proposed\",\"data\":[{\"fee_bps\":null,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":\"150000\",\"min_per_side\":null,\"max_per_side\":null}],\"proposed_at_ns\":1793691200000000000,\"effective_at_ns\":1793777600000000000}]}"
+      ]
+    },
+    {
+      "tx_hash": "PA1bTxOther",
+      "method": "mt_on_transfer",
+      "block_timestamp": "1793691200000001000",
+      "ok": true,
+      "logs": [
+        "open bet_id=7 maker=a.testnet",
+        "EVENT_JSON:{\"standard\":\"nep245\",\"version\":\"1.0.0\",\"event\":\"mt_mint\",\"data\":[]}"
+      ]
+    }
+  ],
+  "views": {
+    "protocol_fee_bps": 120,
+    "asset_limit": {
+      "usdc.fakes.testnet": {
+        "min_per_side": "5000000",
+        "max_per_side": "100000000",
+        "min_fee_per_side": "200000",
+        "min_fee_cap_per_side": "2500000",
+        "run_price": "250000",
+        "min_bond": "5000000",
+        "min_objection": "1000000"
+      },
+      "usdt.fakes.testnet": {
+        "min_per_side": "5000000",
+        "max_per_side": "250000000",
+        "min_fee_per_side": "100000",
+        "min_fee_cap_per_side": "250000",
+        "run_price": "250000",
+        "min_bond": "5000000",
+        "min_objection": "1000000"
+      }
+    },
+    "pending_params_raw": "{\"change\":{\"fee_bps\":null,\"assets\":[{\"asset_id\":\"usdc.fakes.testnet\",\"min_fee_per_side\":\"150000\",\"min_per_side\":null,\"max_per_side\":null}]},\"proposed_at_ns\":1793691200000000000,\"effective_at_ns\":1793777600000000000}"
+  }
+}

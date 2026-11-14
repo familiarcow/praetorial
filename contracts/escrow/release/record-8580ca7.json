@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "8580ca772bc3b29ff95b0adffde142cc20730130",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.22.0-rust-1.97.1",
+  "image_digest": "sha256:7467038bdddc86484b73b416eeadce926ff59013e128e53dec5a19e1cb4b2234",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "6b59b3350ebd20b4bd5c7684d5a97d6c45e96d61241fca69fd9427cd1618362c",
+  "hash_bs58": "8E3xP1tUtwCDqz1h4Uv9gKegSrMg4tMRtTUj9sBYhNnP",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "6b59b3350ebd20b4bd5c7684d5a97d6c45e96d61241fca69fd9427cd1618362c"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "6b59b3350ebd20b4bd5c7684d5a97d6c45e96d61241fca69fd9427cd1618362c"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "6b59b3350ebd20b4bd5c7684d5a97d6c45e96d61241fca69fd9427cd1618362c"
+    }
+  ],
+  "notes": {
+    "item": "ESR2: reproducible escrow wasm of main 8580ca7 (includes FM1 020172f, MS1, RA1, CMT1, TKH1, STG1/STG1b, CMT2 and later escrow changes); NOT deployed anywhere",
+    "size_bytes": 472310,
+    "toolchain": "cargo-near 0.22.0, rustc 1.97.1 inside the image == contracts/rust-toolchain.toml and the conformance crate pin (1.97.1); profile from contracts/Cargo.toml, --cfg near from contracts/.cargo/config.toml, ABI embedded",
+    "supersedes": "record-6944916.json (hash f62c4843..., escrow source before the post-TC1 fixes); record-9662db8.json remains superseded",
+    "emulation": "colima rosetta/QEMU. All three builds succeeded first time (no retries); build 3 used docker create/cp with a fresh export, no bind mounts."
+  }
+}

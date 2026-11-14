@@ -1,0 +1,60 @@
+# F1 funding Worker (FUND4 SPEC §7.1, D-FUND4/D-FUND4a): Add money / Cash out / Convert through NEAR Intents 1Click.
+# NO secrets in this file. The only secret is the 1Click partner key: `wrangler secret put ONECLICK_API_KEY [--env mainnet]`
+# (scripts/set-mainnet-secrets.sh pipes it from $PRAETORIAL_SECRETS_DIR/praetorial-oneclick.env). NO cron. Holds no NEAR keys.
+# 1Click only exists on mainnet: the testnet Worker is DRY-ONLY (FUNDING_DRY_ONLY="1": previews, never a deposit address).
+name = "praetorial-funding-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "FUNDING_STORE"
+class_name = "FundingStoreDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["FundingStoreDO"]
+
+[vars]
+NEAR_NETWORK_ID = "testnet"
+NEAR_RPC_URL = "https://test.rpc.fastnear.com"
+# informational (STACK1 /health reports it like every Worker); the funding Worker never calls the escrow
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+# no INTENTS_CONTRACT_ID here: testnet is dry-only (never reads a balance) and the testnet web uses a mock intents contract
+ONECLICK_BASE_URL = "https://1click.chaindefuser.com"
+ONECLICK_REFERRAL = "praetorial"
+FUNDING_DRY_ONLY = "1"
+# the 6 bet tokens (1Click/intents ids; 1Click is mainnet-only so testnet previews use the mainnet ids)
+BETTING_ASSET_IDS = "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1,nep141:usdt.tether-token.near,nep141:wrap.near,nep141:btc.omft.near,nep141:eth.omft.near,nep141:zec.omft.near"
+# Comma-separated web origins allowed to call this Worker from a browser; any other Origin gets 403. Never "*".
+FUNDING_ALLOWED_ORIGINS = "https://praetorial-web-testnet.familiarcow.workers.dev,http://localhost:3000,http://localhost:5173"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 pattern: [env.mainnet] draft. Deploy only on familiarcow's go: scripts/deploy-mainnet.sh (`wrangler deploy --env mainnet`).
+[env.mainnet]
+name = "praetorial-funding-mainnet"
+# DOM1: public host funding.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "funding.praetorial.com", custom_domain = true }]
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[env.mainnet.durable_objects.bindings]]
+name = "FUNDING_STORE"
+class_name = "FundingStoreDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["FundingStoreDO"]
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+ONECLICK_BASE_URL = "https://1click.chaindefuser.com"
+ONECLICK_REFERRAL = "praetorial"
+FUNDING_DRY_ONLY = "0"
+BETTING_ASSET_IDS = "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1,nep141:usdt.tether-token.near,nep141:wrap.near,nep141:btc.omft.near,nep141:eth.omft.near,nep141:zec.omft.near"
+FUNDING_ALLOWED_ORIGINS = "https://praetorial.com,https://www.praetorial.com,https://praetorial-web-mainnet.familiarcow.workers.dev"  # DOM1: TODO-REMOVE the workers.dev origin (last entry) once the praetorial.com cutover is confirmed

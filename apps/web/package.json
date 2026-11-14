@@ -1,0 +1,52 @@
+{
+  "name": "praetorial-web-v0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "description": "Praetorial Option-1 wallet round trip: real Privy client SDK (browser) + server verify/broadcast on NEAR testnet, plus NEP-413 intents signing and passkey-recovery probe.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.json --noEmit && vite build",
+    "test": "tsx --test tests/*.unit.test.ts tests/funding/*.unit.test.ts",
+    "gen:limits": "tsx scripts/genAssetLimits.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:live": "PW_LIVE=1 playwright test",
+    "build:testnet": "NETWORK_ID=testnet VITE_NETWORK_ID=testnet VITE_EXPLORE_HIDDEN=1-48 VITE_INDEXER_URL=/_proxy/indexer VITE_RELAYER_URL=/_proxy/relayer VITE_REGISTRY_URL=/_proxy/registry npm run build",
+    "deploy:testnet": "node ../../services/workers/scripts/check-config-drift.mjs && npm run build:testnet && wrangler deploy --config wrangler.testnet.toml",
+    "build:kit": "NETWORK_ID=testnet VITE_NETWORK_ID=testnet VITE_KIT=1 KIT_ONLY=1 vite build --outDir dist-kit --emptyOutDir",
+    "build:mainnet": "NETWORK_ID=mainnet VITE_NETWORK_ID=mainnet VITE_INDEXER_URL=/_proxy/indexer VITE_RELAYER_URL=/_proxy/relayer VITE_REGISTRY_URL=/_proxy/registry VITE_SOURCECHECK_URL=https://sourcecheck.praetorial.com/sourcecheck npm run build",
+    "deploy:mainnet": "npm run build:mainnet && tsx scripts/mainnetDeployGuard.ts && wrangler deploy --config wrangler.mainnet.toml",
+    "guard:mainnet": "tsx scripts/mainnetDeployGuard.ts",
+    "check:live:mainnet": "tsx scripts/postDeployCheck.ts",
+    "test:deployed": "playwright test -c playwright.deployed.config.ts"
+  },
+  "dependencies": {
+    "@astryxdesign/core": "^0.7.11",
+    "@astryxdesign/theme-neutral": "^0.7.11",
+    "@near-js/crypto": "^2.5.1",
+    "@near-js/transactions": "^2.5.1",
+    "@privy-io/react-auth": "^3.0.0",
+    "@stylexjs/stylex": "^0.19.1",
+    "buffer": "^6.0.3",
+    "js-sha256": "^1.0.0",
+    "qrcode-generator": "2.0.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "bs58": "^6.0.0",
+    "near-api-js": "^5.1.1",
+    "tsx": "^4.19.2",
+    "tweetnacl": "^1.0.3",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "wrangler": "^4.0.0"
+  }
+}

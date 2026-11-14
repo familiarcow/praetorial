@@ -1,0 +1,1016 @@
+[
+ {
+  "codes": [],
+  "name": "btc_close_ok",
+  "ts": {
+   "fields": {
+    "op": ">=",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "2026-11-07T15:00:00Z",
+    "x_usd": 75900
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [],
+  "name": "btc_touch_ok",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "btc_touch",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [],
+  "name": "game_ok",
+  "ts": {
+   "fields": {
+    "event_id": "849799",
+    "league": "MLB",
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [],
+  "name": "nws_ok",
+  "ts": {
+   "fields": {
+    "date": "2026-11-08",
+    "op": ">=",
+    "station": "KNYC",
+    "x_f": 72
+   },
+   "template": {
+    "id": "nws_daily_high",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_ID"
+  ],
+  "name": "unknown_id",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "eth_touch",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_VERSION"
+  ],
+  "name": "version_2",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "btc_touch",
+    "version": 2
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_VERSION"
+  ],
+  "name": "version_string",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "btc_touch",
+    "version": "1"
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_MALFORMED"
+  ],
+  "name": "template_not_object",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": "btc_touch"
+  }
+ },
+ {
+  "codes": [
+   "TPL_T_UTC_NOT_MINUTE"
+  ],
+  "name": "close_t_not_minute",
+  "ts": {
+   "fields": {
+    "op": ">=",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "2026-11-07T15:00:30Z",
+    "x_usd": 75900
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_T_UTC_NOT_MINUTE"
+  ],
+  "name": "close_t_friday",
+  "ts": {
+   "fields": {
+    "op": ">=",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "Friday",
+    "x_usd": 75900
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_BAD_OP"
+  ],
+  "name": "close_bad_op",
+  "ts": {
+   "fields": {
+    "op": "==",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "2026-11-07T15:00:00Z",
+    "x_usd": 75900
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_X_USD_NOT_WHOLE"
+  ],
+  "name": "close_x_fraction",
+  "ts": {
+   "fields": {
+    "op": ">=",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "2026-11-07T15:00:00Z",
+    "x_usd": 75900.5
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_FIELD"
+  ],
+  "name": "close_asset_field",
+  "ts": {
+   "fields": {
+    "asset": "WBTC",
+    "op": ">=",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "t_utc": "2026-11-07T15:00:00Z",
+    "x_usd": 75900
+   },
+   "template": {
+    "id": "btc_close_at_t",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_BAD_DIRECTION"
+  ],
+  "name": "touch_bad_direction",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "btc_touch",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_DEADLINE_FORMAT"
+  ],
+  "name": "touch_deadline_date_only",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-01",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "template": {
+    "id": "btc_touch",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_BAD_LEAGUE"
+  ],
+  "name": "game_bad_league",
+  "ts": {
+   "fields": {
+    "event_id": "849799",
+    "league": "MLS",
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_PICK_NO_TEAM_ID"
+  ],
+  "name": "game_name_only_pick",
+  "ts": {
+   "fields": {
+    "event_id": "849799",
+    "league": "MLB",
+    "pick": {
+     "name": "Georgia"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_EVENT_ID_FORMAT"
+  ],
+  "name": "game_event_name",
+  "ts": {
+   "fields": {
+    "event_id": "Super Bowl LIX",
+    "league": "MLB",
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_BAD_DATE"
+  ],
+  "name": "game_bad_date",
+  "ts": {
+   "fields": {
+    "event_id": "849799",
+    "league": "MLB",
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-02-30"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_FIELD"
+  ],
+  "name": "game_margin_field",
+  "ts": {
+   "fields": {
+    "event_id": "849799",
+    "league": "MLB",
+    "margin": 3,
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_STATION_NOT_CURATED"
+  ],
+  "name": "nws_uncurated",
+  "ts": {
+   "fields": {
+    "date": "2026-11-08",
+    "op": ">=",
+    "station": "KXXX",
+    "x_f": 72
+   },
+   "template": {
+    "id": "nws_daily_high",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_BAD_OP"
+  ],
+  "name": "nws_lt",
+  "ts": {
+   "fields": {
+    "date": "2026-11-08",
+    "op": "<",
+    "station": "KNYC",
+    "x_f": 72
+   },
+   "template": {
+    "id": "nws_daily_high",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_X_F_NOT_WHOLE"
+  ],
+  "name": "nws_fraction",
+  "ts": {
+   "fields": {
+    "date": "2026-11-08",
+    "op": ">=",
+    "station": "KNYC",
+    "x_f": 72.5
+   },
+   "template": {
+    "id": "nws_daily_high",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_FIELD_NOT_ALLOWED"
+  ],
+  "name": "typed_with_sources",
+  "ts": {
+   "fields": {
+    "deadline_utc": "2026-12-07T12:00:00Z",
+    "direction": "at_or_above",
+    "open_utc": "2026-11-07T12:00:00Z",
+    "x_usd": 76000
+   },
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "x",
+     "url": "https://evil.example/x"
+    }
+   ],
+   "template": {
+    "id": "btc_touch",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_FIELD_NOT_ALLOWED",
+   "TPL_FIELD_NOT_ALLOWED"
+  ],
+  "name": "typed_with_origin_and_claim",
+  "ts": {
+   "claim": "Brewers win",
+   "fields": {
+    "event_id": "849799",
+    "league": "MLB",
+    "pick": {
+     "name": "Milwaukee Brewers",
+     "team_id": "158"
+    },
+    "scheduled_date": "2026-10-28"
+   },
+   "origin": "espn-b",
+   "template": {
+    "id": "game_winner",
+    "version": 1
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_plain",
+  "ts": {
+   "claim": "Apple makes a foldable iPhone available to buy in the US during 2027.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_explicit",
+  "ts": {
+   "claim": "Apple makes a foldable iPhone available to buy in the US during 2027.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "template": {
+    "id": "custom",
+    "version": 1
+   },
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "TPL_UNKNOWN_VERSION"
+  ],
+  "name": "custom_bad_version",
+  "ts": {
+   "claim": "Apple makes a foldable iPhone available to buy in the US during 2027.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "template": {
+    "id": "custom",
+    "version": 3
+   },
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "CUSTOM_RELATIVE_DATE",
+   "legacy",
+   "legacy",
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_relative_0",
+  "ts": {
+   "claim": "AAPL closed above $340 on Friday.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "CUSTOM_RELATIVE_DATE",
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_relative_1",
+  "ts": {
+   "claim": "The Chiefs win tomorrow.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "CUSTOM_RELATIVE_DATE",
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_relative_2",
+  "ts": {
+   "claim": "Apple ships it next week.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "CUSTOM_RELATIVE_DATE",
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_relative_3",
+  "ts": {
+   "claim": "The Jaguars make the playoffs this season.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy",
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_anchored_0",
+  "ts": {
+   "claim": "AAPL closed above $340 on Friday, October 30, 2026.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_anchored_1",
+  "ts": {
+   "claim": "The Chiefs win on Nov 8, 2026.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_anchored_2",
+  "ts": {
+   "claim": "The Sunderland club wins 2-1.",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ },
+ {
+  "codes": [
+   "legacy",
+   "legacy"
+  ],
+  "name": "custom_anchored_3",
+  "ts": {
+   "claim": "tomorrow (2026-11-08) the Chiefs win",
+   "clauses": [
+    "AVAILABLE_V1",
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "ANNOUNCED_V1"
+   ],
+   "elements": [
+    {
+     "id": "e1",
+     "q": "Did Apple make a foldable-screen iPhone available to purchase by the general public in the United States between 2027-01-01 and 2027-12-31 UTC?"
+    }
+   ],
+   "rule": "ALL",
+   "sources": true,
+   "sources_allowed": [
+    {
+     "id": "S1",
+     "publisher": "apple.com newsroom"
+    },
+    {
+     "id": "S2",
+     "publisher": "Reuters"
+    },
+    {
+     "id": "S3",
+     "publisher": "The Verge"
+    },
+    {
+     "id": "M",
+     "party_controlled": true,
+     "publisher": "maker's blog"
+    }
+   ],
+   "time": {
+    "evidence_cutoff": "2028-01-07T00:00:00Z",
+    "window_end": "2027-12-31T23:59:59Z",
+    "window_start": "2027-01-01T00:00:00Z"
+   }
+  }
+ }
+]

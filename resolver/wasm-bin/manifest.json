@@ -1,0 +1,6 @@
+{
+  "signing_keys": [
+    {"path": "outcome", "type": "ed25519", "bind": "wasm", "caller": "predecessor"},
+    {"path": "attest", "type": "ed25519", "bind": "wasm"}
+  ]
+}

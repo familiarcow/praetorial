@@ -1,0 +1,54 @@
+// Designed-behaviour tests for 17c (NOT compiled; each FAILS on the current core as replayed in 17b).
+// Harness helpers (run, cite, generic_terms, src, btc_terms, touch_terms, closes_at...) are in resolver/wasm-bin/src/item17b_tests.rs.
+// Citations are to the MVP bet design doc (3 types).
+
+// GAP-2 (Type 1, 1a: median of the 3 venues' CLOSE of the minute ending T). Event A: closes 75923.34/75925.00/75929.10 -> median 75925.00.
+// Current core: evidence rows are `unix_ts,high_usd` only; no close, no median. Replayed: a 1-minute window at T VOIDs (per-minute fetch not even admissible
+// in the recorded set) and a 1h window gives 60 HIGH rows per venue and the judge has nothing to compute a close from -> ESCALATE/VOID.
+#[test]
+fn t1a_event_a_median_close_above_75900_is_yes_and_above_75925_is_no() {
+    // typed 1a sheet, X=75900, "above" strictly: median close 75925.00 > 75900 -> YES
+    // typed 1a sheet, X=75925, "above" strictly: median close 75925.00 !> 75925 -> NO (ties decided by operator, never VOID)
+    // typed 1a sheet, X=75927 with only CB+BS reachable: mean of the 2 = 75924.17 -> NO; if they straddle X -> VOID
+}
+
+// GAP-3 (Type 1 1b, ">=2 of 3 venues touched"). Event A maxima CB 75930.49 / BS 75925.00 / KR 75932.50. X=75931: only Kraken touched -> designed NO.
+// Current core replay: honest judge ("insufficient") -> VOID (code-NO refused because KR high >= X); a judge citing the KR row -> YES (wrong winner).
+#[test]
+fn t1b_event_a_only_one_venue_touched_is_no() {
+    let (o, n, _) = run(touch_terms("A", 75931), insufficient);
+    assert_eq!(o, "NO", "{:?}", n);            // current: VOID
+    let (o, n, _) = run(touch_terms("A", 75931), |p| match row_at_least(p, "S_KR", 75931.0) { Some(r) => met("S_KR", &r), None => insufficient(p) });
+    assert_eq!(o, "NO", "{:?}", n);            // current: YES (code does not count venues)
+}
+
+// GAP-4 (Type 3). The NWS CLI product (api.weather.gov, Content-Type application/ld+json) is dropped by fetch_and_admit_source ("content-type not allowed").
+// Designed: KNYC 2026-11-05 CLI MAXIMUM 72 (product 7a7c269a-..., issued 2026-11-06T06:45Z) and IEM high 72 agree -> ">= 72" YES, "<= 71" NO.
+#[test]
+fn t3_knyc_20261105_nws_cli_and_iem_agree_72() {
+    // sources: NWS CLI product (pinned at Open) + IEM cli.py?station=KNYC&year=2026 (389 KB; fits the prompt cap, 391,615 of 414,464 bytes)
+    // current: S_NWS dropped (FETCH_FAIL: content-type not allowed: application/ld+json); S_IEM alone -> YES (no agreement check; design VOIDs "two copies disagree" and
+    // wants quorum of 2). Also: no climate-day LST, no `MM` handling, no code extraction (judge reads a year of rows as text).
+    // assert: has(&n, "source fetched: S_NWS") && outcome == "YES" for >=72 and "NO" for >=73, and outcome == "VOID" if either copy says MM or they differ.
+}
+
+// GAP-5a (Type 2, NHL). Official api-web (86 KB) + ESPN (332 KB) together exceed the per-element prompt cap -> BUDGET_EXCEEDED -> VOID. Designed: YES for NSH in OT (game 2026020261, NSH 3 COL 2, OT, OFF).
+#[test]
+fn t2_nhl_2026020261_overtime_winner_nsh_is_yes() {
+    // sources: NHL api-web v1/score/2026-11-05 + ESPN nhl scoreboard?dates=20261105
+    // current: "prompt exceeds spec §2 cap (~103616 tokens/element, BUDGET_EXCEEDED)", judge never called -> VOID.  A structured adapter extracts only the pinned game.
+}
+
+// GAP-5b (Type 2, NFL). Design "Decision for the MVP": launch NFL single source (ESPN) with VOID if ESPN is unreachable 7 days.
+// Current: lint rejects it ("need >= 2 independent, non-party-controlled origins") -> VOID at the compile gate, judge never called. Two ESPN URLs: same rejection (origin = publisher).
+#[test]
+fn t2_nfl_401873026_single_source_espn_buf_36_10_bal_is_yes() {
+    // generic_terms(..., json!([src("S_ESPN","ESPN",U_NFL)]), ...) with judge citing the BUF `"winner":true` competitor -> designed YES; current VOID(INVALID_INPUT)
+}
+// Related: the origin is a bettor-declared string (`origin` field in sources_allowed). Declaring a different origin for the same ESPN URL passes lint
+// and the NFL game resolves YES (replayed). So the two-origin gate does not actually enforce independence for custom sources (defence rests on the taker's review).
+
+// GAP-6 (Type 1 Sources: Gemini backup). Gemini is not a price venue: it is fetched as a generic 88 KB JSON text page and ignored by the D-RESOLVE6/6b gates.
+// Replay: CB + BS + Gemini, X=75970 -> NO decided on "all 2 price venues" (Gemini listed but not counted as backup/venue).
+#[test]
+fn t1_gemini_backup_counts_as_third_venue_when_kraken_missing() { /* designed: Gemini replaces Kraken as 3rd venue; quorum 2 of {CB,BS,GM} */ }

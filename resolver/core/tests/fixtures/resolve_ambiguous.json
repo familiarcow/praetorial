@@ -1,0 +1,59 @@
+{
+ "cases": [
+  {
+   "expect_outcome": "VOID",
+   "expect_why": "unanimous-ambiguous library clause: neither party drafted it, so VOID with a refund",
+   "is_library_clause": true,
+   "maker_side": "yes",
+   "name": "library_clause_unanimous_voids",
+   "patent_ambiguity_flagged_and_accepted": false,
+   "reading_for_no": false,
+   "reading_for_yes": true,
+   "unanimous_ambiguous": true
+  },
+  {
+   "expect_outcome": "NO",
+   "expect_why": "maker-authored custom wording found genuinely ambiguous by a unanimous panel: read against the maker (contra proferentem, Restatement S206) -- maker took the YES side, so the adverse reading is NO",
+   "is_library_clause": false,
+   "maker_side": "yes",
+   "name": "custom_wording_maker_yes_reads_no",
+   "patent_ambiguity_flagged_and_accepted": false,
+   "reading_for_no": false,
+   "reading_for_yes": true,
+   "unanimous_ambiguous": true
+  },
+  {
+   "expect_outcome": "YES",
+   "expect_why": "maker-authored custom wording found genuinely ambiguous by a unanimous panel: read against the maker (contra proferentem, Restatement S206) -- maker took the NO side, so the adverse reading is YES",
+   "is_library_clause": false,
+   "maker_side": "no",
+   "name": "custom_wording_maker_no_reads_yes",
+   "patent_ambiguity_flagged_and_accepted": false,
+   "reading_for_no": false,
+   "reading_for_yes": true,
+   "unanimous_ambiguous": true
+  },
+  {
+   "expect_outcome": null,
+   "expect_why": "panel is not unanimous that the wording is genuinely ambiguous; not applicable",
+   "is_library_clause": false,
+   "maker_side": "yes",
+   "name": "not_unanimous_returns_none",
+   "patent_ambiguity_flagged_and_accepted": false,
+   "reading_for_no": false,
+   "reading_for_yes": true,
+   "unanimous_ambiguous": false
+  },
+  {
+   "expect_outcome": null,
+   "expect_why": "patent-ambiguity limit: the compiler flagged this term at review and the non-drafter accepted it anyway, so contra proferentem is waived; falls back to ordinary burden of proof",
+   "is_library_clause": false,
+   "maker_side": "yes",
+   "name": "patent_ambiguity_limit_returns_none",
+   "patent_ambiguity_flagged_and_accepted": true,
+   "reading_for_no": false,
+   "reading_for_yes": true,
+   "unanimous_ambiguous": true
+  }
+ ]
+}

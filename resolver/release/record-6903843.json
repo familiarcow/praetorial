@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "6903843d2751d057b662ed2b8402c86a6fa3fcc3",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "79d0142c630fbb06928fc3f40b38d4452918885e77d6a258a4143622b9ae93b0",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "79d0142c630fbb06928fc3f40b38d4452918885e77d6a258a4143622b9ae93b0"},
+    {"route": "docker-run-2", "sha256": "79d0142c630fbb06928fc3f40b38d4452918885e77d6a258a4143622b9ae93b0"},
+    {"route": "fresh-container", "sha256": "79d0142c630fbb06928fc3f40b38d4452918885e77d6a258a4143622b9ae93b0"}
+  ],
+  "notes": {
+    "item": "JM1 (D-JUDGE6): judge models pinned by the resolver in real-http builds; built from GREEN commit 6903843; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; three routes built concurrently; the fresh-container (cp) build hit the known transient build-script failure under emulation and was re-run alone"
+  }
+}

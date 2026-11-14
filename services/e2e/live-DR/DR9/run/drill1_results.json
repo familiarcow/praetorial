@@ -1,0 +1,41 @@
+{
+  "txs": [],
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "checks": {
+    "taken_before_pause": true,
+    "paused_view": true,
+    "ui_banner_paused_text": "New bets are paused. You can't make or take a bet right now; bets that are already live carry on as normal.",
+    "open_refused": {
+      "count": [
+        44,
+        44
+      ],
+      "maker": [
+        "4174418661",
+        "4174418661"
+      ],
+      "esc": [
+        "80542374",
+        "80542374"
+      ],
+      "ok": true
+    },
+    "settles_while_paused": {
+      "status": "Settled",
+      "taker_delta": "19000000",
+      "taker_expected": "19000000",
+      "fee_delta": "1145144",
+      "fee_expected": "1145144",
+      "ok": true
+    },
+    "unpaused_view": true
+  },
+  "bet_id": 44,
+  "window": {
+    "pausedAt": "2026-11-10T22:18:04.692Z",
+    "unpausedAt": "2026-11-10T22:18:31.201Z",
+    "seconds": 26.509
+  },
+  "window_problems": [],
+  "verdict": "PASS"
+}

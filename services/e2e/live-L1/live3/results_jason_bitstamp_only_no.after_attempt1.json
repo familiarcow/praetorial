@@ -1,0 +1,119 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "FP8C5hEAGg1SHvt41ddoGGThxNVsjBup9MUXE3ncVxDC",
+      "url": "https://testnet.nearblocks.io/txns/FP8C5hEAGg1SHvt41ddoGGThxNVsjBup9MUXE3ncVxDC",
+      "spec_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "checked_at": "1794083846079832064",
+      "attest_pubkey": "b92575a2949567138b8b6359ceafb79dbc582fa3fa8c4f99a22793bd5c583cf1",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "u2enUkwa5oNgTKq2g3CeeZpZMFwhibMoBcLbXGa4h9r",
+      "url": "https://testnet.nearblocks.io/txns/u2enUkwa5oNgTKq2g3CeeZpZMFwhibMoBcLbXGa4h9r",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "DM1AethtaLbwTcdSd2J5uunbk3Jsgo5nAQkjF9FBUwTD",
+      "url": "https://testnet.nearblocks.io/txns/DM1AethtaLbwTcdSd2J5uunbk3Jsgo5nAQkjF9FBUwTD",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "D9j4FEhSK25x6XBgP95VhkG95CM2C6a2FWZoJmUGR4mt",
+      "url": "https://testnet.nearblocks.io/txns/D9j4FEhSK25x6XBgP95VhkG95CM2C6a2FWZoJmUGR4mt"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "Dn1vFFEkc2wB2QKq8qKbscNS9fnodHadon9FpJizHXh7",
+      "url": "https://testnet.nearblocks.io/txns/Dn1vFFEkc2wB2QKq8qKbscNS9fnodHadon9FpJizHXh7"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "G3gVTGucNwKbTBBfp4LTDd5FrFF5FjMe8uNv16aoNSMw",
+      "url": "https://testnet.nearblocks.io/txns/G3gVTGucNwKbTBBfp4LTDd5FrFF5FjMe8uNv16aoNSMw",
+      "status": "Success",
+      "keeper_credit_before": "150000000000000000000000"
+    }
+  ],
+  "terms_sha256": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+  "bet_id": 1,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 1,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "models_snapshot_hash": "itemL1b-jason_bitstamp_only_no",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794084005741000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796675855741000000,
+      "consent_party_controlled": false
+    },
+    "status": "Taken",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794083857792114700,
+    "taken_at": 1794083862103334100,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": "null",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": null
+  },
+  "keeper_credit_after": "129937500000000000000000"
+}

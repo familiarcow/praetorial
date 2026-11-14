@@ -1,0 +1,37 @@
+{
+  "txs": [
+    {
+      "step": "setup: fund fresh user 0.2 NEAR",
+      "hash": "9T9m6aovCocPDZRHKXxNppNxAMKbzFRWbfZmMwaoqTiw",
+      "url": "https://testnet.nearblocks.io/txns/9T9m6aovCocPDZRHKXxNppNxAMKbzFRWbfZmMwaoqTiw"
+    },
+    {
+      "step": "setup: storage_deposit(intents) on wrap.testnet (direct, dev account)",
+      "hash": "Bb8cYPcJVMxLFF8vNmNDTUKaUAszEtgs72V9z9a6C7pR",
+      "url": "https://testnet.nearblocks.io/txns/Bb8cYPcJVMxLFF8vNmNDTUKaUAszEtgs72V9z9a6C7pR"
+    },
+    {
+      "step": "1 relayed near_deposit 0.1 NEAR on wrap.testnet",
+      "hash": "A8Fk9gFxNNqosha8NgMd6nguKPUwVP3KfWvwP7BU6iRr",
+      "url": "https://testnet.nearblocks.io/txns/A8Fk9gFxNNqosha8NgMd6nguKPUwVP3KfWvwP7BU6iRr"
+    },
+    {
+      "step": "2 relayed ft_transfer_call wrap.testnet -> intents (msg json)",
+      "error": "NEAR RPC error (send_tx): {\"name\":\"HANDLER_ERROR\",\"cause\":{\"info\":{},\"name\":\"INVALID_TRANSACTION\"},\"code\":-32000,\"message\":\"Server error\",\"data\":{\"TxExecutionError\":{\"InvalidTxError\":{\"InvalidNonce\":{\"ak_nonce\":276863986000001,\"tx_nonce\":276863986000001}}}}}"
+    }
+  ],
+  "user": "641553869ebabfe9b2b149658422d80f6d0c390d33860b79beec906f0bdf2a40",
+  "msgFormat": "json",
+  "network": "testnet",
+  "intentsStorageOnWnearBefore": null,
+  "userStorageOnWnearBefore": null,
+  "mtBalanceBefore": "0",
+  "nearDepositOutcome": {
+    "failures": [],
+    "logs": [
+      "Deposit 98750000000000000000000 NEAR to 641553869ebabfe9b2b149658422d80f6d0c390d33860b79beec906f0bdf2a40"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterWrap": "98750000000000000000000"
+}

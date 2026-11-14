@@ -1,0 +1,20 @@
+# HK1: paths left out of the public export (git pathspec globs, one per line; '#' = comment).
+# Why each is excluded is in spikes/hk1/GATE10.md ("Export exclusions"). Nothing here is a secret
+# (GATE-10 found none); these are internal working notes, agent prompts and raw local run logs.
+
+# Work queue / lock files (gitignored, listed for safety)
+.queue/**
+
+# Agent task prompts and agent run logs: internal working notes, private note paths
+spikes/*/PROMPT*.md
+spikes/**/agent*.log
+
+# This release-prep folder itself (internal scan notes and familiarcow's to-do list)
+spikes/hk1/**
+
+# Files that name private note-vault paths (GATE-10 vault-path hits outside PROMPT.md)
+spikes/premain1/REDTEAM-STATUS.md
+services/privy-e2e/README.md
+
+# NOT excluded on purpose: services/e2e/**/*.log and resolver/live-run/*.log. They hold operator paths, but tests and the
+# verifier read them as evidence (HK1 Docker run: 59 services tests + the verifier fixture failed without them).

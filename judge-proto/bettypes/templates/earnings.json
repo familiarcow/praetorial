@@ -1,0 +1,51 @@
+{
+  "_comment": "TEMPLATE (not a prototype): earnings figure from an SEC filing (EDGAR XBRL)",
+  "claim": "Apple Inc. (CIK 0000320193) reports fiscal-year 2026 total net sales of at least 450 billion USD in its Form 10-K filed on or before 2026-11-30T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show an Apple Inc. Form 10-K for fiscal year 2026, filed on or before 2026-11-30T00:00:00Z, with RevenueFromContractWithCustomerExcludingAssessedTax of at least 450000000000 USD?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "BEFORE_INCLUSIVE_V1",
+    "NUMERIC_EXACT_V1",
+    "REVISION_WINDOW_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "The figure is the XBRL fact in the 10-K itself (form=10-K, fp=FY, fy=2026), filed date from EDGAR; press-release or analyst figures are never used.",
+    "A later 10-K/A amendment counts only if filed within 24 hours of the original (REVISION_WINDOW_V1).",
+    "SEC fair-access policy requires a descriptive User-Agent; the resolver must send one or it will be blocked (COULDNT_CHECK).",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-10-01T00:00:00Z",
+    "window_end": "2026-11-30T00:00:00Z",
+    "evidence_cutoff": "2026-12-07T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "SEC EDGAR data.sec.gov"
+    },
+    {
+      "id": "S1",
+      "publisher": "Apple Investor Relations 10-K page"
+    }
+  ],
+  "source_classes": {
+    "SEC EDGAR data.sec.gov": "primary",
+    "Apple Investor Relations 10-K page": "primary"
+  },
+  "window_close": "2026-12-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "earnings",
+    "fetch": "GET https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json"
+  }
+}

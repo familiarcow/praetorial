@@ -1,0 +1,53 @@
+target/
+**/target/
+cache/
+*.env
+.env*
+nearai_spend.jsonl
+__pycache__/
+*.pyc
+chaos/results/
+.queue/
+# Relayer's persistent guard store (nonces/rate-limit/budget) -- real
+# per-deployment state, never fixture data, never committed.
+services/relayer/data/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# vitest/vite caches
+node_modules/
+node_modules/
+
+# tsc build output (DR-DIST-STALE-1) -- never tracked
+services/dist/
+
+# sed -i -e backups (17e2)
+*.rs-e
+*.ts-e
+*.md-e
+*.json-e
+*.sh-e
+contracts/target-*/
+
+# TESTPY1: test.sh python resolver (.venv created by test.sh)
+.venv
+
+# HK1: public-repo hygiene. Real env files never committed; only *.env.example (names, no values).
+.env.*
+!.env.example
+!**/.env.example
+.dev.vars*
+.wrangler/
+**/.wrangler/
+# logs: package-manager and test-runner output only (evidence logs elsewhere are committed on purpose)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+test-results/
+playwright-report/
+# HK1 fresh-clone runs (spikes/hk1/FRESH-CLONE.md)
+spikes/hk1/fresh/
+# EXPORT1: public export output (scripts/export-public.sh)
+spikes/export1/out/

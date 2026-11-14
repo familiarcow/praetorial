@@ -1,0 +1,3236 @@
+{
+ "cases": [
+  {
+   "league": "NHL",
+   "date": "2026-11-12",
+   "espn_file": "apps/web/tests/fixtures/sports/espn_nhl_20261112.json",
+   "league_file": "apps/web/tests/fixtures/sports/nhl_score_20261112.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401891808",
+     "game_number": null,
+     "home_id": "55",
+     "away_id": "12",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020309",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "55",
+        "name": "Seattle Kraken"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401891808",
+     "game_number": null,
+     "home_id": "55",
+     "away_id": "12",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020309",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "12",
+        "name": "Carolina Hurricanes"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892696",
+     "game_number": null,
+     "home_id": "6",
+     "away_id": "8",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020299",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "6",
+        "name": "Boston Bruins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892696",
+     "game_number": null,
+     "home_id": "6",
+     "away_id": "8",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020299",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "8",
+        "name": "Montreal Canadiens"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892697",
+     "game_number": null,
+     "home_id": "10",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020300",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "10",
+        "name": "Toronto Maple Leafs"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892697",
+     "game_number": null,
+     "home_id": "10",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020300",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "30",
+        "name": "Minnesota Wild"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892698",
+     "game_number": null,
+     "home_id": "9",
+     "away_id": "21",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020301",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "9",
+        "name": "Ottawa Senators"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892698",
+     "game_number": null,
+     "home_id": "9",
+     "away_id": "21",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020301",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "21",
+        "name": "Colorado Avalanche"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892700",
+     "game_number": null,
+     "home_id": "1",
+     "away_id": "15",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020303",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "1",
+        "name": "New Jersey Devils"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892700",
+     "game_number": null,
+     "home_id": "1",
+     "away_id": "15",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020303",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "15",
+        "name": "Washington Capitals"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892701",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "14",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020304",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "29",
+        "name": "Columbus Blue Jackets"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892701",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "14",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020304",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "14",
+        "name": "Tampa Bay Lightning"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892699",
+     "game_number": null,
+     "home_id": "13",
+     "away_id": "17",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020302",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "13",
+        "name": "Florida Panthers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892699",
+     "game_number": null,
+     "home_id": "13",
+     "away_id": "17",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020302",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "17",
+        "name": "Detroit Red Wings"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892702",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "7",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020305",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "16",
+        "name": "Chicago Blackhawks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892702",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "7",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020305",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "7",
+        "name": "Buffalo Sabres"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892703",
+     "game_number": null,
+     "home_id": "25",
+     "away_id": "52",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020306",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "25",
+        "name": "Dallas Stars"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892703",
+     "game_number": null,
+     "home_id": "25",
+     "away_id": "52",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020306",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "52",
+        "name": "Winnipeg Jets"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892704",
+     "game_number": null,
+     "home_id": "68",
+     "away_id": "19",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020307",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "68",
+        "name": "Utah Mammoth"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892704",
+     "game_number": null,
+     "home_id": "68",
+     "away_id": "19",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020307",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "19",
+        "name": "St. Louis Blues"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892705",
+     "game_number": null,
+     "home_id": "26",
+     "away_id": "2",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020308",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "26",
+        "name": "Los Angeles Kings"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892705",
+     "game_number": null,
+     "home_id": "26",
+     "away_id": "2",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020308",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "2",
+        "name": "New York Islanders"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "NHL",
+   "date": "2026-11-13",
+   "espn_file": "apps/web/tests/fixtures/sports/espn_nhl_20261113.json",
+   "league_file": "apps/web/tests/fixtures/sports/nhl_score_20261113.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401892706",
+     "game_number": null,
+     "home_id": "23",
+     "away_id": "3",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020310",
+       "scheduled_date": "2026-11-13",
+       "pick": {
+        "team_id": "23",
+        "name": "Vancouver Canucks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892706",
+     "game_number": null,
+     "home_id": "23",
+     "away_id": "3",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020310",
+       "scheduled_date": "2026-11-13",
+       "pick": {
+        "team_id": "3",
+        "name": "New York Rangers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892707",
+     "game_number": null,
+     "home_id": "54",
+     "away_id": "18",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020311",
+       "scheduled_date": "2026-11-13",
+       "pick": {
+        "team_id": "54",
+        "name": "Vegas Golden Knights"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892707",
+     "game_number": null,
+     "home_id": "54",
+     "away_id": "18",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020311",
+       "scheduled_date": "2026-11-13",
+       "pick": {
+        "team_id": "18",
+        "name": "Nashville Predators"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "NHL",
+   "date": "2026-11-14",
+   "espn_file": "apps/web/tests/fixtures/sports/espn_nhl_20261114.json",
+   "league_file": "apps/web/tests/fixtures/sports/nhl_score_20261114.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401891809",
+     "game_number": null,
+     "home_id": "12",
+     "away_id": "55",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020321",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "12",
+        "name": "Carolina Hurricanes"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401891809",
+     "game_number": null,
+     "home_id": "12",
+     "away_id": "55",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020321",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "55",
+        "name": "Seattle Kraken"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892708",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "52",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020312",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "16",
+        "name": "Chicago Blackhawks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892708",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "52",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020312",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "52",
+        "name": "Winnipeg Jets"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892709",
+     "game_number": null,
+     "home_id": "6",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020313",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "6",
+        "name": "Boston Bruins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892709",
+     "game_number": null,
+     "home_id": "6",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020313",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "30",
+        "name": "Minnesota Wild"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892710",
+     "game_number": null,
+     "home_id": "10",
+     "away_id": "22",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020314",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "10",
+        "name": "Toronto Maple Leafs"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892710",
+     "game_number": null,
+     "home_id": "10",
+     "away_id": "22",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020314",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "22",
+        "name": "Edmonton Oilers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892711",
+     "game_number": null,
+     "home_id": "8",
+     "away_id": "21",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020315",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "8",
+        "name": "Montreal Canadiens"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892711",
+     "game_number": null,
+     "home_id": "8",
+     "away_id": "21",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020315",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "21",
+        "name": "Colorado Avalanche"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892712",
+     "game_number": null,
+     "home_id": "14",
+     "away_id": "17",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020316",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "14",
+        "name": "Tampa Bay Lightning"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892712",
+     "game_number": null,
+     "home_id": "14",
+     "away_id": "17",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020316",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "17",
+        "name": "Detroit Red Wings"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892713",
+     "game_number": null,
+     "home_id": "5",
+     "away_id": "9",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020317",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "5",
+        "name": "Pittsburgh Penguins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892713",
+     "game_number": null,
+     "home_id": "5",
+     "away_id": "9",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020317",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "9",
+        "name": "Ottawa Senators"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892714",
+     "game_number": null,
+     "home_id": "15",
+     "away_id": "1",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020318",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "15",
+        "name": "Washington Capitals"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892714",
+     "game_number": null,
+     "home_id": "15",
+     "away_id": "1",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020318",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "1",
+        "name": "New Jersey Devils"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892715",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "4",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020319",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "29",
+        "name": "Columbus Blue Jackets"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892715",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "4",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020319",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "4",
+        "name": "Philadelphia Flyers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892716",
+     "game_number": null,
+     "home_id": "19",
+     "away_id": "13",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020320",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "19",
+        "name": "St. Louis Blues"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892716",
+     "game_number": null,
+     "home_id": "19",
+     "away_id": "13",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020320",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "13",
+        "name": "Florida Panthers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892717",
+     "game_number": null,
+     "home_id": "25",
+     "away_id": "7",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020322",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "25",
+        "name": "Dallas Stars"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892717",
+     "game_number": null,
+     "home_id": "25",
+     "away_id": "7",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020322",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "7",
+        "name": "Buffalo Sabres"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892718",
+     "game_number": null,
+     "home_id": "68",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020323",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "68",
+        "name": "Utah Mammoth"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892718",
+     "game_number": null,
+     "home_id": "68",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020323",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "28",
+        "name": "San Jose Sharks"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892719",
+     "game_number": null,
+     "home_id": "24",
+     "away_id": "2",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020324",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "24",
+        "name": "Anaheim Ducks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892719",
+     "game_number": null,
+     "home_id": "24",
+     "away_id": "2",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020324",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "2",
+        "name": "New York Islanders"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892720",
+     "game_number": null,
+     "home_id": "26",
+     "away_id": "20",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020325",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "26",
+        "name": "Los Angeles Kings"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892720",
+     "game_number": null,
+     "home_id": "26",
+     "away_id": "20",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020325",
+       "scheduled_date": "2026-11-14",
+       "pick": {
+        "team_id": "20",
+        "name": "Calgary Flames"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "NBA",
+   "date": "2026-11-12",
+   "espn_file": "apps/web/tests/fixtures/sports/espn_nba_20261112.json",
+   "league_file": null,
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401909976",
+     "game_number": null,
+     "home_id": "20",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909976",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "20",
+        "name": "Philadelphia 76ers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401909976",
+     "game_number": null,
+     "home_id": "20",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909976",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "28",
+        "name": "Toronto Raptors"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401909977",
+     "game_number": null,
+     "home_id": "27",
+     "away_id": "8",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909977",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "27",
+        "name": "Washington Wizards"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401909977",
+     "game_number": null,
+     "home_id": "27",
+     "away_id": "8",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909977",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "8",
+        "name": "Detroit Pistons"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401909978",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "6",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909978",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "16",
+        "name": "Minnesota Timberwolves"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401909978",
+     "game_number": null,
+     "home_id": "16",
+     "away_id": "6",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909978",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "6",
+        "name": "Dallas Mavericks"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401909979",
+     "game_number": null,
+     "home_id": "21",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909979",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "21",
+        "name": "Phoenix Suns"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401909979",
+     "game_number": null,
+     "home_id": "21",
+     "away_id": "30",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NBA",
+       "event_id": "401909979",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "30",
+        "name": "Charlotte Hornets"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "NFL",
+   "date": "2026-11-12",
+   "espn_file": "apps/web/tests/fixtures/sports/espn_nfl_20261112.json",
+   "league_file": null,
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401873052",
+     "game_number": null,
+     "home_id": "19",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NFL",
+       "event_id": "401873052",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "19",
+        "name": "New York Giants"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401873052",
+     "game_number": null,
+     "home_id": "19",
+     "away_id": "28",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NFL",
+       "event_id": "401873052",
+       "scheduled_date": "2026-11-12",
+       "pick": {
+        "team_id": "28",
+        "name": "Washington Commanders"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "NHL",
+   "date": "2026-11-05",
+   "espn_file": "resolver/core/tests/fixtures/sports/espn_nhl_scoreboard_20261105.json",
+   "league_file": "resolver/core/tests/fixtures/sports/nhl_score_20261105.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401892648",
+     "game_number": null,
+     "home_id": "8",
+     "away_id": "68",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020251",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "8",
+        "name": "Montreal Canadiens"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892648",
+     "game_number": null,
+     "home_id": "8",
+     "away_id": "68",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020251",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "68",
+        "name": "Utah Mammoth"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892649",
+     "game_number": null,
+     "home_id": "17",
+     "away_id": "54",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020252",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "17",
+        "name": "Detroit Red Wings"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892649",
+     "game_number": null,
+     "home_id": "17",
+     "away_id": "54",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020252",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "54",
+        "name": "Vegas Golden Knights"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892650",
+     "game_number": null,
+     "home_id": "14",
+     "away_id": "16",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020253",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "14",
+        "name": "Tampa Bay Lightning"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892650",
+     "game_number": null,
+     "home_id": "14",
+     "away_id": "16",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020253",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "16",
+        "name": "Chicago Blackhawks"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892651",
+     "game_number": null,
+     "home_id": "1",
+     "away_id": "19",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020254",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "1",
+        "name": "New Jersey Devils"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892651",
+     "game_number": null,
+     "home_id": "1",
+     "away_id": "19",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020254",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "19",
+        "name": "St. Louis Blues"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892652",
+     "game_number": null,
+     "home_id": "2",
+     "away_id": "12",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020255",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "2",
+        "name": "New York Islanders"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892652",
+     "game_number": null,
+     "home_id": "2",
+     "away_id": "12",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020255",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "12",
+        "name": "Carolina Hurricanes"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892653",
+     "game_number": null,
+     "home_id": "3",
+     "away_id": "4",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020256",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "3",
+        "name": "New York Rangers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892653",
+     "game_number": null,
+     "home_id": "3",
+     "away_id": "4",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020256",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "4",
+        "name": "Philadelphia Flyers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892654",
+     "game_number": null,
+     "home_id": "5",
+     "away_id": "6",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020257",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "5",
+        "name": "Pittsburgh Penguins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892654",
+     "game_number": null,
+     "home_id": "5",
+     "away_id": "6",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020257",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "6",
+        "name": "Boston Bruins"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892655",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "25",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020258",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "29",
+        "name": "Columbus Blue Jackets"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892655",
+     "game_number": null,
+     "home_id": "29",
+     "away_id": "25",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020258",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "25",
+        "name": "Dallas Stars"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892656",
+     "game_number": null,
+     "home_id": "52",
+     "away_id": "23",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020259",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "52",
+        "name": "Winnipeg Jets"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892656",
+     "game_number": null,
+     "home_id": "52",
+     "away_id": "23",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020259",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "23",
+        "name": "Vancouver Canucks"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892657",
+     "game_number": null,
+     "home_id": "22",
+     "away_id": "24",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020260",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "22",
+        "name": "Edmonton Oilers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892657",
+     "game_number": null,
+     "home_id": "22",
+     "away_id": "24",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020260",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "24",
+        "name": "Anaheim Ducks"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401892658",
+     "game_number": null,
+     "home_id": "21",
+     "away_id": "18",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020261",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "21",
+        "name": "Colorado Avalanche"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401892658",
+     "game_number": null,
+     "home_id": "21",
+     "away_id": "18",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "NHL",
+       "event_id": "2026020261",
+       "scheduled_date": "2026-11-05",
+       "pick": {
+        "team_id": "18",
+        "name": "Nashville Predators"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "MLB",
+   "date": "2026-04-04",
+   "espn_file": "resolver/core/tests/fixtures/sports/espn_mlb_scoreboard_20260404.json",
+   "league_file": "resolver/core/tests/fixtures/sports/mlb_schedule_20260404.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401814802",
+     "game_number": null,
+     "home_id": "116",
+     "away_id": "138",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824295",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "116",
+        "name": "Detroit Tigers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814802",
+     "game_number": null,
+     "home_id": "116",
+     "away_id": "138",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824295",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "138",
+        "name": "St. Louis Cardinals"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814806",
+     "game_number": null,
+     "home_id": "145",
+     "away_id": "141",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824622",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "145",
+        "name": "Chicago White Sox"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814806",
+     "game_number": null,
+     "home_id": "145",
+     "away_id": "141",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824622",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "141",
+        "name": "Toronto Blue Jays"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814804",
+     "game_number": 1,
+     "home_id": "118",
+     "away_id": "158",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824132",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "118",
+        "name": "Kansas City Royals"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814804",
+     "game_number": 1,
+     "home_id": "118",
+     "away_id": "158",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824132",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "158",
+        "name": "Milwaukee Brewers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814799",
+     "game_number": null,
+     "home_id": "120",
+     "away_id": "119",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822757",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "120",
+        "name": "Washington Nationals"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814799",
+     "game_number": null,
+     "home_id": "120",
+     "away_id": "119",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822757",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "119",
+        "name": "Los Angeles Dodgers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814809",
+     "game_number": null,
+     "home_id": "133",
+     "away_id": "117",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825027",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "133",
+        "name": "Athletics"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814809",
+     "game_number": null,
+     "home_id": "133",
+     "away_id": "117",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825027",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "117",
+        "name": "Houston Astros"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814797",
+     "game_number": null,
+     "home_id": "134",
+     "away_id": "110",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823404",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "134",
+        "name": "Pittsburgh Pirates"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814797",
+     "game_number": null,
+     "home_id": "134",
+     "away_id": "110",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823404",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "110",
+        "name": "Baltimore Orioles"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814801",
+     "game_number": null,
+     "home_id": "111",
+     "away_id": "135",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824782",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "111",
+        "name": "Boston Red Sox"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814801",
+     "game_number": null,
+     "home_id": "111",
+     "away_id": "135",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824782",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "135",
+        "name": "San Diego Padres"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814803",
+     "game_number": null,
+     "home_id": "140",
+     "away_id": "113",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822920",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "140",
+        "name": "Texas Rangers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814803",
+     "game_number": null,
+     "home_id": "140",
+     "away_id": "113",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822920",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "113",
+        "name": "Cincinnati Reds"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814800",
+     "game_number": null,
+     "home_id": "147",
+     "away_id": "146",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823569",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "147",
+        "name": "New York Yankees"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814800",
+     "game_number": null,
+     "home_id": "147",
+     "away_id": "146",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823569",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "146",
+        "name": "Miami Marlins"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814805",
+     "game_number": null,
+     "home_id": "142",
+     "away_id": "139",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823730",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "142",
+        "name": "Minnesota Twins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814805",
+     "game_number": null,
+     "home_id": "142",
+     "away_id": "139",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823730",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "139",
+        "name": "Tampa Bay Rays"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401867376",
+     "game_number": 2,
+     "home_id": "118",
+     "away_id": "158",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824134",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "118",
+        "name": "Kansas City Royals"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401867376",
+     "game_number": 2,
+     "home_id": "118",
+     "away_id": "158",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824134",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "158",
+        "name": "Milwaukee Brewers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814808",
+     "game_number": null,
+     "home_id": "109",
+     "away_id": "144",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825104",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "109",
+        "name": "Arizona Diamondbacks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814808",
+     "game_number": null,
+     "home_id": "109",
+     "away_id": "144",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825104",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "144",
+        "name": "Atlanta Braves"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814807",
+     "game_number": null,
+     "home_id": "115",
+     "away_id": "143",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824378",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "115",
+        "name": "Colorado Rockies"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814807",
+     "game_number": null,
+     "home_id": "115",
+     "away_id": "143",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824378",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "143",
+        "name": "Philadelphia Phillies"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814810",
+     "game_number": null,
+     "home_id": "137",
+     "away_id": "121",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823239",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "137",
+        "name": "San Francisco Giants"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814810",
+     "game_number": null,
+     "home_id": "137",
+     "away_id": "121",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823239",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "121",
+        "name": "New York Mets"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814811",
+     "game_number": null,
+     "home_id": "108",
+     "away_id": "136",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824054",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "108",
+        "name": "Los Angeles Angels"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814811",
+     "game_number": null,
+     "home_id": "108",
+     "away_id": "136",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824054",
+       "scheduled_date": "2026-04-04",
+       "pick": {
+        "team_id": "136",
+        "name": "Seattle Mariners"
+       }
+      }
+     }
+    }
+   ]
+  },
+  {
+   "league": "MLB",
+   "date": "2026-04-03",
+   "espn_file": "resolver/core/tests/fixtures/sports/espn_mlb_scoreboard_20260403.json",
+   "league_file": "resolver/core/tests/fixtures/sports/mlb_schedule_20260403.json",
+   "sheets": [
+    {
+     "side": "home",
+     "espn_id": "401814785",
+     "game_number": null,
+     "home_id": "120",
+     "away_id": "119",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822758",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "120",
+        "name": "Washington Nationals"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814785",
+     "game_number": null,
+     "home_id": "120",
+     "away_id": "119",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822758",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "119",
+        "name": "Los Angeles Dodgers"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814788",
+     "game_number": null,
+     "home_id": "116",
+     "away_id": "138",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824299",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "116",
+        "name": "Detroit Tigers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814788",
+     "game_number": null,
+     "home_id": "116",
+     "away_id": "138",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824299",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "138",
+        "name": "St. Louis Cardinals"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814786",
+     "game_number": null,
+     "home_id": "147",
+     "away_id": "146",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823568",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "147",
+        "name": "New York Yankees"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814786",
+     "game_number": null,
+     "home_id": "147",
+     "away_id": "146",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823568",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "146",
+        "name": "Miami Marlins"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814787",
+     "game_number": null,
+     "home_id": "111",
+     "away_id": "135",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824786",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "111",
+        "name": "Boston Red Sox"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814787",
+     "game_number": null,
+     "home_id": "111",
+     "away_id": "135",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824786",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "135",
+        "name": "San Diego Padres"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401867263",
+     "game_number": null,
+     "home_id": "145",
+     "away_id": "141",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824621",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "145",
+        "name": "Chicago White Sox"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401867263",
+     "game_number": null,
+     "home_id": "145",
+     "away_id": "141",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824621",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "141",
+        "name": "Toronto Blue Jays"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814789",
+     "game_number": null,
+     "home_id": "140",
+     "away_id": "113",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822919",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "140",
+        "name": "Texas Rangers"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814789",
+     "game_number": null,
+     "home_id": "140",
+     "away_id": "113",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "822919",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "113",
+        "name": "Cincinnati Reds"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814784",
+     "game_number": null,
+     "home_id": "114",
+     "away_id": "112",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824458",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "114",
+        "name": "Cleveland Guardians"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814784",
+     "game_number": null,
+     "home_id": "114",
+     "away_id": "112",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824458",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "112",
+        "name": "Chicago Cubs"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814791",
+     "game_number": null,
+     "home_id": "142",
+     "away_id": "139",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823732",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "142",
+        "name": "Minnesota Twins"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814791",
+     "game_number": null,
+     "home_id": "142",
+     "away_id": "139",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823732",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "139",
+        "name": "Tampa Bay Rays"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814792",
+     "game_number": null,
+     "home_id": "115",
+     "away_id": "143",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824377",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "115",
+        "name": "Colorado Rockies"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814792",
+     "game_number": null,
+     "home_id": "115",
+     "away_id": "143",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824377",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "143",
+        "name": "Philadelphia Phillies"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814783",
+     "game_number": null,
+     "home_id": "134",
+     "away_id": "110",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823406",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "134",
+        "name": "Pittsburgh Pirates"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814783",
+     "game_number": null,
+     "home_id": "134",
+     "away_id": "110",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823406",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "110",
+        "name": "Baltimore Orioles"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814796",
+     "game_number": null,
+     "home_id": "108",
+     "away_id": "136",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824056",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "108",
+        "name": "Los Angeles Angels"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814796",
+     "game_number": null,
+     "home_id": "108",
+     "away_id": "136",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "824056",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "136",
+        "name": "Seattle Mariners"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814794",
+     "game_number": null,
+     "home_id": "133",
+     "away_id": "117",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825026",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "133",
+        "name": "Athletics"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814794",
+     "game_number": null,
+     "home_id": "133",
+     "away_id": "117",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825026",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "117",
+        "name": "Houston Astros"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814793",
+     "game_number": null,
+     "home_id": "109",
+     "away_id": "144",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825103",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "109",
+        "name": "Arizona Diamondbacks"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814793",
+     "game_number": null,
+     "home_id": "109",
+     "away_id": "144",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "825103",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "144",
+        "name": "Atlanta Braves"
+       }
+      }
+     }
+    },
+    {
+     "side": "home",
+     "espn_id": "401814795",
+     "game_number": null,
+     "home_id": "137",
+     "away_id": "121",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823240",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "137",
+        "name": "San Francisco Giants"
+       }
+      }
+     }
+    },
+    {
+     "side": "away",
+     "espn_id": "401814795",
+     "game_number": null,
+     "home_id": "137",
+     "away_id": "121",
+     "sheet": {
+      "template": {
+       "id": "game_winner",
+       "version": 1
+      },
+      "fields": {
+       "league": "MLB",
+       "event_id": "823240",
+       "scheduled_date": "2026-04-03",
+       "pick": {
+        "team_id": "121",
+        "name": "New York Mets"
+       }
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

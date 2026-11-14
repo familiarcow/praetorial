@@ -1,0 +1,54 @@
+# SRCW1 sourcecheck Worker (D-SRCW1, D-HOST3). NO secrets in this file: the attest signer key is a Worker secret
+# (`wrangler secret put SOURCECHECK_ATTEST_PRIVATE_KEY`, see README.md). NO cron (the account's 5 are used).
+name = "praetorial-sourcecheck-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "LIMITER"
+class_name = "SourceCheckLimiterDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["SourceCheckLimiterDO"]
+
+[vars]
+NEAR_NETWORK_ID = "testnet"
+NEAR_RPC_URL = "https://test.rpc.fastnear.com"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+OUTLAYER_CONTRACT_ID = "outlayer.testnet"
+ATTEST_ACCOUNT_ID = "attest1.praetorial-dev-1101.testnet"
+# Comma-separated web origins allowed to call this Worker from a browser; any other Origin gets 403. Never "*".
+SOURCECHECK_ALLOWED_ORIGINS = "https://praetorial-web-testnet.familiarcow.workers.dev,http://localhost:3000,http://localhost:5173"
+# LIVE2: testnet per-IP cap 60/hour (live e2e runs need one check per open). Mainnet: 30/hour in [env.mainnet.vars] (SRCRL1c).
+SOURCECHECK_IP_PER_HOUR = "60"
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 pattern: [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+[env.mainnet]
+name = "praetorial-sourcecheck-mainnet"
+# DOM1: public host sourcecheck.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "sourcecheck.praetorial.com", custom_domain = true }]
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[env.mainnet.durable_objects.bindings]]
+name = "LIMITER"
+class_name = "SourceCheckLimiterDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["SourceCheckLimiterDO"]
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+OUTLAYER_CONTRACT_ID = "outlayer.near"
+ATTEST_ACCOUNT_ID = "attest.praetorial.near"
+SOURCECHECK_ALLOWED_ORIGINS = "https://praetorial.com,https://www.praetorial.com,https://praetorial-web-mainnet.familiarcow.workers.dev"  # DOM1: TODO-REMOVE the workers.dev origin (last entry) once the praetorial.com cutover is confirmed
+# SRCRL1c: mainnet per-IP cap 30/hour (unset would be the code default 10).
+SOURCECHECK_IP_PER_HOUR = "30"

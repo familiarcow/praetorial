@@ -1,0 +1,51 @@
+{
+  "txs": [
+    {
+      "step": "mint_maker",
+      "hash": "3rDtKxAuuNfvV1phAJLWw3ayVzrrVN82cui7jYUafbn1",
+      "url": "https://testnet.nearblocks.io/txns/3rDtKxAuuNfvV1phAJLWw3ayVzrrVN82cui7jYUafbn1",
+      "amount": "10072369"
+    },
+    {
+      "step": "mint_taker",
+      "hash": "Hdj7HpBHmq1XD3L1JCnLcmzJise3FQNZo1aDZGaGbNr4",
+      "url": "https://testnet.nearblocks.io/txns/Hdj7HpBHmq1XD3L1JCnLcmzJise3FQNZo1aDZGaGbNr4",
+      "amount": "10072369"
+    },
+    {
+      "step": "open_human_bet",
+      "hash": "BVYkgJtEth7GXz8KE459YgeK1nBVJYAFyA6gddD6zXcJ",
+      "url": "https://testnet.nearblocks.io/txns/BVYkgJtEth7GXz8KE459YgeK1nBVJYAFyA6gddD6zXcJ",
+      "amount": "10072369"
+    },
+    {
+      "step": "take_human_bet",
+      "hash": "c62D8kg73u7Mb8RshC5JcXNs7vqHEGVCzumfKqGUfyK",
+      "url": "https://testnet.nearblocks.io/txns/c62D8kg73u7Mb8RshC5JcXNs7vqHEGVCzumfKqGUfyK",
+      "amount": "10072369"
+    },
+    {
+      "step": "fund_keeper_1_near",
+      "hash": "AHRWJkjbdfiC1KLRKnSPkNrScZcwjcpCkGKiFWFB4KsB",
+      "url": "https://testnet.nearblocks.io/txns/AHRWJkjbdfiC1KLRKnSPkNrScZcwjcpCkGKiFWFB4KsB"
+    },
+    {
+      "step": "topup_keeper_credit_0.6_near",
+      "hash": "FWyrZzyEAGWkRDSCS6ZAEHnCfvkvZgxbGFNrUKGuhJ96",
+      "url": "https://testnet.nearblocks.io/txns/FWyrZzyEAGWkRDSCS6ZAEHnCfvkvZgxbGFNrUKGuhJ96"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "3qa7gDkBzUb1XKYXH8x5KTQAPx1VfaD3gjiDbdcQCsiC",
+      "url": "https://testnet.nearblocks.io/txns/3qa7gDkBzUb1XKYXH8x5KTQAPx1VfaD3gjiDbdcQCsiC"
+    }
+  ],
+  "resolver_keys": [
+    "daff356d5b2e7fa12c02fdd43e7a3f9c07ecca489203edcd6367c0a37615a3c4",
+    "2be89b6565161859779d64f39fca6ba1aa99c500bc7687731bc40374dc866cfc",
+    "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3"
+  ],
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "bet_id": 26,
+  "status_after_take": "Taken"
+}

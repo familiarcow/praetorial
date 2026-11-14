@@ -1,0 +1,33 @@
+{
+  "self_trigger_auth_call": {
+    "betId": 21,
+    "status": "Resolving",
+    "finalStatus": "Settled",
+    "authTx": "2184RZz1AByauSKqV4T7zWAT2Wj19CJRb2vzJ4UCxTig",
+    "pass": true
+  },
+  "refund_lands_in_intents": {
+    "betId": 21,
+    "balBefore": "0",
+    "balAfter": "1500000000000000000000",
+    "expectedDelta": "1500000000000000000000",
+    "actualDelta": "1500000000000000000000",
+    "pass": true
+  },
+  "doomed_auth_call_rejected": {
+    "betId": 22,
+    "rejected": true,
+    "errMsg": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"Smart contract panicked: attached deposit too low for OutLayer compute + input_data storage\"}}}}",
+    "statusUnchanged": true,
+    "pass": true
+  },
+  "keeper_direct_path": {
+    "betId": 23,
+    "status": "Resolving",
+    "finalStatus": "Settled",
+    "balBefore": "684489818514520800000000",
+    "balAfter": "706899901312657000000000",
+    "balanceRose": true,
+    "pass": true
+  }
+}

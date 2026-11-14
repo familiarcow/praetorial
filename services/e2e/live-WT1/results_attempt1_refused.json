@@ -1,0 +1,58 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "Fq6EGVQP9fcJiMDJ3uMNWQBQphP5AtzE1ZpaDW9xGsKx",
+      "url": "https://testnet.nearblocks.io/txns/Fq6EGVQP9fcJiMDJ3uMNWQBQphP5AtzE1ZpaDW9xGsKx",
+      "spec_hash": "c75176b7fc5138acc03878e5c49f6cb4c8bff719927a689f33f02dbc340edc2f",
+      "checked_at": "1794111499928612864",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker",
+      "hash": "4u6e7YPfDW3YaKbCCT7KycrfeMvTCCFwu9ZKdu2ScVAm",
+      "url": "https://testnet.nearblocks.io/txns/4u6e7YPfDW3YaKbCCT7KycrfeMvTCCFwu9ZKdu2ScVAm",
+      "amount": "1001706",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "9H6eA3WuQfJx3Vspd833fg8sbbEvx9Wvr2tfm8G6Eoz9",
+      "url": "https://testnet.nearblocks.io/txns/9H6eA3WuQfJx3Vspd833fg8sbbEvx9Wvr2tfm8G6Eoz9",
+      "amount": "1001706"
+    }
+  ],
+  "form": {
+    "t_utc": "2026-11-08T05:23",
+    "op": ">=",
+    "x_usd": "75900"
+  },
+  "sheet": {
+    "template": {
+      "id": "btc_close_at_t",
+      "version": 1
+    },
+    "fields": {
+      "t_utc": "2026-11-08T05:23:00Z",
+      "op": ">=",
+      "x_usd": 75900,
+      "open_utc": "2026-11-08T04:17:00Z"
+    }
+  },
+  "release": {
+    "network": "testnet",
+    "resolver_wasm_hash": "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50",
+    "models": [
+      "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "z-ai/glm-5.3-flash"
+    ],
+    "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2"
+  },
+  "resolver_keys": [
+    "f5572c373610f29b01673c95e2c8b806fd6c783e6384a789ec897ffb21db3b39",
+    "1ef96f5f220355140ba95536dc5c969b9d5b97e5364692cb9ed27f7aa3191ce8",
+    "4b9d937286061cf2ab685bc5c0bc54dde6d5d8ef8d8a01f36b9752718157aa50"
+  ],
+  "checkOpenPins": null,
+  "open_result": "NO OFFER CREATED (open refused/refunded)"
+}

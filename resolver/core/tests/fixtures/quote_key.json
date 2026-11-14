@@ -1,0 +1,276 @@
+{
+ "keys": [
+  {
+   "input": "The rate is 3.5 percent",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The rate is 35 percent",
+   "key": "therateis\u000135\u0001percent"
+  },
+  {
+   "input": "The low was -5 degrees",
+   "key": "thelowwas\u0001-5\u0001degrees"
+  },
+  {
+   "input": "The low was 5 degrees",
+   "key": "thelowwas\u00015\u0001degrees"
+  },
+  {
+   "input": "There were 1,000 votes",
+   "key": "therewere\u00011,000\u0001votes"
+  },
+  {
+   "input": "There were 1.000 votes",
+   "key": "therewere\u00011.000\u0001votes"
+  },
+  {
+   "input": "There were 1,000 votes",
+   "key": "therewere\u00011,000\u0001votes"
+  },
+  {
+   "input": "Kickoff is at 10:30 sharp",
+   "key": "kickoffisat\u000110:30\u0001sharp"
+  },
+  {
+   "input": "Kickoff is at 1030 sharp",
+   "key": "kickoffisat\u00011030\u0001sharp"
+  },
+  {
+   "input": "Change was +0.5 points",
+   "key": "changewas\u0001+0.5\u0001points"
+  },
+  {
+   "input": "Change was 05 points",
+   "key": "changewas\u000105\u0001points"
+  },
+  {
+   "input": "Change was +0.5 points",
+   "key": "changewas\u0001+0.5\u0001points"
+  },
+  {
+   "input": "Attendance: 60,06 people",
+   "key": "attendance\u000160,06\u0001people"
+  },
+  {
+   "input": "Attendance: 770.49 dollars",
+   "key": "attendance\u0001770.49\u0001dollars"
+  },
+  {
+   "input": "Total was 3 5 units",
+   "key": "totalwas\u00013\u0001\u00015\u0001units"
+  },
+  {
+   "input": "Final 25 -22 sets",
+   "key": "final\u000125\u0001\u0001-22\u0001sets"
+  },
+  {
+   "input": "The rate is 35 percent",
+   "key": "therateis\u000135\u0001percent"
+  },
+  {
+   "input": "The rate is 3.5 percent",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The low was 5 degrees",
+   "key": "thelowwas\u00015\u0001degrees"
+  },
+  {
+   "input": "The low was -5 degrees",
+   "key": "thelowwas\u0001-5\u0001degrees"
+  },
+  {
+   "input": "There were 1.000 votes",
+   "key": "therewere\u00011.000\u0001votes"
+  },
+  {
+   "input": "There were 1,000 votes",
+   "key": "therewere\u00011,000\u0001votes"
+  },
+  {
+   "input": "There were 1000 votes",
+   "key": "therewere\u00011000\u0001votes"
+  },
+  {
+   "input": "Kickoff is at 1030 sharp",
+   "key": "kickoffisat\u00011030\u0001sharp"
+  },
+  {
+   "input": "Kickoff is at 10:30 sharp",
+   "key": "kickoffisat\u000110:30\u0001sharp"
+  },
+  {
+   "input": "Change was 05 points",
+   "key": "changewas\u000105\u0001points"
+  },
+  {
+   "input": "Change was +0.5 points",
+   "key": "changewas\u0001+0.5\u0001points"
+  },
+  {
+   "input": "Change was 0.5 points",
+   "key": "changewas\u00010.5\u0001points"
+  },
+  {
+   "input": "Attendance: 60,065 people",
+   "key": "attendance\u000160,065\u0001people"
+  },
+  {
+   "input": "Attendance: 75,770.49 dollars",
+   "key": "attendance\u000175,770.49\u0001dollars"
+  },
+  {
+   "input": "Total was 35 units",
+   "key": "totalwas\u000135\u0001units"
+  },
+  {
+   "input": "Final 25 22 sets",
+   "key": "final\u000125\u0001\u000122\u0001sets"
+  },
+  {
+   "input": "THE RATE IS 3.5 PERCENT",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The rate   is\n3.5 percent!",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The low was -5 degrees",
+   "key": "thelowwas\u0001-5\u0001degrees"
+  },
+  {
+   "input": "There were 1,000 votes",
+   "key": "therewere\u00011,000\u0001votes"
+  },
+  {
+   "input": "Kickoff is at 10:30 AM",
+   "key": "kickoffisat\u000110:30\u0001am"
+  },
+  {
+   "input": "Change was +0.5 points",
+   "key": "changewas\u0001+0.5\u0001points"
+  },
+  {
+   "input": "Final: Chiefs 25-22 49ers",
+   "key": "finalchiefs\u000125\u0001\u000122\u0001\u000149\u0001ers"
+  },
+  {
+   "input": "Alcaraz won the final.[12]",
+   "key": "alcarazwonthefinal"
+  },
+  {
+   "input": "Tom & Jerry won 4 games",
+   "key": "tomjerrywon\u00014\u0001games"
+  },
+  {
+   "input": "\u201cHe won 4 games\u201d, said Ann",
+   "key": "hewon\u00014\u0001gamessaidann"
+  },
+  {
+   "input": "He won 4 games \u2014 easily",
+   "key": "hewon\u00014\u0001gameseasily"
+  },
+  {
+   "input": "Value was \u22125 units",
+   "key": "valuewas\u0001-5\u0001units"
+  },
+  {
+   "input": "the rate is 3.5 percent",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The rate is 3.5 percent.",
+   "key": "therateis\u00013.5\u0001percent"
+  },
+  {
+   "input": "The low was -5  degrees.",
+   "key": "thelowwas\u0001-5\u0001degrees"
+  },
+  {
+   "input": "There were 1,000 votes.",
+   "key": "therewere\u00011,000\u0001votes"
+  },
+  {
+   "input": "Kickoff is at 10:30 am",
+   "key": "kickoffisat\u000110:30\u0001am"
+  },
+  {
+   "input": "Change was +0.5 points",
+   "key": "changewas\u0001+0.5\u0001points"
+  },
+  {
+   "input": "Final Chiefs 25 22 49ers",
+   "key": "finalchiefs\u000125\u0001\u000122\u0001\u000149\u0001ers"
+  },
+  {
+   "input": "Alcaraz won the final",
+   "key": "alcarazwonthefinal"
+  },
+  {
+   "input": "Tom &amp; Jerry won 4 games",
+   "key": "tomjerrywon\u00014\u0001games"
+  },
+  {
+   "input": "\"He won 4 games\" said Ann",
+   "key": "hewon\u00014\u0001gamessaidann"
+  },
+  {
+   "input": "He won 4 games easily",
+   "key": "hewon\u00014\u0001gameseasily"
+  },
+  {
+   "input": "Value was -5 units",
+   "key": "valuewas\u0001-5\u0001units"
+  },
+  {
+   "input": "",
+   "key": ""
+  },
+  {
+   "input": "   ",
+   "key": ""
+  },
+  {
+   "input": "!!!",
+   "key": ""
+  },
+  {
+   "input": "x",
+   "key": "x"
+  },
+  {
+   "input": "10:30:15",
+   "key": "\u000110:30:15\u0001"
+  },
+  {
+   "input": "v2.0.1",
+   "key": "v\u00012.0.1\u0001"
+  },
+  {
+   "input": "a-5",
+   "key": "a\u00015\u0001"
+  },
+  {
+   "input": "(-5)",
+   "key": "\u0001-5\u0001"
+  },
+  {
+   "input": "$-5.50",
+   "key": "\u0001-5.50\u0001"
+  },
+  {
+   "input": "1,000,000.25",
+   "key": "\u00011,000,000.25\u0001"
+  },
+  {
+   "input": "\u00e9t\u00e9 3,5",
+   "key": "\u00e9t\u00e9\u00013,5\u0001"
+  },
+  {
+   "input": "A\u200bB 7",
+   "key": "ab\u00017\u0001"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "38032c93231810fea0733f2b4ec60e456dfc9d4f",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "b215a995c833ee3e102f12579f037ef914b4a878e1bec172ee11921cded2010d",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "b215a995c833ee3e102f12579f037ef914b4a878e1bec172ee11921cded2010d"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "b215a995c833ee3e102f12579f037ef914b4a878e1bec172ee11921cded2010d"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "b215a995c833ee3e102f12579f037ef914b4a878e1bec172ee11921cded2010d"
+    }
+  ],
+  "notes": {
+    "item": "17c2 BTC readers (D-TPL1/D-TPL1b/D-VENUE2); built from the branch commit (resolver tree identical to the merge); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical"
+  }
+}

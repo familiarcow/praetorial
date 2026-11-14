@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-13T05:51:12+00:00",
+  "rpc": "https://test.rpc.fastnear.com",
+  "block_height": 277469624,
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "bet_id": 33,
+  "status": "Proposed",
+  "outcome": "YES",
+  "proposed_at": "2026-11-13T05:16:32.763029+00:00",
+  "runs_used": 3,
+  "all_results": [
+    {
+      "run_no": 3,
+      "outcome": "YES"
+    }
+  ],
+  "bonds": 0,
+  "challenged_by": null,
+  "judge_backend": "near-ai",
+  "resolution_notes": [
+    "source fetched: S_NWS (product 5d7bb96a-c77e-4b36-aa1c-770cb0da7ce3)",
+    "source fetched: S_IEM",
+    "copies: NWS CLI Val(63), IEM Val(63)",
+    "NWS CLI maximum and IEM high agree: 63 F; 63 >= 61",
+    "17c5 audit agrees with the code outcome YES",
+    "D-BUDGET1: calls_ms=[] rerun=false"
+  ]
+}

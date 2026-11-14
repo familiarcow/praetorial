@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "2153f1cfcc16bca5c172ee3c34d6fade4fe99cce",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "1d25de9aef8e02bcfb9723da92f10e22de8efac8ee9c7ee79d428acafc57294a",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "1d25de9aef8e02bcfb9723da92f10e22de8efac8ee9c7ee79d428acafc57294a"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "1d25de9aef8e02bcfb9723da92f10e22de8efac8ee9c7ee79d428acafc57294a"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "1d25de9aef8e02bcfb9723da92f10e22de8efac8ee9c7ee79d428acafc57294a"
+    }
+  ],
+  "notes": {
+    "item": "17c1 term-sheet schema v1 + open-time checks (D-TPL1); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical (some attempts hit the 10-minute command cap and were retried; no hash mismatch)"
+  }
+}

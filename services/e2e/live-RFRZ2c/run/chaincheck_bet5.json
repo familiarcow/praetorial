@@ -1,0 +1,113 @@
+{
+ "bet": {
+  "envelope": {
+   "bet_id": 5,
+   "version": 1,
+   "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+   "taker_allow": {
+    "InvitePubkey": "e5ae3eb385d2566ff0a075f3554bcc9b2fae694d70dc82a493051e95170d4026"
+   },
+   "terms_hash": "7d72c2d3cb88b595347b88fce9d0f03e331373f89ad54f0214a710458a1d59f4",
+   "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+   "outcomes": [
+    "YES",
+    "NO"
+   ],
+   "maker_side": "YES",
+   "maker_asset": "nep141:wrap.testnet",
+   "taker_asset": "nep141:wrap.testnet",
+   "stake_maker": "3000000000000000000000000",
+   "stake_taker": "3000000000000000000000000",
+   "taker_options": [],
+   "fee_bps": 100,
+   "storage_charge_per_side": "0",
+   "keep_terms": true,
+   "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T17:45:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T11:45:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+   "max_paid_runs": 3,
+   "tier": 1,
+   "referee": null,
+   "tip_maker": false,
+   "funding_deadline": 1794332700000000000,
+   "early_settle_outcome": null,
+   "finality_delay": 0,
+   "settlement_period": 86400000000000,
+   "resolve_deadline": 1794937500000000000,
+   "consent_party_controlled": false
+  },
+  "fee_min_maker": "135869565217391304347826",
+  "fee_min_taker": "135869565217391304347826",
+  "fee_min_taker_options": [],
+  "tip_maker": "0",
+  "tip_taker": "0",
+  "storage_maker": "17160000000000000000000",
+  "storage_taker": "17160000000000000000000",
+  "status": "Settled",
+  "taker": "763be141391ca87d99ff65dfdd901d962f28eb9f79df1e4fcdffd289acf05f98",
+  "created_at": 1794311165382390000,
+  "taken_at": 1794311174890971400,
+  "proposed_at": null,
+  "outcome": "YES",
+  "used_run_nos": [],
+  "runs_used": 0,
+  "bonds": [],
+  "pre_challenge_outcome": null,
+  "challenged_by": null,
+  "exhibits": [],
+  "rebuttals": [],
+  "objection_deposits": [],
+  "amend_count": 0,
+  "referee_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "amend_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "prune_proposal": {
+   "maker_value": null,
+   "taker_value": null
+  },
+  "pending_resolution_request": null,
+  "last_resolution_raw": null,
+  "pruned": false,
+  "next_expected_run_no": 1,
+  "all_results": [],
+  "window_extended": false,
+  "window_extension_ns": 0,
+  "first_unavailable_ns": null,
+  "retry_count": 0,
+  "next_check_ns": null,
+  "no_live_judge_until_ns": null,
+  "request_judge_snapshot": null,
+  "judge_pair_index": null,
+  "next_run_no": 1,
+  "pending_run_no": null
+ },
+ "pending": [],
+ "is_fully_paid": true,
+ "exp": {
+  "maker": "5728260869565217391304348",
+  "taker": "0",
+  "fee": "306059130434782608695652",
+  "escrowResidue": "0"
+ },
+ "after": {
+  "maker": "109315720908130978260869576",
+  "taker": "23048520000000000000000000",
+  "fee": "2159003913043478260869564",
+  "escrow": "8309565000000000000000000"
+ },
+ "deltas_from_mid": {
+  "maker": "5728260869565217391304348",
+  "taker": "0",
+  "fee": "306059130434782608695652"
+ },
+ "net_vs_before": {
+  "maker": "2711100869565217391304348",
+  "taker": "-3017160000000000000000000",
+  "fee": "306059130434782608695652",
+  "escrow": "0"
+ },
+ "mismatches": []
+}

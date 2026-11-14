@@ -1,0 +1,14 @@
+[workspace]
+resolver = "2"
+members = ["escrow", "mock-intents", "mock-outlayer"]
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+# R3f: strip the name/symbol sections (884 KB -> ~513 KB) so the build is deployable; panic message
+# strings are data, not symbols, so they are kept.
+strip = "symbols"
+overflow-checks = true

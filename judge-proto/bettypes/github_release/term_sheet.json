@@ -1,0 +1,66 @@
+{
+  "_comment": "Prototype: 'repo publishes a stable GitHub Release matching a tag pattern by a deadline'. Public unauthenticated REST (60 req/h/IP: rate limit => COULDNT_CHECK, never NO).",
+  "claim": "GitHub repository id 65600975 (pytorch/pytorch) publishes a non-draft, non-prerelease GitHub Release whose tag fully matches the pattern v2\\.15\\.\\d+ with published_at between 2026-10-20T00:00:00Z and 2026-11-01T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show a GitHub Release object in repository id 65600975 with tag fully matching the pattern v2\\.15\\.\\d+, draft=false, prerelease=false and published_at on or after 2026-10-20T00:00:00Z and on or before 2026-11-01T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "PARTIAL_NONE_V1",
+    "CANCELLED_V1",
+    "RETRACTION_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "'Release' means a GitHub Release object returned by the releases endpoint. A git tag with no Release object, a draft, or a prerelease does not count.",
+    "The clock is published_at. created_at is the date of the tagged commit/draft creation and is never used (the two differ by hours or days on real releases).",
+    "The repository is pinned by numeric id (repo_pin); a repository renamed or transferred keeps its id and is still the one checked, and a new repository that later takes the old name is a different repository and is never checked.",
+    "Tag matching is a full-string match of the tag_name against the pattern in the claim; v2.15.0-rc1 and v2.15.0.dev1 do not match.",
+    "A release deleted or re-created after publication still counts if a keeper snapshot taken inside the window shows it (RETRACTION_V1).",
+    "Early resolution: YES may be declared at the first qualifying release; NO only at/after the deadline, and only from a complete (short-page) release list.",
+    "Fallback: if the REST API is blocked or rate-limited the resolver reports COULDNT_CHECK and retries on the recovery ladder; the releases.atom feed or a keeper snapshot may then be used.",
+    "Burden of proof is on YES: an unproven or ambiguous release resolves NO."
+  ],
+  "time": {
+    "window_start": "2026-10-20T00:00:00Z",
+    "window_end": "2026-11-01T00:00:00Z",
+    "evidence_cutoff": "2026-11-08T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S_REL",
+      "publisher": "GitHub REST API (releases)"
+    },
+    {
+      "id": "S_REF",
+      "publisher": "GitHub REST API (git refs)"
+    },
+    {
+      "id": "S_SNAP",
+      "publisher": "GitHub keeper snapshot"
+    }
+  ],
+  "source_classes": {
+    "GitHub REST API (releases)": "primary",
+    "GitHub REST API (git refs)": "primary",
+    "GitHub keeper snapshot": "primary"
+  },
+  "window_close": "2026-11-15T00:00:00Z",
+  "sources": true,
+  "repo_pin": {
+    "repo_id": 65600975,
+    "full_name_at_signing": "pytorch/pytorch"
+  },
+  "bettype": {
+    "type": "github_release",
+    "tag_pattern": "v2\\.15\\.\\d+",
+    "fetch": [
+      "GET https://api.github.com/repositories/65600975/releases?per_page=100",
+      "GET https://api.github.com/repositories/65600975/git/matching-refs/tags/v2.15"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "_doc": "INTENTS1: the REAL mainnet intents.near call surface our code depends on. Source: github.com/near/intents rev 16d04f6ec4401263f8914638710260da50bb46b0 (the rev intents.near itself reports via contract_source_metadata: version 0.4.5), cross-checked 2026-11-10 with free mainnet view calls (a change method called in view mode panics on arg deserialization / 1 yocto BEFORE anything else, and an absent method returns MethodNotFound). Tests in apps/web/tests and services/relayer/test check every call we build against this file; mock-intents mirrors it. Update only from the deployed source.",
+  "contract": "intents.near",
+  "source_rev": "16d04f6ec4401263f8914638710260da50bb46b0",
+  "version": "0.4.5",
+  "methods": {
+    "mt_transfer": {
+      "kind": "change", "deposit_yocto": "1",
+      "args": { "receiver_id": "AccountId", "token_id": "TokenId", "amount": "U128", "approval": "Option<(AccountId,u64)>", "memo": "Option<String>" },
+      "required": ["receiver_id", "token_id", "amount"],
+      "rules": ["assert_one_yocto", "approval must be null", "amount > 0", "sender != receiver", "auth by predecessor"],
+      "evidence": "contracts/defuse/src/contract/tokens/nep245/core.rs mt_transfer -> mt_batch_transfer (assert_one_yocto; approvals.is_none()); internal_mt_batch_transfer (sender==receiver or amount==0 -> InvalidIntent). View probe: 'Requires attached deposit of exactly 1 yoctoNEAR'; amount as JSON number -> 'invalid type: integer, expected a string'."
+    },
+    "mt_transfer_call": {
+      "kind": "change", "deposit_yocto": "1",
+      "args": { "receiver_id": "AccountId", "token_id": "TokenId", "amount": "U128", "approval": "Option<(AccountId,u64)>", "memo": "Option<String>", "msg": "String" },
+      "required": ["receiver_id", "token_id", "amount", "msg"],
+      "rules": ["assert_one_yocto", "approval must be null", "amount > 0", "sender != receiver", "receiver.mt_on_transfer(sender_id, previous_owner_ids=[sender_id], token_ids, amounts, msg) gets all remaining gas", "mt_resolve_transfer (15 Tgas reserved) refunds what mt_on_transfer returns"],
+      "evidence": "nep245/core.rs mt_transfer_call / notify_and_resolve_transfer / notify_on_transfer; nep245/resolver.rs mt_resolve_transfer. View probe: 'Requires attached deposit of exactly 1 yoctoNEAR'."
+    },
+    "mt_balance_of": {
+      "kind": "view",
+      "args": { "account_id": "AccountId", "token_id": "TokenId" },
+      "required": ["account_id", "token_id"],
+      "returns": "U128 (JSON string)",
+      "evidence": "nep245/core.rs mt_balance_of. View: mt_balance_of({account_id:'praetorial.near', token_id:'nep141:wrap.near'}) -> \"0\"."
+    },
+    "mt_batch_balance_of": {
+      "kind": "view",
+      "args": { "account_id": "AccountId", "token_ids": "Vec<TokenId>" },
+      "required": ["account_id", "token_ids"],
+      "returns": "Vec<U128> in request order",
+      "evidence": "nep245/core.rs mt_batch_balance_of. View -> [\"0\",\"0\"]."
+    },
+    "ft_withdraw": {
+      "kind": "change", "deposit_yocto": "1",
+      "args": { "token": "AccountId", "receiver_id": "AccountId", "amount": "U128", "memo": "Option<String>", "msg": "Option<String>" },
+      "required": ["token", "receiver_id", "amount"],
+      "rules": ["assert_one_yocto", "token is the BARE NEP-141 contract id (AccountId; 'nep141:' prefix fails to deserialize)", "storage_deposit: None -> receiver must already be registered on the token or the ft_transfer fails and ft_resolve_withdraw re-credits the intents balance", "msg set -> ft_transfer_call (failed call is NOT refunded)", "wNEAR comes out as wNEAR (no unwrap)"],
+      "evidence": "contracts/defuse/src/contract/tokens/nep141/withdraw.rs. View probe with {token:'wrap.near',...}: 'Requires attached deposit of exactly 1 yoctoNEAR'; with token 'nep141:wrap.near': 'the Account ID contains an invalid character ':' at index 6'."
+    },
+    "ft_on_transfer": {
+      "kind": "receiver (called by the NEP-141 token on ft_transfer_call)",
+      "args": { "sender_id": "AccountId", "amount": "U128", "msg": "String" },
+      "rules": ["amount > 0", "msg empty -> credit sender_id", "msg starting with '{' -> JSON DepositMessage {receiver_id, execute_intents?, refund_if_fails?} (panics on bad JSON -> token refunds)", "otherwise msg must parse as an AccountId (panics otherwise)", "token id credited = 'nep141:' + predecessor (the token contract)"],
+      "evidence": "contracts/defuse/src/contract/tokens/nep141/deposit.rs; contracts/defuse/src/tokens/mod.rs DepositMessage::from_str + test_deserialize_simple ({\"receiver_id\":\"alice.near\"} -> action None)."
+    },
+    "on_auth (AuthCall callee)": {
+      "kind": "outgoing call made BY intents.near",
+      "args": { "signer_id": "AccountId", "msg": "String" },
+      "rules": ["attached_deposit debited from the signer's wNEAR intents balance (not refunded on failure)", "static gas = AuthCall.min_gas, default 10 Tgas"],
+      "evidence": "contracts/defuse/src/contract/intents/auth_call.rs; core/src/intents/auth.rs AuthCall::MIN_GAS_DEFAULT = 10 Tgas."
+    }
+  },
+  "absent_methods": {
+    "transfer_with_msg": "MethodNotFound (view probe 2026-11-10) -- mock-intents only",
+    "near_deposit_and_credit": "MethodNotFound -- mock-intents only",
+    "mint": "MethodNotFound -- mock-intents only"
+  },
+  "token_ids_confirmed": {
+    "_doc": "mt_supply(token_id) non-null on intents.near 2026-11-10 (a wrong format, e.g. bare 'wrap.near', returns null). intents.near is storage-registered on every one of these NEP-141 contracts (storage_balance_of non-null).",
+    "USDC": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+    "USDT": "nep141:usdt.tether-token.near",
+    "BTC": "nep141:btc.omft.near",
+    "NEAR": "nep141:wrap.near",
+    "ETH": "nep141:eth.omft.near",
+    "ZEC": "nep141:zec.omft.near"
+  },
+  "token_decimals_confirmed": { "USDC": 6, "USDT": 6, "BTC": 8, "NEAR": 24, "ETH": 18, "ZEC": 8 },
+  "nep141_storage_min_yocto": { "_doc": "storage_balance_bounds().min on every launch token (2026-11-10)", "all": "1250000000000000000000" }
+}

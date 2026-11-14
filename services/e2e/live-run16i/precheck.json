@@ -1,0 +1,77 @@
+{
+  "ts": "2026-11-06T12:42:52.538Z",
+  "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+  "balance_yocto": "6138330573755760699999997",
+  "storage_usage": 532134,
+  "code_hash_b58": "2gcc5Qzh2WWQ5Q8pSV8iGW8gSxeY5uRULUqm91xa5yEF",
+  "code_hash_hex": "190198cf2aaf62f3092c8df7d01ca8cdb282971adff40b31bc142a474f0573f0",
+  "views": {
+    "resolver_keys": [
+      "035ea6c4d7d5e8a33ce2ebc98a729ae0f47b6d610174bd6217df3d085fdfad35",
+      "11071d68315e6ce461ce730dee99d2da258cca409232607104970da5f6a474b6",
+      "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e"
+    ],
+    "outlayer_config": {
+      "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+      "secrets_profile": "praetorial-resolver",
+      "secrets_account_id": "praetorial-dev-1101.testnet"
+    },
+    "keeper_credit_balance": "129937500000000000000000",
+    "open_offers": [],
+    "pending_payouts_view": [
+      {
+        "id": 1,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "10000000",
+        "reason": "void_refund_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 2,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "10000000",
+        "reason": "void_refund_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 3,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "void_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      }
+    ]
+  },
+  "bets": [
+    {
+      "id": 1,
+      "status": "Settled",
+      "outcome": "VOID"
+    }
+  ],
+  "mt_balances": {
+    "nep141:usdc.testnet": "0",
+    "nep141:btc.mock.testnet": "0",
+    "nep141:usdt.testnet": "0",
+    "nep141:wrap.testnet": "0",
+    "nep141:eth.mock.testnet": "0"
+  },
+  "mt_balances_other": {},
+  "mt_tokens_for_owner": {
+    "error": "Contract method is not found"
+  },
+  "dev_balance_yocto": "1066260161919376399999961",
+  "attest1_balance_yocto": "431367393973838600000000"
+}

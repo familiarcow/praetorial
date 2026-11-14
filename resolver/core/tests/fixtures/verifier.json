@@ -1,0 +1,144 @@
+{
+ "cases": [
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "quote not found verbatim in source",
+   "name": "fabricated_quote",
+   "raw": "{\"answer\":\"met\",\"quote\":\"iPhone Fold is available today in the United States\",\"source_id\":\"S1\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "quoted the rules, not a source",
+   "name": "quote_from_rules",
+   "raw": "{\"answer\":\"met\",\"quote\":\"Did Apple make iPhone Fold available to purchase in the United States\",\"source_id\":\"S1\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "cited unknown source 'S7'",
+   "name": "unknown_source",
+   "raw": "{\"answer\":\"met\",\"quote\":\"Apple today announced iPhone Fold\",\"source_id\":\"S7\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "answer not in schema: 'probably'",
+   "name": "bad_schema",
+   "raw": "{\"answer\":\"probably\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "not_met",
+   "expect_extra": "S1",
+   "name": "zero_width_quote",
+   "raw": "{\"answer\":\"not_met\",\"quote\":\"Pre-\u200borders begin December 18, 2027\",\"source_id\":\"S1\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "quote too short",
+   "name": "tiny_quote",
+   "raw": "{\"answer\":\"met\",\"quote\":\"iPhone\",\"source_id\":\"S1\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "empty",
+   "expect_extra": "no response (transport failure)",
+   "name": "empty_response",
+   "raw": "",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "invalid",
+   "expect_extra": "unparseable output",
+   "name": "unparseable",
+   "raw": "the model said something that is not json at all",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "conflict",
+   "expect_extra": null,
+   "name": "conflict_no_quote_needed",
+   "raw": "{\"answer\":\"conflict\",\"reason\":\"sources disagree\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  },
+  {
+   "expect_answer": "insufficient",
+   "expect_extra": null,
+   "name": "insufficient_no_quote_needed",
+   "raw": "{\"answer\":\"insufficient\",\"reason\":\"not enough evidence\"}",
+   "rules_text": "Question: Did Apple make iPhone Fold available to purchase in the United States?",
+   "sources": [
+    {
+     "id": "S1",
+     "party_controlled": false,
+     "text": "Apple today announced iPhone Fold, its first iPhone with a folding display. Pre-orders begin December 18, 2027, with availability beginning February 2028."
+    }
+   ]
+  }
+ ]
+}

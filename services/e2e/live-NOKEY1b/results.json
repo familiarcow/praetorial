@@ -1,0 +1,115 @@
+{
+  "txs": [
+    {
+      "step": "create_escrow_account",
+      "hash": "3Mwyg7cK6XCysD9oxAdKrWPYwLbdkFRWSDSz5ixxHvav",
+      "url": "https://testnet.nearblocks.io/txns/3Mwyg7cK6XCysD9oxAdKrWPYwLbdkFRWSDSz5ixxHvav",
+      "account": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+      "funded_near": "5.9",
+      "status": "Success"
+    },
+    {
+      "step": "deploy_escrow",
+      "hash": "HE9daBekRxBXcvTkSqWNSpPFjeXJPAeEDd7Zoncahxmj",
+      "url": "https://testnet.nearblocks.io/txns/HE9daBekRxBXcvTkSqWNSpPFjeXJPAeEDd7Zoncahxmj",
+      "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+      "status": "Success"
+    },
+    {
+      "step": "escrow_new",
+      "hash": "5rxmKJfGrRrB63rYHXwVgBooc6FbMmuaCGRx9pv5yD1k",
+      "url": "https://testnet.nearblocks.io/txns/5rxmKJfGrRrB63rYHXwVgBooc6FbMmuaCGRx9pv5yD1k",
+      "status": "Success"
+    }
+  ],
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "balances": {
+    "dev_before": "6524922545456646624999968",
+    "dev_after_create": "617315103000396624999968"
+  },
+  "new_args": {
+    "intents": "intents-mock.praetorial-dev-1101.testnet",
+    "usdc_token_id": "nep141:usdc.testnet",
+    "outlayer": "outlayer.testnet",
+    "operator": "praetorial-dev-1101.testnet",
+    "guardian": "arbiter1.praetorial-dev-1101.testnet",
+    "registry": "praetorial-dev-1101.testnet",
+    "fee_account": "fee.praetorial-dev-1101.testnet",
+    "keeper": "keeper.praetorial-dev-1101.testnet",
+    "limits": {
+      "max_stake": "10000000000000000000000000000000000",
+      "max_offer_ttl_secs": 5184000,
+      "max_stake_per_side_near": "10000000000000000000000000000000000",
+      "max_rounds": 2
+    },
+    "beta_sunset_ns": null,
+    "asset_limits": [
+      [
+        "nep141:usdc.testnet",
+        {
+          "min_per_side": "10000000",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "500000",
+          "min_fee_cap_per_side": "2500000",
+          "run_price": "5000",
+          "min_bond": "5000000",
+          "min_objection": "1000000",
+          "storage_per_kib": "37684"
+        }
+      ],
+      [
+        "nep141:btc.mock.testnet",
+        {
+          "min_per_side": "13189",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "659",
+          "min_fee_cap_per_side": "3297",
+          "run_price": "7",
+          "min_bond": "6595",
+          "min_objection": "1319",
+          "storage_per_kib": "50"
+        }
+      ],
+      [
+        "nep141:wrap.testnet",
+        {
+          "min_per_side": "2717391304347826086956522",
+          "max_per_side": "10000000000000000000000000000000000",
+          "min_fee_per_side": "135869565217391304347826",
+          "min_fee_cap_per_side": "679347826086956521739130",
+          "run_price": "1358695652173913043479",
+          "min_bond": "1358695652173913043478261",
+          "min_objection": "271739130434782608695653",
+          "storage_per_kib": "10240000000000000000000"
+        }
+      ]
+    ],
+    "outcome_pubkey": "4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23",
+    "attest_pubkey": "a3fa8914a3c6eccd792660167d1e7e67fc06f4294521eadcc2b7a8f6c097f6ae",
+    "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+    "outlayer_config": {
+      "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+      "secrets_profile": "praetorial-resolver",
+      "secrets_account_id": "praetorial-dev-1101.testnet"
+    },
+    "judge_chain": [
+      {
+        "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "model_b": "z-ai/glm-5.3-flash"
+      },
+      {
+        "model_a": "Qwen/Qwen3.8-27B",
+        "model_b": "moonshotai/kimi-k3"
+      },
+      {
+        "model_a": "google/gemini-3.5-flash",
+        "model_b": "openai/gpt-5.4-mini"
+      },
+      {
+        "model_a": "x-ai/grok-4.7",
+        "model_b": "anthropic/claude-haiku-5-5"
+      }
+    ]
+  },
+  "wasm_sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+}

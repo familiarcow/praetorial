@@ -1,0 +1,22 @@
+{
+ "case": "tk_timezone_boundary_disguises_out_of_window_event",
+ "inputs_sha256": "81628c12efadf8f6f00b6d82b3229a8b2fd31ddf4cb2f713cb5e05a09b7ba925",
+ "provenance": {
+  "kind": "live-nondecisive-or-decisive-recorded",
+  "model_ids": [
+   "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "z-ai/glm-5.3-flash"
+  ],
+  "outcome_at_record": "VOID",
+  "recorded_utc": "2026-11-09T16:06:03Z",
+  "run_id": "rte4c-record-20261109T160356Z"
+ },
+ "raws": {
+  "e1": {
+   "3": [
+    "{\"answer\": \"not_met\", \"quote\": \"iPhone Fold went on sale in the United States at 11:30 p.m. Pacific Standard Time on December 31, 2027, Apple confirmed.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only on-sale date given is 11:30 p.m. PST on 2027-12-31, which converts to 2028-01-01T07:30Z, i.e. after the 2027 UTC window closed, so general-public availability did not occur within 2027.\"}",
+    "{\"answer\": \"not_met\", \"quote\": \"iPhone Fold went on sale in the United States at 11:30 p.m. Pacific Standard Time on December 31, 2027, Apple confirmed.\", \"source_id\": \"Y1\", \"also\": [], \"reason\": \"The only evidence states the iPhone Fold went on sale at 11:30 p.m. PST on Dec 31, 2027, which converts to 2028-01-01T07:30Z \u2014 after the 2027-12-31T23:59:59Z UTC window closed \u2014 so availability did not occur within 2027 UTC.\"}"
+   ]
+  }
+ }
+}

@@ -1,0 +1,51 @@
+{
+  "superseded_by": {"template": {"id": "nws_daily_high", "version": 1}, "decision": "D-TPL1", "note": "legacy free-form template kept for reference; new bets use the typed template (token_price also: btc_close_at_t)"},
+  "_comment": "TEMPLATE (not a prototype): daily high temperature at a named station (NWS observations)",
+  "claim": "The maximum observed temperature at NWS station KNYC on 2026-12-25 (UTC day) is at least 5 degrees Celsius.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show NWS station KNYC observations on 2026-12-25 UTC whose maximum temperature value is at least 5 degrees Celsius with quality control V?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "CORRECTED_V1",
+    "NUMERIC_EXACT_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "The UTC calendar day is used, never local midnight. Only observations with qualityControl 'V' (verified) count; 'Z'/'S' preliminary values do not.",
+    "Station is pinned by id; the observation list must cover the whole UTC day (first and last observation within 2 hours of the day bounds) or the element is not proven.",
+    "Source revision: NWS corrects observations for days; the figure at the evidence cutoff controls (CORRECTED_V1).",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-12-25T00:00:00Z",
+    "window_end": "2026-12-26T00:00:00Z",
+    "evidence_cutoff": "2026-12-30T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "NWS api.weather.gov observations"
+    },
+    {
+      "id": "S1",
+      "publisher": "Open-Meteo archive (ERA5)"
+    }
+  ],
+  "source_classes": {
+    "NWS api.weather.gov observations": "primary",
+    "Open-Meteo archive (ERA5)": "data"
+  },
+  "window_close": "2026-12-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "weather",
+    "fetch": "GET https://api.weather.gov/stations/KNYC/observations?start=...&end=..."
+  }
+}

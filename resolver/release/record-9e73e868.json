@@ -1,0 +1,32 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "9e73e8682e4d0e6ca4ee0e01156b69d3cb9a72f1",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "4a69b059fb530b383af9c8ad711f9facf1f8bae3b20398a5ccdd05c330808338"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-a1667ae9.json (da6e2ed5...). R3b2 (lane A/B proposal computed in-resolver by the price_check reader from sources the resolver fetched; job/terms code_proposal ignored; lint+admission first) changes resolver code, so the wasm hash and bind:wasm pubkeys change; D-KEY2 bootstrap must be redone against THIS hash. Built from 9e73e86 (last code commit; later commits are docs/record only). Routes docker-run-1, docker-run-2, fresh-container byte-identical. Not uploaded."
+  }
+}

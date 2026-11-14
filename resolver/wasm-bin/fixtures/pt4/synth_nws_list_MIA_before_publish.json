@@ -1,0 +1,116 @@
+{
+ "@context": {
+  "@version": "1.1",
+  "@vocab": "https://api.weather.gov/ontology#"
+ },
+ "@graph": [
+  {
+   "@id": "https://api.weather.gov/products/fa7ca8a4-5d79-404f-be9f-439515731266",
+   "id": "fa7ca8a4-5d79-404f-be9f-439515731266",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-07T21:28:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/d70aa158-6535-49bd-8144-f56cbe4eacac",
+   "id": "d70aa158-6535-49bd-8144-f56cbe4eacac",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-07T09:22:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/78ddfff0-53f2-4949-ba3e-4a9ab4f71159",
+   "id": "78ddfff0-53f2-4949-ba3e-4a9ab4f71159",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-06T21:24:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/a14a6dd9-8c77-4d57-943a-c5d8e48eec44",
+   "id": "a14a6dd9-8c77-4d57-943a-c5d8e48eec44",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-06T09:22:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/fe9e16ad-6877-44f0-8bf1-c95db0dd7458",
+   "id": "fe9e16ad-6877-44f0-8bf1-c95db0dd7458",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-05T21:21:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/7ddbd586-ef8b-4809-87e8-3b6ef67ebe06",
+   "id": "7ddbd586-ef8b-4809-87e8-3b6ef67ebe06",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-05T09:30:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/d12f61a3-5917-438f-b80a-d664bcd930da",
+   "id": "d12f61a3-5917-438f-b80a-d664bcd930da",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-04T21:27:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/986791ba-1067-4793-a5ff-8aa948b95fa7",
+   "id": "986791ba-1067-4793-a5ff-8aa948b95fa7",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-04T09:27:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/58132b62-7608-4a95-8f83-a7151cb13398",
+   "id": "58132b62-7608-4a95-8f83-a7151cb13398",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-03T21:33:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/8be8c95d-6f37-4d94-b2f2-d85a1c3a1f95",
+   "id": "8be8c95d-6f37-4d94-b2f2-d85a1c3a1f95",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-03T09:26:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/edbe9189-3ed9-49da-8ca5-3d57cab48fa3",
+   "id": "edbe9189-3ed9-49da-8ca5-3d57cab48fa3",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-02T21:23:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  },
+  {
+   "@id": "https://api.weather.gov/products/fb14fd03-2cda-4d84-9097-e5ab22b3b69a",
+   "id": "fb14fd03-2cda-4d84-9097-e5ab22b3b69a",
+   "wmoCollectiveId": "CDUS42",
+   "issuingOffice": "KMFL",
+   "issuanceTime": "2026-11-02T09:30:00+00:00",
+   "productCode": "CLI",
+   "productName": "Climatological Report (Daily)"
+  }
+ ]
+}

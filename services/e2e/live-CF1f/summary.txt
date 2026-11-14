@@ -1,0 +1,9 @@
+file: tail_registry.json
+events: 116
+POST /claim events: 1
+by route: {"POST /claim":1,"GET /search":30,"GET /lookup/username":31,"GET /lookup/account":29,"GET /health":25}
+outcomes: {"ok":116}
+exceededCpu: 0
+non-ok: 0
+cpuTime ms p50: 0  max: 6
+RESULT: PASS (need >= 60 requests, >= 1 claim, 0 exceededCpu, 0 non-ok)

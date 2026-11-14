@@ -1,0 +1,3 @@
+{"outcome":"ok","scriptName":"praetorial-keeper-testnet","diagnosticsChannelEvents":[],"exceptions":[],"logs":[],"eventTimestamp":1762700000000,"event":{"cron":"* * * * *"}}
+{"outcome":"exceededCpu","scriptName":"praetorial-keeper-testnet","diagnosticsChannelEvents":[],"exceptions":[],"logs":[],"eventTimestamp":1762700060000,"event":{"cron":"* * * * *"}}
+{"outcome":"exception","scriptName":"praetorial-keeper-testnet","diagnosticsChannelEvents":[],"exceptions":[{"name":"Error","message":"boom"}],"logs":[],"eventTimestamp":1762700120000,"event":{"cron":"* * * * *"}}

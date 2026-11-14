@@ -1,0 +1,50 @@
+{
+  "txs": [
+    {
+      "step": "mint_maker",
+      "hash": "2voDs9V9KMTPXJeiaMd4gKPbZ6nfeqNK8DS22mZZzhxm",
+      "url": "https://testnet.nearblocks.io/txns/2voDs9V9KMTPXJeiaMd4gKPbZ6nfeqNK8DS22mZZzhxm",
+      "amount": "10072204"
+    },
+    {
+      "step": "mint_taker",
+      "hash": "6a6NMfruWykPkmAtrBQhar6gHH9YwnVEtifdM4PqBBTw",
+      "url": "https://testnet.nearblocks.io/txns/6a6NMfruWykPkmAtrBQhar6gHH9YwnVEtifdM4PqBBTw",
+      "amount": "10072204"
+    },
+    {
+      "step": "open_human_bet",
+      "hash": "279ncEXHErynSRBftuNXZjMtufYagbQ6nbBymfzqDWdu",
+      "url": "https://testnet.nearblocks.io/txns/279ncEXHErynSRBftuNXZjMtufYagbQ6nbBymfzqDWdu",
+      "amount": "10072204"
+    },
+    {
+      "step": "take_human_bet",
+      "hash": "7mjKCq8BBwCvNPv8Gz6YNAa4qTpDuKfsgvXC669wrq4j",
+      "url": "https://testnet.nearblocks.io/txns/7mjKCq8BBwCvNPv8Gz6YNAa4qTpDuKfsgvXC669wrq4j",
+      "amount": "10072204"
+    },
+    {
+      "step": "referee_rule_yes",
+      "hash": "FkxnuZNozvpVnCLyPchPNduxY1Z5JpfbU1puiJL9yNeM",
+      "url": "https://testnet.nearblocks.io/txns/FkxnuZNozvpVnCLyPchPNduxY1Z5JpfbU1puiJL9yNeM"
+    }
+  ],
+  "resolver_keys": [
+    "daff356d5b2e7fa12c02fdd43e7a3f9c07ecca489203edcd6367c0a37615a3c4",
+    "2be89b6565161859779d64f39fca6ba1aa99c500bc7687731bc40374dc866cfc",
+    "6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3"
+  ],
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "bet_id": 1,
+  "status_after_take": "Taken",
+  "final_status": "Settled",
+  "final_outcome": "YES",
+  "balances_after": {
+    "maker": "4164345089",
+    "taker": "0",
+    "fee": "5319642",
+    "escrow": "0"
+  },
+  "pending_payouts_after": 1
+}

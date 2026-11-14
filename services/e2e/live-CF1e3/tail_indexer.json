@@ -1,0 +1,2031 @@
+{
+    "wallTime": 1845,
+    "cpuTime": 20,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794205962623,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4718,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206017912,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2036,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206082649,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2170,
+    "cpuTime": 24,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206137968,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2331,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206140144,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1569,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206202168,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1523,
+    "cpuTime": 19,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206257652,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 5296,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206323485,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1532,
+    "cpuTime": 20,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206377261,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1826,
+    "cpuTime": 18,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206442811,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1742,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206444639,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3464,
+    "cpuTime": 27,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206498058,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1564,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206562161,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1726,
+    "cpuTime": 19,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206617912,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2747,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206682611,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1653,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206737711,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1806,
+    "cpuTime": 12,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206739367,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1526,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206802068,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2720,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206857648,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2780,
+    "cpuTime": 28,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206922749,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 5085,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794206978263,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1714,
+    "cpuTime": 22,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207042472,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1316,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207044189,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1488,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207097650,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4258,
+    "cpuTime": 26,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207163394,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1448,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207217807,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 6253,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207283369,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2827,
+    "cpuTime": 28,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207337888,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3230,
+    "cpuTime": 24,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207340726,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2745,
+    "cpuTime": 22,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207402756,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4278,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207458060,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4214,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207523102,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2754,
+    "cpuTime": 20,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207578047,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3746,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207643239,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3508,
+    "cpuTime": 10,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207646991,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2257,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207697715,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1459,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207762430,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2825,
+    "cpuTime": 21,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207817648,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2811,
+    "cpuTime": 32,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207882725,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 5751,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207938023,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4183,
+    "cpuTime": 12,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794207943784,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4182,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208002627,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4239,
+    "cpuTime": 26,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208058166,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 5100,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208123540,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2153,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208177641,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2128,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208242767,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2420,
+    "cpuTime": 10,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208244902,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2009,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208297590,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2642,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208362614,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2262,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208417809,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1453,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208482445,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2096,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208538044,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2363,
+    "cpuTime": 11,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208540142,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1460,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208602203,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1884,
+    "cpuTime": 18,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208657869,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3493,
+    "cpuTime": 20,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208722688,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1654,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208777886,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4276,
+    "cpuTime": 16,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208843717,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4417,
+    "cpuTime": 11,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208847999,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1535,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208897147,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1821,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794208962450,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3428,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209017786,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1988,
+    "cpuTime": 10,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209082676,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2235,
+    "cpuTime": 21,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209137765,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2422,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209140005,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2214,
+    "cpuTime": 21,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209202722,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4018,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209257931,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2112,
+    "cpuTime": 13,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209322702,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1707,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209377353,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1643,
+    "cpuTime": 22,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209442986,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1319,
+    "cpuTime": 17,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209444635,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 3725,
+    "cpuTime": 22,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209497872,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1767,
+    "cpuTime": 25,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209562450,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 2480,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209617644,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 1516,
+    "cpuTime": 15,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209682706,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4304,
+    "cpuTime": 14,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209738788,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 17,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209746497,
+    "event": {
+        "request": {
+            "url": "https://praetorial-indexer-testnet.familiarcow.workers.dev/health",
+            "method": "GET",
+            "headers": {
+                "accept": "*/*",
+                "accept-encoding": "gzip, br",
+                "cf-connecting-ip": "2601:84:8f01:5500:2061:90d5:4219:8a51",
+                "cf-ipcountry": "US",
+                "cf-ray": "a57b24838f42aab7",
+                "cf-visitor": "{\"scheme\":\"https\"}",
+                "connection": "Keep-Alive",
+                "host": "praetorial-indexer-testnet.familiarcow.workers.dev",
+                "user-agent": "curl/8.7.1",
+                "x-forwarded-proto": "https",
+                "x-real-ip": "2601:84:8f01:5500:2061:90d5:4219:8a51"
+            },
+            "cf": {
+                "httpProtocol": "HTTP/2",
+                "requestPriority": "weight=16;exclusive=0;group=0;group-weight=0",
+                "edgeRequestKeepAliveStatus": 1,
+                "requestHeaderNames": [
+                    ":method",
+                    ":scheme",
+                    ":authority",
+                    ":path",
+                    "user-agent",
+                    "accept"
+                ],
+                "clientTcpRtt": 22,
+                "clientQuicRtt": 0,
+                "colo": "EWR",
+                "asn": 7922,
+                "asOrganization": "Comcast Cable Communications, LLC",
+                "country": "US",
+                "isEUCountry": false,
+                "city": "Twin Rivers",
+                "continent": "NA",
+                "region": "New Jersey",
+                "regionCode": "NJ",
+                "timezone": "America/New_York",
+                "longitude": "-74.49126",
+                "latitude": "40.264",
+                "postalCode": "08520",
+                "metroCode": "504",
+                "tlsVersion": "TLSv1.3",
+                "tlsCipher": "AEAD-CHACHA20-POLY1305-SHA256",
+                "tlsClientRandom": "AmYD5NZN8nOBdoAEaKQNZVOQ1tI4dTF1iGtVx8Uwj6s=",
+                "tlsClientCiphersSha1": "eDGmD1H99AwNYzOR+7eoGLo6eLU=",
+                "tlsClientExtensionsSha1": "Ub+nUmIm1U57hdNSUph0R+kx9Gc=",
+                "tlsClientExtensionsSha1Le": "NMNf2YIpLBhtroOEBooGFi+jtJ8=",
+                "tlsExportedAuthenticator": {
+                    "clientHandshake": "72acf40691be74b51c487735352a466b626d4ed35d77216b56177961c0276a6d",
+                    "serverHandshake": "9542e9cae08f240f0a9b069f5d7640939e488c5694f5c92de5ca25b76f8d25ac",
+                    "clientFinished": "cac2586d902d8a2ad8001beb59f31506f217378be4d497bff88e1621fc6fe548",
+                    "serverFinished": "0cd528fa912e98c57580b8d0ea48aacf1ab8e46cf08e64015d3abf53077666bd"
+                },
+                "tlsClientHelloLength": "351",
+                "tlsClientAuth": {
+                    "certPresented": "0",
+                    "certVerified": "NONE",
+                    "certRevoked": "0",
+                    "certIssuerDN": "",
+                    "certSubjectDN": "",
+                    "certIssuerDNRFC2253": "",
+                    "certSubjectDNRFC2253": "",
+                    "certIssuerDNLegacy": "",
+                    "certSubjectDNLegacy": "",
+                    "certSerial": "",
+                    "certIssuerSerial": "",
+                    "certSKI": "",
+                    "certIssuerSKI": "",
+                    "certFingerprintSHA1": "",
+                    "certFingerprintSHA256": "",
+                    "certNotBefore": "",
+                    "certNotAfter": "",
+                    "certRFC9440": "",
+                    "certRFC9440TooLarge": false,
+                    "certChainRFC9440": "",
+                    "certChainRFC9440TooLarge": false
+                },
+                "verifiedBotCategory": "",
+                "edgeL4": {
+                    "deliveryRate": 193678
+                }
+            }
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 4378,
+    "cpuTime": 9,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "scriptVersion": {
+        "id": "c1dd3964-17e2-45ea-95cd-b537f6640339"
+    },
+    "scriptName": "praetorial-indexer-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794209743098,
+    "event": {
+        "request": {
+            "url": "https://indexer.internal/tick/governance",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}

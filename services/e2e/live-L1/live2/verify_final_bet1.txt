@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-l1b5-11071226.praetorial-dev-1101.testnet bet 1 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97
+PASS E2  pins match release record record-71f46b4.json (commit 71f46b4f); new() args recorded (guardian arbiter1.praetorial-dev-1101.testnet, fee account fee.praetorial-dev-1101.testnet, limits max_rounds 2); guardian/limits/fee have no view, so these are the recorded args, not a chain read
+PASS E3  resolver wasm (3293552 bytes) hashes to the pinned resolver_wasm_hash 142e98125ce3d1cabd42d87b48cedc6496fce925193ecea8bbe97c97475a7088
+SKIP E4  offline: pubkey reproduction needs a live OutLayer report-pubkey run (spends credit); see docs/VERIFY.md for the by-hand command
+PASS B1  sha256(terms) == envelope.terms_hash ad1f283e5a1eed4855ecae3d3bb3d9f74732281633e95fcf140ea6e72038c3b9
+PASS B2  attestation signature valid under pinned attest_pubkey; 44s old when the bet was opened (limit 3600s)
+PASS B3  1 submitted result(s): ed25519 valid under pinned outcome_pubkey, run_no order 1..1, terms_hash matches; outcome VOID
+FAIL B4  decision rule re-applied gives NO, signed outcome is VOID
+SKIP B5  outcome VOID: only YES/NO payout arithmetic is checked
+PASS B6  taken before funding_deadline; proposed after it; settlement window 3600s ends 2026-11-07T19:39:44.566Z; finalize at 2026-11-07T20:30:51.353Z is after it
+# 7 PASS, 1 FAIL, 2 SKIP

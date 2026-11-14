@@ -1,0 +1,200 @@
+[
+ {
+  "file": "nws_list_NYC_20261108.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "24a8ce78db1e4ff898bd6be45bce07cd7c75b3fadca67e3b7aef3689d9f14d51",
+  "kind": "real",
+  "bytes": 5716,
+  "content_type": "application/json",
+  "note": "CLI/NYC product list fetched 2026-11-08 (14 products, 2026-11-02..2026-11-08; older ones rolled off)"
+ },
+ {
+  "file": "nws_list_MIA_20261108.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/MIA",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "47f0658634cc734c6870a9068179a73bece6d55d7e47ebe54ff9ce4d290467fb",
+  "kind": "real",
+  "bytes": 5716,
+  "content_type": "application/json",
+  "note": "CLI/MIA product list fetched 2026-11-08 (14 products, 2026-11-02..2026-11-08; older ones rolled off)"
+ },
+ {
+  "file": "nws_prod_NYC_20261101_dst.json",
+  "source_url": "https://api.weather.gov/products/b3c5cc02-0a32-470d-acd6-4403890550f6",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "80baeac96492c7fb2a1905a72f8b0382dce3689e2420a160f9cbd1e5eea181d5",
+  "kind": "real",
+  "bytes": 4732,
+  "content_type": "application/json",
+  "note": "KNYC CLI for 2026-11-01 (DST fall-back day), issued 2026-11-02T06:21Z; MAXIMUM 59, untrimmed"
+ },
+ {
+  "file": "nws_prod_NYC_20261102_prelim.json",
+  "source_url": "https://api.weather.gov/products/9193ef44-a1d8-4b15-be86-d5e6a612fe81",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "2dce89c10fc202d066b67ae5e340b02e1e2794824ee73867ac3fddeab968d8ce",
+  "kind": "real",
+  "bytes": 4776,
+  "content_type": "application/json",
+  "note": "KNYC CLI for 2026-11-02 (issued 2026-11-02T21:32Z); MAXIMUM 66 - the ANOTHER-DAY product for the wrong-day case, untrimmed"
+ },
+ {
+  "file": "nws_prod_MIA_20261107.json",
+  "source_url": "https://api.weather.gov/products/3b693e9a-8109-46e1-9bb9-6bacdedb3db6",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "b12a3de34af8f194a389c7cd8e29c22fddf45ce1f893972443e469278c2632b3",
+  "kind": "real",
+  "bytes": 4865,
+  "content_type": "application/json",
+  "note": "KMIA CLI for 2026-11-07, issued 2026-11-08T09:22Z (04:22 EST: KMIA publishes the final report late), untrimmed"
+ },
+ {
+  "file": "synth_nws_list_MIA_before_publish.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/MIA",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "83f3d924160cc3cf14cd8b79eaa2d8ef1b5d85e43d9336443fe5ce2b3f379baf",
+  "kind": "synthetic",
+  "bytes": 3994,
+  "content_type": "application/json",
+  "note": "DERIVED from nws_list_MIA_20261108.json: the 2026-11-08T09:22Z product (and the later 21:40Z one) removed = the list before KMIA published the 2026-11-07 final report"
+ },
+ {
+  "file": "iem_KNYC_2026_trimmed.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "a5a240fffe3cc7386eab668680778864b73dcfec8adab0966da2622662549814",
+  "kind": "real",
+  "bytes": 4424,
+  "content_type": "application/json",
+  "note": "IEM cli.py KNYC 2026 TRIMMED to valid 2026-10-28, 11-01, 11-02 (values untouched; original sha256 48c0dae4eaea8959515d2c09629cc2b04c912a3a7dbe57a96467636b569ef38c). 11-01 high 59, 10-28 high 61"
+ },
+ {
+  "file": "iem_KMIA_2026_trimmed.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KMIA&year=2026",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "47922de173f370e817e37929eb46818bf6cfdeb1674ee474b24b9a6d5cff336c",
+  "kind": "real",
+  "bytes": 2955,
+  "content_type": "application/json",
+  "note": "IEM cli.py KMIA 2026 TRIMMED to valid 2026-11-06, 11-07 (original sha256 bf0dcb7bea24b31e6220260f1a67cfa366aef50cd25a56f15dcf38880ef0f688). 11-07 high 87"
+ },
+ {
+  "file": "synth_iem_KMIA_2026_before_publish.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KMIA&year=2026",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "9a28db1202a1bd81f2d8fc098ab8f182986dcd0ee482b59892491bf2fa6fd65d",
+  "kind": "synthetic",
+  "bytes": 1496,
+  "content_type": "application/json",
+  "note": "DERIVED from iem_KMIA_2026_trimmed.json: the 2026-11-07 row removed = IEM before the KMIA report was published"
+ },
+ {
+  "file": "iem_KDCA_2026_trimmed.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KDCA&year=2026",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "d033f3f0503f530bde6f73518f9dc1093fbbec3c4e7943c72bea1821dd086333",
+  "kind": "real",
+  "bytes": 2973,
+  "content_type": "application/json",
+  "note": "IEM cli.py KDCA 2026 TRIMMED to valid 2026-02-04, 02-05 (original sha256 2e5ba07169e4336f486beccbed7ff9f3ec58427071596108191a9d04c8b613f8). 02-05 high is \"M\" (missing)"
+ },
+ {
+  "file": "iem_KDTW_2025_trimmed.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KDTW&year=2025",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "359db8af7435a27ecd15953ab72b2c21508a9ff458a76930556d7b8339ac43a5",
+  "kind": "real",
+  "bytes": 1512,
+  "content_type": "application/json",
+  "note": "IEM cli.py KDTW 2025 TRIMMED to valid 2025-12-05 (original sha256 3efdfda561fb331e3dbe01e5f9133b090c6cd31cd9830a4ba5459c003d0aae63). high 27"
+ },
+ {
+  "file": "synth_iem_KNYC_20261101_high60.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "bf5c6e6d01a64b4e06ca2f928dd58d37dfd2e33b71397129406132781a1b455d",
+  "kind": "synthetic",
+  "bytes": 1519,
+  "content_type": "application/json",
+  "note": "DERIVED from the real IEM KNYC row for 2026-11-01 with high changed 59 -> 60 (NWS vs IEM disagree by 1)"
+ },
+ {
+  "file": "afos_cli_DTW_20251205_minrecord.txt",
+  "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/afos/retrieve.py?pil=CLIDTW&sdate=2025-11-01&edate=2026-09-01&fmt=text&limit=1000",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "70bf60a8fd98eb810bd50784fc72fa978d19935244fb1bb5c296f9769990f464",
+  "kind": "real",
+  "bytes": 4181,
+  "content_type": "text/plain",
+  "note": "REAL product text, the CDUS43 KDTX 060646 block cut from the IEM AFOS archive: KDTW 2025-12-05 CLI with MINIMUM 5R (record-flag line on the MINIMUM row)"
+ },
+ {
+  "file": "synth_nws_prod_DTW_20251205_minrecord.json",
+  "source_url": "https://api.weather.gov/products/00000000-0000-4000-8000-0000000d7e01",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "527a6413759b5019e00d189fa28545d604392f2aa58870f30b9ef222a2f41912",
+  "kind": "synthetic",
+  "bytes": 4402,
+  "content_type": "application/json",
+  "note": "SYNTHETIC ENVELOPE (made-up product id; api.weather.gov no longer serves it) around the REAL text of afos_cli_DTW_20251205_minrecord.txt; productText byte-identical"
+ },
+ {
+  "file": "synth_nws_list_DTW_20251205_minrecord.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/DTW",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "3b2df4ec4990e7e6a6e2180742aef145cc210c15ebe46fdc5a813e4d1e74275f",
+  "kind": "synthetic",
+  "bytes": 148,
+  "content_type": "application/json",
+  "note": "SYNTHETIC one-entry list pointing at synth_nws_prod_DTW_20251205_minrecord.json"
+ },
+ {
+  "file": "afos_cli_DCA_20260205_mm.txt",
+  "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/afos/retrieve.py?pil=CLIDCA&sdate=2025-11-01&edate=2026-09-01&fmt=text&limit=1000",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "7b9a5805be7a03e27d522560da6dce148b7b640c5cf05d169f5947f4ddbae824",
+  "kind": "real",
+  "bytes": 4225,
+  "content_type": "text/plain",
+  "note": "REAL product text, the CDUS41 KLWX 060731 block cut from the IEM AFOS archive: KDCA 2026-02-05 CLI with MAXIMUM MM (missing)"
+ },
+ {
+  "file": "synth_nws_prod_DCA_20260205_mm.json",
+  "source_url": "https://api.weather.gov/products/00000000-0000-4000-8000-0000000dca01",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "92556f5ef0bb99e0fc3ebb1177a9429c2b6f722947643e7de0bdbb9a1ace95af",
+  "kind": "synthetic",
+  "bytes": 4446,
+  "content_type": "application/json",
+  "note": "SYNTHETIC ENVELOPE (made-up product id; api.weather.gov no longer serves it) around the REAL text of afos_cli_DCA_20260205_mm.txt; productText byte-identical"
+ },
+ {
+  "file": "synth_nws_list_DCA_20260205_mm.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/DCA",
+  "fetched_at": "2026-11-08T22:13:00Z",
+  "http_status": 200,
+  "sha256": "f9972a0f95f7459550e0bcd811853f7368290fa2bf63d205d50519aeab07a88a",
+  "kind": "synthetic",
+  "bytes": 148,
+  "content_type": "application/json",
+  "note": "SYNTHETIC one-entry list pointing at synth_nws_prod_DCA_20260205_mm.json"
+ }
+]

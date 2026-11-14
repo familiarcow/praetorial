@@ -1,0 +1,11 @@
+{
+  "written_at": "2026-11-10T04:32:18.001Z",
+  "bet_id": 16,
+  "mode": "Human",
+  "claim": "BTC at_or_above 1000000 USD before the deadline (referee decides)",
+  "expected_by_scenario": "referee never rules; after resolve_deadline void_after_deadline voids the bet; both bettors refunded stake + own storage, no protocol fee, no tips (none ticked); fee account and referee get 0",
+  "resolve_deadline_iso": "2026-11-12T00:00:00.000Z",
+  "outcome_read_before_this": false,
+  "bet_status_at_write": "Taken",
+  "bet_outcome_at_write": null
+}

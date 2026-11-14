@@ -1,0 +1,7 @@
+# RELAYFUND1 testnet proof (testnet only; results.json = the passing-relay run, attempt*.json = earlier failed runs)
+Script: services/relayer/scripts/relayfund1_proof.ts (real Relayer + policy, relayer.praetorial-dev-1101.testnet pays gas, fresh implicit user signs NEP-366 delegates).
+- RELAYED near_deposit 0.1 NEAR on wrap.testnet: OK. User got 0.09875 wNEAR (0.00125 NEAR = storage of the new account, taken from the deposit) => NO separate storage_deposit needed before near_deposit.
+- RELAYED ft_transfer_call(wrap.testnet -> intents-mock..., msg {"receiver_id": user}, 1 yocto): accepted by policy and broadcast; on chain the intents-mock has NO ft_on_transfer (MethodNotFound), so wrap.testnet refunded the full amount; mt_balance_of stays 0.
+- Real intents.near has no testnet deployment (docs.near-intents.org FAQ). Its documented deposit msg is {"receiver_id": "<account>"} or empty (credits sender); the web format is correct for the real contract.
+- The intents-mock was already storage-registered on wrap.testnet (from an earlier attempt's direct storage_deposit by the funder; see attempt1/2 json), so the refund is due to MethodNotFound, not storage. wNEAR requires the RECEIVER (intents) to be registered; the sender is auto-registered by near_deposit.
+- Funding of attempts: pf-109110569.testnet / dev account; relayer topped up 1 NEAR (tx 5r1QSt3qecF46cHUG1dT5Vi2vwmmdV5HLPPXqpLKfEm).

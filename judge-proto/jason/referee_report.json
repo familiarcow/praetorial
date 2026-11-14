@@ -1,0 +1,252 @@
+[
+ {
+  "name": "false_referee_exhibit_outcome_follows_contradicting_source",
+  "passed": true,
+  "detail": "{'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['not_met', 'not_met', 'not_met'])]}}"
+ },
+ {
+  "name": "referee_exhibit_ordinary_tier_Human",
+  "passed": true,
+  "detail": "ordinary outlet tier (4), got [{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_exhibit_not_flagged_Human",
+  "passed": true,
+  "detail": "{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}"
+ },
+ {
+  "name": "referee_exhibit_not_labelled_neutral_party_Human",
+  "passed": true,
+  "detail": "<rules>\nquestion: did the named event happen before the deadline?\ndefinitions:\n- all dates and times are utc. an event 'in 2027' means between 2027-01-01t00:00:00z and 2027-12-31t23:59:59z inclusive.\nevidence cutoff: 2028-01-07t00:00:00z (utc). window: 2027-01-01t00:00:00z to 2027-12-31t23:59:59z.\n<"
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Human_trusted",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Human_authoritative",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Human_give weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Human_extra weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Human_deference",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_exhibit_ordinary_tier_Witness",
+  "passed": true,
+  "detail": "ordinary outlet tier (4), got [{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_exhibit_not_flagged_Witness",
+  "passed": true,
+  "detail": "{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}"
+ },
+ {
+  "name": "referee_exhibit_not_labelled_neutral_party_Witness",
+  "passed": true,
+  "detail": "<rules>\nquestion: did the named event happen before the deadline?\ndefinitions:\n- all dates and times are utc. an event 'in 2027' means between 2027-01-01t00:00:00z and 2027-12-31t23:59:59z inclusive.\nevidence cutoff: 2028-01-07t00:00:00z (utc). window: 2027-01-01t00:00:00z to 2027-12-31t23:59:59z.\n<"
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Witness_trusted",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Witness_authoritative",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Witness_give weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Witness_extra weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Witness_deference",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_exhibit_ordinary_tier_Source",
+  "passed": true,
+  "detail": "ordinary outlet tier (4), got [{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_exhibit_not_flagged_Source",
+  "passed": true,
+  "detail": "{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}"
+ },
+ {
+  "name": "referee_exhibit_not_labelled_neutral_party_Source",
+  "passed": true,
+  "detail": "<rules>\nquestion: did the named event happen before the deadline?\ndefinitions:\n- all dates and times are utc. an event 'in 2027' means between 2027-01-01t00:00:00z and 2027-12-31t23:59:59z inclusive.\nevidence cutoff: 2028-01-07t00:00:00z (utc). window: 2027-01-01t00:00:00z to 2027-12-31t23:59:59z.\n<"
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Source_trusted",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Source_authoritative",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Source_give weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Source_extra weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_Source_deference",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_exhibit_ordinary_tier_FinalSay",
+  "passed": true,
+  "detail": "ordinary outlet tier (4), got [{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_exhibit_not_flagged_FinalSay",
+  "passed": true,
+  "detail": "{'id': 'R1', 'by': 'referee', 'publisher': 'SomeOutlet', 'published': '2027-06-01T00:00:00Z', 'text': 'The named event happened on June 1, 2027.', 'submitter': 'ref.near', 'source_type': None, 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 4, 'party_controlled': False, 'fork_ticker_flag': False}"
+ },
+ {
+  "name": "referee_exhibit_not_labelled_neutral_party_FinalSay",
+  "passed": true,
+  "detail": "<rules>\nquestion: did the named event happen before the deadline?\ndefinitions:\n- all dates and times are utc. an event 'in 2027' means between 2027-01-01t00:00:00z and 2027-12-31t23:59:59z inclusive.\nevidence cutoff: 2028-01-07t00:00:00z (utc). window: 2027-01-01t00:00:00z to 2027-12-31t23:59:59z.\n<"
+ },
+ {
+  "name": "referee_prompt_no_trust_language_FinalSay_trusted",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_FinalSay_authoritative",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_FinalSay_give weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_FinalSay_extra weight",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_prompt_no_trust_language_FinalSay_deference",
+  "passed": true,
+  "detail": ""
+ },
+ {
+  "name": "referee_exhibits_capped_same_as_party",
+  "passed": true,
+  "detail": "same 5-exhibit cap: admitted=5 rejected=2"
+ },
+ {
+  "name": "referee_report_not_primary_data_Human",
+  "passed": true,
+  "detail": "a referee_report exhibit must be checked like any unlisted publisher: admitted=[] rejected=[('R1', 'referee', 'publisher not in an agreed source class')]"
+ },
+ {
+  "name": "referee_report_on_listed_publisher_ordinary_tier_Human",
+  "passed": true,
+  "detail": "must get the ordinary wire tier (3), no referee flag, never tier 0: [{'id': 'R2', 'by': 'referee', 'publisher': 'AP', 'published': '2027-06-01T00:00:00Z', 'text': 'AP reports the named event happened.', 'submitter': 'ref.near', 'source_type': 'referee_report', 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 3, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_report_not_primary_data_Witness",
+  "passed": true,
+  "detail": "a referee_report exhibit must be checked like any unlisted publisher: admitted=[] rejected=[('R1', 'referee', 'publisher not in an agreed source class')]"
+ },
+ {
+  "name": "referee_report_on_listed_publisher_ordinary_tier_Witness",
+  "passed": true,
+  "detail": "must get the ordinary wire tier (3), no referee flag, never tier 0: [{'id': 'R2', 'by': 'referee', 'publisher': 'AP', 'published': '2027-06-01T00:00:00Z', 'text': 'AP reports the named event happened.', 'submitter': 'ref.near', 'source_type': 'referee_report', 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 3, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_report_not_primary_data_Source",
+  "passed": true,
+  "detail": "a referee_report exhibit must be checked like any unlisted publisher: admitted=[] rejected=[('R1', 'referee', 'publisher not in an agreed source class')]"
+ },
+ {
+  "name": "referee_report_on_listed_publisher_ordinary_tier_Source",
+  "passed": true,
+  "detail": "must get the ordinary wire tier (3), no referee flag, never tier 0: [{'id': 'R2', 'by': 'referee', 'publisher': 'AP', 'published': '2027-06-01T00:00:00Z', 'text': 'AP reports the named event happened.', 'submitter': 'ref.near', 'source_type': 'referee_report', 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 3, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_report_not_primary_data_FinalSay",
+  "passed": true,
+  "detail": "a referee_report exhibit must be checked like any unlisted publisher: admitted=[] rejected=[('R1', 'referee', 'publisher not in an agreed source class')]"
+ },
+ {
+  "name": "referee_report_on_listed_publisher_ordinary_tier_FinalSay",
+  "passed": true,
+  "detail": "must get the ordinary wire tier (3), no referee flag, never tier 0: [{'id': 'R2', 'by': 'referee', 'publisher': 'AP', 'published': '2027-06-01T00:00:00Z', 'text': 'AP reports the named event happened.', 'submitter': 'ref.near', 'source_type': 'referee_report', 'submitted': '2027-06-01T00:00:00Z', 'onchain_submitted_at': '2027-06-01T00:00:00Z', 'tier': 3, 'party_controlled': False, 'fork_ticker_flag': False}]"
+ },
+ {
+  "name": "referee_role_no_effect_Human",
+  "passed": true,
+  "detail": "with={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}} without={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}}"
+ },
+ {
+  "name": "no_referee_silence_void_Human",
+  "passed": true,
+  "detail": "silent={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}} no_ref={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}}"
+ },
+ {
+  "name": "referee_role_no_effect_Witness",
+  "passed": true,
+  "detail": "with={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}} without={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}}"
+ },
+ {
+  "name": "no_referee_silence_void_Witness",
+  "passed": true,
+  "detail": "silent={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}} no_ref={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}}"
+ },
+ {
+  "name": "referee_role_no_effect_Source",
+  "passed": true,
+  "detail": "with={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}} without={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}}"
+ },
+ {
+  "name": "no_referee_silence_void_Source",
+  "passed": true,
+  "detail": "silent={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}} no_ref={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}}"
+ },
+ {
+  "name": "referee_role_no_effect_FinalSay",
+  "passed": true,
+  "detail": "with={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}} without={'outcome': 'NO', 'why': 'an element is not proven (burden on YES); other elements irrelevant', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': [(3, 'insufficient', ['met', 'met', 'met'])]}}"
+ },
+ {
+  "name": "no_referee_silence_void_FinalSay",
+  "passed": true,
+  "detail": "silent={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}} no_ref={'outcome': 'NO', 'why': 'no admissible evidence (burden on YES)', 'verdicts': {'e1': 'not_met'}, 'rejected': [], 'struck': [], 'trails': {'e1': []}}"
+ }
+]

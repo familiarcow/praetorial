@@ -1,0 +1,922 @@
+{
+ "template": "praetorial-judge-v0.1",
+ "models": [
+  "claude:haiku"
+ ],
+ "runs_per_model": 3,
+ "cases": [
+  {
+   "name": "src_sub_yes",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "AGB"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AGB"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AGB"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "src_sub_no",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "AGB"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "AGB"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "AGB"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "src_sub_void_no_fallback",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "VOID_NO_DATA: no eligible source published anything for e1 before the evidence cutoff (SOURCE_SUBSTITUTION_V1/NO_DATA_FALLBACK_V1)",
+   "ok": true,
+   "verdicts": {
+    "e1": "void_no_data"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "code",
+      "void_no_data",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "name": "revwin_yes_timely_correction",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [
+    "dropped BLS1: superseded by timely correction BLS2 (REVISION_WINDOW_V1)"
+   ],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "BLS2"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "BLS2"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "BLS2"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "revwin_no_late_correction_ignored",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [
+    "dropped BLS2: correction outside 24h revision window, BLS1 stands (REVISION_WINDOW_V1)"
+   ],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "BLS1"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "BLS1"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "BLS1"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "revwin_void_unrelated_conflict",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "contested_primary_no",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "W1"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "W2"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "W2"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "contested_primary_yes_process_only",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "W1"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "W1"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "W1"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "contested_primary_void_next_tier_conflicts",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "postponed_insufficient_stays_open",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "postponed_yes_after_reschedule",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "postponed_void_cap_status_conflict",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "tie_void_conflicting_tiebreak_claims",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "tie_yes_named_tiebreak",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "tie_no_decisive_result",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "RT"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "abandoned_yes_threshold_reached",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "LG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "abandoned_void_threshold_conflict",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "abandoned_no_still_scheduled_to_resume",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "media_consensus_yes",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "M2"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "M2"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "M2"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "media_consensus_no_below_threshold",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "M3"
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "media_consensus_void_contradiction",
+   "expect": "NO|VOID|ESCALATE",
+   "outcome": "ESCALATE",
+   "why": "runs/models disagree or an answer failed verification",
+   "ok": true,
+   "verdicts": {
+    "e1": "unresolved"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "M2"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "rounding_yes_exact_above_threshold",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "rounding_no_exact_below_threshold",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "AG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "rounding_void_primary_tier_conflict",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "allowed sources conflict on a decisive element",
+   "ok": true,
+   "verdicts": {
+    "e1": "conflict"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ],
+     [
+      "claude:haiku",
+      "conflict",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "no_data_void_nothing_published",
+   "expect": "VOID",
+   "outcome": "VOID",
+   "why": "VOID_NO_DATA: no eligible source published anything for e1 before the evidence cutoff (SOURCE_SUBSTITUTION_V1/NO_DATA_FALLBACK_V1)",
+   "ok": true,
+   "verdicts": {
+    "e1": "void_no_data"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "code",
+      "void_no_data",
+      null
+     ]
+    ]
+   }
+  },
+  {
+   "name": "no_data_yes_published_in_time",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "AG"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "no_data_no_delayed_but_pending",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ],
+     [
+      "claude:haiku",
+      "insufficient",
+      null
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "format_change_yes_delayed_but_full",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "VR"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "format_change_no_withdrew",
+   "expect": "NO",
+   "outcome": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "verdicts": {
+    "e1": "not_proven"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "not_met",
+      "VR"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "VR"
+     ],
+     [
+      "claude:haiku",
+      "not_met",
+      "VR"
+     ]
+    ],
+    "e1_samples": []
+   }
+  },
+  {
+   "name": "format_change_yes_joint_performance",
+   "expect": "YES",
+   "outcome": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "verdicts": {
+    "e1": "met"
+   },
+   "dropped": [],
+   "runs": {
+    "e1": [
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ],
+     [
+      "claude:haiku",
+      "met",
+      "RT"
+     ]
+    ],
+    "e1_samples": []
+   }
+  }
+ ],
+ "seconds": 40
+}

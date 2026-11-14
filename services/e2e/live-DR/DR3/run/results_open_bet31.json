@@ -1,0 +1,141 @@
+{
+  "txs": [
+    {
+      "step": "mint wNEAR (betting balance) to maker",
+      "by": "harness",
+      "hash": "3RDeKwReobVfSaiT6kBiZLqLxyy28ViACgxn2eDkihh9",
+      "url": "https://testnet.nearblocks.io/txns/3RDeKwReobVfSaiT6kBiZLqLxyy28ViACgxn2eDkihh9"
+    },
+    {
+      "step": "mint wNEAR (betting balance) to taker",
+      "by": "harness",
+      "hash": "6nKx7tSzFyjaD6jm43QsyQhxFAY7Tw1ipiCm3LxTG8qv",
+      "url": "https://testnet.nearblocks.io/txns/6nKx7tSzFyjaD6jm43QsyQhxFAY7Tw1ipiCm3LxTG8qv"
+    },
+    {
+      "step": "tNEAR to taker implicit",
+      "by": "harness",
+      "hash": "9Scqxy3LDEmML1ta79DamVg673khEskKir8XhLgcKgWj",
+      "url": "https://testnet.nearblocks.io/txns/9Scqxy3LDEmML1ta79DamVg673khEskKir8XhLgcKgWj"
+    },
+    {
+      "step": "open (web, maker)",
+      "by": "web",
+      "hash": null,
+      "url": null
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T20:59:59.982Z"
+    },
+    {
+      "s": "maker opened the AI bet via web",
+      "t": "2026-11-10T21:00:39.241Z",
+      "betId": 31
+    }
+  ],
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "taker": "aa35559809bd730d254bd5ac8cece04bdd2e9b87792da5e4aaa415ac93112adb",
+  "market": {
+    "station": "KNYC",
+    "date": "2026-11-11",
+    "op": ">=",
+    "x_f": 61
+  },
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "114715102134817025360869577",
+    "taker": "3100000000000000000000000",
+    "fee": "3749149565217391304347824",
+    "escrow": "55891180000000000000000000"
+  },
+  "username_taker": "claimed dr3t547a1aa5 via the first-login dialog",
+  "review_text": "You are betting that the daily high at KNYC on 2026-11-11 is at or above 61°F. Sources: NWS CLI (api.weather.gov), IEM CLI (mesonet.agron.iastate.edu). Decided by 2026-11-11.\n\nThe AI decides, using these sources: NWS CLI (api.weather.gov), IEM CLI (mesonet.agron.iastate.edu).\n\nStake\t3 NEAR\nNetwork storage\tloading from the contract...\nYou pay now\tloading from the contract...\nDeadlines\nOffer expires: 2026-11-11 05:00 UTC (the event starts then, so that is as long as it can stay open).\nEvent: decided by 2026-11-11.\nChallenge window: 1h per round, 2 rounds.\n\nIf you lose, you lose your 3 NEAR stake. You can't lose more than what you pay now.\n\nRefunds\nNobody takes it: full refund.\nThe AI can't decide (VOID): you both get your stakes back and no fee is charged.\nIf the app is shut down, anyone can trigger a full refund.\nMaker stakes 3 NEAR\nTaker stakes 3 NEAR\nStorage charge, maker side: loading from the contract... (paid in NEAR, on top of the stake)\nStorage charge, taker side: loading from the contract... (paid in NEAR, on top of the stake)\nOdds: 1:1\nSettlement period: 1h\nThis offer closes 2026-11-11 05:00 UTC (the event starts then, so that is as long as it can stay open).\nFee: 1% of pot per asset, minimum 0.14 NEAR per side (maker side 0.14 NEAR, taker side 0.14 NEAR)\nTaker can pay with\n3 NEAR (same asset, 1:1 by odds)\n\nReferee: none -- the AI judges this bet.\n\nTerms fingerprint (sha256 of the exact terms that will be locked): 4f426bd2ad0f88442dbf89f0dc4256140c83047d4d1de3fea4df29e517af7f98\n\nMoney can only go to you or the other party.\n\nready",
+  "sourcecheck_status": "The AI can read these sources. Checked at 21:00 UTC.",
+  "betId": 31,
+  "bet_open": {
+    "envelope": {
+      "bet_id": 31,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": "Any",
+      "terms_hash": "4f426bd2ad0f88442dbf89f0dc4256140c83047d4d1de3fea4df29e517af7f98",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"date\":\"2026-11-11\",\"op\":\">=\",\"station\":\"KNYC\",\"x_f\":61},\"template\":{\"id\":\"nws_daily_high\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794373200000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1795064400000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "16895000000000000000000",
+    "storage_taker": "0",
+    "status": "Open",
+    "taker": null,
+    "created_at": 1794344436818626600,
+    "taken_at": null,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  }
+}

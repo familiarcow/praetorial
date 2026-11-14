@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "lib": ["ES2022"],
+    "declaration": false,
+    "outDir": "dist",
+    "paths": {
+      "@praetorial/common/*": ["./common/src/*"]
+    }
+  },
+  "include": [
+    "common/src", "common/test",
+    "keeper/src", "keeper/test",
+    "indexer/src", "indexer/test",
+    "notifier/src", "notifier/test",
+    "relayer/src", "relayer/test",
+    "monitor/src", "monitor/test",
+    "treasury/src", "treasury/test",
+    "release/src", "release/test",
+    "registry/src", "registry/test",
+    "ops/src", "ops/test",
+    "workers/common/src", "workers/common/test", "workers/keeper/src", "workers/keeper/test", "workers/keeper/test-budget", "workers/relayer/src", "workers/relayer/test", "workers/relayer/test-budget", "workers/notifier/src", "workers/notifier/test", "workers/notifier/test-budget",
+    "workers/monitor/test-budget",
+    "workers/indexer/src", "workers/indexer/test", "workers/indexer/test-budget",
+    "workers/registry/src", "workers/registry/test", "workers/registry/test-budget", "workers/sourcecheck/src", "workers/sourcecheck/test", "workers/funding/src", "workers/funding/test",
+    "e2e"
+  ]
+}

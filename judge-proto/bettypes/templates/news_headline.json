@@ -1,0 +1,49 @@
+{
+  "_comment": "TEMPLATE (not a prototype): news headline (RSS + keeper snapshot) -- v2",
+  "claim": "The BBC News front-page RSS feed lists an item whose title contains the phrase 'interest rates' at a keeper snapshot taken between 2026-11-10T00:00:00Z and 2026-11-12T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show a BBC News RSS item whose title contains 'interest rates', captured by a keeper snapshot between 2026-11-10T00:00:00Z and 2026-11-12T00:00:00Z?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "FIRST_REPORT_V1",
+    "NO_DATA_FALLBACK_V1"
+  ],
+  "custom_definitions": [
+    "RSS holds only the latest ~30 items, so only keeper snapshots inside the window can prove a headline; a later fetch proves nothing and is never NO.",
+    "Headlines are rewritten after publication; the title in a snapshot is what counts and later edits are ignored (FIRST_REPORT_V1).",
+    "Only the named outlet counts; aggregator echoes do not.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-10T00:00:00Z",
+    "window_end": "2026-11-12T00:00:00Z",
+    "evidence_cutoff": "2026-11-19T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "BBC News RSS (feeds.bbci.co.uk)"
+    },
+    {
+      "id": "S1",
+      "publisher": "NPR News RSS (feeds.npr.org)"
+    }
+  ],
+  "source_classes": {
+    "BBC News RSS (feeds.bbci.co.uk)": "primary",
+    "NPR News RSS (feeds.npr.org)": "wire"
+  },
+  "window_close": "2026-11-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "news_headline",
+    "fetch": "GET https://feeds.bbci.co.uk/news/rss.xml"
+  }
+}

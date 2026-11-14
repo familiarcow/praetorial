@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "a1265cfa79c102d97ea011dcb83e54e2cc199461",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "3963c2746784965c80c65cfb086fc8672260a78cd55e663059d84797fa592d48",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "3963c2746784965c80c65cfb086fc8672260a78cd55e663059d84797fa592d48"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "3963c2746784965c80c65cfb086fc8672260a78cd55e663059d84797fa592d48"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "3963c2746784965c80c65cfb086fc8672260a78cd55e663059d84797fa592d48"
+    }
+  ],
+  "notes": {
+    "item": "17d2b D-EXTRACT1 (visible-text extractor + thin-page COULDNT_CHECK); built from the branch commit; NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; no linker flake retries needed"
+  }
+}

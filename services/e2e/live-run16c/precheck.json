@@ -1,0 +1,203 @@
+{
+  "ts": "2026-11-06T10:13:10.632Z",
+  "account": "praetorial-e2e-2611052236.praetorial-dev-1101.testnet",
+  "balance_yocto": "6164529873941906199999994",
+  "storage_usage": 535408,
+  "code_hash_b58": "9ttCp2bekS1UvKXnW8XsM2TWiKmm46dFSoKFcj2ea5Xk",
+  "code_hash_hex": "842803476484fc5618f82f0bc99d0892804b56b652ebb00a4de616f4ca302b9f",
+  "views": {
+    "resolver_keys": [
+      "1457b75bd267a422ee601f8c246577a9d2151146ddfef58b35c2dce6960ae0d7",
+      "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+      "cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7"
+    ],
+    "outlayer_config": {
+      "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+      "secrets_profile": "praetorial-resolver",
+      "secrets_account_id": "praetorial-dev-1101.testnet"
+    },
+    "keeper_credit_balance": "150000000000000000000000",
+    "open_offers": [],
+    "pending_payouts_view": [
+      {
+        "id": 1,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 2,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 3,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 4,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 5,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "100000",
+        "reason": "mutual_settle_fee",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 6,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "100000",
+        "reason": "mutual_settle_fee",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 7,
+        "bet_id": 1,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "mutual_settle_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 8,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 9,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "maker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_maker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 10,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 11,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "taker1.praetorial-dev-1101.testnet",
+        "amount": "4950000",
+        "reason": "mutual_settle_taker",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 12,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "100000",
+        "reason": "mutual_settle_fee",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 13,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "100000",
+        "reason": "mutual_settle_fee",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      },
+      {
+        "id": 14,
+        "bet_id": 2,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "fee.praetorial-dev-1101.testnet",
+        "amount": "16000",
+        "reason": "mutual_settle_storage_keep_terms",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      }
+    ]
+  },
+  "bets": [
+    {
+      "id": 1,
+      "status": "Settled",
+      "outcome": "MUTUAL"
+    },
+    {
+      "id": 2,
+      "status": "Settled",
+      "outcome": "MUTUAL"
+    }
+  ],
+  "mt_balances": {
+    "nep141:usdc.testnet": "0",
+    "nep141:btc.mock.testnet": "0",
+    "nep141:usdt.testnet": "0",
+    "nep141:wrap.testnet": "0",
+    "nep141:eth.mock.testnet": "0"
+  },
+  "mt_balances_other": {},
+  "mt_tokens_for_owner": {
+    "error": "Contract method is not found"
+  },
+  "dev_balance_yocto": "1232956372300593899999967",
+  "attest1_balance_yocto": "435782843338402200000000"
+}

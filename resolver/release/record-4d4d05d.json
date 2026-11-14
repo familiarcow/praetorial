@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "4d4d05def523329f9fc32575acd9489a74455e5a",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "06d1cd5d9130ac1e5d8633b07336643ee172c92521a3652004cb09ca6d9c18e0",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "06d1cd5d9130ac1e5d8633b07336643ee172c92521a3652004cb09ca6d9c18e0"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "06d1cd5d9130ac1e5d8633b07336643ee172c92521a3652004cb09ca6d9c18e0"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "06d1cd5d9130ac1e5d8633b07336643ee172c92521a3652004cb09ca6d9c18e0"
+    }
+  ],
+  "notes": {
+    "item": "RR3: resolver rebuilt after LH1 (bd8afab; btc_touch OPEN_DEADLINE_TOO_FAR lint 365d -> 1,461d, D-HORIZON1a); built from commit 4d4d05d; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; all three builds succeeded first try with identical hash"
+  }
+}

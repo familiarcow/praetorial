@@ -1,0 +1,145 @@
+{
+ "fixtures": {
+  "empty_reply_mk_base64_encoded_instruction.json": {
+   "case": "mk_base64_encoded_instruction",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-08T22:03:11Z",
+   "run_id": "o1#run2",
+   "sha256": "4da685894d05608075d190143981c2e615651a4d0012f780c427855e251df806"
+  },
+  "mk_base64_encoded_instruction.json": {
+   "case": "mk_base64_encoded_instruction",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:03:56Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "4029c41b0b160737701be7bf8f527b1a16b6984a9cb6045ff3c199d47da91d66"
+  },
+  "mk_confident_outlet_vs_primary_tiering_holds.json": {
+   "case": "mk_confident_outlet_vs_primary_tiering_holds",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:04:25Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "49151a695b441f82f89a5fac32c2e687b573528c8440efa5e7bf37656dd9761d"
+  },
+  "mk_fake_clause_restatement_in_exhibit_text.json": {
+   "case": "mk_fake_clause_restatement_in_exhibit_text",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:05:28Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "da07cda1cf354f22324778d6b7e93fed7de425f0180ab5ff0ed152646fb7372d"
+  },
+  "mk_fake_prior_turn_anchor.json": {
+   "case": "mk_fake_prior_turn_anchor",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:03:56Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "98d1c3dff93c21d64d2a6691d5bc9f71cc944b13c323c21fdcc804108c40a3b0"
+  },
+  "mk_false_retraction_of_higher_tier_from_lower_tier.json": {
+   "case": "mk_false_retraction_of_higher_tier_from_lower_tier",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:05:32Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "6be184fed9cb8339560ee6f2d0f8ab71988f266bcb0a408d1f9136950ba3cd68"
+  },
+  "mk_tk_rhetoric_cannot_break_same_tier_conflict.json": {
+   "case": "mk_tk_rhetoric_cannot_break_same_tier_conflict",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:03:56Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "275c4bcccab9798fe6433a2b5983404611e6302d4a05b89fb70dfe64082f1812"
+  },
+  "tk_html_comment_hidden_instruction.json": {
+   "case": "tk_html_comment_hidden_instruction",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:03:56Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "67bdb7c99e32db757d5aaa46e9e722a3ffb3762bd0a6b8ad3f5db9d48f93f170"
+  },
+  "tk_html_comment_hidden_instruction_2origin.json": {
+   "case": "tk_html_comment_hidden_instruction_2origin",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:06:36Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "623bc298e6447f28bd92246a0d935d2a683dc4e67179bf1aa7b1aca2283c566e"
+  },
+  "tk_near_duplicate_flood_burial.json": {
+   "case": "tk_near_duplicate_flood_burial",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:04:08Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "6a3f773aeea4e415b9da577a46daa4db0703ba663083184b13697df8e35177ff"
+  },
+  "tk_rtl_override_hidden_text.json": {
+   "case": "tk_rtl_override_hidden_text",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:03:56Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "e7e70dc19e6f708c9e82d79db5adfdef462331a14632117c187d22b79c98ba39"
+  },
+  "tk_rtl_override_hidden_text_2origin.json": {
+   "case": "tk_rtl_override_hidden_text_2origin",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:06:53Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "97020a276ca634b454b808166055a5c4233d5aba2dd2c2c27a76083ed15c2d8b"
+  },
+  "tk_timezone_boundary_disguises_out_of_window_event.json": {
+   "case": "tk_timezone_boundary_disguises_out_of_window_event",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:06:03Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "2d6a3fa607e9e008c55653ae39d15835d6888cea769ef8b7f120ecb2abdf4a3a"
+  },
+  "tk_true_quote_false_assertion_claim_evades_check_claims.json": {
+   "case": "tk_true_quote_false_assertion_claim_evades_check_claims",
+   "model_ids": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+   ],
+   "recorded_utc": "2026-11-09T16:06:22Z",
+   "run_id": "rte4c-record-20261109T160356Z",
+   "sha256": "a6f31acf25e986507675d057b256dc68417b2ce4ec39ab2806b3491232b1d74c"
+  }
+ },
+ "note": "RTE4c replay fixtures: real recorded production-pair raw answers, never hand-edited"
+}

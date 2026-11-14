@@ -1,0 +1,58 @@
+# CF1d indexer Worker (D-HOST3). NO secrets in this file (the indexer is read-only and holds no key or token at all).
+# Storage is Cloudflare D1: create it once and put its id below (CF1e, see README.md); the id here is a placeholder.
+# NO cron trigger either: the account allows 5 in total and the keeper Worker's single `* * * * *` dispatcher
+# (workers/common/src/dispatcher.ts) runs the indexer's periodic jobs (indexer-tick, indexer-governance) through the
+# INDEXER_SERVICE binding declared in the keeper's toml. GET routes are the public API (same as services/indexer/src/server.ts).
+name = "praetorial-indexer-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# The read API is public (browsers/relayer call it); CF1e decides the route. Ticks arrive over the service binding.
+workers_dev = true
+# Deliberately no node compat flag: the bundle must run on bare workerd.
+
+[[d1_databases]]
+binding = "INDEXER_DB"
+database_name = "praetorial-indexer-testnet"
+database_id = "75385cf1-de6a-4bcd-9b6a-e495cfb26d2c"
+migrations_dir = "migrations"
+
+# Non-secret configuration (testnet). Account/contract ids are public.
+[vars]
+NEAR_NETWORK_ID = "testnet"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+# NOKEY1b (D-UPGRADE1) list. IDX1: with ESCROW_CONTRACT_ID set the indexer ingests and serves ONLY that escrow (the web's);
+# this list then only supplies its version label. frz2 rows already in D1 are kept, never read or served (keeper settles frz2).
+ESCROW_CONTRACTS = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet@v1,praetorial-frz2-2611091914.praetorial-dev-1101.testnet@v1"
+INTENTS_CONTRACT_ID = "intents-mock.praetorial-dev-1101.testnet"
+# ESCROW_CONTRACTS = "id@v1,id2@v2"                       # multi-contract (D-UPGRADE1); replaces ESCROW_CONTRACT_ID
+# CS1 (D-DSY1): independent second testnet RPC (Intear) + NEAR RPC; without it every Settled/Voided bet stays "settling, confirming".
+NEAR_RPC_FALLBACKS = "https://testnet-rpc.intea.rs,https://rpc.testnet.near.org"
+# INDEXER_BATCH_BETS = "12"                               # bets read per tick (across contracts)
+# INDEXER_MAX_CONFIRMS_PER_TICK = "8"                     # second-RPC confirmations per tick
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-indexer-mainnet"
+# DOM1: public host indexer.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "indexer.praetorial.com", custom_domain = true }]
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+workers_dev = true
+
+[[env.mainnet.d1_databases]]
+binding = "INDEXER_DB"
+database_name = "praetorial-indexer-mainnet"
+# MAINPREP1: created 2026-11-10 (`npx wrangler d1 create praetorial-indexer-mainnet`), empty; migrations run by deploy-mainnet.sh.
+database_id = "cef6ee27-67bf-4d3c-8ab3-f77e20e21409"
+migrations_dir = "migrations"
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+NEAR_RPC_URL = "https://free.rpc.fastnear.com"
+# MAINPREP1 (D-DSY1): independent second RPC (Intear) + NEAR Foundation RPC; both answered mainnet views 2026-11-10.
+NEAR_RPC_FALLBACKS = "https://rpc.intea.rs,https://rpc.mainnet.near.org"

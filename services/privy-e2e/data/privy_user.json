@@ -1,0 +1,28 @@
+{
+  "step": "create_user",
+  "ok": true,
+  "privyUserId": "did:privy:cmw1buwbl01id0hl86wsn4rfe",
+  "email": "praetorial-e2e+privy-near-1@example.com",
+  "walletId": "eg52d4zopaywx89c8cm0ufnj",
+  "address": "73a2e53382431d020c0a73345f20c0b85ebe7adea255942957542318278052d5",
+  "implicitAccountId": "73a2e53382431d020c0a73345f20c0b85ebe7adea255942957542318278052d5",
+  "rawLinkedAccount": {
+    "id": "eg52d4zopaywx89c8cm0ufnj",
+    "type": "wallet",
+    "address": "73a2e53382431d020c0a73345f20c0b85ebe7adea255942957542318278052d5",
+    "wallet_index": 0,
+    "chain_id": "",
+    "public_key": "0073a2e53382431d020c0a73345f20c0b85ebe7adea255942957542318278052d5",
+    "chain_type": "near",
+    "delegated": false,
+    "wallet_client": "privy",
+    "wallet_client_type": "privy",
+    "connector_type": "embedded",
+    "user_can_sign": true,
+    "imported": false,
+    "recovery_method": "privy-v2",
+    "verified_at": 1793749028,
+    "first_verified_at": 1793749028,
+    "latest_verified_at": 1793749028
+  }
+}

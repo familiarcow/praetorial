@@ -1,0 +1,49 @@
+{
+  "_comment": "TEMPLATE (not a prototype): domain / website change (RDAP, DNS-over-HTTPS, Wayback)",
+  "claim": "The registrar-of-record or nameservers for example.com in the Verisign RDAP record change between 2026-11-06T00:00:00Z and 2026-12-06T00:00:00Z.",
+  "elements": [
+    {
+      "id": "e1",
+      "q": "Do the exhibits show the Verisign RDAP nameserver set or registrar for example.com in the end snapshot differing from the start snapshot taken at the signing time?"
+    }
+  ],
+  "rule": "ALL",
+  "clauses": [
+    "UTC_V1",
+    "NO_DATA_FALLBACK_V1",
+    "RETRACTION_V1"
+  ],
+  "custom_definitions": [
+    "Compare two resolver snapshots (start at signing, end at deadline) field by field on the normalised, sorted nameserver list and registrar name; page content or TLS certificate changes do not count.",
+    "RDAP is authoritative for .com; DNS-over-HTTPS answers are corroboration only.",
+    "Round-trip changes (A to B to A) inside the window are invisible to two snapshots and are NOT detected: v2 until the keeper snapshots hourly.",
+    "Burden of proof is on YES: an unproven or ambiguous element resolves NO.",
+    "Early resolution: YES may be declared at the first qualifying event; NO only at/after the deadline.",
+    "Fallback: a blocked, rate-limited or unreachable source is COULDNT_CHECK (never NO); the recovery ladder and the listed fallback source apply, then VOID."
+  ],
+  "time": {
+    "window_start": "2026-11-06T00:00:00Z",
+    "window_end": "2026-12-06T00:00:00Z",
+    "evidence_cutoff": "2026-12-13T00:00:00Z"
+  },
+  "sources_allowed": [
+    {
+      "id": "S0",
+      "publisher": "Verisign RDAP (rdap.verisign.com)"
+    },
+    {
+      "id": "S1",
+      "publisher": "Cloudflare DNS-over-HTTPS (cloudflare-dns.com)"
+    }
+  ],
+  "source_classes": {
+    "Verisign RDAP (rdap.verisign.com)": "primary",
+    "Cloudflare DNS-over-HTTPS (cloudflare-dns.com)": "data"
+  },
+  "window_close": "2026-12-28T00:00:00Z",
+  "sources": true,
+  "bettype": {
+    "type": "domain_change",
+    "fetch": "GET https://rdap.verisign.com/com/v1/domain/example.com"
+  }
+}

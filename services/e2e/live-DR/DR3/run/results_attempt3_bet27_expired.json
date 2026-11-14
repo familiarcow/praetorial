@@ -1,0 +1,43 @@
+{
+  "txs": [
+    {
+      "step": "mint wNEAR (betting balance) to maker",
+      "by": "harness",
+      "hash": "FdsvmKhJX9fYjUS7We6sx6FyDxVC89HD38iroqgccaUz",
+      "url": "https://testnet.nearblocks.io/txns/FdsvmKhJX9fYjUS7We6sx6FyDxVC89HD38iroqgccaUz"
+    },
+    {
+      "step": "mint wNEAR (betting balance) to taker",
+      "by": "harness",
+      "hash": "zUiPaafEFZaCnzyTWrnFsv8QJvf3QEaBDC7Zf75Frdm",
+      "url": "https://testnet.nearblocks.io/txns/zUiPaafEFZaCnzyTWrnFsv8QJvf3QEaBDC7Zf75Frdm"
+    },
+    {
+      "step": "tNEAR to taker implicit",
+      "by": "harness",
+      "hash": "FEBhCMM1xUBajW8nGaXjLjCqAML7afUYevgPdQqq3AoU",
+      "url": "https://testnet.nearblocks.io/txns/FEBhCMM1xUBajW8nGaXjLjCqAML7afUYevgPdQqq3AoU"
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T20:54:32.702Z"
+    }
+  ],
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "taker": "f69ac4724f8b97856feb798a583a8a98e42a69bb0155e136934a6309b13ae071",
+  "market": {
+    "station": "KNYC",
+    "date": "2026-11-10",
+    "op": ">=",
+    "x_f": 62
+  },
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "107002441838228646760869577",
+    "taker": "3100000000000000000000000",
+    "fee": "3749149565217391304347824",
+    "escrow": "47334575000000000000000000"
+  }
+}

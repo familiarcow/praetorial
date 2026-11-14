@@ -1,0 +1,236 @@
+[
+ {
+  "file": "btc_A_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=60&start=1794012960&end=1794016559",
+  "fetched_at": "2026-11-07T03:26:16Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 8019,
+  "note": "Bitstamp 1m, window 2026-11-07T00:56:00Z..2026-11-07T01:56:00Z"
+ },
+ {
+  "file": "btc_A_cb_p0.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T00:56:00Z&end=2026-11-07T01:55:59Z",
+  "fetched_at": "2026-11-07T03:26:16Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 3564,
+  "note": "Coinbase 1m page 0, window 2026-11-07T00:56:00Z..2026-11-07T01:56:00Z"
+ },
+ {
+  "file": "btc_A_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1794012959",
+  "fetched_at": "2026-11-07T03:26:17Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 11993,
+  "note": "Kraken 1m since=1794012959"
+ },
+ {
+  "file": "btc_B_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=60&start=1794000360&end=1794003959",
+  "fetched_at": "2026-11-07T03:26:17Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 8021,
+  "note": "Bitstamp 1m, window 2026-11-06T21:26:00Z..2026-11-06T22:26:00Z"
+ },
+ {
+  "file": "btc_B_cb_p0.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-06T21:26:00Z&end=2026-11-06T22:25:59Z",
+  "fetched_at": "2026-11-07T03:26:17Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 3546,
+  "note": "Coinbase 1m page 0, window 2026-11-06T21:26:00Z..2026-11-06T22:26:00Z"
+ },
+ {
+  "file": "btc_B_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1794000359",
+  "fetched_at": "2026-11-07T03:26:17Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 28604,
+  "note": "Kraken 1m since=1794000359"
+ },
+ {
+  "file": "btc_C_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=60&start=1793985960&end=1793989559",
+  "fetched_at": "2026-11-07T03:26:18Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 8021,
+  "note": "Bitstamp 1m, window 2026-11-06T17:26:00Z..2026-11-06T18:26:00Z"
+ },
+ {
+  "file": "btc_C_cb_p0.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-06T17:26:00Z&end=2026-11-06T18:25:59Z",
+  "fetched_at": "2026-11-07T03:26:17Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 3579,
+  "note": "Coinbase 1m page 0, window 2026-11-06T17:26:00Z..2026-11-06T18:26:00Z"
+ },
+ {
+  "file": "btc_C_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1793985959",
+  "fetched_at": "2026-11-07T03:26:18Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 47651,
+  "note": "Kraken 1m since=1793985959"
+ },
+ {
+  "file": "btc_D_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=60&start=1793946360&end=1793949959",
+  "fetched_at": "2026-11-07T03:26:18Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 8020,
+  "note": "Bitstamp 1m, window 2026-11-06T06:26:00Z..2026-11-06T07:26:00Z"
+ },
+ {
+  "file": "btc_D_cb_p0.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-06T06:26:00Z&end=2026-11-06T07:25:59Z",
+  "fetched_at": "2026-11-07T03:26:18Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 3552,
+  "note": "Coinbase 1m page 0, window 2026-11-06T06:26:00Z..2026-11-06T07:26:00Z"
+ },
+ {
+  "file": "btc_D_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1793946359",
+  "fetched_at": "2026-11-07T03:26:19Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 57244,
+  "note": "Kraken 1m since=1793946359 (older than ~12h: since ignored, latest 721 candles returned)"
+ },
+ {
+  "file": "btc_G_bs.json",
+  "source_url": "https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=360&start=1793379600&end=1793401199",
+  "fetched_at": "2026-11-07T03:28:26Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 47935,
+  "note": "Bitstamp 1m, window 2026-10-30T17:00:00Z..2026-10-30T23:00:00Z"
+ },
+ {
+  "file": "btc_G_cb_p0.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-10-30T17:00:00Z&end=2026-10-30T21:09:59Z",
+  "fetched_at": "2026-11-07T03:28:25Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 14750,
+  "note": "Coinbase 1m page 0, window 2026-10-30T17:00:00Z..2026-10-30T23:00:00Z"
+ },
+ {
+  "file": "btc_G_cb_p1.json",
+  "source_url": "https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-10-30T21:10:00Z&end=2026-10-30T22:59:59Z",
+  "fetched_at": "2026-11-07T03:28:25Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 6520,
+  "note": "Coinbase 1m page 1, window 2026-10-30T17:00:00Z..2026-10-30T23:00:00Z"
+ },
+ {
+  "file": "btc_G_kr.json",
+  "source_url": "https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1&since=1793379599",
+  "fetched_at": "2026-11-07T03:28:26Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 57243,
+  "note": "Kraken 1m since=1793379599 (older than ~12h: since ignored, latest 721 candles returned)"
+ },
+ {
+  "file": "espn_mlb_scoreboard_20261028.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20261028",
+  "fetched_at": "2026-11-07T03:26:16Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 20584,
+  "note": "second source for MLB"
+ },
+ {
+  "file": "espn_nfl_scoreboard_20261101.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20261101",
+  "fetched_at": "2026-11-07T03:26:15Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 107078,
+  "note": "contains event 401873026 BUF-BAL; first attempt with UA praetorial-replay17b got HTTP 403 (the intermittent ESPN 403 in the design doc), refetched OK with the resolver UA"
+ },
+ {
+  "file": "espn_nhl_scoreboard_20261105.json",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20261105",
+  "fetched_at": "2026-11-07T03:26:15Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 332366,
+  "note": "second source for NHL"
+ },
+ {
+  "file": "gemini_1m_btcusd.json",
+  "source_url": "https://api.gemini.com/v2/candles/btcusd/1m",
+  "fetched_at": "2026-11-07T03:26:19Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 88703,
+  "note": "latest ~1d of 1m candles, no time params; resolver has no Gemini adapter"
+ },
+ {
+  "file": "iem_cli_knyc_2026.json",
+  "source_url": "https://mesonet.agron.iastate.edu/json/cli.py?station=KNYC&year=2026",
+  "fetched_at": "2026-11-07T03:25:25Z",
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "bytes": 389440,
+  "note": "FULL year body, untrimmed"
+ },
+ {
+  "file": "mlb_schedule_20261028.json",
+  "source_url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-10-28",
+  "fetched_at": "2026-11-07T03:26:15Z (file mtime)",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 1701,
+  "note": "World Series game 849799 final MIL 4 TB 1"
+ },
+ {
+  "file": "nhl_score_20261105.json",
+  "source_url": "https://api-web.nhle.com/v1/score/2026-11-05",
+  "fetched_at": "2026-11-07T03:25:27Z",
+  "http_status": 200,
+  "content_type": "application/json",
+  "bytes": 85807,
+  "note": "games incl. 2026020261 NSH 3 COL 2 (OT) and 2026020251 UTA 4 MTL 5 (OT)"
+ },
+ {
+  "file": "nws_cli_list_nyc.json",
+  "source_url": "https://api.weather.gov/products/types/CLI/locations/NYC",
+  "fetched_at": "2026-11-07T03:25:25Z",
+  "http_status": 200,
+  "content_type": "application/ld+json",
+  "bytes": 5716,
+  "note": "rolling ~7d list of CLI product ids (metadata only, no text)"
+ },
+ {
+  "file": "nws_cli_nyc_20261105T0633.json",
+  "source_url": "https://api.weather.gov/products/54f7a672-f529-4af2-8133-36be1b0f3cb4",
+  "fetched_at": "2026-11-07T03:25:25Z",
+  "http_status": 200,
+  "content_type": "application/ld+json",
+  "bytes": 4732,
+  "note": "CLI issued 2026-11-05T06:33Z = climate day 2026-11-04 (high also 72)"
+ },
+ {
+  "file": "nws_cli_nyc_20261106T0645.json",
+  "source_url": "https://api.weather.gov/products/7a7c269a-dc88-46b3-8e37-4c86e0f12678",
+  "fetched_at": "2026-11-07T03:25:25Z",
+  "http_status": 200,
+  "content_type": "application/ld+json",
+  "bytes": 4733,
+  "note": "CLI issued 2026-11-06T06:45Z = report for climate day 2026-11-05"
+ }
+]

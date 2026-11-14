@@ -1,0 +1,4 @@
+# RELAYFUND2 testnet proof (testnet only)
+- Mock redeployed IN PLACE (state layout unchanged: only `ft_on_transfer` added; before/after mt_balance_of views identical, see mock_deploy.json). Deploy tx HSk2bHjcjCFhqcDUnRQTGgffEaaDmWFVmbVgSN3hXtL on intents-mock.praetorial-dev-1101.testnet. FRZ1b escrow still points at it.
+- results.json: fresh user 1c8fb094...f27 funded 0.2 NEAR by pf-109110569.testnet (dev account was out of funds); ONE relayer NearClient/Relayer relayed BOTH near_deposit (tx 7BckroJaRiK62VJmf9zpSzzCUNgwcYAVZSj3WAp7YeAu) and ft_transfer_call of the ACTUAL wNEAR balance 98750000000000000000000 (tx 4vESoLnAfWXW3foszUwH896irk5wt9YLziWiTkX2qZM), no sleep, no InvalidNonce.
+- Result: wNEAR after move 0; intents mt_balance_of(user, nep141:wrap.testnet) = 98750000000000000000000 (> 0).

@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-l1b11-11072031.praetorial-dev-1101.testnet bet 2 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash a240f3632e956d5eac45c2965b8fdc85b5b2aa17656d00b37bd2eb3e68afbf97
+PASS E2  pins match release record record-7683e0f.json (commit 7683e0fa); new() args recorded (guardian arbiter1.praetorial-dev-1101.testnet, fee account fee.praetorial-dev-1101.testnet, limits max_rounds 2); guardian/limits/fee have no view, so these are the recorded args, not a chain read; current incarnation (account created 1794083806028700683 ns; 2 earlier deploy/new() of a deleted incarnation ignored)
+PASS E3  resolver wasm (3300094 bytes) hashes to the pinned resolver_wasm_hash 2576b08ecd329f83f14179cd8d0c25733610a9c8859ebe80a36f5a462c05b773
+SKIP E4  offline: pubkey reproduction needs a live OutLayer report-pubkey run (spends credit); see docs/VERIFY.md for the by-hand command
+PASS B1  sha256(terms) == envelope.terms_hash 6149c44f6e0fb2f3ae100d8fba807ac89eb11017bc5f285d6cb26400c8a4730a
+PASS B2  attestation signature valid under pinned attest_pubkey; 11s old when the bet was opened (limit 3600s)
+PASS B3  1 submitted result(s): ed25519 valid under pinned outcome_pubkey, run_no 3 each equal to the run_no the escrow assigned (assigned 1,2,3; 2 assigned run(s) delivered no signed result, so run_no gaps are expected, D-RUNNO1), strictly increasing, none replayed, terms_hash matches; outcome YES
+SKIP B4  PARTIAL, not a full pass: decision rule re-applied gives YES == signed outcome; deepseek-ai/DeepSeek-V4.1-Flash-1017: answer text matches content_sha256; 1 NEAR AI ed25519 signature(s) re-verified offline from the recorded signature_proof. NOT re-verified: raw NEAR AI stream for 1 answer(s) (binds the answer text to the signature) -- supply judge_evidence.json {responses}; attestation report for deepseek-ai/DeepSeek-V4.1-Flash-1017 signer 40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb (signer not bound to NEAR AI; supply --attestation <report.json> or run live)
+PASS B5  winner maker +1980000 (pot 2000000 - fee 20000); fee account +36000 (fee + 16000 storage); loser 0; escrow residue 0; pending 0 (derived from the escrow's tx receipts: accepted Open/Take deposits in, mt_transfer payouts out, pending_payouts view)
+PASS B6  taken before funding_deadline; proposed after it; settlement window 3600s ends 2026-11-07T22:44:56.325Z; finalize at 2026-11-07T22:45:46.876Z is after it
+# 8 PASS, 0 FAIL, 2 SKIP

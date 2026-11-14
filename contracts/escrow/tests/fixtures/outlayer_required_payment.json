@@ -1,0 +1,18 @@
+{
+  "_provenance": {
+    "source": "OutLayer contract source, repo https://github.com/out-layer/outlayer.git @ a2a8510528d9c8051e63765783d1e4ed998a273a. Required payment: contract/src/execution.rs `request_execution` (required_payment = estimated_cost + input_storage_deposit(len(input_data)); panics 'Insufficient payment: required ...' when attached_deposit < required_payment). estimated_cost (non compile-only) = contract/src/lib.rs `fn estimate_cost(&self, limits)`. Default fees from contract/src/lib.rs `new()` (lines 668-670). input_storage_deposit: contract/src/lib.rs `pub fn input_storage_deposit`.",
+    "formula": "required_payment_yocto = base_fee + (max_instructions / 1_000_000) * per_million_instructions_fee + (max_execution_seconds * 1000) * per_ms_fee + max(0, len(input_data) - 32768) * storage_price_per_byte. max_memory_mb does NOT enter the price.",
+    "live_corroboration": "testnet tx 74UnMMsvayTjCMXboRVGvkFDkA9rWs4LnGMKvNC2bCkr (item 16c): 'Insufficient payment' required 0.01605 NEAR at 150 s / 500e9 instructions, 0.01 sent. Formula below reproduces 16_050_000_000_000_000_000_000 exactly.",
+    "caveat": "fees are owner-settable on the real contract; these are the defaults that match live testnet. The escrow floor carries a safety margin for this reason."
+  },
+  "base_fee_yocto": "1000000000000000000000",
+  "per_million_instructions_fee_yocto": "100000000000000",
+  "per_ms_fee_yocto": "100000000000000000",
+  "input_data_free_bytes": 32768,
+  "storage_price_per_byte_yocto": "10000000000000000000",
+  "worked_example": {
+    "max_instructions": 500000000000,
+    "max_execution_seconds": 150,
+    "required_compute_yocto": "16050000000000000000000"
+  }
+}

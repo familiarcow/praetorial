@@ -1,0 +1,82 @@
+{
+  "summary": [
+    [
+      "Bet",
+      "Bitcoin touches $76,000 before Dec 8."
+    ],
+    [
+      "Deadline",
+      "Ends 2027-12-08 00:00 UTC"
+    ],
+    [
+      "Stakes",
+      "You put in 10.00 USDC · they put in 10.00 USDC"
+    ],
+    [
+      "Who decides",
+      "The AI judge, from api.exchange.coinbase.com"
+    ],
+    [
+      "Offer",
+      "This offer closes 2026-11-10 12:00 UTC."
+    ]
+  ],
+  "terms": [
+    [
+      "Sources",
+      "api.exchange.coinbase.com"
+    ],
+    [
+      "Offer closes",
+      "This offer closes 2026-11-10 12:00 UTC."
+    ],
+    [
+      "Event",
+      "2027-12-08 00:00 UTC"
+    ],
+    [
+      "Challenges",
+      "6h to challenge a ruling, 2 rounds."
+    ],
+    [
+      "Your stake",
+      "10.00 USDC"
+    ],
+    [
+      "Their stake",
+      "10.00 USDC"
+    ],
+    [
+      "Your storage charge",
+      "< 0.01 USDC (exactly 0.000004 USDC)"
+    ],
+    [
+      "Their storage charge",
+      "< 0.01 USDC (exactly 0.000004 USDC)"
+    ],
+    [
+      "You pay now",
+      "10.00 USDC (exactly 10.000004 USDC)"
+    ],
+    [
+      "Fee",
+      "1% of the stake, at least 0.50 USDC per person, taken from the pot when the bet ends."
+    ],
+    [
+      "Who can take it",
+      "Anyone with the link can take it."
+    ],
+    [
+      "Refunds",
+      "Nobody takes it: full refund. The AI can't decide (VOID): you both get your stakes back and no fee is charged. If the app is shut down, anyone can trigger a full refund."
+    ],
+    [
+      "Worst case",
+      "If you lose, you lose your 10.00 USDC stake. You can't lose more than what you pay now."
+    ],
+    [
+      "Safety",
+      "Money can only go to you or the other party."
+    ]
+  ]
+}

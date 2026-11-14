@@ -1,0 +1,21 @@
+[package]
+name = "state-wipe"
+version = "0.1.0"
+edition = "2021"
+
+# Throwaway testnet-only contract (D-E2E1a). Standalone: NOT part of contracts/ workspace.
+[workspace]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "5.29"
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true

@@ -1,0 +1,123 @@
+{
+  "intents": "intents.near",
+  "usdc_token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+  "outlayer": "outlayer.near",
+  "operator": "operator.praetorial.near",
+  "guardian": "praetorial.near",
+  "registry": "registry.praetorial.near",
+  "fee_account": "praetorial.near",
+  "keeper": "keeper.praetorial.near",
+  "limits": {
+    "max_stake": "10000000000000000000000000000000000",
+    "max_offer_ttl_secs": 5184000,
+    "max_stake_per_side_near": "10000000000000000000000000000000000",
+    "max_rounds": 2
+  },
+  "beta_sunset_ns": null,
+  "asset_limits": [
+    [
+      "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      {
+        "min_per_side": "10000000",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "500000",
+        "min_fee_cap_per_side": "2500000",
+        "run_price": "5000",
+        "min_bond": "5000000",
+        "min_objection": "1000000",
+        "storage_per_kib": "37491"
+      }
+    ],
+    [
+      "nep141:usdt.tether-token.near",
+      {
+        "min_per_side": "10000000",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "500000",
+        "min_fee_cap_per_side": "2500000",
+        "run_price": "5000",
+        "min_bond": "5000000",
+        "min_objection": "1000000",
+        "storage_per_kib": "37491"
+      }
+    ],
+    [
+      "nep141:btc.omft.near",
+      {
+        "min_per_side": "13591",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "679",
+        "min_fee_cap_per_side": "3397",
+        "run_price": "7",
+        "min_bond": "6796",
+        "min_objection": "1360",
+        "storage_per_kib": "51"
+      }
+    ],
+    [
+      "nep141:wrap.near",
+      {
+        "min_per_side": "2731382215970391816778881",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "136569110798519590838944",
+        "min_fee_cap_per_side": "682845553992597954194720",
+        "run_price": "1365691107985195908390",
+        "min_bond": "1365691107985195908389441",
+        "min_objection": "273138221597039181677889",
+        "storage_per_kib": "10240000000000000000000"
+      }
+    ],
+    [
+      "nep141:eth.omft.near",
+      {
+        "min_per_side": "4871834221225121",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "243591711061256",
+        "min_fee_cap_per_side": "1217958555306280",
+        "run_price": "2435917110613",
+        "min_bond": "2435917110612561",
+        "min_objection": "487183422122513",
+        "storage_per_kib": "18264592239656"
+      }
+    ],
+    [
+      "nep141:zec.omft.near",
+      {
+        "min_per_side": "980845",
+        "max_per_side": "10000000000000000000000000000000000",
+        "min_fee_per_side": "49042",
+        "min_fee_cap_per_side": "245211",
+        "run_price": "491",
+        "min_bond": "490423",
+        "min_objection": "98085",
+        "storage_per_kib": "3678"
+      }
+    ]
+  ],
+  "outcome_pubkey": "f67c1f8f0a7824810874ffd469c2034bf1e7723170ba61c0f3f265f3d3dfe440",
+  "attest_pubkey": "27070cba98ca952f06b41305d34e0ee907bb3da8cc9b6c9de275c93e8c670712",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "outlayer_config": {
+    "wasm_base_url": "https://main.fastfs.io/ops.praetorial.near/outlayer.near",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "aikey.praetorial.near"
+  },
+  "judge_chain": [
+    {
+      "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "model_b": "z-ai/glm-5.3-flash"
+    },
+    {
+      "model_a": "Qwen/Qwen3.8-27B",
+      "model_b": "moonshotai/kimi-k3"
+    },
+    {
+      "model_a": "google/gemini-3.5-flash",
+      "model_b": "openai/gpt-5.4-mini"
+    },
+    {
+      "model_a": "x-ai/grok-4.7",
+      "model_b": "anthropic/claude-haiku-5-5"
+    }
+  ]
+}

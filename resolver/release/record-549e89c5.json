@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "549e89c5723a7705cb2da80250473805993735f3",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "77ddcd947206676f45e49a27f9cb82d7eb25b5bef7a4dc5d121beb9b0faa747b",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "77ddcd947206676f45e49a27f9cb82d7eb25b5bef7a4dc5d121beb9b0faa747b"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "77ddcd947206676f45e49a27f9cb82d7eb25b5bef7a4dc5d121beb9b0faa747b"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "77ddcd947206676f45e49a27f9cb82d7eb25b5bef7a4dc5d121beb9b0faa747b"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; the default colima VM was not used for builds",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. First attempt hit the known wit-bindgen-rust build-script failure under QEMU emulation (no wasm produced); rerun produced the hash above. Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-a6954f9f.json (22b48e8d...). Item 16e (D-RESOLVE5) changes resolver code, so the wasm hash and therefore the bind:wasm outcome/attest pubkeys change: item 16f MUST redo the D-KEY2 report-pubkey bootstrap and re-bind the escrow pins to the new hash. Not uploaded to FastFS."
+  }
+}

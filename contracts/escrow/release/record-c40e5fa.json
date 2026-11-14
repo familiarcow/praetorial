@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "c40e5faf0381e6630bf1abe6c7238ecbc5e5a9b6",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.22.0-rust-1.97.1",
+  "image_digest": "sha256:7467038bdddc86484b73b416eeadce926ff59013e128e53dec5a19e1cb4b2234",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "hash_bs58": "EfCgMFheGBZpoFNrhDDozkGK43KL31W12dHUc2QWjQ7Q",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    }
+  ],
+  "notes": {
+    "item": "JC1r: reproducible escrow wasm of branch commit c40e5fa (escrow source incl. JC1/JC1s/JC1x/JCB1/JCD1/AS1/JCD2/CAP3b; identical to main 49d51f4 for contracts/escrow); NOT deployed anywhere",
+    "size_bytes": 538601,
+    "toolchain": "cargo-near 0.22.0, rustc 1.97.1 inside the image == contracts/rust-toolchain.toml and the conformance crate pin (1.97.1); profile from contracts/Cargo.toml, --cfg near from contracts/.cargo/config.toml, ABI embedded",
+    "supersedes": "record-8580ca7.json (hash 6b59b335..., stale vs current escrow source); older records remain superseded",
+    "emulation": "colima rosetta/QEMU. First attempt of build 1 died with a linker SIGSEGV under emulation (discarded, re-run); the three recorded builds (docker run x2, docker create/cp fresh export) all succeeded and are identical."
+  }
+}

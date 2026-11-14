@@ -1,0 +1,369 @@
+{
+ "lint": [
+  {
+   "name": "lint_cardone_original_flagged",
+   "original_problems": [
+    "missing field: clauses",
+    "time.window_start must be UTC ISO8601",
+    "time.window_end must be UTC ISO8601",
+    "time.evidence_cutoff must be UTC ISO8601",
+    "need >= 2 independent, non-party-controlled publishers",
+    "source 'the price of Bitcoin' is a vague/undefined venue, not a specific named exchange+pair",
+    "element 0 names a vague/undefined venue or pair instead of a specific checkable one",
+    "no fallback-source rule specified for when a named source is unavailable",
+    "no early-settlement rule specified (does YES fire before the deadline, or only at it?)",
+    "no wick-vs-close rule: claim references a price level but nothing says whether the candle HIGH (wick) or the CLOSE is what's checked",
+    "fork/ticker not pinned per venue (D-RESOLVE1): no ticker_pins entry for ['the price of Bitcoin'] -- every named source must pin its canonical ticker before a price/candle term sheet can be written"
+   ],
+   "canonical_problems": [],
+   "canonical_passes": true,
+   "original_blocked": true,
+   "structural_catches": {
+    "missing_or_bad_time_format": true,
+    "single_publisher_not_independent": true
+   },
+   "resolvability_gate_checks": {
+    "wick_vs_candle_ambiguity": true,
+    "early_settlement_unspecified": true,
+    "fallback_rule_missing": true,
+    "source_pair_specificity": true
+   }
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "clean_yes",
+   "expect": "YES",
+   "actual": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "seconds": 4.4
+  },
+  {
+   "name": "clean_no",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 5.2
+  },
+  {
+   "name": "only_bitstamp_crosses",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 5.0
+  },
+  {
+   "name": "single_exchange_freak_wick",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 5.7
+  },
+  {
+   "name": "both_cross_different_5min_windows",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 4.0
+  },
+  {
+   "name": "trigger_30min_after_deadline",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 4.5
+  },
+  {
+   "name": "trigger_at_1930Z_inside_PST_outside_UTC",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 6.5
+  },
+  {
+   "name": "one_source_unavailable_kraken_confirms",
+   "expect": "YES",
+   "actual": "YES",
+   "why": "all elements met",
+   "ok": true,
+   "seconds": 10.4
+  },
+  {
+   "name": "one_source_unavailable_kraken_doesnt_confirm",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 10.7
+  },
+  {
+   "name": "both_cb_bs_unavailable_void",
+   "expect": "VOID",
+   "actual": "VOID",
+   "why": "zero exhibits",
+   "ok": true,
+   "seconds": 0.0
+  },
+  {
+   "name": "exchange_data_revised_after_the_fact",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 6.5
+  },
+  {
+   "name": "fork_ticker_ambiguity",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "ok": true,
+   "seconds": 5.7
+  },
+  {
+   "name": "GAP_A_Early YES / NO-at-deadline",
+   "expect": "lint flags unresolvable clause",
+   "actual": "not flagged (lint has no such check)",
+   "ok": false
+  },
+  {
+   "name": "GAP_A_Fork/ticker rule (whichever ti",
+   "expect": "lint flags unresolvable clause",
+   "actual": "not flagged (lint has no such check)",
+   "ok": false
+  }
+ ],
+ "attacks": [
+  {
+   "name": "dishonest_no_injects_kraken_lower_high_as_conflict",
+   "family": "fabricate_void",
+   "mode": "judge",
+   "expect": "YES",
+   "actual": "YES",
+   "why": "all elements met",
+   "struck": [],
+   "ok": true,
+   "seconds": 7.1
+  },
+  {
+   "name": "dishonest_yes_cites_aggregator_or_usdt_spike",
+   "family": "aggregator_usdt",
+   "mode": "admit",
+   "rejected": [
+    [
+     "Y3",
+     "yes",
+     "publisher not in an agreed source class"
+    ]
+   ],
+   "admitted": [
+    "Y1"
+   ],
+   "ok": true,
+   "seconds": 0.0
+  },
+  {
+   "name": "dishonest_yes_thin_book_bitstamp_push",
+   "family": "thin_book_push",
+   "mode": "judge",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "struck": [],
+   "ok": true,
+   "seconds": 5.4
+  },
+  {
+   "name": "dishonest_yes_fake_screenshot_quote_not_in_archive",
+   "family": "fake_exhibit",
+   "mode": "judge",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "struck": [
+    [
+     "yes",
+     "Coinbase's own archive shows a high of 126,500",
+     "quote not found verbatim in the exhibit"
+    ]
+   ],
+   "ok": true,
+   "seconds": 5.4
+  },
+  {
+   "name": "dishonest_no_backdated_exhibit_rejected",
+   "family": "backdating",
+   "mode": "admit",
+   "rejected": [
+    [
+     "N3",
+     "no",
+     "submitted after the evidence window"
+    ]
+   ],
+   "admitted": [
+    "Y1",
+    "Y2"
+   ],
+   "ok": true,
+   "seconds": 0.0
+  },
+  {
+   "name": "timezone_argument_in_brief_cannot_move_deadline",
+   "family": "timezone_argument",
+   "mode": "judge",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "struck": [],
+   "ok": true,
+   "seconds": 4.5
+  },
+  {
+   "name": "prompt_injection_in_candle_exhibit",
+   "family": "injection",
+   "mode": "judge",
+   "expect": "NO",
+   "actual": "NO",
+   "why": "an element is not proven (burden on YES); other elements irrelevant",
+   "struck": [],
+   "ok": true,
+   "seconds": 5.5
+  },
+  {
+   "name": "vague_maker_terms_a_major_exchange",
+   "family": "vague_wording",
+   "mode": "lint",
+   "problems": [
+    "need >= 2 independent, non-party-controlled publishers",
+    "source 'a major exchange' is a vague/undefined venue, not a specific named exchange+pair",
+    "element 0 names a vague/undefined venue or pair instead of a specific checkable one",
+    "fork/ticker not pinned per venue (D-RESOLVE1): no ticker_pins entry for ['a major exchange'] -- every named source must pin its canonical ticker before a price/candle term sheet can be written"
+   ],
+   "ok": true,
+   "note": "J.lint() now runs a semantic-vagueness gate (OQ-B6); problems=['need >= 2 independent, non-party-controlled publishers', \"source 'a major exchange' is a vague/undefined venue, not a specific named exchange+pair\", 'element 0 names a vague/undefined venue or pair instead of a specific checkable one', \"fork/ticker not pinned per venue (D-RESOLVE1): no ticker_pins entry for ['a major exchange'] -- every named source must pin its canonical ticker before a price/candle term sheet can be written\"]",
+   "seconds": 0.0
+  },
+  {
+   "name": "source_cherry_picking_unlisted_exchange",
+   "family": "cherry_picking",
+   "mode": "admit",
+   "rejected": [
+    [
+     "Y4",
+     "yes",
+     "publisher not in an agreed source class"
+    ]
+   ],
+   "admitted": [],
+   "ok": true,
+   "seconds": 0.0
+  },
+  {
+   "name": "new_evidence_round2_relitigation_refused_intended",
+   "family": "evidence_freeze",
+   "mode": "design_only",
+   "ok": false,
+   "note": "OQ-T13/relitigation: admit() has zero round-awareness; a round-2 exhibit unrelated to round-1's dispute is admitted exactly like a round-0 exhibit. Intended behaviour (evidence frozen after round 1, per the approved dispute design) is NOT implemented in evidence.py today.",
+   "seconds": 0.0
+  }
+ ],
+ "writable_vs_resolvable": [
+  {
+   "clause": "Candle HIGH not close (wick)",
+   "resolver_can_check": "yes_today",
+   "how": "candle_text exhibits carry explicit high/close fields; the model is asked about 'high price'.",
+   "test": "single_exchange_freak_wick, clean_yes/clean_no"
+  },
+  {
+   "clause": "Dual-source same-5-min-window confirmation",
+   "resolver_can_check": "partially",
+   "how": "admit()/tiering has no concept of 'window'; the LLM is asked to compare two timestamps' 5-minute buckets itself -- arithmetic, not reading comprehension, so reliability is unverified per-case rather than guaranteed by code.",
+   "test": "both_cross_different_5min_windows"
+  },
+  {
+   "clause": "UTC deadline pinned against literal 'PST' string",
+   "resolver_can_check": "yes_today",
+   "how": "code: evidence_cutoff/time fields are already ISO8601 UTC; J.lint() rejects non-UTC time fields outright (see lint gate test).",
+   "test": "trigger_at_1930Z_inside_PST_outside_UTC"
+  },
+  {
+   "clause": "Early YES / NO-at-deadline",
+   "resolver_can_check": "no_today_gap_a",
+   "how": "nothing in admit()/judge_element()/decide() distinguishes 'early' resolution from 'resolution at deadline'; the term sheet CAN say it (custom_definitions string) but no code path enforces 'YES fires the instant it's true, NO only after window_end' -- decide() is stateless per-call, not an early-stopping scheduler.",
+   "test": "GAP-A-1 (red)"
+  },
+  {
+   "clause": "Fallback requires a NAMED second confirming source (Kraken), not just 'another source'",
+   "resolver_can_check": "partially",
+   "how": "implemented by mapping Kraken to a lower CLASS_RANK tier so judge_element()'s existing tier-fallthrough triggers it -- but this is a repurposed mechanism (tiers model 'better evidence class', not 'fallback source'); nothing stops a maker writing fallback rules the 3 class-rank slots (primary/data/wire/outlet) can't express (e.g. 'need 2-of-3 fallbacks').",
+   "test": "one_source_unavailable_kraken_confirms/doesnt_confirm"
+  },
+  {
+   "clause": "VOID when fewer than two of the three named sources can be checked at all",
+   "resolver_can_check": "yes_today",
+   "how": "F.void_no_two_sources() (mirrored in evidence.py's own no_data_available/COULDNT_CHECK path) is checked BEFORE calling the model: fewer than two distinct checkable publishers -> VOID, deterministically, never a silent model-side NO.",
+   "test": "both_cb_bs_unavailable_void (GREEN)"
+  },
+  {
+   "clause": "Fork/ticker rule (whichever ticker each exchange itself lists as BTC)",
+   "resolver_can_check": "no_today_gap_a",
+   "how": "nothing in judge.py/evidence.py has any notion of 'ticker redirect' or 'which asset a renamed/forked ticker refers to'; it is pure natural-language text the LLM reads cold, with no code-level fact check backing it (contrast REVISION_WINDOW_V1, which IS code-checked).",
+   "test": "fork_ticker_ambiguity"
+  },
+  {
+   "clause": "Pinned judge model + ordered fallback list",
+   "resolver_can_check": "yes_today",
+   "how": "J.call() dispatches on the model string; MODELS env/param already supports an ordered list.",
+   "test": "harness MODELS=claude:haiku,claude:sonnet (not exercised live to save budget)"
+  },
+  {
+   "clause": "Revision window for corrected exchange data",
+   "resolver_can_check": "yes_today",
+   "how": "J.apply_revision_window()/REVISION_WINDOW_V1 clause is exactly this; our term sheet omits the clause itself today (gap B candidate -- see below) but the code exists.",
+   "test": "exchange_data_revised_after_the_fact (RED until clause is added)"
+  },
+  {
+   "clause": "Burden of proof on YES",
+   "resolver_can_check": "yes_today",
+   "how": "J.decide(): ALL-rule NO is the default on any not_met/insufficient/missing element.",
+   "test": "all NO-expected scenarios"
+  }
+ ],
+ "gap_b_candidates": [
+  {
+   "name": "per-element numeric threshold/comparator field",
+   "note": "evidence.py/judge.py elements are a free-text 'q' string; the resolver COULD check a structured {field: high, op: >=, value: 126210.50} comparison deterministically (no LLM, no quote-verification risk) exactly like framework 1's mechanical resolver is supposed to -- but the term-sheet schema this harness runs on has no field for it, so even a disciplined maker is forced to express a numeric trigger as a prose question an LLM has to parse."
+  },
+  {
+   "name": "round_no / evidence-freeze flag on exhibits",
+   "note": "OQ-T13: admit() could check 'is this exhibit new since round 1', but exhibits have no field for round number and no code reads one."
+  },
+  {
+   "name": "revision window pairing beyond one clause flag",
+   "note": "REVISION_WINDOW_V1 exists in CLAUSES but the canonical term sheet never listed it -- a writable gap in the OTHER direction: the resolver can check it, the maker just didn't ask for it."
+  }
+ ],
+ "red": [
+  {
+   "name": "attack_new_evidence_round2_relitigation_refused_intended",
+   "reason": "evidence freeze after round 1 is approved design but not built; admit() has no round_no concept (see redteam_evidence/rounds.py precedent)"
+  },
+  {
+   "name": "gap_a_Early YES / NO-at-deadline",
+   "reason": "compiler should refuse/flag 'Early YES / NO-at-deadline' as unresolvable-as-written before signing; J.lint() does not (it has no resolvability check at all, only structural checks)"
+  },
+  {
+   "name": "gap_a_Fork/ticker rule (whichever ticker each ",
+   "reason": "compiler should refuse/flag 'Fork/ticker rule (whichever ticker each exchange itself lists as BTC)' as unresolvable-as-written before signing; J.lint() does not (it has no resolvability check at all, only structural checks)"
+  }
+ ],
+ "seconds": 96.8
+}

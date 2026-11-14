@@ -1,0 +1,12 @@
+{
+  "step": "relayer_meta_tx",
+  "ok": true,
+  "walletId": "ed16wnt5gbhmshxcbf7gn0uf",
+  "accountId": "cf846c8e62324f7341f98a7156aae3aac929a2c584d2c923c36ebc9d62ad6980",
+  "minimalFundingTx": "6DShZgmLht93Z2Ez9wfanh1xYbHcPqHb9YF3H5wXWZ5c",
+  "outerTxHash": "Rq8fbn5Di6TbZscKhaRhSKuwc7oY9CCBYoBn7Qg56o9",
+  "finalStatus": {
+    "SuccessValue": ""
+  },
+  "gapNote": "services/relayer's current implementation (relayer.ts submitSignedTransfer) requires signer===sender and does NOT implement NEP-366 DelegateAction relaying at all -- this script bypasses it to test the underlying Privy-signing mechanism directly. A real 'testnet relayer path' for meta-tx does not exist in this repo yet; see README gap list."
+}

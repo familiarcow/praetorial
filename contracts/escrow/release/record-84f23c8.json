@@ -1,0 +1,74 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "84f23c8495a41e2d32013f3abd4bd05b804b73b3",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.22.0-rust-1.97.1",
+  "image_digest": "sha256:7467038bdddc86484b73b416eeadce926ff59013e128e53dec5a19e1cb4b2234",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f",
+  "hash_bs58": "EfCgMFheGBZpoFNrhDDozkGK43KL31W12dHUc2QWjQ7Q",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f"
+    }
+  ],
+  "notes": {
+    "item": "NOKEY1b / D-RELREC2: record re-issued because the JC1r guard covers contracts/escrow/tests (nokey1_no_key_output.rs + fixture added); wasm byte-identical to record-1f223ec (caf134a4...), source diff vs 1f223ec is tests only; NOT a new deployment (frz3 uses this same wasm)",
+    "size_bytes": 538601,
+    "toolchain": "cargo-near 0.22.0, rustc 1.97.1 inside the image == contracts/rust-toolchain.toml and the conformance crate pin (1.97.1); profile from contracts/Cargo.toml, --cfg near from contracts/.cargo/config.toml, ABI embedded",
+    "supersedes": "record-1f223ec.json (same wasm hash caf134a4...; stale only vs contracts/escrow/tests/nokey1_no_key_output.rs and its fixture); older records remain superseded",
+    "emulation": "colima rosetta/QEMU. One of four build attempts died with the known linker SIGSEGV under emulation (discarded, re-run, as in record-1f223ec); the three recorded builds (docker run x2, docker create/cp fresh export) all succeeded and are identical."
+  },
+  "source": {
+    "scheme": "praetorial-source-v1: files[path] = '<git mode> <sha256 of bytes>'; digest = sha256 of the sorted lines '<mode> <sha256> <path>\\n'",
+    "digest": "4623d7046396d81d45dba59ffb4bed2ccfc655b159778f67e90bf85a973050e7",
+    "files": {
+      "contracts/.cargo/config.toml": "100644 d3c10b531c49ae67a48b57b582eacc7b5a1dc5c54e08b279940e0d367f455d95",
+      "contracts/Cargo.lock": "100644 f211f5a1fe29098c920422097fd9038fe2581feaa7e96994313c3f4871d9d1e8",
+      "contracts/Cargo.toml": "100644 41ee19ec58830a9b5bbe3a9ffaa04b7c93bca7bb64739e28562c120137305ef2",
+      "contracts/escrow/Cargo.toml": "100644 37a97555d2f5798c2cd4d1161db1125198c795be839d51b5baa5a8884231c94e",
+      "contracts/escrow/README.md": "100644 6e215d07a851981e5788f7691c13f7fe34ffe8c5ffa4fba17995741d4d6e13f9",
+      "contracts/escrow/proptest-regressions/tests.txt": "100644 08d66f220af92fc3fa99c01e6b8b990232e1f33c1c02cda82714e6fa1cd04ea6",
+      "contracts/escrow/release/build_reproducible.sh": "100755 0af7301743f89a4de253e6a944ef884e43b08f8a125e9e4c1286296c1547bee1",
+      "contracts/escrow/src/as1.rs": "100644 7e2319bbf1a5c84f6a56facfbfcba4a2f7dd3d06789fde28437e907474d6a1e9",
+      "contracts/escrow/src/cap3.rs": "100644 60d0cefe0ac10d09eaf4f44f4d940b2368d0dd4d237492783fdc47ac6c883db7",
+      "contracts/escrow/src/cap3b.rs": "100644 d3f561be7063aa92a7ceee5b2ab16eb51642d30517ba6bfa2ffd29245017f36e",
+      "contracts/escrow/src/cx1.rs": "100644 b258a4c69081e24f07eebcc99338b8006e0a218a34eac6ce07f149fa58f9f150",
+      "contracts/escrow/src/fm1.rs": "100644 4fc2f32ab46ccc19922c73e2945d1da6ae3b346216dfd9bd67f9f3d35d7c8268",
+      "contracts/escrow/src/jc1.rs": "100644 97bc7545da8b834cb140c19a282a18d5e2741c4b84956ef461dd6fa5174956d0",
+      "contracts/escrow/src/jc1s.rs": "100644 cb0d6993723026f1e4511c32ea43fc81d1d959a0926f70d61cf337f7a98caa8a",
+      "contracts/escrow/src/jc1x.rs": "100644 1392accb20b1ad70462e96e2ef0eaba6c88c9ae4e2cad624fafc70d23708ca39",
+      "contracts/escrow/src/jcb1.rs": "100644 62798fe1e4466a3309ed9dfb1e5e475ea85900f10c2ca79e66e16818de63e08b",
+      "contracts/escrow/src/jcd1.rs": "100644 6e929c2b217987852185c57335ea3e87e6adb847ac8d8d5bb48b8e98f246f6e2",
+      "contracts/escrow/src/jcd2.rs": "100644 2dd8dcf5a7d4807083d321db4fccd8da36a270615f68bb7db054cd07bf917621",
+      "contracts/escrow/src/lib.rs": "100644 d1283fa0b3a5882f722559bb86e5ac2d7e93090d308db2d95ee41ff9c5b7c03d",
+      "contracts/escrow/src/ms1.rs": "100644 df3c090f3c75d55056e9a4ba543c862835dfa3584ad8e19d254e46720e0e0362",
+      "contracts/escrow/src/rf2.rs": "100644 cfd46c97400e27f0e484b44ffb8460813de0bd79a8ab48da9aa1673c82778300",
+      "contracts/escrow/src/rt1b.rs": "100644 6a0c987af7817bc42c103948e3edfdb603a2fdbe85284cf00b23529cab5b56ed",
+      "contracts/escrow/src/rt_referee.rs": "100644 fd41e8fba68cc9630557482a9b374b2cb9f93059bb50bd804872390dd52aeede",
+      "contracts/escrow/src/seams.rs": "100644 064db5cf7b099a7b8fb4db0f8367ae455ec537d0037e48489445fe7c8672c201",
+      "contracts/escrow/src/stg1.rs": "100644 f6f6ad897b9934b1688a05902a7813171da4a2d6c3a95699c8cec867b083752c",
+      "contracts/escrow/src/tests.rs": "100644 d42a17046d96d899eab7f08338683ac84c93293a38cf9028d845cecbe7de8179",
+      "contracts/escrow/tests/chaos_findings.rs": "100644 e79d893ebc961969bf114f10e084313894c62ab6b09b646a4ba7269a49bfb5e0",
+      "contracts/escrow/tests/fixtures/nokey1_no_key_output.json": "100644 acfd0ed332ce2b7c7e72615fb4f0cdc63d76a80beee638107c01b13010eb3a82",
+      "contracts/escrow/tests/fixtures/outlayer_request_execution_abi.json": "100644 89a96282d80813043d6cbbc71e1072f8721f6c9fb42e3970f690ff5693be8025",
+      "contracts/escrow/tests/fixtures/outlayer_required_payment.json": "100644 495dcb6ece8345f059fa7a01f4e4f2090a7cba795a9417ca70be9b1407c27aa4",
+      "contracts/escrow/tests/fixtures/resolver_crosscheck.json": "100644 0368fd4b98510d745e1475cb28b433a79042e3d2f2c56740d4c05a3b61eae4da",
+      "contracts/escrow/tests/fixtures/sourcecheck_crosscheck.json": "100644 8d32a298fa4b87061204741e63d01b57a4bbbf4233a5fd0a741c9a413b12936b",
+      "contracts/escrow/tests/nokey1_no_key_output.rs": "100644 2b7f0dd2da046663c984c065759b5ece1618e3357325d374e2a250cb1863ea02",
+      "contracts/escrow/tests/redteam_dust.rs": "100644 4aaba73960547d990c023ae5148710a01a00cf54d1bb6b6f177c01a79f704409",
+      "contracts/rust-toolchain.toml": "100644 ae90ff053fadbe8e68cca6c2bef6d3705166557d830f319547b5f8511c8dfd5d"
+    }
+  }
+}

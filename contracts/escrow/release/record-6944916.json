@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "694491673842c9d90526752a7fcfdac0cbe742c8",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.22.0-rust-1.97.1",
+  "image_digest": "sha256:7467038bdddc86484b73b416eeadce926ff59013e128e53dec5a19e1cb4b2234",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "f62c4843ff7f2d33734cb8bc07c6e3da57199efd8440592c430975f090ef4b1b",
+  "hash_bs58": "HZxTWnL6NrQtHqD7RmY2RvBguBymRPS8QUThdTYE669Y",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "f62c4843ff7f2d33734cb8bc07c6e3da57199efd8440592c430975f090ef4b1b"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "f62c4843ff7f2d33734cb8bc07c6e3da57199efd8440592c430975f090ef4b1b"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "f62c4843ff7f2d33734cb8bc07c6e3da57199efd8440592c430975f090ef4b1b"
+    }
+  ],
+  "notes": {
+    "item": "TC1: toolchain alignment; reproducible escrow wasm of feat/tc1-toolchain-align 6944916 (main 4ce8b71 + guard + image switch); NOT deployed anywhere",
+    "size_bytes": 468326,
+    "toolchain": "cargo-near 0.22.0, rustc 1.97.1 inside the image == contracts/rust-toolchain.toml and the conformance crate pin (1.97.1); profile from contracts/Cargo.toml, --cfg near from contracts/.cargo/config.toml, ABI embedded",
+    "supersedes": "record-9662db8.json (rustc 1.96.0 image, hash 72f16b48...)",
+    "emulation": "colima rosetta. Build 1 ok first time; build 2 hit lld SIGSEGV (darling_macro link) 3 times in a row then succeeded on a later plain re-run; build 3 (docker create/cp, fresh export) failed twice (rc=1) then succeeded. All successful builds identical."
+  }
+}

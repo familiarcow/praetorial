@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "d815f2b6656f8a449c0647757e6ed5e05c9b54b4",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"},
+    {"route": "docker-run-2", "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"},
+    {"route": "fresh-container", "sha256": "c1fa42424cb7274eb8a3a0ac63afcd6cc5a267b1ffc9d146fdd707dac5bdf6b5"}
+  ],
+  "notes": {
+    "item": "FE6b (D-FE6B1): resolver change is test-only (fe6b_human_mode_sourceless_term_sheet_signs_with_zero_fetches in the #[cfg(test)] module); the release wasm is byte-identical to record-1733f97 (same hash). NOT uploaded or deployed anywhere.",
+    "emulation": "colima rosetta profile; docker run/create wrapped with --dns 1.1.1.1 (colima host resolver was down; no effect on output bytes). Earlier attempt of run1 failed with the known cc linker SIGSEGV under emulation (no hash) and was re-run unchanged."
+  }
+}

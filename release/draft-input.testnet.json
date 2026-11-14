@@ -1,0 +1,51 @@
+{
+  "network": "testnet",
+  "intents": "intents-mock.praetorial-dev-1101.testnet",
+  "usdc_token_id": "nep141:usdc.testnet",
+  "outlayer": "outlayer.testnet",
+  "operator": "praetorial-dev-1101.testnet",
+  "guardian": "arbiter1.praetorial-dev-1101.testnet",
+  "registry": "praetorial-dev-1101.testnet",
+  "fee_account": "fee.praetorial-dev-1101.testnet",
+  "keeper": "keeper.praetorial-dev-1101.testnet",
+  "max_offer_ttl_secs": 5184000,
+  "near_price": {
+    "price_usd": "3.68",
+    "price_ts_ms": 1794179683961,
+    "second_price_usd": "3.68",
+    "second_price_ts_ms": 1794179683961
+  },
+  "outcome_pubkey": "4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23",
+  "attest_pubkey": "a3fa8914a3c6eccd792660167d1e7e67fc06f4294521eadcc2b7a8f6c097f6ae",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "outlayer_config": {
+    "wasm_base_url": "https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "praetorial-dev-1101.testnet"
+  },
+  "assets": [
+    {
+      "token_id": "nep141:usdc.testnet",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:btc.mock.testnet",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "75823",
+      "price_ts_ms": 1794179683961,
+      "second_price_usd": "75823",
+      "second_price_ts_ms": 1794179683961
+    },
+    {
+      "token_id": "nep141:wrap.testnet",
+      "decimals": 24,
+      "kind": "volatile",
+      "price_usd": "3.68",
+      "price_ts_ms": 1794179683961,
+      "second_price_usd": "3.68",
+      "second_price_ts_ms": 1794179683961
+    }
+  ]
+}

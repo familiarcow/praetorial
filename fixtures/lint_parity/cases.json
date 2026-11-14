@@ -1,0 +1,75 @@
+{
+  "_doc": "LNT1: shared ambiguous-phrasing table. Read by resolver/core/tests/lint_parity.rs and apps/web/tests/lintParity.unit.test.ts. Each ambiguous case must be refused by BOTH the resolver custom lint and the web builder gate with the SAME problem code; every control must produce no AMBIGUOUS_*/CUSTOM_RELATIVE_DATE problem in either. full_pass controls must also have ZERO problems from the web builder gate on a filled-in non-price form.",
+  "ambiguous": [
+    { "code": "AMBIGUOUS_AMOUNT", "variants": [
+      "BTC flips 100k",
+      "BTC above 100k",
+      "bitcoin over 100K lol by 2026-12-01 UTC",
+      "Will ETH hit 5k on 2026-12-01 UTC?",
+      "SOL gets to 1.5k before 2026-12-31 UTC",
+      "btc > 100 k at 2026-12-01 00:00 UTC"
+    ] },
+    { "code": "AMBIGUOUS_RELATIVE_DATE", "variants": [
+      "BTC breaks 76,140 today",
+      "Is ETH currently above 4000 USD",
+      "BTC closes higher later",
+      "ETH is up now vs the open",
+      "Apple stock pops this morning"
+    ] },
+    { "code": "AMBIGUOUS_MULTI_ASSET", "variants": [
+      "ETH/SOL touches",
+      "ETH / SOL flip on 2026-12-01 UTC",
+      "BTC and ETH both make new highs on 2026-12-01 UTC",
+      "SOL/ETH ratio above 0.05 on 2026-12-01 UTC",
+      "will BTC or ETH/SOL pump on 2026-12-01 UTC"
+    ] },
+    { "code": "AMBIGUOUS_PERCENT_MOVE", "variants": [
+      "BTC up more than 5% on 2026-11-07 (open->close)",
+      "ETH moves 10 percent by 2026-12-01 UTC",
+      "SOL pumps 20% 2026-12-01",
+      "BTC makes a big move on 2026-12-01 UTC",
+      "gold down 3 percent on 2026-12-01 UTC"
+    ] },
+    { "code": "AMBIGUOUS_NO_TIMEZONE", "variants": [
+      "BTC above $76,000 at 5pm 2026-11-09",
+      "ETH over 4000 at 5:30 PM on 2026-12-01",
+      "Fed statement out by 2pm on 2026-12-16",
+      "market opens at 9am 2026-12-01",
+      "Game starts 7 pm EST on 2026-12-01"
+    ] },
+    { "code": "AMBIGUOUS_NO_STATION", "variants": [
+      "hotter than 90 tomorrow",
+      "temperature in NYC above 90 on 2026-07-04",
+      "will it rain in Boston on 2026-12-01",
+      "snow in Denver on 2026-12-25",
+      "Chicago hits 95\u00b0 on 2026-07-04",
+      "colder than 20 degrees in Minneapolis on 2026-01-15"
+    ] },
+    { "code": "AMBIGUOUS_PARTY_CONTROLLED", "variants": [
+      "I post by Friday",
+      "i will tweet about it by 2026-12-01",
+      "We ship the update by 2026-12-01 UTC",
+      "my own post gets 100 likes by 2026-12-01 UTC",
+      "Our page hits 1000 followers by 2026-12-01 UTC"
+    ] },
+    { "code": "AMBIGUOUS_SUBJECTIVE", "variants": [
+      "who is the best player",
+      "Which team is better on 2026-12-01",
+      "best QB of 2026",
+      "Is Messi the greatest of all time",
+      "worst movie of 2026",
+      "why did BTC fall on 2026-12-01",
+      "my favorite candidate wins on 2026-11-03"
+    ] }
+  ],
+  "controls": [
+    { "id": "btc_close_coinbase", "phrasing": "BTC closes above 100000 USD on Coinbase at 2026-12-01 00:00 UTC", "full_pass": false },
+    { "id": "btc_usd_pair", "phrasing": "BTC/USD 1-minute close is above 100000 on Coinbase at 2026-12-01 00:00 UTC", "full_pass": false },
+    { "id": "apple_foldable", "phrasing": "Apple ships a foldable iPhone in the US between 2027-01-01 and 2027-12-31 UTC.", "full_pass": true },
+    { "id": "weather_station", "phrasing": "KNYC daily high temperature is at least 90 degrees F on 2026-07-04 per the NWS", "full_pass": true },
+    { "id": "sports_gamepk", "phrasing": "MLB gamePk 745432: the home team wins the game played on 2026-07-04 per MLB StatsAPI", "full_pass": true },
+    { "id": "fed_cut", "phrasing": "The Fed announces a rate cut at the 2026-12-16 FOMC meeting, announced by 18:00 UTC", "full_pass": true },
+    { "id": "block_height_or_later", "phrasing": "The NEAR account example.near holds at least 100 NEAR at finalized block height 230000000 or later, on or before 2026-12-31T00:00:00Z", "full_pass": false },
+    { "id": "distance", "phrasing": "The Berlin marathon winner finishes the 42 km course in under 2:02:00 on 2026-09-27", "full_pass": true }
+  ]
+}

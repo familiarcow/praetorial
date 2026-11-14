@@ -1,0 +1,25 @@
+/* H1 (UIR1 §3.2/§3.3): Home lists of kit BetCards. 1 column on phones, 2 columns from 900px (Explore, In progress, My Bets groups). */
+.h-list { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--spacing-3); margin: var(--spacing-2) 0 0; padding: 0; }
+.h-list > .k-card { max-width: none; width: 100%; }
+@media (min-width: 900px) { .h-list--grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.h-group { margin: var(--spacing-4) 0 0; }
+.h-group > h3 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); margin: 0 0 var(--spacing-1); }
+.h-group .count { font-weight: 500; }
+/* "Needs you": the cards that ask something of me get a warn-tone left edge. */
+.h-group--needs .k-card { border-left: 3px solid var(--color-border-warning); }
+.h-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-2) var(--spacing-4); }
+.h-head h2 { margin-bottom: 0; }
+.h-refresh { display: inline-flex; align-items: center; gap: var(--spacing-1); background: none; border: 0; padding: var(--spacing-1) var(--spacing-2); font: inherit; font-size: 0.85rem;
+  color: var(--color-text-secondary); cursor: pointer; border-radius: var(--radius-element); }
+.h-refresh:hover { color: var(--color-text-primary); }
+.h-refresh:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+[data-testid="my-bets"] > [data-kit="Disclosure"] { margin-top: var(--spacing-4); max-width: none; }
+.h-chips { display: flex; flex-wrap: wrap; gap: var(--spacing-2); margin: var(--spacing-2) 0 var(--spacing-1); }
+.h-chip { display: inline-flex; align-items: center; gap: var(--spacing-1); padding: var(--spacing-1) var(--spacing-3); border-radius: var(--radius-full, 999px); border: 1px solid var(--color-border);
+  background: transparent; font: inherit; font-size: 0.85rem; cursor: pointer; color: var(--color-text-primary); min-height: 32px; }
+.h-chip[aria-pressed="true"] { background: var(--color-background-muted); border-color: var(--color-accent); color: var(--color-text-accent); font-weight: 600; }
+.h-chip .k-logo, .h-chip svg { width: 16px; height: 16px; }
+.h-chip:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+/* FE16b: the page is out of date, so amounts are hidden (a dash stands in) until it loads again. */
+.h-stale .k-amount { visibility: hidden; position: relative; }
+.h-stale .k-amount::after { content: "—"; visibility: visible; position: absolute; left: 0; top: 0; }

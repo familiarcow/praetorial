@@ -1,0 +1,33 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "32ecf6ccaff5f9c7261c3cec9f4af6d08e11d07c",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "07a0b0871c59876c6a0aaca07cec57686c4d2407505ac35e23b5d5a0aa1b9a3e"
+    }
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; the default colima VM was not used for builds",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts. First attempt succeeded (no wit-bindgen QEMU flake this time). Output byte-identical to docker-run-1 (cmp).",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features.",
+    "vs_previous_record": "Supersedes record-549e89c5.json (77ddcd94...). Item 16e2 (D-RESOLVE6) changes resolver code, so the wasm hash and the bind:wasm outcome/attest pubkeys change: item 16f MUST redo the D-KEY2 report-pubkey bootstrap against THIS hash. Not uploaded to FastFS."
+  }
+}

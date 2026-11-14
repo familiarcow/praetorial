@@ -1,0 +1,59 @@
+{
+    "wallTime": 5012,
+    "cpuTime": 10,
+    "truncated": false,
+    "executionModel": "durableObject",
+    "outcome": "ok",
+    "durableObjectId": "09b2a5a966bc0631024fe6f6e448106148d790043042468cb2853604658ae36d",
+    "scriptVersion": {
+        "id": "bf0a9d40-abb3-4ec8-b8d3-47cd958145e3"
+    },
+    "entrypoint": "KeeperDO",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [
+        {
+            "message": [
+                "[ops-alert:no-telegram] keeper heartbeat ok: 1 bets read, 1 actions, 1 contract(s)"
+            ],
+            "level": "log",
+            "timestamp": 1794194252969
+        }
+    ],
+    "eventTimestamp": 1794194247967,
+    "event": {
+        "request": {
+            "url": "https://keeper.do/tick",
+            "method": "POST",
+            "headers": {}
+        },
+        "response": {
+            "status": 200
+        }
+    }
+}
+{
+    "wallTime": 9833,
+    "cpuTime": 1,
+    "truncated": false,
+    "executionModel": "stateless",
+    "outcome": "ok",
+    "tailAttributes": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794194247165
+    },
+    "scriptVersion": {
+        "id": "bf0a9d40-abb3-4ec8-b8d3-47cd958145e3"
+    },
+    "entrypoint": "default",
+    "scriptName": "praetorial-keeper-testnet",
+    "diagnosticsChannelEvents": [],
+    "exceptions": [],
+    "logs": [],
+    "eventTimestamp": 1794194247752,
+    "event": {
+        "cron": "* * * * *",
+        "scheduledTime": 1794194247165
+    }
+}

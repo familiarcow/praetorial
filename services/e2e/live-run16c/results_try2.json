@@ -1,0 +1,229 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "6sM4NQgEcBPSUPZNq5PMY8jTvndTmPRJEyTDdqrVpn6g",
+      "url": "https://testnet.nearblocks.io/txns/6sM4NQgEcBPSUPZNq5PMY8jTvndTmPRJEyTDdqrVpn6g",
+      "spec_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "checked_at": "1793959460658581504",
+      "attest_pubkey": "126d917e6e17661d7d4f34e9430b9db75a45ce531bb879b25e709c3d2aa7fe4d",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "C8UxiQnjZoq8uRSMhcvSXcwbGUz6F2WcdRBo772u1Qqb",
+      "url": "https://testnet.nearblocks.io/txns/C8UxiQnjZoq8uRSMhcvSXcwbGUz6F2WcdRBo772u1Qqb",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "FaX7RbGC7dwBubXbWBaRY4ooapGyHKTAKDWQzwgFGCUC",
+      "url": "https://testnet.nearblocks.io/txns/FaX7RbGC7dwBubXbWBaRY4ooapGyHKTAKDWQzwgFGCUC",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "Aaa7yo83w8oumJzyMSNNsqSKQk8Crcq3QMd6fYXxsnrz",
+      "url": "https://testnet.nearblocks.io/txns/Aaa7yo83w8oumJzyMSNNsqSKQk8Crcq3QMd6fYXxsnrz"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "5VMQjWGF8Pd2UTzTJRhYnWkED4iDizFEDKqcArRtXwjB",
+      "url": "https://testnet.nearblocks.io/txns/5VMQjWGF8Pd2UTzTJRhYnWkED4iDizFEDKqcArRtXwjB"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "9NKy2KAvmR1pSQeTFivhXqta9bLDyfYHvcihFoQS4PLU",
+      "url": "https://testnet.nearblocks.io/txns/9NKy2KAvmR1pSQeTFivhXqta9bLDyfYHvcihFoQS4PLU",
+      "status": "Success",
+      "raw": "{\"SuccessValue\":\"\"}",
+      "keeper_credit_before": "150000000000000000000000"
+    },
+    {
+      "step": "16c3_mutual_settle_maker",
+      "hash": "9g5KpiUkqQkYPfDzEvssirgNdboMHA2PFYTD2UQBADHQ",
+      "url": "https://testnet.nearblocks.io/txns/9g5KpiUkqQkYPfDzEvssirgNdboMHA2PFYTD2UQBADHQ",
+      "status": "Success"
+    },
+    {
+      "step": "16c3_mutual_settle_taker",
+      "hash": "4tgSDTh6sxZefgwz6PPDsLT3yWL9EaYAkSmFyUSHwuac",
+      "url": "https://testnet.nearblocks.io/txns/4tgSDTh6sxZefgwz6PPDsLT3yWL9EaYAkSmFyUSHwuac",
+      "status": "Success"
+    }
+  ],
+  "terms_diff": {
+    "replaced": [
+      "2028-10-28 -> 2025-10-28 (deadline, window_end)",
+      "October 28, 2028 -> October 28, 2025",
+      "evidence_cutoff 2028-11-04T19:00:00Z -> 2025-11-04T19:00:00Z",
+      "window_close 2028-11-06T19:00:00Z -> 2025-11-06T19:00:00Z",
+      "window_start 2026-11-04T00:00:00Z -> 2025-10-01T00:00:00Z (keeps window_start < window_end)"
+    ],
+    "occurrences": 8,
+    "remaining_2028": 0,
+    "orig_sha256": "dc45caf965d4446645fd32f87ca907f36272e5d3b30330b2f79f6845198cbace",
+    "new_sha256": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837"
+  },
+  "bet_id": 2,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "request_resolution_error": "{\"index\":0,\"kind\":{\"index\":0,\"kind\":{\"FunctionCallError\":{\"ExecutionError\":\"WebAssembly trap: An `unreachable` opcode was executed.\"}}}}",
+  "request_resolution_error_tx": "2sPjsrcGdFLNfDCV48bcSY5EoTkbDLofnbubxVdsBxsJ",
+  "poll": {
+    "i": 59,
+    "status": "Resolving",
+    "runs_used": 0
+  },
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 2,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "models_snapshot_hash": "item16c-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2025-10-01T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2025-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2025-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793959620008000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796551470008000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793959471820987000,
+    "taken_at": 1793959475524102000,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 2,
+    "last_resolution_raw": "{\"contract\":\"praetorial-e2e-2611052236.praetorial-dev-1101.testnet\",\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60)\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100)\",\"source fetched: S_KR (https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1)\",\"prompt exceeds spec §2 cap (~12000 tokens/element, BUDGET_EXCEEDED, spec §11): element String(\\\"e1\\\")\"],\"result\":{\"bet_id\":2,\"checked_until\":0,\"element_results_hash\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"outcome\":\"VOID\",\"run_no\":2,\"terms_hash\":\"25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  },
+  "keeper_credit_after": "150000000000000000000000",
+  "step16c3_bet1_final": {
+    "envelope": {
+      "bet_id": 2,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837",
+      "models_snapshot_hash": "item16c-testnet-e2e",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "10000000",
+      "stake_taker": "10000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "terms": "{\"_comment\":\"Canonical Jason-bet term sheet (b0nd battle test). Cardone vs Calacanis, same-asset form: $ vs $ (USDC).\",\"claim\":\"BTC-USD/btcusd 1-minute candle high reaches or exceeds $126,210.50 on BOTH Coinbase and Bitstamp within the same 5-minute window, on or before 2025-10-28T19:00:00Z (the term sheet pins UTC; 'October 28, 2025, 12PM PST' is ambiguous between a literal PST reading of 20:00Z and the correct PDT-adjusted 19:00Z -- see custom_definitions).\",\"elements\":[{\"id\":\"e1\",\"q\":\"Do the exhibits show a Coinbase candle with high >= 126210.50 before 2025-10-28T19:00:00Z UTC AND a Bitstamp candle with high >= 126210.50 in the same 5-minute window, also before the deadline?\"}],\"rule\":\"ALL\",\"clauses\":[\"UTC_V1\",\"BEFORE_INCLUSIVE_V1\",\"NUMERIC_EXACT_V1\",\"ROUNDING_PRECISION_V1\",\"NO_DATA_FALLBACK_V1\"],\"custom_definitions\":[\"'Hits or exceeds $126,210.50' means a 1-minute candle HIGH (the wick), not the close, reaches or exceeds 126210.50 USD; a lower close in the same candle does not undo a qualifying high.\",\"The trigger requires confirmation on BOTH Coinbase (BTC-USD) and Bitstamp (btcusd) within the SAME 5-minute window (the two 1-minute candles' timestamps floor to the same 5-minute bucket); a high on only one of the two listed sources, or on the two sources in different 5-minute windows, does not satisfy the element.\",\"Deadline is 2025-10-28T19:00:00Z UTC exactly (12:00 PDT on 2025-10-28; DST is in effect, so the literal 'PST' in the original wording is corrected to its intended PDT clock time and pinned here as UTC, never evaluated against the literal string 'PST').\",\"If the trigger has not occurred by the deadline, the outcome is NO; early YES resolution is allowed at the first qualifying confirmed window, never before.\",\"Fallback: if one of Coinbase or Bitstamp is unavailable (no admissible exhibit for that source reaches the evidence cutoff), the remaining source of the pair AND Kraken (XBT/USD) must BOTH independently confirm a qualifying high within the same 5-minute window for the trigger to fire; if fewer than two of {Coinbase, Bitstamp, Kraken} can be checked at all, the outcome is VOID with full refunds.\",\"Only USD-quoted pairs on the three named venues (Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD) are eligible; price-aggregator sites (e.g. CoinMarketCap, CoinGecko), USDT-quoted pairs on any venue, and any exchange not named here are never eligible sources, even if they report a qualifying price.\",\"Fork rule: 'Bitcoin' means whichever asset each named exchange itself lists under its own BTC/XBT ticker at the time of the observation; a hard fork or rename that causes an exchange to redirect its ticker does not change which ticker is read, and does not retroactively apply to candles observed before the redirect.\",\"The pinned verifier is Claude Haiku (claude:haiku) via the attested backend, with an ordered fallback list [claude:haiku, claude:sonnet] if the pinned verifier is unavailable; a verifier that cannot be attested is never substituted silently.\",\"Burden of proof is on YES: an element that is not proven, or is ambiguous on the admitted evidence, resolves NO, never YES by default.\"],\"time\":{\"window_start\":\"2025-10-01T00:00:00Z\",\"window_end\":\"2025-10-28T19:00:00Z\",\"evidence_cutoff\":\"2025-11-04T19:00:00Z\"},\"sources_allowed\":[{\"id\":\"S_CB\",\"publisher\":\"Coinbase BTC-USD\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60\"},{\"id\":\"S_BS\",\"publisher\":\"Bitstamp btcusd\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100\"},{\"id\":\"S_KR\",\"publisher\":\"Kraken XBT/USD\",\"url\":\"https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1\"}],\"source_classes\":{\"Coinbase BTC-USD\":\"primary\",\"Bitstamp btcusd\":\"primary\",\"Kraken XBT/USD\":\"data\"},\"_source_class_note\":\"Kraken is mapped to evidence.py's 'data' tier (CLASS_RANK=2) purely so the engine's existing tier mechanism (try tier 1 first, fall through to tier 2 only if tier 1 is insufficient/absent) implements the fallback rule for free, without a 'fallback' tier name the shared CLASS_RANK dict doesn't define.\",\"window_close\":\"2025-11-06T19:00:00Z\",\"sources\":true,\"ticker_pins\":{\"Coinbase BTC-USD\":\"BTC-USD\",\"Bitstamp btcusd\":\"btcusd\",\"Kraken XBT/USD\":\"XBT/USD\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1793959620008000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796551470008000000,
+      "consent_party_controlled": false
+    },
+    "status": "Settled",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1793959471820987000,
+    "taken_at": 1793959475524102000,
+    "proposed_at": null,
+    "outcome": "MUTUAL",
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "settle_proposal": {
+      "maker_value": "5000",
+      "taker_value": "5000"
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 2,
+    "last_resolution_raw": "{\"contract\":\"praetorial-e2e-2611052236.praetorial-dev-1101.testnet\",\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60)\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=100)\",\"source fetched: S_KR (https://api.kraken.com/0/public/OHLC?pair=XBTUSD&interval=1)\",\"prompt exceeds spec §2 cap (~12000 tokens/element, BUDGET_EXCEEDED, spec §11): element String(\\\"e1\\\")\"],\"result\":{\"bet_id\":2,\"checked_until\":0,\"element_results_hash\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"outcome\":\"VOID\",\"run_no\":2,\"terms_hash\":\"25e86167a9169af10f467730554a826df8840097a4be56de6a5e34127473b837\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_comment": "MAINPREP: mainnet release pins (selected by releaseConfig.releasePins when NETWORK_ID/VITE_NETWORK_ID=mainnet). Same resolver release and models as lib/release.json; resolver_wasm_hash and fee_account must equal release/draft-args.mainnet.json (tests/releaseNetwork.unit.test.ts).",
+  "network": "mainnet",
+  "release_record": "resolver/release/record-f5695b9.json",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "models": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+  ],
+  "fee_account": "praetorial.near"
+}

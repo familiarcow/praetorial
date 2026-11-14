@@ -1,0 +1,653 @@
+{
+ "world": {
+  "s_min": 20.0,
+  "s_max": 250.0,
+  "frac_amb": 0.1,
+  "frac_hard": 0.2,
+  "attack_delta": 0.1,
+  "reserve_share": 0.25
+ },
+ "n": 20000,
+ "grid": [
+  {
+   "policy": "A_current_code: 3 reruns, flat 5%/$5, ESCALATE->VOID",
+   "wrong_final_pct": 1.1871082265490653,
+   "void_on_clear_pct": 0.8487269096355468,
+   "ambiguous_not_voided_pct": 12.721743537759755,
+   "attack_rate_pct": 7.99,
+   "honest_challenges": 2680,
+   "honest_mean_gain_usd": 148.04843204766078,
+   "honest_worse_off_pct": 15.78358208955224,
+   "mean_rounds": 0.3138,
+   "max_rounds_used": 3,
+   "mean_lock_h": 63.3762,
+   "p99_lock_h": 195.0,
+   "max_lock_h": 195.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13478,
+     "ev_usd": -13.635933562686139,
+     "ev_per_stake_pct": -10.622485469704735
+    },
+    "r1_hard": {
+     "n": 3935,
+     "ev_usd": -8.10023638642668,
+     "ev_per_stake_pct": -7.079626784305376
+    },
+    "r2_easy": {
+     "n": 924,
+     "ev_usd": -13.289845490888718,
+     "ev_per_stake_pct": -10.460394506573612
+    },
+    "r2_hard": {
+     "n": 1174,
+     "ev_usd": 2.4844310560595426,
+     "ev_per_stake_pct": 2.063392768748678
+    },
+    "r3_easy": {
+     "n": 59,
+     "ev_usd": 3.1958940175636554,
+     "ev_per_stake_pct": 1.374105867610935
+    },
+    "r3_hard": {
+     "n": 426,
+     "ev_usd": 45.199975227749775,
+     "ev_per_stake_pct": 33.637056115716994
+    }
+   },
+   "attack_profitable_cells": [
+    "r2_hard",
+    "r3_easy",
+    "r3_hard"
+   ]
+  },
+  {
+   "policy": "B_redteam_rec: 2 panel rounds, doubling 5%, defender bond, ESCALATE->VOID",
+   "wrong_final_pct": 1.3108926290062768,
+   "void_on_clear_pct": 5.61017608176415,
+   "ambiguous_not_voided_pct": 13.87080620931397,
+   "attack_rate_pct": 25.715,
+   "honest_challenges": 4124,
+   "honest_mean_gain_usd": 152.08265226677943,
+   "honest_worse_off_pct": 14.33074684772066,
+   "mean_rounds": 0.6139,
+   "max_rounds_used": 2,
+   "mean_lock_h": 78.0811,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13460,
+     "ev_usd": -14.438367093723318,
+     "ev_per_stake_pct": -11.308030370593773
+    },
+    "r1_hard": {
+     "n": 3899,
+     "ev_usd": 2.7256405113270916,
+     "ev_per_stake_pct": 0.37301429131988245
+    },
+    "r2_easy": {
+     "n": 898,
+     "ev_usd": -17.580277454025744,
+     "ev_per_stake_pct": -15.989713466980085
+    },
+    "r2_hard": {
+     "n": 1309,
+     "ev_usd": 10.333582100489794,
+     "ev_per_stake_pct": 6.129519908249339
+    }
+   },
+   "attack_profitable_cells": [
+    "r1_hard",
+    "r2_hard"
+   ]
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.09415152857775808,
+   "void_on_clear_pct": 0.6701373504652194,
+   "ambiguous_not_voided_pct": 0.565843621399177,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2652,
+   "honest_mean_gain_usd": 165.31593826718571,
+   "honest_worse_off_pct": 2.564102564102564,
+   "mean_rounds": 0.1623,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.9527,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13399,
+     "ev_usd": -27.194342366750565,
+     "ev_per_stake_pct": -21.26981571609838
+    },
+    "r1_hard": {
+     "n": 3897,
+     "ev_usd": -17.764349781328193,
+     "ev_per_stake_pct": -14.276907647601615
+    },
+    "r2_easy": {
+     "n": 934,
+     "ev_usd": -54.523507470469845,
+     "ev_per_stake_pct": -42.08934026421777
+    },
+    "r2_hard": {
+     "n": 1280,
+     "ev_usd": -45.71496512990558,
+     "ev_per_stake_pct": -36.40252053983157
+    }
+   },
+   "attack_profitable_cells": []
+  },
+  {
+   "policy": "C_5pct: as C but 5%/$5 doubling",
+   "wrong_final_pct": 0.09415152857775808,
+   "void_on_clear_pct": 0.6701373504652194,
+   "ambiguous_not_voided_pct": 0.565843621399177,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2652,
+   "honest_mean_gain_usd": 166.58960959499692,
+   "honest_worse_off_pct": 2.564102564102564,
+   "mean_rounds": 0.1623,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.9527,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13399,
+     "ev_usd": -13.539262349435974,
+     "ev_per_stake_pct": -10.587410104734982
+    },
+    "r1_hard": {
+     "n": 3897,
+     "ev_usd": -5.225593530744971,
+     "ev_per_stake_pct": -4.585724977605045
+    },
+    "r2_easy": {
+     "n": 934,
+     "ev_usd": -26.872182112535345,
+     "ev_per_stake_pct": -20.858377500506087
+    },
+    "r2_hard": {
+     "n": 1280,
+     "ev_usd": -20.85511182674798,
+     "ev_per_stake_pct": -16.759957976011254
+    }
+   },
+   "attack_profitable_cells": []
+  },
+  {
+   "policy": "C_1round: panel3 only, deferential, 10%/$10",
+   "wrong_final_pct": 2.012375271754278,
+   "void_on_clear_pct": 3.0659457048887897,
+   "ambiguous_not_voided_pct": 16.836487142163996,
+   "attack_rate_pct": 19.71,
+   "honest_challenges": 2725,
+   "honest_mean_gain_usd": 140.70052340028073,
+   "honest_worse_off_pct": 15.339449541284402,
+   "mean_rounds": 0.33335,
+   "max_rounds_used": 1,
+   "mean_lock_h": 64.33415,
+   "p99_lock_h": 97.0,
+   "max_lock_h": 97.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13492,
+     "ev_usd": -25.43747167018424,
+     "ev_per_stake_pct": -20.107445967573064
+    },
+    "r1_hard": {
+     "n": 3892,
+     "ev_usd": 3.2346436794641606,
+     "ev_per_stake_pct": 1.3416227317408247
+    }
+   },
+   "attack_profitable_cells": [
+    "r1_hard"
+   ]
+  },
+  {
+   "policy": "C_3rounds: + 3rd panel5+debate round, 10%/$10 doubling",
+   "wrong_final_pct": 0.022187708009762594,
+   "void_on_clear_pct": 0.2884402041269137,
+   "ambiguous_not_voided_pct": 0.10141987829614604,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2651,
+   "honest_mean_gain_usd": 168.61564201345914,
+   "honest_worse_off_pct": 1.6220294228592984,
+   "mean_rounds": 0.16945,
+   "max_rounds_used": 3,
+   "mean_lock_h": 56.30305,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 195.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13380,
+     "ev_usd": -27.385815792049303,
+     "ev_per_stake_pct": -21.337278408418793
+    },
+    "r1_hard": {
+     "n": 3891,
+     "ev_usd": -22.940544751749513,
+     "ev_per_stake_pct": -17.64633474660441
+    },
+    "r2_easy": {
+     "n": 935,
+     "ev_usd": -55.34965035555566,
+     "ev_per_stake_pct": -42.95817017602612
+    },
+    "r2_hard": {
+     "n": 1289,
+     "ev_usd": -51.354067232660114,
+     "ev_per_stake_pct": -40.27186422400626
+    },
+    "r3_easy": {
+     "n": 89,
+     "ev_usd": -107.80090529205117,
+     "ev_per_stake_pct": -83.01138001713885
+    },
+    "r3_hard": {
+     "n": 363,
+     "ev_usd": -102.66006202905496,
+     "ev_per_stake_pct": -76.29764248873894
+    }
+   },
+   "attack_profitable_cells": []
+  },
+  {
+   "policy": "D_void_rule_with_C_judges: C but ESCALATE->VOID",
+   "wrong_final_pct": 0.07195837484778037,
+   "void_on_clear_pct": 0.6863721908557511,
+   "ambiguous_not_voided_pct": 0.3619441571871768,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2639,
+   "honest_mean_gain_usd": 165.928854877263,
+   "honest_worse_off_pct": 2.3872679045092835,
+   "mean_rounds": 0.15895,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.78855,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13436,
+     "ev_usd": -25.206726143803564,
+     "ev_per_stake_pct": -19.772632032055792
+    },
+    "r1_hard": {
+     "n": 3857,
+     "ev_usd": -1.7956687916434368,
+     "ev_per_stake_pct": -2.1009888981691955
+    },
+    "r2_easy": {
+     "n": 931,
+     "ev_usd": -30.799016872547913,
+     "ev_per_stake_pct": -26.127735856072242
+    },
+    "r2_hard": {
+     "n": 1332,
+     "ev_usd": -13.586712039915449,
+     "ev_per_stake_pct": -10.318627871236554
+    }
+   },
+   "attack_profitable_cells": []
+  }
+ ],
+ "sensitivity": [
+  {
+   "policy": "A_current_code: 3 reruns, flat 5%/$5, ESCALATE->VOID",
+   "wrong_final_pct": 1.4811116658345815,
+   "void_on_clear_pct": 0.8931047872635491,
+   "ambiguous_not_voided_pct": 12.721743537759755,
+   "attack_rate_pct": 7.99,
+   "honest_challenges": 2680,
+   "honest_mean_gain_usd": 140.69938176524403,
+   "honest_worse_off_pct": 17.87313432835821,
+   "mean_rounds": 0.3138,
+   "max_rounds_used": 3,
+   "mean_lock_h": 63.3762,
+   "p99_lock_h": 195.0,
+   "max_lock_h": 195.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13478,
+     "ev_usd": -13.635933562686139,
+     "ev_per_stake_pct": -10.622485469704735
+    },
+    "r1_hard": {
+     "n": 3905,
+     "ev_usd": -6.621934074958542,
+     "ev_per_stake_pct": -5.8900957789005055
+    },
+    "r2_easy": {
+     "n": 924,
+     "ev_usd": -13.289845490888718,
+     "ev_per_stake_pct": -10.460394506573612
+    },
+    "r2_hard": {
+     "n": 1171,
+     "ev_usd": 9.799929717320564,
+     "ev_per_stake_pct": 7.512077095265396
+    },
+    "r3_easy": {
+     "n": 59,
+     "ev_usd": 3.1958940175636554,
+     "ev_per_stake_pct": 1.374105867610935
+    },
+    "r3_hard": {
+     "n": 426,
+     "ev_usd": 56.08534981170696,
+     "ev_per_stake_pct": 43.9022197417001
+    }
+   },
+   "attack_profitable_cells": [
+    "r2_hard",
+    "r3_easy",
+    "r3_hard"
+   ],
+   "sweep": "attack_delta=0.25"
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.09415152857775808,
+   "void_on_clear_pct": 0.6701373504652194,
+   "ambiguous_not_voided_pct": 0.565843621399177,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2652,
+   "honest_mean_gain_usd": 165.31593826718571,
+   "honest_worse_off_pct": 2.564102564102564,
+   "mean_rounds": 0.1623,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.9527,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13399,
+     "ev_usd": -27.194342366750565,
+     "ev_per_stake_pct": -21.26981571609838
+    },
+    "r1_hard": {
+     "n": 3856,
+     "ev_usd": -9.149212801342232,
+     "ev_per_stake_pct": -8.104380247267763
+    },
+    "r2_easy": {
+     "n": 934,
+     "ev_usd": -54.523507470469845,
+     "ev_per_stake_pct": -42.08934026421777
+    },
+    "r2_hard": {
+     "n": 1280,
+     "ev_usd": -45.71496512990558,
+     "ev_per_stake_pct": -36.40252053983157
+    }
+   },
+   "attack_profitable_cells": [],
+   "sweep": "attack_delta=0.25"
+  },
+  {
+   "policy": "A_current_code: 3 reruns, flat 5%/$5, ESCALATE->VOID",
+   "wrong_final_pct": 2.3127814532718074,
+   "void_on_clear_pct": 1.567798965919831,
+   "ambiguous_not_voided_pct": 12.866368604073521,
+   "attack_rate_pct": 12.534999999999998,
+   "honest_challenges": 3446,
+   "honest_mean_gain_usd": 146.00692608307756,
+   "honest_worse_off_pct": 20.139291932675565,
+   "mean_rounds": 0.4507,
+   "max_rounds_used": 3,
+   "mean_lock_h": 70.0843,
+   "p99_lock_h": 195.0,
+   "max_lock_h": 195.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 9992,
+     "ev_usd": -13.661837398826032,
+     "ev_per_stake_pct": -10.543468241013327
+    },
+    "r1_hard": {
+     "n": 6479,
+     "ev_usd": -7.1426951862036585,
+     "ev_per_stake_pct": -5.964541993393914
+    },
+    "r2_easy": {
+     "n": 761,
+     "ev_usd": -12.787931247493775,
+     "ev_per_stake_pct": -10.31658154795295
+    },
+    "r2_hard": {
+     "n": 1925,
+     "ev_usd": 6.127935155674343,
+     "ev_per_stake_pct": 4.578214485029375
+    },
+    "r3_easy": {
+     "n": 41,
+     "ev_usd": 2.1401900753322263,
+     "ev_per_stake_pct": 3.0709683029921435
+    },
+    "r3_hard": {
+     "n": 622,
+     "ev_usd": 54.187221012877934,
+     "ev_per_stake_pct": 39.27704464845848
+    }
+   },
+   "attack_profitable_cells": [
+    "r2_hard",
+    "r3_easy",
+    "r3_hard"
+   ],
+   "sweep": "frac_hard=0.40"
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.18317051509769094,
+   "void_on_clear_pct": 1.2266873889875665,
+   "ambiguous_not_voided_pct": 0.655241935483871,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 3474,
+   "honest_mean_gain_usd": 168.74276914395696,
+   "honest_worse_off_pct": 3.7132987910189987,
+   "mean_rounds": 0.2195,
+   "max_rounds_used": 2,
+   "mean_lock_h": 58.7555,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 10065,
+     "ev_usd": -27.39987419832906,
+     "ev_per_stake_pct": -21.313818713117247
+    },
+    "r1_hard": {
+     "n": 6456,
+     "ev_usd": -16.011505420413148,
+     "ev_per_stake_pct": -12.820600005827808
+    },
+    "r2_easy": {
+     "n": 734,
+     "ev_usd": -53.14250811684367,
+     "ev_per_stake_pct": -41.834035118153615
+    },
+    "r2_hard": {
+     "n": 1915,
+     "ev_usd": -43.82191869415968,
+     "ev_per_stake_pct": -34.80023085177498
+    }
+   },
+   "attack_profitable_cells": [],
+   "sweep": "frac_hard=0.40"
+  },
+  {
+   "policy": "A_current_code: 3 reruns, flat 5%/$5, ESCALATE->VOID",
+   "wrong_final_pct": 0.3270872602284067,
+   "void_on_clear_pct": 0.23284177846767934,
+   "ambiguous_not_voided_pct": 4.281345565749235,
+   "attack_rate_pct": 2.245,
+   "honest_challenges": 2670,
+   "honest_mean_gain_usd": 167.3441170927518,
+   "honest_worse_off_pct": 4.794007490636704,
+   "mean_rounds": 0.1973,
+   "max_rounds_used": 3,
+   "mean_lock_h": 57.6677,
+   "p99_lock_h": 195.0,
+   "max_lock_h": 195.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13478,
+     "ev_usd": -13.635933562686139,
+     "ev_per_stake_pct": -10.622485469704735
+    },
+    "r1_hard": {
+     "n": 3980,
+     "ev_usd": -10.222569476094511,
+     "ev_per_stake_pct": -8.485693738809523
+    },
+    "r2_easy": {
+     "n": 924,
+     "ev_usd": -13.289845490888718,
+     "ev_per_stake_pct": -10.460394506573612
+    },
+    "r2_hard": {
+     "n": 1184,
+     "ev_usd": -3.6021075471496116,
+     "ev_per_stake_pct": -3.0140807170502564
+    },
+    "r3_easy": {
+     "n": 59,
+     "ev_usd": 3.1958940175636554,
+     "ev_per_stake_pct": 1.374105867610935
+    },
+    "r3_hard": {
+     "n": 426,
+     "ev_usd": 29.79940097461689,
+     "ev_per_stake_pct": 21.461833882320878
+    }
+   },
+   "attack_profitable_cells": [
+    "r3_easy",
+    "r3_hard"
+   ],
+   "sweep": "attack_delta=0.0"
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.09415152857775808,
+   "void_on_clear_pct": 0.6701373504652194,
+   "ambiguous_not_voided_pct": 0.565843621399177,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2652,
+   "honest_mean_gain_usd": 165.31593826718571,
+   "honest_worse_off_pct": 2.564102564102564,
+   "mean_rounds": 0.1623,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.9527,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13399,
+     "ev_usd": -27.194342366750565,
+     "ev_per_stake_pct": -21.26981571609838
+    },
+    "r1_hard": {
+     "n": 3894,
+     "ev_usd": -22.932585699858944,
+     "ev_per_stake_pct": -17.977424801458525
+    },
+    "r2_easy": {
+     "n": 934,
+     "ev_usd": -54.523507470469845,
+     "ev_per_stake_pct": -42.08934026421777
+    },
+    "r2_hard": {
+     "n": 1280,
+     "ev_usd": -45.71496512990558,
+     "ev_per_stake_pct": -36.40252053983157
+    }
+   },
+   "attack_profitable_cells": [],
+   "sweep": "attack_delta=0.0"
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.177354098542371,
+   "void_on_clear_pct": 0.354708197084742,
+   "ambiguous_not_voided_pct": 1.1241696474195195,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2628,
+   "honest_mean_gain_usd": 166.57478468900703,
+   "honest_worse_off_pct": 2.7777777777777777,
+   "mean_rounds": 0.16095,
+   "max_rounds_used": 2,
+   "mean_lock_h": 55.88655,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13462,
+     "ev_usd": -27.356403704820003,
+     "ev_per_stake_pct": -21.33862801398884
+    },
+    "r1_hard": {
+     "n": 3909,
+     "ev_usd": -19.422823415497554,
+     "ev_per_stake_pct": -15.323489072177129
+    },
+    "r2_easy": {
+     "n": 940,
+     "ev_usd": -53.3531330573743,
+     "ev_per_stake_pct": -42.06748615445891
+    },
+    "r2_hard": {
+     "n": 1266,
+     "ev_usd": -33.215815667296106,
+     "ev_per_stake_pct": -28.00320164270994
+    }
+   },
+   "attack_profitable_cells": [],
+   "sweep": "panel5 rho=0.7 (more correlated)"
+  },
+  {
+   "policy": "C_v1_rec: panel3 then panel5+debate, deferential, 10%/$10 doubling",
+   "wrong_final_pct": 0.1332519016156793,
+   "void_on_clear_pct": 0.8883460107711953,
+   "ambiguous_not_voided_pct": 0.4524886877828055,
+   "attack_rate_pct": 0.0,
+   "honest_challenges": 2661,
+   "honest_mean_gain_usd": 161.41431044463985,
+   "honest_worse_off_pct": 3.457346862081924,
+   "mean_rounds": 0.1687,
+   "max_rounds_used": 2,
+   "mean_lock_h": 56.2663,
+   "p99_lock_h": 146.0,
+   "max_lock_h": 146.0,
+   "attacker_ev_by_cell": {
+    "r1_easy": {
+     "n": 13409,
+     "ev_usd": -27.21492602413601,
+     "ev_per_stake_pct": -21.280533390264594
+    },
+    "r1_hard": {
+     "n": 3832,
+     "ev_usd": -12.749972929386473,
+     "ev_per_stake_pct": -10.467710745806743
+    },
+    "r2_easy": {
+     "n": 928,
+     "ev_usd": -54.148158172360766,
+     "ev_per_stake_pct": -42.06362986096715
+    },
+    "r2_hard": {
+     "n": 1125,
+     "ev_usd": -46.13857981844081,
+     "ev_per_stake_pct": -37.016094114947286
+    }
+   },
+   "attack_profitable_cells": [],
+   "sweep": "panel3 e_hard=0.25"
+  }
+ ]
+}

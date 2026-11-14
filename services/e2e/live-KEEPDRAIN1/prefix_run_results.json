@@ -1,0 +1,62 @@
+{
+  "network": "testnet",
+  "worker": "https://praetorial-relayer-testnet.familiarcow.workers.dev",
+  "escrow": "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet",
+  "txs": [
+    {
+      "step": "setup: fund fresh maker 0.3 NEAR (direct)",
+      "hash": "En7SMw54K4Q1pWcgmauwYEVddAR5hecsZYe7nEHbaJxY",
+      "url": "https://testnet.nearblocks.io/txns/En7SMw54K4Q1pWcgmauwYEVddAR5hecsZYe7nEHbaJxY"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "4Q6ZMn4kKf1xjatc8tGpsc3PMHfw973ccKzvhE3CVbt6",
+      "url": "https://testnet.nearblocks.io/txns/4Q6ZMn4kKf1xjatc8tGpsc3PMHfw973ccKzvhE3CVbt6",
+      "status": "Success"
+    },
+    {
+      "step": "mint mock USDC to maker (keeper, direct)",
+      "hash": "5RBWyag9VuP8vnbbWRaQubbj2KS2PTZzFrYM15sUTmxR",
+      "url": "https://testnet.nearblocks.io/txns/5RBWyag9VuP8vnbbWRaQubbj2KS2PTZzFrYM15sUTmxR",
+      "amount": "10062783"
+    },
+    {
+      "step": "open Person-referee bet (maker direct)",
+      "hash": "7uh9u85DZYdS232FcwjstDBcrcX4x7xj9N1PaMubbka3",
+      "url": "https://testnet.nearblocks.io/txns/7uh9u85DZYdS232FcwjstDBcrcX4x7xj9N1PaMubbka3",
+      "amount": "10062783"
+    },
+    {
+      "step": "cancel (maker direct)",
+      "hash": "7KGLSkdk4oLsMN46oEpohvWimGADz6kPfnaUMVk55zkH",
+      "url": "https://testnet.nearblocks.io/txns/7KGLSkdk4oLsMN46oEpohvWimGADz6kPfnaUMVk55zkH"
+    }
+  ],
+  "checks": {
+    "bet_id": 25,
+    "lines": [
+      {
+        "id": 24,
+        "bet_id": 25,
+        "token_id": "nep141:usdc.testnet",
+        "receiver": "a4d3f130c7fc93c303fbdfdf24e9b30f31a0cbf621dfecf89b60faa9801000b5",
+        "amount": "10062783",
+        "reason": "cancel_expire_refund",
+        "attempts": 1,
+        "done": true,
+        "in_flight": false
+      }
+    ],
+    "maker_usdc_before_cancel": "0",
+    "maker_usdc_after": "10062783",
+    "deposit": "10062783",
+    "status": "Cancelled"
+  },
+  "maker": "a4d3f130c7fc93c303fbdfdf24e9b30f31a0cbf621dfecf89b60faa9801000b5",
+  "refereeA": "arbiter1.praetorial-dev-1101.testnet",
+  "refereeB": "keeper.praetorial-dev-1101.testnet",
+  "bet_id": 25,
+  "cancel_at_ms": 1794221038159,
+  "drained_after_ms": 45223,
+  "ok": true
+}

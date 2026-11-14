@@ -1,0 +1,19 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "2ca77221a7bd58614614b24bf319bb177de52dfd",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "f369a040b27523d6fe4798bdbc0ffd00853172431172ee0035948704d7c20274",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "f369a040b27523d6fe4798bdbc0ffd00853172431172ee0035948704d7c20274"},
+    {"route": "docker-run-2", "sha256": "f369a040b27523d6fe4798bdbc0ffd00853172431172ee0035948704d7c20274"},
+    {"route": "fresh-container", "sha256": "f369a040b27523d6fe4798bdbc0ffd00853172431172ee0035948704d7c20274"}
+  ],
+  "notes": {
+    "item": "L1b13 model-deadline cap (every model stream capped by the remaining 100 s model deadline; capped call -> signed VOID); built from GREEN commit 2ca7722 (resolver/ tree identical to the merge); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; the three routes were built concurrently; one docker-run attempt hit the known transient build-script failure under emulation (prettyplease) and was re-run alone"
+  }
+}

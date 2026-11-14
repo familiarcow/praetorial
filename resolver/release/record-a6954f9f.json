@@ -1,0 +1,25 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "a6954f9f6dafe35f66ce4be911134cb32076b6ca",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "22b48e8d98de95d67469f1baa35a296a2165ede96b22c1e4c3806fe91483a1b3",
+  "builds": [
+    {"route": "docker-run-1", "sha256": "22b48e8d98de95d67469f1baa35a296a2165ede96b22c1e4c3806fe91483a1b3"},
+    {"route": "docker-run-2", "sha256": "22b48e8d98de95d67469f1baa35a296a2165ede96b22c1e4c3806fe91483a1b3"},
+    {"route": "fresh-container", "sha256": "22b48e8d98de95d67469f1baa35a296a2165ede96b22c1e4c3806fe91483a1b3"}
+  ],
+  "notes": {
+    "toolchain": "rustc 1.97.1 (8bab26f4f 2026-07-14), wasm-tools 1.240.0 (inside the image)",
+    "unstripped_sha256": "1bbc4375b72a95e1d13872d00504261b1969e6d74886f8dd705c2df73b09bcef",
+    "post_processing": "cargo build --release --locked --target wasm32-wasip2 -p praetorial-resolver --features real-http,outlayer-sign; wasm-tools strip --delete (OutLayer's list)",
+    "emulation": "colima profile 'rosetta' (vz + Rosetta) on Apple Silicon; the default colima VM was not used for builds",
+    "route_run": "docker run, source from git archive bind-mounted read-only (two runs)",
+    "route_fresh_container": "docker create + docker cp in/out, no bind mounts, clean target/cargo cache. First attempt hit a gcc/collect2 segfault under emulation (no wasm produced); rerun produced the hash above. Output files byte-identical (cmp).",
+    "vs_item8_cd853f8f": "NOT equal to the item-8 deploy hash cd853f8feb74f83041e936c3125ba85394b7547db46dbb7772b3bb20a6be19d7: that was a plain host aarch64 cargo build, not the image toolchain/strip, from an older commit. The image builds our crate unchanged; any production secret/key must be bound to the new hash.",
+    "outlayer_script": "scripts/build_github_wasm.sh not used directly: it cannot pass --features. build_reproducible.sh reproduces its wasip2 recipe (cargo build --release --locked, wasm-tools strip) with our features."
+  }
+}

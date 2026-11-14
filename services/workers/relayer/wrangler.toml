@@ -1,0 +1,64 @@
+# CF1b relayer Worker (D-HOST3). NO secrets in this file: the relayer signing key and the Telegram bot token are
+# Worker secrets (`wrangler secret put ...`, see README.md). NO cron trigger here either: the account allows 5 in
+# total and the keeper Worker's single `* * * * *` dispatcher (workers/common/src/dispatcher.ts) runs this
+# service's periodic job (relayer-heartbeat) through the RELAYER_SERVICE binding declared in the keeper's toml.
+name = "praetorial-relayer-testnet"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+# Deliberately no node compat flag: the bundle must run on bare workerd + WebCrypto.
+
+[[durable_objects.bindings]]
+name = "RELAYER"
+class_name = "RelayerDO"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["RelayerDO"]
+
+# Non-secret configuration (testnet). Account/contract ids are public.
+[vars]
+NEAR_NETWORK_ID = "testnet"
+ESCROW_CONTRACT_ID = "praetorial-frz3-2611100414.praetorial-dev-1101.testnet"
+INTENTS_CONTRACT_ID = "intents-mock.praetorial-dev-1101.testnet"
+RELAYER_ACCOUNT_ID = "relayer.praetorial-dev-1101.testnet"
+# CF1e3 / RELAYFUND1-2 policy (testnet only, fail closed): the ONLY token contracts the relayer will fund, and the wNEAR contract for near_deposit.
+FUND_TOKEN_CONTRACTS = "usdc.testnet,wrap.testnet"
+WNEAR_CONTRACT_ID = "wrap.testnet"
+# LIVE1 (D-CAP3): every asset the escrow enables (escrow asset_limit(id) non-null) may be staked via open/take/bond. No relayer stake cap.
+STAKE_ASSET_IDS = "nep141:usdc.testnet,nep141:wrap.testnet"
+USDC_TOKEN_ID = "nep141:usdc.testnet"
+# INDEXER_URL = "https://..."   # optional: bettor lookup via the CF1d indexer; without it (or when it fails) a bounded escrow get_bet scan is used (CF1b2)
+
+# ---------------------------------------------------------------------------------------------------------------------
+# WKMAIN1 (D-WKMAIN1): [env.mainnet] draft. Deploy day only, familiarcow's go (GATE-11): `npx wrangler deploy --env mainnet`.
+# Wrangler env sections do NOT inherit vars / d1 / triggers / services / DO bindings / migrations, so all are listed here.
+[env.mainnet]
+name = "praetorial-relayer-mainnet"
+# DOM1: public host relayer.praetorial.com (custom domain; the praetorial.com zone is on this account). workers_dev stays on for this
+# release as the rollback path (wrangler turns it OFF by default once routes exist, so it is explicit); flipping it off is a later PM step.
+routes = [{ pattern = "relayer.praetorial.com", custom_domain = true }]
+workers_dev = true
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+
+[[env.mainnet.durable_objects.bindings]]
+name = "RELAYER"
+class_name = "RelayerDO"
+
+[[env.mainnet.migrations]]
+tag = "v1"
+new_sqlite_classes = ["RelayerDO"]
+
+[env.mainnet.vars]
+NEAR_NETWORK_ID = "mainnet"
+ESCROW_CONTRACT_ID = "bets.praetorial.near"
+INTENTS_CONTRACT_ID = "intents.near"
+RELAYER_ACCOUNT_ID = "relayer.praetorial.near"
+# The six launch assets (D-LAUNCHCFG1 / D-ZEC1): USDC, USDT, omni BTC, wNEAR, omni ETH, omni ZEC (apps/web/lib/assets.ts mainnet ids).
+FUND_TOKEN_CONTRACTS = "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1,usdt.tether-token.near,btc.omft.near,wrap.near,eth.omft.near,zec.omft.near"
+WNEAR_CONTRACT_ID = "wrap.near"
+USDC_TOKEN_ID = "17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+STAKE_ASSET_IDS = "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1,nep141:usdt.tether-token.near,nep141:btc.omft.near,nep141:wrap.near,nep141:eth.omft.near,nep141:zec.omft.near"
+# D-RLY1a (familiarcow 2026-11-10): global relayer spend cap 1.4 NEAR/day (~$5; ~2,000 sponsored actions). Raise when going public.
+RELAYER_GLOBAL_DAILY_BUDGET_YOCTO = "1400000000000000000000000"

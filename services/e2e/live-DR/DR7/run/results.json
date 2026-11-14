@@ -1,0 +1,192 @@
+{
+  "txs": [
+    {
+      "step": "mint mock wNEAR (betting balance) to maker",
+      "hash": "8GMxojbUkpbdFzkSLYcr99M2DM6ywYQ6S5eZvRzRpKG",
+      "url": "https://testnet.nearblocks.io/txns/8GMxojbUkpbdFzkSLYcr99M2DM6ywYQ6S5eZvRzRpKG"
+    },
+    {
+      "step": "mint mock wNEAR (betting balance) to taker",
+      "hash": "6Gvjgw1yeL6aHCQYwFMcFjui1XDk23d874mtD8gvZV8y",
+      "url": "https://testnet.nearblocks.io/txns/6Gvjgw1yeL6aHCQYwFMcFjui1XDk23d874mtD8gvZV8y"
+    },
+    {
+      "step": "take (web, taker)",
+      "hash": "3fCpmR6kXB1NNdqWsxh2LijipP7crsjVf5iMhSVmwFs1",
+      "url": "https://testnet.nearblocks.io/txns/3fCpmR6kXB1NNdqWsxh2LijipP7crsjVf5iMhSVmwFs1"
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-10T04:31:20.173Z"
+    },
+    {
+      "s": "faucet done",
+      "t": "2026-11-10T04:31:25.957Z"
+    },
+    {
+      "s": "maker: past the username step",
+      "t": "2026-11-10T04:31:25.960Z"
+    },
+    {
+      "s": "maker picked the referee by username and set the shortest referee deadline",
+      "t": "2026-11-10T04:31:28.291Z",
+      "referee_selected_text": "@dr7refmwa7088e (33966037) — referee Change Clear",
+      "resolveDay": "2026-11-12"
+    },
+    {
+      "s": "maker opened the human bet via web",
+      "t": "2026-11-10T04:31:51.699Z",
+      "betId": 16
+    },
+    {
+      "s": "maker made the taker's invite link",
+      "t": "2026-11-10T04:31:52.972Z"
+    },
+    {
+      "s": "taker took via invite link",
+      "t": "2026-11-10T04:32:17.003Z"
+    },
+    {
+      "s": "maker: waiting view, no challenge button",
+      "t": "2026-11-10T04:32:20.433Z"
+    },
+    {
+      "s": "taker: waiting view, no challenge button",
+      "t": "2026-11-10T04:32:22.131Z"
+    },
+    {
+      "s": "DR7 phase 1 done; resume after resolve_deadline with DR7_PHASE=finish",
+      "t": "2026-11-10T04:32:22.132Z",
+      "resolve_deadline_iso": "2026-11-12T00:00:00.000Z"
+    }
+  ],
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "taker": "dfb218d392c303125e63418daf0e0ee61bba500d83fd1dee436f2bd564af32ba",
+  "referee": "83bc3bfbaa6e4b2e8535f4e401788de853ab340b17ae9c0317e2d0a833966037",
+  "referee_username": "dr7refmwa7088e",
+  "referee_claim": {
+    "status": 200
+  },
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "83378122191442934782608700",
+    "taker": "6200000000000000000000000",
+    "referee": "0",
+    "fee": "1546885652173913043478260",
+    "escrow": "6034320000000000000000000"
+  },
+  "resolve_day_chosen": "2026-11-12",
+  "event_deadline_utc": "2026-11-10T04:40:00.000Z",
+  "review_text": "You are betting that Bitcoin touches $1,000,000 (at or above) before 2026-11-10 04:40 UTC. Sources: Coinbase BTC-USD, Bitstamp btcusd, Kraken XBT/USD. Decided by 2026-11-10 04:40 UTC.\n\ndr7refmwa7088e decides. No AI is used.\n\nA person decides this bet. If they don't rule by 2026-11-12 00:00 UTC, you're both refunded.\n\nNo AI is used, and there is no AI fallback.\nThe referee can rule any time before the deadline, and the bet pays out straight away.\nStake\t3 NEAR\nNetwork storage\tloading from the contract...\nTip\tNo tip. You put in 3 NEAR.\nYou pay now\tloading from the contract...\nDeadlines\nOffer expires: 2026-11-10 04:40 UTC (the event starts then, so that is as long as it can stay open).\nEvent: decided by 2026-11-10 04:40 UTC.\nThe referee can rule any time until 2026-11-12 00:00 UTC.\n\nIf you lose, you lose your 3 NEAR stake. You can't lose more than what you pay now.\n\nRefunds\nNobody takes it: full refund.\nThe referee never rules: you're both refunded on 2026-11-12 00:00 UTC.\nIf the app is shut down, anyone can trigger a full refund.\nMaker stakes 3 NEAR\nTaker stakes 3 NEAR\nStorage charge, maker side: loading from the contract... (paid in NEAR, on top of the stake)\nStorage charge, taker side: loading from the contract... (paid in NEAR, on top of the stake)\nOdds: 1:1\nResolve deadline: 2026-11-12 00:00 UTC\nThis offer closes 2026-11-10 04:40 UTC (the event starts then, so that is as long as it can stay open).\nFee: 1% of pot per asset, minimum 0.14 NEAR per side (maker side 0.14 NEAR, ta",
+  "betId": 16,
+  "bet_open": {
+    "envelope": {
+      "bet_id": 16,
+      "version": 1,
+      "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+      "taker_allow": {
+        "InvitePubkey": "418e9c066a5a0d8d67dbf1896859b5fc8f5fd26c93f7283f602a6b9df1ac99db"
+      },
+      "terms_hash": "d3e8076ff14357a42ca252dc5989df3f8ff7fcd22f5de6a758902c6bdc8d6ed4",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:wrap.testnet",
+      "taker_asset": "nep141:wrap.testnet",
+      "stake_maker": "3000000000000000000000000",
+      "stake_taker": "3000000000000000000000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"fields\":{\"deadline_utc\":\"2026-11-10T04:40:00Z\",\"direction\":\"at_or_above\",\"open_utc\":\"2026-11-10T04:31:00Z\",\"x_usd\":1000000},\"template\":{\"id\":\"btc_touch\",\"version\":1}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": {
+        "account": "83bc3bfbaa6e4b2e8535f4e401788de853ab340b17ae9c0317e2d0a833966037",
+        "mode": "Human"
+      },
+      "tip_maker": false,
+      "funding_deadline": 1794285600000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 86400000000000,
+      "resolve_deadline": 1794441600000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "135869565217391304347826",
+    "fee_min_taker": "135869565217391304347826",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "17160000000000000000000",
+    "storage_taker": "0",
+    "status": "Open",
+    "taker": null,
+    "created_at": 1794285109447766000,
+    "taken_at": null,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": null,
+    "last_resolution_raw": null,
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": null,
+    "next_run_no": 1,
+    "pending_run_no": null
+  },
+  "resolve_deadline_ns": "1794441600000000000",
+  "resolve_deadline_iso": "2026-11-12T00:00:00.000Z",
+  "username_claimed": {
+    "taker": {
+      "name": "dr7tkmwa712w0",
+      "registry_response": {
+        "status": 200,
+        "body": "{\"username\":\"dr7tkmwa712w0\",\"account_id\":\"dfb218d392c303125e63418daf0e0ee61bba500d83fd1dee436f2bd564af32ba\"}",
+        "url": "https://praetorial-web-testnet.familiarcow.workers.dev/_proxy/registry/claim"
+      }
+    }
+  },
+  "take_referee_line": "A person decides this bet: 83bc3bfbaa6e4b2e8535f4e401788de853ab340b17ae9c0317e2d0a833966037. If they don't rule by 2026-11-12 00:00 UTC, you're both refunded.",
+  "balances_after_take": {
+    "maker": "80360962191442934782608700",
+    "taker": "3182840000000000000000000",
+    "referee": "0",
+    "fee": "1546885652173913043478260",
+    "escrow": "12068640000000000000000000"
+  }
+}

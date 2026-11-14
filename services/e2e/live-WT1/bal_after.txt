@@ -1,0 +1,4 @@
+praetorial-dev-1101.testnet 7.671
+keeper.praetorial-dev-1101.testnet 0.607
+attest1.praetorial-dev-1101.testnet 0.894
+maker1.praetorial-dev-1101.testnet 0.344

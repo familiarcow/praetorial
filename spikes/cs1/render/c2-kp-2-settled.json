@@ -1,0 +1,101 @@
+{
+  "at": "2026-11-12T02:43:17.422Z",
+  "betId": 54,
+  "names": {
+    "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488": "dan_demo",
+    "4b6d883c759b2d60706c926b9c079307b12d9fba5e8ff308ffcdfae7966153a5": "alice_demo"
+  },
+  "pending": [],
+  "bet": {
+    "envelope": {
+      "bet_id": 54,
+      "version": 1,
+      "maker": "371f9add3a51c946173fafd90dac5c6a0da149bf7f4ddc03f3b5fe6268bc0488",
+      "taker_allow": "Any",
+      "terms_hash": "e6d8f8b8611ddb9b268cf4438661349a35ae1b0783701fecaa46e2ba4edd127e",
+      "models_snapshot_hash": "551ea8aa7998db038cdb5d423df784c924c0dd5b3bd7247d93d2020bba4557f2",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "15000000",
+      "stake_taker": "15000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "0",
+      "keep_terms": true,
+      "terms": "{\"claim\":\"NOAA's official planetary K-index (Kp) for the 3-hour interval 21:00-24:00 UTC on 2026-11-11 is 2.00 or higher.\",\"clauses\":[\"UTC_V1\",\"PARTIAL_NONE_V1\"],\"custom_definitions\":[\"The value is the Kp field of the row with time_tag 2026-11-11T21:00:00 in NOAA SWPC's planetary K-index product (thirds are decimals: 1.67 is below 2, 2.00 and 2.33 are 2 or higher).\",\"The value as published at the time of checking counts; a later revision does not reopen the bet.\",\"Fallback: S1 (NOAA) decides; only if S1 is unavailable, S2 (GFZ Potsdam, the official Kp producer) decides with the same threshold.\",\"No early resolution: the bet resolves only once the 21:00 UTC value is published; if neither source has it by the deadline, the bet is VOID.\"],\"elements\":[{\"id\":\"e1\",\"q\":\"Is the NOAA SWPC planetary Kp value for the interval starting 2026-11-11 21:00 UTC (time_tag 2026-11-11T21:00:00) 2.00 or higher?\"}],\"rule\":\"ALL\",\"sources\":true,\"sources_allowed\":[{\"id\":\"S1\",\"publisher\":\"NOAA SWPC planetary K-index (JSON product)\",\"url\":\"https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json\"},{\"id\":\"S2\",\"publisher\":\"GFZ Potsdam Kp index (JSON API)\",\"url\":\"https://kp.gfz.de/app/json/?start=2026-11-11T21:00:00Z&end=2026-11-11T21:00:00Z&index=Kp\"}],\"time\":{\"evidence_cutoff\":\"2026-11-12T00:30:00Z\",\"window_end\":\"2026-11-12T00:00:00Z\",\"window_start\":\"2026-11-11T21:00:00Z\"}}",
+      "max_paid_runs": 3,
+      "tier": 1,
+      "referee": null,
+      "tip_maker": false,
+      "funding_deadline": 1794443400000000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1795048200000000000,
+      "consent_party_controlled": false
+    },
+    "fee_min_maker": "500000",
+    "fee_min_taker": "500000",
+    "fee_min_taker_options": [],
+    "tip_maker": "0",
+    "tip_taker": "0",
+    "storage_maker": "85434",
+    "storage_taker": "85434",
+    "status": "Settled",
+    "taker": "4b6d883c759b2d60706c926b9c079307b12d9fba5e8ff308ffcdfae7966153a5",
+    "created_at": 1794437004087803100,
+    "taken_at": 1794437012331726800,
+    "proposed_at": 1794444093107574300,
+    "outcome": "NO",
+    "used_run_nos": [
+      1
+    ],
+    "runs_used": 1,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 23,
+    "last_resolution_raw": "{\"contract\":\"praetorial-frz3-2611100414.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[{\"answers\":[\"8e885c6e8bc2cfcc4ac6d886a9d14edeb117601f6de14d5920606d85d720e6d7\"],\"id\":\"e1\",\"rule\":\"D-ORIGIN1\"}],\"elements\":[{\"id\":\"e1\",\"verdict\":\"not_proven\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_chain\":[{\"model_a\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"model_b\":\"z-ai/glm-5.3-flash\"},{\"model_a\":\"Qwen/Qwen3.8-27B\",\"model_b\":\"moonshotai/kimi-k3\"},{\"model_a\":\"google/gemini-3.5-flash\",\"model_b\":\"openai/gpt-5.4-mini\"},{\"model_a\":\"x-ai/grok-4.7\",\"model_b\":\"anthropic/claude-haiku-5-5\"}],\"judge_pair_index\":0,\"judge_ran\":true,\"model_not_found_observations\":[],\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"no_live_judge\":false,\"run_diagnostics\":[{\"content\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"{\\\\\\\"time_tag\\\\\\\":\\\\\\\"2026-11-11T21:00:00\\\\\\\",\\\\\\\"Kp\\\\\\\":1.33,\\\\\\\"a_running\\\\\\\":5,\\\\\\\"station_count\\\\\\\":8}\\\", \\\"source_id\\\": \\\"S1\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S2\\\", \\\"quote\\\": \\\"{\\\\\\\"Kp\\\\\\\":[1.0],\\\\\\\"datetime\\\\\\\":[\\\\\\\"2026-11-11T21:00:00Z\\\\\\\"]\\\"}], \\\"reason\\\": \\\"NOAA SWPC's row for time_tag 2026-11-11T21:00:00 shows Kp 1.33, which is below the 2.00 threshold, and GFZ Potsdam independently shows 1.0 for the same interval.\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"{\\\\\\\"time_tag\\\\\\\":\\\\\\\"2026-11-11T21:00:00\\\\\\\",\\\\\\\"Kp\\\\\\\":1.33,\\\\\\\"a_running\\\\\\\":5,\\\\\\\"station_count\\\\\\\":8}\\\", \\\"source_id\\\": \\\"S1\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S2\\\", \\\"quote\\\": \\\"{\\\\\\\"Kp\\\\\\\":[1.0],\\\\\\\"datetime\\\\\\\":[\\\\\\\"2026-11-11T21:00:00Z\\\\\\\"]\\\"}], \\\"reason\\\": \\\"NOAA SWPC's row for time_tag 2026-11-11T21:00:00 sho\",\"content_len\":411,\"content_sha256\":\"8e885c6e8bc2cfcc4ac6d886a9d14edeb117601f6de14d5920606d85d720e6d7\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":955,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"8e885c6e8bc2cfcc4ac6d886a9d14edeb117601f6de14d5920606d85d720e6d7\",\"response_bytes\":22913,\"signature_proof\":{\"request_sha256\":\"e43662ed9c5dc266f2af16e3c5111df3050e082df8d41e0b6bc6f7c498a3c538\",\"response_sha256\":\"1395bb738ad88e4349f785aa0ec522bb78575ab05076d00869e2ec61fbc83415\",\"signature\":\"ae372eb3cd787cade744ae5b11d6048f75c088620ea1e3e6b88bb8b709785eb1433409bc35790f7429af60349b5f4cbdadf5bde11b442c8ee8f48d4c79727d07\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"e43662ed9c5dc266f2af16e3c5111df3050e082df8d41e0b6bc6f7c498a3c538:1395bb738ad88e4349f785aa0ec522bb78575ab05076d00869e2ec61fbc83415\"},\"signature_verified\":true,\"total_ms\":11434,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"{\\\\\\\"time_tag\\\\\\\":\\\\\\\"2026-11-11T21:00:00\\\\\\\",\\\\\\\"Kp\\\\\\\":1.33,\\\\\\\"a_running\\\\\\\":5,\\\\\\\"station_count\\\\\\\":8}\\\", \\\"source_id\\\": \\\"S1\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S2\\\", \\\"quote\\\": \\\"{\\\\\\\"Kp\\\\\\\":[1.0],\\\\\\\"datetime\\\\\\\":[\\\\\\\"2026-11-11T21:00:00Z\\\\\\\"]\\\"}], \\\"reason\\\": \\\"NOAA SWPC's row for time_tag 2026-11-11T21:00:00 shows Kp 1.33, which is below the 2.00 threshold (GFZ corroborates with 1.0).\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"{\\\\\\\"time_tag\\\\\\\":\\\\\\\"2026-11-11T21:00:00\\\\\\\",\\\\\\\"Kp\\\\\\\":1.33,\\\\\\\"a_running\\\\\\\":5,\\\\\\\"station_count\\\\\\\":8}\\\", \\\"source_id\\\": \\\"S1\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S2\\\", \\\"quote\\\": \\\"{\\\\\\\"Kp\\\\\\\":[1.0],\\\\\\\"datetime\\\\\\\":[\\\\\\\"2026-11-11T21:00:00Z\\\\\\\"]\\\"}], \\\"reason\\\": \\\"NOAA SWPC's row for time_tag 2026-11-11T21:00:00 sho\",\"content_len\":376,\"content_sha256\":\"087f2b3ec13352c4d3985d1a7c2a81b3414cb982b12399b6d1697f8b57eea741\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":776,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"z-ai/glm-5.3-flash\",\"raw_sha256\":\"087f2b3ec13352c4d3985d1a7c2a81b3414cb982b12399b6d1697f8b57eea741\",\"response_bytes\":36608,\"signature_proof\":{\"request_sha256\":\"2d7473e1ed257e0d59d135e9405a46ea848bc613e08bd1a559ad38356f2c93d0\",\"response_sha256\":\"843eaefa2f905a249e5793538276db8f7460c4985e6322244a07c820fa50fa51\",\"signature\":\"b1d8593b1b83c7bce49ac9c72140f627bbc36f86b80893b289365e75902563f1943b2cbf42c2336e1de732c28ca0c71883567cbc7181e1d5aa66c15fceb71806\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"2d7473e1ed257e0d59d135e9405a46ea848bc613e08bd1a559ad38356f2c93d0:843eaefa2f905a249e5793538276db8f7460c4985e6322244a07c820fa50fa51\"},\"signature_verified\":true,\"total_ms\":11109,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1,\"sources\":[{\"curated\":false,\"final_url\":\"https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json\",\"id\":\"S1\",\"party_controlled\":false,\"publisher\":\"NOAA SWPC planetary K-index (JSON product)\",\"sha256\":\"6b373b96f783ec2966728737611c71ea85d9554c353b541b21c70e6673895d6d\",\"url\":\"https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json\"},{\"curated\":false,\"final_url\":\"https://kp.gfz.de/app/json/?start=2026-11-11T21:00:00Z&end=2026-11-11T21:00:00Z&index=Kp\",\"id\":\"S2\",\"party_controlled\":false,\"publisher\":\"GFZ Potsdam Kp index (JSON API)\",\"sha256\":\"1840bc5aa33b8482622564da7f131b7dc2e82482632c88d16a67fa477be5daff\",\"url\":\"https://kp.gfz.de/app/json/?start=2026-11-11T21:00:00Z&end=2026-11-11T21:00:00Z&index=Kp\"}]},\"notes\":[\"source fetched: S1 (https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json)\",\"source fetched: S2 (https://kp.gfz.de/app/json/?start=2026-11-11T21:00:00Z&end=2026-11-11T21:00:00Z&index=Kp)\",\"decision: an element is not proven (burden on YES); other elements irrelevant\",\"D-BUDGET1: calls_ms=[11748,11417] rerun=false\"],\"result\":{\"bet_id\":54,\"checked_until\":0,\"element_results_hash\":\"d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf\",\"judge_pair_index\":0,\"outcome\":\"NO\",\"run_no\":1,\"terms_hash\":\"e6d8f8b8611ddb9b268cf4438661349a35ae1b0783701fecaa46e2ba4edd127e\"},\"signing\":{\"pubkey_hex\":\"4479e0b6d288cbcc77324b916bfe8296bcd48cb764de87d134bd90584565ef23\",\"signature_hex\":\"a5f19865091897511fd7e9bd61dd9483f14abdff01e35a9679cc539b54fa8f0fa66f702ba273354855559743b15645e841b69d24458caa11bd957030281c9c05\"}}",
+    "pruned": false,
+    "next_expected_run_no": 2,
+    "all_results": [
+      {
+        "run_no": 1,
+        "outcome": "NO",
+        "element_results_hash": "d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf",
+        "checked_until": "0"
+      }
+    ],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "no_live_judge_until_ns": null,
+    "request_judge_snapshot": null,
+    "judge_pair_index": 0,
+    "next_run_no": 2,
+    "pending_run_no": null
+  }
+}

@@ -1,0 +1,15 @@
+# views-vs-args: mainnet escrow bets.praetorial.near args <repo>/release/mainnet-night/args.mainnet.json rpc https://free.rpc.fastnear.com
+PASS resolver_keys = ["f67c1f8f0a7824810874ffd469c2034bf1e7723170ba61c0f3f265f3d3dfe440","27070cba98ca952f06b41305d34e0ee
+PASS outlayer_config = {"secrets_account_id":"aikey.praetorial.near","secrets_profile":"praetorial-resolver","wasm_base_url
+PASS judge_chain = [{"model_a":"deepseek-ai/DeepSeek-V4.1-Flash-1017","model_b":"z-ai/glm-5.3-flash"},{"model_a":"Qwen/
+PASS asset_limit(nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"5000000","min_fee_cap_per_side":"2
+PASS asset_limit(nep141:usdt.tether-token.near) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"5000000","min_fee_cap_per_side":"2
+PASS asset_limit(nep141:btc.omft.near) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"6796","min_fee_cap_per_side":"3397
+PASS asset_limit(nep141:wrap.near) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"1365691107985195908389441","min_fe
+PASS asset_limit(nep141:eth.omft.near) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"2435917110612561","min_fee_cap_per
+PASS asset_limit(nep141:zec.omft.near) = {"max_per_side":"10000000000000000000000000000000000","min_bond":"490423","min_fee_cap_per_side":"24
+PASS protocol_fee_bps = 100
+PASS is_paused = false
+PASS is_shutdown = false
+PASS contract_version = 1.0.0
+# 13 PASS, 0 FAIL

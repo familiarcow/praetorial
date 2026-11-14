@@ -1,0 +1,45 @@
+{
+  "steps": [],
+  "cancels": [
+    {
+      "id": 3,
+      "status": "Cancelled",
+      "note": "already cancelled before this run (earlier cancel run, tx 3atkQuXzig4nNN5tyM2iRz3d9DwgQh7zryivhAuyAFNS for bet 3)"
+    },
+    {
+      "id": 4,
+      "status": "Cancelled",
+      "refund": "2769855000000000000000000",
+      "maker_delta": "2769855000000000000000000",
+      "fee_delta": "0",
+      "fully_paid": true
+    }
+  ],
+  "escrow_tx_methods": [
+    {
+      "hash": "BMAPe52EzUf9Xu9HsyY9iKJZ9dNkE8F7QccwkFchZQdm",
+      "methods": [
+        "drain_payouts",
+        "mt_transfer",
+        "on_payout_result"
+      ],
+      "tsNs": "1794312392693077200"
+    },
+    {
+      "hash": "9T5bV91eri1VGoSwU722oAujGe8TTX63WubZYcpJw7cE",
+      "methods": [
+        "cancel"
+      ],
+      "tsNs": "1794312384237915400"
+    },
+    {
+      "hash": "BMAPe52EzUf9Xu9HsyY9iKJZ9dNkE8F7QccwkFchZQdm",
+      "methods": [
+        "drain_payouts",
+        "mt_transfer",
+        "on_payout_result"
+      ],
+      "tsNs": "1794312392693077200"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "account": "intents-mock.praetorial-dev-1101.testnet",
+  "wasmBytes": 170571,
+  "deployTx": "HSk2bHjcjCFhqcDUnRQTGgffEaaDmWFVmbVgSN3hXtL",
+  "before": {
+    "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet|nep141:wrap.testnet": "0",
+    "escrow3.praetorial-dev-1101.testnet|nep141:wrap.testnet": "0",
+    "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet|nep141:usdc.fakes.testnet": "0",
+    "escrow3.praetorial-dev-1101.testnet|nep141:usdc.fakes.testnet": "0"
+  },
+  "after": {
+    "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet|nep141:wrap.testnet": "0",
+    "escrow3.praetorial-dev-1101.testnet|nep141:wrap.testnet": "0",
+    "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet|nep141:usdc.fakes.testnet": "0",
+    "escrow3.praetorial-dev-1101.testnet|nep141:usdc.fakes.testnet": "0"
+  },
+  "stateUnchanged": true,
+  "fail_mt_transfer_enabled": false
+}

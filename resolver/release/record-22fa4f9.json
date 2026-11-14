@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "22fa4f92b147b2d06f897e3bf75e934512822b46",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "e0dc19c41e7957802397de6d18aa540783ab5af509f78e10fd9baf62a28ab946",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "e0dc19c41e7957802397de6d18aa540783ab5af509f78e10fd9baf62a28ab946"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "e0dc19c41e7957802397de6d18aa540783ab5af509f78e10fd9baf62a28ab946"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "e0dc19c41e7957802397de6d18aa540783ab5af509f78e10fd9baf62a28ab946"
+    }
+  ],
+  "notes": {
+    "item": "RR3 release record after L1b2a 22fa4f9 (resolver wall-clock budget, D-BUDGET1); NOT uploaded anywhere",
+    "emulation": "colima rosetta profile; three routes identical, no compiler crashes or re-runs"
+  }
+}

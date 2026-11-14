@@ -1,0 +1,34 @@
+{
+  "txs": [
+    {
+      "step": "mint mock USDC to maker",
+      "hash": "EFyoCB2S9jz324UoMYqezQzhqnnKoBf2JiiKPiELhJM4",
+      "url": "https://testnet.nearblocks.io/txns/EFyoCB2S9jz324UoMYqezQzhqnnKoBf2JiiKPiELhJM4"
+    },
+    {
+      "step": "mint mock USDC to taker",
+      "hash": "bcMC68E88H2Sziw4e8sVKiqRUuAdNvZZBp7geYVLdEq",
+      "url": "https://testnet.nearblocks.io/txns/bcMC68E88H2Sziw4e8sVKiqRUuAdNvZZBp7geYVLdEq"
+    },
+    {
+      "step": "tNEAR to taker implicit",
+      "hash": "GubBPpmkLNNKLrYY5vHtWZeg9hCE1qaQrRvqFKTD1wKr",
+      "url": "https://testnet.nearblocks.io/txns/GubBPpmkLNNKLrYY5vHtWZeg9hCE1qaQrRvqFKTD1wKr"
+    }
+  ],
+  "steps": [
+    {
+      "s": "maker logged in (Privy)",
+      "t": "2026-11-09T21:20:09.789Z"
+    }
+  ],
+  "escrow": "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet",
+  "taker": "763be141391ca87d99ff65dfdd901d962f28eb9f79df1e4fcdffd289acf05f98",
+  "maker": "8941e607b64ff1b0d62ff6e061ce073df75a53a1205852708f965779240981c7",
+  "balances_before": {
+    "maker": "21200000",
+    "taker": "11000000",
+    "fee": "4175234",
+    "escrow": "0"
+  }
+}

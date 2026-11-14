@@ -1,0 +1,11 @@
+{
+  "_comment": "WT1b: pins the web envelope builder reads. models mirror PRIMARY_JUDGE_MODEL/SECOND_JUDGE_MODEL in resolver/wasm-bin/src/main.rs (D-JUDGE6, test-enforced); models_snapshot_hash = sha256 of the compact JSON array. resolver_wasm_hash = newest resolver/release record (test-enforced) and must equal escrow.resolver_keys()[2] of the target contract (D-KEY1).",
+  "network": "testnet",
+  "release_record": "resolver/release/record-f5695b9.json",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "models": [
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "z-ai/glm-5.3-flash"
+  ],
+  "fee_account": "fee.praetorial-dev-1101.testnet"
+}

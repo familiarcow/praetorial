@@ -1,0 +1,30 @@
+{
+  "escrow": "praetorial-frz2-2611091914.praetorial-dev-1101.testnet",
+  "attest_pubkey_pinned": "2be89b6565161859779d64f39fca6ba1aa99c500bc7687731bc40374dc866cfc",
+  "results": [
+    {
+      "window": "30d",
+      "http": 200,
+      "ok": true,
+      "unreachable": [],
+      "spec_hash": "33f9711aa1438f4faf1bf0b5a1b9cff2cae4e49b33b8704d6579048dae780a90",
+      "checked_at": "1794270235919097856",
+      "signing_pubkey_equals_pinned_attest": true,
+      "signature_valid_under_pinned_attest_key": true,
+      "secs": 14,
+      "sheet_open": "2026-11-10T00:23:00Z"
+    },
+    {
+      "window": "4h",
+      "http": 200,
+      "ok": true,
+      "unreachable": [],
+      "spec_hash": "f6c0de10652681a4f72a7aad1578264c001fea70f52c130c07b18a2604455c7b",
+      "checked_at": "1794270248927891456",
+      "signing_pubkey_equals_pinned_attest": true,
+      "signature_valid_under_pinned_attest_key": true,
+      "secs": 15,
+      "sheet_open": "2026-11-10T00:23:00Z"
+    }
+  ]
+}

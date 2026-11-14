@@ -1,0 +1,153 @@
+{
+ "limit_ms": 10,
+ "target_max_ms": 8,
+ "note": "single-worker wrangler tail, one worker at a time; sanitized",
+ "workers": {
+  "keeper": {
+   "all": {
+    "n": 10,
+    "p50": 2.0,
+    "max": 3,
+    "red": false,
+    "failed": 0
+   },
+   "by_trigger": {
+    "KeeperDO POST /tick": {
+     "n": 5,
+     "p50": 3,
+     "max": 3,
+     "red": false,
+     "failed": 0
+    },
+    "default cron * * * * *": {
+     "n": 5,
+     "p50": 1,
+     "max": 2,
+     "red": false,
+     "failed": 0
+    }
+   }
+  },
+  "relayer": {
+   "all": {
+    "n": 66,
+    "p50": 0.0,
+    "max": 3,
+    "red": false,
+    "failed": 2
+   },
+   "by_trigger": {
+    "worker GET /budget/global": {
+     "n": 32,
+     "p50": 0.0,
+     "max": 0,
+     "red": false,
+     "failed": 2
+    },
+    "RelayerDO GET /budget/global": {
+     "n": 32,
+     "p50": 1.0,
+     "max": 3,
+     "red": false,
+     "failed": 0
+    },
+    "RelayerDO POST /heartbeat": {
+     "n": 1,
+     "p50": 1,
+     "max": 1,
+     "red": false,
+     "failed": 0
+    },
+    "worker POST /heartbeat": {
+     "n": 1,
+     "p50": 0,
+     "max": 0,
+     "red": false,
+     "failed": 0
+    }
+   }
+  },
+  "monitor": {
+   "all": {
+    "n": 10,
+    "p50": 3.0,
+    "max": 7,
+    "red": false,
+    "failed": 0
+   },
+   "by_trigger": {
+    "MonitorDO POST /tick": {
+     "n": 5,
+     "p50": 6,
+     "max": 7,
+     "red": false,
+     "failed": 0
+    },
+    "worker POST /tick": {
+     "n": 5,
+     "p50": 0,
+     "max": 0,
+     "red": false,
+     "failed": 0
+    }
+   }
+  },
+  "notifier": {
+   "all": {
+    "n": 10,
+    "p50": 2.0,
+    "max": 5,
+    "red": false,
+    "failed": 0
+   },
+   "by_trigger": {
+    "NotifierDO POST /tick": {
+     "n": 5,
+     "p50": 4,
+     "max": 5,
+     "red": false,
+     "failed": 0
+    },
+    "worker POST /tick": {
+     "n": 5,
+     "p50": 0,
+     "max": 0,
+     "red": false,
+     "failed": 0
+    }
+   }
+  },
+  "indexer": {
+   "all": {
+    "n": 38,
+    "p50": 0.0,
+    "max": 16,
+    "red": true,
+    "failed": 0
+   },
+   "by_trigger": {
+    "worker GET /health": {
+     "n": 32,
+     "p50": 0.0,
+     "max": 2,
+     "red": false,
+     "failed": 0
+    },
+    "worker POST /tick": {
+     "n": 5,
+     "p50": 11,
+     "max": 16,
+     "red": true,
+     "failed": 0
+    },
+    "worker POST /tick/governance": {
+     "n": 1,
+     "p50": 8,
+     "max": 8,
+     "red": false,
+     "failed": 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,136 @@
+{
+  "result": {
+    "bet_id": 1,
+    "terms_hash": "7cf2def54966de8644e1f7f4543b10d50d45803f991f7f73a8baa64e4827ff9b",
+    "outcome": "YES",
+    "element_results_hash": "09206c2efd4aec3e083ae0ac2ad3d671d937dd452bc088e8b3e00f0e5af215d7",
+    "run_no": 1,
+    "checked_until": 0,
+    "judge_pair_index": 0
+  },
+  "contract": "escrow.testnet",
+  "notes": [
+    "decision: all elements met",
+    "D-BUDGET1: calls_ms=[0,0] rerun=false"
+  ],
+  "judge": {
+    "judge_backend": "near-ai",
+    "judge_backend_reason": null,
+    "judge_ran": true,
+    "models_requested": [
+      "test/model-a",
+      "test/model-b"
+    ],
+    "models_echoed": [
+      "test/model-a",
+      "test/model-b"
+    ],
+    "runs": 1,
+    "elements": [
+      {
+        "id": "e1",
+        "verdict": "met"
+      }
+    ],
+    "sources": [
+      {
+        "id": "S_A",
+        "url": "https://forecast.weather.gov/product.php?site=OKX",
+        "publisher": "NWS weather.gov",
+        "sha256": "f049b8bbb4532315bb1606f9dba1dedfe31c409210e0476505d4c03f6b1a27ac",
+        "party_controlled": false,
+        "curated": false
+      },
+      {
+        "id": "S_B",
+        "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/x",
+        "publisher": "IEM mesonet",
+        "sha256": "e294b649a9ff6278a75b674812222d681cb75b130a55aacbd746b28ad53269ef",
+        "party_controlled": false,
+        "curated": false
+      }
+    ],
+    "element_evidence": [
+      {
+        "id": "e1",
+        "rule": "D-ORIGIN1",
+        "answers": [
+          "f5559d5fb7bd16f0a849b4aef9733697f2e6cb2c6f49760136b387efe3bfab62"
+        ]
+      }
+    ],
+    "run_diagnostics": [
+      {
+        "model": "test/model-a",
+        "verify_result": "answer",
+        "verify_reason": null,
+        "finish_reason": "stop",
+        "content_len": 221,
+        "content_sha256": "f5559d5fb7bd16f0a849b4aef9733697f2e6cb2c6f49760136b387efe3bfab62",
+        "content_head": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"also\": [{\"source_id\": \"S_B\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\"}], \"reason\": \"max is 72 in both copies\"}",
+        "http_status": 200,
+        "transport_error": null,
+        "response_bytes": 516,
+        "error_body_head": null,
+        "first_byte_ms": 1,
+        "total_ms": 2,
+        "idle_timeout_hit": false,
+        "total_timeout_hit": false,
+        "signature_verified": true,
+        "signature_proof": {
+          "signing_algo": "ed25519",
+          "signing_address": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+          "signature": "d0c9e6f962fc36698c72888c53291e86a3763c85d96de31f3c2e2a55eaea8abae6a91c1cf04d48482fb7f4434f3c617571deb58f91172a528505d7ed03bb4b02",
+          "text": "c7fc6e86400d47268b6809c8166b998456d395dfc010b2c1704ae55a2387fdf8:dce45c2a0e376136f3282e0a6d9399f8891c244596703c235ee2c2a5d4c2c712",
+          "response_sha256": "dce45c2a0e376136f3282e0a6d9399f8891c244596703c235ee2c2a5d4c2c712",
+          "request_sha256": "c7fc6e86400d47268b6809c8166b998456d395dfc010b2c1704ae55a2387fdf8"
+        },
+        "raw_sha256": "f5559d5fb7bd16f0a849b4aef9733697f2e6cb2c6f49760136b387efe3bfab62",
+        "content": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"also\": [{\"source_id\": \"S_B\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\"}], \"reason\": \"max is 72 in both copies\"}",
+        "content_complete": true
+      },
+      {
+        "model": "test/model-b",
+        "verify_result": "answer",
+        "verify_reason": null,
+        "finish_reason": "stop",
+        "content_len": 221,
+        "content_sha256": "f5559d5fb7bd16f0a849b4aef9733697f2e6cb2c6f49760136b387efe3bfab62",
+        "content_head": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"also\": [{\"source_id\": \"S_B\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\"}], \"reason\": \"max is 72 in both copies\"}",
+        "http_status": 200,
+        "transport_error": null,
+        "response_bytes": 516,
+        "error_body_head": null,
+        "first_byte_ms": 1,
+        "total_ms": 2,
+        "idle_timeout_hit": false,
+        "total_timeout_hit": false,
+        "signature_verified": true,
+        "signature_proof": {
+          "signing_algo": "ed25519",
+          "signing_address": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+          "signature": "2556e1a52b007a3113a221878abcfa94bd88b3c57134d1e8b8ca1c7e8e3c6e158d4a48d45d3cae2479c9eb11cff39c91d796e3b77279a1de140891391fb5dc0c",
+          "text": "339fb5c4ca52e9d15164d638c4a2ccf39b7a55c6ba34d691db88a3512f454ec4:6a144ac1ffe7e4257a20eeb3a0988768d9f8d1dcddd6144f368c0ad4b35201bb",
+          "response_sha256": "6a144ac1ffe7e4257a20eeb3a0988768d9f8d1dcddd6144f368c0ad4b35201bb",
+          "request_sha256": "339fb5c4ca52e9d15164d638c4a2ccf39b7a55c6ba34d691db88a3512f454ec4"
+        },
+        "raw_sha256": "f5559d5fb7bd16f0a849b4aef9733697f2e6cb2c6f49760136b387efe3bfab62",
+        "content": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"also\": [{\"source_id\": \"S_B\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\"}], \"reason\": \"max is 72 in both copies\"}",
+        "content_complete": true
+      }
+    ],
+    "judge_chain": [
+      {
+        "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "model_b": "z-ai/glm-5.3-flash"
+      }
+    ],
+    "judge_pair_index": 0,
+    "no_live_judge": false,
+    "model_not_found_observations": []
+  },
+  "signing": {
+    "pubkey_hex": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+    "signature_hex": "298b5e9132cafb97a948eb30fdfe99310a6ad576c6aff339d172d6ecfae74d5d640762f7aff4525904e9f57865134674f7dac293d35381f8d6f4a1f605ab7102"
+  }
+}

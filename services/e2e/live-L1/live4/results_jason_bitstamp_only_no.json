@@ -1,0 +1,190 @@
+{
+  "txs": [
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "9EssamVK3zZkX18ejmgQDMNLfNxRXTmSxdRi5e9qMPDS",
+      "url": "https://testnet.nearblocks.io/txns/9EssamVK3zZkX18ejmgQDMNLfNxRXTmSxdRi5e9qMPDS",
+      "spec_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "checked_at": "1794098552938045440",
+      "attest_pubkey": "d09e11c67891ff13458c282a15a0b1e24406dd3fe278f2293e25514e97b43212",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_maker1",
+      "hash": "HJReftw2SzvYCzXWxrTKntLK2rs32S2XJk1amRwVd9cs",
+      "url": "https://testnet.nearblocks.io/txns/HJReftw2SzvYCzXWxrTKntLK2rs32S2XJk1amRwVd9cs",
+      "status": "Success"
+    },
+    {
+      "step": "mint_usdc_taker1",
+      "hash": "FgTQc65s2Uk6LQWexrv7PCf6LEutAcwNKSC81AkZmsqa",
+      "url": "https://testnet.nearblocks.io/txns/FgTQc65s2Uk6LQWexrv7PCf6LEutAcwNKSC81AkZmsqa",
+      "status": "Success"
+    },
+    {
+      "step": "open_usdc",
+      "hash": "3shnWVupqqLvPBAnjddmLxE79NiftTou4TPbRRRMZZHJ",
+      "url": "https://testnet.nearblocks.io/txns/3shnWVupqqLvPBAnjddmLxE79NiftTou4TPbRRRMZZHJ"
+    },
+    {
+      "step": "take_usdc",
+      "hash": "2ynq9mB5TbNmmQbKnAX3oWztcy2a2dZYvGYMo8ALrjLa",
+      "url": "https://testnet.nearblocks.io/txns/2ynq9mB5TbNmmQbKnAX3oWztcy2a2dZYvGYMo8ALrjLa"
+    },
+    {
+      "step": "request_resolution",
+      "hash": "8MTFoQPk4h8Rsy7w1paRUvVmaZRSeys8s5VmPnQfBi31",
+      "url": "https://testnet.nearblocks.io/txns/8MTFoQPk4h8Rsy7w1paRUvVmaZRSeys8s5VmPnQfBi31",
+      "status": "Success",
+      "keeper_credit_before": "150000000000000000000000"
+    },
+    {
+      "step": "submit_outcome",
+      "hash": "HbHwJ2Qa3dx777JQC5TwTsg9q6nCNTBuS5sofEvETozk",
+      "url": "https://testnet.nearblocks.io/txns/HbHwJ2Qa3dx777JQC5TwTsg9q6nCNTBuS5sofEvETozk",
+      "status": "Success",
+      "signed_result": {
+        "bet_id": 2,
+        "checked_until": "0",
+        "element_results_hash": "d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf",
+        "outcome": "NO",
+        "run_no": 1,
+        "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284"
+      }
+    },
+    {
+      "step": "finalize",
+      "hash": "FMT1dzDc4See83Ag3EdoUKnQNuCDf9doNogKFp1bAM9y",
+      "url": "https://testnet.nearblocks.io/txns/FMT1dzDc4See83Ag3EdoUKnQNuCDf9doNogKFp1bAM9y",
+      "status": "Success"
+    }
+  ],
+  "terms_sha256": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+  "bet_id": 2,
+  "envelope_settlement_period_s": 3600,
+  "status_after_take": "Taken",
+  "bet_after_request": {
+    "envelope": {
+      "bet_id": 2,
+      "version": 1,
+      "maker": "maker1.praetorial-dev-1101.testnet",
+      "taker_allow": "Any",
+      "terms_hash": "1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284",
+      "models_snapshot_hash": "itemL1b-jason_bitstamp_only_no",
+      "outcomes": [
+        "YES",
+        "NO"
+      ],
+      "maker_side": "YES",
+      "maker_asset": "nep141:usdc.testnet",
+      "taker_asset": "nep141:usdc.testnet",
+      "stake_maker": "1000000",
+      "stake_taker": "1000000",
+      "taker_options": [],
+      "fee_bps": 100,
+      "storage_charge_per_side": "8000",
+      "keep_terms": true,
+      "max_paid_runs": 2,
+      "tier": 1,
+      "referee": null,
+      "funding_deadline": 1794098712557000000,
+      "early_settle_outcome": null,
+      "finality_delay": 0,
+      "settlement_period": 3600000000000,
+      "resolve_deadline": 1796690562557000000,
+      "consent_party_controlled": false
+    },
+    "status": "Resolving",
+    "taker": "taker1.praetorial-dev-1101.testnet",
+    "created_at": 1794098564423493000,
+    "taken_at": 1794098567757264100,
+    "proposed_at": null,
+    "outcome": null,
+    "used_run_nos": [],
+    "runs_used": 0,
+    "bonds": [],
+    "pre_challenge_outcome": null,
+    "challenged_by": null,
+    "exhibits": [],
+    "rebuttals": [],
+    "objection_deposits": [],
+    "final_round_started_at": null,
+    "amend_count": 0,
+    "referee_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "amend_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "prune_proposal": {
+      "maker_value": null,
+      "taker_value": null
+    },
+    "pending_resolution_request": 2,
+    "last_resolution_raw": "{\"contract\":\"praetorial-l1b18-11080038.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[{\"answers\":[\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\"],\"id\":\"e1\",\"rule\":\"curated\"}],\"elements\":[{\"id\":\"e1\",\"verdict\":\"not_proven\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":true,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"run_diagnostics\":[{\"content\":\"{\\\"answer\\\":\\\"not_met\\\",\\\"quote\\\":\\\"1794029220,75950\\\",\\\"source_id\\\":\\\"S_CB\\\",\\\"also\\\":[],\\\"reason\\\":\\\"Coinbase's complete 60s table has no high at or above 75951.00 (its maximum shown is 75950), so the required Coinbase leg is not satisfied.\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\":\\\"not_met\\\",\\\"quote\\\":\\\"1794029220,75950\\\",\\\"source_id\\\":\\\"S_CB\\\",\\\"also\\\":[],\\\"reason\\\":\\\"Coinbase's complete 60s table has no high at or above 75951.00 (its maximum shown is 75950), so the required Coinbase leg is not satisfied.\\\"}\",\"content_len\":227,\"content_sha256\":\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":524,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\",\"response_bytes\":82477,\"signature_proof\":{\"request_sha256\":\"512cf89452342fe7441871ee7ccb1de491b92dd1c37a235820150f57b2f419e0\",\"response_sha256\":\"cbf2c12d37a7626855d52d5c642ec180c24ab102a84db72c3d76993c87e3490c\",\"signature\":\"7820d4e291730439cee6d5278ea79ff0b92dac925cbf717e52384a166cdb8da07e782f85c140ca61806f5b436dd27c57194cd07e42ee2a64b0b64f34c570660c\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"512cf89452342fe7441871ee7ccb1de491b92dd1c37a235820150f57b2f419e0:cbf2c12d37a7626855d52d5c642ec180c24ab102a84db72c3d76993c87e3490c\"},\"signature_verified\":true,\"total_ms\":21962,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"1794029220,75950\\\", \\\"source_id\\\": \\\"S_CB\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S_BS\\\", \\\"quote\\\": \\\"1794029880,75952.18\\\"}, {\\\"source_id\\\": \\\"S_CB\\\", \\\"quote\\\": \\\"1794029820,75948.99\\\"}], \\\"reason\\\": \\\"Coinbase's complete 1-minute high series for the window peaks at 75950.00 (1794029220,75950), never reaching 75951.00, so no Coinbase candle qualifies; Bitstamp's only qualifying highs (75952.18 at 05:38–05:39 UTC, bucket 05:35) fall in a 5-minute window where Coinbase topped out at 75948.99, so the required same-window confirmation on both venues never occurs before the deadline.\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"1794029220,75950\\\", \\\"source_id\\\": \\\"S_CB\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S_BS\\\", \\\"quote\\\": \\\"1794029880,75952.18\\\"}, {\\\"source_id\\\": \\\"S_CB\\\", \\\"quote\\\": \\\"1794029820,75948.99\\\"}], \\\"reason\\\": \\\"Coinbase's complete 1-minute high series for the window peaks at 75950.00 (1794029220,75950), nev\",\"content_len\":590,\"content_sha256\":\"27cdfa13cb8bba594db89869789c99b535fdb1f39a79bdccb9b091ee770cf18d\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":854,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"z-ai/glm-5.3-flash\",\"raw_sha256\":\"27cdfa13cb8bba594db89869789c99b535fdb1f39a79bdccb9b091ee770cf18d\",\"response_bytes\":271030,\"signature_proof\":{\"request_sha256\":\"9d70b6d6059b30a99d5d792f9a709c3d30b22bc66513faee79cd57d885543c85\",\"response_sha256\":\"9e68994f4be2c3ed138da0cb94a7938f46ee6a5c23f996995f8f212ab2d2acfa\",\"signature\":\"b5fb3721fc98c8cec079cff9f8ddcf757371568716f146c185253e004093b8f666fcc57a8eb8b99f423014f1291c60b3a2de212d53495b596275d32555669604\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"9d70b6d6059b30a99d5d792f9a709c3d30b22bc66513faee79cd57d885543c85:9e68994f4be2c3ed138da0cb94a7938f46ee6a5c23f996995f8f212ab2d2acfa\"},\"signature_verified\":true,\"total_ms\":73544,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1,\"sources\":[{\"curated\":true,\"final_url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z\",\"id\":\"S_CB\",\"party_controlled\":false,\"publisher\":\"Coinbase BTC-USD\",\"sha256\":\"48fc10c7ed6ad563e581a3322646ee8a0ffdf18352d5f4e18077cc769e890920\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z\"},{\"curated\":true,\"final_url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199\",\"id\":\"S_BS\",\"party_controlled\":false,\"publisher\":\"Bitstamp btcusd\",\"sha256\":\"4b94dd4ee1a2f640bad2c6560a5c5481c1b2b8b64cd2264fbddfb2e7a24e4df3\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199\"}]},\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 60s over 2026-11-07T04:00:00Z to 2026-11-07T06:00:00Z: no candles returned inside the window\",\"decision: an element is not proven (burden on YES); other elements irrelevant\",\"D-BUDGET1: calls_ms=[22274,73862] rerun=false\"],\"result\":{\"bet_id\":2,\"checked_until\":0,\"element_results_hash\":\"d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf\",\"outcome\":\"NO\",\"run_no\":1,\"terms_hash\":\"1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284\"},\"signing\":{\"pubkey_hex\":\"8aa74b574ab19b00858282301a13b34c45b22b5fdb108627601ca98224b452df\",\"signature_hex\":\"bc04f56608ddd12f67134349dc8abcae64e3f256bb81a96e74346b6f24c055302ab628a94dcc4136332ea4e815865d250bf322d663b279e02a6d2abb6c16490f\"}}",
+    "pruned": false,
+    "next_expected_run_no": 1,
+    "all_results": [],
+    "window_extended": false,
+    "window_extension_ns": 0,
+    "first_unavailable_ns": null,
+    "retry_count": 0,
+    "next_check_ns": null,
+    "next_run_no": 2,
+    "pending_run_no": 1
+  },
+  "keeper_credit_after": "109875000000000000000000",
+  "last_resolution_raw": "{\"contract\":\"praetorial-l1b18-11080038.praetorial-dev-1101.testnet\",\"judge\":{\"element_evidence\":[{\"answers\":[\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\"],\"id\":\"e1\",\"rule\":\"curated\"}],\"elements\":[{\"id\":\"e1\",\"verdict\":\"not_proven\"}],\"judge_backend\":\"near-ai\",\"judge_backend_reason\":null,\"judge_ran\":true,\"models_echoed\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"models_requested\":[\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"z-ai/glm-5.3-flash\"],\"run_diagnostics\":[{\"content\":\"{\\\"answer\\\":\\\"not_met\\\",\\\"quote\\\":\\\"1794029220,75950\\\",\\\"source_id\\\":\\\"S_CB\\\",\\\"also\\\":[],\\\"reason\\\":\\\"Coinbase's complete 60s table has no high at or above 75951.00 (its maximum shown is 75950), so the required Coinbase leg is not satisfied.\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\":\\\"not_met\\\",\\\"quote\\\":\\\"1794029220,75950\\\",\\\"source_id\\\":\\\"S_CB\\\",\\\"also\\\":[],\\\"reason\\\":\\\"Coinbase's complete 60s table has no high at or above 75951.00 (its maximum shown is 75950), so the required Coinbase leg is not satisfied.\\\"}\",\"content_len\":227,\"content_sha256\":\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":524,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"deepseek-ai/DeepSeek-V4.1-Flash-1017\",\"raw_sha256\":\"199ce0455b93cb6a6f57e6de73254526fb803a92fc98d94f86abd84f565320cb\",\"response_bytes\":82477,\"signature_proof\":{\"request_sha256\":\"512cf89452342fe7441871ee7ccb1de491b92dd1c37a235820150f57b2f419e0\",\"response_sha256\":\"cbf2c12d37a7626855d52d5c642ec180c24ab102a84db72c3d76993c87e3490c\",\"signature\":\"7820d4e291730439cee6d5278ea79ff0b92dac925cbf717e52384a166cdb8da07e782f85c140ca61806f5b436dd27c57194cd07e42ee2a64b0b64f34c570660c\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"512cf89452342fe7441871ee7ccb1de491b92dd1c37a235820150f57b2f419e0:cbf2c12d37a7626855d52d5c642ec180c24ab102a84db72c3d76993c87e3490c\"},\"signature_verified\":true,\"total_ms\":21962,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"},{\"content\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"1794029220,75950\\\", \\\"source_id\\\": \\\"S_CB\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S_BS\\\", \\\"quote\\\": \\\"1794029880,75952.18\\\"}, {\\\"source_id\\\": \\\"S_CB\\\", \\\"quote\\\": \\\"1794029820,75948.99\\\"}], \\\"reason\\\": \\\"Coinbase's complete 1-minute high series for the window peaks at 75950.00 (1794029220,75950), never reaching 75951.00, so no Coinbase candle qualifies; Bitstamp's only qualifying highs (75952.18 at 05:38–05:39 UTC, bucket 05:35) fall in a 5-minute window where Coinbase topped out at 75948.99, so the required same-window confirmation on both venues never occurs before the deadline.\\\"}\",\"content_complete\":true,\"content_head\":\"{\\\"answer\\\": \\\"not_met\\\", \\\"quote\\\": \\\"1794029220,75950\\\", \\\"source_id\\\": \\\"S_CB\\\", \\\"also\\\": [{\\\"source_id\\\": \\\"S_BS\\\", \\\"quote\\\": \\\"1794029880,75952.18\\\"}, {\\\"source_id\\\": \\\"S_CB\\\", \\\"quote\\\": \\\"1794029820,75948.99\\\"}], \\\"reason\\\": \\\"Coinbase's complete 1-minute high series for the window peaks at 75950.00 (1794029220,75950), nev\",\"content_len\":590,\"content_sha256\":\"27cdfa13cb8bba594db89869789c99b535fdb1f39a79bdccb9b091ee770cf18d\",\"error_body_head\":null,\"finish_reason\":\"stop\",\"first_byte_ms\":854,\"http_status\":200,\"idle_timeout_hit\":false,\"model\":\"z-ai/glm-5.3-flash\",\"raw_sha256\":\"27cdfa13cb8bba594db89869789c99b535fdb1f39a79bdccb9b091ee770cf18d\",\"response_bytes\":271030,\"signature_proof\":{\"request_sha256\":\"9d70b6d6059b30a99d5d792f9a709c3d30b22bc66513faee79cd57d885543c85\",\"response_sha256\":\"9e68994f4be2c3ed138da0cb94a7938f46ee6a5c23f996995f8f212ab2d2acfa\",\"signature\":\"b5fb3721fc98c8cec079cff9f8ddcf757371568716f146c185253e004093b8f666fcc57a8eb8b99f423014f1291c60b3a2de212d53495b596275d32555669604\",\"signing_address\":\"40599fb284f43953bb356b09080fd803c960fc10285ad90eca462ca711ad4acb\",\"signing_algo\":\"ed25519\",\"text\":\"9d70b6d6059b30a99d5d792f9a709c3d30b22bc66513faee79cd57d885543c85:9e68994f4be2c3ed138da0cb94a7938f46ee6a5c23f996995f8f212ab2d2acfa\"},\"signature_verified\":true,\"total_ms\":73544,\"total_timeout_hit\":false,\"transport_error\":null,\"verify_reason\":null,\"verify_result\":\"answer\"}],\"runs\":1,\"sources\":[{\"curated\":true,\"final_url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z\",\"id\":\"S_CB\",\"party_controlled\":false,\"publisher\":\"Coinbase BTC-USD\",\"sha256\":\"48fc10c7ed6ad563e581a3322646ee8a0ffdf18352d5f4e18077cc769e890920\",\"url\":\"https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z\"},{\"curated\":true,\"final_url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199\",\"id\":\"S_BS\",\"party_controlled\":false,\"publisher\":\"Bitstamp btcusd\",\"sha256\":\"4b94dd4ee1a2f640bad2c6560a5c5481c1b2b8b64cd2264fbddfb2e7a24e4df3\",\"url\":\"https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199\"}]},\"notes\":[\"source fetched: S_CB (https://api.exchange.coinbase.com/products/BTC-USD/candles?granularity=60&start=2026-11-07T04:00:00Z&end=2026-11-07T05:59:59Z) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"source fetched: S_BS (https://www.bitstamp.net/api/v2/ohlc/btcusd/?step=60&limit=120&start=1794024000&end=1794031199) window-scoped, granularity 60s, 120 in-window candles, coverage COMPLETE\",\"price evidence INCOMPLETE for S_KR (EXCLUDED, COULDNT_CHECK, D-RESOLVE6): COULDNT_CHECK: coverage incomplete at granularity 60s over 2026-11-07T04:00:00Z to 2026-11-07T06:00:00Z: no candles returned inside the window\",\"decision: an element is not proven (burden on YES); other elements irrelevant\",\"D-BUDGET1: calls_ms=[22274,73862] rerun=false\"],\"result\":{\"bet_id\":2,\"checked_until\":0,\"element_results_hash\":\"d8d488b2d15f48aa47a2b3fe3060e1953f9ccedfc43e95663e4d342fbe5844cf\",\"outcome\":\"NO\",\"run_no\":1,\"terms_hash\":\"1d3796a0493c3f3ad275893974ab056745867225ab09009a7dbaf077c050c284\"},\"signing\":{\"pubkey_hex\":\"8aa74b574ab19b00858282301a13b34c45b22b5fdb108627601ca98224b452df\",\"signature_hex\":\"bc04f56608ddd12f67134349dc8abcae64e3f256bb81a96e74346b6f24c055302ab628a94dcc4136332ea4e815865d250bf322d663b279e02a6d2abb6c16490f\"}}",
+  "bet_status_at_submit": "Resolving",
+  "after_submit": {
+    "status": "Proposed",
+    "outcome": "NO",
+    "settle_ready_ns": null
+  },
+  "before": {
+    "maker1": "3892748000",
+    "taker1": "3710347000",
+    "fee": "2828000",
+    "praetorial-l1b18-11080038": "2016000"
+  },
+  "final_status": "Settled",
+  "outcome": "NO",
+  "after": {
+    "maker1": "3892748000",
+    "taker1": "3712327000",
+    "fee": "2864000",
+    "praetorial-l1b18-11080038": "0"
+  },
+  "payouts": [
+    {
+      "receiver": "taker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "990000",
+      "reason": "payout_winner",
+      "done": true
+    },
+    {
+      "receiver": "taker1.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "990000",
+      "reason": "payout_winner",
+      "done": true
+    },
+    {
+      "receiver": "fee.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "18000",
+      "reason": "fee_and_storage",
+      "done": true
+    },
+    {
+      "receiver": "fee.praetorial-dev-1101.testnet",
+      "token": "nep141:usdc.testnet",
+      "amount": "18000",
+      "reason": "fee_and_storage",
+      "done": true
+    }
+  ]
+}

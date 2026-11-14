@@ -1,0 +1,13 @@
+import { account, mk, balance } from "./lib.mjs";
+import * as C from "./config.mjs";
+const { load, save } = mk("./results.json");
+const a = await account(C.KEEPER);
+const b = await a.viewFunction({ contractId: C.ESCROW, methodName: "get_bet", args: { bet_id: 1 } });
+const nb = BigInt(b.proposed_at) + 3600n * 1000000000n;
+const ms = Number(nb / 1000000n);
+const r = load();
+r.judge = { judge_ran: "stage reached, no valid model verdict (see notes)", term_has_models_field: false, model_requested_by_resolver: "mock (fallback; Jason sheet has no models[] -> resolver.rs:1754)", venue: { S_CB: "COMPLETE_WITH_GAPS, 5 missing hourly candles (662 in-window)", S_BS: "COMPLETE, 667 candles", S_KR: "EXCLUDED COULDNT_CHECK (no candles returned inside the window), D-RESOLVE6" }, decision_note: "decision: runs/models disagree or an answer failed verification (element verdict unresolved -> ESCALATE -> VOID)", signed_outcome: "VOID", nearai_calls: "1 attempted (model id mock); no valid verdict" };
+r.bet_after_submit = { status: b.status, outcome: b.outcome, proposed_at_ns: b.proposed_at };
+r.finalize_not_before = { utc: new Date(ms).toISOString(), et: new Date(ms).toLocaleString("en-US", { timeZone: "America/New_York" }) + " ET", epoch_ms: ms };
+r.balances_end = { dev: await balance(C.OPERATOR), escrow: await balance(C.ESCROW), keeper: await balance(C.KEEPER), attest1: await balance("attest1.praetorial-dev-1101.testnet") };
+save(r); console.log(JSON.stringify({ s: b.status, o: b.outcome, nb: r.finalize_not_before, bal: r.balances_end }));

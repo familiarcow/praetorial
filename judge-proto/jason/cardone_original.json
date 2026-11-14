@@ -1,0 +1,16 @@
+{
+  "_comment": "Cardone's original wording, lightly structured into the term-sheet schema as-is (no fixes applied), to run through J.lint(). The point is that the schema itself cannot express 'a major exchange' or 'the price of Bitcoin' usefully -- it is deliberately under-specified to mirror what a maker would actually type.",
+  "claim": "Bitcoin hits or exceeds $126,210.50 on or before October 28, 2028, 12PM PST. Escrow the dollars with an independent party. Settled when Bitcoin hits the ATH or on October 28, 2028.",
+  "elements": [
+    {"id": "e1", "q": "Did the price of Bitcoin hit or exceed $126,210.50 on or before October 28, 2028, 12PM PST?"}
+  ],
+  "rule": "ALL",
+  "clauses": [],
+  "custom_definitions": [],
+  "time": {"window_start": "2026-11-04", "window_end": "October 28, 2028, 12PM PST", "evidence_cutoff": "October 28, 2028, 12PM PST"},
+  "sources_allowed": [
+    {"id": "S1", "publisher": "the price of Bitcoin"}
+  ],
+  "source_classes": {"the price of Bitcoin": "primary"},
+  "sources": true
+}

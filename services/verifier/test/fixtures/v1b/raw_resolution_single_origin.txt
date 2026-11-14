@@ -1,0 +1,136 @@
+{
+  "result": {
+    "bet_id": 1,
+    "terms_hash": "7cf2def54966de8644e1f7f4543b10d50d45803f991f7f73a8baa64e4827ff9b",
+    "outcome": "VOID",
+    "element_results_hash": "fe6bf5549475cef2d05d11e72bdc1854addaaca34510010fd94e482b5253b242",
+    "run_no": 1,
+    "checked_until": 0,
+    "judge_pair_index": 0
+  },
+  "contract": "escrow.testnet",
+  "notes": [
+    "decision: evidence missing / not final / unreadable on an undecided element; never NO (recovery, then VOID)",
+    "D-BUDGET1: calls_ms=[0,0,0,0] rerun=false"
+  ],
+  "judge": {
+    "judge_backend": "near-ai",
+    "judge_backend_reason": null,
+    "judge_ran": true,
+    "models_requested": [
+      "test/model-a",
+      "test/model-b"
+    ],
+    "models_echoed": [
+      "test/model-a",
+      "test/model-b"
+    ],
+    "runs": 1,
+    "elements": [
+      {
+        "id": "e1",
+        "verdict": "insufficient"
+      }
+    ],
+    "sources": [
+      {
+        "id": "S_A",
+        "url": "https://forecast.weather.gov/product.php?site=OKX",
+        "publisher": "NWS weather.gov",
+        "sha256": "f049b8bbb4532315bb1606f9dba1dedfe31c409210e0476505d4c03f6b1a27ac",
+        "party_controlled": false,
+        "curated": false
+      },
+      {
+        "id": "S_B",
+        "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/x",
+        "publisher": "IEM mesonet",
+        "sha256": "e294b649a9ff6278a75b674812222d681cb75b130a55aacbd746b28ad53269ef",
+        "party_controlled": false,
+        "curated": false
+      }
+    ],
+    "element_evidence": [
+      {
+        "id": "e1",
+        "rule": "D-ORIGIN1",
+        "answers": [
+          "8b62d5285bbbc27250b249ff89c97f11f36c08391ff05cc51c6f2296f8efc3dd"
+        ]
+      }
+    ],
+    "run_diagnostics": [
+      {
+        "model": "test/model-a",
+        "verify_result": "answer",
+        "verify_reason": null,
+        "finish_reason": "stop",
+        "content_len": 117,
+        "content_sha256": "8b62d5285bbbc27250b249ff89c97f11f36c08391ff05cc51c6f2296f8efc3dd",
+        "content_head": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"reason\": \"max is 72\"}",
+        "http_status": 200,
+        "transport_error": null,
+        "response_bytes": 402,
+        "error_body_head": null,
+        "first_byte_ms": 1,
+        "total_ms": 2,
+        "idle_timeout_hit": false,
+        "total_timeout_hit": false,
+        "signature_verified": true,
+        "signature_proof": {
+          "signing_algo": "ed25519",
+          "signing_address": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+          "signature": "7fd2d1805782542c8a32b38eb13e64a0b7ce3d725be5116651cf7e9762d06e0b6ef6fad411283b37e646a599938774ad9249166501cc5a0dddc66dd92e78200c",
+          "text": "c7fc6e86400d47268b6809c8166b998456d395dfc010b2c1704ae55a2387fdf8:7f8ffa81ab3f87c2a5c368efaca7ac04aa4eca2f73d5aee706de9191e4251dd4",
+          "response_sha256": "7f8ffa81ab3f87c2a5c368efaca7ac04aa4eca2f73d5aee706de9191e4251dd4",
+          "request_sha256": "c7fc6e86400d47268b6809c8166b998456d395dfc010b2c1704ae55a2387fdf8"
+        },
+        "raw_sha256": "8b62d5285bbbc27250b249ff89c97f11f36c08391ff05cc51c6f2296f8efc3dd",
+        "content": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"reason\": \"max is 72\"}",
+        "content_complete": true
+      },
+      {
+        "model": "test/model-b",
+        "verify_result": "answer",
+        "verify_reason": null,
+        "finish_reason": "stop",
+        "content_len": 117,
+        "content_sha256": "8b62d5285bbbc27250b249ff89c97f11f36c08391ff05cc51c6f2296f8efc3dd",
+        "content_head": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"reason\": \"max is 72\"}",
+        "http_status": 200,
+        "transport_error": null,
+        "response_bytes": 402,
+        "error_body_head": null,
+        "first_byte_ms": 1,
+        "total_ms": 2,
+        "idle_timeout_hit": false,
+        "total_timeout_hit": false,
+        "signature_verified": true,
+        "signature_proof": {
+          "signing_algo": "ed25519",
+          "signing_address": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+          "signature": "5af0e65dcc9c11e58dea6394243b58faef2c94ec8fe672645cb17b88901fa2f677d652366ae3eba967613c86b262b3974b742743a620c0b130714660d199a303",
+          "text": "339fb5c4ca52e9d15164d638c4a2ccf39b7a55c6ba34d691db88a3512f454ec4:7ef52cea0aa1b4141edb00533939cd8e826a037ad82fabca6938996c20f67260",
+          "response_sha256": "7ef52cea0aa1b4141edb00533939cd8e826a037ad82fabca6938996c20f67260",
+          "request_sha256": "339fb5c4ca52e9d15164d638c4a2ccf39b7a55c6ba34d691db88a3512f454ec4"
+        },
+        "raw_sha256": "8b62d5285bbbc27250b249ff89c97f11f36c08391ff05cc51c6f2296f8efc3dd",
+        "content": "{\"answer\": \"met\", \"quote\": \"YESTERDAY MAXIMUM 72 615 PM 78 1961 58 14 66\", \"source_id\": \"S_A\", \"reason\": \"max is 72\"}",
+        "content_complete": true
+      }
+    ],
+    "judge_chain": [
+      {
+        "model_a": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "model_b": "z-ai/glm-5.3-flash"
+      }
+    ],
+    "judge_pair_index": 0,
+    "no_live_judge": false,
+    "model_not_found_observations": []
+  },
+  "signing": {
+    "pubkey_hex": "ea4a6c63e29c520abef5507b132ec5f9954776aebebe7b92421eea691446d22c",
+    "signature_hex": "8a20ad371c8ea6fba874eec877fd00b61d133566533c7f46b768ddd92f2c07629996d356bd5d36b1d67cb6e813fa8a16116ec5fe6c14b9dce831428965d88808"
+  }
+}

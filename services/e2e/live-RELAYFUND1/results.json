@@ -1,0 +1,57 @@
+{
+  "txs": [
+    {
+      "step": "setup: fund fresh user 0.2 NEAR",
+      "hash": "DGrQXF4EuZLMNtUu5VA1kdSsNC9V2UoHJSr6jFrUCRZ5",
+      "url": "https://testnet.nearblocks.io/txns/DGrQXF4EuZLMNtUu5VA1kdSsNC9V2UoHJSr6jFrUCRZ5"
+    },
+    {
+      "step": "1 relayed near_deposit 0.1 NEAR on wrap.testnet",
+      "hash": "GNdtKqXz5vzHMdMbugSEP9pdHtsheYUjCKgB4XSNXehT",
+      "url": "https://testnet.nearblocks.io/txns/GNdtKqXz5vzHMdMbugSEP9pdHtsheYUjCKgB4XSNXehT"
+    },
+    {
+      "step": "2 relayed ft_transfer_call wrap.testnet -> intents (msg json)",
+      "hash": "EP3yDJFpzrBLkSYGZ6dJUb2VQVLi9kSj9bdpy9ZMfLh2",
+      "url": "https://testnet.nearblocks.io/txns/EP3yDJFpzrBLkSYGZ6dJUb2VQVLi9kSj9bdpy9ZMfLh2"
+    }
+  ],
+  "user": "71c7af33216d096eaa8e3d1f02a207945c875430258fd7546ba6a4b74c54d6ce",
+  "msgFormat": "json",
+  "network": "testnet",
+  "intentsStorageOnWnearBefore": {
+    "total": "1250000000000000000000",
+    "available": "0"
+  },
+  "userStorageOnWnearBefore": null,
+  "mtBalanceBefore": "0",
+  "nearDepositOutcome": {
+    "failures": [],
+    "logs": [
+      "Deposit 98750000000000000000000 NEAR to 71c7af33216d096eaa8e3d1f02a207945c875430258fd7546ba6a4b74c54d6ce"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterWrap": "98750000000000000000000",
+  "moveOutcome": {
+    "failures": [
+      {
+        "ActionError": {
+          "index": 0,
+          "kind": {
+            "FunctionCallError": {
+              "MethodResolveError": "MethodNotFound"
+            }
+          }
+        }
+      }
+    ],
+    "logs": [
+      "Transfer 98750000000000000000000 from 71c7af33216d096eaa8e3d1f02a207945c875430258fd7546ba6a4b74c54d6ce to intents-mock.praetorial-dev-1101.testnet",
+      "Refund 98750000000000000000000 from intents-mock.praetorial-dev-1101.testnet to 71c7af33216d096eaa8e3d1f02a207945c875430258fd7546ba6a4b74c54d6ce"
+    ],
+    "successValue": ""
+  },
+  "wnearBalanceAfterMove": "98750000000000000000000",
+  "mtBalanceAfter": "0"
+}

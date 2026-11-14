@@ -1,0 +1,10 @@
+{
+  "_doc": "NOKEY1: the exact (stable-field) output form a real-http resolver run WITHOUT NEAR_AI_API_KEY emits: an UNSIGNED error object. No `result`, no `signing`. Shared by resolver/wasm-bin (asserts it emits this) and contracts/escrow/tests/nokey1_no_key_output.rs (feeds it to on_resolution).",
+  "error": "no_live_judge_key",
+  "reason": "NEAR_AI_API_KEY is not set in the wasm's environment: the OutLayer secret was not injected. The run reads the secret stored under secrets_ref {secrets_profile, secrets_account_id} (the escrow's outlayer_config) -- bind NEAR_AI_API_KEY under THAT OutLayer account (see TESTING.md, NEAR AI key lookup).",
+  "judge": {
+    "judge_backend": "offline-mock",
+    "judge_backend_reason": "NEAR_AI_API_KEY is not set in the wasm's environment: the OutLayer secret was not injected. The run reads the secret stored under secrets_ref {secrets_profile, secrets_account_id} (the escrow's outlayer_config) -- bind NEAR_AI_API_KEY under THAT OutLayer account (see TESTING.md, NEAR AI key lookup).",
+    "judge_ran": false
+  }
+}

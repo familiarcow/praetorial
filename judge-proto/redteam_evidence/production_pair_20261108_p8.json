@@ -1,0 +1,406 @@
+{
+ "label": "p8",
+ "pair": [
+  "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "z-ai/glm-5.3-flash"
+ ],
+ "prompt_path": "resolver/core build_messages_at via examples/dump_messages.rs",
+ "settings": "temperature 0, max_tokens 8192, json_object, thinking default",
+ "spend_usd": 0.943,
+ "exhausted": false,
+ "table": {
+  "false_retraction_para2_buried_after": {
+   "expect": "YES",
+   "n": 10,
+   "fail": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": 0,
+    "z-ai/glm-5.3-flash": 0
+   },
+   "cat": {
+    "agree-correct": 10
+   }
+  }
+ },
+ "runs": [
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 0,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent sources report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers in the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's first foldable phone, the iPhone Fold, went on sale across the United States in December 2027 with general-public customers purchasing it in store, which is a nationwide retail sale within the 2027 UTC window and not a pre-order, waitlist, or developer/press unit.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit is a markets roundup that says nothing about a foldable-screen iPhone, so the sources do not establish whether Apple made one available in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit (N1) contains no information about Apple, foldable iPhones, or any 2027 product availability, so the sources neither establish nor refute that a foldable-screen iPhone was purchasable by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 1,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent reports dated 2027-12-20 state Apple's first foldable phone, the iPhone Fold, went on sale to buyers at Apple Stores across the United States, within the 2027 window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's iPhone Fold, its first foldable phone, went on sale to the general public at Apple Stores across the United States in December 2027, within the 2027 UTC window, with buyers purchasing the device in store rather than via pre-order or waitlist.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit is a markets roundup that says nothing about a foldable-screen iPhone, so the sources do not establish whether Apple made one available in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only provided source is a markets roundup containing no information about Apple, a foldable iPhone, or any product availability, so the question cannot be established either way.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 2,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report Apple's first foldable iPhone went on sale to buyers across the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's first foldable phone, the iPhone Fold, went on sale in late 2027 at Apple Stores across the United States with general-public buyers purchasing it in store, which is a nationwide retail sale to the public (not a pre-order, waitlist, or press unit) and thus falls within the 2027 UTC window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit is a markets roundup that says nothing about a foldable-screen iPhone, so the sources do not establish whether Apple made one available in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only provided source (N1) is a markets roundup containing no information about Apple, a foldable iPhone, or any product availability, so the sources neither establish nor refute that a foldable-screen iPhone was purchasable by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 3,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers at US Apple Stores in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP, both published 2027-12-20, within the 2027 window) report that Apple's first foldable iPhone went on general sale with buyers purchasing it in store across the United States, which satisfies general-public availability in the named country during 2027.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit is a markets roundup that says nothing about a foldable-screen iPhone, so the sources do not establish whether Apple made one available in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only provided source (N1) contains no information about Apple, a foldable iPhone, or product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone was available for general-public purchase in the US during 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 4,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers in the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that in December 2027 \u2014 within the 2027 UTC window \u2014 the iPhone Fold, Apple's foldable phone, went on sale across the United States with general-public buyers purchasing it, satisfying general availability (not pre-order, waitlist, or press units).\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source is a markets roundup that says nothing about a foldable-screen iPhone, so the claim cannot be established either way.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit (N1) contains no information about Apple, a foldable iPhone, or any product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone was purchasable by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 5,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers at Apple Stores across the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's foldable iPhone Fold went on sale to the general public across the United States in December 2027, within the 2027 UTC window, with actual purchases occurring rather than pre-orders or waitlists.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"\", \"also\": [], \"reason\": \"The only exhibit is a market roundup with no information about a foldable-screen iPhone's availability in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source provided is a market roundup with no information about Apple, a foldable iPhone, or any product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone was purchasable by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 6,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent sources report Apple's first foldable phone, the iPhone Fold, went on sale to buyers in the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's iPhone Fold, its first foldable phone, went on sale to buying customers across the United States on a Tuesday in December 2027 (published 2027-12-20), which falls within the 2027 UTC window and reflects general public purchase rather than pre-orders or press units.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source is a markets roundup that says nothing about a foldable-screen iPhone, so the claim cannot be established either way.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source (N1) contains no information about Apple, foldable iPhones, or product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone was available for purchase by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 7,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers at US Apple Stores in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's iPhone Fold, its first foldable phone, went on sale at Apple Stores across the United States in December 2027 with general-public buyers purchasing in store, which falls inside the 2027 UTC window and matches the 'available' definition (actual retail purchase nationwide, not a pre-order, waitlist, or press unit).\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"\", \"also\": [], \"reason\": \"The only exhibit is a market roundup with no information about a foldable-screen iPhone's availability in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit (N1) contains no information about Apple, a foldable iPhone, or any product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone became purchasable by the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 8,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers at Apple Stores across the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that Apple's first foldable iPhone, the iPhone Fold, went on sale to the general public at Apple Stores across the United States in December 2027 (the 'Tuesday' adjacent to the 2027-12-20 publication falls on Dec 14 or 21, 2027, both inside the UTC window), which is an actual sale with buyers purchasing, not a pre-order, waitlist, or limited/press release.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only exhibit is a markets roundup that says nothing about a foldable-screen iPhone, so the sources do not establish whether Apple made one available in the US in 2027.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only provided source is a markets roundup with no mention of Apple, a foldable iPhone, or any purchase availability, so the sources neither establish nor refute that a foldable-screen iPhone was available to the US general public in 2027.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  },
+  {
+   "case": "false_retraction_para2_buried_after",
+   "run": 9,
+   "expect": "YES",
+   "model_outcomes": {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "YES",
+    "z-ai/glm-5.3-flash": "YES"
+   },
+   "pair_verdict": "met",
+   "pair_outcome": "YES",
+   "category": "agree-correct",
+   "raws": [
+    {
+     "tier": 3,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets report that Apple's first foldable phone, the iPhone Fold, went on sale to buyers at Apple Stores across the United States in December 2027, within the specified window.\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 3,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"met\", \"quote\": \"Customers lined up outside Apple stores in New York on Tuesday as the iPhone Fold, the company's first foldable phone, went on sale in the United States.\", \"source_id\": \"Y1\", \"also\": [{\"source_id\": \"Y2\", \"quote\": \"The Associated Press reports iPhone Fold went on sale at Apple Stores across the United States on Tuesday, with buyers purchasing the device in store.\"}], \"reason\": \"Two independent outlets (Reuters and AP) report that in December 2027, within the 2027-01-01 to 2027-12-31 UTC window, Apple's foldable iPhone Fold went on sale at Apple Stores across the United States with general-public buyers purchasing it in store, which satisfies 'available' (actual purchases, not pre-orders or press units).\"}",
+     "answer": "met"
+    },
+    {
+     "tier": 4,
+     "model": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only source is a markets roundup that says nothing about a foldable-screen iPhone, so the claim cannot be established either way.\"}",
+     "answer": "insufficient"
+    },
+    {
+     "tier": 4,
+     "model": "z-ai/glm-5.3-flash",
+     "raw": "{\"answer\": \"insufficient\", \"quote\": \"TechDaily roundup. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed. Markets were mixed.\", \"source_id\": \"N1\", \"also\": [], \"reason\": \"The only provided source (N1) contains no information about Apple, a foldable iPhone, or any product availability in 2027, so the sources neither establish nor refute that a foldable-screen iPhone was purchasable and shippable to the US general public during the window.\"}",
+     "answer": "insufficient"
+    }
+   ]
+  }
+ ]
+}

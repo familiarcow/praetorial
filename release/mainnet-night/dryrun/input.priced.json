@@ -1,0 +1,87 @@
+{
+  "network": "mainnet",
+  "intents": "intents.near",
+  "usdc_token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+  "outlayer": "outlayer.near",
+  "operator": "operator.praetorial.near",
+  "guardian": "praetorial.near",
+  "registry": "registry.praetorial.near",
+  "fee_account": "praetorial.near",
+  "keeper": "keeper.praetorial.near",
+  "accounts_notes": {
+    "escrow": "bets.praetorial.near (contract account; not a new() arg)",
+    "attest_signer": "attest.praetorial.near (D-ATTEST2 signer, bot-held key; not a new() arg; its pubkey is attest_pubkey, deploy-day)",
+    "relayer": "relayer.praetorial.near (relayer, bot-held key; not a new() arg)"
+  },
+  "max_offer_ttl_secs": 5184000,
+  "near_price": {
+    "price_usd": "3.6075",
+    "price_ts_ms": 1794359341000,
+    "second_price_usd": "3.60410",
+    "second_price_ts_ms": 1794359341000
+  },
+  "outcome_pubkey": "0000000000000000000000000000000000000000000000000000000000000000",
+  "attest_pubkey": "1111111111111111111111111111111111111111111111111111111111111111",
+  "resolver_wasm_hash": "8791413ff7943f5e5b99df4c5cafc50cb9baf5696cf32837e1a8afd31baa2473",
+  "outlayer_config": {
+    "wasm_base_url": "https://PLACEHOLDER.example/uploader/outlayer",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "aikey.praetorial.near"
+  },
+  "assets": [
+    {
+      "token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:usdt.tether-token.near",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:btc.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "73323.425",
+      "price_ts_ms": 1794359340000,
+      "price_source": "coinbase BTC-USD",
+      "second_price_usd": "73314.10000",
+      "second_price_ts_ms": 1794359341000,
+      "second_price_source": "kraken XBTUSD"
+    },
+    {
+      "token_id": "nep141:wrap.near",
+      "decimals": 24,
+      "kind": "volatile",
+      "price_usd": "3.6075",
+      "price_ts_ms": 1794359341000,
+      "price_source": "coinbase NEAR-USD",
+      "second_price_usd": "3.60410",
+      "second_price_ts_ms": 1794359341000,
+      "second_price_source": "kraken NEARUSD"
+    },
+    {
+      "token_id": "nep141:eth.omft.near",
+      "decimals": 18,
+      "kind": "volatile",
+      "price_usd": "2041.82",
+      "price_ts_ms": 1794359341000,
+      "price_source": "coinbase ETH-USD",
+      "second_price_usd": "2041.50000",
+      "second_price_ts_ms": 1794359341000,
+      "second_price_source": "kraken ETHUSD"
+    },
+    {
+      "token_id": "nep141:zec.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "1027.12",
+      "price_ts_ms": 1794359341000,
+      "price_source": "coinbase ZEC-USD",
+      "second_price_usd": "1027.59000",
+      "second_price_ts_ms": 1794359341000,
+      "second_price_source": "kraken ZECUSD"
+    }
+  ]
+}

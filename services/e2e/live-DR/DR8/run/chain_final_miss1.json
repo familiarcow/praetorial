@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-11-13T05:51:13+00:00",
+  "rpc": "https://test.rpc.fastnear.com",
+  "block_height": 277469626,
+  "escrow": "praetorial-frz3-2611100414.praetorial-dev-1101.testnet",
+  "bet_id": 42,
+  "status": "Settled",
+  "outcome": "VOID",
+  "proposed_at": "2026-11-10T23:30:32.664595+00:00",
+  "runs_used": 1,
+  "all_results": [
+    {
+      "run_no": 1,
+      "outcome": "VOID"
+    }
+  ],
+  "bonds": 0,
+  "challenged_by": null,
+  "judge_backend": "near-ai",
+  "resolution_notes": [
+    "1b: Coinbase granularity 60s, 71 candles -> Clear",
+    "1b: Bitstamp granularity 60s, 71 candles -> Clear",
+    "1b: Kraken granularity 60s, 81 candles -> Clear",
+    "decision: NO (code-decided 1b: 3 reachable venues have complete coverage and none crossed X)",
+    "audit disagreed: the audit did not support the code outcome NO on the first run or the re-run (the AI never overturns toward the other side)",
+    "COULDNT_CHECK (D-TPL1, 17c5): audit disagreed: the audit did not support the code outcome NO on the first run or the re-run (the AI never overturns toward the other side)",
+    "D-BUDGET1: calls_ms=[] rerun=false"
+  ]
+}

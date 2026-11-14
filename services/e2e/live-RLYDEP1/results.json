@@ -1,0 +1,99 @@
+{
+  "network": "testnet",
+  "worker": "https://praetorial-relayer-testnet.familiarcow.workers.dev",
+  "escrow": "praetorial-frz1b-2611081810.praetorial-dev-1101.testnet",
+  "txs": [
+    {
+      "step": "setup: fund fresh maker 0.3 NEAR (direct)",
+      "hash": "6HN7q2A8rytrhdS4JBVqmCJywka94a8vUbA1xAA4a2ty",
+      "url": "https://testnet.nearblocks.io/txns/6HN7q2A8rytrhdS4JBVqmCJywka94a8vUbA1xAA4a2ty"
+    },
+    {
+      "step": "sourcecheck_attest1",
+      "hash": "6mNy1chtpsg38YCysatYPQdmmZQMYtoWewqtydD9Tkas",
+      "url": "https://testnet.nearblocks.io/txns/6mNy1chtpsg38YCysatYPQdmmZQMYtoWewqtydD9Tkas",
+      "status": "Success"
+    },
+    {
+      "step": "mint mock USDC to maker (keeper, direct)",
+      "hash": "8GAQuzGqSNKAA832RELSh1FR9v8moA2QXs9ib6Tt9d2N",
+      "url": "https://testnet.nearblocks.io/txns/8GAQuzGqSNKAA832RELSh1FR9v8moA2QXs9ib6Tt9d2N",
+      "amount": "10062783"
+    },
+    {
+      "step": "open Person-referee bet (maker direct)",
+      "hash": "5NZr54pE4BuYzgkpHjwfneXXr4arQUvCjfT8jC38eHTJ",
+      "url": "https://testnet.nearblocks.io/txns/5NZr54pE4BuYzgkpHjwfneXXr4arQUvCjfT8jC38eHTJ",
+      "amount": "10062783"
+    },
+    {
+      "step": "relayed amend_referee (deployed Worker, deposit 0)",
+      "hash": "8PyMgfMh3qVT5fF3vkSzFoXE1cRkaM4Zyk1HpHiMmeMs",
+      "url": "https://testnet.nearblocks.io/txns/8PyMgfMh3qVT5fF3vkSzFoXE1cRkaM4Zyk1HpHiMmeMs"
+    },
+    {
+      "step": "relayed cancel (deployed Worker)",
+      "hash": "B7q9EdHxgrCGF19KPQ1SwqbiroxPC7GwwSVjLah33qrv",
+      "url": "https://testnet.nearblocks.io/txns/B7q9EdHxgrCGF19KPQ1SwqbiroxPC7GwwSVjLah33qrv"
+    },
+    {
+      "step": "drain_payouts fallback (public method; the keeper cron had not drained it in 3 min)",
+      "hash": "FFZ5axcCHNhM6sJ2QVBJLf9m5PeiFY7F6i7UCgNUf3Yu",
+      "url": "https://testnet.nearblocks.io/txns/FFZ5axcCHNhM6sJ2QVBJLf9m5PeiFY7F6i7UCgNUf3Yu"
+    }
+  ],
+  "checks": {
+    "referee_initial": {
+      "account": "arbiter1.praetorial-dev-1101.testnet",
+      "mode": "Human"
+    },
+    "amend_http": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "txHash": "8PyMgfMh3qVT5fF3vkSzFoXE1cRkaM4Zyk1HpHiMmeMs"
+      }
+    },
+    "referee_after_amend": {
+      "account": "keeper.praetorial-dev-1101.testnet",
+      "mode": "Human"
+    },
+    "bad_args": {
+      "status": 400,
+      "body": {
+        "ok": false,
+        "error": "amend_referee args contain unexpected field \"extra\""
+      },
+      "relayer_nonce_before": "276863986000012",
+      "relayer_nonce_after": "276863986000012"
+    },
+    "referee_after_bad": {
+      "account": "keeper.praetorial-dev-1101.testnet",
+      "mode": "Human"
+    },
+    "cancel_http": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "txHash": "B7q9EdHxgrCGF19KPQ1SwqbiroxPC7GwwSVjLah33qrv"
+      }
+    },
+    "refund": {
+      "keeper_cron_drained": false,
+      "maker_usdc_before_cancel": "0",
+      "maker_usdc_after_cancel": "10062783",
+      "deposit": "10062783",
+      "undone_payout_amount_for_bet": "0",
+      "escrow_usdc_before_open": "110690613",
+      "escrow_usdc_after_cancel": "70439481",
+      "verdict": null
+    },
+    "bet_status_after_cancel": "Cancelled",
+    "pending_payouts": []
+  },
+  "maker": "9f70ae0520e6a2a737b2bd2a6455a3f36ca89b987cf0ebc73f069986a4eccf7e",
+  "refereeA": "arbiter1.praetorial-dev-1101.testnet",
+  "refereeB": "keeper.praetorial-dev-1101.testnet",
+  "bet_id": 23,
+  "ok": true
+}

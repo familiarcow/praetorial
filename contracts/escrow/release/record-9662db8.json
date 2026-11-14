@@ -1,0 +1,34 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "9662db8672fc74962ca38fb3ac8d7c0eaba3096d",
+  "contract": "contracts/escrow (escrow.wasm)",
+  "image": "sourcescan/cargo-near:0.21.1-rust-1.96.0",
+  "image_digest": "sha256:ccb22bb4e677ed022d8b9d1aa1b32f0af52dd0471ef1c32e48dedbf68ee6ee17",
+  "platform": "linux/amd64",
+  "command": "cargo near build non-reproducible-wasm --locked --out-dir /tmp/out (the pinned container_build_command, run in /home/near/code/contracts/escrow of a git-archive export)",
+  "script": "contracts/escrow/release/build_reproducible.sh <commit> run|cp <outdir>",
+  "hash": "72f16b48792cf39d65537f1b7014e996287cfbf159e557f7e7ba134dc4711743",
+  "hash_bs58": "8jgzQgWU1ETuV9bWBvM1NurLna95A8VSM4Ut42kNyEyG",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "72f16b48792cf39d65537f1b7014e996287cfbf159e557f7e7ba134dc4711743"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "72f16b48792cf39d65537f1b7014e996287cfbf159e557f7e7ba134dc4711743"
+    },
+    {
+      "route": "fresh-container-fresh-export",
+      "sha256": "72f16b48792cf39d65537f1b7014e996287cfbf159e557f7e7ba134dc4711743"
+    }
+  ],
+  "notes": {
+    "item": "ESR1: reproducible escrow wasm of main 9662db8 (includes PA1 86a0a6a and RF2 ea410c8); NOT deployed anywhere",
+    "size_bytes": 474494,
+    "toolchain": "cargo-near 0.21.1, rustc 1.96.0 inside the image (RUSTUP_TOOLCHAIN=1.96.0 overrides contracts/rust-toolchain.toml 1.97.1); profile from contracts/Cargo.toml (strip=symbols, opt-level z, lto, panic abort), `--cfg near` from contracts/.cargo/config.toml, ABI embedded (default)",
+    "not_the_same_as": "a host/plain `cargo near build non-reproducible-wasm` or the R3e-deployed f5074235... build: different toolchain (1.96.0 vs 1.97.1) so different bytes are expected (not measured); compare the deployed code_hash against THIS record only",
+    "cargo_near_note": "`cargo near build reproducible-wasm` itself needs a git remote and a clean pushed tree (this repo has no remote); the script runs the same container command from `git archive` instead. The contract embeds no NEP-330 metadata, so the bytes do not depend on the NEP-330 env cargo-near passes.",
+    "emulation": "colima rosetta profile (docker-run-1 3m22s, run-2 3m24s). run-1 succeeded first time. The next two attempts (one run, one cp) exited rc=1 with stderr discarded (cause not captured; possibly the RR4 emulation flake) and were re-run unchanged, then succeeded with identical hashes. Each recorded build is a fresh container; build 3 used a separate fresh export and docker cp (no bind mounts)."
+  }
+}

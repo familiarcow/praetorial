@@ -1,0 +1,3 @@
+{"outcome":"ok","scriptName":"praetorial-monitor-testnet","diagnosticsChannelEvents":[],"exceptions":[],"logs":[],"eventTimestamp":1762700000000,"event":{"cron":"* * * * *"}}
+{"outcome":"ok","scriptName":"praetorial-monitor-testnet","diagnosticsChannelEvents":[],"exceptions":[],"logs":[],"eventTimestamp":1762700060000,"event":{"request":{"url":"https://monitor.internal/tick","method":"POST"}}}
+{"outcome":"ok","scriptName":"praetorial-monitor-testnet","diagnosticsChannelEvents":[],"exceptions":[],"logs":[],"eventTimestamp":1762700120000,"event":{"request":{"url":"https://monitor.internal/tick","method":"POST"}}}

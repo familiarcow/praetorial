@@ -1,0 +1,12 @@
+# live testnet escrow praetorial-frz2-2611091914.praetorial-dev-1101.testnet bet 12 (read-only RPC views + tx history from https://tx.test.fastnear.com; no keys, no txs)
+PASS E1  deployed code hash == expected build hash caf134a484bc68c2e6900bd03cba7b3eb29af40b67d65f61db1fe04831450f2f; governance replay: guardian arbiter1.praetorial-dev-1101.testnet, 4 judge pair(s), 3 asset(s)
+PASS E2  pins match release record record-b67b3d7.json (commit b67b3d7a); new() args recorded (guardian arbiter1.praetorial-dev-1101.testnet, fee account fee.praetorial-dev-1101.testnet, limits max_rounds 2); guardian/limits/fee have no view, so these are the recorded args, not a chain read; current incarnation (account created 1794269681222906371 ns; 0 earlier deploy/new() of a deleted incarnation ignored); params replay: 0 proposed, 0 applied, 0 cancelled, none pending; current fee_bps 100 and 3 asset limit(s) equal new() + applied changes in order, all >=24h after proposal, within hard caps
+PASS E3  resolver wasm (3401495 bytes) hashes to the pinned resolver_wasm_hash 6517a422f55639d5d452ba2abcea93cc261c33729025be2afd5efcfa42d3b1c3
+SKIP E4  offline: no live report-pubkey run supplied (run live without --offline; needs OutLayer homes logged in as the escrow and the attest signer, spends OutLayer credit); see docs/VERIFY.md
+PASS B1  sha256(terms) == envelope.terms_hash 00b36f34f0a394f49720c2597f82ad9e3b86757e6a9af72d6f3ca9221faec5b1
+PASS B2  attestation signature valid under pinned attest_pubkey; 10s old when the bet was opened (limit 3600s)
+SKIP B3  no submitted results in this evidence
+SKIP B4  judge record (last_resolution_raw) not available
+SKIP B5  finalize before/after balances not available in this evidence (B3: no request_resolution input_data carrying run_no found for this bet; run_no order checked as the strict sequence 1..n; no successful finalize/drain_payouts/void_after_deadline/emergency_refund call for this bet in the escrow's history)
+PASS B6  taken before funding_deadline; proposed after it; settlement window 86400s ends 2026-11-11T04:54:03.440Z; finalize time not in evidence
+# 6 PASS, 0 FAIL, 4 SKIP

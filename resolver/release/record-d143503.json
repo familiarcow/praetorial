@@ -1,0 +1,28 @@
+{
+  "repo": "praetorial (local git, no remote)",
+  "commit": "d1435032d6f679b4e889b0a825e20200896ae2aa",
+  "image": "outlayer/wasmedge-compiler",
+  "image_digest": "sha256:d9eb7bd9bab6c46b77f309ec33e94ca112883268a848dd1929289fade799cd27",
+  "platform": "linux/amd64",
+  "target": "wasm32-wasip2",
+  "features": "real-http,outlayer-sign",
+  "hash": "de01c37dc69da60e64931dc2c1446806fd4b9c1536d86bf43cd40ec9b9d5dc92",
+  "builds": [
+    {
+      "route": "docker-run-1",
+      "sha256": "de01c37dc69da60e64931dc2c1446806fd4b9c1536d86bf43cd40ec9b9d5dc92"
+    },
+    {
+      "route": "docker-run-2",
+      "sha256": "de01c37dc69da60e64931dc2c1446806fd4b9c1536d86bf43cd40ec9b9d5dc92"
+    },
+    {
+      "route": "fresh-container",
+      "sha256": "de01c37dc69da60e64931dc2c1446806fd4b9c1536d86bf43cd40ec9b9d5dc92"
+    }
+  ],
+  "notes": {
+    "item": "RF2c: resolver rebuilt after removal of the Witness/Source/FinalSay paths and the referee-bet refusal (D-REFUI4); built from commit d143503; NOT uploaded or deployed anywhere",
+    "emulation": "colima rosetta profile; all three builds (docker-run-1, docker-run-2, fresh-container) succeeded first try with identical hash"
+  }
+}

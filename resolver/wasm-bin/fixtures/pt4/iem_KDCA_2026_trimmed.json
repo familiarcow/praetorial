@@ -1,0 +1,132 @@
+{
+ "results": [
+  {
+   "station": "KDCA",
+   "valid": "2026-02-04",
+   "state": "VA",
+   "wfo": "LWX",
+   "link": "/api/1/nwstext/202602050724-KLWX-CDUS41-CLIDCA",
+   "product": "202602050724-KLWX-CDUS41-CLIDCA",
+   "name": "WASHINGTON/NATIONAL",
+   "high": 39,
+   "high_record": 70,
+   "high_record_years": [
+    1991
+   ],
+   "high_normal": 46,
+   "high_depart": -7,
+   "high_time": "500 PM",
+   "low": 30,
+   "low_record": 2,
+   "low_record_years": [
+    1898
+   ],
+   "low_normal": 30,
+   "low_depart": 0,
+   "low_time": "1100 PM",
+   "precip": 0.0,
+   "precip_normal": 0.1,
+   "precip_month": 0.0,
+   "precip_month_normal": 0.38,
+   "precip_jan1": 3.16,
+   "precip_jan1_normal": 3.24,
+   "precip_jun1": "M",
+   "precip_jun1_normal": "M",
+   "precip_jul1": "M",
+   "precip_dec1": 4.93,
+   "precip_dec1_normal": 6.65,
+   "precip_record": 2.02,
+   "precip_record_years": [
+    1998
+   ],
+   "snow": 0.0,
+   "snowdepth": 3.0,
+   "snow_normal": 0.2,
+   "snow_month": 0.0,
+   "snow_jun1": "M",
+   "snow_jul1": 8.5,
+   "snow_dec1": 8.5,
+   "snow_record": 4.5,
+   "snow_record_years": [
+    1995
+   ],
+   "snow_jul1_normal": 7.6,
+   "snow_jul1_depart": 0.9,
+   "snow_dec1_normal": 7.5,
+   "snow_month_normal": 0.9,
+   "average_sky_cover": 0.8,
+   "resultant_wind_speed": "M",
+   "resultant_wind_direction": "M",
+   "highest_wind_speed": 13,
+   "highest_wind_direction": 30,
+   "highest_gust_speed": 13,
+   "highest_gust_direction": 30,
+   "average_wind_speed": 8.4
+  },
+  {
+   "station": "KDCA",
+   "valid": "2026-02-05",
+   "state": "VA",
+   "wfo": "LWX",
+   "link": "/api/1/nwstext/202602060731-KLWX-CDUS41-CLIDCA",
+   "product": "202602060731-KLWX-CDUS41-CLIDCA",
+   "name": "WASHINGTON/NATIONAL",
+   "high": "M",
+   "high_record": 74,
+   "high_record_years": [
+    2019
+   ],
+   "high_normal": 46,
+   "high_depart": "M",
+   "high_time": "MM",
+   "low": "M",
+   "low_record": -2,
+   "low_record_years": [
+    1886,
+    1918
+   ],
+   "low_normal": 30,
+   "low_depart": "M",
+   "low_time": "MM",
+   "precip": 0.0,
+   "precip_normal": 0.09,
+   "precip_month": 0.0,
+   "precip_month_normal": 0.47,
+   "precip_jan1": 3.16,
+   "precip_jan1_normal": 3.33,
+   "precip_jun1": "M",
+   "precip_jun1_normal": "M",
+   "precip_jul1": "M",
+   "precip_dec1": 4.93,
+   "precip_dec1_normal": 6.74,
+   "precip_record": 0.8,
+   "precip_record_years": [
+    1908
+   ],
+   "snow": 0.0,
+   "snowdepth": 3.0,
+   "snow_normal": 0.2,
+   "snow_month": 0.0,
+   "snow_jun1": "M",
+   "snow_jul1": 8.5,
+   "snow_dec1": 8.5,
+   "snow_record": 8.7,
+   "snow_record_years": [
+    2010
+   ],
+   "snow_jul1_normal": 7.8,
+   "snow_jul1_depart": 0.7,
+   "snow_dec1_normal": 7.7,
+   "snow_month_normal": 1.1,
+   "average_sky_cover": "M",
+   "resultant_wind_speed": "M",
+   "resultant_wind_direction": "M",
+   "highest_wind_speed": "M",
+   "highest_wind_direction": "M",
+   "highest_gust_speed": "M",
+   "highest_gust_direction": "M",
+   "average_wind_speed": "M"
+  }
+ ],
+ "generated_at": "2026-11-08T22:15:07Z"
+}

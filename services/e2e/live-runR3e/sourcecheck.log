@@ -1,0 +1,16 @@
+Executing on-chain with NEAR deposit.
+
+Running wasm:https://test.fastfs.io/praetorial-dev-1101.testnet/outlayer.testnet/0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74.wasm (on-chain, ~0.0020 NEAR)...
+Downloading WASM to compute hash...
+Hash: 0b3f9f080b0088990d50ba5c7501d0549b504be20c4bfb9790bf91da9318ba74 (2867590 bytes)
+Tx: 9y4XD27M2s8gAKNczioJWaHpLEcwWnuUX7ZDxRFbpjUn
+{
+  "checked_at": 1794014161191825408,
+  "ok": true,
+  "signing": {
+    "pubkey_hex": "d2a38c17bbb662fbcb0355de36cb674a1bc56af3c102e2346a6e186e1ea209a7",
+    "signature_hex": "bc344d8658863215b529cca5649add2ae1003ad4777502fadaa83124cc1f2c7eec09da24498450385416d61d9f8061a9c8b4be02b056dd90e37978526c4fbb0c"
+  },
+  "spec_hash": "239a6e05754e47cb03d5178ff8cb1150c16796cbd8bc5d23b38583f1ecea2cd8",
+  "unreachable": []
+}

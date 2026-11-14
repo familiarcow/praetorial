@@ -1,0 +1,82 @@
+{
+  "network": "mainnet",
+  "intents": "intents.near",
+  "usdc_token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+  "outlayer": "outlayer.PLACEHOLDER.near",
+  "operator": "operator.PLACEHOLDER.near",
+  "guardian": "praetorial.near",
+  "registry": "registry.PLACEHOLDER.near",
+  "fee_account": "fee.PLACEHOLDER.near",
+  "keeper": "keeper.PLACEHOLDER.near",
+  "max_offer_ttl_secs": 5184000,
+  "near_price": {
+    "price_usd": "3.53765",
+    "price_ts_ms": 1794233278000,
+    "second_price_usd": "3.54100",
+    "second_price_ts_ms": 1794233278000
+  },
+  "outcome_pubkey": "0000000000000000000000000000000000000000000000000000000000000000",
+  "attest_pubkey": "1111111111111111111111111111111111111111111111111111111111111111",
+  "resolver_wasm_hash": "06d1cd5d9130ac1e5d8633b07336643ee172c92521a3652004cb09ca6d9c18e0",
+  "outlayer_config": {
+    "wasm_base_url": "https://PLACEHOLDER.example/uploader/outlayer",
+    "secrets_profile": "praetorial-resolver",
+    "secrets_account_id": "secrets.PLACEHOLDER.near"
+  },
+  "assets": [
+    {
+      "token_id": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:usdt.tether-token.near",
+      "decimals": 6,
+      "kind": "stable"
+    },
+    {
+      "token_id": "nep141:btc.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "74446.965",
+      "price_ts_ms": 1794233278000,
+      "price_source": "coinbase BTC-USD",
+      "second_price_usd": "74446.20000",
+      "second_price_ts_ms": 1794233278000,
+      "second_price_source": "kraken XBTUSD"
+    },
+    {
+      "token_id": "nep141:wrap.near",
+      "decimals": 24,
+      "kind": "volatile",
+      "price_usd": "3.53765",
+      "price_ts_ms": 1794233278000,
+      "price_source": "coinbase NEAR-USD",
+      "second_price_usd": "3.54100",
+      "second_price_ts_ms": 1794233278000,
+      "second_price_source": "kraken NEARUSD"
+    },
+    {
+      "token_id": "nep141:eth.omft.near",
+      "decimals": 18,
+      "kind": "volatile",
+      "price_usd": "2114.985",
+      "price_ts_ms": 1794233278000,
+      "price_source": "coinbase ETH-USD",
+      "second_price_usd": "2115.45000",
+      "second_price_ts_ms": 1794233278000,
+      "second_price_source": "kraken ETHUSD"
+    },
+    {
+      "token_id": "nep141:zec.omft.near",
+      "decimals": 8,
+      "kind": "volatile",
+      "price_usd": "1212.515",
+      "price_ts_ms": 1794233278000,
+      "price_source": "coinbase ZEC-USD",
+      "second_price_usd": "1213.15000",
+      "second_price_ts_ms": 1794233278000,
+      "second_price_source": "kraken ZECUSD"
+    }
+  ]
+}
